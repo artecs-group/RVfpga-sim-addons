@@ -1,4 +1,4 @@
-It is required to install websockets library: 
+For using this simulator it is required to install websockets library: 
 
 + Ubuntu:
 ```
