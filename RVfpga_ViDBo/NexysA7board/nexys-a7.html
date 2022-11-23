@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Nexys A7 ViDBo</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  </head>
+
+  <body>
+    <input type="button" id="btConn" name="btConn" value="Connect to board">
+    <input type="button" id="uartClear" value="Clear UART output">
+    <textarea id="uart" rows="10" cols="80" readonly>
+
+		</textarea>
+    <br /><br />
+		<h1 style="font-size: 2rem; color: #2ecc71">7 SEGMENT DISPLAYS:  
+		</textarea>
+		<textarea id="SevSegDispl7" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl6" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl5" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl4" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl3" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl2" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl1" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+		<textarea id="SevSegDispl0" style="font-size: 32pt; width:30px; height:50px; resize:none;">
+		</textarea>
+
+    </textarea>
+    <br /><br />
+    <object id="nexys-svg" data="nexys-a7-export.svg" type="image/svg+xml" width="30%" height="30%" object-fill=contain>
+  </body>
+
+  <script type="text/javascript">
+    var ws;
+    var connected = false;
+    let gpio = Object();
+
+    function setLED(led, state) {
+	led.querySelector("circle").setAttribute('opacity', state ? 1.0 : 0.1);
+    }
+
+    function doConnect(addr) {
+	ws = new WebSocket(addr);
+
+	/* Register events. */
+	ws.onopen = function() {
+	    connected = true;
+	    document.getElementById("btConn").value = "Disconnect";
+
+	    const nexysObject = document.getElementById('nexys-svg')
+	    const nexys = nexysObject.contentDocument;
+
+	    var msg = {gpio : {}}
+	    for (let i=0;i<16;i++) {
+		var sw = nexys.getElementById('SW'+i);
+		const circle = sw.querySelector("circle")
+		const cy = circle.getAttribute('cy')
+		const is_on = 0;
+
+		circle.setAttribute('cy', is_on ? 850 : 900);
+
+		const s = 'SW'+i;
+		msg.gpio[s] = is_on;
+
+	    }
+
+	    for (let i=16;i<21;i++) {
+		var sw = nexys.getElementById('SW'+i);
+		const circle = sw.querySelector("circle")
+		const r = circle.getAttribute('r')
+		const is_on = 0;
+
+		circle.setAttribute('r', is_on ? 10 : 18);
+
+		const s = 'SW'+i;
+
+		msg.gpio[s] = is_on;
+
+	    }
+
+
+	    ws.send(JSON.stringify(msg));
+	};
+
+	document.getElementById("btConn").onclick = function() {
+	    if (connected == false) {
+		doConnect("ws://localhost:8081");
+	    } else {
+		ws.close();
+	    }
+	};
+
+	document.getElementById("uartClear").onclick = function() {
+	    document.getElementById("uart").value = "";
+	};
+
+	/* Deals with messages. */
+	ws.onmessage = function (evt) {
+	    console.log(evt.data);
+	    const json_obj = JSON.parse(evt.data);
+	    if ("gpio" in json_obj) {
+		for (const [key, value] of Object.entries(json_obj.gpio)) {
+		    if (key in gpio) {
+			/* Check if key exists */
+			setLED(gpio[key],value);
+		    } else {
+			console.log("Missing key");
+		    }
+		}
+	    }
+	    if ("serial" in json_obj) {
+		uart_area = document.getElementById("uart");
+		uart_area.value += String.fromCharCode(json_obj.serial.uart);
+		uart_area.scrollTop = uart_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl0" in json_obj) {
+	  document.getElementById("SevSegDispl0").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl0");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl0.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl1" in json_obj) {
+	  document.getElementById("SevSegDispl1").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl1");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl1.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl2" in json_obj) {
+	  document.getElementById("SevSegDispl2").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl2");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl2.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl3" in json_obj) {
+	  document.getElementById("SevSegDispl3").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl3");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl3.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl4" in json_obj) {
+	  document.getElementById("SevSegDispl4").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl4");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl4.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl5" in json_obj) {
+	  document.getElementById("SevSegDispl5").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl5");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl5.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl6" in json_obj) {
+	  document.getElementById("SevSegDispl6").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl6");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl6.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	    if ("SevSegDispl7" in json_obj) {
+	  document.getElementById("SevSegDispl7").value = "";
+		SevSegDispl_area = document.getElementById("SevSegDispl7");
+		SevSegDispl_area.value += String.fromCharCode(json_obj.SevSegDispl7.digit);
+		SevSegDispl_area.scrollTop = SevSegDispl_area.scrollHeight;
+	    }
+
+	};
+
+	/* Close events. */
+	ws.onclose = function(event) {
+	    document.getElementById("btConn").value = "Connect to board";
+	    connected = false;
+	};
+    }
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+	document.getElementById("btConn").onclick = function() {
+	    if (connected == false) {
+		doConnect("ws://localhost:8081");
+	    } else {
+		ws.close();
+	    }
+	};
+    });
+
+    const nexysObject = document.getElementById('nexys-svg')
+    nexysObject.addEventListener("load", function() {
+	const nexys = nexysObject.contentDocument;
+	for (let i=0;i<16;i++) {
+	    nexys.getElementById('SW'+i).onclick = toggleSwitch;
+	    gpio['LD'+i] = nexys.getElementById('LD'+i);
+	}
+
+	for (let i=16;i<21;i++) {
+	    nexys.getElementById('SW'+i).onclick = toggleSwitch16to20;
+	}
+
+	function toggleSwitch() {
+	    const circle = this.querySelector("circle")
+	    const cy = circle.getAttribute('cy')
+	    const is_on = cy == 900;
+
+	    circle.setAttribute('cy', is_on ? 850 : 900);
+
+	    const s = new String(this.getAttribute('id'));
+
+	    var msg = {gpio: {[s] : is_on}};
+
+	    ws.send(JSON.stringify(msg));
+	}
+
+	function toggleSwitch16to20() {
+	    const circle = this.querySelector("circle")
+	    const r = circle.getAttribute('r')
+	    const is_on = r == 18;
+
+	    circle.setAttribute('r', is_on ? 10 : 18);
+
+	    const s = new String(this.getAttribute('id'));
+
+	    var msg = {gpio: {[s] : is_on}};
+
+	    ws.send(JSON.stringify(msg));
+	}
+
+
+    },false);
+  </script>
+</html>
