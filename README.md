@@ -13,4 +13,4 @@ We provide two new simulation tools that can be used in conjuntion with the [“
   <img src="RVfpga_PipelineSimulator.png" width=90% height=90%>
 </p>
 
-Binary beta version (Ubuntu) of the two simulators are provided as a release in this repository.
+Binary beta version (Ubuntu) of the two simulators are provided as a release in this repository. In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run them in your own Ubuntu System.
