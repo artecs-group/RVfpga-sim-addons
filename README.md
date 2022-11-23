@@ -7,7 +7,7 @@ We provide two new simulation tools that can be used in conjuntion with the [“
   <img src="RVfpga_ViDBo.png" width=60% height=60%>
 </p>
 
-+ RVfpga_PipelineSimulator: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the pipeline. This new simulation tool is especially useful for RVfpga labs 11-20.
++ RVfpga_PipelineSimulator: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the pipeline. This new simulation tool is especially useful for RVfpga labs 11-20. You can view this [example video](https://drive.google.com/file/d/1fX9cWZdV_GF7UTNUp-tYYD5TfJakeJai/view?usp=sharing).
 
 <p align="center">
   <img src="RVfpga_PipelineSimulator.png" width=90% height=90%>
