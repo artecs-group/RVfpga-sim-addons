@@ -3,7 +3,7 @@ We provide two new simulation tools that can be used in conjuntion with the [“
 
 + RVfpga_ViDBo: It performs a Verilator-based simulation of the RVfpga System and connects it with a Nexys A7 simulated board based on [ViDBo](https://github.com/olofk/vidbo) that allows you to communicate with some simulated peripherals on the board (at this moment the following peripherals are supported: 16 switches, 16 LEDs, UART, 5 pushbuttons, 8 7-Segment Displays). This new simulation tool is especially useful for RVfpga labs 6-10.
 
-![Screenshot](RVfpga_ViDBo.png){ width=50% }
+![Screenshot](RVfpga_ViDBo.png | width=100)
 
 + RVfpga_PipelineSimulator: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the pipeline. This new simulation tool is especially useful for RVfpga labs 11-20.
 
