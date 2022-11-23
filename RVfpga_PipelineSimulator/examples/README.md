@@ -1,7 +1,7 @@
-Follow the next steps:
+Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
-+ Open a terminal and go to the current folder.
-+ Launch the simulation of the example program and analyse the program cycle by cycle (using Ubuntu 20.04 version):
+1. Open a terminal and go into the current folder.
+2. Launch the simulation of the example program and analyse the program cycle by cycle (using Ubuntu 20.04 version):
 ```
-<path-to-binary-file>/RVfpga_ViDBo_Ubuntu20 +ram_init_file=Test/Test.vh
+<path-to-binary-file>/RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
 ```
