@@ -1,4 +1,4 @@
-Follow the next steps:
+Follow the next steps to run the provided program in the RVfpga_ViDBo simulator:
 
 
 1. Open a terminal and go to the current folder. Run the Verilator-simulator using the following command (Ubuntu 20.04): 
