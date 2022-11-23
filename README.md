@@ -5,4 +5,4 @@ We provide two new simulation tools that can be used in conjuntion with the [“
 
 + RVfpga_PipelineSimulator: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the pipeline. This new simulation tool is especially useful for RVfpga labs 11-20.
 
-Binary beta version (Ubuntu) of the two simulators as well as two example videos are provided as a release in this repository.
+Binary beta version (Ubuntu) of the two simulators are provided as a release in this repository.
