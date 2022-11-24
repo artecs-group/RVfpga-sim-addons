@@ -15,3 +15,25 @@ ___
 
 
 **Windows**
+
+
+Follow the next steps:
+
+1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
+
+    * git
+    * make 
+    * autoconf
+    * gcc-core 
+    * gcc-g++ 
+    * flex
+    * bison
+    * perl
+    * libargp-devel
+    * python3
+    * xorg-server
+    * xinit
+    * libgtk3-devel
+
+2. Open a cygwin terminal. Go into the current folder. Run the following command:
+startx ./SweRV-EH1_PipelineSimulator_Windows +ram_init_file=Test/Test.vh
