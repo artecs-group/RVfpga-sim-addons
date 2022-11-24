@@ -16,7 +16,7 @@ Then, follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo 
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
 
-2. Open another terminal and go into from the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
+2. Open another terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
 ```
 python3 -m http.server --directory ../NexysA7board/
 ```
@@ -51,16 +51,16 @@ Follow the next steps:
 
 3. Restart your computer.
 
-4. Open a cygwin terminal. Go into the downloaded folder and then go into folder Binaries. Run the following command:
+4. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 
 ```
-./Vrvfpgasim_ViDBo_Windows10 +ram_init_file=../LedsSwitches/src/LedsSwitches.vh
+<path-to-binary-file>/Vrvfpgasim_ViDBo_Windows10 +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
-5. Open another cygwin terminal. Go into the downloaded folder and run: 
+5. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
 
 ```
-python3 -m http.server --directory NexysA7board/
+python3 -m http.server --directory ../NexysA7board/
 ```
 
 6. Open a browser and connect to: ```http://localhost:8000/```
