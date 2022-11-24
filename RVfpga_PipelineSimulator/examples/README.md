@@ -36,4 +36,7 @@ Follow the next steps:
     * libgtk3-devel
 
 2. Open a cygwin terminal. Go into the current folder. Run the following command:
+
+```
 startx ./SweRV-EH1_PipelineSimulator_Windows +ram_init_file=Test/Test.vh
+```
