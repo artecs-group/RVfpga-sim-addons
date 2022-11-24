@@ -38,5 +38,5 @@ Follow the next steps:
 2. Open a cygwin terminal. Go into the current folder. Run the following command:
 
 ```
-startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows +ram_init_file=Test/Test.vh
+startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
