@@ -5,4 +5,4 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 ```
 <path-to-binary-file>/RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
 ```
-Note that it may be necessary to give execution permisions to the simulator binary file.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
