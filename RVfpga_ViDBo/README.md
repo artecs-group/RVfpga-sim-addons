@@ -1,6 +1,6 @@
 **Ubuntu 20/22**
 
-(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1zgGUX6UYnExh1JYof4PiJ6gxi6pZvngT/view?usp=sharing).)
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1zgGUX6UYnExh1JYof4PiJ6gxi6pZvngT/view?usp=sharing))
 
 For using this simulator in Ubuntu it is required to first install websockets library: 
 
