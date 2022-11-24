@@ -15,4 +15,4 @@ We provide two new simulation tools that can be used in conjuntion with the [“
 
 Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions. 
 
-In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own Ubuntu System as well as useful example videos.
+In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own system as well as useful example videos.
