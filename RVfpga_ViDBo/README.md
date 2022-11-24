@@ -63,6 +63,6 @@ Follow the next steps:
 python3 -m http.server --directory ../NexysA7board/
 ```
 
-6. Open a browser and connect to: ```http://localhost:8000/```
+6. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
 
 7. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
