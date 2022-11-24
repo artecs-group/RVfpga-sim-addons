@@ -26,9 +26,10 @@ python3 -m http.server --directory ../NexysA7board/
 
 ___
 
-(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1_jsrZ2zuCW3KN73M03rk-F63tagk3Ew8/view?usp=sharing))
 
 ## **Windows**
+
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1_jsrZ2zuCW3KN73M03rk-F63tagk3Ew8/view?usp=sharing))
 
 Follow the next steps:
 
