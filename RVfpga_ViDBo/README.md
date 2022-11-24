@@ -1,4 +1,4 @@
-<font size="28"> Ubuntu 20/22 </font>
+**Ubuntu 20/22**
 
 For using this simulator in Ubuntu it is required to first install websockets library: 
 
@@ -21,3 +21,9 @@ python3 -m http.server --directory ../NexysA7board/
 3. Open a browser and connect to `http://localhost:8000/nexys-a7.html`
 
 4. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED.
+
+___
+
+
+**Windows**
+
