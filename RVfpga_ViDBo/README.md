@@ -1,4 +1,4 @@
-**Ubuntu 20/22**
+## **Ubuntu 20/22**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1zgGUX6UYnExh1JYof4PiJ6gxi6pZvngT/view?usp=sharing))
 
@@ -27,5 +27,42 @@ python3 -m http.server --directory ../NexysA7board/
 ___
 
 
-**Windows**
+## **Windows**
 
+Follow the next steps:
+
+1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
+
+    * git
+    * make 
+    * autoconf
+    * gcc-core 
+    * gcc-g++ 
+    * flex
+    * bison
+    * perl
+    * libargp-devel
+    * python3
+    * xorg-server
+    * xinit
+    * libgtk3-devel
+
+2. Include the libwebsockets library compiled for Windows, which is provided in Releases as a zip file. For that purpose, unzip the file and add to the PATH environment system variable the route to the unzipped folder.
+
+3. Restart your computer.
+
+4. Open a cygwin terminal. Go into the downloaded folder and then go into folder Binaries. Run the following command:
+
+```
+./Vrvfpgasim_ViDBo_Windows10 +ram_init_file=../LedsSwitches/src/LedsSwitches.vh
+```
+
+5. Open another cygwin terminal. Go into the downloaded folder and run: 
+
+```
+python3 -m http.server --directory NexysA7board/
+```
+
+6. Open a browser and connect to: ```http://localhost:8000/```
+
+7. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
