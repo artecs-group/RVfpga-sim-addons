@@ -16,6 +16,7 @@ ___
 
 **Windows**
 
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1_HnV5Tr3MhDgzTSx-42JW7iN98Gh4g_p/view?usp=sharing))
 
 Follow the next steps:
 
