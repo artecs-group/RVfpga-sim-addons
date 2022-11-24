@@ -1,11 +1,10 @@
-For using this simulator it is required to first install websockets library: 
+For using this simulator in Ubuntu it is required to first install websockets library: 
 
-+ Ubuntu:
 ```
 sudo apt-get install -y libwebsockets-dev
 ```
 
-Follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo simulator:
+Then, follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo simulator:
 
 1. Open a terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the Verilator-simulator using the following command (Ubuntu 20.04): 
 ```
