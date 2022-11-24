@@ -10,6 +10,7 @@ Then, follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo 
 ```
 <path-to-binary-file>/RVfpga_ViDBo_Ubuntu20 +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
 
 2. Open another terminal and go into from the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
 ```
