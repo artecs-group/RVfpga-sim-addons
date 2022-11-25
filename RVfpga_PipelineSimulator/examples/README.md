@@ -41,3 +41,22 @@ Follow the next steps:
 ```
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
+
+___
+
+
+## **Simulate other programs**
+
+(The following steps are illustrated in this [example video]())
+
+You can simulate any other program in RVfpga-PipelineSimulator, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
+
+1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
+
+2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
+
+3. Open in PlatformIO the ADD_Instruction example from Lab 12. Include, before the end of the test loop, the control instruction (and t2, t4, t5) that makes the simulator stop.
+
+4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/Labs/Lab12/ADD_Instruction/.pio/build/swervolf_nexys*.
+
+5. Follow the steps indicated above using the new .vh file to simulate the new program.
