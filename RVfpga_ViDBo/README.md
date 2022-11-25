@@ -68,3 +68,23 @@ python3 -m http.server --directory ../NexysA7board/
 6. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
 
 7. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
+
+
+___
+
+
+## **Simulate other programs**
+
+(The following steps are illustrated in this [example video]())
+
+You can simulate any other program in RVfpga-ViDBo, for which you need to create the .vh file. We next explain how you can do it in the contect of the RVfpga course.
+
+1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
+
+2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
+
+3. Open in PlatformIO the Hello World example. Reduce the delay in the .c file, as the simulator is much slower than the board.
+
+4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/examples/HelloWorld_C-Lang/.pio/build/swervolf_nexys*.
+
+5. Follow the steps indicated above using the new .vh file to simulate the Hello World program.
