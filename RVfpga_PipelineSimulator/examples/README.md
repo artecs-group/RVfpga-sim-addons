@@ -1,4 +1,4 @@
-**Ubuntu 20/22**
+## **Ubuntu 20/22**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1fX9cWZdV_GF7UTNUp-tYYD5TfJakeJai/view?usp=sharing))
 
@@ -14,7 +14,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 ___
 
 
-**Windows**
+## **Windows**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1yGHDSitvdZiQzkdsvL0qKYCGUTGjoR33/view?usp=sharing))
 
