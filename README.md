@@ -13,6 +13,6 @@ We provide two new simulation tools that can be used in conjuntion with the [“
   <img src="RVfpga_PipelineSimulator.png" width=90% height=90%>
 </p>
 
-Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions. 
+Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions. We will soon release the sources of the two simulators.
 
-In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own system as well as useful example videos.
+In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own system as well as useful example videos. The example programs that are tested in the simulators are also included, both with a source file and a .vh file. In case you want to simulate other programs you have to create the .vh file yourself; we will soon provide instructions for doing it.  
