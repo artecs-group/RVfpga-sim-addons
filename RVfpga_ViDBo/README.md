@@ -77,7 +77,7 @@ ___
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1rVUCEtV2jJZcxwa7RUylmWUISDBItj0E/view?usp=sharing))
 
-You can simulate any other program in RVfpga-ViDBo, for which you need to create the .vh file. We next explain how you can do it in the contect of the RVfpga course.
+You can simulate any other program in RVfpga-ViDBo, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
 
