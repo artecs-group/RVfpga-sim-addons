@@ -13,6 +13,7 @@ patch -p0 < Patch_src
 4. Install the following packages: 
 
 ```
+sudo apt-get install make
 sudo apt-get install -y libwebsockets-dev
 sudo apt-get install verilator
 sudo apt-get install g++
