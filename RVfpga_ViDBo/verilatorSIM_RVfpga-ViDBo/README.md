@@ -2,7 +2,7 @@ Follow the next steps to compile the simulator in your Ubuntu 22.04 OS:
 
 1. Download the whole RVfpga-sim-addons folder as well as [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-download-page-en/).
 
-2. Move the src folder containing the RVfpga System into the RVfpga-sim-addons folder.
+2. Copy the src folder containing the RVfpga System into the RVfpga-sim-addons folder.
 
 3. In a terminal, go into the RVfpga-sim-addons folder and apply the provided patch to the src folder by running the following command:
 
