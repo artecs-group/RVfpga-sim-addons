@@ -15,7 +15,6 @@ patch -p0 < Patch_src
 ```
 sudo apt-get install -y libwebsockets-dev
 sudo apt-get install verilator
-sudo apt-get install -y libwebsockets-dev
 sudo apt-get install g++
 ```
 
