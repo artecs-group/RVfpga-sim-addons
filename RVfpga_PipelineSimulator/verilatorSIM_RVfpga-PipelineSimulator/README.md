@@ -13,7 +13,7 @@ patch -p0 < Patch_src
 4. Install the following packages: 
 
 ```
-sudo apt install libcairo2-dev
+sudo apt-get install libcairo2-dev
 sudo apt-get install libgtk-3-dev
 sudo apt-get install -y libsdl-pango-dev
 ```
