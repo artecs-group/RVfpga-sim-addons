@@ -10,19 +10,21 @@ sudo apt-get install -y libwebsockets-dev
 
 Then, follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo simulator:
 
-1. Open a terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the Verilator-simulator using the following command (this is for Ubuntu 20.04; for Ubuntu 22.04 use binary RVfpga_ViDBo_Ubuntu22): 
+1. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Ubuntu20.
+
+2. Open a terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the Verilator-simulator using the following command (this is for Ubuntu 20.04; for Ubuntu 22.04 use binary RVfpga_ViDBo_Ubuntu22): 
 ```
 <path-to-binary-file>/RVfpga_ViDBo_Ubuntu20 +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
 
-2. Open another terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
+3. Open another terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
 ```
 python3 -m http.server --directory ../NexysA7board/
 ```
-3. Open a browser and connect to `http://localhost:8000/nexys-a7.html`
+4. Open a browser and connect to `http://localhost:8000/nexys-a7.html`
 
-4. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED.
+5. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED.
 
 ___
 
@@ -53,21 +55,23 @@ Follow the next steps:
 
 3. Restart your computer.
 
-4. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
+4. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Windows10.
+
+5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 
 ```
-<path-to-binary-file>/Vrvfpgasim_ViDBo_Windows10 +ram_init_file=LedsSwitches/LedsSwitches.vh
+<path-to-binary-file>/RVfpga_ViDBo_Windows10 +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
-5. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
+6. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
 
 ```
 python3 -m http.server --directory ../NexysA7board/
 ```
 
-6. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
+7. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
 
-7. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
+8. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
 
 
 ___
