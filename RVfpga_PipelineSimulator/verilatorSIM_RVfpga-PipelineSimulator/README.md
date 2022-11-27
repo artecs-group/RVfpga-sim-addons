@@ -65,7 +65,7 @@ Follow the next steps to compile the simulator in your Windows OS:
 4. In a cygwin terminal, go into the RVfpga-sim-addons folder and apply the provided patch to the src folder by running the following command:
 
 ```
-patch -p0 < Patch_src
+patch.exe -p0 < Patch_src
 ```
 
 5. Copy file ... (which you can find in ...) into .... 
