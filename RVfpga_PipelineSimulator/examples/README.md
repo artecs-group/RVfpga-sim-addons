@@ -14,7 +14,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
 
-4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle in the SweRV EH1 processor from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
 
 ___
 
@@ -49,7 +49,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
 
-4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program in the SweRV EH1 processor cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
 
 ___
 
