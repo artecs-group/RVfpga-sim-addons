@@ -23,7 +23,7 @@ ___
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1yGHDSitvdZiQzkdsvL0qKYCGUTGjoR33/view?usp=sharing))
 
-Follow the next steps:
+Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
 1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
 
