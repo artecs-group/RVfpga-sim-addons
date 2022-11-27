@@ -4,8 +4,11 @@
 
 Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
-1. Open a terminal and go into the current folder.
-2. Launch the simulation of the example program and analyse the program cycle by cycle (using Ubuntu 20.04 version):
+1. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_PipelineSimulator_Ubuntu.
+
+2. Open a terminal and go into the current folder.
+
+3. Launch the simulation of the example program and analyse the program cycle by cycle (using Ubuntu 20.04 version):
 ```
 <path-to-binary-file>/RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
 ```
@@ -36,7 +39,9 @@ Follow the next steps:
     * xinit
     * libgtk3-devel
 
-2. Open a cygwin terminal. Go into the current folder. Run the following command:
+2. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_PipelineSimulator_Windows.
+
+3. Open a cygwin terminal. Go into the current folder. Run the following command:
 
 ```
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
