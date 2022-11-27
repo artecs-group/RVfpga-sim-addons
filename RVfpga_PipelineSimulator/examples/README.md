@@ -14,6 +14,8 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
 
+4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+
 ___
 
 
@@ -47,6 +49,8 @@ Follow the next steps:
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
 
+4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+
 ___
 
 
@@ -62,6 +66,6 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
 
 3. Open in PlatformIO the ADD_Instruction example from Lab 12. Insert, before the end of the test loop, the control instruction (and t2, t4, t5) that we use in our simulator for stopping execution and continuing cycle by cycle.
 
-4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/Labs/Lab12/ADD_Instruction/.pio/build/swervolf_nexys*.
+4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/Labs/Lab12/ADD_Instruction/.pio/build/swervolf_nexys*. A file called firmware.dis will also be created in the same directory, which contains the dissasembly program that can be useful for the simulation analysis.
 
 5. Follow the steps indicated above using the new .vh file to simulate the new program.
