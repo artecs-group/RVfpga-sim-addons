@@ -55,12 +55,12 @@ Follow the next steps:
 
 3. Restart your computer.
 
-4. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Windows10.
+4. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Windows.
 
 5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 
 ```
-<path-to-binary-file>/RVfpga_ViDBo_Windows10 +ram_init_file=LedsSwitches/LedsSwitches.vh
+<path-to-binary-file>/RVfpga_ViDBo_Windows +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
 6. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
