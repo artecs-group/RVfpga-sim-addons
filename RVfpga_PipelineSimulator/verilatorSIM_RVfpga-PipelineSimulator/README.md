@@ -68,9 +68,11 @@ Follow the next steps to compile the simulator in your Windows OS:
 patch.exe -p0 < Patch_src
 ```
 
-5. Copy file ... (which you can find in ...) into .... 
+5. Install Verilator as explained in Appendix C of the RVfpga Getting Started Guide.
 
-6. In the cygwin terminal, go into folder RVfpga-sim-addons-main/RVfpga_PipelineSimulator/verilatorSIM_RVfpga-PipelineSimulator and compile the simulator by running:
+6. Copy file ... (which you can find in ...) into .... 
+
+7. In the cygwin terminal, go into folder RVfpga-sim-addons-main/RVfpga_PipelineSimulator/verilatorSIM_RVfpga-PipelineSimulator and compile the simulator by running:
 
 ```
 make
