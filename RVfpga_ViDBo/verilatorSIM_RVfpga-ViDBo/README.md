@@ -35,6 +35,8 @@ ___
 
 ## **Compilation of RVfpga-ViDBo in Windows**
 
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1nVsdJnBaPgrEnqjsRWPUYbjo1tNXbUu_/view?usp=sharing))
+
 Follow the next steps to compile the simulator in your Windows OS:
 
 1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
