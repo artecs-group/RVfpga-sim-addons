@@ -1,4 +1,4 @@
-## **Compilation of RVfpga-ViDBo**
+## **Compilation of RVfpga-ViDBo in Ubuntu**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1k2nV0DwbfJ-FskXy-967qKRxBtgQzVX2/view?usp=sharing))
 
@@ -30,3 +30,49 @@ make
 ```
 
 You should obtain a binary file called Vrvfpgasim which is the RVfpga-ViDBo simulator and that you can use as explained in the examples folder.
+
+___
+
+## **Compilation of RVfpga-ViDBo in Windows**
+
+Follow the next steps to compile the simulator in your Windows OS:
+
+1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
+
+    * git
+    * make 
+    * autoconf
+    * gcc-core 
+    * gcc-g++ 
+    * flex
+    * bison
+    * perl
+    * libargp-devel
+    * python3
+    * xorg-server
+    * xinit
+    * libgtk3-devel
+    * libcairo-devel
+    * libcairo2
+    * patch
+
+2. Download the whole RVfpga-sim-addons folder as well as [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-download-page-en/).
+
+3. Copy the src folder containing the RVfpga System into the RVfpga-sim-addons folder.
+
+4. In a cygwin terminal, go into the RVfpga-sim-addons folder and apply the provided patch to the src folder by running the following command:
+
+```
+patch.exe -p0 < Patch_src
+```
+
+5. Install Verilator as explained in Appendix C of the RVfpga Getting Started Guide.
+
+
+7. In the cygwin terminal, in the same folder (RVfpga-sim-addons-main/RVfpga_PipelineSimulator/verilatorSIM_RVfpga-PipelineSimulator), compile the simulator by running:
+
+```
+make
+```
+
+You should obtain a binary file called Vrvfpgasim.exe which is the RVfpga-ViDBo simulator and that you can use as explained in the examples folder.
