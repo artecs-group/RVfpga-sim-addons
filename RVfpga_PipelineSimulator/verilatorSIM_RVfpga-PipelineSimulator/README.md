@@ -84,4 +84,4 @@ cp glibconfig.h /usr/include/glib-2.0/
 make
 ```
 
-You should obtain a binary file called Vrvfpgasim which is the RVfpga-PipelineSimulator simulator and that you can use as explained in the examples folder.
+You should obtain a binary file called Vrvfpgasim.exe which is the RVfpga-PipelineSimulator simulator and that you can use as explained in the examples folder.
