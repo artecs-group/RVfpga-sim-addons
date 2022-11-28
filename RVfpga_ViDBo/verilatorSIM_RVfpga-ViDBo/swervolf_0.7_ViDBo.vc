@@ -2,6 +2,8 @@
 --cc
 -LDFLAGS -lwebsockets
 
++incdir+LibWebSockets_Windows10/libwebsockets/build/include
+-CFLAGS -ILibWebSockets_Windows10/libwebsockets/build/include
 
 +incdir+../../src/SweRVolfSoC/SweRVEh1CoreComplex/include
 -CFLAGS -I../../src/SweRVolfSoC/SweRVEh1CoreComplex/include
