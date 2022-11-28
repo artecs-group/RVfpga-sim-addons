@@ -69,7 +69,7 @@ patch.exe -p0 < Patch_src
 5. Install Verilator as explained in Appendix C of the RVfpga Getting Started Guide.
 
 
-7. In the cygwin terminal, in the same folder (RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo), compile the simulator by running:
+7. In the cygwin terminal, go into folder RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo and compile the simulator by running:
 
 ```
 make
