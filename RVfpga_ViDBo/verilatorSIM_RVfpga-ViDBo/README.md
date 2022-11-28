@@ -59,22 +59,22 @@ Follow the next steps to compile the simulator in your Windows OS:
 
 2. Download the whole RVfpga-sim-addons folder as well as [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-download-page-en/).
 
-2. Download the libwebsockets library compiled for Windows, which is provided in Releases as a zip file called LibWebSockets_Windows10.zip. Unzip the file and move the whole folder (*LibWebSockets_Windows10*) into the current folder (*<path-to-folder>/RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo*). Then, add to the PATH environment system variable the route to folder *<path-to-folder>/RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo/LibWebSockets_Windows10/libwebsockets/build/bin*.
+3. Download the libwebsockets library compiled for Windows, which is provided in Releases as a zip file called LibWebSockets_Windows10.zip. Unzip the file and move the whole folder (*LibWebSockets_Windows10*) into the current folder (*<path-to-folder>/RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo*). Then, add to the PATH environment system variable the route to folder *<path-to-folder>/RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo/LibWebSockets_Windows10/libwebsockets/build/bin*.
 
-3. Restart your computer.
+4. Restart your computer.
 
-3. Copy the src folder containing the RVfpga System into the RVfpga-sim-addons folder.
+5. Copy the src folder containing the RVfpga System into the RVfpga-sim-addons folder.
 
-4. In a cygwin terminal, go into the RVfpga-sim-addons folder and apply the provided patch to the src folder by running the following command:
+6. In a cygwin terminal, go into the RVfpga-sim-addons folder and apply the provided patch to the src folder by running the following command:
 
 ```
 patch.exe -p0 < Patch_src
 ```
 
-5. Install Verilator as explained in Appendix C of the RVfpga Getting Started Guide.
+7. Install Verilator as explained in Appendix C of the RVfpga Getting Started Guide.
 
 
-7. In the cygwin terminal, go into folder RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo and compile the simulator by running:
+8. In the cygwin terminal, go into folder RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo and compile the simulator by running:
 
 ```
 make
