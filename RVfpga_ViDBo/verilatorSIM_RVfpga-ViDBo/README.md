@@ -55,6 +55,7 @@ Follow the next steps to compile the simulator in your Windows OS:
     * libcairo-devel
     * libcairo2
     * patch
+    * libssl-devel
 
 2. Download the whole RVfpga-sim-addons folder as well as [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-download-page-en/).
 
