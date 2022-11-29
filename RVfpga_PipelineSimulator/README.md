@@ -1,4 +1,4 @@
-This folder includes everything related with the RVfpga-PipelineSimulator.
+This folder includes everything related with the **RVfpga-PipelineSimulator**:
 
 * In folder *examples* we provide an example program, both with a source file and a .vh file, as well as detailed instructions on how to simulate it in the **RVfpga-PipelineSimulator** using the simulator binaries provided as a release (*RVfpga_PipelineSimulator_Ubuntu* and *RVfpga_PipelineSimulator_Windows*). We also explain how to create and simulate other programs.
 
