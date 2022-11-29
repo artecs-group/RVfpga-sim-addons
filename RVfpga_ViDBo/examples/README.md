@@ -57,7 +57,7 @@ Follow the next steps:
 
 4. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_ViDBo_Windows.exe** binary from the releases.
 
-5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
+5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```). Run the following command:
 
 ```
 <path-to-binary-file>/RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
