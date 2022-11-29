@@ -21,8 +21,8 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
          add t3, t3, t3
          mul t3, t3, t4
          mul t5, t5, t5
-         lw t3, 4(t0)      # load to the DCCM (low-latency)
-         lw t3, (t1)       # load to the External Memory (high-latency that makes the processor stall for some cycles)
+         lw t3, 4(t0)      # load from the DCCM (low-latency)
+         lw t3, (t1)       # load from the External Memory (high-latency that makes the processor stall for some cycles)
 ```
 
 ___
@@ -65,8 +65,8 @@ startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file
          add t3, t3, t3
          mul t3, t3, t4
          mul t5, t5, t5
-         lw t3, 4(t0)      # load to the DCCM (low-latency)
-         lw t3, (t1)       # load to the External Memory (high-latency that makes the processor stall for some cycles)
+         lw t3, 4(t0)      # load from the DCCM (low-latency)
+         lw t3, (t1)       # load from the External Memory (high-latency that makes the processor stall for some cycles)
 ```
 
 ___
