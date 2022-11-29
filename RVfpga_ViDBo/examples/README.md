@@ -8,9 +8,9 @@ For using this simulator in Ubuntu it is required to first install websockets li
 sudo apt-get install -y libwebsockets-dev
 ```
 
-Then, follow the next steps to run the LedsSwitches program in the RVfpga_ViDBo simulator:
+Then, follow the next steps to run the *LedsSwitches* program in the **RVfpga_ViDBo** simulator:
 
-1. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Ubuntu20.
+1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_ViDBo_Ubuntu20** / **RVfpga_ViDBo_Ubuntu22** binary from the releases.
 
 2. Open a terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the Verilator-simulator using the following command (this is for Ubuntu 20.04; for Ubuntu 22.04 use binary RVfpga_ViDBo_Ubuntu22): 
 ```
@@ -24,7 +24,7 @@ python3 -m http.server --directory ../NexysA7board/
 ```
 4. Open a browser and connect to `http://localhost:8000/nexys-a7.html`
 
-5. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED.
+5. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED (you can analyze the program by opening file *LedsSwitches/LedsSwitches.vh* in an editor).
 
 ___
 
@@ -51,11 +51,11 @@ Follow the next steps:
     * xinit
     * libgtk3-devel
 
-2. Include the libwebsockets library compiled for Windows, which is provided in Releases as a zip file. For that purpose, unzip the file and add to the PATH environment system variable the route to folder *LibWebSockets_Windows10/libwebsockets/build/bin*.
+2. Include the websockets library compiled for Windows, which is provided in Releases as a zip file. For that purpose, unzip the file and add to the PATH environment system variable the route to folder *LibWebSockets_Windows10/libwebsockets/build/bin*.
 
 3. Restart your computer.
 
-4. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_ViDBo_Windows.exe.
+4. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_ViDBo_Windows.exe** binary from the releases.
 
 5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 
@@ -81,14 +81,14 @@ ___
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1rVUCEtV2jJZcxwa7RUylmWUISDBItj0E/view?usp=sharing))
 
-You can simulate any other program in RVfpga-ViDBo, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
+You can simulate any other program in **Vfpga-ViDBo**, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
 
 2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
 
-3. Open in PlatformIO the Hello World example. Reduce the delay in the .c file, as the simulator is much slower than the board.
+3. Open in PlatformIO the *HelloWorld* example. Reduce the delay in the .c file, as the simulator is much slower than the board.
 
 4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/examples/HelloWorld_C-Lang/.pio/build/swervolf_nexys*.
 
-5. Follow the steps indicated above using the new .vh file to simulate the Hello World program.
+5. Follow the steps indicated above using the new .vh file to simulate the HelloWorld program.
