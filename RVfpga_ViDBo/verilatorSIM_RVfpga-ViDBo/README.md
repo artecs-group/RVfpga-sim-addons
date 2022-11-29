@@ -64,8 +64,8 @@ Follow the next steps to compile the simulator in your Windows OS:
    - Finally, in a Cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```), go into the current folder and copy the library to the Cygwin System:
 
 ```
-      cp LibWebSockets_Windows10/libwebsockets/build/lib/libwebsockets.dll.a /usr/lib/gcc/x86_64-pc-cygwin/10/
-      cp LibWebSockets_Windows10/libwebsockets/build/lib/libwebsockets.a /usr/lib/gcc/x86_64-pc-cygwin/10/
+      cp libwebsockets/build/lib/libwebsockets.dll.a /usr/lib/gcc/x86_64-pc-cygwin/10/
+      cp libwebsockets/build/lib/libwebsockets.a /usr/lib/gcc/x86_64-pc-cygwin/10/
 ```
 
 
