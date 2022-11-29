@@ -55,7 +55,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 3. Open a cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```). Go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*). Run the following command:
 
 ```
-startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
+startx <absolute-path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
 
 4. Execution will stop at the end of the endless loop (where our program includes a control instruction- and t2, t4, t5- that makes simulation stop), and you'll be able to analyse the execution of the program cycle by cycle in the SweRV EH1 processor from that point (remember that you can view the program that you are simulating in file Test/Test.S). Specifically, we are interested in analyzing the following block of instructions (*nop* instructions are included in order to isolate the different iterations), so you can fast forward several cycles and then analyze those instructions carefully cycle-by-cycle:
