@@ -52,7 +52,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
 2. Download the whole RVfpga-sim-addons folder as well as the **RVfpga_PipelineSimulator_Windows** binary from the releases
 
-3. Open a cygwin terminal. Go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*). Run the following command:
+3. Open a cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```). Go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*). Run the following command:
 
 ```
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
