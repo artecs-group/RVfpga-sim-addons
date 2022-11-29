@@ -34,13 +34,13 @@ ___
 
 Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
-1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators:
+1. Install cygwin as explained in Appendix C of the RVfpga Getting Started Guide. Install all the packages stated in that document plus some other packages needed for the two new simulators (install the latest available version unless for gcc-core and gcc-g++, as stated below):
 
     * git
     * make 
     * autoconf
-    * gcc-core 
-    * gcc-g++ 
+    * gcc-core (IMPORTANT: install version 10.2.0)
+    * gcc-g++ (IMPORTANT: install version 10.2.0)
     * flex
     * bison
     * perl
