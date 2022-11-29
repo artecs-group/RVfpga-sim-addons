@@ -61,7 +61,7 @@ Follow the next steps to compile the simulator in your Windows OS:
 3. Download the websockets library compiled for Windows, which is provided in Releases as a zip file called *LibWebSockets_Windows10.zip*. 
    - Unzip the file and move the whole folder (*LibWebSockets_Windows10*) into the current folder (*RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo*). 
    - Then, add to the PATH environment system variable the route to folder *RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo/LibWebSockets_Windows10/libwebsockets/build/bin*.
-   - Finally, in a Cygwin terminal, go into the current folder and copy the library to the Cygwin System:
+   - Finally, in a Cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```), go into the current folder and copy the library to the Cygwin System:
 
 ```
       cp LibWebSockets_Windows10/libwebsockets/build/lib/libwebsockets.dll.a /usr/lib/gcc/x86_64-pc-cygwin/10/
@@ -73,7 +73,7 @@ Follow the next steps to compile the simulator in your Windows OS:
 
 5. Copy the *src* folder containing the RVfpga System into the *RVfpga-sim-addons* folder.
 
-6. In a cygwin terminal, go into the *RVfpga-sim-addons* folder and apply the provided patch to the *src* folder by running the following command:
+6. In a cygwin terminal, go into the *RVfpga-sim-addons* folder (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```) and apply the provided patch to the *src* folder by running the following command:
 
 ```
 patch.exe -p0 < Patch_src
