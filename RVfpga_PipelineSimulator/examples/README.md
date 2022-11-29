@@ -4,17 +4,26 @@
 
 Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
-1. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_PipelineSimulator_Ubuntu.
+1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases.
 
 2. Open a terminal and go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*).
 
-3. Launch the simulation of the example program and analyse the program cycle by cycle (using Ubuntu 20.04 version):
+3. Launch the simulation of the Test program:
 ```
 <path-to-binary-file>/RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Note that it may be necessary to give execution permisions to the simulator binary file.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Note that it may be necessary to give execution permisions to the simulator binary file.)
 
-4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program cycle by cycle in the SweRV EH1 processor from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+4. Execution will stop at the end of the endless loop (where our program includes a control instruction- and t2, t4, t5- that makes simulation stop), and you'll be able to analyse the execution of the program cycle by cycle in the SweRV EH1 processor from that point (remember that you can view the program that you are simulating in file Test/Test.S). Specifically, we are interested in analyzing the following block of instructions (*nop* instructions are included in order to isolate the different iterations), so you can fast forward several cycles and then analyze those instructions carefully cycle-by-cycle:
+
+```c
+         add t3, t3, t3        
+         add t3, t3, t3
+         mul t3, t3, t4
+         mul t5, t5, t5
+         lw t3, 4(t0)
+         lw t3, (t1)
+```
 
 ___
 
@@ -41,7 +50,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
     * xinit
     * libgtk3-devel
 
-2. Download the whole RVfpga-sim-addons folder as well as the Verilator-simulator binary from the releases that you are going to use, in this case RVfpga_PipelineSimulator_Windows.
+2. Download the whole RVfpga-sim-addons folder as well as the **RVfpga_PipelineSimulator_Windows** binary from the releases
 
 3. Open a cygwin terminal. Go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*). Run the following command:
 
@@ -49,7 +58,16 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 startx <path-to-binary-file>/RVfpga_PipelineSimulator_Windows.exe +ram_init_file=Test/Test.vh
 ```
 
-4. Execution will stop at the end of the endless loop (at the control instruction), and you'll be able to simulate the execution of the program in the SweRV EH1 processor cycle by cycle from that point. Remember that you can view the program that you are simulating in file Test/Test.S.
+4. Execution will stop at the end of the endless loop (where our program includes a control instruction- and t2, t4, t5- that makes simulation stop), and you'll be able to analyse the execution of the program cycle by cycle in the SweRV EH1 processor from that point (remember that you can view the program that you are simulating in file Test/Test.S). Specifically, we are interested in analyzing the following block of instructions (*nop* instructions are included in order to isolate the different iterations), so you can fast forward several cycles and then analyze those instructions carefully cycle-by-cycle:
+
+```c
+         add t3, t3, t3        
+         add t3, t3, t3
+         mul t3, t3, t4
+         mul t5, t5, t5
+         lw t3, 4(t0)
+         lw t3, (t1)
+```
 
 ___
 
