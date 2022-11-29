@@ -51,7 +51,7 @@ Follow the next steps:
     * xinit
     * libgtk3-devel
 
-2. Include the websockets library compiled for Windows, which is provided in Releases as a zip file. For that purpose, unzip the file and add to the PATH environment system variable the route to folder *LibWebSockets_Windows10/libwebsockets/build/bin*.
+2. Include the websockets library compiled for Windows, which is provided in Releases as a zip file called *LibWebSockets_Windows10.zip*. For that purpose, unzip the file and add to the PATH environment system variable the route to folder *LibWebSockets_Windows10/libwebsockets/build/bin*.
 
 3. Restart your computer.
 
