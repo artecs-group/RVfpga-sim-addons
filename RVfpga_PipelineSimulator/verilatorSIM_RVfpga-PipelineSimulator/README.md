@@ -17,12 +17,7 @@ patch -p0 < Patch_src
 4. Install the following packages: 
 
 ```
-sudo apt-get install make
-sudo apt-get install verilator
-sudo apt-get install g++
-sudo apt-get install libcairo2-dev
-sudo apt-get install libgtk-3-dev
-sudo apt-get install -y libsdl-pango-dev
+sudo apt-get install make verilator g++ libcairo2-dev libgtk-3-dev libsdl-pango-dev
 ```
 
 5. In the terminal, go into folder RVfpga-sim-addons-main/RVfpga_PipelineSimulator/verilatorSIM_RVfpga-PipelineSimulator and compile the simulator by running:
