@@ -26,7 +26,7 @@ sudo apt-get install make verilator g++ libcairo2-dev libgtk-3-dev libsdl-pango-
 make
 ```
 
-You should obtain a binary file called *Vrvfpgasim* which is the **RVfpga-PipelineSimulator** and that you can use as explained in the examples folder.
+You should obtain a binary file called ***Vrvfpgasim*** which is the **RVfpga-PipelineSimulator** and that you can use as explained in the examples folder.
 
 ___
 
@@ -79,4 +79,4 @@ cp glibconfig.h /usr/include/glib-2.0/
 make
 ```
 
-You should obtain a binary file called *Vrvfpgasim.exe* which is the **RVfpga-PipelineSimulator** and that you can use as explained in the examples folder.
+You should obtain a binary file called ***Vrvfpgasim.exe*** which is the **RVfpga-PipelineSimulator** and that you can use as explained in the examples folder.
