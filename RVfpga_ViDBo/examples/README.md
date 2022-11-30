@@ -30,7 +30,7 @@ Then, follow the next steps to run the *LedsSwitches* program in the **RVfpga_Vi
 ___
 
 
-## **Windows**
+## **Windows (Choose only one of the two proposed options:)**
 
 ### **1st option - Using CygWin**
 
