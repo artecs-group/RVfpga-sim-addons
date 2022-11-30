@@ -63,13 +63,13 @@ Follow the next steps:
 5. Open a cygwin terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```). Run the following command:
 
 ```
-<path-to-binary-file>/RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
+      <path-to-binary-file>/RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
 6. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
 
 ```
-python3 -m http.server --directory ../NexysA7board/
+      python3 -m http.server --directory ../NexysA7board/
 ```
 
 7. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
@@ -85,7 +85,7 @@ Follow the next steps:
 
 2. Open a cmd and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 ```
-<path-to-binary-file>/RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
+      ./RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
 3. Install [Python 3](https://phoenixnap.com/kb/how-to-install-python-3-windows).
@@ -93,7 +93,7 @@ Follow the next steps:
 4. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
 
 ```
-python -m http.server --directory ../NexysA7board/
+      python -m http.server --directory ../NexysA7board/
 ```
 
 5. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
