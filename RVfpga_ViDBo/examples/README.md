@@ -20,7 +20,7 @@ Then, follow the next steps to run the *LedsSwitches* program in the **RVfpga_Vi
 
 3. Open another terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Run the virtual board using the following command:
 ```
-python3 -m http.server --directory ../NexysA7board/
+      python3 -m http.server --directory ../NexysA7board/
 ```
 4. Open a browser and connect to `http://localhost:8000/nexys-a7.html`
 
