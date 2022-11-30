@@ -10,11 +10,11 @@ sudo apt-get install -y libwebsockets-dev
 
 Then, follow the next steps to run the *LedsSwitches* program in the **RVfpga_ViDBo** simulator:
 
-1. Download the whole *RVfpga-sim-addons* folder as well as the *RVfpga_ViDBo_Ubuntu20* / *RVfpga_ViDBo_Ubuntu22* binary from the releases.
+1. Download the whole *RVfpga-sim-addons* folder as well as the *RVfpga_ViDBo_Ubuntu20* / *RVfpga_ViDBo_Ubuntu22* binary from the releases (the former is for Ubuntu 20.04 whereas the latter is for Ubuntu 22.04). Move the binary to the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder.
 
 2. Open a terminal and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the Verilator-simulator using the following command (this is for Ubuntu 20.04; for Ubuntu 22.04 use binary RVfpga_ViDBo_Ubuntu22): 
 ```
-<path-to-binary-file>/RVfpga_ViDBo_Ubuntu20 +ram_init_file=LedsSwitches/LedsSwitches.vh
+./RVfpga_ViDBo_Ubuntu20 +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Note that it may be necessary to give execution permisions to the simulator binary file.)
 
