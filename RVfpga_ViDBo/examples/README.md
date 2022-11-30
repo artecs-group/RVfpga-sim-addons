@@ -85,7 +85,7 @@ Follow the next steps:
 
 2. Open a cmd and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
 ```
-      ./RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
+      RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
 3. Install [Python 3](https://phoenixnap.com/kb/how-to-install-python-3-windows).
