@@ -4,15 +4,15 @@
 
 Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
 
-1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases.
+1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder.
 
 2. Open a terminal and go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*).
 
 3. Launch the simulation of the Test program:
 ```
-<path-to-binary-file>/RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
+         ./RVfpga_PipelineSimulator_Ubuntu +ram_init_file=Test/Test.vh
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Note that it may be necessary to give execution permisions to the simulator binary file.)
+         (Note that it may be necessary to give execution permisions to the simulator binary file.)
 
 4. Execution will stop at the end of the endless loop (where our program includes a control instruction- and t2, t4, t5- that makes simulation stop), and you'll be able to analyse the execution of the program cycle by cycle in the SweRV EH1 processor from that point (remember that you can view the program that you are simulating in file Test/Test.S). Specifically, we are interested in analyzing the following block of instructions (*nop* instructions are included in order to isolate the different iterations), so you can fast forward several cycles and then analyze those instructions carefully cycle-by-cycle:
 
