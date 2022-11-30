@@ -105,18 +105,20 @@ Follow the next steps:
 ___
 
 
-## **Simulate other programs**
+## **Simulate other programs - Integration in VSCode/PlatformIO**
 
-(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1rVUCEtV2jJZcxwa7RUylmWUISDBItj0E/view?usp=sharing))
+The **RVfpga-ViDBo** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. This can be done both in Ubuntu and in Windows. Follow the next steps:
 
-You can simulate any other program in **RVfpga-ViDBo**, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
-
-1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
+1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_ViDBo** simulator binary from the releases (choose the appropriate one for your OS: *RVfpga_ViDBo_Ubuntu20*, *RVfpga_ViDBo_Ubuntu22* or *RVfpga_ViDBo_Windows.zip*). Move the simulator binary to the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder.
 
 2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
 
 3. Open in PlatformIO the *HelloWorld* example. Reduce the delay in the .c file, as the simulator is much slower than the board.
 
-4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/examples/HelloWorld_C-Lang/.pio/build/swervolf_nexys*.
+4. Replace file *~/.platformio/platforms/chipsalliance/builder/main.py* with the same file provided at *RVfpga-sim-addons/main.py*, which includes a new option for launching the simulator. Close VSCode and open it again for the options to refresh.
 
-5. Follow the steps indicated above using the new .vh file to simulate the HelloWorld program.
+5. Update the path to the simulator in the *board_debug.verilator.binary* option in file platformio.ini.
+
+6. Launch the simulator by clicking on "RVfpga-ViDBo".
+
+7. Follow the steps described above after the launch of the simulator (i.e. step 3 in Ubuntu and step 4 in Windows - 1st option).
