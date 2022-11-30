@@ -107,6 +107,10 @@ ___
 
 ## **Simulate other programs - Integration in VSCode/PlatformIO**
 
+(The following steps are illustrated for a Ubuntu 22.04 OS in this [example video](https://drive.google.com/file/d/1acz5ryLr4lSQrhkxgkVh4TNLSd-3IfUG/view?usp=sharing))
+
+(The following steps are illustrated for a Windows 10 OS in this [example video]())
+
 The **RVfpga-ViDBo** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. This can be done both in Ubuntu and in Windows. Follow the next steps:
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_ViDBo** simulator binary from the releases (choose the appropriate one for your OS: *RVfpga_ViDBo_Ubuntu20*, *RVfpga_ViDBo_Ubuntu22* or *RVfpga_ViDBo_Windows.zip*). Move the simulator binary to the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder.
