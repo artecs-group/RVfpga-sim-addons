@@ -88,7 +88,7 @@ Follow the next steps:
       RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
 ```
 
-3. Install [Python 3](https://phoenixnap.com/kb/how-to-install-python-3-windows).
+3. Install Python 3 as explained [here](https://phoenixnap.com/kb/how-to-install-python-3-windows).
 
 4. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
 
