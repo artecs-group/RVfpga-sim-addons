@@ -125,4 +125,4 @@ The **RVfpga-ViDBo** can be integrated in the IDE used in RVfpga, which allows y
 
 6. Launch the simulator by clicking on "RVfpga-ViDBo".
 
-7. Follow the steps described above after the launch of the simulator (i.e. step 3 in Ubuntu and in Windows - 1st option).
+7. Follow the steps described above after the launch of the simulator (i.e. step 3 both in Ubuntu and in Windows - 1st option).
