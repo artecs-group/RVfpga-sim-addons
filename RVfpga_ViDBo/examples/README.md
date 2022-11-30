@@ -45,7 +45,7 @@ Follow the next steps:
 
 3. Install Python 3 as explained [here](https://phoenixnap.com/kb/how-to-install-python-3-windows).
 
-4. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
+4. Open another cmd and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Then run: 
 
 ```
       python -m http.server --directory ../NexysA7board/
