@@ -26,10 +26,13 @@ Then, follow the next steps to run the *LedsSwitches* program in the **RVfpga_Vi
 
 5. On the browser, click on "connect to the board" and test the program. If you click on any of the 16 switches its state will invert as well as the state of the corresponding LED (you can analyze the program by opening file *LedsSwitches/LedsSwitches.vh* in an editor).
 
+
 ___
 
 
 ## **Windows**
+
+### **1st option - Using CygWin**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1_jsrZ2zuCW3KN73M03rk-F63tagk3Ew8/view?usp=sharing))
 
@@ -72,6 +75,30 @@ python3 -m http.server --directory ../NexysA7board/
 7. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
 
 8. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
+
+
+### **2nd option - Not using CygWin**
+
+Follow the next steps:
+
+1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_ViDBo_Windows.zip** file from the releases. Move the **RVfpga_ViDBo_Windows.zip** file into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder and unzip it. The zip contains one .exe file and several .dll files required by the executable.
+
+2. Open a cmd and go into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder. Run the following command:
+```
+<path-to-binary-file>/RVfpga_ViDBo_Windows.exe +ram_init_file=LedsSwitches/LedsSwitches.vh
+```
+
+3. Install [Python 3](https://phoenixnap.com/kb/how-to-install-python-3-windows).
+
+4. Open another cygwin terminal and go into the same folder (*RVfpga-sim-addons/RVfpga_ViDBo/examples*). Then run: 
+
+```
+python -m http.server --directory ../NexysA7board/
+```
+
+5. Open a browser and connect to: ```http://localhost:8000/nexys-a7.html```
+
+6. On the browser, go into nexys-a7.html, connect to the board by clicking on the corresponding button, and test the program. If you invert a switch the corresponding LED should also invert its state.
 
 
 ___
