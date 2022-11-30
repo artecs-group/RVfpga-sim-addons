@@ -50,7 +50,7 @@ Follow the next steps to run the Test program in the RVfpga_PipelineSimulator:
     * xinit
     * libgtk3-devel
 
-2. Download the whole RVfpga-sim-addons folder as well as the **RVfpga_PipelineSimulator_Windows** binary from the releases
+2. Download the whole RVfpga-sim-addons folder as well as the **RVfpga_PipelineSimulator_Windows.exe** binary from the releases
 
 3. Open a cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```). Go into the current folder (*RVfpga-sim-addons/RVfpga_PipelineSimulator/examples*). Run the following command:
 
