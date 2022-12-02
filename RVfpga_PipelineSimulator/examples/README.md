@@ -76,7 +76,7 @@ ___
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1beJl3NIKAPqtg3ozgQWo37VdkAPXRUQc/view?usp=sharing))
 
-You can simulate any other program in RVfpga-PipelineSimulator, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
+You can simulate any other program in RVfpga-PipelineSimulator, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided in those materials.
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_PipelineSimulator_Ubuntu** or **RVfpga_PipelineSimulator_Windows** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_PipelineSimulator/examples* folder..
 
@@ -89,13 +89,11 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
 5. Follow the steps indicated above using the new .vh file to simulate the new program.  
 
 
-### **2nd Option (only Ubuntu)**
-  
-The **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). 
+### **2nd Option (only available for Ubuntu)**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1e2myDKTp95RUeqxO9j_w_qbDGcPwPdXR/view?usp=sharing))
 
-Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
+The **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_PipelineSimulator/examples* folder.
 
