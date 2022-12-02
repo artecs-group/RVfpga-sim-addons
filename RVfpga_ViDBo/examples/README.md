@@ -36,6 +36,8 @@ We next provide two options for running the simulator in Windows; choose the one
 
 ### **1st option - Not using CygWin**
 
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1eizsoL2JIYWqo36trlnzbXbkPHjk2uhE/view?usp=sharing))
+
 Follow the next steps:
 
 1. Download the whole *RVfpga-sim-addons* folder as well as the **RVfpga_ViDBo_Windows.zip** file from the releases. Move the **RVfpga_ViDBo_Windows.zip** file into the *RVfpga-sim-addons/RVfpga_ViDBo/examples* folder and unzip it. The zip contains one .exe file and several .dll files required by the executable.
