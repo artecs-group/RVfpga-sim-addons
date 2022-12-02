@@ -76,7 +76,7 @@ ___
 
 You can simulate any other program in RVfpga-PipelineSimulator, for which you need to create the .vh file. We next explain how you can do it in the context of the RVfpga course for one of the examples provided.
 
-1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/).
+1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_PipelineSimulator_Ubuntu** or **RVfpga_PipelineSimulator_Windows** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_PipelineSimulator/examples* folder..
 
 2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
 
@@ -85,3 +85,20 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
 4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/Labs/Lab12/ADD_Instruction/.pio/build/swervolf_nexys*. A file called firmware.dis will also be created in the same directory, which contains the dissasembly program that can be useful for the simulation analysis.
 
 5. Follow the steps indicated above using the new .vh file to simulate the new program.
+
+
+Moreover, the **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
+
+1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_PipelineSimulator/examples* folder.
+
+2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
+
+3. Open in PlatformIO the ADD_Instruction example from Lab 12. Insert, before the end of the test loop, the control instruction (and t2, t4, t5) that we use in our simulator for stopping execution and continuing cycle by cycle.
+
+4. Replace file *~/.platformio/platforms/chipsalliance/builder/main.py* with the same file provided at *RVfpga-sim-addons/main.py*, which includes a new option for launching the simulator. Close VSCode and open it again for the options to refresh. (This step will not be necessary after we update the ChipsAlliance platform.)
+
+5. Update the path to the simulator in the *board_debug.verilator.binary* option in file platformio.ini. You can find more details about this in Figure 82 of the RVfpga Getting Started Guide.
+
+6. Launch the simulator by clicking on "RVfpga-ViDBo/Pipeline" from the *Project Tasks* window. The simulator will open in an independent window and you'll be able to simulate the program as described above.
+
+
