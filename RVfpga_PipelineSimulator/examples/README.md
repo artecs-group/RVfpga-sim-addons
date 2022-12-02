@@ -93,7 +93,7 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
   
 The **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). 
 
-(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1beJl3NIKAPqtg3ozgQWo37VdkAPXRUQc/view?usp=sharing))
+(The following steps are illustrated in this [example video](https://drive.google.com/file/d/1e2myDKTp95RUeqxO9j_w_qbDGcPwPdXR/view?usp=sharing))
 
 Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
 
