@@ -84,10 +84,14 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
 
 4. Compile the program by clicking on "Generate Trace". Altough the process will fail, the firmware.vh file will be created inside *RVfpga/Labs/Lab12/ADD_Instruction/.pio/build/swervolf_nexys*. A file called firmware.dis will also be created in the same directory, which contains the dissasembly program that can be useful for the simulation analysis.
 
-5. Follow the steps indicated above using the new .vh file to simulate the new program.
+5. Follow the steps indicated above using the new .vh file to simulate the new program.  
+  
+  
+Moreover, the **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). 
 
+(The following steps are illustrated in this example video)
 
-Moreover, the **RVfpga-PipelineSimulator** can be integrated in the IDE used in RVfpga, which allows you to easily simulate any other program. However, currently this option only works in a Ubuntu OS (we plan to extend it to Windows). Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
+Follow the next steps to simulate the ADD_Instruction example from Lab 12 (you could do the same with any other program):
 
 1. Download [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-download-page-en/), the whole *RVfpga-sim-addons* folder and the **RVfpga_PipelineSimulator_Ubuntu** binary from the releases. Give execution permisions to the binary and move it to the *RVfpga-sim-addons/RVfpga_PipelineSimulator/examples* folder.
 
