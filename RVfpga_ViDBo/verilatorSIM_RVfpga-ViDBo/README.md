@@ -104,7 +104,7 @@ git clone https://libwebsockets.org/repo/libwebsockets
 
 2. Open file *libwebsockets/CMakeLists.txt* in an editor and remove the *-Werror* option.
 
-Change ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")``` to ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")```
+   Change ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")``` to ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")```
 
 3. Two header files are missing in the current version of Cygwin. To resolve this problem, download [cygwin-alternative](https://github.com/rinrin-/cygwin-alternative.git) and, in a Cygwin terminal, copy files *route.h* and *radix.h* from *cygwin-alternative-master/newlib/libc/sys/linux/include/net/* to */usr/include/net*.
 
