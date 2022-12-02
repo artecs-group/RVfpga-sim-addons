@@ -1,6 +1,6 @@
 This folder includes everything related with the **RVfpga-PipelineSimulator**:
 
-* In folder *examples* we provide an example program, both with a source file and a .vh file, as well as detailed instructions on how to simulate it in the **RVfpga-PipelineSimulator** using the simulator binaries provided as a release (*RVfpga_PipelineSimulator_Ubuntu* and *RVfpga_PipelineSimulator_Windows.exe*). We also explain how to create and simulate other programs.
+* We recommend you to first go into folder *examples* and perform the simulation of the example program provided there. In that folder, you will find detailed instructions on how to simulate the program in the **RVfpga-PipelineSimulator** using the simulator binaries provided as a release (*RVfpga_PipelineSimulator_Ubuntu* and *RVfpga_PipelineSimulator_Windows.exe*). We also explain how to create and simulate other programs.
 
 * In folder *verilatorSIM_RVfpga-PipelineSimulator* we provide the sources of the **RVfpga-PipelineSimulator**, as well as detailed instructions on how to compile them. This allows you to modify the simulator: you can add or remove signals, include more drawings or change the appereance, etc.
 
