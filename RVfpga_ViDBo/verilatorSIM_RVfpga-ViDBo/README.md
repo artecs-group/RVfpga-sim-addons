@@ -92,7 +92,7 @@ make
 You should obtain a binary file called ***Vrvfpgasim.exe*** which is the **RVfpga-ViDBo** simulator and that you can use as explained in the examples folder.
 
 
-# **Appendix: Compilation of LibWebSockets in Windows**
+### **Appendix: Compilation of LibWebSockets in Windows**
 
 Follow the next steps to compile the LibWebSockets for a Windows OS. We assume that Cygwin is already installed as explained in step 1 above:
 
