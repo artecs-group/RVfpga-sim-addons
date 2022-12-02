@@ -58,7 +58,7 @@ Follow the next steps to compile the simulator in your Windows OS:
 
 2. Download the whole *RVfpga-sim-addons* folder as well as [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-download-page-en/).
 
-3. Download the websockets library compiled for Windows, which is provided in Releases as a zip file called *LibWebSockets_Windows10.zip*. 
+3. Download the websockets library compiled for Windows, which is provided in Releases as a zip file called *LibWebSockets_Windows10.zip*. (At the end of this section we include as an Appendix the steps that we've followed for compiling this library for Windows.)
    - Unzip the file, go into folder *LibWebSockets_Windows10* and copy the whole *libwebsockets* folder into the current folder (*RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo*).
    - Then, add to the PATH environment system variable the route to folder *RVfpga-sim-addons-main/RVfpga_ViDBo/verilatorSIM_RVfpga-ViDBo/libwebsockets/build/bin*.
    - Finally, in a Cygwin terminal (you can go into your Windows user by running: ``` cd /cygdrive/c/Users/<your-user> ```), go into the current folder and copy the library to the Cygwin System:
@@ -89,3 +89,27 @@ make
 ```
 
 You should obtain a binary file called ***Vrvfpgasim.exe*** which is the **RVfpga-ViDBo** simulator and that you can use as explained in the examples folder.
+
+
+# **Appendix: Compilation of LibWebSockets in Windows**
+
+Follow the next steps to compile the LibWebSockets for a Windows OS. We assume that Cygwin is already installed as explained in step 1 above:
+
+1. Go into the folder where you want to place the sources and download them with the following command:
+
+```
+git clone https://libwebsockets.org/repo/libwebsockets
+```
+
+2. Open file *libwebsockets/CMakeLists.txt* in an editor and remove the *-Werror* option.
+
+Change ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Werror")``` to ```set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS}")```
+
+3. Two header files are missing in the current version of Cygwin. To resolve this problem, download [cygwin-alternative](https://github.com/rinrin-/cygwin-alternative.git) and, in a Cygwin terminal, copy files *route.h* and *radix.h* from *cygwin-alternative-master/newlib/libc/sys/linux/include/net/* to */usr/include/net*.
+
+4. Compile libwebsockets:
+   - ```cd libwebsockets```
+   - ```mkdir build```
+   - ```cd build```
+   - ```cmake ..```
+   - ```cmake --build . --config DEBUG```
