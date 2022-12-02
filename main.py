@@ -248,7 +248,7 @@ env.AddPlatformTarget("generate_trace", target_vh, env.VerboseAction(
 #
 
 env.AddPlatformTarget("ViDBo", target_vh, env.VerboseAction(
-    run_RVfpgaViDBoPipeline, "Running Program in RVfpga-ViDBo or RVfpga-PipelineSimulator"), "RVfpga-ViDBo")
+    run_RVfpgaViDBoPipeline, "Running Program in RVfpga-ViDBo or RVfpga-PipelineSimulator"), "RVfpga-ViDBo/Pipeline")
 
 
 
