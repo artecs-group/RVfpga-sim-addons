@@ -121,12 +121,18 @@ The **RVfpga-ViDBo** can be integrated in the IDE used in RVfpga, which allows y
 
 2. Install VSCode and PlatformIO as explained in Section 2.A of the Getting Started Guide (you can skip the final part of the installation related with Nexys A7 board drivers).
 
-3. Open in PlatformIO the *HelloWorld* example (this program is provided in the *examples* folder of RVfpga and described in Section 6.F of the Getting Started Guide). Reduce the delay in the .c file, as it is prepared for running on the Nexys A7 board, but the simulator is much slower.
+3. For using this simulator in Ubuntu it is required to first install websockets library: 
 
-4. Replace file *~/.platformio/platforms/chipsalliance/builder/main.py* with the same file provided at *RVfpga-sim-addons/main.py*, which includes a new option for launching the simulator. Close VSCode and open it again for the options to refresh. (This step will not be necessary after we update the ChipsAlliance platform.)
+```
+sudo apt-get install -y libwebsockets-dev
+```
 
-5. Update the path to the simulator in the *board_debug.verilator.binary* option in file platformio.ini. You can find more details about this in Figure 82 of the RVfpga Getting Started Guide.
+4. Open in PlatformIO the *HelloWorld* example (this program is provided in the *examples* folder of RVfpga and described in Section 6.F of the Getting Started Guide). Reduce the delay in the .c file, as it is prepared for running on the Nexys A7 board, but the simulator is much slower.
 
-6. Launch the simulator by clicking on "RVfpga-ViDBo" from the *Project Tasks* window.
+5. Replace file *~/.platformio/platforms/chipsalliance/builder/main.py* with the same file provided at *RVfpga-sim-addons/main.py*, which includes a new option for launching the simulator. Close VSCode and open it again for the options to refresh. (This step will not be necessary after we update the ChipsAlliance platform.)
 
-7. Follow the steps described above after the launch of the simulator: from step 3 both in Ubuntu and in Windows - 1st option (note that it's also possible to use Windows - 2nd option, but you have to use *RVfpga_ViDBo_Windows.zip* instead of *RVfpga_ViDBo_Windows.exe*).
+6. Update the path to the simulator in the *board_debug.verilator.binary* option in file platformio.ini. You can find more details about this in Figure 82 of the RVfpga Getting Started Guide.
+
+7. Launch the simulator by clicking on "RVfpga-ViDBo" from the *Project Tasks* window.
+
+8. Follow the steps described above after the launch of the simulator: from step 3 both in Ubuntu and in Windows - 1st option (note that it's also possible to use Windows - 2nd option, but you have to use *RVfpga_ViDBo_Windows.zip* instead of *RVfpga_ViDBo_Windows.exe*).
