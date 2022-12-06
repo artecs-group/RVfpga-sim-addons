@@ -124,7 +124,7 @@ The **RVfpga-ViDBo** can be integrated in the IDE used in RVfpga, which allows y
 3. For using this simulator in Ubuntu it is required to first install websockets library: 
 
 ```
-sudo apt-get install -y libwebsockets-dev
+      sudo apt-get install -y libwebsockets-dev
 ```
 
 4. Open in PlatformIO the *HelloWorld* example (this program is provided in the *examples* folder of RVfpga and described in Section 6.F of the Getting Started Guide). Reduce the delay in the .c file, as it is prepared for running on the Nexys A7 board, but the simulator is much slower.
