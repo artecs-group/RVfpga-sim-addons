@@ -4,4 +4,4 @@ This folder includes everything related with the **RVfpga-PipelineSimulator**:
 
 * In folder *verilatorSIM_RVfpga-PipelineSimulator* we provide the sources of the **RVfpga-PipelineSimulator**, as well as detailed instructions on how to compile them. This allows you to modify the simulator: you can add or remove signals, include more drawings or change the appereance, etc.
 
-NOTE: Instruction dissasembly is carried out based on the [RISC-V Disassembler](https://github.com/michaeljclark/riscv-disassembler) developed by Michael Clark.
+NOTE: Instruction dissasembly is carried out based on a modified version of the [RISC-V Disassembler](https://github.com/michaeljclark/riscv-disassembler) developed by Michael Clark.
