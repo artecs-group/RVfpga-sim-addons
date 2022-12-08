@@ -89,7 +89,7 @@ You can simulate any other program in RVfpga-PipelineSimulator, for which you ne
 5. Follow the steps indicated above using the new .vh file to simulate the new program.  
 
 
-### **2nd Option (only available for Ubuntu)**
+### **2nd Option - Integration in VSCode/PlatformIO (only available for Ubuntu)**
 
 (The following steps are illustrated in this [example video](https://drive.google.com/file/d/1e2myDKTp95RUeqxO9j_w_qbDGcPwPdXR/view?usp=sharing))
 
