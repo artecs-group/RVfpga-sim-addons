@@ -40,5 +40,5 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
 <p align="center">
-  <img src="Menu.png" width=50% height=50%>
+  <img src="Menu.png" width=40% height=40%>
 </p>
