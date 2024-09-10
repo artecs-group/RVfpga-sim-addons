@@ -1,5 +1,5 @@
 # Computer Organization at UCM
-This is a second-year course in the Computer Science degree program offered at UCM. The course includes 4 labs:
+This is a second-year course in the Computer Science degree program offered at UCM. The course includes five labs:
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
