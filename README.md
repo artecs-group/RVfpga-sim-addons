@@ -16,3 +16,7 @@ We provide two new simulation tools that can be used in conjunction with the [â€
 Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions.
 
 In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own OS (either Ubuntu or Windows) as well as useful example videos. The example programs that are tested in the simulators are also included, both with a source file and a .vh file. We also explain how to simulate other programs. Finally, we also include the sources of the two simulators as well as instructions on how to compile them.
+
+In folders Computer_Organization and Integrated_Systems_Architecture we provide the RVfpga materials adapted to two of the Computer Architecture courses that we give at Complutense University of Madrid (UCM):
++ [Computer Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization): This is a second-year course in the Computer Science degree program offered at UCM.
++ [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture): This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM.
