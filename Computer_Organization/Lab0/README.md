@@ -23,3 +23,18 @@ The VM can be installed in the usual virtualization software, such as VirtualBox
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password rvfpga. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1.
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
+
+## Simulators and Example Projects
+Download the following file from the Virtual Machine and unzip it in the VM home: [SimulatorsAndProjects](https://drive.google.com/file/d/1AU_RTOuR2U3btV6UFQJQZKXsG30hZK4Z/view?usp=sharing).
+
+To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
+
+<p align="center">
+  <img src="ExtractHere.png" width=70% height=70%>
+</p>
+
+In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order not to have problems with the routes indicated in the practices.
+
+<p align="center">
+  <img src="Path.png" width=70% height=70%>
+</p>
