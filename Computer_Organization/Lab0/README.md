@@ -1,5 +1,7 @@
 # Lab 0 - Installation
+This first lab aims to prepare our computer to work in the labs of the course.
 
+## Virtual Machine
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). 
 This VM can run on any native OS (Windows, Linux, macOS). 
 The VM we will use belongs to the RVfpga training package, on which these practices are based. 
@@ -13,5 +15,11 @@ The file is very large. You must download it with a good Internet connection and
 For example, the following figure shows the downloaded VM on a laptop with Windows 11 OS (note that it occupies more than 12 GB).
 
 <p align="center">
-  <img src="VM_Downloaded.png" width=90% height=90%>
+  <img src="VM_Downloaded.png" width=70% height=70%>
 </p>
+
+The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those softwares and import the VM (you can follow a tutorial on the Internet). The images in this tutorial are for VirtualBox.
+
+Finally, run the VM, check that the boot is successful, and log into Linux using the user and password rvfpga. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1.
+
+Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
