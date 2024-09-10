@@ -24,3 +24,15 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 <p align="center">
   <img src="EditorFigure.png" width=80% height=80%>
 </p>
+
+3. Before simulating the program, select the Single Cycle processor:
+
+<p align="center">
+  <img src="SingleCycle.png" width=80% height=80%>
+</p>
+
+4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program of Exercise 1 (you can find the code below and try it in your simulator). On the right you can see the disassembled version.
+
+<p align="center">
+  <img src="Ex1.png" width=80% height=80%>
+</p>
