@@ -20,3 +20,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 2. Environment:
     - On the left side you can see the different windows that can be displayed: Editor, Processor, Cache, Memory, I/O.
     - Depending on the selected window, the view will change. In the following figure we see the Editor window, in which you can enter code in Assembler or C in the left window, the compiled/assembled code will be displayed in the middle window, and it shows the registers of the simulated processor on the right.
+
+<p align="center">
+  <img src="EditorFigure.png" width=80% height=80%>
+</p>
