@@ -115,6 +115,46 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 
 
 ## Exercise 1
+Given the next RISC-V assembly code:
+
+```
+  .global main
+  
+  .equ n ,10
+  
+  .data
+  v: .word 12 ,1 , -2 ,15 , -8 ,4 , -31 ,8 ,8 ,25
+  
+  .text
+  main:
+    li s1 , n
+    mv s2 , zero # s2 es i
+    for:
+      beq s2,s1,fin
+      la t1 , v 		# t1= @base de v
+      slli t3 ,s2 ,2 	# i*4
+      add t2 ,t1 ,t3 	# t2= @efectiva de v[i]
+      lw s3 ,0( t2)
+      addi s3 ,s3 ,-1
+      sw s3 ,0( t2)
+      addi s2 ,s2 ,1 	# i=i+1
+      j for
+    fin:
+    j fin
+```
+
+Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
+
+- Briefly explain what the code does.
+- Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
+- What instruction does the pseudo-instruction ```li s1, n``` translate to?
+- What instruction does the pseudo-instruction ```mv s2, zero``` translate to?
+- To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
+- Take a screenshot of the memory viewer clearly identifying, one by one, the instructions that make up the for loop. Are they properly aligned?
+- Take a screenshot of the memory viewer at the end of each iteration, showing how the vector evolves.
+- In this code, a simple modification can be made to improve its performance. Write modified code, explain why it improves efficiency, and show a screenshot in which the final vector is visible in memory.
+- Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
+- Imagine the programmer makes a mistake and instead of the store in the code, they use the following instruction: ```sw s3, 1(t2)```. How would this situation be handled in a real system? What happens in the simulator? Justify your answer with screenshots from the simulator.
 
 
 ## Exercise 2
