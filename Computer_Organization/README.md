@@ -1,4 +1,10 @@
 # Computer Organization at UCM
+
+<p align="center">
+  <img src="UnderConstruction.png" width=60% height=60%>
+</p>
+
+
 This is a second-year course in the Computer Science degree program offered at UCM. The course includes five labs:
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation.
