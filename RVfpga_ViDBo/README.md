@@ -1,3 +1,5 @@
+**NOTE: In v3 of [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) we have included newer versions of this simulator. Download the whole package to be able to use them.**
+
 This folder includes everything related with the **RVfpga-ViDBo** simulator:
 
 * We recommend you to first go into folder *examples* and perform the simulation of the provided example program. You will find detailed instructions on how to simulate the program in the **RVfpga-ViDBo** simulator using the binaries that we provide as a release (*RVfpga_ViDBo_Ubuntu20* *RVfpga_ViDBo_Ubuntu22* and *RVfpga_ViDBo_Windows.exe*). If you are interested in testing other programs, you can also find instructions on how to create and simulate other programs and how to integrate the simulator in VSCode/PlatformIO (the IDE used in RVfpga).
