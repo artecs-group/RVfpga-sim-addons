@@ -1,4 +1,4 @@
-**NOTE: In v3 of [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) we have included newer versions of this simulator. Download the whole package to be able to use them.**
+**NOTE: In v3 of [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) we include a newer version of this simulator. Download the whole package to be able to use it.**
 
 This folder includes everything related with the **RVfpga-ViDBo** simulator:
 
