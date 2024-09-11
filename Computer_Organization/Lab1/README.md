@@ -115,7 +115,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 
 
 ## Exercise 1
-Given the next RISC-V assembly code:
+Given the following RISC-V assembly code:
 
 ```
   .global main
@@ -222,8 +222,56 @@ void swap(V,W){
 
 
 ## Exercise 3
+Given the following RISC-V assembly code:
+
+```
+.global main
+
+.equ n ,5
+
+.data
+res: .word 0
+
+.text
+main:
+  li sp , 0x12000000
+  li a1 , n
+  la s1 , res
+  call factorial
+  sw a0 ,0( s1 )
+  fin:
+  j fin
+
+factorial:
+  # prologo
+  addi sp , sp , -8
+  sw s1 ,0( sp )
+  sw s2 ,4( sp )
+  # cuerpo
+  li s1 ,1
+  mv s2 , a1
+  li s3 ,1
+  for:
+    ble s2 , s3 , fin_for
+    mul s1 , s1 , s3
+    addi s2 , s2 , -1
+    j for
+  fin_for:
+  mv a0 , s1
+  # epilogo
+  lw s1 ,0( sp )
+  lw s2 ,4( sp )
+  addi sp , sp ,8
+  jr ra
+
+```
+
+Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
+
+- The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
+- Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
+- What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer through a simulation (include screenshots from the simulator).
+- Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution in the simulator with screenshots. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
 
 
 ## Exercise 4
-
-
