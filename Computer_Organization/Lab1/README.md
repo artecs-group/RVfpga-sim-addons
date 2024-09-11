@@ -26,12 +26,12 @@ We next show the steps to simulate Exercise 1 (which you can find below) in Whis
 4. Run and Debug the program on the left bar, clicking on button:
 
 <p align="center">
-  <img src="RunDebug.png" width=80% height=80%>
+  <img src="RunDebug.png" width=10% height=10%>
 </p>
 
 And then on button:
 <p align="center">
-  <img src="RunDebug2.png" width=80% height=80%>
+  <img src="RunDebug2.png" width=10% height=10%>
 </p>
 
 5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc.
@@ -46,12 +46,12 @@ A C program can also be simulated in Whisper. We next show the steps to simulate
 3. Run and Debug the program on the left bar, clicking on button:
 
 <p align="center">
-  <img src="RunDebug.png" width=80% height=80%>
+  <img src="RunDebug.png" width=10% height=10%>
 </p>
 
 And then on button:
 <p align="center">
-  <img src="RunDebug2.png" width=80% height=80%>
+  <img src="RunDebug2.png" width=10% height=10%>
 </p>
 
 4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc.
