@@ -158,6 +158,67 @@ Run the code in the simulator and answer the following questions. Add screenshot
 
 
 ## Exercise 2
+Implement and run the bubble sort algorithm in RISC-V assembly. This simple algorithm sorts the elements of a vector from smallest to largest using a very straightforward procedure: it repeatedly traverses the vector, swapping successive positions if V(i) > V(i+1), until no swaps are made. The following pseudocode is provided as a guide (Note: use a constant, N, to define the length of the vector):
+
+```
+do 
+  swapped=false 
+  for i from 0 to N-2 do: 
+    if V[i] > V[i+1] then 
+      swap(V[i], V[i+1]) 
+      swapped = true 
+    end if 
+  end for 
+while swapped 
+```
+
+- Copy the developed program.
+- Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
+- Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
+- Take several screenshots from the simulator during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
+- The following code is a possible C implementation of the above pseudocode (random values are assigned to the vector V). Compile the code in Ripes with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
+    - Optimization Level -O0:
+        - Parameter passing and call to swap from main.
+        - swap function.
+    - Optimization Level -O1:
+        - Prologue and epilogue of main.
+        - while loop.
+
+```
+#include <stdio.h>
+
+#define N 10
+
+int V[N];
+
+void main(void)
+{
+   int swapped=1, i;
+
+   for (i=0; i<(N); i++)
+       V[i]=rand();
+
+   while(swapped){
+       swapped=0;
+       for (i=0; i<(N-1); i++){
+           if (V[i] > V[i+1]){
+               swap(V[i], V[i+1]);
+               swapped=1;
+           }
+       }
+   }
+
+}
+
+void swap(V,W){
+   int temp;
+   temp=V;
+   V=W;
+   W=temp;
+}
+```
+
+- Finally, step through the C code at the -O1 level and explain the execution with a screenshot of the simulator.
 
 
 ## Exercise 3
