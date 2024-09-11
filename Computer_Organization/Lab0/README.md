@@ -1,5 +1,5 @@
 # Lab 0 - Installation
-This first lab aims to prepare our computer to work in the labs of the course.
+This lab aims to prepare our computer to work in the labs of the course.
 
 ## Virtual Machine
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). 
