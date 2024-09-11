@@ -38,3 +38,5 @@ In the following screenshot you can see how RVfpga should be located in the VM. 
 <p align="center">
   <img src="Path.png" width=70% height=70%>
 </p>
+
+At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
