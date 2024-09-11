@@ -197,7 +197,7 @@ while swapped
 - Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots from the simulator during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode (random values are assigned to the vector V). Compile the code in Ripes with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
+- The following code is a possible C implementation of the above pseudocode (random values are assigned to the vector V). Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
     - Optimization Level -O0:
         - Parameter passing and call to swap from main.
         - swap function.
@@ -299,10 +299,22 @@ Run the code in the simulator and answer the following questions. Add screenshot
 Given the following C code that computes the factorial of an integer number:
 
 ```
-#include <stdio.h>
+#if defined(D_NEXYS_A7)
+   #include <bsp_printf.h>
+   #include <bsp_mem_map.h>
+   #include <bsp_version.h>
+#else
+   PRE_COMPILED_MSG("no platform was defined")
+#endif
+
+#include <psp_api.h>
+
 int main(void)
 {
    int i,result,num=7;
+
+   /* Initialize Uart */
+   uartInit();
 
     if (num > 1){
       result = num;
@@ -311,6 +323,10 @@ int main(void)
    }
    else
       result=1;
+
+   printfNexys("Factorial = %d",result);
+
+   while(1);
 }
 ```
 Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
