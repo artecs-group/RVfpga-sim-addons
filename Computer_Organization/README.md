@@ -6,3 +6,5 @@ This is a second-year course in the Computer Science degree program offered at U
 + Lab 2: The VeeR EH1 core.
 + Lab 3: The Memory Hierarchy.
 + Lab 4: The RVfpga I/O System.
+
+In these labs we propose many exercises. If you want to obtain the solutions or more details about the labs or the platforms used, you should request them through the following email: ```dani02@ucm.es```
