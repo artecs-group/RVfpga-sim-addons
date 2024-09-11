@@ -247,8 +247,6 @@ void swap(V,W){
 }
 ```
 
-- Finally, step through the C code at the -O1 level and explain the execution with a screenshot of the simulator.
-
 
 ## Exercise 3
 Given the following RISC-V assembly code:
