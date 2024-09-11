@@ -1,22 +1,25 @@
 # RVfpga
-We provide two new simulation tools that can be used in conjunction with the [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course provided by Imagination Technologies.
+In this repository we provide two new simulation tools that can be used in conjunction with the [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course provided by Imagination Technologies. Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions.
 
-+ RVfpga_ViDBo: It performs a Verilator-based simulation of the RVfpga System and connects it with a Nexys A7 simulated board based on [ViDBo](https://github.com/olofk/vidbo) that allows you to communicate with some simulated peripherals on the board (at this moment the following peripherals are supported: 16 switches, 16 LEDs, UART, 5 pushbuttons, 8 7-Segment Displays). This new simulation tool is especially useful for RVfpga labs 6-10.
++ RVfpga-ViDBo: It performs a Verilator-based simulation of the RVfpga System and connects it with a Nexys A7 simulated board based on [ViDBo](https://github.com/olofk/vidbo) that allows you to communicate with some simulated peripherals on the board (at this moment the following peripherals are supported: 16 switches, 16 LEDs, UART, 5 pushbuttons, 8 7-Segment Displays). This new simulation tool is especially useful for RVfpga labs 6-10. In folder [RVfpga_ViDBo](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_ViDBo) you can find detailed instructions on how to run the simulator in your own OS (either Ubuntu or Windows) as well as useful examples, videos, sources, etc.
 
+<!-- 
 <p align="center">
   <img src="RVfpga_ViDBo.png" width=60% height=60%>
 </p>
+-->
 
-+ RVfpga_PipelineSimulator: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the SweRV EH1 pipeline. This new simulation tool is especially useful for RVfpga labs 11-20.
++ RVfpga-Pipeline: It performs a Verilator-based simulation of the RVfpga System that allows you to visualize different signals of the SweRV EH1 pipeline. This new simulation tool is especially useful for RVfpga labs 11-20. In folder [RVfpga_PipelineSimulator](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_PipelineSimulator) you can find detailed instructions on how to run the simulator in your own OS (either Ubuntu or Windows) as well as useful examples, videos, sources, etc.
 
+<!-- 
 <p align="center">
   <img src="RVfpga_PipelineSimulator.png" width=90% height=90%>
 </p>
+-->
 
-Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions.
 
-In folders RVfpga_ViDBo and RVfpga_PipelineSimulator you can find detailed instructions on how to run each simulator in your own OS (either Ubuntu or Windows) as well as useful example videos. The example programs that are tested in the simulators are also included, both with a source file and a .vh file. We also explain how to simulate other programs and we include the sources of the two simulators as well as instructions on how to compile them.
+In this repository we also show two example courses where these new tools are used. 
 
-Finally, in this repository we also show example courses where these new tools are used. Specifically, in folders Computer_Organization and Integrated_Systems_Architecture, we show how we have adapted the RVfpga materials to two Computer Architecture courses that we instruct at Complutense University of Madrid (UCM):
-+ [Computer Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization): This is a second-year course in the Computer Science degree program offered at UCM.
-+ [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture): This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM.
++ Computer Organization: This is a second-year course in the Computer Science degree program offered at UCM. You can find the information about this course at: [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8413.pdf). In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
+
++ Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM. In folder [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
