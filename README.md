@@ -18,8 +18,8 @@ In this repository we provide two new simulation tools that can be used in conju
 -->
 
 
-In this repository we also show two example courses where these new tools, as well as the [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/), are used. 
+In this repository we also show two example courses where these new tools, as well as the whole [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/), are adapted and used. 
 
 + Computer Organization: This is a second-year course in the Computer Science degree program offered at UCM. You can find the information about this course at: [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8413.pdf). In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
 
-+ Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM. In folder [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
++ Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM. You can find the information about this course at: [Integrated Systems Architecture UCM](https://fisicas.ucm.es/data/cont/docs/18-2021-09-01-2021-22%20Gu%C3%ADa%20Docente%20GIEC%20v1.1-157-16091.pdf). In folder [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
