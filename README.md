@@ -18,7 +18,7 @@ In this repository we provide two new simulation tools that can be used in conju
 -->
 
 
-In this repository we also show two example courses where these new tools, as well as the whole [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/), are adapted and used. 
+In this repository we also show two example courses where these new tools, as well as the whole [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/), are adapted and used to peform several practical labs that help the students understand the theoretical concepts explained in theory. 
 
 + Computer Organization: This is a second-year course in the Computer Science degree program offered at UCM. You can find the information about this course at: [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8413.pdf). In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) you can find part of the materials (mainly the labs) used in this course. In case you want more information about this course, you can contact ```dani02@ucm.es```.
 
