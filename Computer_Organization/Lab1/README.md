@@ -275,3 +275,32 @@ Run the code in the simulator and answer the following questions. Add screenshot
 
 
 ## Exercise 4
+Given the following C code that computes the factorial of an integer number:
+
+```
+#include <stdio.h>
+int main(void)
+{
+   int i,result,num=7;
+
+    if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+   printf("Factorial = %d\n",result);
+}
+```
+Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
+
+- Compile with -O0 (set optimization level in Edit-Settings-Compiler):
+    - Identify the for loop in the main function.
+    - Identify the if condition.
+    - Is the ra register preserved at any point? Why?
+    - Of the other registers, which ones are preserved? Why?
+
+- Compile with -O1:
+    - The function is very simple. Explain what it does and why it is so simple.
+
