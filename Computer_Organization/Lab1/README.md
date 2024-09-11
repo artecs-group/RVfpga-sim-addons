@@ -1,8 +1,41 @@
 # Lab 1 - The RISC-V ISA
 In this second lab we review the RISC-V architecture and complete several exercises in simulation. There are several open-access Instruction Set Simulators (ISSs) available on the Internet that we could use for the lab, such as Whisper (which is the ISS used in RVfpga labs 1-4), [Ripes](https://github.com/mortbopet/Ripes) (a visual computer architecture simulator and assembly code editor), and many others that you can find on the Internet.
 
+
 ## Using RVfpga-Whisper in the virtual machine
-Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package.
+Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. We next show the steps to simulate Exercise 1 (which you can find below) in Whisper.
+
+1. Open VSCode.
+2. Open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
+
+<p align="center">
+  <img src="OpenEx1.png" width=80% height=80%>
+</p>
+
+3. In this project, file ```platformio.ini``` includes line ```debug_tool = whisper```, which makes the program execute on Whisper.
+
+<p align="center">
+  <img src="PlatformIO.png" width=80% height=80%>
+</p>
+
+4. Run and Debug the program on the left bar, clicking on button:
+
+<p align="center">
+  <img src="RunDebug.png" width=80% height=80%>
+</p>
+
+And then on button:
+<p align="center">
+  <img src="RunDebug2.png" width=80% height=80%>
+</p>
+
+5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc.
+
+<p align="center">
+  <img src="Simulation.png" width=80% height=80%>
+</p>
+
+
 
 ## Using RIPES in the virtual machine
 [Ripes](https://github.com/mortbopet/Ripes) is a visual computer architecture simulator and assembly code editor created for the RISC-V instruction set architecture. It has the following features:
