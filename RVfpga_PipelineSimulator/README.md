@@ -1,5 +1,3 @@
-**NOTE: In v3 of [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) we include a newer version of this simulator. Download the whole package to be able to use it.**
-
 This folder includes everything related with the **RVfpga-PipelineSimulator**:
 
 * We recommend you to first go into folder *examples* and perform the simulation of the provided example program. You will find detailed instructions on how to simulate the program in the **RVfpga-PipelineSimulator** using the binaries that we provide as a release (*RVfpga_PipelineSimulator_Ubuntu* and *RVfpga_PipelineSimulator_Windows*). If you are interested in testing other programs, you can also find instructions on how to create and simulate other programs and how to integrate the simulator in VSCode/PlatformIO (the IDE used in RVfpga).
