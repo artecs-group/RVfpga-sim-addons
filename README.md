@@ -1,11 +1,11 @@
 # RVfpga: Teaching Experiences and Simulation Tools 
-In this repository, we show two example courses, instructed at UCM, where the [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) are adapted and used to peform several practical labs that help the students understand the theoretical concepts explained in theory. 
-
-**NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```**
+In this repository, we show how we adapted and used the [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) in the labs of two courses instructed at UCM.
 
 + Computer Organization: This is a second-year course in the Computer Science degree program offered at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. You can find the contents included in the UCM course at [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8413.pdf). 
 
 + Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM. In folder [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) of this repository you can find part of the materials (mainly the labs) used in the course. You can find the contents included in the UCM course at [Integrated Systems Architecture UCM](https://fisicas.ucm.es/data/cont/docs/18-2021-09-01-2021-22%20Gu%C3%ADa%20Docente%20GIEC%20v1.1-157-16091.pdf). 
+
+**NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```**
 
 In this repository, we also provide two simulation tools that can be used in conjunction with the [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course provided by Imagination Technologies. Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions.
 
