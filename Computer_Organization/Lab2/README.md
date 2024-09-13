@@ -49,3 +49,24 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
 8. Usually, the programs we will use consist of a loop within which the instructions we want to analyze are located. It is important to analyze an iteration that is not the first one, as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze.
 
 9. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
+
+## Ripes
+As we saw in the first lab, Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the 5-stage pipeline simulated by Ripes.
+
+Ripes offers different processor models, and we are interested in using the 5-stage pipelined processor, which is very similar to the one studied in theory. To configure Ripes for this processor, follow these steps:
+
+1. Start the simulator as in Lab 1.
+2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
+        - Fully pipelined 5-stage processor: "5-stage processor".
+        - RISC-V base instruction set plus M extension.
+        - Extended layout.
+
+<p align="center">
+  <img src="SelectProc.png" width=60% height=60%>
+</p>
+
+3. Add the signal values view in the ```View``` tab.
+
+<p align="center">
+  <img src="View.png" width=40% height=40%>
+</p>
