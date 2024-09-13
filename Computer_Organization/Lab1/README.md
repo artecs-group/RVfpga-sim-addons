@@ -54,7 +54,7 @@ And then on button:
   <img src="RunDebug2.png" width=10% height=10%>
 </p>
 
-4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembled code, etc.
+4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembly version of the code, etc.
 
 <p align="center">
   <img src="Simulation4.png" width=80% height=80%>
