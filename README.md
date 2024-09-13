@@ -1,6 +1,6 @@
-# RVfpga: Teaching Experiences and Simulation Tools 
+# RVfpga
 
-## Teaching experiences at UCM:
+## Teaching experiences at UCM: Computer Organization and Integrated Systems Architecture
 In this repository, we show how we adapted and used the [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) in the labs of two courses instructed at UCM.
 
 + Computer Organization: This is a second-year course in the Computer Science degree program offered at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. 
@@ -9,7 +9,7 @@ In this repository, we show how we adapted and used the [RVfpga materials](https
 
 **NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```**
 
-## New simulation tools - RVfpga-ViDBo and RVfpga-Pipeline:
+## New simulation tools: RVfpga-ViDBo and RVfpga-Pipeline
 In this repository, we also provide two simulation tools that can be used in conjunction with the [“RVfpga: Understanding Computer Architecture”](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course provided by Imagination Technologies. Binary beta versions of the two simulators are provided as a release in this repository. We include both Windows and Ubuntu versions.
 
 **NOTE: The courses mentioned above include modified versions of these simulation tools. Moreover, v3 of the [RVfpga materials](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) also includes newer versions of these tools.**
