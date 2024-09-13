@@ -23,13 +23,11 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
   <img src="ProgramS.png" width=80% height=80%>
 </p>
 
-4. Open the platformio.ini file and update the path to the RVfpga-Pipeline simulator. To do this, replace the following line:
+4. Open the platformio.ini file and update the path to the RVfpga-Pipeline simulator. To do this, replace the first line shown below for the second line shown below:
 
 <p align="center">
   <img src="Line1.png" width=80% height=80%>
 </p>
-
-    For:
 
 <p align="center">
   <img src="Line2.png" width=80% height=80%>
