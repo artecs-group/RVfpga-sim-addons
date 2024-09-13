@@ -6,12 +6,12 @@ We next briefly explain how to use Whisper and Ripes in the provided Virtual Mac
 If you want to obtain the solutions for these exercises, you should request them through the following email: ```dani02@ucm.es```
 
 ## Using RVfpga-Whisper in the virtual machine
-Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. 
+Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included here) can be found.
 
 We next show the steps to simulate Exercise 1 (which you can find below) in Whisper.
 
 1. Open VSCode.
-2. Open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
+2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
 
 <p align="center">
   <img src="OpenEx1.png" width=80% height=80%>
@@ -34,7 +34,7 @@ And then on button:
   <img src="RunDebug2.png" width=10% height=10%>
 </p>
 
-5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc.
+5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc. More detailed instructions about the use of the SDK are provided in the RVfpga Getting Started Guide.
 
 <p align="center">
   <img src="Simulation.png" width=80% height=80%>
@@ -54,7 +54,7 @@ And then on button:
   <img src="RunDebug2.png" width=10% height=10%>
 </p>
 
-4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc.
+4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembled code, etc.
 
 <p align="center">
   <img src="Simulation4.png" width=80% height=80%>
@@ -132,7 +132,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
   <img src="DataSection.png" width=90% height=90%>
 </p>
 
-10. Configure the simulator to be able to compile and run programs in C. The instructions are available at the following [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)
+10. Configure the simulator to be able to compile and run programs in C. The instructions are provided in the following [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)
 
 
 ## Exercise 1
