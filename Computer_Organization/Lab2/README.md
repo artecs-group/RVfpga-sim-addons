@@ -39,7 +39,7 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
 5. Open the PlatformIO tab and click on the task ```RVfpga-ViDBo/Pipeline```. The simulator will start executing the code (you can see it in the Explorer, inside the ```src``` directory).
 
 <p align="center">
-  <img src="RVfpgaVidboPipeline.png" width=80% height=80%>
+  <img src="RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
 6. The simulator stops execution when it encounters the control instruction ```and zero, t4, t5```. If our program does not have this instruction, we must add it at the point where we want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.
