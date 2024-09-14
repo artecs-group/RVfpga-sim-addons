@@ -103,13 +103,13 @@ Please reproduce and analyze all the examples provided in the presentation provi
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
 
 ```
-    .text
-    main:
-    li x3, 0x4
-    li x4, 0x6
-    add x2, x3, x4
-    sub x5, x2, x3
-    or  x6, x2, x5
+.text
+main:
+li x3, 0x4
+li x4, 0x6
+add x2, x3, x4
+sub x5, x2, x3
+or  x6, x2, x5
 ```
 
 Answer the following questions:
@@ -132,16 +132,16 @@ d. Simulate the program in Ripes and confirm if your answer to the previous item
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
 
 ```
-    .data
-    v: .word 1, 10
-    .text
-    main:
-    la x1 , v
-    li x2, 0x2
-    li x3, 0x4
-    lw x2, 4(x1)
-    sub x5, x2, x3
-    or  x6, x2, x5
+.data
+v: .word 1, 10
+.text
+main:
+la x1 , v
+li x2, 0x2
+li x3, 0x4
+lw x2, 4(x1)
+sub x5, x2, x3
+or  x6, x2, x5
 ```
 
 Answer the following questions:
@@ -163,21 +163,21 @@ d. Simulate the program in Ripes and confirm if your answer to the previous item
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
 
 ```
-    .text
-    main:
-    li x1, 0x8
-    li x2, 0x8
-    li x3, 0x4
-    beq x2, x1, ELSE
-    IF:	
-       sub x5, x2, x3
-    	or  x6, x2, x5
-    	beq x0, x0, END
-    ELSE:
-       add x5, x2, x3
-    	and x6, x2, x5
-    END:
-    nop
+.text
+main:
+li x1, 0x8
+li x2, 0x8
+li x3, 0x4
+beq x2, x1, ELSE
+IF:	
+   sub x5, x2, x3
+    or  x6, x2, x5
+    beq x0, x0, END
+ELSE:
+   add x5, x2, x3
+    and x6, x2, x5
+END:
+nop
 ```
 
 Answer the following questions:
@@ -197,23 +197,23 @@ c. Simulate the program in Ripes and confirm if your answer to the previous item
 Given the following code, which calculates the factorial of the number stored in register t0 (it is assumed to always be an integer greater than 1) and stores the result in the same t0 register:
 
 ```
-    .text
-    main:
-    
-    addi t0, x0, 4
-    addi t1, x0, 1
-    addi t2, t0, -1
-    
-    NEXT:
-    ble t2, t1, END
-    mul t0, t0, t2
-    addi t2, t2, -1
-    j NEXT
-    
-    END:
-    
-    addi t1, x0, 0
-    addi t0, x0, 0
+.text
+main:
+
+addi t0, x0, 4
+addi t1, x0, 1
+addi t2, t0, -1
+
+NEXT:
+ble t2, t1, END
+mul t0, t0, t2
+addi t2, t2, -1
+j NEXT
+
+END:
+
+addi t1, x0, 0
+addi t0, x0, 0
 ```
 
 a. Complete the timing diagram of the program in the 5-stage pipelined RISC-V processor from H&H. Assume that the processor has extended the ALU to perform multiplication with a latency of 1 cycle; that is, the ```mul``` instruction executes just like any other arithmetic-logical instruction.
@@ -221,3 +221,69 @@ a. Complete the timing diagram of the program in the 5-stage pipelined RISC-V pr
 b. Identify the structural, data, and control hazards on the diagram, clearly marking them and explaining how the processor handles each one.
 
 c. Simulate the program in Ripes and indicate the values of the data and control signals in cycle 5 of the program execution. Also, specify which instruction is in each stage.
+
+
+## Exercise 5
+Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
+
+```
+.globl main
+
+.section .midccm
+D: .space 16
+
+.text
+main:
+
+li t2, 0x080                  # Disable Secondary ALUs
+csrrs t1, 0x7F9, t2
+
+la t0, D
+
+li t1, 0x2					
+sw t1, (t0)				# D[0] = 2
+li t1, 0x4					
+sw t1, 4(t0)				# D[1] = 4
+li t1, 0x3					
+sw t1, 8(t0)				# D[2] = 3
+li t1, 0x5					
+sw t1, 12(t0)				# D[3] = 5
+
+li s1, 4
+mv s2, zero
+
+and zero,t4,t5
+
+for:
+   slli t3 ,s2 ,2
+   add t2 ,t0 ,t3
+   lw s3 , 0(t2)
+   lw s4 , 4(t2)
+   add s3 ,s3 ,s4
+   sw s3 , 0(t2)
+   addi s2 ,s2 ,1
+   bne s2,s1,for
+end:
+
+REPEAT:
+   beq  zero, zero, REPEAT  # Repeat the loop
+```
+
+Answer the following questions about the ```for``` loop and confirm them in RVfpga-Pipeline. Analyze an iteration from the second one onward, avoiding the first iteration where there are instruction cache misses and the branch predictor is not yet properly trained.
+
+a. Identify the hazards that occur and explain how this processor handles them.
+
+b. Draw the timing diagram for the second iteration of the loop.
+
+c. Calculate the CPI (Cycles Per Instruction) of the loop.
+
+d. Reorder the code to try to improve performance. Calculate the new CPI.
+
+e. Recalculate the CPI of the loop assuming that the Secondary ALU available in the Commit stage is activated and that the code is reordered as per the previous step.
+
+f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.
+
+<p align="center">
+  <img src="VeeReh1.png" width=90% height=90%>
+</p>
+
