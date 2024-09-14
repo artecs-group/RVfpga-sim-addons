@@ -68,3 +68,37 @@ Ripes offers different processor models, and we are interested in using the 5-st
 <p align="center">
   <img src="View.png" width=40% height=40%>
 </p>
+
+
+## Exercise 0
+Please reproduce and analyze all the examples provided in the presentation provided above ([Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)), both in Ripes and RVfpga-Pipeline. Verify that the diagrams and CPIs indicated in the presentation match what you get in the simulations. You need to simulate the following examples:
+
+- Ripes:
+
+    * Program without dependencies
+    * Data hazard: consecutive add-add instructions
+    * Control hazard
+
+    To simulate the programs in Ripes, you simply need to copy the codes from the presentation into the editor.
+
+- RVfpga-Pipeline:
+
+    * Program without dependencies
+    * Structural hazard: consecutive mul-mul instructions
+    * Data hazard: consecutive add-add instructions
+    * Data hazard - Multi-cycle instructions: mul-add
+    * Control hazard
+
+    To simulate the programs in RVfpga-Pipeline, follow these steps:
+
+    1. Open the project called ```ProyectoP2``` in VSCode.
+    2. Copy the codes from the presentation into the file ```src/Programa.S```
+    3. Set the path for the simulator in the ```platformio.ini``` file. In this lab, we will use the RVfpga-Pipeline simulator. To select it, change the first line shown next for the second one:
+
+       ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/Vrvfpgasim```
+
+       ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
+
+  ## Exercise 1
+
+  
