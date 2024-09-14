@@ -99,6 +99,30 @@ Please reproduce and analyze all the examples provided in the presentation provi
 
        ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 
-  ## Exercise 1
+## Exercise 1
+Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
 
-  
+```
+    .text
+    main:
+    li x3, 0x4
+    li x4, 0x6
+    add x2, x3, x4
+    sub x5, x2, x3
+    or  x6, x2, x5
+```
+
+Answer the following questions:
+
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+
+b. If there were no forwarding hardware, how could the dependencies be resolved by software?
+
+c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+
+<p align="center">
+  <img src="ProcessorHH.png" width=90% height=90%>
+</p>
+
+d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+
