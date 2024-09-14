@@ -1,7 +1,7 @@
 # Lab 2 - The VeeR EH1 core
-This practice aims to thoroughly understand the 5-stage pipelined processor in the Ripes simulator, which is almost identical to the H&H processor studied in theory, as well as the VeeR EH1, a 2-way superscalar processor with 9 pipeline stages.
+This practice aims to let the student thoroughly understand the commercial VeeR EH1 core, an advanced 2-way superscalar processor with 9 pipeline stages. For that purpose, we first propose several exercises where a simpler processor is analyzed theoretically (using the 5-stage processor used in the Harris and Harris book - H&H) and practically (using the Ripes simulator).
 
-We start this module by providing a detailed introduction to the VeeR EH1 microarchitecture. The presentation can be obtained here: [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link). We then provide an introduction to the two simulators that we use, which includes several examples that the students have to repeat on their own. The presentation can be obtained here: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing). 
+Students who are new to Computer Organization, should start by reading the H&H book. Then, we provide a detailed introduction to the VeeR EH1 microarchitecture. The presentation can be obtained here: [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link). We then provide an introduction to the two simulators that we use in this lab, which includes several examples that the students have to repeat on their own. The presentation can be obtained here: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing). 
 
 Below, we briefly explain how to use the RVfpga-Pipeline and the Ripes simulator in the provided Virtual Machine. Then, you can find several exercises where we start analyzing simple processors (H&H and Ripes) and then we move to a more complex processor, VeeR EH1, which implements several advanced microarchitectural techniques.
 
@@ -126,3 +126,68 @@ c. On the figure below (obtained from H&H), indicate the values of the data and 
 
 d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
 
+
+
+## Exercise 2
+Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
+
+```
+    .data
+    v: .word 1, 10
+    .text
+    main:
+    la x1 , v
+    li x2, 0x2
+    li x3, 0x4
+    lw x2, 4(x1)
+    sub x5, x2, x3
+    or  x6, x2, x5
+```
+
+Answer the following questions:
+
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+
+b. If there were no forwarding hardware, how could the dependencies be resolved by software?
+
+c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+
+<p align="center">
+  <img src="ProcessorHH.png" width=90% height=90%>
+</p>
+
+d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+
+
+## Exercise 3
+Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
+
+```
+    .text
+    main:
+    li x1, 0x8
+    li x2, 0x8
+    li x3, 0x4
+    beq x2, x1, ELSE
+    IF:	
+       sub x5, x2, x3
+    	or  x6, x2, x5
+    	beq x0, x0, END
+    ELSE:
+       add x5, x2, x3
+    	and x6, x2, x5
+    END:
+    nop
+```
+
+Answer the following questions:
+
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+
+<p align="center">
+  <img src="ProcessorHH.png" width=90% height=90%>
+</p>
+
+c. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
