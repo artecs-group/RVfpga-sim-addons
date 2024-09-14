@@ -191,3 +191,33 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
 </p>
 
 c. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+
+
+## Exercise 4
+Given the following code, which calculates the factorial of the number stored in register t0 (it is assumed to always be an integer greater than 1) and stores the result in the same t0 register:
+
+```
+    .text
+    main:
+    
+    addi t0, x0, 4
+    addi t1, x0, 1
+    addi t2, t0, -1
+    
+    NEXT:
+    ble t2, t1, END
+    mul t0, t0, t2
+    addi t2, t2, -1
+    j NEXT
+    
+    END:
+    
+    addi t1, x0, 0
+    addi t0, x0, 0
+```
+
+a. Complete the timing diagram of the program in the 5-stage pipelined RISC-V processor from H&H. Assume that the processor has extended the ALU to perform multiplication with a latency of 1 cycle; that is, the ```mul``` instruction executes just like any other arithmetic-logical instruction.
+
+b. Identify the structural, data, and control hazards on the diagram, clearly marking them and explaining how the processor handles each one.
+
+c. Simulate the program in Ripes and indicate the values of the data and control signals in cycle 5 of the program execution. Also, specify which instruction is in each stage.
