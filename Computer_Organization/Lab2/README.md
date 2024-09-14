@@ -287,3 +287,132 @@ f. Indicate on the following figure where each instruction is and the values of 
   <img src="VeeReh1.png" width=90% height=90%>
 </p>
 
+
+## Exercise 6
+In the VeeR EH1 processor, the following code is to be executed:
+
+```
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
+```
+
+To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
+
+```
+.globl main
+
+.section .midccm
+Entrada: .space 40
+Filtro: .space 12
+Salida: .space 32
+
+.text
+main:
+
+li t2, 0x488 # Disable Superscalar Exec, Sec. ALUs and Branch Pred.
+csrrs t1, 0x7F9, t2
+
+la t0, Entrada
+li t1, 0x1   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x5   				 
+sw t1, 8(t0)   			 
+li t1, 0x7   				 
+sw t1, 12(t0)   			 
+li t1, 0x9   				 
+sw t1, 16(t0)   			 
+li t1, 0x1   				 
+sw t1, 20(t0)   			 
+li t1, 0x3   				 
+sw t1, 24(t0)   			 
+li t1, 0x5   				 
+sw t1, 28(t0)   			 
+li t1, 0x7   				 
+sw t1, 32(t0)   			 
+li t1, 0x9   				 
+sw t1, 36(t0)   			 
+
+la t0, Filtro
+li t1, 0x2   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x4   				 
+sw t1, 8(t0)   			 
+
+la t0, Salida
+li t1, 0   				 
+sw t1, (t0)   			 
+li t1, 0   				 
+sw t1, 4(t0)   			 
+li t1, 0   				 
+sw t1, 8(t0)   			 
+li t1, 0   				 
+sw t1, 12(t0)   			 
+li t1, 0   				 
+sw t1, 16(t0)   			 
+li t1, 0   				 
+sw t1, 20(t0)   			 
+li t1, 0   				 
+sw t1, 24(t0)   			 
+li t1, 0   				 
+sw t1, 28(t0)   			 
+
+la   x23 , Entrada
+la   x24 , Filtro
+la   x25 , Salida
+
+li   x22, 0
+li   x10, 3
+
+li   x21, 0
+li   x11, 8
+
+nop
+nop
+nop
+nop
+
+and zero, t4, t5
+
+loop_n :
+	addi x22 , x0 , 0
+	loop_k :
+    	lw x13 , 0( x23)
+    	lw x14 , 0( x24)
+    	mul x16 , x13 , x14
+    	lw x15 , 0( x25)
+    	add x15 , x16 , x15
+    	sw x15 , 0( x25)
+    	addi x23 , x23 , 4
+    	addi x24 , x24 , 4
+    	addi x22 , x22 , 1
+    	blt x22 , x10 , loop_k
+	addi x25 , x25 , 4
+	addi x23 , x23 , -8
+	addi x24 , x24 , -12
+	addi x21 , x21 , 1
+	blt x21 , x11 , loop_n
+
+
+fin:
+j fin
+```
+
+Solve the following sections, both theoretically and practically on the RVfpga-Pipeline simulator:
+
+a. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, for the program execution on the VeeR EH1 processor, with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled.
+
+b. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with superscalar execution enabled. Explain the result.
+
+c. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with the Gshare branch predictor enabled. Explain the result.
+
+d. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with the Secondary ALU enabled. Explain the result. Does enabling the Secondary ALU improve the stalls between the loads and multiplication?
+
+e. Reorder the code of the loop_k loop to improve performance as much as possible, and draw the execution diagram and calculate the CPI.
+
