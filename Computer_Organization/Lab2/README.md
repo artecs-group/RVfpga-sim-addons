@@ -150,7 +150,7 @@ a. Identify the data dependencies that exist in the code and explain how they ar
 
 b. If there were no forwarding hardware, how could the dependencies be resolved by software?
 
-c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
 
 <p align="center">
   <img src="ProcessorHH.png" width=90% height=90%>
@@ -184,7 +184,7 @@ Answer the following questions:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
 
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```beq``` instruction is in the EX stage.
 
 <p align="center">
   <img src="ProcessorHH.png" width=90% height=90%>
