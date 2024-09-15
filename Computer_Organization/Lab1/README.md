@@ -4,7 +4,7 @@ In this lab we review the RISC-V architecture and complete several exercises in 
 We next briefly explain how to use Whisper and Ripes in the provided Virtual Machine, and then propose 4 exercises that can be resolved in either of these two simulators or any other simulator available on the Internet.
 
 ## Using RVfpga-Whisper in the virtual machine
-Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included here) can be found.
+Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included in this lab) can be found.
 
 We next show the steps to simulate Exercise 1 (which you can find below) in Whisper.
 
