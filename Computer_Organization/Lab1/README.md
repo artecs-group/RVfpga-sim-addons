@@ -6,7 +6,7 @@ We next briefly explain how to use Whisper and Ripes in the provided Virtual Mac
 ## Using RVfpga-Whisper in the virtual machine
 Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included in this lab) can be found.
 
-We next show the steps to simulate Exercise 1 (which youu can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
+We next show the steps to simulate Exercise 1 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
 
 1. Open VSCode.
 2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
@@ -38,7 +38,7 @@ And then on button:
   <img src="Images/Simulation.png" width=80% height=80%>
 </p>
 
-A C program can also be simulated in Whisper. We next show the steps to simulate Exercise 4 (which youu can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4) in this same section).
+A C program can also be simulated in Whisper. We next show the steps to simulate Exercise 4 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4) in this same section).
 1. Open VSCode.
 2. Open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4```
 3. Run and Debug the program on the left bar, clicking on button:
