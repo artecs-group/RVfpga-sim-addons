@@ -6,7 +6,7 @@ We next briefly explain how to use Whisper and Ripes in the provided Virtual Mac
 ## Using RVfpga-Whisper in the virtual machine
 Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included in this lab) can be found.
 
-We next show the steps to simulate [Exercise 1 proposed below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in Whisper.
+We next show the steps to simulate Exercise 1 ([proposed below in this section](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1))] in Whisper.
 
 1. Open VSCode.
 2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
