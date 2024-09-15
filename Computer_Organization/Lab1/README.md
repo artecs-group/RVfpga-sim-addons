@@ -12,30 +12,30 @@ We next show the steps to simulate Exercise 1 (proposed [below](https://github.c
 2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
 
 <p align="center">
-  <img src="OpenEx1.png" width=80% height=80%>
+  <img src="Images/OpenEx1.png" width=80% height=80%>
 </p>
 
 3. In this project, file ```platformio.ini``` includes line ```debug_tool = whisper```, which makes the program execute on Whisper.
 
 <p align="center">
-  <img src="PlatformIO.png" width=80% height=80%>
+  <img src="Images/PlatformIO.png" width=80% height=80%>
 </p>
 
 4. Run and Debug the program on the left bar, clicking on button:
 
 <p align="center">
-  <img src="RunDebug.png" width=10% height=10%>
+  <img src="Images/RunDebug.png" width=10% height=10%>
 </p>
 
 And then on button:
 <p align="center">
-  <img src="RunDebug2.png" width=10% height=10%>
+  <img src="Images/RunDebug2.png" width=10% height=10%>
 </p>
 
 5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc. More detailed instructions about the use of the SDK are provided in the RVfpga Getting Started Guide.
 
 <p align="center">
-  <img src="Simulation.png" width=80% height=80%>
+  <img src="Images/Simulation.png" width=80% height=80%>
 </p>
 
 A C program can also be simulated in Whisper. We next show the steps to simulate Exercise 4 (which you can find below).
@@ -44,18 +44,18 @@ A C program can also be simulated in Whisper. We next show the steps to simulate
 3. Run and Debug the program on the left bar, clicking on button:
 
 <p align="center">
-  <img src="RunDebug.png" width=10% height=10%>
+  <img src="Images/RunDebug.png" width=10% height=10%>
 </p>
 
 And then on button:
 <p align="center">
-  <img src="RunDebug2.png" width=10% height=10%>
+  <img src="Images/RunDebug2.png" width=10% height=10%>
 </p>
 
 4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembly version of the code, etc.
 
 <p align="center">
-  <img src="Simulation4.png" width=80% height=80%>
+  <img src="Images/Simulation4.png" width=80% height=80%>
 </p>
 
 
@@ -80,25 +80,25 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
     - Depending on the selected window, the view will change. In the following figure we see the Editor window, in which you can enter code in Assembler or C in the left window, the compiled/assembled code will be displayed in the middle window, and it shows the registers of the simulated processor on the right.
 
 <p align="center">
-  <img src="EditorFigure.png" width=80% height=80%>
+  <img src="Images/EditorFigure.png" width=80% height=80%>
 </p>
 
 3. Before simulating the program, select the Single Cycle processor:
 
 <p align="center">
-  <img src="SingleCycle.png" width=80% height=80%>
+  <img src="Images/SingleCycle.png" width=80% height=80%>
 </p>
 
 4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program of Exercise 1 (you can find the code below and try it in your simulator). On the right you can see the disassembled version.
 
 <p align="center">
-  <img src="Ex1.png" width=80% height=80%>
+  <img src="Images/Ex1.png" width=80% height=80%>
 </p>
 
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
 <p align="center">
-  <img src="Menu.png" width=40% height=40%>
+  <img src="Images/Menu.png" width=40% height=40%>
 </p>
 
 6. We can execute the code step by step:
@@ -106,7 +106,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
     - The current instruction is shown highlighted in red (e.g., in the figure ```lw s3, 0(t2)```).
 
 <p align="center">
-  <img src="Execution.png" width=40% height=40%>
+  <img src="Images/Execution.png" width=40% height=40%>
 </p>
 
 7. Disassembled/binary code window and registers window:
@@ -115,19 +115,19 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
     - The middle window shows the disassembled code. Note that, unlike the source, it only includes instructions (not pseudo-instructions).
 
 <p align="center">
-  <img src="Registers.png" width=90% height=90%>
+  <img src="Images/Registers.png" width=90% height=90%>
 </p>
 
 8. The Memory window allows us to visualize the different memory sections. The figure shows the .text section, which includes the text of the code. At the bottom you must select, from the “Go to section” menu, the .text section. You can check that the hexadecimal code corresponds to the program instructions in the Editor.
 
 <p align="center">
-  <img src="Memory.png" width=90% height=90%>
+  <img src="Images/Memory.png" width=90% height=90%>
 </p>
 
 9. At the bottom, in the “Go to section” menu, we can switch to the .data section. You can check that the data correspond to the vector components in the Editor.
 
 <p align="center">
-  <img src="DataSection.png" width=90% height=90%>
+  <img src="Images/DataSection.png" width=90% height=90%>
 </p>
 
 10. Configure the simulator to be able to compile and run programs in C. The instructions are provided in the following [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)
