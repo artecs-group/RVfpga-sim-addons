@@ -93,7 +93,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
   <img src="Images/SingleCycle.png" width=80% height=80%>
 </p>
 
-4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program of Exercise 1 (you can find the code below and try it in your simulator). On the right you can see the disassembled version.
+4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program of Exercise 1 (you can find the code [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) and try it in your simulator). On the right you can see the disassembled version.
 
 <p align="center">
   <img src="Images/Ex1.png" width=80% height=80%>
