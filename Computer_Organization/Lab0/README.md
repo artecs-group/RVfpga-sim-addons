@@ -15,7 +15,7 @@ The file is very large. You must download it with a good Internet connection and
 For example, the following figure shows the downloaded VM on a laptop with Windows 11 OS (note that it occupies more than 12 GB).
 
 <p align="center">
-  <img src="VM_Downloaded.png" width=70% height=70%>
+  <img src="Images/VM_Downloaded.png" width=70% height=70%>
 </p>
 
 The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those softwares and import the VM (you can follow a tutorial on the Internet). The screenshots in this tutorial are for VirtualBox.
@@ -30,13 +30,13 @@ Download the following file from the Virtual Machine and unzip it in the VM home
 To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
 <p align="center">
-  <img src="ExtractHere.png" width=70% height=70%>
+  <img src="Images/ExtractHere.png" width=70% height=70%>
 </p>
 
 In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order to avoid problems with the paths indicated in the labs.
 
 <p align="center">
-  <img src="Path.png" width=70% height=70%>
+  <img src="Images/Path.png" width=70% height=70%>
 </p>
 
 At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
