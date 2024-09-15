@@ -38,6 +38,8 @@ And then on button:
   <img src="Images/Simulation.png" width=80% height=80%>
 </p>
 
+6. Finally close the project in VSCode before you continue.
+
 A C program can also be simulated in Whisper. We next show the steps to simulate Exercise 4 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4) in this same section).
 1. Open VSCode.
 2. Open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4```
@@ -57,6 +59,8 @@ And then on button:
 <p align="center">
   <img src="Images/Simulation4.png" width=80% height=80%>
 </p>
+
+5. Finally close the project in VSCode before you continue.
 
 
 ## Using RIPES in the virtual machine
