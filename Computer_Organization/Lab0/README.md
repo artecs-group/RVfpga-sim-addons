@@ -18,7 +18,7 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
   <img src="VM_Downloaded.png" width=70% height=70%>
 </p>
 
-The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those softwares and import the VM (you can follow a tutorial on the Internet). The images in this tutorial are for VirtualBox.
+The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those softwares and import the VM (you can follow a tutorial on the Internet). The screenshots in this tutorial are for VirtualBox.
 
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1.
 
@@ -33,7 +33,7 @@ To do this you can open a file explorer, move the downloaded file to the OS home
   <img src="ExtractHere.png" width=70% height=70%>
 </p>
 
-In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order not to have problems with the routes indicated in the practices.
+In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order to avoid problems with the paths indicated in the labs.
 
 <p align="center">
   <img src="Path.png" width=70% height=70%>
