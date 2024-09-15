@@ -14,30 +14,30 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
     To open the project, simply navigate to the directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click “Open,” as shown in the following screenshot.
 
 <p align="center">
-  <img src="OpenFolder.png" width=80% height=80%>
+  <img src="Images/OpenFolder.png" width=80% height=80%>
 </p>
 
 3. Open the editor in VSCode to view the assembly code of the project called ```Programa.S```
 
 <p align="center">
-  <img src="ProgramS.png" width=80% height=80%>
+  <img src="Images/ProgramS.png" width=80% height=80%>
 </p>
 
 4. Open the platformio.ini file and update the path to the RVfpga-Pipeline simulator. To do this, replace the first line shown below for the second line shown below:
 
 <p align="center">
-  <img src="Line1.png" width=80% height=80%>
+  <img src="Images/Line1.png" width=80% height=80%>
 </p>
 
 <p align="center">
-  <img src="Line2.png" width=80% height=80%>
+  <img src="Images/Line2.png" width=80% height=80%>
 </p>
 
 
 5. Open the PlatformIO tab and click on the task ```RVfpga-ViDBo/Pipeline```. The simulator will start executing the code (you can see it in the Explorer, inside the ```src``` directory).
 
 <p align="center">
-  <img src="RVfpgaVidboPipeline.png" width=40% height=40%>
+  <img src="Images/RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
 6. The simulator stops execution when it encounters the control instruction ```and zero, t4, t5```. If our program does not have this instruction, we must add it at the point where we want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.
@@ -60,13 +60,13 @@ Ripes offers different processor models, and we are interested in using the 5-st
         - Extended layout.
 
 <p align="center">
-  <img src="SelectProc.png" width=60% height=60%>
+  <img src="Images/SelectProc.png" width=60% height=60%>
 </p>
 
 3. Add the signal values view in the ```View``` tab.
 
 <p align="center">
-  <img src="View.png" width=40% height=40%>
+  <img src="Images/View.png" width=40% height=40%>
 </p>
 
 
@@ -121,7 +121,7 @@ b. If there were no forwarding hardware, how could the dependencies be resolved 
 c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
-  <img src="ProcessorHH.png" width=90% height=90%>
+  <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
@@ -153,7 +153,7 @@ b. If there were no forwarding hardware, how could the dependencies be resolved 
 c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
 
 <p align="center">
-  <img src="ProcessorHH.png" width=90% height=90%>
+  <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
@@ -187,7 +187,7 @@ a. Identify the data dependencies that exist in the code and explain how they ar
 b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```beq``` instruction is in the EX stage.
 
 <p align="center">
-  <img src="ProcessorHH.png" width=90% height=90%>
+  <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 c. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
@@ -284,7 +284,7 @@ e. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.
 
 <p align="center">
-  <img src="VeeReh1.png" width=90% height=90%>
+  <img src="Images/VeeReh1.png" width=90% height=90%>
 </p>
 
 
