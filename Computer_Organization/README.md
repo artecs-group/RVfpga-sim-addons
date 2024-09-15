@@ -1,10 +1,4 @@
 # Computer Organization at UCM
-
-<p align="center">
-  <img src="UnderConstruction.png" width=60% height=60%>
-</p>
-
-
 This is a second-year course in the Computer Science degree program offered at UCM. You can see the contents of this course at [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8413.pdf).
 
 The course includes five labs:
