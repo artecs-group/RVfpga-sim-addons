@@ -3,7 +3,7 @@ This practice aims to help students gain a thorough understanding of the commerc
 
 1. If you are new to Computer Organization, you should start by reading the whole H&H book.
 2. Then, you should look at the detailed introduction to the VeeR EH1 microarchitecture that we provide in this presentation: [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)
-3. Then you can start using RVfpga-Pipeline and Ripes to simulate and analyze the processors, following the steps shown below([RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#rvfpga-pipeline) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes)) and looking at the presentation provided here: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)
+3. Then you can start using RVfpga-Pipeline and Ripes to simulate and analyze the processors, following the steps shown below ([RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#rvfpga-pipeline) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes)) and looking at the presentation provided here: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)
 4. Finally, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-0), first theoretically and then on the simulators.
 
 ## RVfpga-Pipeline
