@@ -37,7 +37,7 @@ In the exercises, it should be noted that the simulation results will generally 
 
 
 ## Exercise 1
-Simulate the following code. 
+Simulate in Ripes the following code. 
 
 ```
 #define N 4
@@ -82,4 +82,4 @@ a. Start with a small matrix size (N=4) and a small data cache size (keep the in
   - Reduce the number of lines to 2, to keep the total data cache size the same: 2N Lines = 1
   - Test both write allocation policies: Write Allocate and Write No-Allocate.
 
-Next, increase the size of the matrices and the data cache to the sizes in the worksheet, and check whether the results from the exercise are consistent with those from the simulator.
+b. Next, increase the size of the matrices and the data cache to the sizes in the worksheet, and check whether the results from the exercise are consistent with those from the simulator.
