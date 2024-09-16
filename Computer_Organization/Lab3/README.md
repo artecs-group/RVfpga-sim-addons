@@ -191,6 +191,9 @@ int i, j;
 Answer the following questions. You should analyze and explain the behavior of the cache in detail, using screenshots from the simulator to assist you.
 
 a. How many cache misses occur?
+
 b. How many cache misses occur with a direct-mapped cache without write allocation?
+
 c. How many cache misses occur with a two-way associative cache (with the total cache size remaining the same; that is, there will be half as many block frames) with write allocation?
+
 d. Analyze the program for the same cache as in section C but changing the write policy to Write-Through.
