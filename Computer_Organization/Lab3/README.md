@@ -86,7 +86,7 @@ b. Next, increase the size of the matrices and the data cache to the sizes in th
 
 
 ## Exercise 2
-Simulate in Ripes the following code. 
+Simulate the following code in Ripes. 
 
 ```
 int nota[128];	
@@ -124,3 +124,73 @@ d. Analyze one of the code optimizations and explain the results obtained.
 
 
 ## Exercise 3
+Simulate the following code in Ripes. 
+
+```
+int A[16][16];
+int B[32];
+int C[16][16];
+
+main(){
+int i, j;
+
+   /* Bucles para asignar valores iniciales a las matrices */
+   for (i=0; i < 16; i++)
+       for (j=0; j < 16; j++){
+           A[i][j]=i*16+j;
+           C[i][j]=0;
+       }
+  for (j=0; j < 32; j++)
+       	B[j]=j+3;
+
+  /* Bucle a analizar */
+  for (i=0; i< 16; i++)
+     	 C[0][i] = A[0][i] + B[4];
+  }
+```
+
+a. Simulate the program with a direct-mapped data cache and Write Allocate. The behavior when compiling with -O1 differs from that obtained in the problem sheet. Simulate step by step and justify the results from the simulator.
+
+b. Simulate the program with a data cache similar to the previous section but with 2-way associativity (keeping the total data cache size unchanged). Explain the results.
+
+c. Analyze and explain in detail the evolution of the instruction cache for the loop to be analyzed for the following two configurations, which differ only in the number of lines:
+
+<p align="center">
+  <img src="Images/Conf1.png" width=80% height=80%>
+</p>
+
+<p align="center">
+  <img src="Images/Conf2.png" width=80% height=80%>
+</p>
+
+
+## Exercise 4
+Consider a computer with a main memory of 4MB, addressable by bytes, equipped with a 2KB cache, with lines of 512B. The cache is direct-mapped and uses write allocation. The following code is to be executed:
+
+```
+int A[1024];
+int B[1024];
+int C[1024];
+
+main(){
+int i, j;
+
+   /* Bucle para asignar valores iniciales a las matrices */
+   for (i=0; i < 1024; i++){
+          A[i]=i;
+		B[i]=i+7;
+          C[i]=0;
+       }
+
+  /* Bucle a analizar */
+  for (i=0; i< 1024; i++)
+     	 C[i] = A[i] - B[1023-i];
+}
+```
+
+Answer the following questions. You should analyze and explain the behavior of the cache in detail, using screenshots from the simulator to assist you.
+
+a. How many cache misses occur?
+b. How many cache misses occur with a direct-mapped cache without write allocation?
+c. How many cache misses occur with a two-way associative cache (with the total cache size remaining the same; that is, there will be half as many block frames) with write allocation?
+d. Analyze the program for the same cache as in section C but changing the write policy to Write-Through.
