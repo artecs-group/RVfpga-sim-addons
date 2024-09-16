@@ -37,3 +37,47 @@ In the exercises, it should be noted that the simulation results will generally 
 
 
 ## Exercise 1
+Simulate the following code. 
+
+```
+#define N 4
+
+int A[N][N];
+int B[N][N];
+int C[N][N];
+
+main(){
+   int i, j, x;
+
+/* Bucle para asignar valores iniciales a las matrices */
+   for (i=0; i < N; i++)
+       for (j=0; j < N; j++){
+           A[i][j]=i*N+j;
+           B[i][j]=i*N+j+3;
+           C[i][j]=0;
+       }
+          
+/* Bucle a analizar */
+   for (i=0; i < N; i++)
+       for (j=0; j < N; j++)
+       	C[i][j] = A[i][j] + B[i][j];
+
+}
+```
+
+You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, etc.). You should also check that the address format from the cache's point of view is consistent with the one obtained in the worksheet exercises.
+
+a. Start with a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache. Specifically, we will use the following data caches:
+- Direct mapping
+
+<p align="center">
+  <img src="Images/Ex1.png" width=80% height=80%>
+</p>
+
+- Two-way set associative:
+
+  - Increase the number of ways to 2: 2N Ways = 1
+  - Reduce the number of lines to 2, to keep the total data cache size the same: 2N Lines = 1
+  - Test both write allocation policies: Write Allocate and Write No-Allocate.
+
+Next, increase the size of the matrices and the data cache to the sizes in the worksheet, and check whether the results from the exercise are consistent with those from the simulator.
