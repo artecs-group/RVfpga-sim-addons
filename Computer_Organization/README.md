@@ -7,4 +7,4 @@ The course includes five labs:
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
 + [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): The VeeR EH1 core.
 + Lab 3: The Memory Hierarchy.
-+ Lab 4: The RVfpga I/O System.
++ [Lab 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4): The RVfpga I/O System.
