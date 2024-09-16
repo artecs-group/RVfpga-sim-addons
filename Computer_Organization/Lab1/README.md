@@ -1,7 +1,10 @@
 # Lab 1 - The RISC-V ISA
 In this lab we review the RISC-V architecture and complete several exercises in simulation. There are several open-access Instruction Set Simulators (ISSs) available on the Internet that we could use for the lab, such as Whisper (which is the ISS used in RVfpga labs 1-4), [Ripes](https://github.com/mortbopet/Ripes) (a visual computer architecture simulator and assembly code editor), and many others that you can find on the Internet.
 
-We next briefly explain how to use Whisper and Ripes in the provided Virtual Machine, and then propose 4 exercises that can be resolved in either of these two simulators or any other simulator available on the Internet.
+You can follow the next steps:
+1. If you are new to Computer Organization, you should start by reading Chapter 6 of the Harris and Harris book (RISC-V Edition).
+2. Then you can start using [RVfpga-Whisper](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-rvfpga-whisper-in-the-virtual-machine) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine) within the Virtual Machine, to simulate and analyze RISC-V assembly and C programs.
+3. Finally, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the two provided simulators.
 
 ## Using RVfpga-Whisper in the virtual machine
 Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, in RVfpga labs 1 to 4, many exercises (more complex than the ones included in this lab) can be found.
