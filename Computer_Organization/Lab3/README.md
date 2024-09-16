@@ -65,7 +65,9 @@ main(){
 }
 ```
 
-You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, etc.). You should also check that the address format from the cache's point of view is consistent with the one obtained in the worksheet exercises.
+You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, etc.). 
+
+Also, analyze step by step and explain the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
 a. Start with a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache. Specifically, we will use the following data caches:
 - Direct mapping
