@@ -83,3 +83,44 @@ a. Start with a small matrix size (N=4) and a small data cache size (keep the in
   - Test both write allocation policies: Write Allocate and Write No-Allocate.
 
 b. Next, increase the size of the matrices and the data cache to the sizes in the worksheet, and check whether the results from the exercise are consistent with those from the simulator.
+
+
+## Exercise 2
+Simulate in Ripes the following code. 
+
+```
+int nota[128];	
+int media[128];	
+
+main(){
+  int i;
+
+  /* Bucle para asignar valores iniciales a las matrices */
+  for (i=0; i < 128; i++){
+    nota [i] = i;
+    media [i] = i+5;
+  }
+  
+  /* Bucle a analizar */
+  for (i=0; i < 128; i++) {
+    if (i > 7 && i < 64)
+    		nota[i] = media[i] / 2;
+    else
+    		nota[i] = nota[i] * media[i];
+  }
+
+}
+```
+
+You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you.
+
+a. Analyze the changes made to the code compared to the one from the worksheet exercise.
+
+b. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
+
+c. Analyze the behavior of the data cache in detail for the configuration of the worksheet exercise and compare the results with those from the current exercise. Perform the analysis section by section: iterations 0 to 7, iterations 8 to 63, and iterations 64 to 127.
+
+d. Analyze one of the code optimizations and explain the results obtained.
+
+
+## Exercise 3
