@@ -290,34 +290,33 @@ while swapped
 
 #include <psp_api.h>
 
-#define N 10
+#define N 4
 
-int V[N];
+int V[N]={5,2,3,1};
 
 void main(void)
 {
    int swapped=1, i;
 
-   for (i=0; i<(N); i++)
-       V[i]=rand();
-
    while(swapped){
        swapped=0;
        for (i=0; i<(N-1); i++){
            if (V[i] > V[i+1]){
-               swap(V[i], V[i+1]);
+               swap(&V[i], &V[i+1]);
                swapped=1;
            }
        }
    }
 
+   while(1);
+
 }
 
-void swap(V,W){
+void swap(int *V, int *W){
    int temp;
-   temp=V;
-   V=W;
-   W=temp;
+   temp=*V;
+   *V=*W;
+   *W=temp;
 }
 ```
 
