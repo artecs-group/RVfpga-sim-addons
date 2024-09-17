@@ -137,7 +137,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
   <img src="Images/DataSection.png" width=90% height=90%>
 </p>
 
-10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md):
+10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)):
 
   - Unzip the provided RISC-V toolchain:
       - Open a file explorer and navigate to ```/home/rvfpga/Simuladores_EC_24-25/Ripes/```
