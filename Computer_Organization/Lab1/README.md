@@ -202,7 +202,7 @@ while swapped
 - Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots from the simulator during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode (random values are assigned to the vector V). Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
+- The following code is a possible C implementation, for the RVfpga-Whisper simulator, of the above pseudocode (random values are assigned to the vector V). Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
     - Optimization Level -O0:
         - Parameter passing and call to swap from main.
         - swap function.
@@ -307,7 +307,7 @@ Run the code in the simulator and answer the following questions. Add screenshot
 
 
 ## Exercise 4
-Given the following C code that computes the factorial of an integer number:
+Given the following C code, for the RVfpga-Whisper simulator, that computes the factorial of an integer number:
 
 ```
 #if defined(D_NEXYS_A7)
