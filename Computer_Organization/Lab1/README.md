@@ -137,7 +137,74 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
   <img src="Images/DataSection.png" width=90% height=90%>
 </p>
 
-10. Configure the simulator to be able to compile and run programs in C. The instructions are provided in the following [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)
+10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md):
+
+  - Unzip the provided RISC-V toolchain:
+      - Open a file explorer and navigate to ```/home/rvfpga/Simuladores_EC_24-25/Ripes/```
+      - Unzip the file ```riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz``` by right-clicking on the file and selecting "Extract Here."
+
+<p align="center">
+  <img src="Images/ExtractHere.png" width=90% height=90%>
+</p>
+
+
+  - Set the compiler path in Ripes:
+      - In the top menu of Ripes, open "Edit-Settings":
+
+      <p align="center">
+        <img src="Images/EditSettings.png" width=40% height=40%>
+      </p>
+
+
+      - In the window that opens, go to the "Compiler" tab.
+
+      <p align="center">
+        <img src="Images/PathCompiler.png" width=90% height=90%>
+      </p>
+
+
+      - In the "Browse" section, select the C compiler (the file named ```riscv64-unknown-elf-gcc```), which is located in the following path (you can copy and paste the path in the "Compiler path"):
+
+      ```
+      /home/rvfpga/Simuladores_EC_24-25/Ripes/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
+      ```
+
+      <p align="center">
+        <img src="Images/PathCompiler2.png" width=90% height=90%>
+      </p>
+
+      <p align="center">
+        <img src="Images/PathCompiler3.png" width=90% height=90%>
+      </p>
+
+
+  - Set the appropriate arguments:
+      - Compiler arguments: ```-O1```
+      - Linker arguments: ```-static-libgcc -lm```
+
+      <p align="center">
+        <img src="Images/Linker.png" width=90% height=90%>
+      </p>
+
+
+11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the program from Exercise 4 can be seen in the following figure (you can find the code below):
+
+<p align="center">
+  <img src="Images/Editor.png" width=90% height=90%>
+</p>
+
+12. Next, compile the program by clicking on the hammer icon (). If the program is correct, the disassembled version will appear in the central window:
+
+<p align="center">
+  <img src="Images/Martillo.png" width=90% height=90%>
+</p>
+
+13. Run the program by clicking the "Fast Execution" button (). The result of the factorial calculation will appear in the console:
+
+<p align="center">
+  <img src="Images/Execution.png" width=70% height=70%>
+</p>
+
 
 
 ## Exercise 1
