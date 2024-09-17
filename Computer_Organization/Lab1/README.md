@@ -57,7 +57,7 @@ And then on button:
   <img src="Images/RunDebug2.png" width=10% height=10%>
 </p>
 
-4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembly version of the code, etc.
+4. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, view the dissasembly version of the code, etc. In the next figure, you can see the program after its execution, along with the factorial result displayed in the console at the bottom.
 
 <p align="center">
   <img src="Images/Simulation4.png" width=80% height=80%>
@@ -187,19 +187,19 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
       </p>
 
 
-11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the program from Exercise 4 can be seen in the following figure (you can find the code below):
+11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the program from Exercise 4 (find it [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4)) can be seen in the following figure (you can find the code below):
 
 <p align="center">
   <img src="Images/Editor.png" width=90% height=90%>
 </p>
 
-12. Next, compile the program by clicking on the hammer icon (). If the program is correct, the disassembled version will appear in the central window:
+12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
 <p align="center">
   <img src="Images/Martillo.png" width=90% height=90%>
 </p>
 
-13. Run the program by clicking the "Fast Execution" button (). The result of the factorial calculation will appear in the console:
+13. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
 
 <p align="center">
   <img src="Images/Execution.png" width=70% height=70%>
