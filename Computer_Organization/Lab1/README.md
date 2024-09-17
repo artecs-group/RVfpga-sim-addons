@@ -208,7 +208,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 
 
 ## Exercise 1
-Given the following RISC-V assembly code (this code should work both in the Whisper simulator and in the Ripes simulator):
+Given the following RISC-V assembly code:
 
 ```
   .global main
@@ -236,7 +236,9 @@ Given the following RISC-V assembly code (this code should work both in the Whis
     j fin
 ```
 
-Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
+This code should work both on the Whisper simulator and on the Ripes simulator. At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor.
+
+Run the code on the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
 
 - Briefly explain what the code does.
 - Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
@@ -269,7 +271,7 @@ while swapped
 - Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots from the simulator during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode (the code is prepared for the RVfpga-Whisper simulator; if you want to use it in Ripes, remove the initial ```include``` lines). Note that random values are assigned to the vector V. Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
+- The following code is a possible C implementation of the above pseudocode. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on this simulator. If you want to use it in Ripes, remove the initial ```include``` lines and copy the code to the editor. Note that random values are assigned to the vector V. Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
     - Optimization Level -O0:
         - Parameter passing and call to swap from main.
         - swap function.
@@ -321,7 +323,7 @@ void swap(V,W){
 
 
 ## Exercise 3
-Given the following RISC-V assembly code (this code should work both in the Whisper simulator and in the Ripes simulator):
+Given the following RISC-V assembly code:
 
 ```
 .global main
@@ -365,6 +367,8 @@ factorial:
 
 ```
 
+At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex3``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor.
+
 Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
 
 - The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
@@ -374,7 +378,7 @@ Run the code in the simulator and answer the following questions. Add screenshot
 
 
 ## Exercise 4
-Given the following C code that computes the factorial of an integer number (the code is prepared for the RVfpga-Whisper simulator; if you want to use it in Ripes, remove the initial ```include``` lines, remove the ```uartInit``` and the ```printfNexys``` functions):
+Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines and copy the code to the editor, and remove the ```uartInit``` and the ```printfNexys``` functions:
 
 ```
 #if defined(D_NEXYS_A7)
