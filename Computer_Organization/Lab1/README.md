@@ -371,7 +371,7 @@ Run the code in the simulator and answer the following questions. Add screenshot
 
 
 ## Exercise 4
-Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines and copy the code to the editor, and remove the ```uartInit``` and the ```printfNexys``` functions:
+Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines as well as the ```uartInit``` and the ```printfNexys``` functions, and copy the code to the editor:
 
 ```
 #if defined(D_NEXYS_A7)
