@@ -271,13 +271,7 @@ while swapped
 - Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots from the simulator during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on this simulator. If you want to use it in Ripes, remove the initial ```include``` lines and copy the code to the editor. Note that random values are assigned to the vector V. Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the following code fragments:
-    - Optimization Level -O0:
-        - Parameter passing and call to swap from main.
-        - swap function.
-    - Optimization Level -O1:
-        - Prologue and epilogue of main.
-        - while loop.
+- The following code is a possible C implementation of the above pseudocode. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on this simulator. If you want to use it in Ripes, remove the initial ```include``` lines and copy the code to the editor. Compile the code with optimization levels -O0 and -O1, and identify and explain in detail the obtained ```swap``` and ```main``` functions. Then, simulate the code step-by-step.
 
 ```
 #if defined(D_NEXYS_A7)
