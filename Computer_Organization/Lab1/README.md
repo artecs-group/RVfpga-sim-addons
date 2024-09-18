@@ -87,6 +87,12 @@ And then on button:
     <img src="Images/Dis.png" width=80% height=80%>
   </p>
 
+  d. Finally, run the code by selecting first ```PIO Debug (without uploading)``` (see the following figure). This option executes the program on the simulator without compiling it first.
+
+   <p align="center">
+    <img src="Images/PioDebug.png" width=40% height=40%>
+  </p>
+
 
 6. Finally close the project in VSCode before you continue.
 
