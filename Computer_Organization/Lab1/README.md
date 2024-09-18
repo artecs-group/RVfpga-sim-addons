@@ -4,7 +4,7 @@ In this lab we review the RISC-V architecture and complete several exercises in 
 You can follow the next steps:
 1. If you are new to Computer Organization, you should start by reading Chapter 6 of the Harris and Harris book (RISC-V Edition).
 2. Then, following the detailed instructions provided below, you can test the [RVfpga-Whisper](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-rvfpga-whisper-in-the-virtual-machine) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine) within the Virtual Machine to simulate and analyze RISC-V assembly and C programs.
-3. Finally, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the two provided simulators. If you want to continue practicing after completing these, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4 than those included in this lab.
+3. Finally, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the two provided simulators. If you want to continue practicing after completing these, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4 .
 
 ## Using RVfpga-Whisper in the virtual machine
 Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package.
