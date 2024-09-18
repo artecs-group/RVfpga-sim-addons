@@ -4,7 +4,7 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 1. If you are new to Computer Organization, you should start by reading Chapter 9 of the H&H book.
 2. Then, you should look at the detailed presentation of the RVfpga I/O System provided here: [Presentation_RVfpga_IO](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing) (if necessary, you can obtain more information in the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course).
 3. Then, you can perform the guided example provided [next](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this repository.
-4. Finally, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1) in this repository.
+4. Finally, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1) in this repository. If you want to continue practicing after completing these, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
 
 ## Introduction - Simulation of the RVfpga SoC
 In this lab, we will use the RVfpga-ViDBo simulator. This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
