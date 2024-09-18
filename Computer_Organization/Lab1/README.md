@@ -63,7 +63,32 @@ And then on button:
   <img src="Images/Simulation4.png" width=80% height=80%>
 </p>
 
-5. Finally close the project in VSCode before you continue.
+5. You can change the optimization level used by the compiler in file ```platformio.ini```. For example, follow the next steps to compile with a ```-O1``` optimization level:
+
+  a. Open file platformio.ini and change the default ```-O0``` to a ```-O1``` optimization level as follows:
+
+  <p align="center">
+    <img src="Images/O1level.png" width=50% height=50%>
+  </p>
+
+  b. *Clean* and *build* the project using the following buttons which you can find at the bottom of VSCode:
+
+  <p align="center">
+    <img src="Images/Clean.png" width=10% height=10%>
+  </p>
+
+   <p align="center">
+    <img src="Images/Build.png" width=10% height=10%>
+  </p>
+
+  c. You can view the dissasembly code in file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4/.pio/build/swervolf_nexys/firmware.dis```. For example, this is the main() function of our program:
+
+   <p align="center">
+    <img src="Images/Dis.png" width=80% height=80%>
+  </p>
+
+
+6. Finally close the project in VSCode before you continue.
 
 
 ## Using RIPES in the virtual machine
