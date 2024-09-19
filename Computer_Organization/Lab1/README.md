@@ -82,7 +82,7 @@ And then on button:
     <img src="Images/Build.png" width=5% height=5%>
   </p>
 
-  c. You can view the dissasembly code in file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4/.pio/build/swervolf_nexys/firmware.dis```. For example, this is the main() function of our program:
+  c. You can view the dissasembly code in file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4/.pio/build/swervolf_nexys/firmware.dis```. For example, this is the ```main()``` function of our program when a ```-O1``` optimization level is used:
 
    <p align="center">
     <img src="Images/Dis.png" width=80% height=80%>
