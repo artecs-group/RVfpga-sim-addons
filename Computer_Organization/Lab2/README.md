@@ -340,6 +340,16 @@ f. Indicate on the following figure where each instruction is and the values of 
 </p>
 
 
+**SOLUTION:**
+In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for item f as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
+*f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
+
+<p align="center">
+  <img src="Images/Solution_5-f.png" width=90% height=90%>
+</p>
+
+
 ## Exercise 6
 In the VeeR EH1 processor, the following code is to be executed:
 
