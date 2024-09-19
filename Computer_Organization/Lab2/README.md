@@ -26,16 +26,17 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
   <img src="Images/ProgramS.png" width=80% height=80%>
 </p>
 
-4. Open the platformio.ini file and update the path to the RVfpga-Pipeline simulator. To do this, replace the first line shown below for the second line shown below:
+4. Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator. To do this, replace the following line:
 
-<p align="center">
-  <img src="Images/Line1.png" width=80% height=80%>
-</p>
+```
+board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/Vrvfpgasim
+```
 
-<p align="center">
-  <img src="Images/Line2.png" width=80% height=80%>
-</p>
+For this one:
 
+```
+board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu
+```
 
 5. Open the PlatformIO tab and click on the task ```RVfpga-ViDBo/Pipeline```. The simulator will start executing the code (you can see it in the Explorer, inside the ```src``` directory).
 
