@@ -44,7 +44,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
   <img src="Images/RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
-6. The simulator starts executing the program and stops when it encounters the control instruction ```and zero, t4, t5```. In the program provided in the project we are using (```ProyectoP2```) this instruction is included before the ```REPEAT``` loop. (If your program does not have this instruction, you must add it at the point where we want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.)
+6. The simulator starts executing the program and stops when it encounters the control instruction ```and zero, t4, t5```. In the program provided in the project we are using (```ProyectoP2```) this instruction is included before the ```REPEAT``` loop (see the program above). If your program does not have this instruction, you must add it at the point where we want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.
 
 7. Execute cycle by cycle by clicking the ```+ 1 Cycle``` button on the right bottom corner of the simulator window and observe how the program's instructions flow through the VeeR EH1 pipeline.
 
