@@ -346,6 +346,10 @@ In general, we do not include solutions for the exercises in this repository; ho
 *f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
 
 <p align="center">
+  <img src="Images/Solution_5-f_Simulator.png" width=90% height=90%>
+</p>
+
+<p align="center">
   <img src="Images/Solution_5-f.png" width=90% height=90%>
 </p>
 
