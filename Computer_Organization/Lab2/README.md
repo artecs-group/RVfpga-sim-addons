@@ -60,6 +60,28 @@ If your program does not have the ```and zero, t4, t5``` instruction, you must a
   <img src="Images/RVfpgaPipeline2.png" width=100% height=100%>
 </p>
 
+Let's analyze what the simulator shows in the previous figure:
+
+- **WRITE-BACK stage**
+	- *Way-0*: Instruction ```mul t0, t3, t4``` (3rd iteration) is writting its result to the Register File (```waddr0=5``` as register ```t0``` corresponds to x5, ```wen0=1``` as writting is enabled, and ```wd0=6``` which is the result of the first multiplication, 3*2).
+ 	- *Way-1*: Empty.
+- **COMMIT stage**
+	- *Way-0*: Instruction ```mul t1, t5, t6``` (3rd iteration) propagates the result in signal ```i0_result_e4_final=4```, which is the result of the second multiplication (2*2).
+ 	- *Way-1*: Instruction ```addi t2, t2, -1``` (3rd iteration) propagates the result in signal ```i1_result_e4_final=0xFFFC```, which is the result of this instruction in the third iteration of the loop (0xFFFF - 1 - 1 - 1).
+- **EX3/DC3/M3 stage**
+	- *Way-0*: Instruction ```bne t2, zero, REPEAT``` (3rd iteration).
+ 	- *Way-1*: Instruction ```mul t0, t3, t4``` (4th iteration) has just obtained the result of the multiplication (```exu_mul_result_e3=6```).
+- **EX2/DC2/M2 stage**
+	- *Way-0*: Instruction ```mul t1, t5, t6``` (4th iteration).
+ 	- *Way-1*: Instruction ```addi t2, t2, -1``` (4th iteration).
+- **EX1/DC1/M1 stage**
+	- *Way-0*: Instruction ```bne t2, zero, REPEAT``` (4th iteration).
+ 	- *Way-1*: Instruction ```mul t0, t3, t4``` (5th iteration).
+- **DECODE stage**
+	- *Way-0*: Instruction ```mul t1, t5, t6``` (5th iteration).
+ 	- *Way-1*: Instruction ```addi t2, t2, -1``` (5th iteration).
+
+
 9. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
 
 ## Ripes
