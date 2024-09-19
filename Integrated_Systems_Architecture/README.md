@@ -1,7 +1,15 @@
 # Integrated Systems Architecture
-This is a fourth-year course in the Electronics and Communication Engineering degree that we offer at UCM. You can see the contents of this course at [Integrated Systems Architecture UCM](https://fisicas.ucm.es/data/cont/docs/18-2021-09-01-2021-22%20Gu%C3%ADa%20Docente%20GIEC%20v1.1-157-16091.pdf). 
+This is a fourth-year course in the Electronics and Communication Engineering degree program offered at UCM. You can see the contents of this course at [Integrated Systems Architecture UCM](https://fisicas.ucm.es/data/cont/docs/18-2021-09-01-2021-22%20Gu%C3%ADa%20Docente%20GIEC%20v1.1-157-16091.pdf). 
 
-<p align="center">
-  <img src="UnderConstruction.png" width=60% height=60%>
-</p>
+The course includes ten labs:
 
++ [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation.
++ [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
++ [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): Introduction to the VeeR EH1 core.
++ Lab 3: Performance of the VeeR EH1 core.
++ Lab 4: Execution of basic instructions on the VeeR EH1 core.
++ [Lab 5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3): The Memory Hierarchy in Ripes.
++ Lab 6: The Memory Hierarchy in VeeR EH1.
++ [Lab 7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4): High-level Input/Output on the RVfpga SoC.
++ Lab 8: Low-level Input/Output on the RVfpga SoC.
++ Lab 9: The [RVfpga-SoC package]((https://university.imgtec.com/rvfpgasoc-download-page-en/)).
