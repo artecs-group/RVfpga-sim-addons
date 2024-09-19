@@ -75,11 +75,11 @@ And then on button:
   b. *Clean* and *build* the project using the following buttons which you can find at the bottom of VSCode:
 
   <p align="center">
-    <img src="Images/Clean.png" width=10% height=10%>
+    <img src="Images/Clean.png" width=5% height=5%>
   </p>
 
    <p align="center">
-    <img src="Images/Build.png" width=10% height=10%>
+    <img src="Images/Build.png" width=5% height=5%>
   </p>
 
   c. You can view the dissasembly code in file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4/.pio/build/swervolf_nexys/firmware.dis```. For example, this is the main() function of our program:
