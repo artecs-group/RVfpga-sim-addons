@@ -44,23 +44,25 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
   <img src="Images/RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
-6. The simulator starts executing the program and stops when it encounters the control instruction ```and zero, t4, t5```. In the program provided in the project we are using (```ProyectoP2```) this instruction is included before the ```REPEAT``` loop (see the program above). For example, the following figure shows the simulator at the point where instruction ```and zero, t4, t5``` is at the Decode Stage (see that the cycles count is Cycles=1).
+6. The simulator starts executing the program continuously without stopping, and it only stops when instruction ```and zero, t4, t5``` reaches the Decode stage (note that this instruction has no effect at all in the architectural state of the processor). In the program provided in this project (```ProyectoP2```) this instruction is included before the ```REPEAT``` loop (see the program above). (If the target program does not have the ```and zero, t4, t5``` instruction, you must add it at the point where you want execution to stop; typically, we place this instruction before entering the loop where the fragment we want to analyze is located.) For example, the following figure shows the simulator at the point where it stops execution for this program, as instruction ```and zero, t4, t5``` has reached the Decode Stage. After the figure of the simulator, we also include the simplified version of the VeeR EH1 microarchitecture (obtained from [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)), which helps understanding the signals included in the simulator.
 
 <p align="center">
   <img src="Images/RVfpgaPipeline1.png" width=100% height=100%>
 </p>
 
-If your program does not have the ```and zero, t4, t5``` instruction, you must add it at the point where you want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.
+<p align="center">
+  <img src="Images/Eh1_Simplified.png" width=90% height=90%>
+</p>
 
 7. Execute cycle by cycle by clicking the ```+ 1 Cycle``` button on the right bottom corner of the simulator window and observe how the program's instructions flow through the VeeR EH1 pipeline.
 
-8. Usually, the programs that we simulate will consist of a loop where the instructions we want to analyze are located. It is important to analyze an iteration that is not the first one (typically from the third iteration on), as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze. For example, the following figure shows the simulator at the point where instructions from the third, fourth and fifth iterations are executing (see that the cycles count is now Cycles=26).
+8. Usually, the programs that we simulate will consist of a loop where the instructions we want to analyze are located. It is important to analyze an iteration that is not the first one (typically from the third iteration on), as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze. For example, the following figure shows the simulator at the point where instructions from the third, fourth and fifth iterations are executing (see that the cycles count is Cycles=26).
 
 <p align="center">
   <img src="Images/RVfpgaPipeline2.png" width=100% height=100%>
 </p>
 
-Let's analyze what the simulator shows in the previous figure:
+9. Let's analyze what the simulator shows in the previous figure:
 
 - **WRITE-BACK stage**
 	- *Way-0*: Instruction ```mul t0, t3, t4``` (3rd iteration) is writting its result to the Register File (```waddr0=5``` as register ```t0``` corresponds to x5, ```wen0=1``` as writting is enabled, and ```wd0=6``` which is the result of the first multiplication, 3*2).
@@ -82,7 +84,7 @@ Let's analyze what the simulator shows in the previous figure:
  	- *Way-1*: Instruction ```addi t2, t2, -1``` (5th iteration).
 
 
-9. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
+10. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
 
 ## Ripes
 As we saw in the first lab, Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the 5-stage pipeline simulated by Ripes (more details about this simulator are provided in the [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing) mentioned above).
