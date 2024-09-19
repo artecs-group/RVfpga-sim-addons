@@ -46,9 +46,17 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 6. The simulator starts executing the program and stops when it encounters the control instruction ```and zero, t4, t5```. In the program provided in the project we are using (```ProyectoP2```) this instruction is included before the ```REPEAT``` loop (see the program above). If your program does not have this instruction, you must add it at the point where we want to stop execution. Typically, we will place this instruction before entering the loop where the fragment we want to analyze is located.
 
+<p align="center">
+  <img src="Images/RVfpgaPipeline1.png" width=40% height=40%>
+</p>
+
 7. Execute cycle by cycle by clicking the ```+ 1 Cycle``` button on the right bottom corner of the simulator window and observe how the program's instructions flow through the VeeR EH1 pipeline.
 
 8. Usually, the programs that we simulate will consist of a loop where the instructions we want to analyze are located. It is important to analyze an iteration that is not the first one (typically from the third iteration on), as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze.
+
+<p align="center">
+  <img src="Images/RVfpgaPipeline2.png" width=40% height=40%>
+</p>
 
 9. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
 
