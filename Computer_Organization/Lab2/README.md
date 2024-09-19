@@ -163,6 +163,22 @@ c. On the figure below (obtained from H&H), indicate the values of the data and 
 d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
 
 
+**SOLUTION:**
+In general, we do not include solutions for the exercises in this repository, but in this exercise we exceptionally show next the solution for items c and d as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
+*c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
+
+<p align="center">
+  <img src="Images/Solution_1-c.png" width=90% height=90%>
+</p>
+
+*d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.*
+
+<p align="center">
+  <img src="Images/Solution_1-d.png" width=90% height=90%>
+</p>
+
+
 
 ## Exercise 2
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
