@@ -331,21 +331,21 @@ b. Draw the timing diagram for the second iteration of the loop.
 
 c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
-d. Reorder the code to try to improve performance. Calculate the new CPI.
-
-e. Recalculate the CPI of the loop assuming that the Secondary ALU available in the Commit stage is activated and that the code is reordered as per the previous step.
-
-f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.
+d. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.
 
 <p align="center">
   <img src="Images/VeeReh1.png" width=90% height=90%>
 </p>
 
+e. Reorder the code to try to improve performance. Calculate the new CPI.
+
+f. Recalculate the CPI of the loop assuming that the Secondary ALU available in the Commit stage is activated and that the code is reordered as per the previous step.
+
 
 **SOLUTION:**
-In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for item f as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for item d as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
-*f. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
+*d. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
 
 <p align="center">
   <img src="Images/Solution_5-f_Simulator.png" width=90% height=90%> 
