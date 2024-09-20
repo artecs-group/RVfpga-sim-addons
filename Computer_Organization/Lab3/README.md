@@ -219,7 +219,7 @@ main(){
 }
 ```
 
-You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you.
+You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
 
 a. Analyze the changes made to the code compared to the one from the worksheet exercise.
 
@@ -295,7 +295,7 @@ int i, j;
 }
 ```
 
-Answer the following questions. You should analyze and explain the behavior of the cache in detail, using screenshots from the simulator to assist you.
+Answer the following questions. You should analyze and explain the behavior of the cache in detail, adding screenshots from the simulator.
 
 a. How many cache misses occur?
 
