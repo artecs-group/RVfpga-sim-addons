@@ -261,11 +261,11 @@ b. Simulate the program with a data cache similar to the previous item but with 
 c. Analyze and explain in detail the evolution of the instruction cache for the loop to be analyzed, for the following two configurations:
 
 <p align="center">
-  <img src="Images/Conf1.png" width=80% height=80%>
+  <img src="Images/Conf1.png" width=60% height=60%>
 </p>
 
 <p align="center">
-  <img src="Images/Conf2.png" width=80% height=80%>
+  <img src="Images/Conf2.png" width=60% height=60%>
 </p>
 
 
