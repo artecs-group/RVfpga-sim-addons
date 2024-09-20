@@ -12,9 +12,9 @@ This practice aims to help students understand the cache memory. You can follow 
 The cache view allows simulating different configurations and management policies for first-level data and instruction caches. The Cache window allows configuring the data cache and the instruction cache separately.
 
 For example, in this case, we would be configuring a data cache with the following parameters:
-- 4 lines (field "2<sup>N</sup> Lines = 2")
-- 4 words per line (field "2<sup>N</sup> Words/Lines = 2")
-- 1 way (field "2<sup>N</sup> Ways = 0")
+- 4 lines (field 2<sup>N</sup> Lines = 2)
+- 4 words per line (field 2<sup>N</sup> Words/Lines = 2)
+- 1 way (field 2<sup>N</sup> Ways = 0)
 - LRU replacement policy
 - Write-back and Write-allocate write policies
 
