@@ -55,7 +55,7 @@ main(){
 - Write-back and Write-allocate write policies
 
 <p align="center">
-  <img src="Images/CacheConfiguration.png" width=80% height=80%>
+  <img src="Images/CacheConfiguration.png" width=60% height=60%>
 </p>
 
 Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom, we can see the statistics for misses, hits, writebacks, etc.
@@ -87,7 +87,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed.
 
 <p align="center">
-  <img src="Images/HitsMisses.png" width=40% height=40%>
+  <img src="Images/HitsMisses.png" width=60% height=60%>
 </p>
 
 
