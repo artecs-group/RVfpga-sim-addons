@@ -60,29 +60,59 @@ main(){
 
 Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom, we can see the statistics for misses, hits, writebacks, etc.
 
+2. 
 
 
 
 ## Exercise 1
 Simulate in Ripes the following program:
 
+```
+#define N 4
+
+int A[N][N];
+int B[N][N];
+int C[N][N];
+
+main(){
+   int i, j, x;
+
+/* Initialize matrices */
+   for (i=0; i < N; i++)
+       for (j=0; j < N; j++){
+           A[i][j]=i*N+j;
+           B[i][j]=i*N+j+3;
+           C[i][j]=0;
+       }
+          
+/* Analyze this loop */
+   for (i=0; i < N; i++)
+       for (j=0; j < N; j++)
+       	C[i][j] = A[i][j] + B[i][j];
+
+}
+```
 
 You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, ..., and show the cache blocks in that moment). 
 
 Also, analyze step by step and explain the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
-Use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real cache size). Specifically, we will use the following data caches:
-- Direct mapping
+Use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real cache size). Specifically, analyze the following scenarios:
+
+a. Direct mapping data cache
 
 <p align="center">
   <img src="Images/Ex1.png" width=80% height=80%>
 </p>
 
-- Two-way set associative:
+b. Two-way set associative data cache:
 
   - Increase the number of ways to 2: 2<sup>N</sup> Ways = 1
   - Reduce the number of lines to 2, to keep the total data cache size the same: 2<sup>N</sup> Lines = 1
   - Test both write allocation policies: Write Allocate and Write No-Allocate.
+
+c. Modified program:
+
 
 
 ## Exercise 2
