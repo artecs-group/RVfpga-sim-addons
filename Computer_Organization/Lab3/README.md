@@ -151,7 +151,7 @@ Use a small matrix size (N=4) and a small data cache size (keep the instruction 
 a. Direct mapping data cache.
 
 <p align="center">
-  <img src="Images/Ex1.png" width=60% height=60%>
+  <img src="Images/CacheConfiguration.png" width=60% height=60%>
 </p>
 
 b. Two-way set associative data cache.
