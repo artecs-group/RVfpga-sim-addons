@@ -34,7 +34,7 @@ In general, and unless stated otherwise, for this practice, we will configure th
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-In the exercises, it should be noted that the simulation results will generally not match exactly with those from the worksheet, due to various side effects: different memory location of the vectors, blocks present in the cache after the initialization of the vectors, etc.
+In the exercises, it should be noted that the simulation results will generally not match exactly with those obtained theoretically, due to various side effects: different memory location of the vectors, blocks present in the cache after the initialization of the vectors, etc.
 
 
 ## Exercise 1
