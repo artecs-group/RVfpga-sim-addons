@@ -11,7 +11,7 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 In this lab, we will use the RVfpga-ViDBo simulator. This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
 
 <p align="center">
-  <img src="Images/Nexys.png" width=80% height=80%>
+  <img src="Images/Nexys.png" width=60% height=60%>
 </p>
 
 In this lab, we will only use the following peripherals among all the available ones:
@@ -53,7 +53,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
     c. Finally, open a browser and go to http://localhost:8000/nexys-a7.html, connect to the board, and check the simulation by modifying the switches and viewing the LEDs. This code would behave exactly the same if run on the actual board.
 
      <p align="center">
-        <img src="Images/NexysExample.png" width=80% height=80%>
+        <img src="Images/NexysExample.png" width=60% height=60%>
      </p>
 
 ## Exercise 1
