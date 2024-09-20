@@ -9,22 +9,7 @@ This practice aims to help students understand the cache memory. You can follow 
 
 
 ## Cache simulation in Ripes
-The cache view allows simulating different configurations and management policies for first-level data and instruction caches. The Cache window allows configuring the data cache and the instruction cache separately.
-
-For example, in this case, we would be configuring a data cache with the following parameters:
-- 4 lines (2<sup>N</sup> Lines = 2)
-- 4 words per line (2<sup>N</sup> Words/Line = 2)
-- 1 way (2<sup>N</sup> Ways = 0)
-- LRU replacement policy
-- Write-back and Write-allocate write policies
-
-<p align="center">
-  <img src="Images/CacheConfiguration.png" width=80% height=80%>
-</p>
-
-Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom, we can see the statistics for misses, hits, writebacks, etc.
-
-In general, and unless stated otherwise, for this practice, we will configure the compiler to work with optimization level -O1 and set the processor to Single-Cycle 32-bit (see the following two figures). Moreover, in most of the exercises, we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
+The cache view allows simulating different configurations and management policies for first-level data and instruction caches. In general, and unless stated otherwise, for this practice, we will configure the compiler to work with optimization level -O1 and set the processor to Single-Cycle 32-bit (see the following two figures). Moreover, in most of the exercises, we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
 
 <p align="center">
   <img src="Images/CompilerSettings.png" width=80% height=80%>
@@ -34,11 +19,7 @@ In general, and unless stated otherwise, for this practice, we will configure th
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-In the exercises, it should be noted that the simulation results will generally not match exactly with those obtained theoretically, due to various side effects: different memory location of the vectors, blocks present in the cache after the initialization of the vectors, etc.
-
-
-## Exercise 1
-Simulate in Ripes the following program (you just need to copy the code in the editor):
+As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor):
 
 ```
 #define N 4
@@ -65,6 +46,26 @@ main(){
 
 }
 ```
+
+1. The Cache window allows configuring the data cache and the instruction cache separately. For example, in this case, we would be configuring a data cache with the following parameters:
+- 4 lines (2<sup>N</sup> Lines = 2)
+- 4 words per line (2<sup>N</sup> Words/Line = 2)
+- 1 way (2<sup>N</sup> Ways = 0)
+- LRU replacement policy
+- Write-back and Write-allocate write policies
+
+<p align="center">
+  <img src="Images/CacheConfiguration.png" width=80% height=80%>
+</p>
+
+Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom, we can see the statistics for misses, hits, writebacks, etc.
+
+
+
+
+## Exercise 1
+Simulate in Ripes the following program:
+
 
 You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, ..., and show the cache blocks in that moment). 
 
