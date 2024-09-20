@@ -72,6 +72,25 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
   <img src="Images/Loop.png" width=50% height=50%>
 </p>
 
+4. Set a breakpoint at the beginning of the loop to be analyzed by clicking on the left button over the blue vertical column, next to the instruction where you want to place it.
+
+<p align="center">
+  <img src="Images/Breakpoint.png" width=50% height=50%>
+</p>
+
+5. Run quickly until the breakpoint at the beginning of the loop to be analyzed. Keep in mind that the execution will stop after the instruction where the breakpoint is located is executed.
+
+<p align="center">
+  <img src="Images/Buttons.png" width=40% height=40%>
+</p>
+
+6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed.
+
+<p align="center">
+  <img src="Images/HitsMisses.png" width=40% height=40%>
+</p>
+
+
 
 
 
