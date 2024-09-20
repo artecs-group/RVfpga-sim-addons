@@ -66,7 +66,7 @@ main(){
 }
 ```
 
-You should analyze and explain the cache's behavior in detail, using screenshots from the simulator to assist you. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, etc.). 
+You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of cache blocks step by step (you can pause execution after each load/store, at the end of each iteration, ..., and show the cache blocks in that moment). 
 
 Also, analyze step by step and explain the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
