@@ -219,15 +219,13 @@ main(){
 }
 ```
 
-You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
+Configure the data cache with a total size of 128B, with 16B blocks. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
 
-a. Analyze the changes made to the code compared to the one from the worksheet exercise.
+a. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
 
-b. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
+b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0 to 7, iterations 8 to 63, and iterations 64 to 127.
 
-c. Analyze the behavior of the data cache in detail for the configuration of the worksheet exercise and compare the results with those from the current exercise. Perform the analysis section by section: iterations 0 to 7, iterations 8 to 63, and iterations 64 to 127.
-
-d. Analyze one of the code optimizations and explain the results obtained.
+c. Perform code optimizations (such as array enlargement, array fusion, etc.) and explain the results obtained compared with the results of the original code.
 
 
 ## Exercise 3
