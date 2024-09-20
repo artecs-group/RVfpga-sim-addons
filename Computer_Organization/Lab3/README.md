@@ -69,7 +69,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 3. Locate the ```main``` function and the loops that make up the function. The ```lw``` and ```sw``` instructions are very helpful for locating these loops. In this case, the loop to analyze is the following:
 
 <p align="center">
-  <img src="Images/Loop.png" width=80% height=80%>
+  <img src="Images/Loop.png" width=50% height=50%>
 </p>
 
 
