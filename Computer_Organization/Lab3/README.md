@@ -219,7 +219,7 @@ main(){
 }
 ```
 
-Configure the data cache with a total size of 128B, with 16B blocks. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
+Configure the data cache with a total size of 128B, with 16B blocks. Simulate the program with a direct-mapped data cache and No-Write-Allocate. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
 
 a. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
 
@@ -254,11 +254,11 @@ int i, j;
   }
 ```
 
-a. Simulate the program with a direct-mapped data cache and Write Allocate. The behavior when compiling with -O1 differs from that obtained in the problem sheet. Simulate step by step and justify the results from the simulator.
+a. Configure the data cache with a total size of 128B, with 16B blocks. Simulate the program with a direct-mapped data cache and Write Allocate. Simulate step by step and justify the results from the simulator.
 
-b. Simulate the program with a data cache similar to the previous section but with 2-way associativity (keeping the total data cache size unchanged). Explain the results.
+b. Simulate the program with a data cache similar to the previous item but with 2-way associativity (keeping the total data cache size unchanged). Explain the results.
 
-c. Analyze and explain in detail the evolution of the instruction cache for the loop to be analyzed for the following two configurations, which differ only in the number of lines:
+c. Analyze and explain in detail the evolution of the instruction cache for the loop to be analyzed, for the following two configurations:
 
 <p align="center">
   <img src="Images/Conf1.png" width=80% height=80%>
@@ -270,7 +270,7 @@ c. Analyze and explain in detail the evolution of the instruction cache for the 
 
 
 ## Exercise 4
-Consider a computer with a main memory of 4MB, addressable by bytes, equipped with a 2KB cache, with lines of 512B. The cache is direct-mapped and uses write allocation. The following code is to be executed:
+Consider a computer with a main memory of 4MB, addressable by bytes, equipped with a 2KB cache, with lines of 512B. The cache is direct-mapped and uses write-allocation. The following code is to be executed:
 
 ```
 int A[1024];
