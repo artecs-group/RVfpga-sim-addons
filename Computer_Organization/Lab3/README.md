@@ -38,7 +38,7 @@ In the exercises, it should be noted that the simulation results will generally 
 
 
 ## Exercise 1
-Simulate in Ripes the following code. 
+Simulate in Ripes the following program (you just need to copy the code in the editor):
 
 ```
 #define N 4
