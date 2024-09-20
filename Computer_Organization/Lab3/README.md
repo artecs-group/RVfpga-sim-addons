@@ -90,8 +90,29 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
   <img src="Images/HitsMisses.png" width=60% height=60%>
 </p>
 
+7. Delete the breakpoint and add another one right after the loop:
 
+<p align="center">
+  <img src="Images/Breakpoint2.png" width=50% height=50%>
+</p>
 
+8. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks.
+
+<p align="center">
+  <img src="Images/HitsMisses2.png" width=60% height=60%>
+</p>
+
+9. With this information, we can calculate the hits, misses, and writebacks:
+
+ * Hits = 61 - 61 = 0
+ * Misses = 116 - 68 = 48
+ * Writebacks = 77 - 61 = 16
+
+10. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figure shows the cache state after the second iteration:
+
+<p align="center">
+  <img src="Images/CacheState.png" width=60% height=60%>
+</p>
 
 
 ## Exercise 1
