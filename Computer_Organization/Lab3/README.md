@@ -50,7 +50,7 @@ int C[N][N];
 main(){
    int i, j, x;
 
-/* Bucle para asignar valores iniciales a las matrices */
+/* Initialize matrices */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++){
            A[i][j]=i*N+j;
@@ -58,7 +58,7 @@ main(){
            C[i][j]=0;
        }
           
-/* Bucle a analizar */
+/* Analyze this loop */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++)
        	C[i][j] = A[i][j] + B[i][j];
@@ -70,7 +70,7 @@ You should analyze and explain the cache's behavior in detail, adding screenshot
 
 Also, analyze step by step and explain the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
-a. Start with a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache. Specifically, we will use the following data caches:
+Use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real cache size). Specifically, we will use the following data caches:
 - Direct mapping
 
 <p align="center">
@@ -83,8 +83,6 @@ a. Start with a small matrix size (N=4) and a small data cache size (keep the in
   - Reduce the number of lines to 2, to keep the total data cache size the same: 2<sup>N</sup> Lines = 1
   - Test both write allocation policies: Write Allocate and Write No-Allocate.
 
-b. Next, increase the size of the matrices and the data cache to the sizes in the worksheet, and check whether the results from the exercise are consistent with those from the simulator.
-
 
 ## Exercise 2
 Simulate the following code in Ripes. 
@@ -96,13 +94,13 @@ int media[128];
 main(){
   int i;
 
-  /* Bucle para asignar valores iniciales a las matrices */
+  /* Initialize matrices */
   for (i=0; i < 128; i++){
     nota [i] = i;
     media [i] = i+5;
   }
   
-  /* Bucle a analizar */
+  /* Analyze this loop */
   for (i=0; i < 128; i++) {
     if (i > 7 && i < 64)
     		nota[i] = media[i] / 2;
@@ -135,7 +133,7 @@ int C[16][16];
 main(){
 int i, j;
 
-   /* Bucles para asignar valores iniciales a las matrices */
+   /* Initialize matrices */
    for (i=0; i < 16; i++)
        for (j=0; j < 16; j++){
            A[i][j]=i*16+j;
@@ -144,7 +142,7 @@ int i, j;
   for (j=0; j < 32; j++)
        	B[j]=j+3;
 
-  /* Bucle a analizar */
+  /* Analyze this loop */
   for (i=0; i< 16; i++)
      	 C[0][i] = A[0][i] + B[4];
   }
@@ -176,14 +174,14 @@ int C[1024];
 main(){
 int i, j;
 
-   /* Bucle para asignar valores iniciales a las matrices */
+   /* Initialize matrices */
    for (i=0; i < 1024; i++){
           A[i]=i;
 		B[i]=i+7;
           C[i]=0;
        }
 
-  /* Bucle a analizar */
+  /* Analyze this loop */
   for (i=0; i< 1024; i++)
      	 C[i] = A[i] - B[1023-i];
 }
