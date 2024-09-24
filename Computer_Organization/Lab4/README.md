@@ -85,6 +85,15 @@ Write a C program that displays the value of the switches on the four right-most
 
 You can use the project from Exercise 3 as a base and simply write your code in the ```71_7SegDispl_C-Lang.c``` file instead of the provided one.
 
+**SOLUTION:**
+In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next the result of running this program on RVfpga-ViDBo. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
+<p align="center">
+  <img src="Images/ViDBo.png" width=90% height=90%>
+</p>
+
+You can see how the switches value is shown in the 7-segment displays.
+
 
 ## Exercise 5
 In this exercise, we will work with interrupts. Two codes are provided with the same functionality, but the first uses polling while the second uses interrupts.
