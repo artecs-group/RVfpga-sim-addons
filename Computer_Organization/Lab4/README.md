@@ -92,7 +92,7 @@ In general, we do not include solutions for the exercises in this repository; ho
   <img src="Images/ViDBo.png" width=70% height=70%>
 </p>
 
-You can see how the switches value is shown in the 7-segment displays.
+You can see how the switches value is shown in the 7-segment displays. Note that this device is shown in the simulator outside the board.
 
 
 ## Exercise 5
