@@ -89,7 +89,7 @@ You can use the project from Exercise 3 as a base and simply write your code in 
 In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next the result of running this program on RVfpga-ViDBo. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
 <p align="center">
-  <img src="Images/ViDBo.png" width=90% height=90%>
+  <img src="Images/ViDBo.png" width=70% height=70%>
 </p>
 
 You can see how the switches value is shown in the 7-segment displays.
