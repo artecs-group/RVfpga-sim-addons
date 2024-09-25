@@ -365,6 +365,8 @@ In general, we do not include solutions for the exercises in this repository; ho
 ## Exercise 6
 Given the following program, which can be executed in RVfpga-Pipeline (using the first code below) and in Ripes (using the second code below):
 
+**RVfpga-Pipeline:**
+
 ```
 .globl main
 
@@ -412,6 +414,8 @@ or s1, zero, zero
 fin:
 j fin
 ```
+
+**Ripes:**
 
 ```
 .globl main
