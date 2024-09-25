@@ -363,6 +363,103 @@ In general, we do not include solutions for the exercises in this repository; ho
 
 
 ## Exercise 6
+Given the following program, which can be executed in RVfpga-Pipeline (using the first code below) and in Ripes (using the second code below):
+
+```
+.globl main
+
+.section .midccm
+D: .space 20
+
+.text
+main:
+
+li t2, 0x080             # Disable Secondary ALUs
+csrrs t1, 0x7F9, t2
+
+la t0, D
+
+li t1, 0x1					
+sw t1, (t0)				
+li t1, 0x3					
+sw t1, 4(t0)				
+li t1, 0x5					
+sw t1, 8(t0)				
+li t1, 0x7					
+sw t1, 12(t0)				
+li t1, 0x9					
+sw t1, 16(t0)				
+
+la   t1 , D
+addi s1 ,x0 ,4
+addi s2 ,x0 ,0
+
+and zero, t4, t5
+
+for:
+	lw   s3, 0(t1)
+	lw   s4, 4(t1)
+	add  s3, s3, s4
+	addi s2 ,s2 ,1
+	sub  s3, s3, s2
+	sw   s3, 4(t1)
+	addi t1, t1, 4
+	bne  s2, s1, for
+
+or s2, zero, zero
+or s1, zero, zero
+
+fin:
+j fin
+```
+
+```
+.globl main
+
+.data
+D: .word 1, 3, 5, 7, 9
+
+.text
+main:
+
+la   t1 , D
+addi s1 ,x0 ,4
+addi s2 ,x0 ,0
+
+for:
+	lw   s3, 0(t1)
+	lw   s4, 4(t1)
+	add  s3, s3, s4
+	addi s2 ,s2 ,1
+	sub  s3, s3, s2
+	sw   s3, 4(t1)
+	addi t1, t1, 4
+	bne  s2, s1, for
+
+or s2, zero, zero
+or s1, zero, zero
+
+fin:
+j fin
+```
+
+a. Draw the execution diagram of the program on the H&H 5-stage pipelined processor, from the beginning of the second iteration of the loop until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Indicate on the diagram the structural, data, and control dependencies that arise and explain for each one how the processor handles it.
+
+b. How many cycles does it take to execute one iteration?
+
+c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code.
+
+d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage. Also, indicate which instruction is in each stage. Assume that the address of the first instruction is 0.
+
+e. Draw the execution diagram of the program on the VeeR EH1 processor, from the beginning of the second iteration of the loop until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Indicate on the diagram the structural, data, and control dependencies that arise and explain for each one how the processor handles it.
+
+f. How many cycles does it take to execute one iteration?
+
+g. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code.
+
+
+
+## Exercise 7
 In the VeeR EH1 processor, the following code is to be executed:
 
 ```
