@@ -50,7 +50,14 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
         <img src="Images/Python.png" width=100% height=100%>
      </p>
 
-    c. Finally, open a browser and go to http://localhost:8000/nexys-a7.html, connect to the board, and check the simulation by modifying the switches and viewing the LEDs. This code would behave exactly the same if run on the actual board.
+    c. Finally, open a browser and go to http://localhost:8000/nexys-a7.html, and click on the "Connect to board" button.
+
+     <p align="center">
+        <img src="Images/ViDBo1.png" width=80% height=80%>
+     </p>
+
+
+5. Finally, check the simulation by modifying the switches and viewing the LEDs. This code would behave exactly the same if run on the actual board. For example:
 
      <p align="center">
         <img src="Images/NexysExample.png" width=60% height=60%>
