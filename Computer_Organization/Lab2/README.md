@@ -343,7 +343,13 @@ f. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 
 
 **SOLUTION:**
-In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for item d as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for items b and d as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
+*b. Draw the timing diagram for the second iteration of the loop.*
+
+<p align="center">
+  <img src="Images/Ex5-b.png" width=90% height=90%> 
+</p>
 
 *d. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
 
