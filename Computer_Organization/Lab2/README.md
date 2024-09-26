@@ -51,7 +51,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 </p>
 
 <p align="center">
-  <img src="Images/Eh1_Simplified.png" width=90% height=90%>
+  <img src="Images/VeeReh1.png" width=90% height=90%>
 </p>
 
 7. Execute cycle by cycle by clicking the ```+ 1 Cycle``` button on the right bottom corner of the simulator window and observe how the program's instructions flow through the VeeR EH1 pipeline.
