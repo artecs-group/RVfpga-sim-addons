@@ -59,7 +59,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 8. Usually, the programs that we simulate will consist of a loop where the instructions we want to analyze are located. It is important to analyze an iteration that is not the first one (typically from the third iteration on), as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze. For example, the following figure shows the simulator at the point where instructions from the third, fourth and fifth iterations are executing (at this point the cycles count is Cycles=26).
 
 <p align="center">
-  <img src="Images/RVfpgaPipeline2.png" width=100% height=100%>
+  <img src="Images/RVfpgaPipeline2.png" width=90% height=90%>
 </p>
 
 9. Let's analyze what the simulator shows in the previous figure:
