@@ -29,7 +29,7 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline (more details about this
 4. Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator. To do this, replace the following line:
 
 ```
-board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/Vrvfpgasim
+board_debug.verilator.binary = /home/dani/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/Vrvfpgasim
 ```
 
 For this one:
