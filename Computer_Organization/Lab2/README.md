@@ -4,9 +4,31 @@ This practice aims to help students gain a thorough understanding of the commerc
 You can follow the next steps:
 1. If you are new to Computer Organization, you should start by reading Chapter 7 of the H&H book.
 2. Then, you should look at the detailed introduction to the VeeR EH1 microarchitecture that we provide in this presentation: [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)
-3. Then you can start using RVfpga-Pipeline and Ripes to simulate and analyze the processors: look at the presentation provided at: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing), and follow the steps shown below in this repo ([RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#rvfpga-pipeline) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes)).
+3. Then you can start using RVfpga-Pipeline and Ripes to simulate and analyze the processors: look at the presentation provided at: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing), and follow the steps shown below in this repo ([Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes) and [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#rvfpga-pipeline)).
 5. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-0), first theoretically and then on the simulators.
 6. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 11 to 18.
+
+## Ripes
+As we saw in the first lab, Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the 5-stage pipeline simulated by Ripes (more details about this simulator are provided in the [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing) mentioned above).
+
+Ripes offers different processor models, and we are interested in using the 5-stage pipelined processor, which is very similar to the one studied in theory. To configure Ripes for this processor, follow these steps:
+
+1. Start the simulator as in Lab 1.
+2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
+        - Fully pipelined 5-stage processor: "5-stage processor".
+        - RISC-V base instruction set plus M extension.
+        - Extended layout.
+
+<p align="center">
+  <img src="Images/SelectProc.png" width=60% height=60%>
+</p>
+
+3. Add the signal values view in the ```View``` tab.
+
+<p align="center">
+  <img src="Images/View.png" width=40% height=40%>
+</p>
+
 
 ## RVfpga-Pipeline
 RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline (more details about this simulator are provided in the [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing) mentioned above and more details about the EH1 core are provided in the [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link) also mentioned above). The simulator can be used from VSCode - PlatformIO. We will use an existing project, where we will copy the different codes that we will test during the practice:
@@ -85,27 +107,6 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 
 10. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
-
-## Ripes
-As we saw in the first lab, Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the 5-stage pipeline simulated by Ripes (more details about this simulator are provided in the [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing) mentioned above).
-
-Ripes offers different processor models, and we are interested in using the 5-stage pipelined processor, which is very similar to the one studied in theory. To configure Ripes for this processor, follow these steps:
-
-1. Start the simulator as in Lab 1.
-2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
-        - Fully pipelined 5-stage processor: "5-stage processor".
-        - RISC-V base instruction set plus M extension.
-        - Extended layout.
-
-<p align="center">
-  <img src="Images/SelectProc.png" width=60% height=60%>
-</p>
-
-3. Add the signal values view in the ```View``` tab.
-
-<p align="center">
-  <img src="Images/View.png" width=40% height=40%>
-</p>
 
 
 ## Exercise 0
