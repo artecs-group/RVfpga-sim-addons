@@ -17,3 +17,7 @@ The course includes ten labs:
 + Lab 9: The [RVfpga-SoC package]((https://university.imgtec.com/rvfpgasoc-download-page-en/)).
 
 Students are provided with a Nexys A7 board per person that they can keep until the end of the semester. The VeeR EH1 core fits in this board and it is a more advanced processor than EL2 that allows us to explore concepts such as deep pipelining or multi-cycle operations, thus it is the core that we use in the course. In addition, students can use the different simulation tools available in RVfpga: Whisper, RVfpga-ViDBo, RVfpga-Pipeline and RVfpga-Trace.
+
+<p align="center">
+  <img src="Images/UnderConstruction.jpg" width=60% height=60%>
+</p>
