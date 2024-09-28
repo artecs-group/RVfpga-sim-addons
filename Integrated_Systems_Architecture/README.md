@@ -1,4 +1,9 @@
 # Integrated Systems Architecture
+
+<p align="center">
+  <img src="Images/UnderConstruction.jpg" width=60% height=60%>
+</p>
+
 This is a fourth-year course in the Electronics and Communication Engineering degree program offered at UCM. You can see the contents of this course at [Integrated Systems Architecture UCM](https://fisicas.ucm.es/data/cont/docs/18-2021-09-01-2021-22%20Gu%C3%ADa%20Docente%20GIEC%20v1.1-157-16091.pdf). 
 
 The course starts with an introduction to the most recent trends in computer architecture, and then it explores exhaustively advanced processor design (deep pipelining, multi-cycle operations, speculative execution and branch prediction), the memory system (memory hierarchy, scratchpad memories), the I/O system, benchmarking and SoC design.
@@ -17,7 +22,3 @@ The course includes ten labs:
 + Lab 9: The [RVfpga-SoC package]((https://university.imgtec.com/rvfpgasoc-download-page-en/)).
 
 Students are provided with a Nexys A7 board per person that they can keep until the end of the semester. The VeeR EH1 core fits in this board and it is a more advanced processor than EL2 that allows us to explore concepts such as deep pipelining or multi-cycle operations, thus it is the core that we use in the course. In addition, students can use the different simulation tools available in RVfpga: Whisper, RVfpga-ViDBo, RVfpga-Pipeline and RVfpga-Trace.
-
-<p align="center">
-  <img src="Images/UnderConstruction.jpg" width=60% height=60%>
-</p>
