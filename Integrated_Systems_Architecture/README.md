@@ -15,6 +15,6 @@ The course includes ten labs (some of them are identical to the labs used in the
 + Lab 6: The Memory Hierarchy in VeeR EH1. (*COMING SOON*)
 + [Lab 7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4): High-level Input/Output on the RVfpga SoC.
 + Lab 8: Low-level Input/Output on the RVfpga SoC. (*COMING SOON*)
-+ Lab 9: The [RVfpga-SoC package]((https://university.imgtec.com/rvfpgasoc-download-page-en/)).
++ Lab 9: The [RVfpga-SoC package](https://university.imgtec.com/rvfpgasoc-download-page-en/). (*COMING SOON*)
 
 Students are provided with a Nexys A7 board per person that they can keep until the end of the semester. The VeeR EH1 core fits in this board and it is a more advanced processor than EL2 that allows us to explore concepts such as deep pipelining or multi-cycle operations, thus it is the core that we use in the course. In addition, students can use the different simulation tools available in RVfpga: Whisper, RVfpga-ViDBo, RVfpga-Pipeline and RVfpga-Trace.
