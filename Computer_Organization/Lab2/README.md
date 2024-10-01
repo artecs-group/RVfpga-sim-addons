@@ -163,7 +163,10 @@ c. On the figure below (obtained from H&H), indicate the values of the data and 
   <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
-d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+d. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Execute step-by-step and analyse the values of the different data and control signals.
+ - Show screenshots highlighting all forwardings that take place in this program.
+ - Confirm that your answer to item *c* is correct.
 
 
 **SOLUTION:**
@@ -175,9 +178,9 @@ In general, we do not include solutions for the exercises in this repository; ho
   <img src="Images/Solution_1-c.png" width=90% height=90%>
 </p>
 
-*d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.*
+*d. Confirm that your answer to item c is correct.*
 
-This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
+This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage. At this point, you can compare the value of the signals with those from the previous item. Most of them should be equal (although a few signals may differ).
 
 <p align="center">
   <img src="Images/Solution_1-d.png" width=90% height=90%>
@@ -213,7 +216,10 @@ c. On the figure below (obtained from H&H), indicate the values of the data and 
   <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
-d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+d. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Execute step-by-step and analyse the values of the different data and control signals.
+ - Show screenshots highlighting all forwardings, stalls, and how they are handled.
+ - Confirm that your answer to item *c* is correct.
 
 
 ## Exercise 3
@@ -247,7 +253,10 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
   <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
-c. Simulate the program in Ripes and confirm if your answer to the previous item is correct.
+c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Execute step-by-step and analyse the values of the different data and control signals.
+ - Show screenshots highlighting the control hazards and how they are handled.
+ - Confirm that your answer to item *b* is correct.
 
 
 ## Exercise 4
