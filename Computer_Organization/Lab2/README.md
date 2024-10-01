@@ -182,7 +182,7 @@ In general, we do not include solutions for the exercises in this repository; ho
 This is the timing diagram:
 
 <p align="center">
-  <img src="Images/TimingDiagramRipes.png" width=90% height=90%>
+  <img src="Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage. At this point, you can compare the value of the signals with those from the previous item. Most of them should be equal (although a few signals may differ).
