@@ -153,32 +153,31 @@ or  x6, x2, x5
 
 Answer the following questions:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
-b. If there were no forwarding hardware, how could the dependencies be resolved by software?
-
-c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
   <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
-d. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
  - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting all forwardings that take place in this program.
- - Confirm that your answer to item *c* is correct.
+ - Show screenshots highlighting all data hazards and the forwardings that take place in this program and explain them.
+ - Confirm that your answer to item *b* is correct.
 
 
 **SOLUTION:**
 In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for items c and d as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
-*c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
+*b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
 
 <p align="center">
   <img src="Images/Solution_1-c.png" width=90% height=90%>
 </p>
 
-*d. Confirm that your answer to item c is correct.*
+*c. Confirm that your answer to item b is correct.*
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage. At this point, you can compare the value of the signals with those from the previous item. Most of them should be equal (although a few signals may differ).
 
@@ -206,20 +205,19 @@ or  x6, x2, x5
 
 Answer the following questions:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
-b. If there were no forwarding hardware, how could the dependencies be resolved by software?
-
-c. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
 
 <p align="center">
   <img src="Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
-d. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
  - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting all forwardings, stalls, and how they are handled.
- - Confirm that your answer to item *c* is correct.
+ - Show screenshots highlighting all data hazards and the stalls/forwardings that take place in this program and explain them.
+ - Confirm that your answer to item *b* is correct.
 
 
 ## Exercise 3
@@ -245,7 +243,7 @@ nop
 
 Answer the following questions:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor.
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
 b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```beq``` instruction is in the EX stage.
 
@@ -254,8 +252,9 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
  - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting the control hazards and how they are handled.
+ - Show screenshots highlighting the control hazards that take place in this program and explain them.
  - Confirm that your answer to item *b* is correct.
 
 
@@ -282,11 +281,14 @@ addi t1, x0, 0
 addi t0, x0, 0
 ```
 
-a. Complete the timing diagram of the program in the 5-stage pipelined RISC-V processor from H&H. Assume that the processor has extended the ALU to perform multiplication with a latency of 1 cycle; that is, the ```mul``` instruction executes just like any other arithmetic-logical instruction.
+a. Complete the pipeline diagram of the program in the 5-stage pipelined RISC-V processor from H&H. Assume that the processor has extended the ALU to perform multiplication with a latency of 1 cycle; that is, the ```mul``` instruction executes just like any other arithmetic-logical instruction.
 
 b. Identify the structural, data, and control hazards on the diagram, clearly marking them and explaining how the processor handles each one.
 
-c. Simulate the program in Ripes and indicate the values of the data and control signals in cycle 5 of the program execution. Also, specify which instruction is in each stage.
+c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
+ - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
+ - Show screenshots of the pipeline highlighting the different hazards and how they are handled.
+ - Indicate the values of the data and control signals in cycle 5 of the program execution.
 
 
 ## Exercise 5
@@ -339,7 +341,7 @@ Answer the following questions about the ```for``` loop and confirm them in RVfp
 
 a. Identify the hazards that occur and explain how this processor handles them.
 
-b. Draw the timing diagram for the second iteration of the loop.
+b. Draw the pipeline diagram for the second iteration of the loop.
 
 c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
@@ -359,7 +361,7 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 **SOLUTION:**
 In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for items b, d and e as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
-*b. Draw the timing diagram for the second iteration of the loop.*
+*b. Draw the pipeline diagram for the second iteration of the loop.*
 
 <p align="center">
   <img src="Images/Ex5-b.png" width=90% height=90%> 
