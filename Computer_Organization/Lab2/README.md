@@ -177,6 +177,8 @@ In general, we do not include solutions for the exercises in this repository; ho
 
 *d. Simulate the program in Ripes and confirm if your answer to the previous item is correct.*
 
+This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
+
 <p align="center">
   <img src="Images/Solution_1-d.png" width=90% height=90%>
 </p>
