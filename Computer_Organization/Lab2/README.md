@@ -162,10 +162,9 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
- - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting all data hazards and the forwardings that take place in this program and explain them.
- - Confirm that your answer to item *b* is correct.
+ - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+ - Show screenshots of the pipeline to explain how the different data hazards are handled.
+ - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
 
 
 **SOLUTION:**
@@ -220,10 +219,9 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
- - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting all data hazards and the stalls/forwardings that take place in this program and explain them.
- - Confirm that your answer to item *b* is correct.
+ - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+ - Show screenshots of the pipeline to explain how the different data hazards are handled.
+ - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
 
 
 ## Exercise 3
@@ -258,10 +256,9 @@ b. On the figure below (obtained from H&H), indicate the values of the data and 
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
- - Execute step-by-step and analyse the values of the different data and control signals.
- - Show screenshots highlighting the control hazards that take place in this program and explain them.
- - Confirm that your answer to item *b* is correct.
+ - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+ - Show screenshots of the pipeline to explain how the different control/data hazards are handled.
+ - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
 
 
 ## Exercise 4
@@ -292,8 +289,8 @@ a. Complete the pipeline diagram of the program in the 5-stage pipelined RISC-V 
 b. Identify the structural, data, and control hazards on the diagram, clearly marking them and explaining how the processor handles each one.
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and confirm that your answer to item *a* is correct.
- - Show screenshots of the pipeline highlighting the different hazards and how they are handled.
+ - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+ - Show screenshots of the pipeline to explain how the different data/control hazards are handled.
  - Indicate the values of the data and control signals in cycle 5 of the program execution.
 
 
