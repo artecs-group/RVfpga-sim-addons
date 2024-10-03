@@ -184,12 +184,23 @@ This is the timing diagram:
   <img src="Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
-This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage. At this point, you can compare the value of the signals with those from the previous item. Most of them should be equal (although a few signals may differ).
+You should explain the hazards that take place and how they are handled by the processor.
+
+This is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
+
+<p align="center">
+  <img src="Images/FwdOp1.png" width=60% height=60%>
+</p>
+
+You should explain how it is handled: the multiplexers used, the stages involved, etc.
+
+This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
   <img src="Images/Solution_1-d.png" width=90% height=90%>
 </p>
 
+You should explain the values of the different data/control signals and compare their values with those from the previous item. Most of them should be equal (although a few signals may differ, given that the two processors are not identical).
 
 
 ## Exercise 2
