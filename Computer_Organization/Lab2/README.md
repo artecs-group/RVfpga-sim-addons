@@ -351,7 +351,7 @@ REPEAT:
    beq  zero, zero, REPEAT  # Repeat the loop
 ```
 
-Answer the following questions about the ```for``` loop and confirm them in RVfpga-Pipeline. Analyze an iteration from the second one onward, avoiding the first iteration where there are instruction cache misses and the branch predictor is not yet properly trained.
+Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator. Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained.
 
 a. Identify the hazards that occur and explain how this processor handles them.
 
@@ -375,11 +375,37 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 **SOLUTION:**
 In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for items b, d and e as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
+*a. Identify the hazards that occur and explain how this processor handles them.*
+
+For example, this figure illustrates the data hazard between the ```slli``` and the ```add```.
+
+<p align="center">
+  <img src="Images/Hazard1st2ndInstructions.png" width=50% height=50%> 
+</p>
+
+The hazard is handled by inserting a bubble by the ```slli``` instruction (way-1) and performing a forwarding from EX1 to Decode.
+
 *b. Draw the pipeline diagram for the second iteration of the loop.*
 
 <p align="center">
   <img src="Images/Ex5-b.png" width=90% height=90%> 
 </p>
+
+*c. Calculate the CPI (Cycles Per Instruction) of the loop.*
+
+To calculate the CPI of the loop, simulate until a given instruction of the loop reaches the Decode stage in two consecutive iterations (e.g., the third and fourth iterations). Then, subtract the cycle numbers of these two iterations and divide this result by the number of instructions in the loop.
+
+For example:
+
+<p align="center">
+  <img src="Images/Cycle25.png" width=90% height=90%>
+</p>
+
+<p align="center">
+  <img src="Images/Cycle33.png" width=90% height=90%>
+</p>
+
+In this case, ```CPI = (33-25)/8 = 1```
 
 *d. Indicate on the following figure where each instruction is and the values of the various signals of the VeeR EH1 processor in the cycle when the first load instruction is in the Write-Back stage.*
 
