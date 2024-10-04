@@ -9,7 +9,7 @@ In this repository, we show how we adapted and used the [RVfpga: Understanding C
 
 *NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
 
-## New simulation tools (Outdated - Nov-2022)
+## New simulation tools (Outdated)
 In this repository, we also provide two [Simulation Tools](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/SimulationTools) that can be used in conjunction with RVfpga.
 
 *IMPORTANT NOTE: The courses mentioned above include newer versions of these simulation tools, which are included in the materials provided for the courses. Moreover, v3 of the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) materials also includes newer versions of these tools.*
