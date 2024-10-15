@@ -127,6 +127,7 @@ Please reproduce and analyze all the examples provided in the presentation provi
     * Data hazard: consecutive add-add instructions
     * Data hazard - Multi-cycle instructions: mul-add
     * Control hazard
+    * Example program for the RVfpga-Pipeline that tests the different hazards explained in the [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link) presentation (you can find the program in the final slide of the presentation).
 
     To simulate the programs in RVfpga-Pipeline, follow these steps:
 
