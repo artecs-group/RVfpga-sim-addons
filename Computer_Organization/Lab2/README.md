@@ -389,6 +389,7 @@ For example, this figure illustrates the data hazard between the ```slli``` and 
 The hazard is handled by:
 - Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
 - Performing a forwarding from EX1 to Decode. We can see that: ```out=4 → b=4 (Byp)```.
+
 *b. Draw the pipeline diagram for the second iteration of the loop.*
 
 <p align="center">
