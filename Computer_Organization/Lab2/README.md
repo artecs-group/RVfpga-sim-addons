@@ -669,23 +669,23 @@ Similarly to what we did in the video for the bypass 10-1 multiplexer, where we 
 + 3-1 multiplexer
 
 <p align="center">
-  <img src="Images/3-1mux.png" width=90% height=90%> 
+  <img src="Images/3-1mux.png" width=30% height=30%> 
 </p>
 
 + ALU in the I0 Pipe:
 
 <p align="center">
-  <img src="Images/ALU.png" width=90% height=90%> 
+  <img src="Images/ALU.png" width=40% height=40%> 
 </p>
 
 + Register File:
 
 <p align="center">
-  <img src="Images/LS-Mul.png" width=90% height=90%> 
+  <img src="Images/LS-Mul.png" width=40% height=40%> 
 </p>
 
 + Multiplier and forwarding path from the load:
 
 <p align="center">
-  <img src="Images/RF.png" width=90% height=90%> 
+  <img src="Images/RF.png" width=30% height=30%> 
 </p>
