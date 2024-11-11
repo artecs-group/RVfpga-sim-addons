@@ -6,7 +6,7 @@ The course starts with an introduction to the most recent trends in computer arc
 
 The course includes ten labs (some of them are identical to the labs used in the [Computer Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) course):
 
-+ [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation.
++ [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation and Introduction.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
 + [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): Introduction to the VeeR EH1 core.
 + Lab 3: Performance of the VeeR EH1 core. (*COMING SOON*)
