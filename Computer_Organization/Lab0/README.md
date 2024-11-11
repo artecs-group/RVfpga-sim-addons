@@ -1,5 +1,5 @@
 # Lab 0 - Installation and Introduction
-This lab aims to prepare our computer to work in the labs of the course and to introduce the RVfpga System that we will use in the labs.
+This lab aims to prepare our computer to work in the labs of the course and to introduce the RVfpga System and the Tools that we will use in the labs.
 
 ## Virtual Machine
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). 
