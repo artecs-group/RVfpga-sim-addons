@@ -1,4 +1,4 @@
-# Lab 4 (Lab 7 of Integrated Systems Architecture) - The RVfpga I/O System - High Level
+# Lab 4 - The RVfpga I/O System - High Level (Lab 7 of Integrated Systems Architecture)
 This practice aims to help students gain a thorough understanding of an Input/Output System. You can follow the next steps:
 
 1. If you are new to Computer Organization, you should start by reading Chapter 9 of the H&H book.
