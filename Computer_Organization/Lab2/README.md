@@ -660,3 +660,32 @@ d. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of t
 
 e. Reorder the code of the loop_k loop to improve performance as much as possible, and draw the execution diagram and calculate the CPI.
 
+
+
+
+## Exercise 8
+Similarly to what we did in the video for the bypass 10-1 multiplexer, where we found it in the SoC Verilog code, try to find the following elements:
+
++ 3-1 multiplexer
+
+<p align="center">
+  <img src="Images/3-1mux.png" width=90% height=90%> 
+</p>
+
++ ALU in the I0 Pipe:
+
+<p align="center">
+  <img src="Images/ALU.png" width=90% height=90%> 
+</p>
+
++ Register File:
+
+<p align="center">
+  <img src="Images/LS-Mul.png" width=90% height=90%> 
+</p>
+
++ Multiplier and forwarding path from the load:
+
+<p align="center">
+  <img src="Images/RF.png" width=90% height=90%> 
+</p>
