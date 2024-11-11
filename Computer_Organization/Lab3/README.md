@@ -1,4 +1,4 @@
-# Lab 3 (Lab 5 of Integrated Systems Architecture) - The Memory Hierarchy
+# Lab 3 - The Memory Hierarchy (Lab 5 of Integrated Systems Architecture)
 This practice aims to help students understand the cache memory. You can follow the next steps:
 
 1. If you are new to Computer Organization, you should start by reading Chapter 8 of the H&H book.
