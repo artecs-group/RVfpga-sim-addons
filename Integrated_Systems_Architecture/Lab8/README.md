@@ -75,8 +75,8 @@ Use the new controller for printing the following message on the 8-digit 7-segme
 
 
 ## Exercise 3
-Repeat exercises 1 and 2 on the board. 
+Repeat exercises 1 and 2 on the FPGA board. 
 
 + For that purpose, you must first install Vivado as described in the Getting Started Guide of the [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
 + You then have to generate a new bitstream for the SoC, following the instructions explained in Lab 5 of the [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
-+ Finally, test the new bitstream on the FPGA board.
++ Finally, test the new bitstream on the FPGA board. Remember that you have an example at time 19:17 of this [video](https://www.youtube.com/watch?v=Z8QcQRW7F4s).
