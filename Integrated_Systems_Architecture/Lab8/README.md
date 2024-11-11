@@ -4,7 +4,7 @@ This practice aims to let the students continue with the analysis of the RVfpga 
 ## Exercise 1
 The current 8-digit 7-segment displays controller (implemented in module SevSegDisplays_Controller), can only show the 16 hexadecimal digits. Modify the 8-digit 7-segment displays controller so that it can show any combination of ON/OFF LEDs. 
 
-Note that you only need to make changes in file /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv. Specifically, within that file, you must modify the module that handles the 7-segment displays device (SevSegDisplays_Controller).
+Note that you only need to make changes in file /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv. Specifically, within that file, you must modify the module that handles the 7-segment displays device (SevSegDisplays_Controller).
 
 + You can use as a baseline this [file](https://drive.google.com/file/d/19QDLbpinb2exxjfZP2S4pQ8HS-l7iQGT/view?usp=drive_link), which is already partially completed. In that file, look for comment “/* COMPLETE THE CODE WITH THE NEW FUNCTIONALITY */” and implement the new controller at that point of the code.
 
