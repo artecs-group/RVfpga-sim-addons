@@ -65,7 +65,9 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
      </p>
 
 ## Exercise 1
-Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but is written in assembly.
+→ View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
+
+Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly.
 
 Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
@@ -81,6 +83,8 @@ You can use the project from Exercise 1 as a base and simply write your code in 
 
 
 ## Exercise 3
+→ View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
+
 Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
 
 Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
@@ -109,11 +113,21 @@ In this exercise, we will work with interrupts. Two codes are provided with the 
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang```
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```
 
-Follow these steps:
+View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 33:32 for a description of the RVfpga Interrupt-driven IO and at time 35:05 for a description of the implementation of the LED-Switch_7SegDispl_Interrupts_C-Lang program and its execution.
 
-- Analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. Read the following information on each project carefully.
+Then, analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. We next provide some guidance about these two examples:
 
-- Modify the interrupt-based code so that each time a 0 to 1 transition is detected on the first switch, the speed at which the count displayed on the 7-segment displays is incremented changes between two clearly different values (e.g., intervals of 1 second and 0.1 seconds).
+In the first example (LED-Switch_7SegDispl_C-Lang), we show how to use Programmed I/O to perform the following two tasks:
+Invert the rightmost LED every time a 0 to 1 transition on the rightmost switch occurs.
+Show an ascending count in the 8-digit 7-segment displays, that increments around once per second.
+
+Open the program in the editor. You can see that, after some initializations, the program enters an infinite loop that compares the current switch state with the previous one and, in case a 0 to 1 transition is detected, it inverts the LED state. Then, the value shown on the 8-digit 7-segment displays is incremented and a software delay is generated.
+
+Note that this program does not work correctly in some situations. For example, a 0 to 1 to 0 switch transition that occurs within the delay loop will never be detected (you can test it by changing the switch quickly). How could we improve the program? The answer is interrupt-driven I/O.
+
+In the second example (LED-Switch_7SegDispl_Interrupts_C-Lang), we show a new version of the program where interrupt-driven I/O is used to read the state of the rightmost switch. This strategy fixes the problem of the program missing switch transitions that occur during the delay loop.
+
+In this program, the main function performs some initializations and then enters an infinite loop where the 7-segment displays are written and a software delay is established. Note that the switch is not explicitly read in this case. Instead, whenever a 0 to 1 transition occurs in the switch, an interrupt is triggered that makes the processor execute the GPIO_ISR function, where the switch state is read and the LED state is inverted.
 
 
 ## Exercise 6
