@@ -66,8 +66,17 @@ The virtual board simulates the same behavior of this device, thus it receives t
 
 
 ## Exercise 2
-Use the new controller for printing the following message on the 8-digit 7-segment displays: 
+Use the new controller for printing the following message on the 8-digit 7-segment displays of the RVfpga-ViDBo simulator: 
 
 <p align="center">
   <img src="Images/Hello.png" width=60% height=60%>
 </p>
+
+
+
+## Exercise 3
+Repeat exercises 1 and 2 on the board. 
+
++ For that purpose, you must first install Vivado as described in the Getting Started Guide of the [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
++ You then have to generate a new bitstream for the SoC, following the instructions explained in Lab 5 of the [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
++ Finally, test the new bitstream on the FPGA board.
