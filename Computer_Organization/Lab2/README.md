@@ -681,11 +681,11 @@ Similarly to what we did in the video for the bypass 10-1 multiplexer, where we 
 + Register File:
 
 <p align="center">
-  <img src="Images/LS-Mul.png" width=40% height=40%> 
+  <img src="Images/LS-Mul.png" width=60% height=60%> 
 </p>
 
 + Multiplier and forwarding path from the load:
 
 <p align="center">
-  <img src="Images/RF.png" width=30% height=30%> 
+  <img src="Images/RF.png" width=20% height=20%> 
 </p>
