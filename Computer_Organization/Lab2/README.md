@@ -669,7 +669,7 @@ Similarly to what we did in the video for the bypass 10-1 multiplexer, where we 
 + 3-1 multiplexer
 
 <p align="center">
-  <img src="Images/3-1mux.png" width=30% height=30%> 
+  <img src="Images/3-1mux.png" width=20% height=20%> 
 </p>
 
 + ALU in the I0 Pipe:
