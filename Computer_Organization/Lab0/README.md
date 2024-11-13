@@ -13,7 +13,8 @@ To understand the RVfpga System and start using it, you can follow the next step
 1. View this [video](https://www.youtube.com/watch?v=sc_Jn0XSkNw), which introduces the RVfpga materials. The video is in Spanish, but you can enable the subtitles and configure YouTube to automatically translate them into the language that you prefer.
 2. Test the different RVfpga Tools in the Virtual Machine:
     + View this [video](https://www.youtube.com/watch?v=Z8QcQRW7F4s), which describes and exemplifies the different RVfpga Tools, from simulators to FPGA boards, that you can use in RVfpga. The video is in Spanish, but you can enable the subtitles and configure YouTube to automatically translate them into the language that you prefer.
-    + Install the Virtual Machine and download the sources as explained [below]().
+    + Install the Virtual Machine as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#virtual-machine).
+    + Download the RVfpga sources as explained [below]().
     + Perform the tasks described in this [document](https://drive.google.com/file/d/1-VHw5yIs0i6m0S9YQewlzYOIrVKPKxpI/view?usp=sharing), which consist of downloading and installing the software required and performing different examples using the RVfpga Tools.
 
 ## Virtual Machine
