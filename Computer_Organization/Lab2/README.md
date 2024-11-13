@@ -607,15 +607,14 @@ sw t1, 24(t0)
 li t1, 0   				 
 sw t1, 28(t0)   			 
 
-la   x23 , Entrada
-la   x24 , Filtro
-la   x25 , Salida
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
 
-li   x22, 0
-li   x10, 3
-
-li   x21, 0
-li   x11, 8
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
 
 nop
 nop
@@ -625,24 +624,23 @@ nop
 and zero, t4, t5
 
 loop_n :
-	addi x22 , x0 , 0
+addi a2 , x0 , 0
 	loop_k :
-    	lw x13 , 0( x23)
-    	lw x14 , 0( x24)
-    	mul x16 , x13 , x14
-    	lw x15 , 0( x25)
-    	add x15 , x16 , x15
-    	sw x15 , 0( x25)
-    	addi x23 , x23 , 4
-    	addi x24 , x24 , 4
-    	addi x22 , x22 , 1
-    	blt x22 , x10 , loop_k
-	addi x25 , x25 , 4
-	addi x23 , x23 , -8
-	addi x24 , x24 , -12
-	addi x21 , x21 , 1
-	blt x21 , x11 , loop_n
-
+    	lw t3 , 0( a3)
+    	lw t4 , 0( a4)
+    	mul t6 , t3 , t4
+    	lw t5 , 0( a5)
+    	add t5 , t6 , t5
+    	sw t5 , 0( a5)
+    	addi a3 , a3 , 4
+    	addi a4 , a4 , 4
+    	addi a2 , a2 , 1
+    	blt a2 , t1 , loop_k
+addi a5 , a5 , 4
+addi a3 , a3 , -8
+addi a4 , a4 , -12
+addi a1 , a1 , 1
+blt a1 , t0 , loop_n
 
 fin:
 j fin
