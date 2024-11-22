@@ -13,4 +13,4 @@ The course includes five labs:
 
 In this course, we do not have boards available for all students (ranging from 50 to 80 per year). Therefore, all exercises are conducted through simulations using tools such as Whisper, RVfpga-ViDBo, RVfpga-Pipeline, and Ripes, within a provided Virtual Machine. If you would like to use any of the boards supported by RVfpga (Nexys A7, Basys 3, and Boolean), you can find all the details at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/). Additionally, this repository includes a more advanced course, [Integrated Systems Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture), where students work with a Nexys A7 board.
 
-*NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
+*NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
