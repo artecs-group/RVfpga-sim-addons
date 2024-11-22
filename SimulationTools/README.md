@@ -1,6 +1,6 @@
 # New Simulation Tools for RVfpga
 
-*NOTE: These simulators are outdated. More up-to-date versions of the tools are provided in both the RVfpga v3.0 package and the course materials.*
+***NOTE: These simulators are outdated. More up-to-date versions of the tools are provided in both the RVfpga v3.0 package and the course materials.***
 
 + RVfpga-ViDBo: It performs a Verilator-based simulation of the RVfpga System and connects it with a Nexys A7 simulated board based on ViDBo, that allows you to communicate with some simulated peripherals on the board (at this moment the following peripherals are supported: 16 switches, 16 LEDs, UART, 5 pushbuttons, 8 7-Segment Displays). This new simulation tool is especially useful for RVfpga labs 6-10.
 
