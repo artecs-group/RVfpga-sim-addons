@@ -9,11 +9,11 @@ In this repository, we show how we adapted and used the [RVfpga: Understanding C
 
 *NOTE: In case you want to obtain more information about these courses (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
 
-If you're interested in learning more about the details of the RVfpga course, you can view a recent paper that we've recently released: 
+If you're interested in learning more about the details of the RVfpga course, you can view a paper that we've recently released: 
 
 * [The RISC-V FPGA (RVfpga) Teaching Package](https://www.authorea.com/doi/full/10.36227/techrxiv.172978275.56140460) 
 
-If you're interested in learning more about the other RVfpga-based teaching experiences, you can view a recent paper that we've recently released: 
+If you're interested in learning more about the other RVfpga-based teaching experiences, you can view another paper that we've recently released: 
 
 * [Teaching Experiences using the RVfpga Package](https://arxiv.org/submit/6018328/view)
 
