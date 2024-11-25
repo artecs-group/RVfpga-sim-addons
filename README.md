@@ -14,4 +14,4 @@ If you're interested in learning more about the details of the RVfpga course, ch
 
 For insights into other teaching experiences based on RVfpga, you can explore another recently released paper: 
 
-* [Teaching Experiences using the RVfpga Package](https://drive.google.com/file/d/13WPDCIH5m-P79SyRJ8sU38yDD8nh2kZ_/view?usp=drivesdk)
+* [Teaching Experiences using the RVfpga Package](https://github.com/artecs-group/RVfpga-sim-addons)
