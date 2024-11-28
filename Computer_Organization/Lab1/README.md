@@ -36,7 +36,7 @@ And then on button:
   <img src="Images/RunDebug2.png" width=10% height=10%>
 </p>
 
-5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc. More detailed instructions about the use of the SDK are provided in the RVfpga Getting Started Guide.
+5. The program will start running on the simulator. You can run until the end of the program, execute step-by-step, analyze registers and memory, etc. More detailed instructions about the use of the SDK are provided in the [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) Getting Started Guide.
 
 <p align="center">
   <img src="Images/Simulation.png" width=80% height=80%>
