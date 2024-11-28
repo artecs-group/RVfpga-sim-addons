@@ -35,7 +35,7 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
 ## Simulators and Example Projects
-Inside the Virtual Machine, download the following file and unzip it in the VM home: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
+Once the Virtual Machine (VM) is installed in your system, you will do all work inside it. So, inside the VM, download the following file and unzip it in the VM home: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
 
 To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
