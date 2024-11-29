@@ -148,4 +148,20 @@ Then, test the program both in the RVfpga-ViDBo simulator. We next copy the code
 ```
 
 
+## Exercise 3
+*→ View this [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 18:00 to see an example running on RVfpga-ViDBo.*
 
+Follow the instructions explained in the slides and the video in order to test the extended core with the simple example that does a floating point addition. 
+
+Note that you do not need to modify the core sources nor recompile the simulator binary, as we provide the binary through the following link: (Vrvfpgasim)[https://drive.google.com/file/d/1PtQBGKW1Z3E_h3deqgwIjjDKWUeLiDrq/view?usp=sharing]. Once downloaded, move it to your home directory inside the Virtual Machine and give it execution rights: ```chmod 777 Vrvfpgasim```. In case you want to analyze the core sources and create the binary/bitstream yourself, you can download the extended core sources here: (src_FPU)[https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing].
+
+In addition, download the project that uses the new instructions from this link: (Project_RVfpgaViDBo_FPU_Example.zip)[https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link], and move it to your home directory inside the Virtual Machine.
+
+**TASK:**
+Do the same tests for a multiplication and a division instead of an addition. Analyze the results obtained for the operations and for the HW counter events.
+
+These are the 32-bit formats for these two FP instructions:
+
+<p align="center">
+  <img src="Images/MultDiv.png" width=40% height=40%>
+</p>
