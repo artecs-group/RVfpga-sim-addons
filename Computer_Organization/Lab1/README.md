@@ -66,7 +66,11 @@ And then on button:
 
 5. You can change the optimization level used by the compiler in file ```platformio.ini```. For example, follow the next steps to compile with a ```-O1``` optimization level:
 
-  a. Open file platformio.ini and change the default ```-O0``` to a ```-O1``` optimization level as follows:
+  a. Open file platformio.ini and use the following options: ```-O0 -g3``` for no optimization and ```-O1 -g3``` for optiomizations:
+
+  <p align="center">
+    <img src="Images/O0level.png" width=50% height=50%>
+  </p>
 
   <p align="center">
     <img src="Images/O1level.png" width=50% height=50%>
