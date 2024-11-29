@@ -11,7 +11,7 @@ You can follow the next steps:
 
 
 ## Exercise 1
-*→ View this [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 0:10 for the description of VeeR EH1 Performance Counters and at time 2:14 to see an example running on RVfpga-ViDBo.*
+*→ View the above [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 0:10 for the description of VeeR EH1 Performance Counters and at time 2:14 to see an example running on RVfpga-ViDBo.*
 
 Download from the following link the program used for this example: [HwCounters_Example.zip](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing)
 
@@ -149,7 +149,7 @@ Then, test the program both in the RVfpga-ViDBo simulator. We next copy the code
 
 
 ## Exercise 3
-*→ View this [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 18:00 to see an example running on RVfpga-ViDBo.*
+*→ View the above [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 18:00 to see an example running on RVfpga-ViDBo.*
 
 Follow the instructions explained in the slides and the video in order to test the extended core with the simple example that does a floating point addition. 
 
@@ -176,7 +176,7 @@ In this exercise you will test a program with floating point operations on the b
 
 
 ## Exercise 5
-*→ View this [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 25:58 to see an example of CoreMark running on the board.*
+*→ View the above [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 25:58 to see an example of CoreMark running on the board.*
 
 Analyze the provided PlatformIO project for the CoreMark benchmark. You can download the sources here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). 
 
