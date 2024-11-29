@@ -69,11 +69,11 @@ And then on button:
   a. Open file ```platformio.ini``` and use the following two options to test two optimization levels (O0 and O1):
 
   <p align="center">
-    <img src="Images/O0level.png" width=5% height=5%>
+    <img src="Images/O0level.png" width=80% height=80%>
   </p>
 
   <p align="center">
-    <img src="Images/O1level.png" width=5% height=5%>
+    <img src="Images/O1level.png" width=80% height=80%>
   </p>
 
   b. *Clean* and *build* the project using the following buttons which you can find at the bottom of VSCode:
