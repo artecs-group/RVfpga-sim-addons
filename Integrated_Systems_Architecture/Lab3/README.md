@@ -165,3 +165,35 @@ These are the 32-bit formats for these two FP instructions:
 <p align="center">
   <img src="Images/MultDiv.png" width=40% height=40%>
 </p>
+
+
+## Exercise 4
+In this exercise you will test a program with floating point operations on the board, using the extended SoC. Follow the next steps:
+
+   1. Download the following program, which computes the dot product of two vectors: [DotProduct](https://drive.google.com/file/d/1FxCZzNDfhHamieTfrMSGTSZLJr-9cMYl/view?usp=sharing). Unzip the file and move the obtained folder to the home directory.
+   2. Open the project in VSCode and analyze the program in detail.
+   3. Execute the program on the ViDBo simulator that you downloaded in the previous exercise and explain the results obtained.
+
+
+## Exercise 5
+*→ View this [video](https://www.youtube.com/watch?v=GqaDEW3W4X0) at time 25:58 to see an example of CoreMark running on the board.*
+
+Analyze the provided PlatformIO project for the CoreMark benchmark. You can download the sources here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). 
+
+Then, analyze the execution of the benchmark in RVfpga-ViDBo for the following two configurations: 
+
+- Using a ```-g``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
+
+  ```
+   build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
+   build_flags = -Wa,-march=rv32im -march=rv32im -g
+   extra_scripts = extra_script.py
+  ```
+
+- Using a ```-O2``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
+
+  ```
+   build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
+   build_flags = -Wa,-march=rv32im -march=rv32im -O2
+   extra_scripts = extra_script.py
+  ```
