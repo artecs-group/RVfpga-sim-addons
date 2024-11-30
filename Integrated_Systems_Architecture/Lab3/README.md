@@ -5,7 +5,7 @@ You can follow the next steps:
 
 1. At time 16:36 of the following video, you can visualize an example of the RVfpga-ViDBo simulator running a program: [RVfpgaViDBoVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaViDBoEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), or you can enable the subtitles in the original video).
 
-2. Then, you can perform the guided example for RVfpga-ViDBo, provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this repository.
+2. Then, you can perform the guided example for RVfpga-ViDBo, provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this repository. Please note that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
 
 3. View this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), or you can enable the subtitles in the video in Spanish). You can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing). The video illustrates the following items:
     * How to measure performance in the RVfpga System (description of the VeeR EH1 Performance Counters is at time 0:10 and an example running on RVfpga-ViDBo is at time 2:14).
