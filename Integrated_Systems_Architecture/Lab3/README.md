@@ -205,6 +205,11 @@ Then, analyze the execution of the benchmark in RVfpga-ViDBo for the following t
    extra_scripts = extra_script.py
   ```
 
+If needed, set the path for the simulator in the ```platformio.ini``` file as follows:
+
+```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
+
+
 
 ## Exercise 6
 In this exercise you will upgrade the gcc simulator in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
