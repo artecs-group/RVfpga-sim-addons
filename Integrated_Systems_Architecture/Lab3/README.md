@@ -191,19 +191,19 @@ Then, analyze the execution of the benchmark in RVfpga-ViDBo for the following t
 
 - Using a ```-g``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
 
-  ```
-   build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
-   build_flags = -Wa,-march=rv32im -march=rv32im -g
-   extra_scripts = extra_script.py
-  ```
+```
+build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
+build_flags = -Wa,-march=rv32im -march=rv32im -g
+extra_scripts = extra_script.py
+```
 
 - Using a ```-O2``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
 
-  ```
-   build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
-   build_flags = -Wa,-march=rv32im -march=rv32im -O2
-   extra_scripts = extra_script.py
-  ```
+```
+build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
+build_flags = -Wa,-march=rv32im -march=rv32im -O2
+extra_scripts = extra_script.py
+```
 
 If needed, set the path for the simulator in the ```platformio.ini``` file as follows:
 
