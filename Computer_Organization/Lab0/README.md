@@ -1,15 +1,16 @@
-# Lab 0 - Installation and Introduction
+# Lab 0 - Introduction and Installation
 This lab aims to prepare our computer to work in the labs of the course and to introduce the RVfpga System and the Tools that we will use in the labs.
 
 The [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) (RVfpga) course in computer architecture is a freely available course that provides hands-on understanding of a commercial RISC-V processor, a RISC-V system-on-chip (SoC), and the RISC-V ecosystem. These materials bridge the gap between the availability of the open RISC-V ISA and actually being able to use and experiment with a commercial RISC-V processor/SoC and the RISC-V toolchain. In addition to providing the VeeR EH1/EL2-based SoC source code in Verilog/SystemVerilog, RVfpga shows how to install and use the RISC-V toolchain to compile, debug, and run C and RISC-V assembly programs on the SoC, use and modify the I/O System, and understand and modify the SoC microarchitecture and memory hiearchy. A second package, the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) course, is a short follow-on course to RVfpga that shows how to build a RISC-V SoC from scratch using building blocks and then run the Zephyr real-time operating system (RTOS) on it. The RVfpga courses can be completed in simulation only or, optionally, also in hardware on an FPGA. All software and simulation tools are freely available. Provided simulation tools include a waveform viewer, a virtual FPGA board, and a pipeline viewer. The courses also show how to optionally target the RISC-V SoC to a range of FPGA boards, from lower-cost boards, such as the Basys 3 or Boolean board, to more expensive FPGA boards, such as the Nexys A7 FPGA board.
 
 To understand RVfpga and start using it, you can follow the next steps:
+
 1. View this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), or you can enable the subtitles in the video in Spanish). The video introduces the RVfpga materials. You can download the slides [here](https://drive.google.com/file/d/1o8df8PdNoDIV17_L0JPiURypwtAzfpfl/view?usp=sharing).
-2. Test the different RVfpga Tools in the Virtual Machine:
-    + View this video: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), or you can enable the subtitles in the video in Spanish). The video describes and exemplifies the different RVfpga Tools, from simulators to FPGA boards, that you can use in RVfpga.
-    + Install the Virtual Machine as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#virtual-machine).
-    + Download the RVfpga sources as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#simulators-and-example-projects).
-    + Perform the tasks described in this [document](https://drive.google.com/file/d/1-VHw5yIs0i6m0S9YQewlzYOIrVKPKxpI/view?usp=sharing), which consist of performing examples using the different RVfpga Tools.
+
+2. Install the Virtual Machine as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#virtual-machine).
+
+3. Download the RVfpga sources as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#simulators-and-example-projects).
+
 
 ## Virtual Machine
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). 
@@ -33,6 +34,7 @@ The VM can be installed in the usual virtualization software, such as VirtualBox
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, or the memory amount used by the VM.
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
+
 
 ## Simulators and Example Projects
 Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
