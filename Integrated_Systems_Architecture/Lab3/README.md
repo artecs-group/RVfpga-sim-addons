@@ -26,7 +26,7 @@ Do the following steps:
 
 ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
 
-   * Analyze the results. Are they what you’d expect from the analyzed code?
+   * Analyze the results displayed in the UART console. Please note that the output may take some time to appear. Are they what you’d expect from the analyzed code?
 
 **TASK:**
 Measure other events in the Hardware Counters for the provided program. For this purpose, you must change in file ```Test.c``` the configuration of the events to be measured with function ```pspPerformanceCounterSet```. Note that the different events (shown in the table in the video) can be configured using the macros defined in WD’s PSP file:
