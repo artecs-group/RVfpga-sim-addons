@@ -65,7 +65,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
      </p>
 
 ## Exercise 1
-→ View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
+→ View the above video at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
 
 Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly.
 
@@ -83,7 +83,7 @@ You can use the project from Exercise 1 as a base and simply write your code in 
 
 
 ## Exercise 3
-→ View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
+→ View the above video at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
 
 Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
 
@@ -113,7 +113,7 @@ In this exercise, we will work with interrupts. Two codes are provided with the 
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang```
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```
 
-View the [video](https://www.youtube.com/watch?v=8fK-CoEbo0Y) at time 33:32 for a description of the RVfpga Interrupt-driven IO and at time 35:05 for a description of the implementation of the LED-Switch_7SegDispl_Interrupts_C-Lang program and its execution.
+View the above video at time 33:32 for a description of the RVfpga Interrupt-driven IO and at time 35:05 for a description of the implementation of the LED-Switch_7SegDispl_Interrupts_C-Lang program and its execution.
 
 Then, analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. We next provide some guidance about these two examples:
 
