@@ -12,8 +12,6 @@ Section "Simulation in Whisper" of the Getting Started Guide describes the use o
 
 Moreover, at time 21:55 of this video [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), or you can enable the subtitles in the original video).
 
-at time 21:55 of this [video](https://www.youtube.com/watch?v=Z8QcQRW7F4s) you can see an example simulation of RVfpga-Whisper.
-
 We next show the steps to simulate Exercise 1 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
 
 1. Open VSCode.
