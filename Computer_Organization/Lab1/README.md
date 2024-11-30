@@ -8,7 +8,11 @@ You can follow the next steps:
 4. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4.
 
 ## Using RVfpga-Whisper in the virtual machine
-Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. Moreover, at time 21:55 of this [video](https://www.youtube.com/watch?v=Z8QcQRW7F4s) you can see an example simulation of RVfpga-Whisper.
+Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. 
+
+Moreover, at time 21:55 of this video [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), or you can enable the subtitles in the original video).
+
+at time 21:55 of this [video](https://www.youtube.com/watch?v=Z8QcQRW7F4s) you can see an example simulation of RVfpga-Whisper.
 
 We next show the steps to simulate Exercise 1 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
 
