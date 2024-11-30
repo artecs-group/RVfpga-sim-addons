@@ -8,7 +8,7 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
 
 + You can use as a baseline this [file](https://drive.google.com/file/d/19QDLbpinb2exxjfZP2S4pQ8HS-l7iQGT/view?usp=drive_link), which is already partially completed. In that file, look for comment ```/* COMPLETE THE CODE WITH THE NEW FUNCTIONALITY */``` and implement the new controller at that point of the code.
 
-+ Instead of an ```Enables_Reg``` and a ```Digits_Reg```, the new controller needs eight 7-bit registers: ```Segments_Digit0 – Segments_Digit6```. Each of these 8 registers is associated with each of the eight 7-segment displays. These new registers are already included in the file provided in the previous item.
++ Instead of an ```Enables_Reg``` and a ```Digits_Reg```, the new controller needs eight 7-bit registers: ```Segments_Digit0 – Segments_Digit7```. Each of these 8 registers is associated with each of the eight 7-segment displays. These new registers are already included in the file provided in the previous item.
 
 + In each of these registers, each bit indicates if the corresponding segment is ON (0) or OFF (1). Specifically, for register ```Segments_Digit0``` (the same applies to the other seven registers), connections are as follows:
 
@@ -19,9 +19,9 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
 + So, for example:
   * If all the bits of the first register (```Segments_Digit0```) are 0, all segments in the rightmost digit will be ```ON```.
   * If all the bits of the first register (```Segments_Digit0```) are 1, all segments of the rightmost digit will be ```OFF```.
-  * If all bits of the first register (```Segments_Digit0```) are 0 except ```Segments_Digit0[6]``` and ```Segments_Digit0[3]```, an ```H``` will be shown on the rightmost digit. 
+  * If all bits of the eighth register (```Segments_Digit7```) are 0 except ```Segments_Digit7[6]``` and ```Segments_Digit7[3]```, an ```H``` will be shown on the leftmost digit. 
 
-+ Given that each of the eight registers only has 7 bits, we can map them to the same 2 addresses that we used before (```0x80001038``` and ```0x8000103C```); specifically:
++ Given that each of the eight registers only has 7 bits, we can map them to the same address range that we used before (```0x80001038``` and ```0x8000103C```); specifically:
   * ```Segments_Digit0 → Address 0x80001038```
   * ```Segments_Digit1 → Address 0x80001039```
   * ```Segments_Digit2 → Address 0x8000103A```
@@ -37,21 +37,34 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
   * The 8-bit ```AN``` output from the controller connects with ```AN0 … AN7```.
   * The 7-bit ```Digits_Bits``` output from the controller connects with ```CA … CG``` (```DP``` is left unconnected on the board).
 
-Once you’ve made and checked all the changes in the ```SevSegDisplays_Controller``` module, you will test the modified version in the RVfpga-ViDBo simulator. The reason why we do not use the board, is that in that case you’d need to generate a new bitstream in Vivado, and that would take around 20 minutes (you can do this later at home). Instead, recompilation of the RVfpga-ViDBo only takes a few minutes. Follow the next steps:
+Once you’ve made and checked all the changes in the ```SevSegDisplays_Controller``` module, you will test the modified version in the RVfpga-ViDBo simulator. Follow the next steps:
+
++ Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
 
 + Open a terminal and go into directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo```.
 
-+ Type the following commands to compile the simulator:
++ Type the following commands to compile the simulator (note that the recompilation will use the modified swervolf_syscon.sv file):
 
 ```
     make clean
     make -j
 ```
 
-+ In order to use the new simulator, you must update the path set for board_debug.verilator.binary in file platformio.ini as follows:
++ When compilation ends, the simulator binary should have been created at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/Vrvfpgasim```
+
+
+
+## Exercise 2
+Use the extended SoC for printing the following message on the 8-digit 7-segment displays of the RVfpga-ViDBo simulator: 
+
+<p align="center">
+  <img src="Images/Hello.png" width=60% height=60%>
+</p>
+
+Note that, in order to use the new simulator, you must update the path set for ```board_debug.verilator.binary``` in file ```platformio.ini``` to: 
 ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/Vrvfpgasim```
 
-The virtual board simulates the same behavior of this device, thus it receives the same inputs from the SoC: signals ```AN[7:0]``` and ```CA-CG```. However, there are some things that you must take into account when using RVfpga-ViDBo:
+The virtual board simulates the same behavior for the 7-segment displays available on the board, thus it receives the same inputs from the SoC: signals ```AN[7:0]``` and ```CA-CG```. However, there are some things that you must take into account when using RVfpga-ViDBo:
 
 + The physical board supports any combination of LEDs in the 7-segment displays. However, the virtual board only supports the hexadecimal digits plus the following characters:
 
@@ -62,15 +75,6 @@ The virtual board simulates the same behavior of this device, thus it receives t
 + Any other 7-segment display combination generated by the controller will show an off digit.
 
 + A space can be shown by simply setting the 7 segments of a digit off.
-
-
-
-## Exercise 2
-Use the new controller for printing the following message on the 8-digit 7-segment displays of the RVfpga-ViDBo simulator: 
-
-<p align="center">
-  <img src="Images/Hello.png" width=60% height=60%>
-</p>
 
 
 
