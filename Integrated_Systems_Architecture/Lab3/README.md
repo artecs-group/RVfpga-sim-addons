@@ -22,7 +22,10 @@ Download from the following link the program used for this example: [HwCounters_
 
 Do the following steps:
    * Open the downloaded project in VSCode.
-   * Run the program in RVfpga-ViDBo.
+   * Run the program in RVfpga-ViDBo. If needed, set the path for the simulator in the ```platformio.ini``` file as follows:
+
+```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
+
    * Analyze the results. Are they what you’d expect from the analyzed code?
 
 **TASK:**
