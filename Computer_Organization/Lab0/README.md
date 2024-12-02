@@ -13,7 +13,7 @@ To understand RVfpga and start using it, you can follow the next steps:
 
 
 ## Virtual Machine
-*You can visualize the following video at time 0:0 to see the steps described in this section: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).*
+*You can visualize the following video from time 0:0 to time 1:45 to see the steps described in this section: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).*
 
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). 
 This VM can run on any native OS (Windows, Linux, macOS). 
@@ -39,7 +39,7 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 
 
 ## Simulators and Example Projects
-*You can visualize the following video at time 1:44 to see the steps described in this section: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).*
+*You can visualize the following video from time 1:45 to time 3:10 to see the steps described in this section: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=-LpPqGG2L8ovLKRd&t=104) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).*
 
 Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
 
