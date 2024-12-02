@@ -238,6 +238,6 @@ Then, do the following tasks:
 
 To go back to the previous compiler, follow the next steps:
 
-1. Go into the Extensions tab in VSCode and uninstall the PlatformIO IDE.
+1. Go into the Extensions tab in VSCode and uninstall the PlatformIO IDE. Close VSCode.
 2. Open a terminal, go into the home directory, and delete directory ```.platformio``` using the following command: ```rm -rf .platformio```
-3. Close VSCode, open it again, reinstall the PlatformIO IDE extension and test a program from a previous task.
+3. Open VSCode, reinstall the PlatformIO IDE extension and test a program from a previous task.
