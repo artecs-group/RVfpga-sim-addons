@@ -10,8 +10,6 @@ You can follow the next steps:
 ## Using RVfpga-Whisper in the virtual machine
 Section "Simulation in Whisper" of the Getting Started Guide describes the use of the Whisper simulator in RVfpga using different basic examples from the RVfpga package. 
 
-Moreover, at time 21:55 of the following video, you can visualize an example of the RVfpga-Whisper simulator running a program: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), or you can enable the subtitles in the original video).
-
 Moreover, you can visualize the following video from time 21:55 to the end to see an example of the RVfpga-Whisper simulator running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=pw63ywHnE7EfQ5e6&t=1315) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=whpN4rKCKX_Q08Z_&t=1315), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=2PF5bUfPfaN0RdjJ&t=1315), or you can enable the subtitles in the original video).
 
 We next show the steps to simulate Exercise 1 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
