@@ -3,12 +3,14 @@ In this lab we continue the analysis of the VeeR EH1 core, analyzing the executi
 
 Follow the next steps:
 
-1. At time 11:12 of the following video, you can visualize an example of the RVfpga-Trace simulator running a program: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).
+1. From time 11:12 to time 16:35 of the following video, you can visualize an example of the RVfpga-Trace simulator running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=-LpY-J7f-ng9AYAa&t=192), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=gst8rw2755R_JtMA&t=192), or you can enable the subtitles in the original video).
 
-2. View this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), or you can enable the subtitles in the video in Spanish). You can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing). The video illustrates the following items:
+2. Perform Exercise 1, that analyzes the execution of an ```add``` instruction on the VeeR EH1 pipeline with the help of an RVfpga-Trace simulation.
+
+3. View this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), or you can enable the subtitles in the video in Spanish). You can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing). The video illustrates the following items:
     * How to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them (a description of how to add new instructions to VeeR EH1 is at time 6:29 and an example running on RVfpga-ViDBo is at time 14:49).
 
-3. Perform the following exercises.
+4. Perform exercises 2 to 4.
 
 
 ## Exercise 1
