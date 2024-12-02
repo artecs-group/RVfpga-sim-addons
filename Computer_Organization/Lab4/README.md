@@ -9,7 +9,9 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 
 
 ## Introduction - Simulation of the RVfpga SoC
-In this lab, we will use the RVfpga-ViDBo simulator. This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
+In this lab, we will use the RVfpga-ViDBo simulator. At time 16:36 of the following video, you can visualize an example of the RVfpga-ViDBo simulator running a program: [RVfpgaViDBoVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaViDBoEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).
+
+This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
 
 <p align="center">
   <img src="Images/Nexys.png" width=60% height=60%>
