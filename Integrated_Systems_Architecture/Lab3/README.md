@@ -3,15 +3,13 @@ In this lab we continue the analysis of the VeeR EH1 core, using the performance
 
 Follow the next steps:
 
-1. At time 16:36 of the following video, you can visualize an example of the RVfpga-ViDBo simulator running a program: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://www.youtube.com/watch?v=HuAF2XOMQmQ), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://www.youtube.com/watch?v=A_c8GACrW9w), or you can enable the subtitles in the original video).
+1. Start by visualizing the following parts of this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), or you can enable the subtitles in the video in Spanish). You can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing). The video illustrates the following items:
+    * From time 0:10 to time 6:26 you can see a description of the VeeR Performance Counters and an example using RVfpga-ViDBo.
+    * From time 24:18 to the end you can see how to run the CoreMark benchmark on the SoC using the FPGA board.
 
-2. Then, you can perform the guided example for RVfpga-ViDBo, provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this repository. Please note that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
+2. Then, you can perform the guided example for RVfpga-ViDBo, provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this same repository. Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
 
-3. View this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), or you can enable the subtitles in the video in Spanish). You can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing). The video illustrates the following items:
-    * How to measure performance in the RVfpga System (description of the VeeR EH1 Performance Counters is at time 0:10 and an example running on RVfpga-ViDBo is at time 2:14).
-    * How to run the CoreMark benchmark in the RVfpga System (at time 24:18).
-
-4. Perform the following exercises.
+3. Perform the following exercises.
 
 
 ## Exercise 1
