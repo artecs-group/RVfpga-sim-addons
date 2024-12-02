@@ -37,13 +37,13 @@ If you open the project in PlatformIO, build it, and open the disassembly file (
 The following figure shows the Verilator simulation of the program above for the execution of the ```add``` instruction in the fourth iteration of the loop, which happens at time 15ns. The figure includes some signals associated with the Decode, EX1 and Writeback (WB) stages. The values highlighted in red correspond to the ```add``` instruction as it traverses these three stages through the I0 Pipe. Note that the signals shown in the figure correspond to the I0 Pipe. 
 
 <p align="center">
-  <img src="Images/Add.png" width=40% height=40%>
+  <img src="Images/Add.png" width=80% height=80%>
 </p>
 
 The following figure shows a simplified diagram of the VeeR EH1 pipeline executing the ```add``` instruction during the fourth iteration of the loop through the I0 Pipe. Note that the figure merges the state of the processor in different cycles: 
 
 <p align="center">
-  <img src="Images/VeeRpipeline.png" width=40% height=40%>
+  <img src="Images/VeeRpipeline.png" width=80% height=80%>
 </p>
 
 We follow the ```add``` instruction through the pipeline by analysing the previous waveform and diagram at the same time, and as described below. 
