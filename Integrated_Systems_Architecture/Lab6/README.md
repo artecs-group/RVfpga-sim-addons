@@ -52,5 +52,31 @@ The Data Memory includes a single level divided into two memories, each mapped t
 </p>
 
 
-
 ## Exercise 1
+Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). The follow the next steps:
+-	Open file ```src/Test.c```, which includes the main function of our program:
+      -	The ```main``` function first configures the HW Counters for measuring four events: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions). For this purpose, function ```pspPerformanceCounterSet()``` is used.
+      -	It then configures the different features of the SweRV EH1 processor, using two assembly instructions (```li``` and ```csrrs```). In this case, all features are left to their default values.
+      -	The program then executes a loop that is only exited when any of the switches on the board is inverted. The purpose of this loop is to allow the user to open the serial monitor before the benchmark executes and outputs its results.
+      -	The program then invokes function ```main_cmark()```, which implements the CoreMark benchmark itself, which is implemented in file ```src/cmark.c```.
+      -	It finally prints the four events using function ```printfNexys()```.
+-	Briefly analyse the functions from the CoreMark benchmark implemented in file ```src/cmark.c```. Note that the HW Counters are started and stopped inside the ```main_cmark()``` function, and that the benchmark itself is executed inbetween.
+-	Run the program on the board. Then open the serial monitor. After opening the serial monitor, you will first see a repeating message that asks you to invert a switch in the board for executing the CoreMark benchmark. Once you invert a switch, the benchmark executes and outputs the results. CoreMark runs multiple iterations of a loop (you can easily modify the number of iterations by means of a parameter called ```ITERATIONS``` and defined in file ```src/cmark.c```). The number of iterations it completes per second is called the CoreMark score (CM). The number of iterations per MHz is CM/MHz. The benchmark provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz). At the end, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions). Using the first two events, compute the CPI of the benchmark under this configuration.
+
+
+## Exercise 2
+Now we enable the DCCM in the RVfpga System so that most data accesses use the DCCM (instead of the external DDR memory). As we will see, this change increases performance, as expected. Follow the next steps to run CoreMark on a version of the RVfpga system that uses the DCCM:
+- The default linker script that we have used so far in most labs is available at ```.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/link.lds```. However, in order to use the DCCM to store some data of the program, we make use of a specific linker script that is provided as part of the PlatformIO project that you are using and which is available at: ```CoreMark/ld/link_DCCM.ld. Open this file and inspect it. Specifically, you can see that the file defines one memory section for the DCCM (called ```dccm```), which corresponds to the address space defined previously for this memory: ```dccm (wxa!ri) : ORIGIN = 0xf0040000, LENGTH = 64K```.
+- Open file ```platformio.ini``` and uncomment line 18 so that the program uses the new linker script. This way, most data will be accessed in the fast DCCM instead of the slow DDR memory.
+- Run the program on the board and open the serial monitor. Then invert a switch on the board. Explain the results and compare them with the ones obtained in the previous exercise.
+
+
+## Exercise 3
+Finally, we add another way to improve performance: compiler optimizations. As in the previous section, we use the DCCM to store most of the data sections of the application – but now we also enable compiler optimizations. Up until this point, we have executed programs in debug mode with no compiler optimizations. To enable compiler optimizations, follow the next steps:
+- Using a different procedure than previously used, run the program on the board: Upload the usual bitstream but then use option ```Upload and Monitor``` available in the Project Tasks of PlatformIO.
+- This option will compile the program, execute it on the board and open the serial monitor. This option compiles using the optimization flags determined by the ```build_flags``` option in ```platformio.ini```. Test both -g, -O1, -O2 and -O3.
+- Once the program starts executing, as usual, invert a switch on the board. Then, explain the results and compare them with the previous exercises.
+
+
+## Exercise 4
+Repeat the previous tests but use other configurations of the VeeR EH1 core: enable/disable superscalar execution, pipelined execution, Secondary ALU, etc.
