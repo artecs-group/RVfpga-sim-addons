@@ -29,7 +29,7 @@ We next show the steps to run the program from the previous section on the Nexys
 5. Now that RVfpga-Nexys is downloaded on the Nexys A7 board, you will download the ```LedsSwitches``` program into the memory of RVfpga-Nexys and run/debug the program. Run and Debug the program on the left bar, clicking on the two following buttons.
 
 <p align="center">
-  <img src="Images/RunDebug.png" width=80% height=80%>
+  <img src="Images/RunDebug.png" width=60% height=60%>
 </p>
 
 6. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor. PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button  to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
