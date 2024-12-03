@@ -39,14 +39,16 @@ We next show the steps to run the program from the previous section on the Nexys
 
 
 ## The memory hierarchy on the RVfpga SoC
-The next figures illustrate the RVfpga System Address Space for the Instruction Memory and for the Data Memory. The Instruction Memory includes two levels: a low-latency first level Instruction Cache and a high-latency second level Main Memory. The Data Memory includes a single level divided into two memories, each mapped to different address ranges: a low-latency DCCM and a high-latency Main Memory. The ICCM is disabled by default, but we could enable and use it by recompiling the simulator or regenerating the bitstream.
+The next figures illustrate the RVfpga System Address Space for the Instruction Memory and for the Data Memory. The Instruction Memory includes two levels: a low-latency first level Instruction Cache and a high-latency second level Main Memory. The ICCM is disabled by default, but we could enable and use it by recompiling the simulator or regenerating the bitstream.
 
 <p align="center">
   <img src="Images/InstructionMemory.png" width=60% height=60%>
 </p>
 
+The Data Memory includes a single level divided into two memories, each mapped to different address ranges: a low-latency DCCM and a high-latency Main Memory.
+
 <p align="center">
-  <img src="Images/DataMemory.png" width=60% height=60%>
+  <img src="Images/DataMemory.png" width=50% height=50%>
 </p>
 
 
