@@ -5,7 +5,7 @@ The [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-download
 
 To understand RVfpga and start using it, you can follow the next steps:
 
-1. View this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), or you can enable the subtitles in the video in Spanish). The video introduces the RVfpga materials. You can download the slides [here](https://drive.google.com/file/d/1o8df8PdNoDIV17_L0JPiURypwtAzfpfl/view?usp=sharing).
+1. View this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), you can watch an AI-translated-to-Chinese version of the video here [IntroductionRVfpgaChineseVideo](https://www.youtube.com/watch?v=F-1Q-59s84s) or you can enable the subtitles in the video in Spanish). The video introduces the RVfpga materials. You can download the slides [here](https://drive.google.com/file/d/1o8df8PdNoDIV17_L0JPiURypwtAzfpfl/view?usp=sharing).
 
 2. Install the Virtual Machine as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#virtual-machine).
 
