@@ -7,9 +7,9 @@ Follow the next steps:
    
 2. We recommend the students to do some reading about ScrathPad memories, such as Sections 1 and 3 of paper [On-chip vs. off-chip memory: the data partitioning problem in embedded processor-based systems](https://dl.acm.org/doi/10.1145/348019.348570). We also recommend some reading about the [CoreMark](https://www.eembc.org/coremark/) and [Dhrystone](https://www.eembc.org/techlit/datasheets/dhrystone_wp.pdf) benchmarks. 
 
-3. Then, if you have an FPGA board, you can test an example, following the steps shown below in this repo ([RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#rvfpga-nexys).
+3. Then, if you have an FPGA board, you can test an example, following the steps shown below in this repo [RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#rvfpga-nexys).
 
-4. Finally, you can resolve the exercises provided [below]().
+4. Finally, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#exercise-1).
 
 
 ## RVfpga-Nexys
