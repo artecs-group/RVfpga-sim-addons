@@ -19,7 +19,7 @@ We next show the steps to run the program from the previous section on the Nexys
 
 1. Connect the board to a USB port in your computer and switch it on. Then, connect the board to your Virtual Machine. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the complete RVfpga course.
 
-2. Open VSCode and click on ```File - Open Folder``` and open the folder containing the project for the example we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
+2. Open VSCode, click on ```File - Open Folder``` and open the folder containing the project for the example that we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
 
 3. Open the ```platformio.ini``` file and update the path to the RVfpga-Nexys bitstream as follows:
   ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
