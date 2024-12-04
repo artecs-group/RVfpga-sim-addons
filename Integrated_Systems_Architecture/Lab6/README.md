@@ -90,10 +90,8 @@ Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.g
          </p>
 
       -	CoreMark runs multiple iterations of a loop (you can easily modify the number of iterations by means of a parameter called ```ITERATIONS``` and defined in file ```src/cmark.c```). This is some of the information provided in the output:
-         -	The number of iterations it completes per second is called the CoreMark score (CM).
-         -	The number of iterations per MHz is CM/MHz.
-         -	The benchmark provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz).
-         -	At the end of the statistics, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions).
+         -	The number of iterations it completes per second is called the CoreMark score (CM). The number of iterations per MHz is CM/MHz. The output provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz).
+         -	Besides, at the end of the statistics, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions).
       -	Using these metrics, compute the CPI of the benchmark under this processor configuration.
 
 
