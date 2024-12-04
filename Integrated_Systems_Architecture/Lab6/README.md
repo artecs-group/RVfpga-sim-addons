@@ -79,13 +79,18 @@ Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.g
       -	Run the program on the board following the instructions described above.
       -	Open the serial monitor. For that purpose, right after the program stops at the ```main``` function, click on the button highlighted next in red, which you can find at the bottom of VSCode.
 
-<p align="center">
-  <img src="Images/SerialMonitor.png" width=60% height=60%>
-</p>
+         <p align="center">
+           <img src="Images/SerialMonitor.png" width=60% height=60%>
+         </p>
 
-      -	After opening the serial monitor, you will first see a repeating message that asks you to invert a switch in the board for executing the CoreMark benchmark.
-      -	Once you invert a switch, the benchmark executes and outputs the results. CoreMark runs multiple iterations of a loop (you can easily modify the number of iterations by means of a parameter called ```ITERATIONS``` and defined in file ```src/cmark.c```). The number of iterations it completes per second is called the CoreMark score (CM). The number of iterations per MHz is CM/MHz. The benchmark provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz). At the end, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions).
-      -	Compute the CPI of the benchmark under this processor configuration.
+      -	After opening the serial monitor, continue execution. You will first see a repeating message that asks you to invert a switch in the board for executing the CoreMark benchmark. Invert a switch on the board.
+      -	Once you invert a switch, the benchmark executes and outputs the results:
+         -	CoreMark runs multiple iterations of a loop (you can easily modify the number of iterations by means of a parameter called ```ITERATIONS``` and defined in file ```src/cmark.c```).
+         -	The number of iterations it completes per second is called the CoreMark score (CM).
+         -	The number of iterations per MHz is CM/MHz.
+         -	The benchmark provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz).
+         -	At the end of the statistics, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions).
+      -	Using these metrics, compute the CPI of the benchmark under this processor configuration.
 
 
 ## Exercise 2
