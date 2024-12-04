@@ -97,8 +97,22 @@ Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.g
 
 ## Exercise 2
 Enable the DCCM in the RVfpga SoC so that most data is mapped to the DCCM, instead of the external DDR memory. As we will see, this increases performance, as expected. Follow the next steps to run CoreMark on an RVfpga SoC that uses the DCCM:
-- The default linker script that we have used so far in most labs is available at ```.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/link.lds```. However, in order to use the DCCM to store some data of the program, we make use of a specific linker script that is provided as part of the PlatformIO project that you are using and which is available at: ```CoreMark/ld/link_DCCM.ld```. Open this file and inspect it. Specifically, you can see that the file defines one memory section for the DCCM (called ```dccm```), which corresponds to the address space defined previously for this memory: ```dccm (wxa!ri) : ORIGIN = 0xf0040000, LENGTH = 64K```. If you go down the file, you can see that several sections are mapped to the dccm, using ```> dccm : dccm_load```.
+- The default linker script that we have used so far in most labs is available at ```.platformio/packages/framework-wd-riscv-sdk/board/nexys_a7_eh1/link.lds```. However, in order to use the DCCM to store some data of the program, we make use of a specific linker script that is provided as part of the PlatformIO project that you are using and which is available at: ```CoreMark/ld/link_DCCM.ld```. Open this file and inspect it. Specifically, you can see that the file defines one memory section for the DCCM (called ```dccm```), which corresponds to the address space defined previously for this memory: ```dccm (wxa!ri) : ORIGIN = 0xf0040000, LENGTH = 64K```. If you go down the file, you can see that several sections are mapped to the dccm, using ```> dccm : dccm_load```. We next show some screenshots of this file.
+
+         <p align="center">
+           <img src="Images/LinkScript1.png" width=60% height=60%>
+         </p>
+
+         <p align="center">
+           <img src="Images/LinkScript2.png" width=60% height=60%>
+         </p>
+
 - Open file ```platformio.ini``` and uncomment line 18 so that the program uses the new linker script. This way, most data will be accessed in the fast DCCM instead of the slow DDR memory.
+
+         <p align="center">
+           <img src="Images/Uncomment.png" width=60% height=60%>
+         </p>
+
 - Run the program on the board and open the serial monitor. Then invert a switch on the board. Explain the results and compare them with those obtained in the previous exercise.
 
 
