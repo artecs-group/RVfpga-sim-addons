@@ -122,12 +122,12 @@ In this exercise, we'll examine another way to improve performance: compiler opt
    - Click on ```Upload Bitstream```, to program the FPGA with the RVfpga SoC as usual.
    - Then click on ```Upload and Monitor```, which is also available in the ```Project Tasks``` of PlatformIO. See the following figure.
       <p align="center">
-        <img src="Images/UploadAndMonitor.png" width=90% height=90%
+        <img src="Images/UploadAndMonitor.png" width=30% height=30%
       </p>
 - The program will compile, executed on the board and the serial monitor will open. This option compiles using the optimization flags determined by the ```build_flags``` option in ```platformio.ini```. Test different options (-g, -O1, -O2 and -O3). For example, you can see how to compile with -O2 in the following figure.
 
 <p align="center">
-  <img src="Images/Uncomment.png" width=90% height=90%>
+  <img src="Images/O2.png" width=60% height=60%>
 </p>
 
 - Once the program starts executing, as usual, invert a switch on the board. Then, explain the results and compare them with the previous exercises.
