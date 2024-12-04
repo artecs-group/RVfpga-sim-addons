@@ -37,7 +37,7 @@ We next show the steps to run the program from the previous section on the Nexys
    - Then expand ```PROJECT TASKS > env:swervolf_nexys > Platform``` and click on ```Upload Bitstream```.
 
 <p align="center">
-  <img src="Images/UploadBitstream.png" width=40% height=40%>
+  <img src="Images/UploadBitstream.png" width=60% height=60%>
 </p>
 
    - After one or two seconds, the FPGA will be programmed with the RVfpga-Nexys SoC. By default, the processor starts fetching instructions at address 0x80000000, where the Boot ROM is placed in our SoC. The Boot ROM is initialized with a program that blinks the LEDs and the 7-Segment Displays four times and then turns off all the LEDs, writes 0s to the 8 7-Segment Displays and stays in an empty loop.
@@ -77,7 +77,13 @@ Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.g
 -	Briefly analyse the functions from the CoreMark benchmark implemented in file ```src/cmark.c```. Note that the HW Counters are started and stopped inside the ```main_cmark()``` function, and that the benchmark itself is executed inbetween.
 -	Measure performance of the CoreMark benchmark:
       -	Run the program on the board following the instructions described above.
-      -	Open the serial monitor. After opening the serial monitor, you will first see a repeating message that asks you to invert a switch in the board for executing the CoreMark benchmark.
+      -	Open the serial monitor. For that purpose, right after the program stops at the ```main``` function, click on the button highlighted next in red, which you can find at the bottom of VSCode.
+
+<p align="center">
+  <img src="Images/SerialMonitor.png" width=60% height=60%>
+</p>
+
+      -	After opening the serial monitor, you will first see a repeating message that asks you to invert a switch in the board for executing the CoreMark benchmark.
       -	Once you invert a switch, the benchmark executes and outputs the results. CoreMark runs multiple iterations of a loop (you can easily modify the number of iterations by means of a parameter called ```ITERATIONS``` and defined in file ```src/cmark.c```). The number of iterations it completes per second is called the CoreMark score (CM). The number of iterations per MHz is CM/MHz. The benchmark provides the CM/MHz – also called Iterat/Sec/MHz (iterations/second/MHz). At the end, you can view the values provided by the hardware counters: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions).
       -	Compute the CPI of the benchmark under this processor configuration.
 
