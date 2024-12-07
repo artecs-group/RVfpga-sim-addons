@@ -102,7 +102,7 @@ In this exercise you will test a program with floating point operations, using t
 
 
 ## Exercise 4
-In this exercise you will upgrade the gcc simulator in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
+In this exercise you will upgrade the gcc compiler in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
 
 - Download this simple project, that computes a FP addition and move it to the home directory: [Project_RVfpgaViDBo_FPU_Example_NewCompiler.zip](https://drive.google.com/file/d/1CGB2MIz0s7XzF475xfu6WPXIkpyvQ8lF/view?usp=sharing)
 
