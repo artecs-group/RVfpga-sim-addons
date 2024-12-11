@@ -75,7 +75,11 @@ Analyze in-depth the program provided in the ```LedsSwitches``` project (located
 
 Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
-Finally, run the code in the RVfpga-ViDBo simulator following the same steps explained in the introduction and include a screenshot showing its operation.
+Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly.
+
+Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+
+Finally, run the codes in the RVfpga-ViDBo simulator following the same steps explained in the introduction and include screenshots showing their operation.
 
 
 ## Exercise 2
