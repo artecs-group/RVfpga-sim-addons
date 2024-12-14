@@ -4,7 +4,7 @@ From December 9 to December 20, 2024, we taught a module based on RVfpga in the 
 
 Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y EL2, E/S y evaluacion*), we delivered 12 online hours featuring video lectures and tasks for students to complete using simulators. Additionally, we conducted six in-person hours focused on hands-on exercises with the Nexys A7 board. Below is the schedule, where you can access the course materials.
 
-### ONLINE INTRODUCTION (THEORY + PRACTICE) (3 hours)
+### ONLINE INTRODUCTION (THEORY + PRACTICE) (2 hours)
 - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), you can watch an AI-translated-to-Chinese version of the video here [IntroductionRVfpgaChineseVideo](https://www.youtube.com/watch?v=F-1Q-59s84s)). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
 - Install the environment and test tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link).
   - Install Virtual Machine (VM)
@@ -15,7 +15,7 @@ Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y
   - Test `RVfpga-Nexys` (only if you have the board)
   - Test `RVfpga-Whisper`
 
-### ONLINE THEORY (9 hours)
+### ONLINE THEORY (10 hours)
 - **Input/Output in RVfpga**
   - Watch this video: [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc) or you can watch an AI-translated-to-Chinese version of the video here: [InputOutputChineseVideo](https://www.youtube.com/watch?v=gG0HSeJ9ew8)). The video describes the RVfpga I/O System in detail. You can obtain the slides used in the video here: [IOSlides](https://drive.google.com/file/d/1-Kav6TLV5xBURQYfZfRP3yzWUq_Qp7eV/view?usp=drive_link))
   - Complete: [Tasks_InputOutput](https://drive.google.com/file/d/1FX5Fr63ecMRLswCPk606GWZr7z65b1Fp/view?usp=drive_link)
