@@ -1,13 +1,20 @@
 # RVfpga: Recent Additions and Updates
 
-## Teaching experiences at UCM (academic year 2024-25)
-In this repository, we show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of two courses instructed at UCM.
+## Teaching experiences -- Academic year 2024-25
+In this repository, we provide materials from various RVfpga-based teaching experiences conducted during the 2024-25 academic year.
+
+We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of two courses instructed at the University Complutense of Madrid (UCM).
 
 + Computer Organization: This is a second-year course in the Computer Science degree program at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. 
 
 + Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree program at UCM. In folder [Integrated_Systems_Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) of this repository you can find part of the materials (mainly the labs) used in the course.
 
-## Papers and Presentations (December-2024)
+We also participated in the [Master de Formación Permanente en Sistemas Microelectrónicos Basados en Arquitecturas Abiertas](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas) at the University of Castilla-La Mancha (UCLM). Specifically, within the course [Diseño de Microcontroladores en Hardware Abierto](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas), we taught an entire two-week-long module based on RVfpga. You can find the details here: [RISC-Vfpga: cores VeeR EH1 y EL2, E/S y evaluacion]().
+
+Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
+
+
+## Papers and Presentations -- December-2024
 If you're interested in learning more about the details of the RVfpga course, check out our recently released paper: 
 
 * [The RISC-V FPGA (RVfpga) Teaching Package](https://www.authorea.com/doi/full/10.36227/techrxiv.172978275.56140460) 
