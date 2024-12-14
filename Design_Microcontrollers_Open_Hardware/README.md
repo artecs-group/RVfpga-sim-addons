@@ -4,3 +4,29 @@ From December 9 to December 20, 2024, we taught a module based on RVfpga in the 
 
 Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y EL2, E/S y evaluacion*), we delivered 12 online hours featuring video lectures and tasks for students to complete using simulators. Additionally, we conducted six in-person hours focused on hands-on exercises with the Nexys A7 board. Below is the schedule, where you can access the course materials.
 
+## ONLINE INTRODUCTION (THEORY + PRACTICE) (3 hours)
+- Watch the introductory video: Introduction (slides: [Intro](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link)).
+- Install the environment and test tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link).
+  - Install Virtual Machine (VM)
+  - Download RVfpga Sources in the VM
+  - Test `RVfpga-Pipeline` and complete the task
+  - Test `RVfpga-Trace` and complete the task
+  - Test `RVfpga-ViDBo`
+  - Test `RVfpga-Nexys` (only if you have the board)
+  - Test `RVfpga-Whisper`
+
+## ONLINE THEORY (9 hours)
+- **Input/Output in RVfpga**
+  - Watch video: IO (slides: [IO](https://drive.google.com/file/d/1-Kav6TLV5xBURQYfZfRP3yzWUq_Qp7eV/view?usp=drive_link))
+  - Complete: [Tasks_InputOutput](https://drive.google.com/file/d/1FX5Fr63ecMRLswCPk606GWZr7z65b1Fp/view?usp=drive_link)
+- **VeeR EH1 and EL2 Cores**
+  - Watch video: VeerEH1 (slides: [EH1](https://drive.google.com/file/d/1kIMQY3u5jZB7cAktFPqIHSpHAuruENAM/view?usp=drive_link))
+  - Analyze hazards explained in the video (code: [Tasks_VeeR](https://drive.google.com/file/d/16OagcWaDP7zbUy_SP-rzmAF3PSu5-2OD/view?usp=drive_link))
+- **Performance Evaluation in RVfpga**
+  - Watch video: Performance (slides: [Performance](https://drive.google.com/file/d/1xCmc4vFd_khLk6En14Ae_ZDF-OiP1QNm/view?usp=drive_link))
+  - Complete: [Tasks_Performance](https://drive.google.com/file/d/1221ZkEwMsJuQGO-T1emmaSZvgeHH_mls/view?usp=drive_link)
+
+## IN-PERSON PRACTICE (6 hours)
+- **Input/Output in RVfpga**: [Practice_IO](https://drive.google.com/file/d/17nXdxS4ShI1Z-I5VhSzSehGR-g449GJZ/view?usp=drive_link)
+- **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1](https://drive.google.com/file/d/1pe7l4ddl4cMUhzx5Cn4oQ1fqV5IL0yM4/view?usp=drive_link)
+- **Performance Evaluation in RVfpga**: [Practice_Performance](https://drive.google.com/file/d/11ftnn8QoSrMI0wn0X8Ez_ko8bibeW82-/view?usp=drive_link)
