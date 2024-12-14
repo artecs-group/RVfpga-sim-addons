@@ -9,9 +9,9 @@ We first show how we adapted and used the [RVfpga: Understanding Computer Archit
 
 + Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree program at UCM. In folder [Integrated_Systems_Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) of this repository you can find part of the materials (mainly the labs) used in the course.
 
-We also participated in the [Master de Formación Permanente en Sistemas Microelectrónicos Basados en Arquitecturas Abiertas](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas) at the University of Castilla-La Mancha (UCLM). Specifically, within the course Diseño de Microcontroladores en Hardware Abierto, we taught an entire two-week-long module based on RVfpga. You can find the details here: [RISC-Vfpga: cores VeeR EH1 y EL2, E/S y evaluacion]().
+We also participated in the [Master de Formación Permanente en Sistemas Microelectrónicos Basados en Arquitecturas Abiertas](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas) at the University of Castilla-La Mancha (UCLM). Specifically, within the course Diseño de Microcontroladores en Hardware Abierto, we taught an entire two-week-long module based on RVfpga. You can find the details here: [Design of Microcontrollers in OpenHardware](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Design_Microcontrollers_Open_Hardware).
 
-Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
+Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details in the following folder: [Design_Microcontrollers_Open_Hardware](https://riscv.fdi.ucm.es/).
 
 
 ## Papers and Presentations -- December-2024
