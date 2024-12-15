@@ -667,7 +667,7 @@ e. Reorder the code of the loop_k loop to improve performance as much as possibl
 ## Exercise 8
 Similarly to what we did in the video for the bypass 10-1 multiplexer, where we found it in the SoC Verilog code, try to find the following elements (in our case, the Verilog files for the VeeR EH1 core are in folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex```):
 
-+ 3-1 multiplexer
++ 3-1 multiplexer:
 
 <p align="center">
   <img src="Images/3-1mux.png" width=20% height=20%> 
@@ -682,11 +682,11 @@ Similarly to what we did in the video for the bypass 10-1 multiplexer, where we 
 + Register File:
 
 <p align="center">
-  <img src="Images/LS-Mul.png" width=60% height=60%> 
+  <img src="Images/RF.png" width=20% height=20%> 
 </p>
 
 + Multiplier and forwarding path from the load:
 
 <p align="center">
-  <img src="Images/RF.png" width=20% height=20%> 
+  <img src="Images/LS-Mul.png" width=60% height=60%> 
 </p>
