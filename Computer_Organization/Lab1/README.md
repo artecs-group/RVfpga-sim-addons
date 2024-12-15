@@ -370,9 +370,9 @@ res: .word 0
 .text
 main:
   li a1 , n
-  la s1 , res
+  la s3 , res
   call factorial
-  sw a0 ,0( s1 )
+  sw a0 ,0( s3 )
   fin:
   j fin
 
