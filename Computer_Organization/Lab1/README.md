@@ -369,7 +369,6 @@ res: .word 0
 
 .text
 main:
-  li sp , 0x12000000
   li a1 , n
   la s1 , res
   call factorial
