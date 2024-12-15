@@ -291,7 +291,6 @@ Run the code on the simulator and answer the following questions. Add screenshot
 - Take a screenshot of the memory viewer at the end of each iteration, showing how the vector evolves.
 - In this code, a simple modification can be made to improve its performance. Write modified code, explain why it improves efficiency, and show a screenshot in which the final vector is visible in memory.
 - Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
-- Imagine the programmer makes a mistake and instead of the store in the code, they use the following instruction: ```sw s3, 1(t2)```. How would this situation be handled in a real system? What happens in the simulator? Justify your answer with screenshots from the simulator.
 
 
 ## Exercise 2
