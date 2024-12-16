@@ -116,7 +116,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 
 ## Exercise 0
-Please reproduce and analyze all the examples provided in the presentation provided above ([Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)), both in Ripes and RVfpga-Pipeline. Verify that the diagrams and CPIs indicated in the presentation match what you get in the simulations. You need to simulate the following examples:
+Reproduce and analyze all the examples provided in the presentation provided above ([Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing)), both in Ripes and RVfpga-Pipeline. Verify that the diagrams and CPIs indicated in the presentation match what you get in the simulations. You need to simulate the following examples:
 
 - Ripes:
 
@@ -137,7 +137,7 @@ Please reproduce and analyze all the examples provided in the presentation provi
 
     To simulate the programs in RVfpga-Pipeline, follow these steps:
 
-    1. Open the project called ```ProyectoP2``` in VSCode.
+    1. Open the project ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` in VSCode.
     2. Copy the codes from the presentation into the file ```src/Programa.S```
     3. Set the path for the simulator in the ```platformio.ini``` file. In this lab, we will use the RVfpga-Pipeline simulator. To select it, change the first line shown next for the second one:
 
@@ -358,7 +358,7 @@ REPEAT:
    beq  zero, zero, REPEAT  # Repeat the loop
 ```
 
-Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator. Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained.
+Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator (you can use the same project as in Exercise 0). Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained.
 
 a. Identify the hazards that occur and explain how this processor handles them.
 
@@ -380,7 +380,7 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 
 
 **SOLUTION:**
-In general, we do not include solutions for the exercises in this repository; however, in this exercise, we exceptionally show next partial solutions for items b, d and e as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+We next exceptionally show partial solutions for items b, d and e as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
 *a. Identify the hazards that occur and explain how this processor handles them.*
 
@@ -521,7 +521,7 @@ j fin
 
 a. Draw the execution diagram of the program on the H&H 5-stage pipelined processor, from the beginning of the second iteration of the loop until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Indicate on the diagram the structural, data, and control dependencies that arise and explain for each one how the processor handles it.
 
-b. How many cycles does it take to execute one iteration?
+b. Simulate the program in Ripes. How many cycles does it take to execute one iteration?
 
 c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code.
 
@@ -529,7 +529,7 @@ d. Indicate the values of all data and control signals in the cycle where the ``
 
 e. Draw the execution diagram of the program on the VeeR EH1 processor, from the beginning of the second iteration of the loop until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Indicate on the diagram the structural, data, and control dependencies that arise and explain for each one how the processor handles it.
 
-f. How many cycles does it take to execute one iteration?
+f. Simulate the program in RVfpga-Pipeline (you can use the same project as in Exercise 0). How many cycles does it take to execute one iteration?
 
 g. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code.
 
@@ -649,9 +649,15 @@ fin:
 j fin
 ```
 
-Solve the following sections, both theoretically and practically on the RVfpga-Pipeline simulator:
+Analyze the code in RISC-V assembly. Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, in the Data ScratchPad, so this needs quite a few instructions. You can ignore those instructions and focus on the nested loop.
 
-a. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, for the program execution on the VeeR EH1 processor, with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled.
+Solve the following sections, both theoretically and practically on the RVfpga-Pipeline simulator (you can use the same project as in Exercise 0):
+
+a. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, for the program execution on the VeeR EH1 processor, with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled. In order to get to iteration n=0, k=1, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=¿?. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
+
+<p align="center">
+  <img src="Images/Ex7.png" width=60% height=60%>
+</p>
 
 b. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with superscalar execution enabled. Explain the result.
 
