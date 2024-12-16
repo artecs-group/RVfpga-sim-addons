@@ -11,6 +11,8 @@ Follow the next steps:
 
 3. Perform the following exercises.
 
+4. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 11 to 18.
+
 
 ## Exercise 1
 *→ View the above PerformanceBenchmarkingVideo from time 0:10 to time 6:29 for the description of VeeR EH1 Performance Counters and an example running on RVfpga-ViDBo.*
