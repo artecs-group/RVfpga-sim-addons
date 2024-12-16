@@ -30,3 +30,8 @@ Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y
 - **Input/Output in RVfpga**: [Practice_IO](https://drive.google.com/file/d/17nXdxS4ShI1Z-I5VhSzSehGR-g449GJZ/view?usp=drive_link)
 - **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1](https://drive.google.com/file/d/1pe7l4ddl4cMUhzx5Cn4oQ1fqV5IL0yM4/view?usp=drive_link)
 - **Performance Evaluation in RVfpga**: [Practice_Performance](https://drive.google.com/file/d/11ftnn8QoSrMI0wn0X8Ez_ko8bibeW82-/view?usp=drive_link)
+- In the following links, you can view the videos of the in-person session:
+    - [Introduction](https://youtu.be/jclmekOv2oc)
+    - [Input/Output](https://youtu.be/Cka9Hl5JXOY)
+    - [Performance](https://youtu.be/jWfORj1ELS8)
+    - [VeeR_EH1](https://youtu.be/C3sWmIMy5I0)
