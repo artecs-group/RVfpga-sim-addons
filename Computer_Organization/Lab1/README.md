@@ -15,7 +15,8 @@ Moreover, you can visualize the following video from time 21:55 to the end to se
 We next show the steps to simulate Exercise 1 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) in this same section) in Whisper.
 
 1. Open VSCode.
-2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```
+2. In the "File" menu of VSCode, open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1```. To open the project, simply navigate to the directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```Lab1_Ex1``` directory, and click “Open,” as shown in the following screenshot.
+
 
 <p align="center">
   <img src="Images/OpenEx1.png" width=80% height=80%>
