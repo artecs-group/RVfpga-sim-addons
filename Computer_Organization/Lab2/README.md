@@ -6,7 +6,7 @@ You can follow the next steps:
 2. Then, view this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
 3. Then you can start using Ripes and RVfpga-Pipeline to simulate and analyze the processors: follow the steps shown below in this repo ([Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes) and [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#rvfpga-pipeline)) and look at the presentation provided at: [Presentation-Lab2](https://drive.google.com/file/d/1LVfQ7ZxzACyaZoCJrFv6PCeGkGhF5cuW/view?usp=sharing).
 4. Then, you can do the examples shown in the video from item 2 in your own computer, by following the instructions in this [document](https://drive.google.com/file/d/1ltE_sOyaw090Sk49o8gLpa4MJNTl3yZz/view?usp=sharing).
-5. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-0), first theoretically and then on the simulators. The initial exercises focus on the 5-stage H&H core and the final exercises focus on the more advanced 9-stage dual-issue VeeR EH1 core.
+5. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-0), first theoretically and then on the simulators. The initial exercises focus on the 5-stage H&H core and the final exercises focus on the more advanced 9-stage dual-issue VeeR EH1 core. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 6. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 11 to 18.
 
 ## Ripes
@@ -175,17 +175,7 @@ c. Analyse the program on the Ripes simulator for the 5-stages processor and ans
 
 
 **SOLUTION:**
-We next exceptionally show partial solutions for items a-c as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
-
-*a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.*
-
-This is the timing diagram:
-
-<p align="center">
-  <img src="Images/TimingDiagramRipes.png" width=40% height=40%>
-</p>
-
-You should explain the hazards that take place and how they are handled by the processor.
+We next exceptionally show partial solutions for items b and c as an example. Complete the solutions not provided.
 
 *b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
 
@@ -194,6 +184,14 @@ You should explain the hazards that take place and how they are handled by the p
 </p>
 
 *c. Analyse the program on the Ripes simulator.*
+
+This is the timing diagram obtained with Ripes:
+
+<p align="center">
+  <img src="Images/TimingDiagramRipes.png" width=40% height=40%>
+</p>
+
+You should explain the hazards that take place and how they are handled by the processor.
 
 This is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
 
@@ -382,7 +380,7 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 
 
 **SOLUTION:**
-We next exceptionally show partial solutions for items b, d and e as an example. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+We next exceptionally show partial solutions for items b, d and e as an example.
 
 *a. Identify the hazards that occur and explain how this processor handles them.*
 
