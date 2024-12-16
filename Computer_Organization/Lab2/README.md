@@ -656,7 +656,7 @@ Solve the following sections, both theoretically and practically on the RVfpga-P
 a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
-  <img src="Images/Ex7.png" width=60% height=60%>
+  <img src="Images/Ex7.png" width=80% height=80%>
 </p>
 
 * Draw the execution diagram.
