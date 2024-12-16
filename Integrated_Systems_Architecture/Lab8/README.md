@@ -1,5 +1,10 @@
 # Lab 8 - The RVfpga I/O System - Low Level
-This practice aims to let the students continue with the analysis of the RVfpga Input/Output System. Complete the following exercises to modify and test the 8-digit 7-Segment displays controller.
+This practice aims to let the students continue with the analysis of the RVfpga Input/Output System. 
+
+1. Complete the following exercises to modify and test the 8-digit 7-Segment displays controller.
+
+2. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
+
 
 ## Exercise 1
 The current 8-digit 7-segment displays controller (implemented in module ```SevSegDisplays_Controller```), can only show the 16 hexadecimal digits. Modify the 8-digit 7-segment displays controller so that it can show any combination of ON/OFF LEDs. 
