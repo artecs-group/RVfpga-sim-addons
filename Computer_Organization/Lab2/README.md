@@ -653,20 +653,23 @@ Analyze the code in RISC-V assembly. Note that in the assembly program we are in
 
 Solve the following sections, both theoretically and practically on the RVfpga-Pipeline simulator (you can use the same project as in Exercise 0):
 
-a. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, for the program execution on the VeeR EH1 processor, with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled. In order to get to iteration n=0, k=1, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=¿?. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
+a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
   <img src="Images/Ex7.png" width=60% height=60%>
 </p>
 
-b. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with superscalar execution enabled. Explain the result.
+* Draw the execution diagram.
+* Analyze the data/control/structural hazards for this iteration. For that purpose, simulate cycle-by-cycle and analyze and explain how each hazard is handled by the VeeR EH1 core. 
+* Calculate the CPI for iteration n=0, k=1, of the loop_k loop. For that purpose, you must stop the simulation at the point shown above, and count the number of cycles until the same point (first load instruction at Decode stage) of the next iteration. Then, you must divide that number by the number of instructions executed in the loop.
 
-c. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with the Gshare branch predictor enabled. Explain the result.
+b. Repeat the analysis from *item a* but now enable superscalar execution with respect to the configuration used at *item a*.
 
-d. Draw the execution diagram and calculate the CPI for iteration n=0, k=1, of the loop_k loop, with the Secondary ALU enabled. Explain the result. Does enabling the Secondary ALU improve the stalls between the loads and multiplication?
+c. Repeat the analysis from *item a* but now enable the Gshare branch predictor with respect to the configuration used at *item b*.
 
-e. Reorder the code of the loop_k loop to improve performance as much as possible, and draw the execution diagram and calculate the CPI.
+d. Repeat the analysis from *item a* but now enable the Secondary ALU with respect to the configuration used at *item c*.
 
+e. Finally, with the configuration of *item d*, reorder the code of the loop_k loop to improve performance as much as possible, and repeat the analysis from *item a*.
 
 
 
