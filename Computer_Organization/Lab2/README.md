@@ -185,7 +185,7 @@ We next exceptionally show partial solutions for items b and c as an example. Co
 
 *c. Analyse the program on the Ripes simulator.*
 
- - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+*- Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.*
 
 This is the timing diagram obtained with Ripes:
 
@@ -193,7 +193,7 @@ This is the timing diagram obtained with Ripes:
   <img src="Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
- - Show screenshots of the pipeline to explain how the different data hazards are handled.
+*- Show screenshots of the pipeline to explain how the different data hazards are handled.*
 
 This is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
 
@@ -203,7 +203,7 @@ This is a screenshot of the simulator that highlights the forwarding that occurs
 
 You should explain how the hazard is handled by the pocessor: which multiplexers are used, the stages involved, etc.
 
- - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
+*- Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.*
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
