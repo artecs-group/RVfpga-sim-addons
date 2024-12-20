@@ -15,7 +15,7 @@ Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y
   - Test `RVfpga-Nexys` (only if you have the board)
   - Test `RVfpga-Whisper`
 
-### ONLINE THEORY (10 hours)
+### ONLINE THEORY AND TASKS (10 hours)
 - **Input/Output in RVfpga**
   - Watch this video: [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc) or you can watch an AI-translated-to-Chinese version of the video here: [InputOutputChineseVideo](https://www.youtube.com/watch?v=gG0HSeJ9ew8)). The video describes the RVfpga I/O System in detail. You can obtain the slides used in the video here: [IOSlides](https://drive.google.com/file/d/1-Kav6TLV5xBURQYfZfRP3yzWUq_Qp7eV/view?usp=drive_link))
   - Complete: [Tasks_InputOutput](https://drive.google.com/file/d/1FX5Fr63ecMRLswCPk606GWZr7z65b1Fp/view?usp=drive_link)
@@ -25,6 +25,11 @@ Specifically, in the seventh module of the course (*RISC-Vfpga: cores VeeR EH1 y
 - **Performance Evaluation in RVfpga**
   - Watch this video: [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8) or you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://www.youtube.com/watch?v=d5-0sNLW7wg)). You can obtain the slides used in the video here: [PerformanceSlides](https://drive.google.com/file/d/1xCmc4vFd_khLk6En14Ae_ZDF-OiP1QNm/view?usp=drive_link))
   - Complete: [Tasks_Performance](https://drive.google.com/file/d/1221ZkEwMsJuQGO-T1emmaSZvgeHH_mls/view?usp=drive_link)
+- **Zephyr on VeeRwolf**
+  - These resources provide detailed explanations on how to use Zephyr within the RVfpga/VeeRwolf environment, both in simulation and on the Nexys A7 board (highly recommended to fully leverage its capabilities). Additionally, you will find instructions for running a TensorFlow Lite model on Zephyr using the SoC we have studied in this module. Finally, we include some exercises, most of which can be performed in simulation and on the FPGA board.
+    - [Running Zephyr on VeeRwolf](https://drive.google.com/file/d/1NhHENjrs6Qh67sln-8aBcfsszHKc3daD/view?usp=sharing)
+    - [VeeRWolf Zephyr Module](https://drive.google.com/file/d/1Nh-293681Sug0TC7LCY-1HGcuFA8uI-P/view?usp=drive_link)
+    - [Zephyr Blinky Sample](https://drive.google.com/file/d/1NrapTS3pD1edNsC9jZgFUBlClN6UceAI/view?usp=drive_link)
 
 ### IN-PERSON PRACTICE (6 hours)
 - **Input/Output in RVfpga**: [Practice_IO](https://drive.google.com/file/d/17nXdxS4ShI1Z-I5VhSzSehGR-g449GJZ/view?usp=drive_link)
