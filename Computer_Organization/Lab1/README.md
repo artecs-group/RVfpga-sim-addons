@@ -9,7 +9,11 @@ You can follow the next steps:
 
 
 ## RVfpga-Nexys
-We next show the steps to run the program from the previous section on the Nexys A7 board.
+Section "Running and programming RVfpgaNexys" of the Getting Started Guide describes the use of the RVfpga SoC on the FPGA board using different basic examples.
+
+Moreover, you can visualize the following video from time 19:18 to time 21:55 to see an example of a program running on RVfpga-Nexys: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=0Ck4vOSte0I7M5ts&t=1158) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=whpN4rKCKX_Q08Z_&t=1158), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=2PF5bUfPfaN0RdjJ&t=1158), or you can enable the subtitles in the original video).
+
+We next show the steps to execute an Input/Output program that shows the Swiches state on the LEDs.
 
 1. Connect the board to a USB port in your computer and switch it on. Then, connect the board to your Virtual Machine.
 
