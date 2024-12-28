@@ -14,7 +14,7 @@ As we saw in the first lab, Ripes allows simulating many aspects of computer org
 
 Ripes offers different processor models, and we are interested in using the 5-stage pipelined processor, which is very similar to the one studied in theory. To configure Ripes for this processor, follow these steps:
 
-1. Start the simulator as in Lab 1.
+1. Start the simulator as in [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine).
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
         - Fully pipelined 5-stage processor: "5-stage processor".
         - RISC-V base instruction set plus M extension.
