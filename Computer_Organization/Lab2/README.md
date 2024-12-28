@@ -291,7 +291,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 10. To stop the simulator, we must close the simulation window and then, in VSCode, click on the Terminal window located at the bottom of the application and press Ctrl+c three times.
 
-Then, view this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
+After performing the initial simulation described above, view this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
 
 Then, reproduce and analyze all the examples provided in the following presentation: ([PresentationRVfpgaPipeline](https://drive.google.com/file/d/1fAJMpsBv3IGf3DBGVOAmqnDocVmarly0/view?usp=drive_link)). Verify that the diagrams and CPIs indicated in the presentation match what you get in the simulations. To simulate the programs in RVfpga-Pipeline, you only must copy the codes from the presentation into the file ```src/Programa.S```. Specifically, you must simulate the following examples:
 
@@ -302,7 +302,7 @@ Then, reproduce and analyze all the examples provided in the following presentat
     * Data hazard: consecutive add-add instructions
     * Data hazard - Multi-cycle instructions: mul-add
     * Control hazard
-    * Example program for the RVfpga-Pipeline that tests the different hazards explained in the final slide of the [VeeR-EH1_Microarchitecture](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link) presentation. For that purpose, you can use the instructions provided in this [document](https://drive.google.com/file/d/1ltE_sOyaw090Sk49o8gLpa4MJNTl3yZz/view?usp=sharing).
+    * Example program analyzed in the video shown above and provided in this [document](https://drive.google.com/file/d/1ltE_sOyaw090Sk49o8gLpa4MJNTl3yZz/view?usp=sharing).
 
 
 ## Exercise 5
