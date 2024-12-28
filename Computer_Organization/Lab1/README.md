@@ -462,14 +462,14 @@ factorial:
 
 ```
 
-At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex3``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor.
+At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex3``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor. To execute on RVfpga-Nexys, make sure you uncomment line ```debug_tool = whisper``` in file ```platformio.ini```.
 
-Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
+Run the code and answer the following questions. Add screenshots to complement your answers.
 
 - The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
 - Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
-- What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer through a simulation (include screenshots from the simulator).
-- Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution in the simulator with screenshots. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
+- What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
+- Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
 
 
 ## Exercise 4
