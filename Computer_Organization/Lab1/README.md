@@ -149,6 +149,9 @@ We next show the steps to execute an Input/Output program that shows the Swiches
 7. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor ![image](https://github.com/user-attachments/assets/b666211d-c428-4c5d-8df6-f0b309e4e02b). PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button ![image](https://github.com/user-attachments/assets/716c76d4-6af0-4d86-908b-0bf5726707b9) to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
 
 
+Once you've tested the previous program, proceed to test Exercise 4 (available [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4)) on the FPGA board. Follow the same instructions provided above for the RVfpga-Whisper simulator, but ensure you comment out the line ```debug_tool = whisper``` in the ```platformio.ini``` file.
+
+
 ## Using RIPES in the virtual machine
 [Ripes](https://github.com/mortbopet/Ripes) is a visual computer architecture simulator and assembly code editor created for the RISC-V instruction set architecture. It has the following features:
 
