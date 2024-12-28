@@ -338,7 +338,7 @@ Given the following RISC-V assembly code:
 
 This code should work both on the board (RVfpga-Nexys) and on the Whisper/Ripes simulators. At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor. To execute on RVfpga-Nexys, make sure you uncomment line ```debug_tool = whisper``` in file ```platformio.ini```.
 
-Run the code and answer the following questions. Add screenshots from the simulator to complement your answers.
+Run the code and answer the following questions. Add screenshots of the execution to complement your answers.
 
 - Briefly explain what the code does.
 - Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
