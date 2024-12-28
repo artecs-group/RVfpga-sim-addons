@@ -40,7 +40,7 @@ We next show the steps to run the program from the previous section on the Nexys
 
 
 <p align="center">
-  <img src="Images/RunDebug.png" width=40% height=40%>
+  <img src="Images/RunDebug3.png" width=40% height=40%>
 </p>
 
 
