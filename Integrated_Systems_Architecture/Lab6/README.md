@@ -6,52 +6,12 @@ Follow the next steps:
 1. Visualize the following video from time 19:16 to time 21:55 to see an example of the Nexys A7 FPGA board running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=mP2EX5TRlPe8WD-O&t=1156) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=whpN4rKCKX_Q08Z_&t=1156), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=2PF5bUfPfaN0RdjJ&t=1156), or you can enable the subtitles in the original video).
    
 2. We recommend the students to do some reading about ScrathPad memories, such as Sections 1 and 3 of paper [On-chip vs. off-chip memory: the data partitioning problem in embedded processor-based systems](https://dl.acm.org/doi/10.1145/348019.348570). We also recommend some reading about the [CoreMark](https://www.eembc.org/coremark/) benchmark. 
-
-3. Then, if you have an FPGA board, you can test the example shown below [RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#rvfpga-nexys).
    
-4. Then, read the theory about the RVfpga SoC memory hierarchy, provided [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#the-memory-hierarchy-on-the-rvfpga-soc).
+3. Then, read the theory about the RVfpga SoC memory hierarchy, provided [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#the-memory-hierarchy-on-the-rvfpga-soc).
 
-5. Then, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#exercise-1).
+4. Then, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab6/README.md#exercise-1).
 
-6. Finally, if you want to continue practicing after completing the previous exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 19 and 20.
-
-
-
-## RVfpga-Nexys
-We next show the steps to run the program from the previous section on the Nexys A7 board.
-
-1. Connect the board to a USB port in your computer and switch it on. Then, connect the board to your Virtual Machine.
-
-<p align="center">
-  <img src="Images/ConnectVM.png" width=40% height=40%>
-</p>
-
-2. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the Getting Started Guide of the RVfpga course.
-
-3. Open VSCode, click on ```File - Open Folder``` and open the folder containing the project for the example that we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
-
-4. Open the ```platformio.ini``` file and update the path to the RVfpga-Nexys bitstream as follows:
-  ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
-
-5. You are now ready to download RVfpga-Nexys, the RISC-V SoC that includes a RISC-V processor with support for peripherals, to the Nexys A7 FPGA board.
-
-   - Click on the PlatformIO icon in the left menu ribbon ![image](https://github.com/user-attachments/assets/c179ec4f-103a-43ed-8cfe-716fe9a77f1e)
-.
-   - Then expand ```PROJECT TASKS > env:swervolf_nexys > Platform``` and click on ```Upload Bitstream```.
-
-<p align="center">
-  <img src="Images/UploadBitstream.png" width=60% height=60%>
-</p>
-
-   - After one or two seconds, the FPGA will be programmed with the RVfpga-Nexys SoC. By default, the processor starts fetching instructions at address 0x80000000, where the Boot ROM is placed in our SoC. The Boot ROM is initialized with a program that blinks the LEDs and the 7-Segment Displays four times and then turns off all the LEDs, writes 0s to the 8 7-Segment Displays and stays in an empty loop.
-
-6. Now that RVfpga-Nexys is downloaded on the Nexys A7 board, you will download the ```LedsSwitches``` program into the memory of RVfpga-Nexys and run/debug the program. Run and Debug the program on the left bar,  clicking on button ![image](https://github.com/user-attachments/assets/82c5130b-c30f-4fa9-8416-17a3e5f516b0) and then on button ![image](https://github.com/user-attachments/assets/e74358a0-b986-43ed-9973-7499c5b01b99):
-
-<p align="center">
-  <img src="Images/RunDebug.png" width=40% height=40%>
-</p>
-
-7. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor ![image](https://github.com/user-attachments/assets/b666211d-c428-4c5d-8df6-f0b309e4e02b). PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button ![image](https://github.com/user-attachments/assets/716c76d4-6af0-4d86-908b-0bf5726707b9) to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
+5. Finally, if you want to continue practicing after completing the previous exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 19 and 20.
 
 
 ## The memory hierarchy on the RVfpga SoC
