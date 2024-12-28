@@ -120,7 +120,23 @@ We next show the steps to execute an Input/Output program that shows the Swiches
   <img src="Images/ConnectVM.png" width=40% height=40%>
 </p>
 
-2. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the Getting Started Guide of the RVfpga course.
+2. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the Getting Started Guide of the RVfpga course and summarized next:
+    - LINUX OS:
+      - Connect the Nexys A7 board to your computer and switch it on.
+      - Open a terminal in your native OS.
+      - Download the drivers from this [link](https://drive.google.com/file/d/1TI3bpHDLTJRTDgm-4gU0CdAK6zO5NRy5/view?usp=sharing)
+      - Unzip the downloaded file, go into the new folder and run the installation script:
+        - chmod 777 *
+        - sudo ./install_drivers
+      - Unplug the Nexys A7 board from your computer and restart the computer for the changes to take effect.
+    - WINDOWS OS:
+      - Connect the Nexys A7 board to your computer and switch it on.
+      - Download the Zadig application from this link (https://zadig.akeo.ie/) and execute it.
+      - In Zadig, click on Options > List All Devices.
+      - If you click on the drop-down menu, you will see Digilent USB Device (Interface 0) and Digilent USB Device (Interface 1) listed. You need to install new drivers only for Digilent USB Device (Interface 0).
+      - Then click on Install Driver (or Replace Driver) for Digilent USB Device (Interface 0). You are installing the driver for the Nexys A7 board used by PlatformIO.
+      - After some time, typically several minutes, Zadig will indicate the driver was installed correctly. Click Close.
+      - Finally, close Zadig and restart Windows.
 
 3. Open VSCode, click on ```File - Open Folder``` and open the folder containing the project for the example that we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
 
@@ -146,11 +162,7 @@ We next show the steps to execute an Input/Output program that shows the Swiches
   <img src="Images/RunDebug3.png" width=40% height=40%>
 </p>
 
-
 7. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor ![image](https://github.com/user-attachments/assets/b666211d-c428-4c5d-8df6-f0b309e4e02b). PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button ![image](https://github.com/user-attachments/assets/716c76d4-6af0-4d86-908b-0bf5726707b9) to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
-
-
-Once you've tested the previous program, proceed to test Exercise 4 (available [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4)) on the FPGA board. Follow the same instructions provided above for the [RVfpga-Whisper simulator](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#c-program), but ensure you comment out the line ```debug_tool = whisper``` in the ```platformio.ini``` file.
 
 
 ## Using RIPES in the virtual machine
