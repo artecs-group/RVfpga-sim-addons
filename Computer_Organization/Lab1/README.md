@@ -131,7 +131,7 @@ We next show the steps to execute an Input/Output program that shows the Swiches
       - Unplug the Nexys A7 board from your computer and restart the computer for the changes to take effect.
     - WINDOWS OS:
       - Connect the Nexys A7 board to your computer and switch it on.
-      - Download the Zadig application from this link (https://zadig.akeo.ie/) and execute it.
+      - Download the Zadig application from this [link](https://zadig.akeo.ie/) and execute it.
       - In Zadig, click on Options > List All Devices.
       - If you click on the drop-down menu, you will see Digilent USB Device (Interface 0) and Digilent USB Device (Interface 1) listed. You need to install new drivers only for Digilent USB Device (Interface 0).
       - Then click on Install Driver (or Replace Driver) for Digilent USB Device (Interface 0). You are installing the driver for the Nexys A7 board used by PlatformIO.
