@@ -1,7 +1,7 @@
 # Lab 2 - The VeeR EH1 core
 This practice aims to help students gain a thorough understanding of the commercial VeeR EH1 core, an advanced 2-way superscalar processor with 9 pipeline stages. The processor is explained both theoretically, through a detailed presentation, and practically, using the RVfpga-Pipeline simulator. As a preparatory step, we first focus on the typical academic 5-stage pipelined processor, exploring it theoretically (using the pipelined processor from the Harris and Harris book, H&H) and practically (through the Ripes simulator). 
 
-You can follow the next steps:
+Follow the next steps:
 1. If you are new to Computer Organization, you should start by reading Chapter 7 of the H&H textbook.
 2. Then, you can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook. Follow the steps outlined below in this repository: [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes).
 3. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-1) about the 5-stages processor, first theoretically and then on the Ripes simulator. In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
