@@ -3,9 +3,52 @@ In this lab we review the RISC-V architecture and complete several exercises in 
 
 You can follow the next steps:
 1. If you are new to Computer Organization, you should start by reading Chapter 6 of the Harris and Harris book (RISC-V Edition).
-2. Then, following the detailed instructions provided below, you can test the [RVfpga-Whisper](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-rvfpga-whisper-in-the-virtual-machine) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine) if you do not have an FPGA board, or [RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#rvfpga-nexys) if you have the Nexys A7 FPGA board, to analyze RISC-V assembly and C programs.
+2. Then, following the detailed instructions provided below, you can test the [RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#rvfpga-nexys) if you have the Nexys A7 FPGA board, or [RVfpga-Whisper](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-rvfpga-whisper-in-the-virtual-machine) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine) if you do not have an FPGA board, to analyze RISC-V assembly and C programs.
 3. Then, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the previous tools.
 4. Finally, if you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4.
+
+
+## RVfpga-Nexys
+Section "Running and programming RVfpgaNexys" of the Getting Started Guide describes the use of the RVfpga SoC on the FPGA board using different basic examples.
+
+Moreover, you can visualize the following video from time 19:18 to time 21:55 to see an example of a program running on RVfpga-Nexys: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=0Ck4vOSte0I7M5ts&t=1158) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=whpN4rKCKX_Q08Z_&t=1158), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=2PF5bUfPfaN0RdjJ&t=1158), or you can enable the subtitles in the original video).
+
+We next show the steps to execute an Input/Output program that shows the Swiches state on the LEDs.
+
+1. Connect the board to a USB port in your computer and switch it on. Then, connect the board to your Virtual Machine.
+
+<p align="center">
+  <img src="Images/ConnectVM.png" width=40% height=40%>
+</p>
+
+2. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the Getting Started Guide of the RVfpga course.
+
+3. Open VSCode, click on ```File - Open Folder``` and open the folder containing the project for the example that we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
+
+4. Open the ```platformio.ini``` file and update the path to the RVfpga-Nexys bitstream as follows:
+  ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
+
+5. You are now ready to download RVfpga-Nexys, the RISC-V SoC that includes a RISC-V processor with support for peripherals, to the Nexys A7 FPGA board.
+
+   - Click on the PlatformIO icon in the left menu ribbon ![image](https://github.com/user-attachments/assets/c179ec4f-103a-43ed-8cfe-716fe9a77f1e)
+.
+   - Then expand ```PROJECT TASKS > env:swervolf_nexys > Platform``` and click on ```Upload Bitstream```.
+
+<p align="center">
+  <img src="Images/UploadBitstream.png" width=60% height=60%>
+</p>
+
+   - After one or two seconds, the FPGA will be programmed with the RVfpga-Nexys SoC. By default, the processor starts fetching instructions at address 0x80000000, where the Boot ROM is placed in our SoC. The Boot ROM is initialized with a program that blinks the LEDs and the 7-Segment Displays four times and then turns off all the LEDs, writes 0s to the 8 7-Segment Displays and stays in an empty loop.
+
+6. Now that RVfpga-Nexys is downloaded on the Nexys A7 board, you will download the ```LedsSwitches``` program into the memory of RVfpga-Nexys and run/debug the program. Run and Debug the program on the left bar,  clicking on button ![image](https://github.com/user-attachments/assets/82c5130b-c30f-4fa9-8416-17a3e5f516b0) and then on button ![image](https://github.com/user-attachments/assets/e74358a0-b986-43ed-9973-7499c5b01b99):
+
+
+<p align="center">
+  <img src="Images/RunDebug3.png" width=40% height=40%>
+</p>
+
+
+7. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor ![image](https://github.com/user-attachments/assets/b666211d-c428-4c5d-8df6-f0b309e4e02b). PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button ![image](https://github.com/user-attachments/assets/716c76d4-6af0-4d86-908b-0bf5726707b9) to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
 
 
 ## Using RVfpga-Whisper in the virtual machine
@@ -104,49 +147,6 @@ And then on button:
 
 
 6. Finally close the project in VSCode before you continue.
-
-
-## RVfpga-Nexys
-Section "Running and programming RVfpgaNexys" of the Getting Started Guide describes the use of the RVfpga SoC on the FPGA board using different basic examples.
-
-Moreover, you can visualize the following video from time 19:18 to time 21:55 to see an example of a program running on RVfpga-Nexys: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=0Ck4vOSte0I7M5ts&t=1158) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [RVfpgaToolsEnglishVideo](https://youtu.be/HuAF2XOMQmQ?si=whpN4rKCKX_Q08Z_&t=1158), you can watch an AI-translated-to-Chinese version of the video here [RVfpgaToolsChineseVideo](https://youtu.be/A_c8GACrW9w?si=2PF5bUfPfaN0RdjJ&t=1158), or you can enable the subtitles in the original video).
-
-We next show the steps to execute an Input/Output program that shows the Swiches state on the LEDs.
-
-1. Connect the board to a USB port in your computer and switch it on. Then, connect the board to your Virtual Machine.
-
-<p align="center">
-  <img src="Images/ConnectVM.png" width=40% height=40%>
-</p>
-
-2. If the board is not detected, you may need to install the drivers in your native Windows or Linux OS (macOS should not need any installation), as described in the Getting Started Guide of the RVfpga course.
-
-3. Open VSCode, click on ```File - Open Folder``` and open the folder containing the project for the example that we will use in this section: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
-
-4. Open the ```platformio.ini``` file and update the path to the RVfpga-Nexys bitstream as follows:
-  ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
-
-5. You are now ready to download RVfpga-Nexys, the RISC-V SoC that includes a RISC-V processor with support for peripherals, to the Nexys A7 FPGA board.
-
-   - Click on the PlatformIO icon in the left menu ribbon ![image](https://github.com/user-attachments/assets/c179ec4f-103a-43ed-8cfe-716fe9a77f1e)
-.
-   - Then expand ```PROJECT TASKS > env:swervolf_nexys > Platform``` and click on ```Upload Bitstream```.
-
-<p align="center">
-  <img src="Images/UploadBitstream.png" width=60% height=60%>
-</p>
-
-   - After one or two seconds, the FPGA will be programmed with the RVfpga-Nexys SoC. By default, the processor starts fetching instructions at address 0x80000000, where the Boot ROM is placed in our SoC. The Boot ROM is initialized with a program that blinks the LEDs and the 7-Segment Displays four times and then turns off all the LEDs, writes 0s to the 8 7-Segment Displays and stays in an empty loop.
-
-6. Now that RVfpga-Nexys is downloaded on the Nexys A7 board, you will download the ```LedsSwitches``` program into the memory of RVfpga-Nexys and run/debug the program. Run and Debug the program on the left bar,  clicking on button ![image](https://github.com/user-attachments/assets/82c5130b-c30f-4fa9-8416-17a3e5f516b0) and then on button ![image](https://github.com/user-attachments/assets/e74358a0-b986-43ed-9973-7499c5b01b99):
-
-
-<p align="center">
-  <img src="Images/RunDebug3.png" width=40% height=40%>
-</p>
-
-
-7. The program will first compile and then debugging will start. To control your debugging session, you can use the debugging toolbar which appears near the top of the editor ![image](https://github.com/user-attachments/assets/b666211d-c428-4c5d-8df6-f0b309e4e02b). PlatformIO sets a temporary breakpoint at the beginning of the ```main``` function. Click on the ```Continue``` button ![image](https://github.com/user-attachments/assets/716c76d4-6af0-4d86-908b-0bf5726707b9) to run the program. Now toggle the switches on the Nexys A7 FPGA board and view as the corresponding LEDs light up.
 
 
 ## Using RIPES in the virtual machine
