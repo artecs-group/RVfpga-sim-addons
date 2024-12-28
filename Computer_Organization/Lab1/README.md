@@ -48,6 +48,7 @@ And then on button:
 
 6. Finally close the project in VSCode before you continue.
 
+### C Program
 A C program can also be simulated in Whisper. We next show the steps to simulate Exercise 4 (which you can find [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4) in this same section).
 1. Open VSCode.
 2. Open folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4```
