@@ -126,15 +126,15 @@ We next show the steps to execute an Input/Output program that shows the Swiches
       - Open a terminal in your native OS.
       - Download the drivers from this [link](https://drive.google.com/file/d/1TI3bpHDLTJRTDgm-4gU0CdAK6zO5NRy5/view?usp=sharing)
       - Unzip the downloaded file, go into the new folder and run the installation script:
-        - chmod 777 *
-        - sudo ./install_drivers
+        - ```chmod 777 *```
+        - ```sudo ./install_drivers```
       - Unplug the Nexys A7 board from your computer and restart the computer for the changes to take effect.
     - WINDOWS OS:
       - Connect the Nexys A7 board to your computer and switch it on.
       - Download the Zadig application from this [link](https://zadig.akeo.ie/) and execute it.
-      - In Zadig, click on Options > List All Devices.
-      - If you click on the drop-down menu, you will see Digilent USB Device (Interface 0) and Digilent USB Device (Interface 1) listed. You need to install new drivers only for Digilent USB Device (Interface 0).
-      - Then click on Install Driver (or Replace Driver) for Digilent USB Device (Interface 0). You are installing the driver for the Nexys A7 board used by PlatformIO.
+      - In Zadig, click on ```Options > List All Devices```.
+      - If you click on the drop-down menu, you will see ```Digilent USB Device (Interface 0)``` and ```Digilent USB Device (Interface 1)``` listed. You need to install new drivers only for ```Digilent USB Device (Interface 0)```.
+      - Then click on ```Install Driver``` (or ```Replace Driver```) for ```Digilent USB Device (Interface 0)```. You are installing the driver for the Nexys A7 board used by PlatformIO.
       - After some time, typically several minutes, Zadig will indicate the driver was installed correctly. Click Close.
       - Finally, close Zadig and restart Windows.
 
