@@ -374,7 +374,7 @@ while swapped
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
 - The following code is a possible C implementation of the above pseudocode. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on this simulator. If you want to use it in Ripes, remove the initial ```include``` lines and copy the code to the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```. Test the execution of the program step-by-step, both in C and in RISC-V assembly. In the latter, identify and explain in detail the obtained ```swap``` and ```main``` functions.
-- Finally, compile the code with optimization levels -O0 and -O1, and repeat the previous item. This item should be tested in Whisper or Ripes, not on the board.
+- Finally, compile the code with optimization levels -O0 and -O1, and repeat the previous item. This item can only be tested in Whisper or Ripes, not on the board.
 
 ```
 #if defined(D_NEXYS_A7)
@@ -473,7 +473,7 @@ Run the code and answer the following questions. Add screenshots to complement y
 
 
 ## Exercise 4
-(This exercise should be tested in Whisper or Ripes, not on the board) Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines as well as the ```uartInit``` and the ```printfNexys``` functions, and copy the code to the editor:
+Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines as well as the ```uartInit``` and the ```printfNexys``` functions, and copy the code to the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
 
 ```
 #if defined(D_NEXYS_A7)
@@ -506,14 +506,21 @@ int main(void)
    while(1);
 }
 ```
-Run the code in the simulator and answer the following questions. Add screenshots from the simulator to complement your answers.
 
-- Compile with -O0:
-    - Identify the for loop in the main function.
-    - Identify the if condition.
-    - Is the ra register preserved at any point? Why?
+Run the code and answer the following questions. Add screenshots to complement your answers.
+
+- Default compilation:
+    - Identify the ```for``` loop in the ```main``` function.
+    - Identify the ```if``` condition.
+    - Is the ```ra``` register preserved at any point? Why?
     - Of the other registers, which ones are preserved? Why?
 
-- Compile with -O1:
+- Compile with -O0 (this item can only be tested in Whisper or Ripes, not on the board):
+    - Identify the ```for``` loop in the ```main``` function.
+    - Identify the ```if``` condition.
+    - Is the ```ra``` register preserved at any point? Why?
+    - Of the other registers, which ones are preserved? Why?
+
+- Compile with -O1 (this item can only be tested in Whisper or Ripes, not on the board):
     - The function is very simple. Explain what it does and why it is so simple.
 
