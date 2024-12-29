@@ -370,9 +370,9 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 
 **NOTE**: Remember that we can configure the core in order to enable/disable different features, as explained in the corresponding video and reminded next.
 
-![image](https://github.com/user-attachments/assets/a3fef95e-5b2c-4b7b-a2d7-0021136024b0)
+<img src="https://github.com/user-attachments/assets/a3fef95e-5b2c-4b7b-a2d7-0021136024b0" alt="image" width="800" />
 
-![image](https://github.com/user-attachments/assets/9e5c1f7a-4516-44a1-89a5-96748a7a934c)
+<img src="https://github.com/user-attachments/assets/9e5c1f7a-4516-44a1-89a5-96748a7a934c" alt="image" width="800" />
 
 
 **SOLUTION:**
