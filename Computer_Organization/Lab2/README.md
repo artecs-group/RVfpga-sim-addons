@@ -639,7 +639,9 @@ fin:
 j fin
 ```
 
-Analyze the code in RISC-V assembly. Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, in the Data ScratchPad, so this needs quite a few instructions. You can ignore those instructions and focus on the nested loop.
+Analyze the code in RISC-V assembly.
+- Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, so this needs quite a few instructions.
+- Besides, note that we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters.
 
 Solve the following sections, both theoretically and practically on the RVfpga-Pipeline simulator (you can use the same project as in Exercise 0):
 
