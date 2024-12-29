@@ -25,6 +25,12 @@ Do the following steps:
 
    * Analyze the results displayed in the serial console. Are they what you’d expect from the analyzed code?
 
+**NOTE**
+To view the serial console on the board, right after the program starts to run and stops at the ```main``` function, open the serial monitor, by clicking on the plug button available on the bottom of VS Code:
+
+![image](https://github.com/user-attachments/assets/0afb7bda-409d-434a-aab6-41915c44f37a)
+
+
 **TASK:**
 Measure other events in the Hardware Counters for the provided program. For this purpose, you must change in file ```Test.c``` the configuration of the events to be measured with function ```pspPerformanceCounterSet```. Note that the different events (shown in the table in the video) can be configured using the macros defined in WD’s PSP file:
 
