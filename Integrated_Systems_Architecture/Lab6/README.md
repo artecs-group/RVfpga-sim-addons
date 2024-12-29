@@ -1,4 +1,4 @@
-# Lab 6 - The Memory Hierarchy in VeeR EH1
+# Lab 6 - Benchmark execution and the Memory Hierarchy in VeeR EH1
 In this lab, we analyse the memory hierarchy of the RVfpga SoC, focusing in the scratchpad memories (ICCM and DCCM) available in the VeeR EH1 processor and we provide some benchmarking examples and exercises. Some of these tests and exercises can be done in simulation, but it's preferable to use an FPGA board. Remember that you can get all information concerning the creation of the bitstream in Vivado, the configuration and programming of the board, etc., in the complete [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course. 
 
 Follow the next steps:
