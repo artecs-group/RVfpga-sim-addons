@@ -1,5 +1,5 @@
 # Lab 3 - Performance counters and benchmark execution on the VeeR EH1 core
-In this lab we continue the analysis of the VeeR EH1 core, using the performance counters and executing the CoreMark benchmark. The exercises proposed can be performed both in RVfpga-ViDBo and on the FPGA board. In this repository, we explain how to use the simulator, and you can find all the instructions for running on the board in the complete [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
+In this lab we continue the analysis of the VeeR EH1 core, using the performance counters and executing the CoreMark benchmark. The exercises proposed can be performed both in RVfpga-ViDBo and on the FPGA board.
 
 Follow the next steps:
 
