@@ -59,18 +59,30 @@ We follow the ```add``` instruction through the pipeline by analysing the previo
 
 
 **TASK 1:**
-Analyse and explain the Verilog implementation of the adder/subtractor implemented in module ```exu_alu_ctl```.
+Replicate the previous simulation in your own computer. You can follow the same procedure as the one illustrated in the video from step 1. Here are the summarized steps to run an RVfpga-Trace simulation:
+   * Open VSCode.
+   * Click on ```File - Open Folder``` and open the folder containing the project: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction```.
+   * Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator, if necessary: ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace/OriginalBinaries/RVfpga-Trace_Ubuntu```.
+   * In the ```PROJECT TASKS``` window of PlatformIO, click on ```Generate Trace```. This first compiles the program and then launches the Verilator simulation of the RVfpga SoC running this program.
+   * After a few seconds, the program is compiled and file ```trace.vcd``` is generated inside folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys```. For analyzing the trace in the next step it may be useful to visualize the disassembly program that has been generated at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/firmware.dis```.
+   * Visualize the trace for the AL_Operations program:
+      * Open the trace with GTKWave by executing the following command in a terminal: ```gtkwave /home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/trace.vcd```.
+      * Add the signals to the trace. For that purpose, click on ```File > Read Tcl Script File``` and select the ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/test_1.tcl``` file.
+      * Once the signals are added in GTKWave, Zoom Fit by clicking on the magnifying glass with a checkmark button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then Zoom In by clicking on the magnifying glass with a plus sign button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942) at any point of the simulation (skip the initial instructions in order to analyze the loop containing the three arithmetic-logic instructions; for example, select a point around 20ns), in order to analyze the execution of the three arithmetic-logic instructions of a random iteration of the loop. Note that every cycle two new instructions are fetched, one in each way of the superscalar RISC-V processor, as shown on signals ```ifu_i0_instr[31:0]``` and ```ifu_i1_instr[31:0]```. However, due to the data hazards, the second way remains free for most cycles (we will analyze this later). The effects of the execution of the three arithmetic-logic instructions can be seen on signal ```dout[31:0]```.
 
 **TASK 2:**
-Do the same analysis for the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
+Analyse and explain the Verilog implementation of the adder/subtractor implemented in module ```exu_alu_ctl```.
 
 **TASK 3:**
-Do the same analysis for the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```.
+Do the same analysis for the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
 
 **TASK 4:**
-Do the same analysis for the following set-less-than instructions supported by the VeeR core: ```slt```, ```sltu```.
+Do the same analysis for the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```.
 
 **TASK 5:**
+Do the same analysis for the following set-less-than instructions supported by the VeeR core: ```slt```, ```sltu```.
+
+**TASK 6:**
 Do the same analysis for the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
 
 
