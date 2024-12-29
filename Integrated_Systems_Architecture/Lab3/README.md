@@ -48,115 +48,152 @@ Are the results for I$ misses reasonable?
 
 
 ## Exercise 2
-Measure the CPI using the Performance Counters for the program provided below, that was used in a previous lab, with all VeeR EH1 core features enabled. Compare the result with the one you obtained in the previous lab for the same situation.
-
-Then, test the program both in the RVfpga-ViDBo simulator. We next copy the code that you must use, which is slightly modified with respect to the one used in the previous lab. Use the project downloaded in the previous exercise (HwCounters_Example) and placed in your home directory, and simply substitute the program for the one provided below in file ```Test_Assembly.S```. Note that, in this program and unlike the previous lab, we repeat the same code a high number of times, in order to reduce undesired effects such as I$ misses. You can calculate the average CPI by dividing the total number of cycles by the total number of instructions executed.
+In the VeeR EH1 processor, the following code is to be executed:
 
 ```
-   .globl Test_Assembly
-   
-   .section .midccm
-   Entrada: .space 40
-   Filtro: .space 12
-   Salida: .space 32
-   
-   .text
-   
-   Test_Assembly:
-   li t2, 0x0 # Enable all VeeR EH1 features
-   csrrs t1, 0x7F9, t2
-   
-   la t0, Entrada
-   li t1, 0x1   				 
-   sw t1, (t0)   			 
-   li t1, 0x3   				 
-   sw t1, 4(t0)   			 
-   li t1, 0x5   				 
-   sw t1, 8(t0)   			 
-   li t1, 0x7   				 
-   sw t1, 12(t0)   			 
-   li t1, 0x9   				 
-   sw t1, 16(t0)   			 
-   li t1, 0x1   				 
-   sw t1, 20(t0)   			 
-   li t1, 0x3   				 
-   sw t1, 24(t0)   			 
-   li t1, 0x5   				 
-   sw t1, 28(t0)   			 
-   li t1, 0x7   				 
-   sw t1, 32(t0)   			 
-   li t1, 0x9   				 
-   sw t1, 36(t0)   			 
-   
-   la t0, Filtro
-   li t1, 0x2   				 
-   sw t1, (t0)   			 
-   li t1, 0x3   				 
-   sw t1, 4(t0)   			 
-   li t1, 0x4   				 
-   sw t1, 8(t0)   			 
-   
-   la t0, Salida
-   li t1, 0   				 
-   sw t1, (t0)   			 
-   li t1, 0   				 
-   sw t1, 4(t0)   			 
-   li t1, 0   				 
-   sw t1, 8(t0)   			 
-   li t1, 0   				 
-   sw t1, 12(t0)   			 
-   li t1, 0   				 
-   sw t1, 16(t0)   			 
-   li t1, 0   				 
-   sw t1, 20(t0)   			 
-   li t1, 0   				 
-   sw t1, 24(t0)   			 
-   li t1, 0   				 
-   sw t1, 28(t0)   			 
-   
-   la   a3 , Entrada
-   la   a4 , Filtro
-   la   a5 , Salida
-   
-   li   a2, 0
-   li   t1, 3
-   li   a1, 0
-   li   t0, 8
-   
-   nop
-   nop
-   nop
-   nop
-   
-   and zero, t4, t5
-   
-   li t2, 0x0
-   add a6, a6, 0x240
-
-   REPEAT:
-      loop_n :
-      addi a2 , x0 , 0
-   	loop_k :
-       	lw t3 , 0( a3)
-       	lw t4 , 0( a4)
-       	mul t6 , t3 , t4
-       	lw t5 , 0( a5)
-       	add t5 , t6 , t5
-       	sw t5 , 0( a5)
-       	addi a3 , a3 , 4
-       	addi a4 , a4 , 4
-       	addi a2 , a2 , 1
-       	blt a2 , t1 , loop_k
-      addi a5 , a5 , 4
-      addi a3 , a3 , -8
-      addi a4 , a4 , -12
-      addi a1 , a1 , 1
-      blt a1 , t0 , loop_n
-   addi t2, t2, 1
-   bne t2, a6, REPEAT # Repeat the loop
-
-   .end
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
 ```
+
+To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
+
+```
+.globl main
+
+.section .midccm
+Entrada: .space 40
+Filtro: .space 12
+Salida: .space 32
+
+.text
+main:
+
+li t2, 0x488 # Disable Superscalar Exec, Sec. ALUs and Branch Pred.
+csrrs t1, 0x7F9, t2
+
+la t0, Entrada
+li t1, 0x1   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x5   				 
+sw t1, 8(t0)   			 
+li t1, 0x7   				 
+sw t1, 12(t0)   			 
+li t1, 0x9   				 
+sw t1, 16(t0)   			 
+li t1, 0x1   				 
+sw t1, 20(t0)   			 
+li t1, 0x3   				 
+sw t1, 24(t0)   			 
+li t1, 0x5   				 
+sw t1, 28(t0)   			 
+li t1, 0x7   				 
+sw t1, 32(t0)   			 
+li t1, 0x9   				 
+sw t1, 36(t0)   			 
+
+la t0, Filtro
+li t1, 0x2   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x4   				 
+sw t1, 8(t0)   			 
+
+la t0, Salida
+li t1, 0   				 
+sw t1, (t0)   			 
+li t1, 0   				 
+sw t1, 4(t0)   			 
+li t1, 0   				 
+sw t1, 8(t0)   			 
+li t1, 0   				 
+sw t1, 12(t0)   			 
+li t1, 0   				 
+sw t1, 16(t0)   			 
+li t1, 0   				 
+sw t1, 20(t0)   			 
+li t1, 0   				 
+sw t1, 24(t0)   			 
+li t1, 0   				 
+sw t1, 28(t0)   			 
+
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
+
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
+
+nop
+nop
+nop
+nop
+
+and zero, t4, t5
+
+loop_n :
+addi a2 , x0 , 0
+	loop_k :
+    	lw t3 , 0( a3)
+    	lw t4 , 0( a4)
+    	mul t6 , t3 , t4
+    	lw t5 , 0( a5)
+    	add t5 , t6 , t5
+    	sw t5 , 0( a5)
+    	addi a3 , a3 , 4
+    	addi a4 , a4 , 4
+    	addi a2 , a2 , 1
+    	blt a2 , t1 , loop_k
+addi a5 , a5 , 4
+addi a3 , a3 , -8
+addi a4 , a4 , -12
+addi a1 , a1 , 1
+blt a1 , t0 , loop_n
+
+fin:
+j fin
+```
+
+Analyze the code in RISC-V assembly.
+- Note that in the assembly program we are initializing the arrays in the Data Scratchpad before entering the loops, element-by-element, so this needs quite a few instructions.
+- Besides, note that we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters.
+
+Then, measure the CPI using the Performance Counters for the nested loops, for different configurations of the VeeR EH1 core as specified below, and compare and explain the results that you obtain.
+
+Follow the next steps to execute the program for 5 different scenarios. Use the project from Exercise 1. Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator):
+
+- Calculate the CPI for the nested loops when the program executes on a VeeR EH1 processor with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration used in the program provided above).
+```
+li t2, 0x488
+csrrs t1, 0x7F9, t2
+```
+
+- Calculate the CPI with the Secondary ALU, and the Gshare branch predictor disabled. Replace the two instructions for these ones:
+```
+li t2, 0x088
+csrrs t1, 0x7F9, t2
+```
+
+- Calculate the CPI with the Secondary ALU disabled. Replace the two instructions for these ones:
+```
+li t2, 0x080
+csrrs t1, 0x7F9, t2
+```
+
+- Calculate the CPI with all features enabled. Replace the two instructions for these ones:
+```
+li t2, 0x0
+csrrs t1, 0x7F9, t2
+```
+
+- Reorder the code of the loop_k loop to improve performance, and calculate the CPI with all features enabled (keep the two instructions as in the previous item). Explain the reason for the improvement achieved by the reordering of the code, focusing on the reduction of the impact of the data/structural/control hazards. 
 
 
 
