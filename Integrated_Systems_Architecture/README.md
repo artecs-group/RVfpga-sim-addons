@@ -9,10 +9,10 @@ The course includes ten labs (some of them are identical to the labs used in the
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation and Introduction.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
 + [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): The VeeR EH1 core.
-+ [Lab 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3): Performance counters and benchmark execution on the VeeR EH1 core.
++ [Lab 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3): Performance counters on the VeeR EH1 core.
 + [Lab 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4): Execution of basic instructions and adding new instructions on the VeeR EH1 core.
 + [Lab 5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3): The Memory Hierarchy in Ripes.
-+ [Lab 6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6): The Memory Hierarchy in VeeR EH1.
++ [Lab 6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6): Benchmark execution and the Memory Hierarchy in VeeR EH1.
 + [Lab 7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4): High-level Input/Output on the RVfpga SoC.
 + [Lab 8](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8): Low-level Input/Output on the RVfpga SoC.
 + [Lab 9](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab9): Running Zephyr on VeeRwolf.
