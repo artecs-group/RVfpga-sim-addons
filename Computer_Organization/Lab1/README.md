@@ -510,14 +510,7 @@ int main(void)
 Run the code and answer the following questions. Add screenshots to complement your answers.
 
 - Default compilation:
-    - Identify the ```for``` loop in the ```main``` function.
-    - Identify the ```if``` condition.
-    - Is the ```ra``` register preserved at any point? Why?
-    - Of the other registers, which ones are preserved? Why?
-
-- Compile with -O0 (this item can only be tested in Whisper or Ripes, not on the board):
-    - Identify the ```for``` loop in the ```main``` function.
-    - Identify the ```if``` condition.
+    - Explain in detail the ```main``` function generated in RISC-V assembly.
     - Is the ```ra``` register preserved at any point? Why?
     - Of the other registers, which ones are preserved? Why?
 
