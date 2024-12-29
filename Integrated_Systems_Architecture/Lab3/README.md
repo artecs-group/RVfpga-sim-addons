@@ -3,11 +3,9 @@ In this lab we continue the analysis of the VeeR EH1 core, using the performance
 
 Follow the next steps:
 
-1. Start by visualizing the following parts of this video [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://www.youtube.com/watch?v=d5-0sNLW7wg) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)):
-    * From time 0:10 to time 6:26 you can see a description of the VeeR Performance Counters and an example using RVfpga-ViDBo.
-    * From time 24:18 to the end you can see how to run the CoreMark benchmark on the SoC using the FPGA board.
+1. Start by visualizing this video, from the beginning to time 6:26 [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://www.youtube.com/watch?v=DXB7jl1iGq8), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://www.youtube.com/watch?v=d5-0sNLW7wg) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video shows a description of the VeeR Performance Counters and an example using RVfpga-ViDBo.
 
-2. Then, you can perform the guided example for RVfpga-ViDBo, provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this same repository. Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
+2. Then, you can perform the guided example for RVfpga-ViDBo (if you are working with the FPGA board, you can skip this step), provided [here](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc) in this same repository. Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
 
 3. Perform the following exercises.
 
@@ -194,34 +192,5 @@ csrrs t1, 0x7F9, t2
 ```
 
 - Reorder the code of the loop_k loop to improve performance, and calculate the CPI with all features enabled (keep the two instructions as in the previous item). Explain the reason for the improvement achieved by the reordering of the code, focusing on the reduction of the impact of the data/structural/control hazards. 
-
-
-
-## Exercise 3
-*→ View the above PerformanceBenchmarkingVideo at time 25:58 to see an example of CoreMark running on the board.*
-
-Analyze the provided PlatformIO project for the CoreMark benchmark. You can download the sources here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). 
-
-Then, analyze the execution of the benchmark in RVfpga-ViDBo for the following two configurations: 
-
-- Using a ```-g``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
-
-```
-build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
-build_flags = -Wa,-march=rv32im -march=rv32im -g
-extra_scripts = extra_script.py
-```
-
-- Using a ```-O2``` compiler optimization level. For that purpose, set the three final lines of file platformio.ini as follows:
-
-```
-build_unflags = -Wa,-march=rv32imac -march=rv32imac -Os
-build_flags = -Wa,-march=rv32im -march=rv32im -O2
-extra_scripts = extra_script.py
-```
-
-If needed, set the path for the simulator in the ```platformio.ini``` file as follows:
-
-```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
 
 
