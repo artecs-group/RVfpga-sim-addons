@@ -29,7 +29,7 @@ The Data Memory includes a single level divided into two memories, each mapped t
 
 
 ## Exercise 1
-Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). The follow the next steps:
+Download the sources for the CoreMark benchmark here: [CoreMark](https://drive.google.com/file/d/1WRujundTKyU3CuQxuAvV4vfe-B04-_QB/view?usp=drive_link). Then follow the next steps:
 -	Open the project in VSCode.
 -	Analyze file ```src/Test.c```, which includes the main function of our program:
       -	The ```main``` function first configures the HW Counters for measuring four events: number of cycles, number of instructions, D-bus transactions (ld/st instructions) and I-bus transactions (instructions). For this purpose, function ```pspPerformanceCounterSet()``` is used.
