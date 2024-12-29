@@ -17,15 +17,13 @@ Follow the next steps:
 ## Exercise 1
 *→ View the above PerformanceBenchmarkingVideo from time 0:10 to time 6:29 for the description of VeeR EH1 Performance Counters and an example running on RVfpga-ViDBo.*
 
-Download from the following link the program used for this example: [HwCounters_Example.zip](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing)
-
 Do the following steps:
    * Open the downloaded project in VSCode.
-   * Run the program in RVfpga-ViDBo. If needed, set the path for the simulator in the ```platformio.ini``` file as follows:
+   * Run the program in RVfpga-ViDBo and on the board (if you have it).
+      * Set the path for the simulator in the ```platformio.ini``` file as follows: ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
+      * Set the path for the bitstream in the ```platformio.ini``` file as follows: ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
 
-```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
-
-   * Analyze the results displayed in the UART console. Please note that the output may take some time to appear. Are they what you’d expect from the analyzed code?
+   * Analyze the results displayed in the serial console. Are they what you’d expect from the analyzed code?
 
 **TASK:**
 Measure other events in the Hardware Counters for the provided program. For this purpose, you must change in file ```Test.c``` the configuration of the events to be measured with function ```pspPerformanceCounterSet```. Note that the different events (shown in the table in the video) can be configured using the macros defined in WD’s PSP file:
