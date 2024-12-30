@@ -117,7 +117,7 @@ In this exercise you will test a program with floating point operations, using t
 
    1. Download the following program, which computes the dot product of two vectors: [DotProduct](https://drive.google.com/file/d/1FxCZzNDfhHamieTfrMSGTSZLJr-9cMYl/view?usp=sharing). Unzip the file and move the obtained folder to the home directory.
    2. Open the project in VSCode and analyze the program in detail.
-   3. Execute the program on the ViDBo simulator that you downloaded in the previous exercise and explain the results obtained.
+   3. Execute the program on the FPGA or on the RVfpga-ViDBo simulator and explain the results obtained.
 
 
 
