@@ -163,9 +163,7 @@ Analyze the code in RISC-V assembly.
 - Note that in the assembly program we are initializing the arrays in the Data Scratchpad before entering the loops, element-by-element, so this needs quite a few instructions.
 - Besides, note that we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters.
 
-Then, measure the CPI using the Performance Counters for the nested loops, for different configurations of the VeeR EH1 core as specified below, and compare and explain the results that you obtain.
-
-Follow the next steps to execute the program for 5 different scenarios. Use the project from Exercise 1. Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator):
+Then, test performance of the nested loops for different configurations of the VeeR EH1 core as specified next, and compare and explain the results that you obtain. Use the project from Exercise 1. Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator).
 
 - Calculate the CPI for the nested loops when the program executes on a VeeR EH1 processor with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration used in the program provided above).
 ```
@@ -191,6 +189,14 @@ li t2, 0x0
 csrrs t1, 0x7F9, t2
 ```
 
-- Reorder the code of the loop_k loop to improve performance, and calculate the CPI with all features enabled (keep the two instructions as in the previous item). Explain the reason for the improvement achieved by the reordering of the code, focusing on the reduction of the impact of the data/structural/control hazards. 
+
+## Exercise 3
+Download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, both in C and in RISC-V assembly language.
+
+Place a breakpoint at line 29 of file Test.c and execute the program on the board or in the RVfpga-Whisper simulator. Compare the results obtained by the C program and its translation to RISC-V assembly.
+
+You can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly.
+
+Reorder the code of the loop_k loop to improve performance, and calculate the CPI with all features enabled (keep the two instructions as in the previous item). Explain the reason for the improvement achieved by the reordering of the code, focusing on the reduction of the impact of the data/structural/control hazards. 
 
 
