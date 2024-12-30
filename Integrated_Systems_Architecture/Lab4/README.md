@@ -109,10 +109,10 @@ These are the 32-bit formats for these two FP instructions:
 </p>
 
 **TASK 2:**
-Compare the Verilog code for the extended SoC ([src_FPU](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing)) with the original SoC.
+Compare the Verilog code for the extended SoC ([src_FPU](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing)) with the original SoC. You can view the instructions explained at time 6:29 of the video provided in step 3 above ([PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=388)) about how to add instructions to the VeeR core.
 
 
-
+to 
 ## Exercise 3
 In this exercise you will test a program with floating point operations, using the extended SoC. Follow the next steps:
 
