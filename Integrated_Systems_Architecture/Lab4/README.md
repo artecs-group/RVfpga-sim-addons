@@ -94,9 +94,7 @@ Analyse and explain the Verilog implementation of the adder/subtractor implement
 
 
 ## Exercise 2
-*→ View the above PerformanceBenchmarkingVideo at time 18:00 to see an example running on RVfpga-ViDBo.*
-
-Follow the instructions explained in the slides and the video in order to test the extended core with the simple example that does a floating point addition. You can download the project with the program from this link: [Project_RVfpgaViDBo_FPU_Example.zip](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link). Once downloaded and uncompressed, move it to your home directory inside the Virtual Machine.
+Follow the instructions explained at time 18:00 of the video provided in step 3 above in order to test the extended core with the simple example that does a floating point addition. You can download the project with the program from this link: [Project_RVfpgaViDBo_FPU_Example.zip](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link). Once downloaded and uncompressed, move it to your home directory inside the Virtual Machine.
 
 Note that you do not need to modify the core sources nor recompile the simulator binary, as we provide the binary through the following link: [Vrvfpgasim](https://drive.google.com/file/d/1PtQBGKW1Z3E_h3deqgwIjjDKWUeLiDrq/view?usp=sharing). Once downloaded, move it to your home directory inside the Virtual Machine and give it execution rights: ```chmod 777 Vrvfpgasim```. In case you want to analyze the core sources and create the binary/bitstream yourself, you can download the extended core sources here: [src_FPU](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing).
 
