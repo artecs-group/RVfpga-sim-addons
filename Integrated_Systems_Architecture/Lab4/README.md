@@ -94,12 +94,12 @@ Analyse and explain the Verilog implementation of the adder/subtractor implement
 
 
 ## Exercise 2
-Follow the instructions explained at time 18:20 of the video provided in step 3 above in order to test the extended core with the simple example that does a floating point addition. You can download the project with the program from this link: [Project_RVfpgaViDBo_FPU_Example.zip](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link). Once downloaded and uncompressed, move it to your home directory inside the Virtual Machine.
+Follow the instructions explained at time 18:20 of the video provided in step 3 above ([PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=1100)) in order to test on the FPGA board the extended core with the simple example that does a floating point addition (note that in the video the example is tested in RVfpga-ViDBo). 
+   - You can download the project with the program from this link: [Project_RVfpgaViDBo_FPU_Example.zip](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link). Once downloaded and uncompressed, move it to your home directory inside the Virtual Machine.
+   - You can download the bitstream of the extended SoC from this link: [ExtendedSoC](https://drive.google.com/file/d/1DwSW22Nk8Ef6UOMWIHgC7AB96AzB-yJI/view?usp=sharing). Once downloaded, move it to your home directory inside the Virtual Machine.
+   - In case you do not have the board and you want to test the program in simulation, you can download the RVfpga-ViDBo binary of the extended SoC from this link: [ExtendedViDBo](https://drive.google.com/file/d/1PtQBGKW1Z3E_h3deqgwIjjDKWUeLiDrq/view?usp=sharing). Once downloaded, move it to your home directory inside the Virtual Machine and give it execution rights.
 
-Note that you do not need to modify the core sources nor recompile the simulator binary, as we provide the binary through the following link: [Vrvfpgasim](https://drive.google.com/file/d/1PtQBGKW1Z3E_h3deqgwIjjDKWUeLiDrq/view?usp=sharing). Once downloaded, move it to your home directory inside the Virtual Machine and give it execution rights: ```chmod 777 Vrvfpgasim```. In case you want to analyze the core sources and create the binary/bitstream yourself, you can download the extended core sources here: [src_FPU](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing).
-
-
-**TASK:**
+**TASK 1:**
 Do the same tests for a multiplication and a division instead of an addition. Analyze the results obtained for the operations and for the HW counter events.
 
 These are the 32-bit formats for these two FP instructions:
@@ -107,6 +107,10 @@ These are the 32-bit formats for these two FP instructions:
 <p align="center">
   <img src="Images/MultDiv.png" width=40% height=40%>
 </p>
+
+**TASK 2:**
+Compare the Verilog code for the extended SoC ([src_FPU](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=sharing)) with the original SoC.
+
 
 
 ## Exercise 3
