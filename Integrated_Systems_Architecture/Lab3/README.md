@@ -197,6 +197,6 @@ Place a breakpoint at line 29 of file Test.c and execute the program on the boar
 
 You can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly.
 
-Reorder the code of the loop_k loop to improve performance, and calculate the CPI with all features enabled (keep the two instructions as in the previous item). Explain the reason for the improvement achieved by the reordering of the code, focusing on the reduction of the impact of the data/structural/control hazards. 
+Finally, reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the final configuration of Exercise 2 (all VeeR EH1 features enabled). Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards. Confirm that the values of the Salida array are the same as the ones obtained for the original program.
 
 
