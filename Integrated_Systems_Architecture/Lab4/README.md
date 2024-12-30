@@ -71,6 +71,9 @@ Replicate the previous simulation in your own computer. You can follow the same 
    * Visualize the trace for the AL_Operations program:
       * Open the trace with GTKWave by executing the following command in a terminal: ```gtkwave /home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/trace.vcd```.
       * Add the signals to the trace. For that purpose, click on ```File > Read Tcl Script File``` and select the ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/test_1.tcl``` file.
+
+        <img src="https://github.com/user-attachments/assets/5bd1c434-fc5d-421e-b3e2-171b080150fe" alt="image" width="600">
+
       * Once the signals are added in GTKWave, Zoom Fit by clicking on the magnifying glass with a checkmark button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then Zoom In by clicking on the magnifying glass with a plus sign button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942) at any point of the simulation (skip the initial instructions in order to analyze the loop containing the three arithmetic-logic instructions; for example, select a point around 20ns), in order to analyze the execution of the three arithmetic-logic instructions of a random iteration of the loop. Note that every cycle two new instructions are fetched, one in each way of the superscalar RISC-V processor, as shown on signals ```ifu_i0_instr[31:0]``` and ```ifu_i1_instr[31:0]```. However, due to the data hazards, the second way remains free for most cycles (we will analyze this later). The effects of the execution of the three arithmetic-logic instructions can be seen on signal ```dout[31:0]```.
 
 **TASK 2:**
