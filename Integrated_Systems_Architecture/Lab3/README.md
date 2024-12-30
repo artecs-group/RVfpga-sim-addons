@@ -195,12 +195,14 @@ li t2, 0x0
 csrrs t1, 0x7F9, t2
 ```
 
+- Finally, reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the configuration of the previous item (all VeeR EH1 features enabled). Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards.
+
 
 ## Exercise 3
-Download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, both in C and in RISC-V assembly language.
+Download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, first in C and then in RISC-V assembly language.
 
-Execute the program in the RVfpga-Whisper simulator and compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly. In the latter, analyze the results at the end of the first iteration of the REPEAT loop.
+Place a breakpoint at line 29 of the C file and execute the program in the RVfpga-Whisper simulator. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly.
 
-Finally, reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the final configuration of Exercise 2 (all VeeR EH1 features enabled) on the board or in RVfpga-ViDBo. Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards. Confirm in RVfpga-Whisper that the values of the Salida array after the reordering are the same as the ones obtained for the original program.
+Reorder the code as in the last item of Exercise 2 and confirm if the results for the assembly program are still the same.
 
 
