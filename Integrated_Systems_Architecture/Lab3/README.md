@@ -46,7 +46,7 @@ Are the results for I$ misses reasonable?
 
 
 ## Exercise 2
-In the VeeR EH1 processor, the following code is to be executed:
+In the VeeR EH1 processor, the following code is to be executed. Note that this is the same code used in [Exercise 7 of Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-7):
 
 ```
 for ( n = 0; n < 8; n ++ ) {
