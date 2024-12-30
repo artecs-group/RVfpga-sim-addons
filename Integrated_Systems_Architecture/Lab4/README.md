@@ -125,13 +125,13 @@ In this exercise you will test a program with floating point operations, using t
 ## Exercise 4
 In this exercise you will upgrade the gcc compiler in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
 
-- Download this simple project, that computes a FP addition and move it to the home directory: [Project_RVfpgaViDBo_FPU_Example_NewCompiler.zip](https://drive.google.com/file/d/1CGB2MIz0s7XzF475xfu6WPXIkpyvQ8lF/view?usp=sharing)
+- Download this simple project, that computes a FP addition and move it to the home directory: [Project_RVfpgaViDBo_FPU_Example_NewCompiler.zip](https://drive.google.com/file/d/1CGB2MIz0s7XzF475xfu6WPXIkpyvQ8lF/view?usp=sharing). File ```platformio.ini``` selects a new version of the RISC-V toolchain (line ```platform_packages = platformio/toolchain-riscv@^1.130200.2```), thus the old toolchain will be replaced with the new one as soon as we open the project.
 
 - Replace the following file (keep a backup copy of this file before replacing it): ```~/.platformio/platforms/chipsalliance/builder/main.py``` for the one that you can download here: [main.py](https://drive.google.com/file/d/1dlx2YjdlljqLzgwz1vNzZ9FJVIOsBjbs/view?usp=sharing)
   
 Then, do the following tasks:
 
-1. Execute the provided program in RVfpga-ViDBo using the extended SoC (you should have the simulator binary in the home directory, as you used it in the previous tasks). In file ```platformio.ini``` you can see the ```build_flags``` set as follows, which enable the Zfinx extension in the compiler:
+1. Execute the provided program on the FPGA board or in RVfpga-ViDBo using the extended SoC (which you obtained in the previous tasks). In file ```platformio.ini``` you can see the ```build_flags``` set as follows, which enable the Zfinx extension in the compiler:
 
 <p align="center">
   <img src="Images/Zfinx.png" width=40% height=40%>
