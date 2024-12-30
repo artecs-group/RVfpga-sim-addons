@@ -203,6 +203,6 @@ Download the following project: [C-Assembly_Filter](https://drive.google.com/fil
 
 Place a breakpoint at line 29 of the C file and execute the program in the RVfpga-Whisper simulator. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly.
 
-Reorder the code as in the last item of Exercise 2 and confirm if the results for the assembly program are still the same.
+Reorder the program in assembly language as in the last item of Exercise 2 and confirm if the results for the Salida array are still correct.
 
 
