@@ -136,24 +136,30 @@ nop
 
 and zero, t4, t5
 
-loop_n :
-addi a2 , x0 , 0
-	loop_k :
-    	lw t3 , 0( a3)
-    	lw t4 , 0( a4)
-    	mul t6 , t3 , t4
-    	lw t5 , 0( a5)
-    	add t5 , t6 , t5
-    	sw t5 , 0( a5)
-    	addi a3 , a3 , 4
-    	addi a4 , a4 , 4
-    	addi a2 , a2 , 1
-    	blt a2 , t1 , loop_k
-addi a5 , a5 , 4
-addi a3 , a3 , -8
-addi a4 , a4 , -12
-addi a1 , a1 , 1
-blt a1 , t0 , loop_n
+li t2, 0x0
+add a6, a6, 0x240
+
+REPEAT:
+	loop_n :
+	addi a2 , x0 , 0
+		loop_k :
+	    	lw t3 , 0( a3)
+	    	lw t4 , 0( a4)
+	    	mul t6 , t3 , t4
+	    	lw t5 , 0( a5)
+	    	add t5 , t6 , t5
+	    	sw t5 , 0( a5)
+	    	addi a3 , a3 , 4
+	    	addi a4 , a4 , 4
+	    	addi a2 , a2 , 1
+	    	blt a2 , t1 , loop_k
+	addi a5 , a5 , 4
+	addi a3 , a3 , -8
+	addi a4 , a4 , -12
+	addi a1 , a1 , 1
+	blt a1 , t0 , loop_n
+addi t2, t2, 1
+bne t2, a6, REPEAT # Repeat the loop
 
 fin:
 j fin
