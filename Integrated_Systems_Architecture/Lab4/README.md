@@ -77,19 +77,19 @@ Replicate the previous simulation in your own computer. You can follow the same 
       * Once the signals are added in GTKWave, Zoom Fit by clicking on the magnifying glass with a checkmark button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then Zoom In by clicking on the magnifying glass with a plus sign button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942) at any point of the simulation (skip the initial instructions in order to analyze the loop containing the three arithmetic-logic instructions; for example, select a point around 20ns), in order to analyze the execution of the ```add``` instruction.
 
 **TASK 2:**
-Analyse and explain the Verilog implementation of the adder/subtractor implemented in module ```exu_alu_ctl```.
-
-**TASK 3:**
 Do the same analysis for the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
 
-**TASK 4:**
+**TASK 3:**
 Do the same analysis for the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```.
 
-**TASK 5:**
+**TASK 4:**
 Do the same analysis for the following set-less-than instructions supported by the VeeR core: ```slt```, ```sltu```.
 
-**TASK 6:**
+**TASK 5:**
 Do the same analysis for the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
+
+**TASK 6:**
+Analyse and explain the Verilog implementation of the adder/subtractor implemented in module ```exu_alu_ctl```.
 
 
 
