@@ -1,5 +1,5 @@
 # Lab 4 - Execution of basic instructions and adding new instructions on the VeeR EH1 core
-In this lab we continue the analysis of the VeeR EH1 core, analyzing the execution of basic instructions and adding new instructions to the core. The exercises proposed can be performed both in simulation and on the FPGA board. In this repository, we explain how to use the simulators, and you can find all the instructions for running on the board in the complete [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
+In this lab we continue the analysis of the VeeR EH1 core, analyzing the execution of basic instructions and adding new instructions to the core. The exercises proposed can be performed both in simulation and on the FPGA board.
 
 Follow the next steps:
 
