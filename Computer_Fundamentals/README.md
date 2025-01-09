@@ -84,7 +84,7 @@ In this course, some exercises and labs are not only solved on paper but are als
 
 6. We can execute the code step by step:
     - The “minor” and “major” arrows in the top menu allow us to go forward or backward instruction by instruction.
-    - The current instruction is shown highlighted in red (e.g., in the figure ```lw s3, 0(t2)```).
+    - The current instruction is shown highlighted in red.
 
 <p align="center">
   <img src="Images/Execution.png" width=40% height=40%>
