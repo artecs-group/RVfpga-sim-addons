@@ -6,6 +6,11 @@ The theoretical part of the course provides an in-depth analysis of the RISC-V a
 
 In this course, some exercises and labs are not only solved on paper but are also analyzed through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students will use their own laptops or request one from the school. They will install and run Ripes natively on their devices. The following are the steps students must follow to simulate the selected exercises:
 
+*NOTE: This course will be conducted during the second semester of the 2024-2025 academic year (February 2025 to May 2025). During this time, the course materials will continue to be refined and enhanced.*
+
+*NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
+
+
 ### RISC-V Architecture and Assembly Language
 
 1. Install Ripes: Follow the instructions provided at this link: [RipesInstallation](https://github.com/mortbopet/Ripes?tab=readme-ov-file#downloading--installation). Use the latest version (v2.2.6) of the precompiled binaries available [here](https://github.com/mortbopet/Ripes/releases).
@@ -17,9 +22,5 @@ In this course, some exercises and labs are not only solved on paper but are als
 
 ### RISC-V Single/Multi-Cycle and Pipelined Processors
 
-...
+To-Do.
 
-
-*NOTE: This course will be conducted during the second semester of the 2024-2025 academic year (February 2025 to May 2025). During this time, the course materials will continue to be refined and enhanced.*
-
-*NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
