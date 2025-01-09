@@ -111,70 +111,36 @@ In this course, some exercises and labs are not only solved on paper but are als
   <img src="Images/DataSection.png" width=90% height=90%>
 </p>
 
-10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)):
-
-  - Download the RISC-V toolchain:
-      - The Ripes simulator webpage recommends to download the pre-built toolchain [here](https://github.com/sifive/freedom-tools/releases/tag/v2020.04.0-Toolchain.Only). This is the procedure we follow here, but you can also download the toolchain sources and compile them yourself.
-      - Copy the downloaded file to ```/home/rvfpga/Simuladores_EC_24-25/Ripes/```
-      - Unzip the file ```riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz``` by right-clicking on the file and selecting "Extract Here."
-
-<p align="center">
-  <img src="Images/ExtractHere.png" width=90% height=90%>
-</p>
-
-
-  - Set the compiler path in Ripes:
-      - In the top menu of Ripes, open "Edit-Settings":
-
-      <p align="center">
-        <img src="Images/EditSettings.png" width=40% height=40%>
-      </p>
-
-
-      - In the window that opens, go to the "Compiler" tab.
-
-      <p align="center">
-        <img src="Images/PathCompiler.png" width=90% height=90%>
-      </p>
-
-
-      - In the "Browse" section, select the C compiler (the file named ```riscv64-unknown-elf-gcc```), which is located in the following path (you can copy and paste the path in the "Compiler path"):
-
-      ```
-      /home/rvfpga/Simuladores_EC_24-25/Ripes/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
-      ```
-
-      <p align="center">
-        <img src="Images/PathCompiler2.png" width=90% height=90%>
-      </p>
-
-      <p align="center">
-        <img src="Images/PathCompiler3.png" width=90% height=90%>
-      </p>
-
-
-  - Set the appropriate arguments:
-      - Compiler arguments: ```-O1```
-      - Linker arguments: ```-static-libgcc -lm```
-
-      <p align="center">
-        <img src="Images/Linker.png" width=90% height=90%>
-      </p>
-
-
-11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the program from Exercise 4 (find it [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4)) can be seen in the following figure (you can find the code below):
+10. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
 
 <p align="center">
   <img src="Images/Editor.png" width=90% height=90%>
 </p>
 
-12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
+```
+int main(void)
+{
+   int i,result,num=7;
+
+   if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+
+   while(1);
+}
+```
+
+11. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
 <p align="center">
   <img src="Images/Martillo.png" width=90% height=90%>
 </p>
 
-13. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
+12. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
 
 <p align="center">
   <img src="Images/Execution.png" width=70% height=70%>
