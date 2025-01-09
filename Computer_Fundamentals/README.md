@@ -130,6 +130,8 @@ int main(void)
    else
       result=1;
 
+   printf("Factorial = %d",result);
+
    while(1);
 }
 ```
