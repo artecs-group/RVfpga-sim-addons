@@ -10,6 +10,7 @@ In this course, some exercises and labs are not only solved on paper but are als
 
 *NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
 
+---
 
 ### RISC-V Architecture and Assembly Language
 
@@ -148,8 +149,7 @@ int main(void)
   <img src="Images/Execution.png" width=70% height=70%>
 </p>
 
-
-
+---
 
 ### RISC-V Single/Multi-Cycle and Pipelined Processors
 
