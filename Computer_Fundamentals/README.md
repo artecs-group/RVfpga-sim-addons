@@ -30,7 +30,7 @@ In this course, some exercises and labs are not only solved on paper but are als
     - [Simulation Controls](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#controlling-the-simulator)  
     - [Memory Viewer](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-memory-tab)  
 
-### Configuration and basic use
+### Basic Use
 
 1. Start the simulator in your device.
 
@@ -42,13 +42,17 @@ In this course, some exercises and labs are not only solved on paper but are als
   <img src="Images/EditorFigure.png" width=80% height=80%>
 </p>
 
+#### Configuration
+
 3. Before simulating the program, select the Single Cycle processor:
 
 <p align="center">
   <img src="Images/SingleCycle.png" width=80% height=80%>
 </p>
 
-4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
+#### RISC-V Assembly Program
+
+4. To simulate a RISC-V assembly program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
 
 <p align="center">
   <img src="Images/Ex1.png" width=80% height=80%>
@@ -114,6 +118,8 @@ In this course, some exercises and labs are not only solved on paper but are als
 <p align="center">
   <img src="Images/DataSection.png" width=90% height=90%>
 </p>
+
+#### C Program
 
 10. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
 
