@@ -15,9 +15,9 @@ In this course, some exercises and labs are not only solved on paper but are als
 
 ---
 
-### RISC-V Architecture and Assembly Language
+## RISC-V Architecture and Assembly Language
 
-#### Installation
+### Installation
 
 1. Install Ripes: Follow the instructions provided at this link: [RipesInstallation](https://github.com/mortbopet/Ripes?tab=readme-ov-file#downloading--installation). Note that you could build the simulator yourself, but it is easier to use precompiled binaries. Specifically, use the latest version (v2.2.6) of the precompiled binaries available [here](https://github.com/mortbopet/Ripes/releases). Note that you must download the binaries that correspond to your Operating System.
 
@@ -30,7 +30,7 @@ In this course, some exercises and labs are not only solved on paper but are als
     - [Simulation Controls](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#controlling-the-simulator)  
     - [Memory Viewer](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-memory-tab)  
 
-#### Configuration and basic use
+### Configuration and basic use
 
 1. Start the simulator in your device.
 
@@ -154,7 +154,7 @@ int main(void)
 
 ---
 
-### RISC-V Single/Multi-Cycle and Pipelined Processors
+## RISC-V Single/Multi-Cycle and Pipelined Processors
 
 To-Do.
 
