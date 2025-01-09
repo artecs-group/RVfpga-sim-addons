@@ -15,7 +15,7 @@ Finally, in the second semester, we will deliver a microcredential as part of a 
 
 In addition to all these RVfpga-based materials, in this repository we also provide the materials used in another course (not RVfpga-based) instructed at the University Complutense of Madrid (UCM).
 
-+ Computer Fundamentals: This is a first-year course in the Computer Science degree program at UCM. In folder [Computer_Fundamentals](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals) of this repository you can find part most of the materials used in the course.
++ Computer Fundamentals: This is a first-year course in the Computer Science degree program at UCM. In folder [Computer_Fundamentals](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals) of this repository you can find all the materials used in the course.
 
 
 ## Papers and Presentations -- December-2024
