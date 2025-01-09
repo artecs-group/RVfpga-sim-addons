@@ -6,8 +6,8 @@ The theoretical part of the course provides an in-depth analysis of the RISC-V a
 
 In this course, some exercises and labs are not only solved on paper but are also analyzed through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students use their own laptops or request one from the school, and they install and run Ripes natively on their devices. Exercises and labs are mainly divided in two parts, for which details are given below:
 
-- [RISC-V Architecture and Assembly Language](): Related with modules 2-4 of the course.
-- [RISC-V Single/Multi-Cycle and Pipelined Processors](): Related with modules 5-7 of the course.
+- [RISC-V Architecture and Assembly Language](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/README.md#risc-v-architecture-and-assembly-language): Related with modules 2-4 of the course.
+- [RISC-V Single/Multi-Cycle and Pipelined Processors](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/README.md#risc-v-singlemulti-cycle-and-pipelined-processors): Related with modules 5-7 of the course.
 
 *NOTE: This course will be conducted during the second semester of the 2024-2025 academic year (February 2025 to May 2025). During this time, the course materials will continue to be refined and enhanced.*
 
