@@ -44,11 +44,37 @@ In this course, some exercises and labs are not only solved on paper but are als
   <img src="Images/SingleCycle.png" width=80% height=80%>
 </p>
 
-4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program of Exercise 1 (you can find the code [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-1) and try it in your simulator). On the right you can see the disassembled version.
+4. To simulate a program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
 
 <p align="center">
   <img src="Images/Ex1.png" width=80% height=80%>
 </p>
+
+```
+  .global main
+  
+  .equ n ,10
+  
+  .data
+  v: .word 12 ,1 , -2 ,15 , -8 ,4 , -31 ,8 ,8 ,25
+  
+  .text
+  main:
+    li s1 , n
+    mv s2 , zero # s2 es i
+    for:
+      beq s2,s1,fin
+      la t1 , v 		# t1= @base de v
+      slli t3 ,s2 ,2 	# i*4
+      add t2 ,t1 ,t3 	# t2= @efectiva de v[i]
+      lw s3 ,0( t2)
+      addi s3 ,s3 ,-1
+      sw s3 ,0( t2)
+      addi s2 ,s2 ,1 	# i=i+1
+      j for
+    fin:
+    j fin
+```
 
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
