@@ -184,6 +184,7 @@ main:
     sw s2,0(t1)
 fin:
 j fin
+```
 
 
 ### Labs about RISC-V Architecture and Assembly
