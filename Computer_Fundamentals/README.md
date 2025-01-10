@@ -146,13 +146,20 @@ int main(void)
 }
 ```
 
-11. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
+11. On the top menu, set the appropriate compiler arguments in ```Edit-Settings```:
+    - Compiler arguments: ```-O1``` (you can select other options such as -O0, -O2, etc.)
+
+  <p align="center">
+    <img src="Images/Linker.png" width=90% height=90%>
+  </p>
+
+12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
 <p align="center">
   <img src="Images/Martillo.png" width=90% height=90%>
 </p>
 
-12. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
+13. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
 
 <p align="center">
   <img src="Images/Execution.png" width=70% height=70%>
