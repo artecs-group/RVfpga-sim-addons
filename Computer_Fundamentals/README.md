@@ -620,10 +620,10 @@ Students can try to resolve the exercises proposed in the UCM Computer Organizat
 
 They can also resolve the labs proposed at [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html) and summarized next.
 
-- [Lab 1 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas1.pdf) and [Lab 1 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab1.pdf)
-- [Lab 2 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas2.pdf) and [Lab 2 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab2.pdf)
-- [Lab 3 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas3.pdf) and [Lab 3 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab3.pdf)
-- [Lab 4 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas4.pdf) and [Lab 4 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab4.pdf)
+- [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link)
+- [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)
+- [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link)
+- [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link)
 
 
 ---
