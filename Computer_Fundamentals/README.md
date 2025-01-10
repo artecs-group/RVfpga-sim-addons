@@ -166,7 +166,7 @@ int main(void)
 </p>
 
 ### Exercises about RISC-V Architecture and Assembly
-We next show the solution for some of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)).
+We next show the solution in Ripes for a subset of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). The remaining exercises can also be resolved and tested by the students in Ripes.
 
 #### Exercise 1
 Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of the variables.
@@ -611,18 +611,19 @@ ret
 
 
 ### Labs about RISC-V Architecture and Assembly
-We next show the labs proposed in the course.
+Students can try to resolve the exercises proposed in the UCM Computer Organization course: 
 
-#### Lab 1
+- [Exercise 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1)
+- [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-2)
+- [Exercise 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-3)
+- [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-4)
 
-#### Lab 2
+They can also resolve the labs proposed at [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html) and summarized next.
 
-#### Lab 3
-
-#### Lab 4
-
-#### Lab from Computer Organization
-Resolve Exercises 1-4 proposed in the UCM Computer Organization course: [Ex1-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1).
+- [Lab 1 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas1.pdf) and [Lab 1 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab1.pdf)
+- [Lab 2 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas2.pdf) and [Lab 2 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab2.pdf)
+- [Lab 3 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas3.pdf) and [Lab 3 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab3.pdf)
+- [Lab 4 Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2practicas4.pdf) and [Lab 4 English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2lab4.pdf)
 
 
 ---
@@ -630,4 +631,4 @@ Resolve Exercises 1-4 proposed in the UCM Computer Organization course: [Ex1-4](
 
 ## RISC-V Single/Multi-Cycle and Pipelined Processors
 
-
+To-Do
