@@ -190,7 +190,7 @@ Do the following tasks:
 - Analyze the assembled code. Pay special attention to the translation of pseudo-instructions to RISC-V instructions.
 - Simulate the program in Ripes step-by-step. Test different values for ```x``` and ```y```.
 - Analyze the registrs during the execution.
-- Analyze the memory state at the beginning and at the end of the execution.
+- Analyze the memory state at the beginning and at the end of the execution. Analyze both the ```.text``` and the ```.data``` sections.
 
 
 #### Exercise 2
