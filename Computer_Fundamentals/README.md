@@ -162,7 +162,7 @@ int main(void)
 We next show the solution for some of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)).
 
 #### Exercise 1
-This is a possible solution for the exercise. Simulate it in Ripes step-by-step, analyze the registrs and the memory state at the beginning and at the end of the execution.
+This is a possible solution for the exercise:
 
 ```
 .global main # Hace global la etiqueta " main "
@@ -178,13 +178,53 @@ main:
     lw s1,0(t0) # s1 = 10
     lw s2,0(t1) # s2 =5
     blt s1,s2, fin # condición inversa s1 <s2
-    addi s1,s1,2 # x=x+2
-    addi s2,s2,-2 # y=y -2
+        addi s1,s1,2 # x=x+2
+        addi s2,s2,-2 # y=y -2
     sw s1,0(t0)
     sw s2,0(t1)
 fin:
 j fin
 ```
+
+Do the following tasks:
+- Analyze the assembled code. Pay special attention to the translation of pseudo-instructions to RISC-V instructions.
+- Simulate the program in Ripes step-by-step. Test different values for ```x``` and ```y```.
+- Analyze the registrs during the execution.
+- Analyze the memory state at the beginning and at the end of the execution.
+
+
+#### Exercise 2
+This is a possible solution for the exercise:
+
+```
+.global main
+
+.data # sección de datos iniciados
+x: .word 5
+y: .word 10
+
+
+.text # sección de instrucciones
+main:
+    la t0,x # pseudoinstrucción t0=@x
+    la t1,y # pseudoinstrucción t1=@y
+    lw s1,0(t0) # s1 =5
+    lw s2,0(t1) # s2 =10
+    blt s1,s2, else # condición inversa s1 <s2
+        addi s1,s1,2 # x=x+2
+        addi s2,s2,2 # y=y+2
+    j fin_if
+    else:
+        addi s1,s1,-2 # x = x -2;
+        addi s2,s2,-2 # y = y -2
+    fin_if:
+    sw s1,0(t0)
+    sw s2,0(t1)
+fin:
+j fin
+```
+
+Do the same tasks as in Exercise 1.
 
 
 ### Labs about RISC-V Architecture and Assembly
