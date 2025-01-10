@@ -505,6 +505,111 @@ Do the following tasks:
 - Analyze and Ssimulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
 
 
+#### Exercise 18
+Given two points ```P1(x1, y1)``` and ```P2(x2, y2)```, their Chebyshev distance can be calculated with the following algorithm: 
+
+```
+int chebyshev(int x1, int y1, int x2, int y2)
+{
+ int d1, d2;
+ d1 = abs(x1 - x2)
+ d2 = abs(y1 - y2)
+ if (d2 > d1)
+ d1 = d2;
+ return d1;
+}
+```
+
+Write a RISC-V assembly function, ```chebyshev(x1,x2,y1,y2)```, which will receive the coordinates of two points P1 and P2 and will return their Chebyshev distance. This function will call another function that calculates the absolute value of a given number.
+
+Then, program the following code and test it in Ripes. The program stores (into a vector D) the Chebyshev distances of a point P to each of the points within a vector V with N elements. P, V y D will be global variables. Vector V will contain 2N integers such that the i-th point will have coordinates (x, y) = (V[2*i], V[2*i + 1]) 
+
+```
+#define N, ...
+int Px, Py; // x , y coordinates of point P
+int V[2N]; //Vector with N points V=[x0,y0,x1,y1,...]
+int D[N]; //Vector with N distances
+void main(void)
+{
+int i;
+for (i = 0; i < N; i++)
+ D[i] = chebyshev(Px, Py, V[2*i], V[2*i + 1]);
+}
+```
+
+This is a possible solution for the exercise:
+
+```
+.global main
+.equ n,5 #nº de puntos a testear (2*n componentes)
+
+.data
+P: .word 4,5 # coordenadas x e y del punto P
+V: .word 1,2,-3,4,5,9,17,-15,20,12 # Vector de N puntos V=[x0,y0,x1,y1,...]
+sol: .word 0,0,0,0,0
+
+.text
+main:
+mv s1,zero
+li s2,n
+la s3,V
+for:
+bge s1,s2,fin_for
+la s6,P
+lw a0,0(s6)
+lw a1,4(s6)
+slli s4,s1,1
+slli s4,s4,2
+add s4,s4,s3
+lw a2,0(s4)
+lw a3,4(s4)
+call chebyshev
+la s5,sol
+slli s4,s1,2
+add s4,s4,s5
+sw a0,0(s4)
+addi s1,s1,1
+j for
+fin_for:
+j fin_for
+
+chebyshev:
+#prólogo
+addi sp,sp,-12
+sw s1,0(sp)
+sw s2,4(sp)
+sw ra,8(sp)
+# cuerpo
+d1:
+sub s1,a0,a2 #x1 -x2
+mv a0,s1
+call abs
+mv s1,a0
+d2:
+sub s2,a1,a3 #y1 -y2
+mv a0,s2
+call abs
+mv s2,a0
+if:
+ble s2,s1,fin_call
+mv s1,s2
+fin_call:
+mv a0,s1
+# epílogo
+lw s1,0(sp)
+lw s2,4(sp)
+lw ra,8(sp)
+addi sp,sp,12
+ret
+
+abs:
+bgez a0,pos
+sub a0,zero,a0
+pos:
+ret
+```
+
+
 ### Labs about RISC-V Architecture and Assembly
 We next show the labs proposed in the course.
 
