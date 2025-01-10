@@ -158,9 +158,31 @@ int main(void)
   <img src="Images/Execution.png" width=70% height=70%>
 </p>
 
+### Exercises about RISC-V Architecture and Assembly
+We next show the solution for some of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)).
+
+#### Exercise 1
+
+
+### Labs about RISC-V Architecture and Assembly
+We next show the labs proposed in the course.
+
+#### Lab 1
+
+#### Lab 2
+
+#### Lab 3
+
+#### Lab 4
+
+#### Lab from Computer Organization
+
+Resolve Exercises 1-4 proposed in the UCM Computer Organization course: [Ex1-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1).
+
+
 ---
+
 
 ## RISC-V Single/Multi-Cycle and Pipelined Processors
 
-To-Do.
 
