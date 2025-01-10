@@ -162,6 +162,28 @@ int main(void)
 We next show the solution for some of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)).
 
 #### Exercise 1
+This is a possible solution for the exercise. Simulate it in Ripes step-by-step, analyze the registrs and the memory state at the beginning and at the end of the execution.
+
+```
+.global main # Hace global la etiqueta " main "
+
+.data # sección de datos iniciados
+x: .word 10 # declara una variable de 32 bits de valor 10
+y: .word 5
+
+.text # sección de instrucciones
+main:
+    la t0,x # pseudo instrucción t0=@x
+    la t1,y # pseudo instrucción t1=@y
+    lw s1,0(t0) # s1 = 10
+    lw s2,0(t1) # s2 =5
+    blt s1,s2, fin # condición inversa s1 <s2
+    addi s1,s1,2 # x=x+2
+    addi s2,s2,-2 # y=y -2
+    sw s1,0(t0)
+    sw s2,0(t1)
+fin:
+j fin
 
 
 ### Labs about RISC-V Architecture and Assembly
