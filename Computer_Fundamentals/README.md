@@ -44,7 +44,7 @@ In this course, some exercises and labs are not only solved on paper but are als
 
 #### Configuration
 
-3. Before simulating the program, select the Single Cycle processor and enable the M extension and disable the C extension:
+3. Before simulating the program, select the Single Cycle processor, enable the M extension and disable the C extension:
 
 <p align="center">
   <img src="Images/SingleCycle.png" width=80% height=80%>
