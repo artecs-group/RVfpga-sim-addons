@@ -179,7 +179,7 @@ if (x >= y) {
 }
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main # Hace global la etiqueta " main "
@@ -225,7 +225,7 @@ else {
 }
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main
@@ -272,7 +272,7 @@ while (a  b) {
 gcd = a;
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main
@@ -317,7 +317,7 @@ for (i = 0; i < N; i++)
  V[i] = V[i] + 1;
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main
@@ -360,7 +360,7 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main
@@ -413,7 +413,7 @@ do {
 } while swapped
 ```
 
-This is a possible solution for the exercise in C:
+This is a possible solution for the exercise in C that works in Ripes:
 
 ```
 #define N 4
@@ -446,7 +446,7 @@ void swap(int *V, int *W){
 }
 ```
 
-This is a possible solution for the exercise in assembly:
+This is a possible solution for the exercise in assembly that works in Ripes:
 
 ```
 .global main
@@ -537,7 +537,7 @@ for (i = 0; i < N; i++)
 }
 ```
 
-This is a possible solution for the exercise:
+This is a possible solution for the exercise that works in Ripes:
 
 ```
 .global main
