@@ -227,6 +227,42 @@ j fin
 Do the same tasks as in Exercise 1.
 
 
+#### Exercise 6
+This is a possible solution for the exercise:
+
+```
+.global main
+
+.data
+a: .word 5
+b: .word 15
+mcd: .word 0
+
+.text
+main:
+    la t1,a
+    lw s1,0(t1) # s1 es a
+    la t2,b
+    lw s2,0(t2) # s2 es b
+    while:
+        beq s1,s2,fin_while
+            ble s1,s2,else
+            sub s1,s1,s2 # a=a-b
+        j fin_if
+        else:
+            sub s2,s2,s1 # b=b-a
+        fin_if:
+        j while
+    fin_while:
+    la t3,mcd # t3 = @mcd
+    sw s1,0(t3)
+fin:
+j fin
+```
+
+Do the same tasks as in Exercise 1.
+
+
 ### Labs about RISC-V Architecture and Assembly
 We next show the labs proposed in the course.
 
@@ -239,7 +275,6 @@ We next show the labs proposed in the course.
 #### Lab 4
 
 #### Lab from Computer Organization
-
 Resolve Exercises 1-4 proposed in the UCM Computer Organization course: [Ex1-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1).
 
 
