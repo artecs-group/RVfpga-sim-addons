@@ -308,6 +308,15 @@ Do the same tasks as in Exercise 1.
 
 
 #### Exercise 8
+The following code increments the components of a vector with 10 elements. Translate it into RISC-V assembly code. 
+
+```
+#define N 10
+int V[N] = {12, 1, -2, 15, -8, 4, -31, 8, 8, 25};
+for (i = 0; i < N; i++)
+ V[i] = V[i] + 1;
+```
+
 This is a possible solution for the exercise:
 
 ```
@@ -339,6 +348,18 @@ j fin
 Do the same tasks as in Exercise 1.
 
 #### Exercise 9
+The following code counts the number of components greater than 0 within a vector with 6 elements. Translate it into RISC-V assembly code. 
+
+```
+#define N 6
+int V[N] = {14, 1, -2, 7, -8, 4};
+int count = 0;
+for (i = 0; i < N; i++) {
+ if (V[i] > 0)
+ count = count + 1;
+}
+```
+
 This is a possible solution for the exercise:
 
 ```
