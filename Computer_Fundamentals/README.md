@@ -611,14 +611,14 @@ ret
 
 
 ### Labs about RISC-V Architecture and Assembly
-Students can try to resolve the exercises proposed in the UCM Computer Organization course: 
+Students can now resolve the exercises proposed in Lab 1 of the UCM Computer Organization course: 
 
 - [Exercise 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1)
 - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-2)
 - [Exercise 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-3)
 - [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-4)
 
-They can also resolve the labs proposed at [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html) and summarized next.
+They can also resolve the labs proposed at [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html):
 
 - [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link)
 - [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)
@@ -631,4 +631,10 @@ They can also resolve the labs proposed at [FC2](https://www.fdi.ucm.es/profesor
 
 ## RISC-V Single/Multi-Cycle and Pipelined Processors
 
-To-Do
+Students can resolve the exercises proposed in Lab 2 of the UCM Computer Organization course which are related with Ripes. Specifically:
+
+- [Ripes Processors](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#ripes)
+- [Exercise 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-1)
+- [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-2)
+- [Exercise 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-3)
+- [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2#exercise-4)
