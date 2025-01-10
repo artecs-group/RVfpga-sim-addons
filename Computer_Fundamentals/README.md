@@ -270,6 +270,76 @@ j fin
 Do the same tasks as in Exercise 1.
 
 
+#### Exercise 8
+This is a possible solution for the exercise:
+
+```
+.global main
+
+.equ n,10
+
+.data
+v: .word 12,1,-2,15,-8,4,-31,8,8,25
+
+.text
+main:
+    li s1,n # s1=n
+    mv s2,zero # s2 es i
+    for:
+    beq s2,s1,fin
+        la t1,v # t1= @base de v
+        slli t3,s2,2 # i*4
+        add t2,t1,t3 # t2= @efectiva de v[i]
+        lw s3,0(t2)
+        addi s3,s3,1
+        sw s3,0(t2)
+        addi s2,s2,1 # i=i+1
+    j for
+fin:
+j fin
+```
+
+Do the same tasks as in Exercise 1.
+
+#### Exercise 9
+This is a possible solution for the exercise:
+
+```
+.global main
+
+.equ n,6
+
+.data
+v: .word -14,1,-2,-7,-8,4
+count: .word 0
+
+.text
+main:
+la t1,v # t1 tiene la dirección base de v
+li t2,n # t2=n
+li t3,0 # t3 es el índice
+li s2,0 # s2 = count =0
+for:
+   bge t3,t2,fin_for
+   slli t5,t3,2 # t5=i*4
+   add t5,t5,t1 # @=i*4+ @b
+   lw s1,0(t5) # @s1=v[i]
+   li t6,0 # t6 =0
+   if:
+   ble s1,t6,fin_if
+       addi s2,s2,1
+   fin_if:
+   addi t3,t3,1
+   j for
+fin_for:
+la t1,count
+sw s2,0(t1)
+end:
+j end
+```
+
+Do the same tasks as in Exercise 1.
+
 ### Labs about RISC-V Architecture and Assembly
 We next show the labs proposed in the course.
 
