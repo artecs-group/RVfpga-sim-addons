@@ -247,11 +247,11 @@ main:
     while:
         beq s1,s2,fin_while
             ble s1,s2,else
-            sub s1,s1,s2 # a=a-b
-        j fin_if
-        else:
-            sub s2,s2,s1 # b=b-a
-        fin_if:
+                sub s1,s1,s2 # a=a-b
+            j fin_if
+            else:
+                sub s2,s2,s1 # b=b-a
+            fin_if:
         j while
     fin_while:
     la t3,mcd # t3 = @mcd
