@@ -398,6 +398,113 @@ j end
 
 Do the same tasks as in Exercise 1.
 
+
+#### Exercise 16
+Write a C and a RISC-V assembly program to implement a variant of the bubble sort algorithm. This variant sorts the elements of the vector according to the following code. 
+
+```
+do {
+ swapped = false
+ for (i = 0; i <= N-2; i++){
+ if (V[i] > V[i+1]){
+ swap( V[i], V[i+1] )
+ swapped = true
+ }
+} while swapped
+```
+
+This is a possible solution for the exercise in C:
+
+```
+#define N 4
+
+int V[N]={5,2,3,1};
+
+void main(void)
+{
+   int swapped=1, i;
+
+   while(swapped){
+       swapped=0;
+       for (i=0; i<(N-1); i++){
+           if (V[i] > V[i+1]){
+               swap(&V[i], &V[i+1]);
+               swapped=1;
+           }
+       }
+   }
+
+   while(1);
+
+}
+
+void swap(int *V, int *W){
+   int temp;
+   temp=*V;
+   *V=*W;
+   *W=temp;
+}
+```
+
+This is a possible solution for the exercise in assembly:
+
+```
+.global main
+.equ n, 10
+
+.data
+V: .word 2,5,6,0,9,4,6,5,-10,-1
+
+.text
+main:
+li s4,n # s1 =n
+addi s4,s4,-1
+do:
+   mv s3,zero # s3= swapped = false
+   mv s5,zero # t1=i
+   for:
+       bge s5,s4, fin_for
+       la t2,V # t2= @base v
+       slli t3,s5,2 # i*4
+       add a0,t3,t2 # @i
+       lw s1,0(a0) # V[i]
+       addi a1,a0,4 # @i +1
+       lw s2,0(a1) # V[i +1]
+       if:
+           ble s1,s2,fin_if
+           call swap
+           li s3,1 # swapped = true
+       fin_if:
+       addi s5,s5,1
+   j for
+   fin_for:
+   li t4,1
+beq s3,t4,do
+fin:
+j fin
+
+swap:
+# prologo
+    addi sp,sp,-8
+    sw s1,0(sp)
+    sw s2,4(sp)
+# cuerpo
+    lw s1,0(a0)
+    lw s2,0(a1)
+    sw s1,0(a1)
+    sw s2,0(a0)
+# epílogo
+    lw s1,0(sp)
+    lw s2,4(sp)
+    addi sp,sp,8
+jr ra # también ret
+```
+
+Do the following tasks:
+- Analyze and simulate the C program in Ripes. Test different optimization levels and compare the code generated in each case.
+- Analyze and Ssimulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
+
+
 ### Labs about RISC-V Architecture and Assembly
 We next show the labs proposed in the course.
 
