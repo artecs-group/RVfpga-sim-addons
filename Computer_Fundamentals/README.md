@@ -169,6 +169,16 @@ int main(void)
 We next show the solution for some of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)).
 
 #### Exercise 1
+Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of the variables.
+
+```
+int x = 10, y = 5;
+if (x >= y) {
+ x = x + 2;
+ y = y - 2;
+}
+```
+
 This is a possible solution for the exercise:
 
 ```
@@ -201,6 +211,20 @@ Do the following tasks:
 
 
 #### Exercise 2
+Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of the variables.
+
+```
+int x = 5, y = 10;
+if (x >= y) {
+ x = x + 2;
+ y = y + 2;
+}
+else {
+ x = x - 2;
+ y = y - 2;
+}
+```
+
 This is a possible solution for the exercise:
 
 ```
@@ -235,6 +259,19 @@ Do the same tasks as in Exercise 1.
 
 
 #### Exercise 6
+The following program calculates the greatest common divisor of two numbers ```a``` and ```b``` according to the Euclidean algorithm. Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of variables ```a``` and ```b``` and to reserve memory space for output variable ```gcd```.
+
+```
+int a=5, b=15, gcd;
+while (a  b) {
+ if (a > b)
+ a = a - b;
+ else
+ b = b - a;
+}
+gcd = a;
+```
+
 This is a possible solution for the exercise:
 
 ```
