@@ -501,7 +501,7 @@ jr ra # también ret
 
 Do the following tasks:
 - Analyze and simulate the C program in Ripes. Test different optimization levels and compare the code generated in each case.
-- Analyze and Ssimulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
+- Analyze and simulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
 
 
 #### Exercise 18
