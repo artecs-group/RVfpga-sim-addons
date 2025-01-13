@@ -242,6 +242,10 @@ This is the .data section at the end:
 
 ![image](https://github.com/user-attachments/assets/92075615-a2a3-4787-85b9-34463ff5b696)
 
+Finally, this is the .text section, that includes the assembled program in binary. You can compare it with the one shown in the Editor tab:
+
+![image](https://github.com/user-attachments/assets/ef8e2d4a-1c9a-4376-bc03-2ef31cc9169a)
+
 
 #### Exercise 2
 Write a RISC-V assembly program that implements the following code. 
