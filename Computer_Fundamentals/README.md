@@ -168,7 +168,7 @@ int main(void)
 We next show the solution in Ripes for a subset of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). The remaining exercises can also be resolved and tested by the students in Ripes.
 
 #### Exercise 1
-Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of the variables.
+Write a RISC-V assembly program that implements the following code.
 
 ```
 int x = 10, y = 5;
@@ -178,7 +178,14 @@ if (x >= y) {
 }
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the following tasks:
+- Analyze the assembled code. Pay special attention to the translation of pseudo-instructions to RISC-V instructions.
+- Simulate the program in Ripes step-by-step. Test different values for ```x``` and ```y```.
+- Analyze the registrs during the execution.
+- Analyze the memory state at the beginning and at the end of the execution. Analyze both the ```.text``` and the ```.data``` sections.
+
+
+*SOLUTION:*
 
 ```
 .global main # Hace global la etiqueta " main "
@@ -202,15 +209,9 @@ fin:
 j fin
 ```
 
-Do the following tasks:
-- Analyze the assembled code. Pay special attention to the translation of pseudo-instructions to RISC-V instructions.
-- Simulate the program in Ripes step-by-step. Test different values for ```x``` and ```y```.
-- Analyze the registrs during the execution.
-- Analyze the memory state at the beginning and at the end of the execution. Analyze both the ```.text``` and the ```.data``` sections.
-
 
 #### Exercise 2
-Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of the variables.
+Write a RISC-V assembly program that implements the following code. 
 
 ```
 int x = 5, y = 10;
@@ -224,7 +225,9 @@ else {
 }
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the same tasks as in Exercise 1.
+
+*SOLUTION:*
 
 ```
 .global main
@@ -254,11 +257,9 @@ fin:
 j fin
 ```
 
-Do the same tasks as in Exercise 1.
-
 
 #### Exercise 6
-The following program calculates the greatest common divisor of two numbers ```a``` and ```b``` according to the Euclidean algorithm. Write a RISC-V assembly program that implements the following code. Use the ```.data``` section to assign the initial value of variables ```a``` and ```b``` and to reserve memory space for output variable ```gcd```.
+The following program calculates the greatest common divisor of two numbers ```a``` and ```b``` according to the Euclidean algorithm. Write a RISC-V assembly program that implements the following code.
 
 ```
 int a=5, b=15, gcd;
@@ -271,7 +272,9 @@ while (a  b) {
 gcd = a;
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the same tasks as in Exercise 1.
+
+*SOLUTION:*
 
 ```
 .global main
@@ -303,8 +306,6 @@ fin:
 j fin
 ```
 
-Do the same tasks as in Exercise 1.
-
 
 #### Exercise 8
 The following code increments the components of a vector with 10 elements. Translate it into RISC-V assembly code. 
@@ -316,7 +317,9 @@ for (i = 0; i < N; i++)
  V[i] = V[i] + 1;
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the same tasks as in Exercise 1.
+
+*SOLUTION:*
 
 ```
 .global main
@@ -344,7 +347,6 @@ fin:
 j fin
 ```
 
-Do the same tasks as in Exercise 1.
 
 #### Exercise 9
 The following code counts the number of components greater than 0 within a vector with 6 elements. Translate it into RISC-V assembly code. 
@@ -359,7 +361,9 @@ for (i = 0; i < N; i++) {
 }
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the same tasks as in Exercise 1.
+
+*SOLUTION:*
 
 ```
 .global main
@@ -395,8 +399,6 @@ end:
 j end
 ```
 
-Do the same tasks as in Exercise 1.
-
 
 #### Exercise 16
 Write a C and a RISC-V assembly program to implement a variant of the bubble sort algorithm. This variant sorts the elements of the vector according to the following code. 
@@ -412,7 +414,11 @@ do {
 } while swapped
 ```
 
-This is a possible solution for the exercise in C that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the following tasks:
+- Analyze and simulate the C program in Ripes. Test different optimization levels and compare the code generated in each case.
+- Analyze and simulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
+
+*SOLUTION IN C:*
 
 ```
 #define N 4
@@ -445,7 +451,7 @@ void swap(int *V, int *W){
 }
 ```
 
-This is a possible solution for the exercise in assembly that works in Ripes:
+*SOLUTION IN RISC-V ASSEMBLY:*
 
 ```
 .global main
@@ -499,10 +505,6 @@ swap:
 jr ra # también ret
 ```
 
-Do the following tasks:
-- Analyze and simulate the C program in Ripes. Test different optimization levels and compare the code generated in each case.
-- Analyze and simulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention. Compare it with the program generated in C.
-
 
 #### Exercise 18
 Given two points ```P1(x1, y1)``` and ```P2(x2, y2)```, their Chebyshev distance can be calculated with the following algorithm: 
@@ -536,7 +538,10 @@ for (i = 0; i < N; i++)
 }
 ```
 
-This is a possible solution for the exercise that works in Ripes:
+Once you have completed your version of the program in assembly, compare it with the solution provided below and test the programs in Ripes. Do the following tasks:
+- Analyze and simulate the RISC-V assembly program in Ripes. Pay special attention to the RISC-V calling convention.
+
+*SOLUTION:*
 
 ```
 .global main
