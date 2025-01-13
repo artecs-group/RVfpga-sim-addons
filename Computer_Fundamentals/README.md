@@ -225,7 +225,7 @@ Here you could show screenshots at different points of the simulation or even a 
 
 **Analyze the registrs during the execution.**
 
-As an example, we next show the register file at the end of the ```if``` condition, which is met in this case:
+You can analyze the registers after each cycle. As an example, we next show the register file at the end of the ```if``` condition, which is met in this case:
 
 ![image](https://github.com/user-attachments/assets/a7f6b5e4-c0a4-4af7-b8bd-3d3743ae8918)
 
