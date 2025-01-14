@@ -690,6 +690,7 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
+Modify the previous program by adding a new output variable, ```res2```, where only the values of ```i``` that are multiples of 4 are accumulated. A number is a multiple of 4 if its two least significant binary bits are 00. To check this, use an ```and``` operation between ```i``` and 3 (which is 11 in binary) and verify if the result is 0 (multiple of 4) or not.
 
 ### Lab 2
 
