@@ -696,7 +696,7 @@ Modify the previous program by adding a new output variable, ```res2```, where o
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link).*
 
-Develop a RISC‐V assembly program with the following high‐level behavior. This program will sort an integer vector V into a target vector W. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project in Ripes and confirm that the result is correct.
+Develop a RISC‐V assembly program with the high‐level behavior shown next. This program will sort an integer vector V into a target vector W in ascending order. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project in Ripes and confirm that the result is correct.
 
 ```
 #define N 8
@@ -719,6 +719,11 @@ for (j = 0; j < N; j++) {
 }
 ```
 
+Create a new global integer variable called ```NumMay``` initialized to 0. At the end of the execution, this variable should store the number of elements in the vector ```V``` that are greater than or equal to five.
+
+Include a new vector ```C``` where the data is sorted in descending order.
+
+Include two new vectors, ```D``` and ```E```, in the code. The first should store the even elements in ascending order, and the second should store the odd elements in ascending order.
 
 ### Lab 3
 
