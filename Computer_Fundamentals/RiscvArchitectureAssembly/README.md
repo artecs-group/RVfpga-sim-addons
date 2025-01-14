@@ -693,7 +693,7 @@ for (int i = 0; i < N; i++) {
 
 ### Lab 2
 
-*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)*
+*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link).*
 
 Develop a RISC‐V assembly program the following high‐level behavior. This program will sort an integer vector V into a target vector W. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project. Check that the result is correct.
 
@@ -721,7 +721,7 @@ for (j = 0; j < N; j++) {
 
 ### Lab 3
 
-*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link)*
+*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link).*
 
 Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used.
 
@@ -768,7 +768,7 @@ void main() {
 
 ### Lab 4
 
-*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link)*
+*NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link).*
 
 Test in Ripes the following C program, that determines which of two vectors is farther from the origin.
 
