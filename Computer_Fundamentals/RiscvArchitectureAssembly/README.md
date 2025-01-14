@@ -846,7 +846,7 @@ Note that the program must use two new functions that you must also implement in
 
 Function ```idiv:```
 
-<img src="https://github.com/user-attachments/assets/11790f62-f709-498b-acb9-ce2149e968df" width="300" />
+<img src="https://github.com/user-attachments/assets/11790f62-f709-498b-acb9-ce2149e968df" width="250" />
 
 Function ```vsum:```
 
