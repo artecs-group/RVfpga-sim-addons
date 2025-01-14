@@ -833,7 +833,7 @@ void main () {
 }
 ```
 
-Implement and test the following program, which combines C and RISC-V assembly languages, to determine which of two vectors is farther from the origin. Note that function ```guardar``` is implemented in assembly. Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly.
+Implement and test the following program, which combines C and RISC-V assembly languages, to determine which of two vectors is farther from the origin. Note that function ```guardar``` is implemented in assembly. Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly in a similar way.
 
 ```
 # define N 5
