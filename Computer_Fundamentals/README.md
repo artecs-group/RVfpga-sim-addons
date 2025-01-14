@@ -648,10 +648,61 @@ ret
 
 
 ### Labs about RISC-V Architecture and Assembly
-Work on the labs proposed at [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html):
 
 #### Lab 1
-Original script for RISC-V Eclipse-based simulator available here: [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link).
+
+Test the following example code in C:
+
+```
+main(){
+   int a = 5 , b = 8;
+   int mayor ;
+  
+   if ( a > b ) mayor = a ;
+   else mayor = b ;
+}
+```
+
+Test the following example code in RISC-V assembly:
+
+```
+.data
+A: .word 5
+B: .word 8
+MAYOR: .word 0
+
+.text
+.global main
+
+main:
+  la t2 , A
+  lw t0 , 0( t2 )
+  la t3 , B
+  lw t1 , 0( t3 )
+  ble t0 , t1 , mayb
+    la t4 , MAYOR
+    sw t0 , 0( t4 )
+    j fin
+  mayb:
+    la t4 , MAYOR
+    sw t1 , 0( t4 )
+fin:
+j fin
+```
+
+Develop a RISC‐V assembly program that implements the following high‐level behavior. Build and debug the project. Check that the result is correct.
+
+```
+#define N 10
+int res = 0 ;
+for (int i = 0; i < N; i++) {
+    res += i;
+}
+```
+
+
+*NOTE: Original script for RISC-V Eclipse-based simulator available here: [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link).*
+
 
 #### Lab 2
 Original script for RISC-V Eclipse-based simulator available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)
