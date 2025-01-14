@@ -1,4 +1,9 @@
 # RISC-V Architecture and Assembly Language
+We provide instructions, exercises, and labs to help students learn the RISC-V architecture and program in RISC-V assembly. Specifically, follow these steps:
+1. Install Ripes as explained [here]().
+2. Start using Ripes as described [here]().
+3. Complete all exercises provided in the sheet as described [here]().
+4. Work on the labs as detailed [here]().
 
 ## Installation of Ripes
 
