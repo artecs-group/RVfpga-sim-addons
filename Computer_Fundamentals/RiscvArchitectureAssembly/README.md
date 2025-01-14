@@ -1,6 +1,6 @@
 # RISC-V Architecture and Assembly Language
 
-## Installation
+## Installation of Ripes
 
 1. Install Ripes: Follow the instructions provided at this link: [RipesInstallation](https://github.com/mortbopet/Ripes?tab=readme-ov-file#downloading--installation). Note that you could build the simulator yourself, but it is easier to use precompiled binaries. Specifically, use the latest version (v2.2.6) of the precompiled binaries available [here](https://github.com/mortbopet/Ripes/releases). Note that you must download the binaries that correspond to your Operating System.
 
@@ -9,7 +9,7 @@
     - Register the toolchain in Ripes following the instructions provided at this link: [ToolchainRegistration](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md#toolchain-registration).
 
 
-## Basic Use
+## Basic Use of Ripes
 
 1. Start the simulator in your device. Read the information provided at this link: [Introduction to Ripes](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md). Specifically, read the following sections:
     - [Editor](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-editor-tab)  
@@ -147,7 +147,7 @@ int main(void)
   <img src="../Images/Execution.png" width=70% height=70%>
 </p>
 
-## Exercises about RISC-V Architecture and Assembly
+## Exercises about RISC-V Architecture and Assembly in Ripes
 We next show the solution in Ripes for a subset of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). The remaining exercises can also be resolved and tested by the students in Ripes.
 
 ### Exercise 1
@@ -630,7 +630,7 @@ ret
 ```
 
 
-## Labs about RISC-V Architecture and Assembly
+## Labs about RISC-V Architecture and Assembly in Ripes
 
 ### Lab 1
 
