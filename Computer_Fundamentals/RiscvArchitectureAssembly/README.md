@@ -24,7 +24,7 @@
   <img src="../Images/EditorFigure.png" width=80% height=80%>
 </p>
 
-### Configuration
+#### Configuration
 
 3. Before simulating the program, select the Single Cycle processor, enable the M extension and disable the C extension:
 
@@ -32,7 +32,7 @@
   <img src="../Images/SingleCycle.png" width=80% height=80%>
 </p>
 
-### RISC-V Assembly Program
+#### RISC-V Assembly Program
 
 4. To simulate a RISC-V assembly program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
 
