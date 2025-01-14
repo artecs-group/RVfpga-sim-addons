@@ -881,11 +881,14 @@ void main () {
  guardar ( mayor , & mayor_u ) ;
 
  asm volatile (
+      "j end\n"
+
       "guardar:\n"
       "sb a0, 0(a1)\n"
       "ret\n"
- );
 
+      "end:\n"
+ );
 
  while (1) ;
 }
