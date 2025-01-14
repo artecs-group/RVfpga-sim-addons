@@ -641,7 +641,7 @@ ret
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link).*
 
-Test the following example code in C:
+Test the following C example in Ripes:
 
 ```
 main(){
@@ -653,7 +653,7 @@ main(){
 }
 ```
 
-Test the following example code in RISC-V assembly:
+Test the following RISC-V assembly example code in Ripes:
 
 ```
 .data
@@ -680,7 +680,7 @@ fin:
 j fin
 ```
 
-Develop a RISC‐V assembly program that implements the following high‐level behavior. Build and debug the project. Check that the result is correct.
+Develop a RISC‐V assembly program that implements the following high‐level behavior. Build and debug the project in Ripes, and confirm that the result is correct.
 
 ```
 #define N 10
@@ -695,7 +695,7 @@ for (int i = 0; i < N; i++) {
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link).*
 
-Develop a RISC‐V assembly program the following high‐level behavior. This program will sort an integer vector V into a target vector W. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project. Check that the result is correct.
+Develop a RISC‐V assembly program with the following high‐level behavior. This program will sort an integer vector V into a target vector W. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project in Ripes and confirm that the result is correct.
 
 ```
 #define N 8
@@ -723,7 +723,7 @@ for (j = 0; j < N; j++) {
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link).*
 
-Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used.
+Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used. Build and debug the project in Ripes and confirm that the result is correct.
 
 ```
 int mul(int a, int b) {
@@ -736,7 +736,7 @@ int mul(int a, int b) {
 }
 ```
 
-Develop a RISC‐V assembly program to calculate the dot product of two vectors. Use the function implemented above.
+Develop a RISC‐V assembly program to calculate the dot product of two vectors. Call the ```mul``` function implemented above. Build and debug the project in Ripes and confirm that the result is correct.
 
 ```
 int dotprod(int V[], int W[], int n) {
@@ -748,7 +748,7 @@ int dotprod(int V[], int W[], int n) {
 }
 ```
 
-Develop a RISC‐V assembly program, which uses the two previous functions, to determine which of two vectors has a greater norm (length).
+Develop a RISC‐V assembly program, which calls the two previous functions (```mul``` and ```dotprod```), to determine which of two vectors has a greater norm (length).
 
 ```
 #define N 4
@@ -825,9 +825,9 @@ void main () {
 }
 ```
 
-Test in Ripes the following program, which combines C and RISC-V assembly languages, and that determines which of two vectors is farther from the origin. Note that this program performs the same functionality as the previous one, but in this case function ```guardar``` is implemented in assembly. 
+Then, test in Ripes the following program, which combines C and RISC-V assembly languages, and that determines which of two vectors is farther from the origin. Note that this program performs the same functionality as the previous one, but in this case function ```guardar``` is implemented in assembly. 
 
-Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly in a similar way.
+Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly in a similar way and debug and run it in Ripes.
 
 ```
 # define N 5
