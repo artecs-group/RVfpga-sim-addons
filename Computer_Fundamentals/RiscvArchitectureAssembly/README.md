@@ -101,7 +101,7 @@
   <img src="../Images/DataSection.png" width=90% height=90%>
 </p>
 
-### C Program
+#### C Program
 
 10. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
 
