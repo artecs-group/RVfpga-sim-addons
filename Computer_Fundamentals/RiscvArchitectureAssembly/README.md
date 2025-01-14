@@ -21,7 +21,7 @@
     - Depending on the selected window, the view will change. In the following figure we see the Editor window, in which you can enter code in Assembler or C in the left window, the compiled/assembled code will be displayed in the middle window, and it shows the registers of the simulated processor on the right.
 
 <p align="center">
-  <img src="Images/EditorFigure.png" width=80% height=80%>
+  <img src="../Images/EditorFigure.png" width=80% height=80%>
 </p>
 
 ### Configuration
@@ -29,7 +29,7 @@
 3. Before simulating the program, select the Single Cycle processor, enable the M extension and disable the C extension:
 
 <p align="center">
-  <img src="Images/SingleCycle.png" width=80% height=80%>
+  <img src="../Images/SingleCycle.png" width=80% height=80%>
 </p>
 
 ### RISC-V Assembly Program
@@ -37,7 +37,7 @@
 4. To simulate a RISC-V assembly program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
 
 <p align="center">
-  <img src="Images/Ex1.png" width=80% height=80%>
+  <img src="../Images/Ex1.png" width=80% height=80%>
 </p>
 
 ```
@@ -69,7 +69,7 @@
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
 <p align="center">
-  <img src="Images/Menu.png" width=40% height=40%>
+  <img src="../Images/Menu.png" width=40% height=40%>
 </p>
 
 6. We can execute the code step by step:
@@ -77,7 +77,7 @@
     - The current instruction is shown highlighted in red.
 
 <p align="center">
-  <img src="Images/Execution.png" width=40% height=40%>
+  <img src="../Images/Execution.png" width=40% height=40%>
 </p>
 
 7. Disassembled/binary code window and registers window:
@@ -86,19 +86,19 @@
     - The middle window shows the disassembled code. Note that, unlike the source, it only includes instructions (not pseudo-instructions).
 
 <p align="center">
-  <img src="Images/Registers.png" width=90% height=90%>
+  <img src="../Images/Registers.png" width=90% height=90%>
 </p>
 
 8. The Memory window allows us to visualize the different memory sections. The figure shows the .text section, which includes the text of the code. At the bottom you must select, from the “Go to section” menu, the .text section. You can check that the hexadecimal code corresponds to the program instructions in the Editor.
 
 <p align="center">
-  <img src="Images/Memory.png" width=90% height=90%>
+  <img src="../Images/Memory.png" width=90% height=90%>
 </p>
 
 9. At the bottom, in the “Go to section” menu, we can switch to the .data section. You can check that the data correspond to the vector components in the Editor.
 
 <p align="center">
-  <img src="Images/DataSection.png" width=90% height=90%>
+  <img src="../Images/DataSection.png" width=90% height=90%>
 </p>
 
 ### C Program
@@ -106,7 +106,7 @@
 10. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
 
 <p align="center">
-  <img src="Images/Editor.png" width=90% height=90%>
+  <img src="../Images/Editor.png" width=90% height=90%>
 </p>
 
 ```
@@ -132,19 +132,19 @@ int main(void)
     - Compiler arguments: ```-O1``` (you can select other options such as -O0, -O2, etc.)
 
   <p align="center">
-    <img src="Images/Linker.png" width=90% height=90%>
+    <img src="../Images/Linker.png" width=90% height=90%>
   </p>
 
 12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
 <p align="center">
-  <img src="Images/Martillo.png" width=90% height=90%>
+  <img src="../Images/Martillo.png" width=90% height=90%>
 </p>
 
 13. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
 
 <p align="center">
-  <img src="Images/Execution.png" width=70% height=70%>
+  <img src="../Images/Execution.png" width=70% height=70%>
 </p>
 
 ## Exercises about RISC-V Architecture and Assembly
