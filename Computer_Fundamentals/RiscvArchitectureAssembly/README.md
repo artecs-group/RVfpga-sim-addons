@@ -844,8 +844,10 @@ Add the following functionality to the previous program. This new functionality 
 
 Note that the program must use two new functions that you must also implement in assembly:
 
+```idiv:```
 <img src="https://github.com/user-attachments/assets/11790f62-f709-498b-acb9-ce2149e968df" width="400" />
 
+```vsum:```
 <img src="https://github.com/user-attachments/assets/ef07d30c-9bb7-4474-a5e2-120abee36aaf" width="400" />
 
 
