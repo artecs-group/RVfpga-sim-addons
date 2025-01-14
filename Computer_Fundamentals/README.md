@@ -700,18 +700,199 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-
 *NOTE: Original script for RISC-V Eclipse-based simulator available here: [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link).*
 
 
 #### Lab 2
-Original script for RISC-V Eclipse-based simulator available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)
+
+Develop a RISC‐V assembly program the following high‐level behavior. This program will sort an integer vector V into a target vector W. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project. Check that the result is correct.
+
+```
+#define N 8
+#define INT_MAX 65536
+
+int V[N] = {‐7,3,‐9,8,15,‐16,0,3};
+int W[N];
+int min , index ;
+
+for (j = 0; j < N; j++) {
+    min = INT_MAX ;
+    for (i = 0; i < N; i++) {
+        if (V[i] < min ) {
+            min = V[i];
+            index = i ;
+        }
+    }
+    W[j] = V[index];
+    V[index] = INT_MAX ;
+}
+```
+
+*NOTE: Original script for RISC-V Eclipse-based simulator available here: [Lab 2 Spanish](https://drive.google.com/file/d/1Arfs1Qzv8lMRCRRB0M0ugKqZXWSvwogY/view?usp=drive_link) and [Lab 2 English](https://drive.google.com/file/d/1wIz-KVbmyh0cShWmqq17FFPhKjqD4m2V/view?usp=drive_link)*
 
 #### Lab 3
-Original script for RISC-V Eclipse-based simulator available here: [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link)
+
+Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used.
+
+```
+int mul(int a, int b) {
+    int res = 0;
+    while (b > 0) {
+        res += a;
+        b‐‐;
+    }
+    return res;
+}
+```
+
+Develop a RISC‐V assembly program to calculate the dot product of two vectors. Use the function implemented above.
+
+```
+int dotprod(int V[], int W[], int n) {
+    int acc = 0;
+    for (int i = 0; i < n; i++) {
+        acc += mul(V[i], W[i]);
+    }
+    return acc;
+}
+```
+
+Develop a RISC‐V assembly program, which uses the two previous functions, to determine which of two vectors has a greater norm (length).
+
+```
+#define N 4
+int A[] = {3,5,1,9}
+int B[] = {1,6,2,3}
+int res;
+void main() {
+    int normA = dotprod(A, A, N);
+    int normB = dotprod(B, B, N);
+    if (normA > normB)
+        res = 0xa;
+    else
+        res = 0xb;
+}
+```
+
+*NOTE: Original script for RISC-V Eclipse-based simulator available here: [Lab 3 Spanish](https://drive.google.com/file/d/1h-30tYPEItEp7HP_PFog_on8usOPHAIP/view?usp=drive_link) and [Lab 3 English](https://drive.google.com/file/d/1DG843vUgz7SzUuMzVe_iNZjI7YVk_Oyl/view?usp=drive_link)*
 
 #### Lab 4
-Original script for RISC-V Eclipse-based simulator available here: [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link)
+
+Implement and test the following C program to determine which of two vectors is farther from the origin.
+
+```
+# define N 5
+int U [N ] = {5 , 2, -3 , 7 , 6};
+int V [N ] = {6 , -1 , 1 , 0 , 3};
+char mayor_u ;
+
+
+void guardar ( char valor , char * ubicacion) {
+   * ubicacion = valor ;
+}
+
+
+int mul (int a , int b) {
+   int res = 0 , sign = 0;
+   if (a < 0) {
+     sign = 1;
+     a = -a ;
+   }
+   while (a --) res += b;
+   if ( sign )
+     return - res ;
+   else
+     return res ;
+}
+
+
+int i_sqrt (int a) {
+   int root = 0;
+   while ( mul ( root , root ) < a ) {
+     root ++;
+   }
+   return root ;
+}
+
+
+int eucl_dist (int w [] , int size ) {
+   int acc = 0;
+   for ( int i = 0; i < size ; i ++) {
+     acc += mul (w[ i] , w[ i ]) ;
+   }
+   return i_sqrt ( acc );
+}
+
+
+void main () {
+   int d_u = eucl_dist (U , N );
+   int d_v = eucl_dist (V , N );
+   char mayor = d_u > d_v ;
+   guardar ( mayor , & mayor_u ) ;
+   while (1) ;
+}
+```
+
+Implement and test the following program, which combines C and RISC-V assembly languages, to determine which of two vectors is farther from the origin. Note that function ```guardar``` is implemented in assembly. Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly.
+
+```
+# define N 5
+int U [N ] = {5 , 2, -3 , 7 , 6};
+int V [N ] = {6 , -1 , 1 , 0 , 3};
+char mayor_u ;
+
+
+int mul (int a , int b) {
+ int res = 0 , sign = 0;
+ if (a < 0) {
+   sign = 1;
+   a = -a ;
+ }
+ while (a --) res += b;
+ if ( sign )
+   return - res ;
+ else
+   return res ;
+}
+
+
+int i_sqrt (int a) {
+ int root = 0;
+ while ( mul ( root , root ) < a ) {
+   root ++;
+ }
+ return root ;
+}
+
+
+int eucl_dist (int w [] , int size ) {
+   int acc = 0;
+   for ( int i = 0; i < size ; i ++) {
+     acc += mul (w[ i] , w[ i ]) ;
+   }
+   return i_sqrt ( acc );
+}
+
+
+void main () {
+ int d_u = eucl_dist (U , N );
+ int d_v = eucl_dist (V , N );
+ char mayor = d_u > d_v ;
+ guardar ( mayor , & mayor_u ) ;
+
+ asm volatile (
+      "guardar:\n"
+      "sb a0, 0(a1)\n"
+      "ret\n"
+ );
+
+
+ while (1) ;
+}
+```
+
+
+*NOTE: Original script for RISC-V Eclipse-based simulator available here: [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link)*
 
 
 ---
