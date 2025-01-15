@@ -1,9 +1,9 @@
 # RISC-V Architecture and Assembly Language
 We provide instructions, exercises, and labs to help students learn the RISC-V architecture and program in RISC-V assembly. Specifically, follow these items:
-1. Install Ripes following the steps stated below [InstallRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#installation-of-ripes).
-2. Start using Ripes following the steps stated below [UseRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#basic-use-of-ripes).
-3. Complete all exercises included below [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-assembly-in-ripes).
-4. Work on the labs as detailed below [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
+1. Install Ripes following the steps stated below at [InstallRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#installation-of-ripes).
+2. Start using Ripes following the steps stated below at [UseRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#basic-use-of-ripes).
+3. Complete all exercises included below at [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-assembly-in-ripes).
+4. Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
 
 ## Installation of Ripes
 
