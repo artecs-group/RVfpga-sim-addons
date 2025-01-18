@@ -586,7 +586,6 @@ factorial:
   lw s2 ,4( sp )
   addi sp , sp ,8
   jr ra
-
 ```
 
 Run the code and answer the following questions. Add screenshots to complement your answers.
@@ -595,6 +594,34 @@ Run the code and answer the following questions. Add screenshots to complement y
 - Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
 - What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
 - Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
+
+The following code is a possible implementation in C of the computation of the factorial of a random integer number. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them. Analyze the simulation of each scenario in Ripes.
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+   int i,result,num;
+
+   srand(time(NULL));
+   num = (rand() % 10) + 1;
+
+   if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+
+   printf("Factorial = %d",result);
+
+   while(1);
+}
+```
 
 
 ### Exercise 18
