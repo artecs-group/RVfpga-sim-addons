@@ -39,11 +39,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 
 #### RISC-V Assembly Program
 
-4. To simulate a RISC-V assembly program, we simply type or copy it into the window on the left. For example, in the following figure you can see the program provided next (you can copy the code into your simulator and test it). On the right you can see the disassembled version.
-
-<p align="center">
-  <img src="../Images/Ex1.png" width=80% height=80%>
-</p>
+4. The following RISC-V assembly program subtracts 1 to each element of vector ```v```.
 
 ```
   .global main
@@ -70,6 +66,12 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
     fin:
     j fin
 ```
+
+In the next figure, you can see the previous program in Ripes. Copy the program on the editor window of your own Ripes simulator (the disassembled version should be generated).
+
+<p align="center">
+  <img src="../Images/Ex1.png" width=80% height=80%>
+</p>
 
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
