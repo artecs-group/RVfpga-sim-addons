@@ -595,6 +595,7 @@ Run the code and answer the following questions. Add screenshots to complement y
 - What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
 - Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
 
+### Extension to Exercise 17
 The following code is a possible implementation in C of the computation of the factorial of a random integer number. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them. Analyze the simulation of each scenario in Ripes.
 
 ```
