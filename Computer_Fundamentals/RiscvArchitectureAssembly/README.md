@@ -67,7 +67,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
     j fin
 ```
 
-In the next figure, you can see the previous program in Ripes. Copy the program on the editor window of your own Ripes simulator (the disassembled version should be generated).
+Copy the previous program into the left-most window of the editor tab in your Ripes simulator. The disassembled version will be generated, as shown below.
 
 <p align="center">
   <img src="../Images/Ex1.png" width=80% height=80%>
