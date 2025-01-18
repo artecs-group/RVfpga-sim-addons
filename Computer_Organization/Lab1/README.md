@@ -517,7 +517,7 @@ Run the code and answer the following questions. Add screenshots to complement y
 - Compile with -O1 (this item can only be tested in Whisper or Ripes, not on the board):
     - The function is very simple. Explain what it does and why it is so simple.
 
-Replace the previous code for the following one, in which the input integer number is generated randomly. Repeat the analysis of the functions generated using different optimization levels (-O0, -O1, -O2, -O3, -Os)
+Replace the previous code for the following one, in which the input integer number is generated randomly. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them and with respect to the previous code.
 
 ```
 #include <stdio.h>
