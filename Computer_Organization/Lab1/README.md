@@ -517,3 +517,30 @@ Run the code and answer the following questions. Add screenshots to complement y
 - Compile with -O1 (this item can only be tested in Whisper or Ripes, not on the board):
     - The function is very simple. Explain what it does and why it is so simple.
 
+Replace the previous code for the following one, in which the input integer number is generated randomly. Repeat the analysis of the functions generated using different optimization levels (-O0, -O1, -O2, -O3, -Os)
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void)
+{
+   int i,result,num;
+
+   srand(time(NULL));
+   num = (rand() % 10) + 1;
+
+   if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+
+   printf("Factorial = %d",result);
+
+   while(1);
+}
+```
