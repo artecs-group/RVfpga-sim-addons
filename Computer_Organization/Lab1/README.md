@@ -315,11 +315,30 @@ To simulate the program, type or copy it into the window on the left. For exampl
       </p>
 
 
-11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the program from Exercise 4 (find it [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#exercise-4)) can be seen in the following figure (you can find the code below):
+11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
 
 <p align="center">
-  <img src="Images/Editor.png" width=90% height=90%>
+  <img src="../Images/Editor.png" width=90% height=90%>
 </p>
+
+```
+int main(void)
+{
+   int i,result,num=7;
+
+   if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+
+   printf("Factorial = %d",result);
+
+   while(1);
+}
+```
 
 12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
