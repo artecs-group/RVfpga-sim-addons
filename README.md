@@ -3,7 +3,9 @@
 ## Teaching experiences -- Academic year 2024-25
 In this repository, we provide materials from various RVfpga-based teaching experiences conducted during the 2024-25 academic year.
 
-We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of two courses instructed at the University Complutense of Madrid (UCM).
+We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of three courses instructed at the University Complutense of Madrid (UCM).
+
++ Computer Fundamentals: This is a first-year course in the Computer Science degree program at UCM. In folder [Computer_Fundamentals](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals) of this repository you can find all the materials used in the course.
 
 + Computer Organization: This is a second-year course in the Computer Science degree program at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. 
 
@@ -13,9 +15,6 @@ We also participated in the [Master de Formación Permanente en Sistemas Microel
 
 Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
 
-In addition to all these RVfpga-based materials, in this repository we also provide the materials used in another course (not RVfpga-based but only Ripes-based) instructed at the University Complutense of Madrid (UCM).
-
-+ Computer Fundamentals: This is a first-year course in the Computer Science degree program at UCM. In folder [Computer_Fundamentals](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals) of this repository you can find all the materials used in the course.
 
 
 ## Papers and Presentations -- December-2024
