@@ -229,6 +229,25 @@ srli x4, x2, 7
 ![image](https://github.com/user-attachments/assets/61f575f3-6909-443c-afd7-dcacc3a53232)
 
 ### Data transfer instructions:
+```
+.data
+x: .word 10
+y: .word 5
+
+.text
+la x1,x
+la x2,y
+lw x3,0(x1)
+lw x4,0(x2)
+add x4,x3,x4
+sw x4,0(x2)
+```
+ This is the result after executing the program in Ripes. The code and registers are shown in the first figure and the ```.data``` memory section is shown next:
+
+ ![image](https://github.com/user-attachments/assets/e2bac434-8a0c-49ad-9a4c-f66176453a56)
+
+ ![image](https://github.com/user-attachments/assets/724ed8f6-7f5d-418c-b497-e47ea693c6f8)
+
 
 ### Branch instructions:
 
