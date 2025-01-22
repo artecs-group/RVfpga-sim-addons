@@ -218,6 +218,15 @@ xori x5, x2, 0x0ff
 
 ![image](https://github.com/user-attachments/assets/643b49b4-5df8-4f05-aa88-81b2e98ec750)
 
+### Shift instructions
+```
+li x2, 0x90700a34
+slli x3, x2, 7
+srli x4, x2, 7
+```
+ This is the result after executing the program in Ripes:
+
+![image](https://github.com/user-attachments/assets/61f575f3-6909-443c-afd7-dcacc3a53232)
 
 
 ## Exercises about RISC-V Architecture and Assembly in Ripes
