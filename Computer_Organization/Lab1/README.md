@@ -315,11 +315,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
       </p>
 
 
-11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, the next C program can be seen in the following figure (you can test it in your simulator):
-
-<p align="center">
-  <img src="../Images/Editor.png" width=90% height=90%>
-</p>
+11. To simulate a C program, write or copy it into the left window, marking "Input Type" as C language. For example, try the next C program (which we use later in an exercise):
 
 ```
 int main(void)
