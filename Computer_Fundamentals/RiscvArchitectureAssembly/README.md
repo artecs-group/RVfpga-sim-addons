@@ -157,6 +157,36 @@ int main(void)
 ## Initial Tests in Ripes
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
 
+#### Arithmetic instructions
+Do the following tests:
+
+***sub* instruction:**
+```
+addi x1, x0, 2
+addi x2, x0, 3
+sub x8, x2, x1
+```
+
+***addi* instruction:**
+```
+addi x1, x0, 2
+addi x2, x0, 3
+addi x8, x2, 76
+```
+
+***slt* and *sltu* instruction:**
+```
+addi x1, x0, -2
+addi x2, x0, 3
+slt x3, x1, x2
+sltu x4, x1, x2
+```
+
+Note that the *slt* instruction provides the result ```x3=1```, as *-2 < 3*, whereas the *sltu* instruction provides the result ```x4=0```, as *0xfffffffe > 3*.
+
+![image](https://github.com/user-attachments/assets/dc0df98f-828f-4965-99f4-559db99a4486)
+
+
 
 ## Exercises about RISC-V Architecture and Assembly in Ripes
 We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
