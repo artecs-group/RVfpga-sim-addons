@@ -158,7 +158,6 @@ int main(void)
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
 
 ### Arithmetic instructions
-Do the following tests:
 
 ***sub* instruction:**
 ```
@@ -196,6 +195,28 @@ mulh x4, x2, x1
  This is the result after executing the program in Ripes:
 
  ![image](https://github.com/user-attachments/assets/c0deb13e-6770-46e8-a367-e156a7b2b70c)
+
+***div* and *rem* instructions:**
+```
+li x1, 0x00200000
+li x2, 0x0f700ce4
+div x3, x2, x1
+rem x4, x2, x1
+```
+ This is the result after executing the program in Ripes:
+
+![image](https://github.com/user-attachments/assets/de3060b6-7d79-4541-93db-e2619b6e3992)
+
+### Logical instructions
+```
+li x2, 0x0f500a34
+ori x3, x2, 0x0ff
+andi x4, x2, 0x0ff
+xori x5, x2, 0x0ff
+```
+ This is the result after executing the program in Ripes:
+
+![image](https://github.com/user-attachments/assets/643b49b4-5df8-4f05-aa88-81b2e98ec750)
 
 
 
