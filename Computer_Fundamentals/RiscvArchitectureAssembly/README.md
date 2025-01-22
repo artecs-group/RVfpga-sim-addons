@@ -228,6 +228,14 @@ srli x4, x2, 7
 
 ![image](https://github.com/user-attachments/assets/61f575f3-6909-443c-afd7-dcacc3a53232)
 
+### Data transfer instructions:
+
+### Branch instructions:
+
+### *lui* instruction:
+
+### *auipc* instruction:
+
 
 ## Exercises about RISC-V Architecture and Assembly in Ripes
 We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
