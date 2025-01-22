@@ -419,9 +419,42 @@ while swapped
 - Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on this simulator. If you want to use it in Ripes, remove the initial ```include``` lines and copy the code to the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```. Test the execution of the program step-by-step, both in C and in RISC-V assembly. In the latter, identify and explain in detail the obtained ```swap``` and ```main``` functions.
+- The following code is a possible C implementation of the above pseudocode (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute the program on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```. Test the execution of the program step-by-step, both in C and in RISC-V assembly. In the latter, identify and explain in detail the obtained ```swap``` and ```main``` functions.
 - Finally, compile the code with optimization levels -O0 and -O1, and repeat the previous item. This item can only be tested in Whisper or Ripes, not on the board.
 
+**RIPES:**
+```
+#define N 4
+
+int V[N]={5,2,3,1};
+
+void main(void)
+{
+   int swapped=1, i;
+
+   while(swapped){
+       swapped=0;
+       for (i=0; i<(N-1); i++){
+           if (V[i] > V[i+1]){
+               swap(&V[i], &V[i+1]);
+               swapped=1;
+           }
+       }
+   }
+
+   while(1);
+
+}
+
+void swap(int *V, int *W){
+   int temp;
+   temp=*V;
+   *V=*W;
+   *W=temp;
+}
+```
+
+**WHISPER:**
 ```
 #if defined(D_NEXYS_A7)
    #include <bsp_printf.h>
