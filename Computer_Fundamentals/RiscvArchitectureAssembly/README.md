@@ -242,17 +242,29 @@ lw x4,0(x2)
 add x4,x3,x4
 sw x4,0(x2)
 ```
- This is the result after executing the program in Ripes. The code and registers are shown in the first figure and the ```.data``` memory section is shown next:
+This is the result after executing the program in Ripes. The code and registers are shown in the first figure and the ```.data``` memory section is shown next:
 
  ![image](https://github.com/user-attachments/assets/e2bac434-8a0c-49ad-9a4c-f66176453a56)
 
 ![image](https://github.com/user-attachments/assets/e8aad3af-e13f-499e-8439-3a2621d8abbc)
 
 ### Branch instructions:
+```
+li x1, 1
+li x2, 3
+bne x1, x2, 8
+add x1, x1, x2
+sub x2, x2, x1
+bne x1, x2, -12
+jal x3, -24
+```
 
-### *lui* instruction:
-
-### *auipc* instruction:
+### *lui* and *auipc* instructions:
+```
+lui x7, 0xabcde
+addi x7, x7, 0x123
+auipc x8, 0x4c37b
+```
 
 
 ## Exercises about RISC-V Architecture and Assembly in Ripes
