@@ -157,7 +157,7 @@ int main(void)
 ## Initial Tests in Ripes
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
 
-#### Arithmetic instructions
+### Arithmetic instructions
 Do the following tests:
 
 ***sub* instruction:**
@@ -174,7 +174,7 @@ addi x2, x0, 3
 addi x8, x2, 76
 ```
 
-***slt* and *sltu* instruction:**
+***slt* and *sltu* instructions:**
 ```
 addi x1, x0, -2
 addi x2, x0, 3
@@ -185,6 +185,17 @@ sltu x4, x1, x2
 Note that the *slt* instruction provides the result ```x3=1```, as *-2 < 3*, whereas the *sltu* instruction provides the result ```x4=0```, as *0xfffffffe > 3*.
 
 ![image](https://github.com/user-attachments/assets/dc0df98f-828f-4965-99f4-559db99a4486)
+
+***mul* and *mulh* instructions:**
+```
+li x1, 0x0f700ce4
+li x2, 0x00200000
+mul x3, x2, x1
+mulh x4, x2, x1
+```
+ This is the result after executing the program in Ripes:
+
+ ![image](https://github.com/user-attachments/assets/c0deb13e-6770-46e8-a367-e156a7b2b70c)
 
 
 
