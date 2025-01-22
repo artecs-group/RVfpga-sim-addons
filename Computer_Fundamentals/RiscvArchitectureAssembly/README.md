@@ -246,8 +246,7 @@ sw x4,0(x2)
 
  ![image](https://github.com/user-attachments/assets/e2bac434-8a0c-49ad-9a4c-f66176453a56)
 
- ![image](https://github.com/user-attachments/assets/724ed8f6-7f5d-418c-b497-e47ea693c6f8)
-
+![image](https://github.com/user-attachments/assets/e8aad3af-e13f-499e-8439-3a2621d8abbc)
 
 ### Branch instructions:
 
