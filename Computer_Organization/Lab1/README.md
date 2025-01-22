@@ -552,8 +552,29 @@ Run the code and answer the following questions. Add screenshots to complement y
 
 
 ## Exercise 4
-Given the following C code that computes the factorial of an integer number. The code is prepared for the RVfpga-Whisper simulator and at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on this simulator. If you want to use this program on Ripes, remove the initial ```include``` lines as well as the ```uartInit``` and the ```printfNexys``` functions, and copy the code to the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+Given the following C code that computes the factorial of an integer number (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
 
+**RIPES:**
+```
+int main(void)
+{
+   int i,result,num=7;
+
+   if (num > 1){
+      result = num;
+      for (i=num-1;i>1;i--)
+      result = result*i;
+   }
+   else
+      result=1;
+
+   printf("Factorial = %d",result);
+
+   while(1);
+}
+```
+
+**WHISPER:**
 ```
 #if defined(D_NEXYS_A7)
    #include <bsp_printf.h>
