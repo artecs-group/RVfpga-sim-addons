@@ -4,8 +4,9 @@ In this lab we review the RISC-V architecture and complete several exercises. Yo
 You can follow the next steps:
 1. If you are new to Computer Organization, you should start by reading Chapter 6 of the Harris and Harris book (RISC-V Edition).
 2. Then, following the detailed instructions provided below, you can test the [RVfpga-Whisper](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-rvfpga-whisper-in-the-virtual-machine) and [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#using-ripes-in-the-virtual-machine) if you do not have an FPGA board, or [RVfpga-Nexys](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab1/README.md#rvfpga-nexys) if you have the Nexys A7 FPGA board, to analyze RISC-V assembly and C programs.
-3. Then, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the previous tools.
-4. Finally, if you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4.
+3. Once everything is installed, perform the initial tests provided at [InitialTests](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvArchitectureAssembly#initial-tests-in-ripes). Note that this link points to a different site, so be sure to return here after completing the tests. 
+4. Then, you can resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1#exercise-1) on any of the previous tools.
+5. Finally, if you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 1 to 4.
 
 
 ## Using RVfpga-Whisper in the virtual machine
