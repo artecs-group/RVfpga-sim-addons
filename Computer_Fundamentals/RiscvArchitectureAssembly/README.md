@@ -42,7 +42,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 
 4. The following RISC-V assembly program subtracts 1 to each element of vector ```v```.
 
-```asm
+```c
   .global main
   
   .equ n ,10
@@ -160,14 +160,14 @@ Do the following basic tests to understand some of the instructions in the RISC-
 ### Arithmetic instructions
 
 ***addi* and *sub* instructions:**
-```asm
+```c
 addi x1, x0, 2
 addi x2, x0, 3
 sub x8, x2, x1
 ```
 
 ***slt* and *sltu* instructions:**
-```asm
+```c
 addi x1, x0, -2
 addi x2, x0, 3
 slt x3, x1, x2
@@ -179,7 +179,7 @@ Note that the *slt* instruction provides the result ```x3=1```, as *-2 < 3*, whe
 ![image](https://github.com/user-attachments/assets/dc0df98f-828f-4965-99f4-559db99a4486)
 
 ***mul* and *mulh* instructions:**
-```asm
+```c
 li x1, 0x0f700ce4
 li x2, 0x00200000
 mul x3, x2, x1
@@ -190,7 +190,7 @@ mulh x4, x2, x1
  ![image](https://github.com/user-attachments/assets/c0deb13e-6770-46e8-a367-e156a7b2b70c)
 
 ***div* and *rem* instructions:**
-```asm
+```c
 li x1, 0x00200000
 li x2, 0x0f700ce4
 div x3, x2, x1
@@ -201,7 +201,7 @@ rem x4, x2, x1
 ![image](https://github.com/user-attachments/assets/de3060b6-7d79-4541-93db-e2619b6e3992)
 
 ### Logical instructions
-```asm
+```c
 li x2, 0x0f500a34
 ori x3, x2, 0x0ff
 andi x4, x2, 0x0ff
@@ -212,7 +212,7 @@ xori x5, x2, 0x0ff
 ![image](https://github.com/user-attachments/assets/643b49b4-5df8-4f05-aa88-81b2e98ec750)
 
 ### Shift instructions
-```asm
+```c
 li x2, 0x90700a34
 slli x3, x2, 7
 srli x4, x2, 7
@@ -222,7 +222,7 @@ srli x4, x2, 7
 ![image](https://github.com/user-attachments/assets/61f575f3-6909-443c-afd7-dcacc3a53232)
 
 ### Data transfer instructions:
-```asm
+```c
 .data
 x: .word 10
 y: .word 5
@@ -242,7 +242,7 @@ This is the result after executing the program in Ripes. The code and registers 
 ![image](https://github.com/user-attachments/assets/e8aad3af-e13f-499e-8439-3a2621d8abbc)
 
 ### Branch instructions:
-```asm
+```c
 li x1, 1
 li x2, 3
 bne x1, x2, 8
@@ -253,7 +253,7 @@ jal x3, -24
 ```
 
 ### *lui* and *auipc* instructions:
-```asm
+```c
 lui x7, 0xabcde
 addi x7, x7, 0x123
 auipc x8, 0x4c37b
@@ -283,7 +283,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```asm
+```c
 .global main # Hace global la etiqueta " main "
 
 .data # sección de datos iniciados
@@ -358,7 +358,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```asm
+```c
 .global main
 
 .data # sección de datos iniciados
@@ -405,7 +405,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```asm
+```c
 .global main
 
 .data
@@ -448,7 +448,7 @@ for (i = 0; i < N; i++)
 
 This is a possible implementation in RISC-V assembly.
 
-```asm
+```c
 .global main
 
 .equ n,10
@@ -504,7 +504,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```asm
+```c
 .global main
 
 .equ n,6
@@ -588,7 +588,7 @@ void swap(int *V, int *W){
 
 *PROGRAM IN RISC-V ASSEMBLY:*
 
-```asm
+```c
 .global main
 .equ n, 10
 
@@ -648,7 +648,7 @@ Complete the following tasks (do them for the two programs, unless stated differ
 ### Exercise 17
 Given the following RISC-V assembly code:
 
-```asm
+```c
 .global main
 
 .equ n ,5
@@ -762,7 +762,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```asm
+```c
 .global main
 .equ n,5 #nº de puntos a testear (2*n componentes)
 
@@ -853,7 +853,7 @@ main(){
 
 Test the following RISC-V assembly example code in Ripes:
 
-```asm
+```c
 .data
 A: .word 5
 B: .word 8
