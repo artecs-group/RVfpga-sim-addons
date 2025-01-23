@@ -172,6 +172,9 @@ addi x1, x0, 2
 addi x2, x0, 3
 sub x8, x2, x1
 ```
+This is the result after executing the program in Ripes:
+
+![image](https://github.com/user-attachments/assets/fbac775f-6ca8-4fab-80a2-d4ec66473841)
 
 ***slt* and *sltu* instructions:**
 ```c
