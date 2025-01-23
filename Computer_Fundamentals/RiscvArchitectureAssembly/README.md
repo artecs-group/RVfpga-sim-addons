@@ -6,6 +6,9 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 4. Complete all exercises included below at [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-assembly-in-ripes).
 5. Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
 
+
+---
+
 ## Installation of Ripes
 
 1. Install Ripes: Follow the instructions provided at this link: [RipesInstallation](https://github.com/mortbopet/Ripes?tab=readme-ov-file#downloading--installation). Note that you could build the simulator yourself, but it is easier to use precompiled binaries. Specifically, use the latest version (v2.2.6) of the precompiled binaries available [here](https://github.com/mortbopet/Ripes/releases). Note that you must download the binaries that correspond to your Operating System.
@@ -14,6 +17,8 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
     - Follow the instructions provided at this link: [ToolchainInstallation](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md#toolchain). Note that you could build the toolchain yourself, but again it is easier to use precompiled binaries. Use the *sifive/freedom-tools* precompiled version, available [here](https://github.com/sifive/freedom-tools/releases/tag/v2020.04.0-Toolchain.Only). Note that you must download the binaries that correspond to your Operating System.
     - Register the toolchain in Ripes following the instructions provided at this link: [ToolchainRegistration](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md#toolchain-registration).
 
+
+---
 
 ## Basic Use of Ripes
 
@@ -154,6 +159,8 @@ int main(void)
 14. Recompile the program with a -O0 optimization level and the following two different scenarios: M extension enabled and M extension disabled (see step 3 above). Compare the assembly code generated for the ```main``` function in each scenario.
 
 
+---
+
 ## Initial Tests in Ripes
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
 
@@ -259,6 +266,8 @@ addi x7, x7, 0x123
 auipc x8, 0x4c37b
 ```
 
+
+---
 
 ## Exercises about RISC-V Architecture and Assembly in Ripes
 We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
@@ -832,6 +841,8 @@ pos:
 ret
 ```
 
+
+---
 
 ## Labs about RISC-V Architecture and Assembly in Ripes
 
