@@ -42,7 +42,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 
 4. The following RISC-V assembly program subtracts 1 to each element of vector ```v```.
 
-```
+```asm
   .global main
   
   .equ n ,10
@@ -111,7 +111,7 @@ Copy the previous program into the left-most window of the editor tab in your Ri
   <img src="../Images/Editor.png" width=90% height=90%>
 </p>
 
-```
+```c
 int main(void)
 {
    int i,result,num=7;
@@ -160,14 +160,14 @@ Do the following basic tests to understand some of the instructions in the RISC-
 ### Arithmetic instructions
 
 ***addi* and *sub* instructions:**
-```
+```asm
 addi x1, x0, 2
 addi x2, x0, 3
 sub x8, x2, x1
 ```
 
 ***slt* and *sltu* instructions:**
-```
+```asm
 addi x1, x0, -2
 addi x2, x0, 3
 slt x3, x1, x2
@@ -179,7 +179,7 @@ Note that the *slt* instruction provides the result ```x3=1```, as *-2 < 3*, whe
 ![image](https://github.com/user-attachments/assets/dc0df98f-828f-4965-99f4-559db99a4486)
 
 ***mul* and *mulh* instructions:**
-```
+```asm
 li x1, 0x0f700ce4
 li x2, 0x00200000
 mul x3, x2, x1
@@ -190,7 +190,7 @@ mulh x4, x2, x1
  ![image](https://github.com/user-attachments/assets/c0deb13e-6770-46e8-a367-e156a7b2b70c)
 
 ***div* and *rem* instructions:**
-```
+```asm
 li x1, 0x00200000
 li x2, 0x0f700ce4
 div x3, x2, x1
@@ -201,7 +201,7 @@ rem x4, x2, x1
 ![image](https://github.com/user-attachments/assets/de3060b6-7d79-4541-93db-e2619b6e3992)
 
 ### Logical instructions
-```
+```asm
 li x2, 0x0f500a34
 ori x3, x2, 0x0ff
 andi x4, x2, 0x0ff
@@ -212,7 +212,7 @@ xori x5, x2, 0x0ff
 ![image](https://github.com/user-attachments/assets/643b49b4-5df8-4f05-aa88-81b2e98ec750)
 
 ### Shift instructions
-```
+```asm
 li x2, 0x90700a34
 slli x3, x2, 7
 srli x4, x2, 7
@@ -222,7 +222,7 @@ srli x4, x2, 7
 ![image](https://github.com/user-attachments/assets/61f575f3-6909-443c-afd7-dcacc3a53232)
 
 ### Data transfer instructions:
-```
+```asm
 .data
 x: .word 10
 y: .word 5
@@ -242,7 +242,7 @@ This is the result after executing the program in Ripes. The code and registers 
 ![image](https://github.com/user-attachments/assets/e8aad3af-e13f-499e-8439-3a2621d8abbc)
 
 ### Branch instructions:
-```
+```asm
 li x1, 1
 li x2, 3
 bne x1, x2, 8
@@ -253,7 +253,7 @@ jal x3, -24
 ```
 
 ### *lui* and *auipc* instructions:
-```
+```asm
 lui x7, 0xabcde
 addi x7, x7, 0x123
 auipc x8, 0x4c37b
@@ -266,7 +266,7 @@ We next provide a selection of the exercises proposed in Module 3 ([ExercisesMod
 ### Exercise 1
 Write a RISC-V assembly program that implements the following code.
 
-```
+```c
 int x = 10, y = 5;
 if (x >= y) {
  x = x + 2;
@@ -283,7 +283,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```
+```asm
 .global main # Hace global la etiqueta " main "
 
 .data # sección de datos iniciados
@@ -342,7 +342,7 @@ Finally, this is the .text section, that includes the assembled program in binar
 ### Exercise 2
 Write a RISC-V assembly program that implements the following code. 
 
-```
+```c
 int x = 5, y = 10;
 if (x >= y) {
  x = x + 2;
@@ -358,7 +358,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```
+```asm
 .global main
 
 .data # sección de datos iniciados
@@ -390,7 +390,7 @@ j fin
 ### Exercise 6
 The following program calculates the greatest common divisor of two numbers ```a``` and ```b``` according to the Euclidean algorithm. Write a RISC-V assembly program that implements the following code.
 
-```
+```c
 int a=5, b=15, gcd;
 while (a  b) {
  if (a > b)
@@ -405,7 +405,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```
+```asm
 .global main
 
 .data
@@ -439,7 +439,7 @@ j fin
 ### Exercise 8
 The following code increments the components of a vector with 10 elements. 
 
-```
+```c
 #define N 10
 int V[N] = {12, 1, -2, 15, -8, 4, -31, 8, 8, 25};
 for (i = 0; i < N; i++)
@@ -448,7 +448,7 @@ for (i = 0; i < N; i++)
 
 This is a possible implementation in RISC-V assembly.
 
-```
+```asm
 .global main
 
 .equ n,10
@@ -490,7 +490,7 @@ Run the code and answer the following questions. Add screenshots of the executio
 ### Exercise 9
 The following code counts the number of components greater than 0 within a vector with 6 elements. Translate it into RISC-V assembly code. 
 
-```
+```c
 #define N 6
 int V[N] = {14, 1, -2, 7, -8, 4};
 int count = 0;
@@ -504,7 +504,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```
+```asm
 .global main
 
 .equ n,6
@@ -542,7 +542,7 @@ j end
 ### Exercise 16
 Write a C and a RISC-V assembly program to implement a variant of the bubble sort algorithm. This variant sorts the elements of the vector according to the following code. 
 
-```
+```c
 do {
  swapped = false
  for (i = 0; i <= N-2; i++){
@@ -555,7 +555,7 @@ do {
 
 *PROGRAM IN C:*
 
-```
+```c
 #define N 4
 
 int V[N]={5,2,3,1};
@@ -588,7 +588,7 @@ void swap(int *V, int *W){
 
 *PROGRAM IN RISC-V ASSEMBLY:*
 
-```
+```asm
 .global main
 .equ n, 10
 
@@ -648,7 +648,7 @@ Complete the following tasks (do them for the two programs, unless stated differ
 ### Exercise 17
 Given the following RISC-V assembly code:
 
-```
+```asm
 .global main
 
 .equ n ,5
@@ -698,7 +698,7 @@ Run the code and answer the following questions. Add screenshots to complement y
 ### Extension to Exercise 17
 The following code is a possible implementation in C of the computation of the factorial of a random integer number. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them. Analyze the simulation of each scenario in Ripes.
 
-```
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -728,7 +728,7 @@ int main(void)
 ### Exercise 18
 Given two points ```P1(x1, y1)``` and ```P2(x2, y2)```, their Chebyshev distance can be calculated with the following algorithm: 
 
-```
+```c
 int chebyshev(int x1, int y1, int x2, int y2)
 {
  int d1, d2;
@@ -744,7 +744,7 @@ Write a RISC-V assembly function, ```chebyshev(x1,x2,y1,y2)```, which will recei
 
 Then, program the following code and test it in Ripes. The program stores (into a vector D) the Chebyshev distances of a point P to each of the points within a vector V with N elements. P, V y D will be global variables. Vector V will contain 2N integers such that the i-th point will have coordinates (x, y) = (V[2*i], V[2*i + 1]) 
 
-```
+```c
 #define N, ...
 int Px, Py; // x , y coordinates of point P
 int V[2N]; //Vector with N points V=[x0,y0,x1,y1,...]
@@ -762,7 +762,7 @@ Once you have completed your version of the program in assembly, compare it with
 
 *SOLUTION:*
 
-```
+```asm
 .global main
 .equ n,5 #nº de puntos a testear (2*n componentes)
 
@@ -841,7 +841,7 @@ ret
 
 Test the following C example in Ripes:
 
-```
+```c
 main(){
    int a = 5 , b = 8;
    int mayor ;
@@ -853,7 +853,7 @@ main(){
 
 Test the following RISC-V assembly example code in Ripes:
 
-```
+```asm
 .data
 A: .word 5
 B: .word 8
@@ -880,7 +880,7 @@ j fin
 
 Develop a RISC‐V assembly program that implements the following high‐level behavior. Build and debug the project in Ripes, and confirm that the result is correct.
 
-```
+```c
 #define N 10
 int res = 0 ;
 for (int i = 0; i < N; i++) {
@@ -896,7 +896,7 @@ Modify the previous program by adding a new output variable, ```res2```, where o
 
 Develop a RISC‐V assembly program with the high‐level behavior shown next. This program will sort an integer vector V into a target vector W in ascending order. Note that the elements of W will be the elements of V, but sorted from minimum to maximum. The elements of V will be replaced with the value INT_MAX after they have been sorted in W. Build and debug the project in Ripes and confirm that the result is correct.
 
-```
+```c
 #define N 8
 #define INT_MAX 65536
 
@@ -929,7 +929,7 @@ Include two new vectors, ```D``` and ```E```, in the code. The first should stor
 
 Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used. Build and debug the project in Ripes and confirm that the result is correct.
 
-```
+```c
 int mul(int a, int b) {
     int res = 0;
     while (b > 0) {
@@ -942,7 +942,7 @@ int mul(int a, int b) {
 
 Develop a RISC‐V assembly program to calculate the dot product of two vectors. Call the ```mul``` function implemented above. Build and debug the project in Ripes and confirm that the result is correct.
 
-```
+```c
 int dotprod(int V[], int W[], int n) {
     int acc = 0;
     for (int i = 0; i < n; i++) {
@@ -954,7 +954,7 @@ int dotprod(int V[], int W[], int n) {
 
 Develop a RISC‐V assembly program, which calls the two previous functions (```mul``` and ```dotprod```), to determine which of two vectors has a greater norm (length).
 
-```
+```c
 #define N 4
 int A[] = {3,5,1,9}
 int B[] = {1,6,2,3}
@@ -990,7 +990,7 @@ Function ```vsum:```
 
 Test in Ripes the following C program, that determines which of two vectors is farther from the origin.
 
-```
+```c
 # define N 5
 int U [N ] = {5 , 2, -3 , 7 , 6};
 int V [N ] = {6 , -1 , 1 , 0 , 3};
@@ -1047,7 +1047,7 @@ Then, test in Ripes the following program, which combines C and RISC-V assembly 
 
 Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly in a similar way and debug and run it in Ripes.
 
-```
+```c
 # define N 5
 int U [N ] = {5 , 2, -3 , 7 , 6};
 int V [N ] = {6 , -1 , 1 , 0 , 3};
