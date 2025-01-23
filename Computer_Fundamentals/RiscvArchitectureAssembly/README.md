@@ -159,18 +159,11 @@ Do the following basic tests to understand some of the instructions in the RISC-
 
 ### Arithmetic instructions
 
-***sub* instruction:**
+***addi* and *sub* instructions:**
 ```
 addi x1, x0, 2
 addi x2, x0, 3
 sub x8, x2, x1
-```
-
-***addi* instruction:**
-```
-addi x1, x0, 2
-addi x2, x0, 3
-addi x8, x2, 76
 ```
 
 ***slt* and *sltu* instructions:**
