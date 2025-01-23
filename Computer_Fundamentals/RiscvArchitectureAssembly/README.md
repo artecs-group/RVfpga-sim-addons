@@ -268,6 +268,9 @@ lui x7, 0xabcde
 addi x7, x7, 0x123
 auipc x8, 0x4c37b
 ```
+This is the result after executing the program in Ripes.
+
+![image](https://github.com/user-attachments/assets/f996fbe1-5ce6-4585-9eeb-d6a255f2380e)
 
 
 ---
