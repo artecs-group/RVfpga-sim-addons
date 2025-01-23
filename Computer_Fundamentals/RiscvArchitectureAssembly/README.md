@@ -261,6 +261,7 @@ sub x2, x2, x1
 bne x1, x2, -12
 jal x3, -24
 ```
+View this [video](https://www.youtube.com/watch?v=IQtoig-ymBk), which illustrates the execution of the previous program, and try to understand the execution of each branch instruction.
 
 ### *lui* and *auipc* instructions:
 ```c
