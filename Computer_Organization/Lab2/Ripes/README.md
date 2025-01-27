@@ -1,11 +1,11 @@
 # Ripes processors
 
 ## Basic use
-Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the Single-Cycle processor and in the 5-stage Pipelined processor. As an example, to configure Ripes for the Pipelined processor, follow these steps:
+Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*. As an example, to configure Ripes for the *Complete Pipelined processor*, follow these steps:
 
 1. Start the Ripes simulator.
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
-   - Fully pipelined 5-stage processor: "5-stage processor".
+   - Fully pipelined 5-stage processor: *5-stage processor*.
    - RISC-V base instruction set plus M extension.
    - Extended layout.
 
@@ -18,6 +18,40 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
 <p align="center">
   <img src="../Images/View.png" width=40% height=40%>
 </p>
+
+### Simple test
+
+4. Let's perform a simple test in the *Single-Cycle Processor*. So, first configure the simulator as in steps 2 and 3 but selecting the *Single-Cycle processor*.
+
+![image](https://github.com/user-attachments/assets/ec511bc8-5df3-4fd4-bfae-485d18730213)
+
+5. Copy the following program into the Editor tab.
+
+```
+.data
+xa: .word 10
+xb: .word 0
+xc: .word 0
+
+.text
+la x9, xa
+L7:
+    lw x6, 0(x9)
+    sw x6, 8(x9)
+    or x4, x5, x6
+    beq x4, x4, L7
+```
+
+6. Perform the simulation of one iteration of loop L7, analyzing the control/data signals. These are the screenshots showing the execution of each instruction:
+
+![image](https://github.com/user-attachments/assets/eaa49742-f1b4-4106-9f78-319607fd83c2)
+
+![image](https://github.com/user-attachments/assets/a265ffc4-a31a-426a-9ff1-bf35401011d0)
+
+![image](https://github.com/user-attachments/assets/4e62c8cc-7dd6-4937-ad89-b317ca235391)
+
+![image](https://github.com/user-attachments/assets/fa5fd8a1-3825-4144-870d-f69f67fa9a3c)
+
 
 ---
 
