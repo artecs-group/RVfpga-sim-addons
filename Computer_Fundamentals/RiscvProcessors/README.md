@@ -6,4 +6,4 @@ Students can resolve the exercises proposed in Lab 2 of the UCM Computer Organiz
     - [ProcessorTab](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-processor-tab)  
     - [ProcessorView](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-processor-view)  
     - [ProcessorModels](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#selecting-processor-models)  
-- Then, follow the instructions and resolve the exercises provided here: [Ripes Processors](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab2/README.md).
+- Then, follow the instructions and resolve the exercises provided here: [Ripes Processors](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes).
