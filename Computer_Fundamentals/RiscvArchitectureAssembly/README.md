@@ -22,10 +22,10 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 
 ## Basic Use of Ripes
 
-1. Start the simulator in your device. Read the information provided at this link: [Introduction to Ripes](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md). Specifically, read the following sections:
-    - [Editor](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-editor-tab)  
-    - [Simulation Controls](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#controlling-the-simulator)  
-    - [Memory Viewer](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md#the-memory-tab)  
+1. Start the simulator in your device. Read the sections related with the Ripes processors provided at this link: [Introduction to Ripes](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md). Specifically, read the following sections:
+    - Editor 
+    - Simulation Controls
+    - Memory Viewer
 
 2. Environment:
     - On the left side you can see the different windows that can be displayed: Editor, Processor, Cache, Memory, I/O.
