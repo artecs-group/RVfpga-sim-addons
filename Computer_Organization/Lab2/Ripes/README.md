@@ -21,14 +21,6 @@ Ripes offers different processor models, and we are interested in using the 5-st
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-Then, reproduce and analyze all the examples provided in the following presentation: ([PresentationRipes](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view?usp=drive_link)). Verify that the diagrams and CPIs indicated in the presentation match what you get in the simulations. To simulate the programs in Ripes, you simply need to copy the codes from the presentation into the editor. Specifically, you must simulate the following examples:
-
-- Ripes:
-
-    * Program without dependencies
-    * Data hazard: consecutive add-add instructions
-    * Control hazard
-
 
 ## Exercise 1
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
