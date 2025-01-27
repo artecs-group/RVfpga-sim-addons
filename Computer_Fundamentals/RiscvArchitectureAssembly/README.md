@@ -277,9 +277,9 @@ z: .word 0
 .text
 
 # MAIN PROGRAM
-la x1,x
-la x2,y
-la x6,z
+la x1,x      # Copy address of x to x1
+la x2,y      # Copy address of y to x2
+la x6,z      # Copy address of z to x6
 lw x3,0(x1)
 lw x4,0(x2)
 jal x5, 12   # Call function 
