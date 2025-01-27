@@ -266,7 +266,7 @@ View this [video](https://www.youtube.com/watch?v=IQtoig-ymBk), which illustrate
 Then, test in your simulator the following program and analyze it carefully:
 ```c
 .data
-x: .word 10
+x: .word -10
 y: .word 5
 
 .text
@@ -279,7 +279,9 @@ sw x4,0(x2)
 
 jal x5, 0
 
-add x4,x3,x4
+add x4, x3, x4
+bge x4, x0, 8
+sub x4, x0, x4
 jalr x0, x5, 0
 ```
 
