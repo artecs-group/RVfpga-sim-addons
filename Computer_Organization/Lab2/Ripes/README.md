@@ -21,7 +21,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
 
 ### Simple test
 
-4. Let's perform a simple test in the *Single-Cycle Processor*. So, first configure the simulator as in steps 2 and 3 but selecting the *Single-Cycle processor*.
+4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). So, first configure the simulator as in steps 2 and 3 but selecting the *Single-Cycle processor*.
 
 ![image](https://github.com/user-attachments/assets/ec511bc8-5df3-4fd4-bfae-485d18730213)
 
