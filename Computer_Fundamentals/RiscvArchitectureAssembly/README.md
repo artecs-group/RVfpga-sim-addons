@@ -264,23 +264,28 @@ jal x3, -24
 View this [video](https://www.youtube.com/watch?v=IQtoig-ymBk), which illustrates the execution of the previous program, and try to understand the execution of each branch instruction.
 
 Then, test in your simulator the following program and analyze it carefully. The program computes the absolute value of the addition of two variables in a subrutine and stores it in a third variable:
+
 ```c
 .data
+
 x: .word -10
 y: .word 5
 z: .word 0
 
+
 .text
+
+# MAIN PROGRAM
 la x1,x
 la x2,y
 la x6,z
 lw x3,0(x1)
 lw x4,0(x2)
-jal x5, 12
+jal x5, 12   # Call function 
 sw x4,0(x6)
+jal x5, 0    # Stay here
 
-jal x5, 0
-
+# FUNCTION ADDITION AND ABSOLUTE
 add x4, x3, x4
 bge x4, x0, 8
 sub x4, x0, x4
