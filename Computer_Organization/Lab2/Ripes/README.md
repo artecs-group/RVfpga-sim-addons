@@ -19,6 +19,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
+---
 
 ## Exercise 1
 Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
