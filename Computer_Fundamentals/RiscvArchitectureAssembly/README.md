@@ -263,6 +263,26 @@ jal x3, -24
 ```
 View this [video](https://www.youtube.com/watch?v=IQtoig-ymBk), which illustrates the execution of the previous program, and try to understand the execution of each branch instruction.
 
+Then, test in your simulator the following program and analyze it carefully:
+```c
+.data
+x: .word 10
+y: .word 5
+
+.text
+la x1,x
+la x2,y
+lw x3,0(x1)
+lw x4,0(x2)
+jal x5, 12
+sw x4,0(x2)
+
+jal x5, 0
+
+add x4,x3,x4
+jalr x0, x5, 0
+```
+
 ### *lui* and *auipc* instructions:
 ```c
 lui x7, 0xabcde
