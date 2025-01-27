@@ -268,6 +268,7 @@ Then, test in your simulator the following program and analyze it carefully. The
 ```c
 .data
 
+# RESERVE SPACE IN MEMORY AND INITIALIZE THREE VALUES
 x: .word -10
 y: .word 5
 z: .word 0
