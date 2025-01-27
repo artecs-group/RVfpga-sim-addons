@@ -1,9 +1,7 @@
 # Ripes processors
 
 ## Basic use
-As we saw in the first lab, Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the 5-stage pipeline simulated by Ripes. 
-
-Ripes offers different processor models, and we are interested in using the 5-stage pipelined processor, which is very similar to the one studied in theory. To configure Ripes for this processor, follow these steps:
+Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in the Single-Cycle processor and in the 5-stage Pipelined processor. As an example, to configure Ripes for the Pipelined processor, follow these steps:
 
 1. Start the Ripes simulator.
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
