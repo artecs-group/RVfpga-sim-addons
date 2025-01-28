@@ -96,6 +96,16 @@ We next show partial solutions for item a as an example.
 
 ![image](https://github.com/user-attachments/assets/c0795f78-57a6-4cee-be5f-38a2994043c7)
 
+- ```PC``` = 0x8, which is the address where the ```add``` instruction is placed in memory.
+- ```Instr``` = 0x00418133, which are the 32 bits representing the ```add``` instruction.
+- ```R1``` and ```R2``` = 0x3 and 0x4, which are the indexes of the two source registers.
+- ```Wr``` = 0x2, which is the index of the destination register.
+- ```ALU-Op1``` and ```ALU-Op2``` = 0x4 and 0x6, which are the operands that the instruction must add.
+- ```ALU-Res``` = 0xa, which is the result of the addition.
+- ```3:1 Mux output``` = 0xa, which is the value to write in the Register File.
+- ```Write Enable RF``` = 1, as the result of the addition must be saved in the Register File.
+- ```2:1 Muxes control``` = REG1 and REG2, as the multiplexers must select the two registers as the ALU input operands.
+- ```3:1 Mux control``` = ALURES, as the 3:1 multiplexer must select the ALU output.
 
 Answer the following questions for the 5-stage Pipelined Processor:
 
