@@ -94,7 +94,7 @@ b. Which data/control signals are different in the execution of the ```sub``` an
 **SOLUTION:**
 We next show partial solutions for item a as an example.
 
-
+![image](https://github.com/user-attachments/assets/c0795f78-57a6-4cee-be5f-38a2994043c7)
 
 
 Answer the following questions for the 5-stage Pipelined Processor:
