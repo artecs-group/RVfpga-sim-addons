@@ -171,7 +171,7 @@ g. Recalculate the CPI of the loop assuming that the Secondary ALU available in 
 ---
 
 **SOLUTION:**
-We next exceptionally show partial solutions for this exercise as an example. Complete the solutions not provided.
+We next show partial solutions for this exercise as an example. Complete the solutions not provided.
 
 *a. Identify the hazards that occur and explain how this processor handles them.*
 
