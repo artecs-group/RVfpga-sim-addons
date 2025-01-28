@@ -4,6 +4,9 @@
 Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*. For example, to configure Ripes for the *Complete Pipelined processor*, follow these steps:
 
 1. Start the Ripes simulator.
+
+### Configuration of *Pipelined processor*
+
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
    - Fully pipelined 5-stage processor: *5-stage processor*.
    - RISC-V base instruction set plus M extension.
@@ -19,7 +22,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-### Simple test
+### Simple test in the *Single-Cycle processor*
 
 4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). So, first configure the simulator as in steps 2 and 3 but select the *Single-Cycle processor*.
 
@@ -42,7 +45,7 @@ L7:
     beq x4, x4, L7
 ```
 
-6. Perform the simulation of one iteration of loop L7, cycle-by-cycle, analyzing the control/data signals. These are the screenshots showing the execution of each instruction:
+6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
 
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
@@ -55,6 +58,13 @@ L7:
 
 - ```BEQ``` instruction:
 ![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
+
+
+### Simple test in the *Pipelined processor*
+
+7. Perform the simulation of one iteration of loop L7 in the Pipelined processor, cycle-by-cycle, and analyze the control/data signals. Note that you must reconfigure the simulator as in stages 2 and 3. These is the screenshot for a given cycle of the execution where the instructions of the loop are in the different stages of the pipeline:
+
+![image](https://github.com/user-attachments/assets/dfce65a8-74a8-4d53-8cae-3a94c0c6ef69)
 
 
 ---
