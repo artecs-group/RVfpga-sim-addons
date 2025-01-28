@@ -70,7 +70,7 @@ L7:
 ---
 
 ## Exercise 1
-Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
+The following code is executed in Ripes:
 
 ```
 .text
@@ -82,7 +82,22 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions:
+Answer the following questions for the Single-Cycle Processor:
+
+a. Simulate the program cycle-by-cycle and stop when the ```add``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
+
+![image](https://github.com/user-attachments/assets/d57bdd0a-0e63-4cc2-974a-2cd80bc1f53d)
+
+b. Which data/control signals are different in the execution of the ```sub``` and ```or``` instructions? Explain each of them.
+
+
+**SOLUTION:**
+We next show partial solutions for item a as an example.
+
+
+
+
+Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
