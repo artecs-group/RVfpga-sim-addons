@@ -99,7 +99,7 @@ c. Analyse the program on the Ripes simulator for the 5-stages processor and ans
 
 
 **SOLUTION:**
-We next exceptionally show partial solutions for items b and c as an example. Complete the solutions not provided.
+We next show partial solutions for items b and c as an example. Complete the solutions not provided.
 
 *b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
 
