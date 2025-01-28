@@ -1,7 +1,7 @@
 # Ripes processors
 
 ## Basic use
-Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*. As an example, to configure Ripes for the *Complete Pipelined processor*, follow these steps:
+Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*. For example, to configure Ripes for the *Complete Pipelined processor*, follow these steps:
 
 1. Start the Ripes simulator.
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
@@ -21,7 +21,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
 
 ### Simple test
 
-4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). So, first configure the simulator as in steps 2 and 3 but selecting the *Single-Cycle processor*.
+4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). So, first configure the simulator as in steps 2 and 3 but select the *Single-Cycle processor*.
 
 ![image](https://github.com/user-attachments/assets/ec511bc8-5df3-4fd4-bfae-485d18730213)
 
@@ -42,15 +42,19 @@ L7:
     beq x4, x4, L7
 ```
 
-6. Perform the simulation of one iteration of loop L7, analyzing the control/data signals. These are the screenshots showing the execution of each instruction:
+6. Perform the simulation of one iteration of loop L7, cycle-by-cycle, analyzing the control/data signals. These are the screenshots showing the execution of each instruction:
 
-![image](https://github.com/user-attachments/assets/eaa49742-f1b4-4106-9f78-319607fd83c2)
+- ```LW``` instruction:
+![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
-![image](https://github.com/user-attachments/assets/a265ffc4-a31a-426a-9ff1-bf35401011d0)
+- ```SW``` instruction:
+![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
 
-![image](https://github.com/user-attachments/assets/4e62c8cc-7dd6-4937-ad89-b317ca235391)
+- ```OR``` instruction:
+![image](https://github.com/user-attachments/assets/c5a48734-9266-4b27-b8db-dfaacc324b3c)
 
-![image](https://github.com/user-attachments/assets/fa5fd8a1-3825-4144-870d-f69f67fa9a3c)
+- ```BEQ``` instruction:
+![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
 
 
 ---
