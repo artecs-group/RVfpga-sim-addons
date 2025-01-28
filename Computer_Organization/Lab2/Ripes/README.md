@@ -164,7 +164,7 @@ You should explain the values of the different data/control signals and compare 
 
 
 ## Exercise 2
-Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
+The following code is executed in Ripes:
 
 ```
 .data
@@ -179,7 +179,12 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions:
+Answer the following questions for the Single-Cycle Processor:
+
+a. Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+
+
+Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
@@ -196,7 +201,7 @@ c. Analyse the program on the Ripes simulator for the 5-stages processor and ans
 
 
 ## Exercise 3
-Consider the 5-stage pipelined RISC-V processor from Harrys & Harrys book (H&H). The following code is executed on this processor:
+The following code is executed in Ripes:
 
 ```
 .text
@@ -216,7 +221,12 @@ END:
 nop
 ```
 
-Answer the following questions:
+Answer the following questions for the Single-Cycle Processor:
+
+a. Simulate the program cycle-by-cycle and stop when the ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+
+
+Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
