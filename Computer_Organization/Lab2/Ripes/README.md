@@ -107,6 +107,69 @@ We next show partial solutions for item a as an example.
 - ```2:1 Muxes control``` = REG1 and REG2, as the multiplexers must select the two registers as the ALU input operands.
 - ```3:1 Mux control``` = ALURES, as the 3:1 multiplexer must select the ALU output.
 
+
+## Exercise 2
+The following code is executed in Ripes:
+
+```
+.data
+v: .word 1, 10
+.text
+main:
+la x1 , v
+li x2, 0x2
+li x3, 0x4
+lw x2, 4(x1)
+sub x5, x2, x3
+or  x6, x2, x5
+```
+
+Answer the following questions for the Single-Cycle Processor:
+
+a. Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+
+
+## Exercise 3
+The following code is executed in Ripes:
+
+```
+.text
+main:
+li x1, 0x8
+li x2, 0x8
+li x3, 0x4
+beq x2, x1, ELSE
+IF:	
+   sub x5, x2, x3
+    or  x6, x2, x5
+    beq x0, x0, END
+ELSE:
+   add x5, x2, x3
+    and x6, x2, x5
+END:
+nop
+```
+
+Answer the following questions for the Single-Cycle Processor:
+
+a. Simulate the program cycle-by-cycle and stop when the ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+
+
+---
+
+## Exercise 4
+The following code is executed in Ripes:
+
+```
+.text
+main:
+li x3, 0x4
+li x4, 0x6
+add x2, x3, x4
+sub x5, x2, x3
+or  x6, x2, x5
+```
+
 Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
@@ -163,7 +226,7 @@ This is a screenshot of the simulator during the cycle when the ```add``` instru
 You should explain the values of the different data/control signals and compare their values with those from the previous item. Most of them should be equal (although a few signals may differ, given that the two processors are not identical).
 
 
-## Exercise 2
+## Exercise 5
 The following code is executed in Ripes:
 
 ```
@@ -178,11 +241,6 @@ lw x2, 4(x1)
 sub x5, x2, x3
 or  x6, x2, x5
 ```
-
-Answer the following questions for the Single-Cycle Processor:
-
-a. Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
-
 
 Answer the following questions for the 5-stage Pipelined Processor:
 
@@ -200,7 +258,7 @@ c. Analyse the program on the Ripes simulator for the 5-stages processor and ans
  - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
 
 
-## Exercise 3
+## Exercise 6
 The following code is executed in Ripes:
 
 ```
@@ -221,11 +279,6 @@ END:
 nop
 ```
 
-Answer the following questions for the Single-Cycle Processor:
-
-a. Simulate the program cycle-by-cycle and stop when the ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
-
-
 Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
@@ -242,7 +295,7 @@ c. Analyse the program on the Ripes simulator for the 5-stages processor and ans
  - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
 
 
-## Exercise 4
+## Exercise 7
 Given the following code, which calculates the factorial of the number stored in register t0 (it is assumed to always be an integer greater than 1) and stores the result in the same t0 register:
 
 ```
