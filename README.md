@@ -7,7 +7,7 @@ We first show how we adapted and used the [RVfpga: Understanding Computer Archit
 
 + Computer Fundamentals: This is a first-year course in the Computer Science degree program at UCM. In folder [Computer_Fundamentals](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals) of this repository you can find all the materials used in the course. Since this is an introductory course, we only use Ripes in the labs.
 
-+ Computer Organization: This is a second-year course in the Computer Science degree program at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. For the labs, we use a combinatino of Ripes and RVfpga-based exercises.
++ Computer Organization: This is a second-year course in the Computer Science degree program at UCM. In folder [Computer_Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) of this repository you can find part of the materials (mainly the labs) used in the course. For the labs, we use a combination of Ripes and RVfpga-based exercises.
 
 + Integrated Systems Architecture: This is a fourth-year course in the Electronics and Communication Engineering degree program at UCM. In folder [Integrated_Systems_Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture) of this repository you can find part of the materials (mainly the labs) used in the course. Since this is an advanced course, we mainly use RVfpga-based labs.
 
