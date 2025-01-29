@@ -1011,22 +1011,6 @@ void main() {
 }
 ```
 
-Add the following functionality to the previous program. This new functionality calculates of the weighted average of vector ```A```, using the values of ```B``` as weights.
-
-- You can base it on the following pseudocode:
-
-  <img src="https://github.com/user-attachments/assets/4efd3cd9-3024-4536-92bf-a05d42fd5d8e" width="400" />
-
-Note that the program must use two new functions that you must also implement in assembly:
-
-- Function ```idiv:```
-
-  <img src="https://github.com/user-attachments/assets/11790f62-f709-498b-acb9-ce2149e968df" width="200" />
-
-- Function ```vsum:```
-
-  <img src="https://github.com/user-attachments/assets/ef07d30c-9bb7-4474-a5e2-120abee36aaf" width="250" />
-
 
 ### Lab 4
 
