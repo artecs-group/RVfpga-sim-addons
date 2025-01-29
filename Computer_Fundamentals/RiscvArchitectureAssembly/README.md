@@ -887,7 +887,7 @@ ret
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 1 Spanish](https://drive.google.com/file/d/1vD-dEj_I9e0J7_fJanic2wUBde0CfJug/view?usp=drive_link) and [Lab 1 English](https://drive.google.com/file/d/1uVBFE2tmdGbNSWV2WaadVvWc9HtvPOEh/view?usp=drive_link).*
 
-Test the following C example in Ripes:
+Test the following C example in Ripes. Compile it with different optimization levels and compare the codes generated in each case:
 
 ```c
 main(){
