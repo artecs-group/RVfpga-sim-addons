@@ -936,7 +936,6 @@ for (int i = 0; i < N; i++) {
 }
 ```
 
-Modify the previous program by adding a new output variable, ```res2```, where only the values of ```i``` that are multiples of 4 are accumulated. A number is a multiple of 4 if its two least significant binary bits are 00. To check this, use an ```and``` operation between ```i``` and 3 (which is 11 in binary) and verify if the result is 0 (multiple of 4) or not.
 
 ### Lab 2
 
@@ -965,11 +964,6 @@ for (j = 0; j < N; j++) {
 }
 ```
 
-Create a new global integer variable called ```NumMay``` initialized to 0. At the end of the execution, this variable should store the number of elements in the vector ```V``` that are greater than or equal to five.
-
-Include a new vector ```C``` where the data is sorted in descending order.
-
-Include two new vectors, ```D``` and ```E```, in the code. The first should store the even elements in ascending order, and the second should store the odd elements in ascending order.
 
 ### Lab 3
 
@@ -1094,8 +1088,6 @@ void main () {
 ```
 
 Then, test in Ripes the following program, which combines C and RISC-V assembly languages, and that determines which of two vectors is farther from the origin. Note that this program performs the same functionality as the previous one, but in this case function ```guardar``` is implemented in assembly. 
-
-Once you've tested and understood the program, translate function ```eucl_dist``` into RISC-V assembly in a similar way and debug and run it in Ripes.
 
 ```c
 # define N 5
