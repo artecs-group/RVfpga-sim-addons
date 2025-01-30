@@ -6,8 +6,6 @@ To use Ripes for the *Single-Cycle processor*, follow these steps:
 
 1. Start the Ripes simulator.
 
-### Configuration of *Single-Cycle processor*
-
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
    - Single-Cycle processor.
    - RISC-V base instruction set plus M extension.
@@ -20,8 +18,6 @@ To use Ripes for the *Single-Cycle processor*, follow these steps:
 <p align="center">
   <img src="../Images/View.png" width=40% height=40%>
 </p>
-
-### Simple test in the *Single-Cycle processor*
 
 4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
 
@@ -150,8 +146,6 @@ To use Ripes for the *Pipelined processor*, follow these steps:
 
 1. Start the Ripes simulator.
 
-### Configuration of *Pipelined processor*
-
 2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
    - 5-stage processor.
    - RISC-V base instruction set plus M extension.
@@ -166,8 +160,6 @@ To use Ripes for the *Pipelined processor*, follow these steps:
 <p align="center">
   <img src="../Images/View.png" width=40% height=40%>
 </p>
-
-### Simple test in the *Pipelined processor*
 
 4. Perform the simulation of one iteration of loop L7 in the Pipelined processor, cycle-by-cycle, and analyze the control/data signals. Note that you must reconfigure the simulator as in stages 2 and 3. These is the screenshot for a given cycle of the execution where the instructions of the loop are in the different stages of the pipeline:
 
