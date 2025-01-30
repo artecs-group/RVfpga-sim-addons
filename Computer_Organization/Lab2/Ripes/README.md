@@ -167,7 +167,7 @@ To use Ripes for the *Pipelined processor*, follow these steps:
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-### Simple test in the *Single-Cycle processor*
+### Simple test in the *Pipelined processor*
 
 4. Perform the simulation of one iteration of loop L7 in the Pipelined processor, cycle-by-cycle, and analyze the control/data signals. Note that you must reconfigure the simulator as in stages 2 and 3. These is the screenshot for a given cycle of the execution where the instructions of the loop are in the different stages of the pipeline:
 
