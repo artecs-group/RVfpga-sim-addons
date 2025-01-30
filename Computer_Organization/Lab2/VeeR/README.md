@@ -91,6 +91,7 @@ Then, visualize the following presentation: ([PresentationRVfpgaPipeline](https:
     * Control hazard
     * Example program analyzed in the video shown above and provided in this [document](https://drive.google.com/file/d/1ltE_sOyaw090Sk49o8gLpa4MJNTl3yZz/view?usp=sharing).
 
+---
 
 ## Exercise 5
 Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
