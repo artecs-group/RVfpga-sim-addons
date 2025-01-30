@@ -51,9 +51,6 @@ L7:
 ![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
 
 
-
----
-
 ## Exercise 1
 The following code is executed in Ripes:
 
@@ -165,8 +162,6 @@ To use Ripes for the *Pipelined processor*, follow these steps:
 
 ![image](https://github.com/user-attachments/assets/dfce65a8-74a8-4d53-8cae-3a94c0c6ef69)
 
-
----
 
 ## Exercise 4
 The following code is executed in Ripes:
