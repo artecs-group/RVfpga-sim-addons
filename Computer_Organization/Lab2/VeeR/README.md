@@ -93,7 +93,7 @@ Then, visualize the following presentation: ([PresentationRVfpgaPipeline](https:
 
 ---
 
-## Exercise 5
+## Exercise 1
 Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
 
 ```
@@ -226,7 +226,7 @@ In this case, ```CPI = (33-25)/8 = 1```
 
 
 
-## Exercise 6
+## Exercise 2
 Given the following program, which can be executed in RVfpga-Pipeline (using the first code below) and in Ripes (using the second code below):
 
 **RVfpga-Pipeline:**
@@ -327,7 +327,7 @@ g. Is it possible to improve the loop's performance by reordering the code? Just
 
 
 
-## Exercise 7
+## Exercise 3
 In the VeeR EH1 processor, the following code is to be executed:
 
 ```
@@ -465,7 +465,7 @@ e. Finally, with the configuration of *item d*, reorder the code of the loop_k l
 
 
 
-## Exercise 8
+## Exercise 4
 Similarly to what we did in the video for the bypass 10-1 multiplexer, where we found it in the SoC Verilog code, try to find the following elements (in our case, the Verilog files for the VeeR EH1 core are in folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex```):
 
 + 3-1 multiplexer:
