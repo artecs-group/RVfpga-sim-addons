@@ -16,8 +16,7 @@ Follow the next steps:
 *→ View the above PerformanceBenchmarkingVideo from time 0:10 to time 6:29 for the description of VeeR EH1 Performance Counters and an example running on RVfpga-ViDBo.*
 
 Do the following steps:
-   * Download the following project [HwCounters](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing).
-   * Open the downloaded project in VSCode.
+   * Download the following project [HwCounters](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing) and open it in VSCode.
    * Run the program in RVfpga-ViDBo and on the board (if you have it).
       * Set the path for the simulator in the ```platformio.ini``` file as follows: ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
       * Set the path for the bitstream in the ```platformio.ini``` file as follows: ```board_build.bitstream_file = /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/rvfpganexys.bit```
