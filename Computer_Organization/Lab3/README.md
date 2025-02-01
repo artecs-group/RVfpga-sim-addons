@@ -114,7 +114,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 
 ## Exercise 1
-Simulate in Ripes the following program:
+Copy in Ripes the following program:
 
 ```
 #define N 4
@@ -142,9 +142,9 @@ main(){
 }
 ```
 
-You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
+Analyze and explain the cache's behavior for the second nested loop, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
-Use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real cache size). Specifically, analyze the following scenarios:
+We will use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real matrix and cache sizes). Specifically, analyze the following scenarios:
 
 a. Direct mapping data cache.
 
