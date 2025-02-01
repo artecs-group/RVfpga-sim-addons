@@ -158,7 +158,9 @@ b. Two-way set associative data cache.
   - Reduce the number of lines to 2, to keep the total data cache size the same: 2<sup>N</sup> Lines = 1
   - Test the two available write allocation policies: *Write No-Allocate* and *Write Allocate*.
 
-c. Modified program: A programmer suggests the following modification for the program that runs in a two-way set associative data cache with write allocation. Analyze in detail the cache behaviour in this case.
+c. Four-way set associative data cache.
+
+d. Modified program: A programmer suggests the following modification for the program that runs in a two-way set associative data cache with write allocation. Analyze in detail the cache behaviour in this case.
 
 ```
 #define N 4
