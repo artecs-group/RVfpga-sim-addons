@@ -5,7 +5,9 @@ Follow the next steps:
 
 1. View, from time 0:0 to time 6:25, this video [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=10) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=10), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=10) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video shows a description of the VeeR Performance Counters and an example using RVfpga-ViDBo.
 
-2. (If you are working with the FPGA board, you can skip this step.) Then, you can perform the guided example for RVfpga-ViDBo, provided in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo* at [SimulationInRVfpgaViDBo](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc-in-rvfpga-vidbo). Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
+2. Do the task that corresponds to the tool that you are using:
+	- If you are working with RVfpga-ViDBo (simulator): Perform the guided example for RVfpga-ViDBo, provided in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo* at [SimulationInRVfpgaViDBo](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc-in-rvfpga-vidbo). Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
+	- If you are working with RVfpga-Nexys (FPGA board): Read the following document: [RVfpgaNexys_InitialTests](https://drive.google.com/file/d/1OtZvekekP1e0v28yUr1u0TI2xWcc8VFF/view?usp=sharing)
 
 3. Perform the following exercises.
 
