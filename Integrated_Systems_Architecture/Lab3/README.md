@@ -59,7 +59,7 @@ for ( n = 0; n < 8; n ++ ) {
 To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
 
 ```
-.globl main
+.globl Test_Assembly
 
 .section .midccm
 Entrada: .space 40
@@ -67,7 +67,7 @@ Filtro: .space 12
 Salida: .space 32
 
 .text
-main:
+Test_Assembly:
 
 li t2, 0x488 # Disable Superscalar Exec, Sec. ALUs and Branch Pred.
 csrrs t1, 0x7F9, t2
@@ -161,8 +161,7 @@ REPEAT:
 addi t2, t2, 1
 bne t2, a6, REPEAT # Repeat the loop
 
-fin:
-j fin
+ret
 ```
 
 Analyze the code in RISC-V assembly.
