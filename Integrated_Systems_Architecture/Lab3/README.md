@@ -13,8 +13,6 @@ Follow the next steps:
 
 
 ## Exercise 1
-*→ View the above PerformanceBenchmarkingVideo from time 0:10 to time 6:29 for the description of VeeR EH1 Performance Counters and an example running on RVfpga-ViDBo.*
-
 Do the following steps:
    * Download the following project [HwCounters](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing) and open it in VSCode.
    * Run the program in RVfpga-ViDBo and on the board (if you have it).
