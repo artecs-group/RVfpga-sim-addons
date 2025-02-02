@@ -169,7 +169,7 @@ Analyze the code in RISC-V assembly.
 - Note that in the assembly program we are initializing the arrays in the Data Scratchpad before entering the loops, element-by-element, so this needs quite a few instructions.
 - Besides, note that we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters.
 
-Then, test performance of the nested loops for different configurations of the VeeR EH1 core as specified next, and compare and explain the results that you obtain. Use the project you downloaded in Exercise 1 (project ```HwCounters```). Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator).
+Then, test performance of the nested loops for different configurations of the VeeR EH1 core as specified next, and compare and explain the results that you obtain. Use the project you downloaded in Exercise 1 (project ```HwCounters```) and simply replace the text in file ```Test_Assembly.S``` for the one provided in this exercise in RISC-V assembly. Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator).
 
 - Calculate the CPI for the nested loops when the program executes on a VeeR EH1 processor with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration used in the program provided above).
 ```
