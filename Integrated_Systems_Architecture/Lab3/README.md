@@ -7,7 +7,7 @@ Follow the next steps:
 
 2. Do the task that corresponds to the tool that you are using:
 	- If you are working with RVfpga-ViDBo (simulator): Perform the guided example for RVfpga-ViDBo, provided in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo* at [SimulationInRVfpgaViDBo](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#introduction---simulation-of-the-rvfpga-soc-in-rvfpga-vidbo). Note however that this example is hosted on a separate webpage. Once you finish, make sure to return here and continue with item 3.
-	- If you are working with RVfpga-Nexys (FPGA board): Read the following document: [RVfpgaNexys_InitialTests](https://drive.google.com/file/d/1OtZvekekP1e0v28yUr1u0TI2xWcc8VFF/view?usp=sharing)
+	- If you are working with RVfpga-Nexys (FPGA board): Complete the following document [RVfpgaNexys_InitialTests](https://drive.google.com/file/d/1OtZvekekP1e0v28yUr1u0TI2xWcc8VFF/view?usp=sharing)
 
 3. Perform the following exercises.
 
