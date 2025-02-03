@@ -438,7 +438,7 @@ The following program calculates the greatest common divisor of two numbers ```a
 
 ```c
 int a=5, b=15, gcd;
-while (a  b) {
+while (a != b) {
  if (a > b)
  a = a - b;
  else
