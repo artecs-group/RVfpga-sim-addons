@@ -399,7 +399,10 @@ Run the code and answer the following questions. Add screenshots of the executio
 
 
 ## Exercise 2
-Implement and run the bubble sort algorithm in RISC-V assembly. This simple algorithm sorts the elements of a vector from smallest to largest using a very straightforward procedure: it repeatedly traverses the vector, swapping successive positions if V(i) > V(i+1), until no swaps are made. The following pseudocode is provided as a guide (Note: use a constant, N, to define the length of the vector):
+The Bubble Sort algorithm sorts the elements of a vector from smallest to largest using a very straightforward procedure: it repeatedly traverses the vector, swapping successive positions if V(i) > V(i+1), until no swaps are made.
+
+**PROGRAMMING IN RISC-V ASSEMBLY:**
+The following pseudocode is provided as a guide (Note: use a constant, N, to define the length of the vector):
 
 ```
 do 
@@ -413,11 +416,15 @@ do
 while swapped 
 ```
 
-- Copy the developed program.
-- Explain the prologue you have created for the swap function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
+- Implement the algorithm in RISC-V assembly. Include a ```main``` function that performs most functionality and that calls a function called ```swap```, that exchanges ```V[i]``` and ```V[i+1]```. Test the program in Ripes.
+- Explain the prologue you have created for the ```swap``` function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
 - Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
 - Take several screenshots during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-- The following code is a possible C implementation of the above pseudocode (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute the program on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```. Test the execution of the program step-by-step, both in C and in RISC-V assembly. In the latter, identify and explain in detail the obtained ```swap``` and ```main``` functions.
+
+**PROGRAMMING IN C:**
+The following code is a possible C implementation of the above pseudocode (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute the program on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+
+- Test the execution of the program step-by-step, both in C and in RISC-V assembly. In the latter, identify and explain in detail the obtained ```swap``` and ```main``` functions.
 - Finally, compile the code with optimization levels -O0 and -O1, and repeat the previous item. This item can only be tested in Whisper or Ripes, not on the board.
 
 **RIPES:**
