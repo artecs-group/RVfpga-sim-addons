@@ -426,7 +426,10 @@ while swapped
 
 The following code is a possible C implementation of the above pseudocode (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute the program on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
 
-- Compile the code with different optimization levels (-O0, -O1). For each one, test the execution of the program step-by-step, both in C and in RISC-V assembly. Besides, identify and explain in detail the obtained ```swap``` and ```main``` functions in RISC-V assembly language. Note that this item can only be tested in Whisper or Ripes, not on the board.
+- Compile the code with two different optimization levels: -O0 and -O1.
+  - For each optimization level, test the execution of the program step-by-step, both in C and in RISC-V assembly.
+  - Compare the obtained ```swap``` and ```main``` functions for each optimization level.
+  - NOTE: this item can only be tested in Whisper or Ripes, not on the board.
 
 **RIPES:**
 ```
