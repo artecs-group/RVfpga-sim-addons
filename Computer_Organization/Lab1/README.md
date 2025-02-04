@@ -618,7 +618,7 @@ int main(void)
 
 Run the code and answer the following questions. Add screenshots to complement your answers.
 
-- Default compilation:
+- Default compilation (-O0 optimization level):
     - Explain in detail the ```main``` function generated in RISC-V assembly.
     - Is the ```ra``` register preserved at any point? Why?
     - Of the other registers, which ones are preserved? Why?
