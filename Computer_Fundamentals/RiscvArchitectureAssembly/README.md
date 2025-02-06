@@ -611,8 +611,6 @@ inc:
 addi a0, a0, 1
 ret
 ```
-This is the result after executing the program in Ripes:
-
 
 ---
 
