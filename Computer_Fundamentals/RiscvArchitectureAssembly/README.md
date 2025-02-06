@@ -613,6 +613,90 @@ addi a0, a0, 1
 ret
 ```
 
+### Array provided by reference
+
+![image](https://github.com/user-attachments/assets/d9ef510e-3e17-4303-a190-3aa72c65eac6)
+
+```
+.data
+a: .word 3, 4, 1, 2, 7
+
+.text
+la a0, a
+li a1, 5
+call incArray
+end:
+j end
+
+incArray:
+mv t0, zero
+for:
+bge t0, a1, efor
+slli t1, t0, 2
+add t1, a0, t1
+lw t2, 0(t1)
+addi t2, t2, 1
+sw t2, 0(t1)
+addi t0, t0, 1
+j for
+efor:
+ret
+```
+
+### Saving registers in the stack
+
+![image](https://github.com/user-attachments/assets/7cc7dd0b-28f2-4ea5-bf56-979022783651)
+
+
+#### 1st option
+
+```
+.data
+a: .word 3
+
+.text
+la t0, a
+lw a0, 0(t0)
+addi sp, sp, -4
+sw t0, 0(sp)
+call inc
+lw t0, 0(sp)
+addi sp, sp, 4
+sw a0, 0(t0)
+end:
+j end
+
+inc:
+addi t0, a0, 1
+mv a0, t0
+ret
+```
+
+#### 2nd option
+
+```
+.data
+a: .word 3
+
+.text
+la s0, a
+lw a0, 0(s0)
+call inc
+sw a0, 0(s0)
+end:
+j end
+
+inc:
+addi sp, sp, -4
+sw s0, 0(sp)
+addi s0, a0, 1
+mv a0, s0
+lw s0, 0(sp)
+addi sp, sp, 4
+ret
+```
+
+
 ---
 
 ## Exercises about RISC-V Calling Convention
