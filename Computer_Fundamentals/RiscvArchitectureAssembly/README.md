@@ -592,6 +592,26 @@ j end
 ## Initial Tests in Ripes - Calling Functions
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf).
 
+### Call and Return
+
+***call* and *ret* instructions:**
+```c
+.data
+a: .word 4
+
+.text
+la t0, a
+lw a0, 0(t0)
+call inc
+sw a0, 0(t0)
+end:
+j end
+
+inc:
+addi a0, a0, 1
+ret
+```
+This is the result after executing the program in Ripes:
 
 
 ---
