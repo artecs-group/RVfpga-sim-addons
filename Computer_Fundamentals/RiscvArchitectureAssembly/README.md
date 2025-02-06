@@ -596,7 +596,6 @@ Do the following basic tests to understand some of the instructions in the RISC-
 
 ![image](https://github.com/user-attachments/assets/8c85ff7e-fb70-4a16-9f2f-af6d4c9fae03)
 
-**Example with *call* and *ret* pseudo-instructions:**
 ```c
 .data
 a: .word 4
