@@ -135,7 +135,9 @@ nop
 Answer the following questions for the Single-Cycle Processor:
 
 a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+
 b. Then, modify the ```x1``` register initialization to 0x7, and analyze the first ```beq``` instruction execution. Explain the values of each of the data/control signals obtained in the simulation.
+
 c. Explain the differences observed between the two cases.
 
 ---
