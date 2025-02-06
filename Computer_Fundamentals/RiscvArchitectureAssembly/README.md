@@ -2,9 +2,11 @@
 We provide instructions, exercises, and labs to help students learn the RISC-V architecture and program in RISC-V assembly. Specifically, follow these items:
 1. Install Ripes following the steps stated below at [InstallRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#installation-of-ripes).
 2. Start using Ripes following the steps stated below at [UseRipes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#basic-use-of-ripes).
-3. Do the initial tests provided below at [InitialTests](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvArchitectureAssembly#initial-tests-in-ripes).
-4. Complete all exercises included below at [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-assembly-in-ripes).
-5. Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
+3. Do the initial tests provided below at [InitialTests_BasicAssembly](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvArchitectureAssembly#initial-tests-in-ripes).
+4. Complete all exercises included below at [Exercises_BasicAssembly](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-assembly-in-ripes).
+5. Do the initial tests provided below at [InitialTests_Functions]().
+6. Complete all exercises included below at [Exercises_Functions]().
+7. Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
 
 
 ---
@@ -161,7 +163,7 @@ int main(void)
 
 ---
 
-## Initial Tests in Ripes
+## Initial Tests in Ripes - Basic RISC-V Assembly
 Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
 
 ### Arithmetic instructions
@@ -306,7 +308,7 @@ This is the result after executing the program in Ripes.
 
 ---
 
-## Exercises about RISC-V Architecture and Assembly in Ripes
+## Exercises about RISC-V Architecture and Basic Assembly in Ripes
 We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
 
 ### Exercise 1
@@ -583,6 +585,19 @@ sw s2,0(t1)
 end:
 j end
 ```
+
+
+---
+
+## Initial Tests in Ripes - Calling Functions
+Do the following basic tests to understand some of the instructions in the RISC-V ISA. 
+
+
+
+---
+
+## Exercises about RISC-V Calling Convention
+We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
 
 
 ### Exercise 16
