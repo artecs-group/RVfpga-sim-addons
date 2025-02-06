@@ -696,6 +696,59 @@ addi sp, sp, 4
 ret
 ```
 
+### Nested functions
+
+![image](https://github.com/user-attachments/assets/209f461a-2e69-4f76-9695-6ae7a644655b)
+
+```
+.data
+a: .word 1, 2, 3, 4
+
+
+.text
+
+main:
+la a0, a
+li a1, 4
+jal ra, incArray
+fin:
+    j fin
+
+
+incArray:
+addi sp, sp, -20
+sw ra, 16(sp)
+sw s0, 12(sp)
+sw s1, 8(sp)
+sw s2, 4(sp)
+sw s3, 0(sp)
+mv s0, a0
+mv s1, a1
+mv s2, zero
+for:
+bge s2, s1, efor
+slli t0, s2, 2
+add s3, s0, t0
+lw a0, 0(s3)
+jal ra, inc
+sw a0, 0(s3)
+addi s2, s2, 1
+j for
+efor:
+lw ra, 16(sp)
+lw s0, 12(sp)
+lw s1, 8(sp)
+lw s2, 4(sp)
+lw s3, 0(sp)
+addi sp, sp, 20
+jalr x0, ra, 0
+
+
+inc:
+addi a0, a0, 1
+jalr x0, ra, 0
+```
+
 
 ---
 
