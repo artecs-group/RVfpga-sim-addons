@@ -293,7 +293,7 @@ Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```beq``` instruction is in the EX stage.
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the first ```beq``` instruction is in the EX stage.
 
 <p align="center">
   <img src="../Images/ProcessorHH.png" width=90% height=90%>
