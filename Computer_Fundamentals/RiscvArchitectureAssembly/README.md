@@ -703,13 +703,18 @@ ret
 ```
 .data
 a: .word 1, 2, 3, 4
+b: .word 5, 6, 7, 8
 
 
 .text
 
 main:
 la a0, a
-li a1, 4
+li s1, 4
+mv a1, s1
+jal ra, incArray
+la a0, b
+mv a1, s1
 jal ra, incArray
 fin:
     j fin
