@@ -44,8 +44,9 @@ for line:
 
 Are the results for I$ misses reasonable?
 
+
 **TASK:**
-Propose additional RISC-V Assembly codes that evaluate different scenarios and measure the results using appropriate performance counters (such as instruction cache misses, branch misprediction rate, etc.).
+Propose additional RISC-V Assembly codes (modify the contents of file ```Test_Assembly.S```) that evaluate different scenarios and measure the results using appropriate performance counters (such as instruction cache misses, branch misprediction rate, etc.).
 
 
 ## Exercise 2
