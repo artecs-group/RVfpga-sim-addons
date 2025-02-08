@@ -44,6 +44,9 @@ for line:
 
 Are the results for I$ misses reasonable?
 
+**TASK:**
+Propose additional RISC-V Assembly codes that evaluate different scenarios and measure the results using appropriate performance counters (such as instruction cache misses, branch misprediction rate, etc.).
+
 
 ## Exercise 2
 In the VeeR EH1 processor, the following code is to be executed. Note that this is the same code used in [Exercise 3 of Lab 2 in RVfpgaPipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3):
