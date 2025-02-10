@@ -1140,7 +1140,7 @@ for (j = 0; j < N; j++) {
 }
 ```
 
-**Tareas Lab 2**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab2](https://drive.google.com/file/d/1H5ngmpe4I9mcKl-4PZjDYNxdW8RDmapS/view?usp=sharing). We next show the complete solution for all exercises in Lab 2:
+**Extra Tasks for Lab 2**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab2](https://drive.google.com/file/d/1H5ngmpe4I9mcKl-4PZjDYNxdW8RDmapS/view?usp=sharing). We next show the complete solution for all exercises in Lab 2:
 
 ```
     .equ N, 4
