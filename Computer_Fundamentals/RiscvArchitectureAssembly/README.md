@@ -1140,6 +1140,92 @@ for (j = 0; j < N; j++) {
 }
 ```
 
+**Tareas Lab 2**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab2](https://drive.google.com/file/d/1H5ngmpe4I9mcKl-4PZjDYNxdW8RDmapS/view?usp=sharing). We next show the complete solution for all exercises in Lab 2:
+
+```
+    .equ N, 4
+   .equ INT_MAX, 65536
+   .data
+C:      .word 0, 0, 0, 0   # Nuevo vector C
+D:      .word 0, 0, 0, 0   # Nuevo vector D
+E:      .word 0, 0, 0, 0   # Nuevo vector E
+W:      .word 0, 0, 0, 0
+V:      .word -7, 3, -9, 8
+min:    .word 0
+index:  .word 0
+NumMay: .word 0  # Nueva variable global inicializada en 0
+   .text
+   .globl main
+main:
+   la t0, W          # Dirección base de W
+   la s0, C          # Dirección base de C
+   addi s0, s0, 4*N  # Apunta después de C
+   addi s0, s0, -4   # Apunta a la última posición de C
+   la s4, D
+   la s5, E
+   li t1, 0          # j = 0
+   li t2, N          # N = 8
+outer_loop:
+   bge t1, t2, end   # while (j < N)
+   la t3, min        # min
+   li t4, INT_MAX    # min = INT_MAX
+   sw t4, 0(t3)
+   li t5, 0          # i = 0
+   la a0, V          # Dirección base de V
+ inner_loop:
+   bge t5, t2, inner_end # while (i < N)
+   slli a1, t5, 2        # Desplazamiento i*4
+   add a2, a0, a1        # Dirección de V[i]
+   lw a3, 0(a2)          # V[i]
+   lw a4, 0(t3)          # min
+   blt a3, a4, update_min
+   j next_i
+ update_min:
+   sw a3, 0(t3)          # min = V[i]
+   la t6, index
+   sw t5, 0(t6)          # index = i
+ next_i:
+   addi t5, t5, 1        # i++
+   j inner_loop
+ inner_end:
+   la a5, index
+   lw a6, 0(a5)          # index
+   slli a1, a6, 2        # index * 4
+   add a2, a0, a1        # Dirección de V[index]
+   lw a3, 0(a2)          # V[index]
+   sw a3, 0(t0)          # W[j] = V[index]
+   sw a3, 0(s0)          # C[N-1-j] = V[index]
+   addi s0, s0, -4       # Mover el puntero de C atrás
+   # Vectores D y E
+   andi s6, a3, 1
+   beq s6, x0, par
+   sw a3, 0(s5)
+   addi s5, s5, 4
+   j impar
+par:
+   sw a3, 0(s4)
+   addi s4, s4, 4
+impar: 
+   # if (V[index] >= 5) NumMay++
+   li s1, 5
+   bge a3, s1, increment_NumMay
+   j skip_increment
+ increment_NumMay:
+   la s2, NumMay
+   lw s3, 0(s2)
+   addi s3, s3, 1
+   sw s3, 0(s2)
+ skip_increment:
+   li a4, INT_MAX        # V[index] = INT_MAX
+   sw a4, 0(a2)
+   addi t0, t0, 4        # j++ (siguiente W[j])
+   addi t1, t1, 1
+   j outer_loop
+end:
+fin:
+   j fin
+```
+
 
 ### Lab 3
 
