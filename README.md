@@ -17,7 +17,7 @@ Finally, in the second semester, we will deliver a microcredential as part of a 
 
 
 
-## Papers and Presentations -- December-2024
+## Papers and Presentations
 If you're interested in learning more about the details of the RVfpga course, check out our recently released paper: 
 
 * **[The RISC-V FPGA (RVfpga) Teaching Package](https://www.authorea.com/doi/full/10.36227/techrxiv.172978275.56140460)** 
