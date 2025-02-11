@@ -1,6 +1,6 @@
 # RVfpga: Recent Additions and Updates
 
-## Teaching experiences -- Academic year 2024-25
+## Teaching experiences in year 2024-25
 In this repository, we provide materials from various RVfpga-based teaching experiences conducted during the 2024-25 academic year.
 
 We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of three courses instructed at the University Complutense of Madrid (UCM).
