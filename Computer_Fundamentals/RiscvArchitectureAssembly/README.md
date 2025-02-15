@@ -1336,7 +1336,7 @@ void main () {
 Specifically, perform the following tasks:
 - Compile the program with a ```-O1``` optimization level.
 - Execute the program in Ripes and check if the final result is correct.
-- Analyze the assembly program:
+- Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
     - This is the ```main``` function obtained. Analyze the invocation of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention.
 
         ```c
