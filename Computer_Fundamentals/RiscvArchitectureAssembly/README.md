@@ -1339,7 +1339,7 @@ Specifically, perform the following tasks:
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
     - This is the ```main``` function obtained. Analyze the invocation of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention.
 
-        ```c
+        ```asm
         00010240 <main>:
         10240:        ff010113        addi x2 x2 -16
         10244:        00112623        sw x1 12 x2
@@ -1361,7 +1361,7 @@ Specifically, perform the following tasks:
 
     - This is the ```i_sqrt``` function obtained. Explain each of the instructions of this function and why are they used.
 
-        ```c
+        ```asm
         00010190 <i_sqrt>:
         10190:        ff010113        addi x2 x2 -16
         10194:        00112623        sw x1 12 x2
