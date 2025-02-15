@@ -1278,7 +1278,7 @@ void main() {
 
 *NOTE: The script for the RISC-V Eclipse-based simulator is available here: [Lab 4 Spanish](https://drive.google.com/file/d/1HYT762RhUX790BzBcWIhEE_K_vc6RVvk/view?usp=drive_link) and [Lab 4 English](https://drive.google.com/file/d/1njXjxYBLNCVi3pccEehvOG6DSoEcrCL9/view?usp=drive_link).*
 
-Test in Ripes the following C program, that determines which of two vectors is farther from the origin.
+Analyze in Ripes the following C program, that determines which of two vectors is farther from the origin. After the program we propose some specific tasks.
 
 ```c
 # define N 5
@@ -1332,6 +1332,56 @@ void main () {
    while (1) ;
 }
 ```
+
+Specifically, perform the following tasks:
+- Compile the program with a ```-O1``` optimization level.
+- Execute the program in Ripes and check if the final result is correct.
+- Analyze the assembly program:
+    - This is the ```main``` function obtained. Analyze the invocation of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention.
+
+        ```c
+        00010240 <main>:
+        10240:        ff010113        addi x2 x2 -16
+        10244:        00112623        sw x1 12 x2
+        10248:        00812423        sw x8 8 x2
+        1024c:        00912223        sw x9 4 x2
+        10250:        00011537        lui x10 0x11
+        10254:        6b050413        addi x8 x10 1712
+        10258:        00500593        addi x11 x0 5
+        1025c:        6b050513        addi x10 x10 1712
+        10260:        f79ff0ef        jal x1 -136 <eucl_dist>
+        10264:        00050493        addi x9 x10 0
+        10268:        00500593        addi x11 x0 5
+        1026c:        01440513        addi x10 x8 20
+        10270:        f69ff0ef        jal x1 -152 <eucl_dist>
+        10274:        00952533        slt x10 x10 x9
+        10278:        c6a18c23        sb x10 -904 x3
+        1027c:        0000006f        jal x0 0
+        ```
+
+    - This is the ```i_sqrt``` function obtained. Explain each of the instructions of this function and why are they used.
+
+        ```c
+        00010190 <i_sqrt>:
+        10190:        ff010113        addi x2 x2 -16
+        10194:        00112623        sw x1 12 x2
+        10198:        00812423        sw x8 8 x2
+        1019c:        00912223        sw x9 4 x2
+        101a0:        00050493        addi x9 x10 0
+        101a4:        00000413        addi x8 x0 0
+        101a8:        00040593        addi x11 x8 0
+        101ac:        00040513        addi x10 x8 0
+        101b0:        f9dff0ef        jal x1 -100 <mul>
+        101b4:        00955663        bge x10 x9 12
+        101b8:        00140413        addi x8 x8 1
+        101bc:        fedff06f        jal x0 -20
+        101c0:        00040513        addi x10 x8 0
+        101c4:        00c12083        lw x1 12 x2
+        101c8:        00812403        lw x8 8 x2
+        101cc:        00412483        lw x9 4 x2
+        101d0:        01010113        addi x2 x2 16
+        101d4:        00008067        jalr x0 x1 0
+        ```
 
 Then, test in Ripes the following program, which combines C and RISC-V assembly languages, and that determines which of two vectors is farther from the origin. Note that this program performs the same functionality as the previous one, but in this case function ```guardar``` is implemented in assembly. 
 
