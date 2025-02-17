@@ -1026,6 +1026,12 @@ pos:
 ret
 ```
 
+---
+
+## RISC-V Instruction Format
+Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf).
+
+
 
 ---
 
