@@ -1029,8 +1029,13 @@ ret
 ---
 
 ## RISC-V Instruction Format
-Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf).
+Do the following basic tests to understand the instruction format used in RISC-V. These examples are based on the slides provided at: [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf).
 
+### Instruction ```sub```
+
+![image](https://github.com/user-attachments/assets/0cf52263-ac8c-454f-8b49-f967e90af19b)
+
+![image](https://github.com/user-attachments/assets/23c4ef8a-1eff-4e3b-ac76-20f108738424)
 
 
 ---
