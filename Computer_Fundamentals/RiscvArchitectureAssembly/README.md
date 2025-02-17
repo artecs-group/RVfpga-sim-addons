@@ -10,7 +10,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
     * Complete all exercises about RISC-V Calling Convention provided at [Exercises_Functions](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-calling-convention).
 5. RISC-V Instruction Formats:
    * Do the tests about RISC-V Instruction Format provided below at [InitialTests_InstructionFormat](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#risc-v-instruction-format).
-   * Complete the exercises about RISC-V Instruction Format provided at [Exercises_Formats]()
+   * Complete the exercises about RISC-V Instruction Format provided at [Exercises_Formats](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-instruction-format).
 6. **LABS:** Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
 
 
