@@ -1057,6 +1057,19 @@ Do the following basic tests to understand the instruction format used in RISC-V
 <img src="https://github.com/user-attachments/assets/53a2d8b1-f8fa-458a-88d5-0528635ac086" width="350">
 
 
+### Instruction ```sb```
+
+<img src="https://github.com/user-attachments/assets/9efc58b8-e92c-4960-93ea-8bd7e9781aac" width="500">
+
+**Ripes Editor**
+
+<img src="https://github.com/user-attachments/assets/5146c28a-5168-40a1-bce4-bb5a4165a18e" width="500">
+
+**Ripes Memory**
+
+<img src="https://github.com/user-attachments/assets/11e3682c-a5f2-44a3-808d-3347f54583a2" width="350">
+
+
 ---
 
 ## Labs about RISC-V Architecture and Assembly in Ripes
