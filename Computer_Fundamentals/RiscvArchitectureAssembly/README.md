@@ -1033,9 +1033,15 @@ Do the following basic tests to understand the instruction format used in RISC-V
 
 ### Instruction ```sub```
 
-![image](https://github.com/user-attachments/assets/0cf52263-ac8c-454f-8b49-f967e90af19b)
+<img src="https://github.com/user-attachments/assets/0cf52263-ac8c-454f-8b49-f967e90af19b" width="500">
+
+**Ripes Editor**
 
 ![image](https://github.com/user-attachments/assets/23c4ef8a-1eff-4e3b-ac76-20f108738424)
+
+**Ripes Memory**
+
+![image](https://github.com/user-attachments/assets/3d66f050-b497-466e-beb1-4b2bddae2680)
 
 
 ---
