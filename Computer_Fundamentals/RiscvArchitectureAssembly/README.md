@@ -1037,11 +1037,11 @@ Do the following basic tests to understand the instruction format used in RISC-V
 
 **Ripes Editor**
 
-![image](https://github.com/user-attachments/assets/23c4ef8a-1eff-4e3b-ac76-20f108738424)
+<img src="https://github.com/user-attachments/assets/23c4ef8a-1eff-4e3b-ac76-20f108738424" width="500">
 
 **Ripes Memory**
 
-![image](https://github.com/user-attachments/assets/3d66f050-b497-466e-beb1-4b2bddae2680)
+<img src="https://github.com/user-attachments/assets/3d66f050-b497-466e-beb1-4b2bddae2680" width="350">
 
 
 ---
