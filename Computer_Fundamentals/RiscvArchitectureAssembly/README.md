@@ -1070,6 +1070,19 @@ Do the following basic tests to understand the instruction format used in RISC-V
 <img src="https://github.com/user-attachments/assets/11e3682c-a5f2-44a3-808d-3347f54583a2" width="350">
 
 
+### Instruction ```j```
+
+<img src="https://github.com/user-attachments/assets/c95ccebc-ddd6-47e1-81b2-1f4f9c605b0f" width="500">
+
+**Ripes Editor**
+
+<img src="https://github.com/user-attachments/assets/9f547cc4-f382-4708-a24a-b2999d408202" width="500">
+
+**Ripes Memory**
+
+<img src="https://github.com/user-attachments/assets/55434ca0-38bd-47f0-990d-c158277c6e33" width="350">
+
+
 ---
 
 ## Labs about RISC-V Architecture and Assembly in Ripes
