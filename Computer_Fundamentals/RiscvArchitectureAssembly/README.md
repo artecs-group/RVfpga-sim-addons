@@ -1039,6 +1039,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 
 <img src="https://github.com/user-attachments/assets/23c4ef8a-1eff-4e3b-ac76-20f108738424" width="500">
 
+
 **Ripes Memory**
 
 <img src="https://github.com/user-attachments/assets/3d66f050-b497-466e-beb1-4b2bddae2680" width="350">
@@ -1051,6 +1052,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 **Ripes Editor**
 
 <img src="https://github.com/user-attachments/assets/262973c8-7efd-4c04-be23-b06821b87f7c" width="500">
+
 
 **Ripes Memory**
 
@@ -1065,6 +1067,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 
 <img src="https://github.com/user-attachments/assets/5146c28a-5168-40a1-bce4-bb5a4165a18e" width="500">
 
+
 **Ripes Memory**
 
 <img src="https://github.com/user-attachments/assets/11e3682c-a5f2-44a3-808d-3347f54583a2" width="350">
@@ -1077,6 +1080,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 **Ripes Editor**
 
 <img src="https://github.com/user-attachments/assets/9f547cc4-f382-4708-a24a-b2999d408202" width="500">
+
 
 **Ripes Memory**
 
