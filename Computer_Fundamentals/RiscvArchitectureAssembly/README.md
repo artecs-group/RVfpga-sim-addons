@@ -1070,7 +1070,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 <img src="https://github.com/user-attachments/assets/11e3682c-a5f2-44a3-808d-3347f54583a2" width="350">
 
 
-### Instruction ```j```
+### Instruction ```jal```
 
 <img src="https://github.com/user-attachments/assets/c95ccebc-ddd6-47e1-81b2-1f4f9c605b0f" width="500">
 
