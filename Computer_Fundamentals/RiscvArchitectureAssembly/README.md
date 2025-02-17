@@ -1044,6 +1044,19 @@ Do the following basic tests to understand the instruction format used in RISC-V
 <img src="https://github.com/user-attachments/assets/3d66f050-b497-466e-beb1-4b2bddae2680" width="350">
 
 
+### Instruction ```addi```
+
+<img src="https://github.com/user-attachments/assets/f7afb3f2-59b6-475e-baf9-7fee36210503" width="500">
+
+**Ripes Editor**
+
+<img src="https://github.com/user-attachments/assets/262973c8-7efd-4c04-be23-b06821b87f7c" width="500">
+
+**Ripes Memory**
+
+<img src="https://github.com/user-attachments/assets/53a2d8b1-f8fa-458a-88d5-0528635ac086" width="350">
+
+
 ---
 
 ## Labs about RISC-V Architecture and Assembly in Ripes
