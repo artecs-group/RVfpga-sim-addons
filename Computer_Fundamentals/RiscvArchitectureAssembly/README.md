@@ -1077,7 +1077,7 @@ Do the following basic tests to understand the instruction format used in RISC-V
 ---
 
 ## Exercises about RISC-V Instruction Format
-We next provide a selection of the exercises proposed in Module 4 ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) should also be resolved and tested by the students in Ripes.
+We next provide a selection of the exercises proposed in Module 4 ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) should also be resolved by the students.
 
 ![image](https://github.com/user-attachments/assets/a8c41060-c3bc-4d10-a816-a473e8f51659)
 
