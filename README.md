@@ -13,7 +13,7 @@ We first show how we adapted and used the [RVfpga: Understanding Computer Archit
 
 We also participated in the [Master de Formación Permanente en Sistemas Microelectrónicos Basados en Arquitecturas Abiertas](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas) at the University of Castilla-La Mancha (UCLM). Specifically, within the course Diseño de Microcontroladores en Hardware Abierto, we taught an entire two-week-long module based on RVfpga. You can find the details in the following folder: **[Design_Microcontrollers_Open_Hardware](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Design_Microcontrollers_Open_Hardware)**.
 
-We developed an [RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core) in edX. This MOOC course includes 10 chapters that cover labs 1-4, 6-9, and 11 of the RVfpga course. The chapters provide instructions, hands-on tutorials, videos with demonstrations, exercises, and multiple-choice questions.
+We developed an **[RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)** in edX. This MOOC course includes 10 chapters that cover labs 1-4, 6-9, and 11 of the RVfpga course. The chapters provide instructions, hands-on tutorials, videos with demonstrations, exercises, and multiple-choice questions.
 
 Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: **[RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/)**.
 
@@ -34,8 +34,8 @@ We recently presented *Teaching Computer Architecture with RVfpga* at the 2nd Si
 
 In the following links you can also find many videos that illustrate different topics of RVfpga.
 
-  - Videos at YouTube Channel: [RVfpgaVideos](https://www.youtube.com/@RVfpgaVideos)
-  - Imperial College WS 2022: [LondonWS](https://youtube.com/playlist?list=PLnOXj03cuJjkes1OIMa8SFyn1yKQQY8aD&si=mNLqXXbtPnbuobof)
+  - Videos at YouTube Channel: **[RVfpgaVideos](https://www.youtube.com/@RVfpgaVideos)**
+  - Imperial College WS 2022: **[LondonWS](https://youtube.com/playlist?list=PLnOXj03cuJjkes1OIMa8SFyn1yKQQY8aD&si=mNLqXXbtPnbuobof)**
   - IUP Video Library:
-      - [IUP1](https://youtube.com/playlist?list=PLnOXj03cuJjnip1WRJrUHNvm-80zSSfUC&si=-NR59bFEMBDF9kjs)
-      - [IUP2](https://youtube.com/playlist?list=PLnOXj03cuJjn7ecksWZEwCe8LVR-PDgud&si=xdQEoILML6WQMnjC)
+      - **[IUP1](https://youtube.com/playlist?list=PLnOXj03cuJjnip1WRJrUHNvm-80zSSfUC&si=-NR59bFEMBDF9kjs)**
+      - **[IUP2](https://youtube.com/playlist?list=PLnOXj03cuJjn7ecksWZEwCe8LVR-PDgud&si=xdQEoILML6WQMnjC)**
