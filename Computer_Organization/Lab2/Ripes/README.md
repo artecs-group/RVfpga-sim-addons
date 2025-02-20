@@ -1,6 +1,10 @@
 # Ripes processors
 Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*.
 
+## Building the *Single-Cycle processor*
+Look at the following presentation which shows step-by-step how to build the Ripes Single-Cycle processor and several examples of a subset of instructions executing on it: [BuildingSingleCycle](https://drive.google.com/file/d/1ltiDqyqdh34iVbHx_IfEizBPG4y45GcI/view?usp=sharing).
+
+
 ## Basic use of the *Single-Cycle processor*
 To use Ripes for the *Single-Cycle processor*, follow these steps:
 
