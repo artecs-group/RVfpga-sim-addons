@@ -23,7 +23,15 @@ To use Ripes for the *Single-Cycle processor*, follow these steps:
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
+4. Perform the example shown in the above slides for the ```sub``` instruction. Use the following code in Ripes:
+
+```
+li x2, 5
+li x3, 3
+sub x1, x2, x3
+```
+
+5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
 
 ```
 .data
@@ -40,7 +48,7 @@ L7:
     beq x4, x4, L7
 ```
 
-5. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
+6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
 
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
