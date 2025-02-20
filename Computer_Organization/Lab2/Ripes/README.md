@@ -31,6 +31,8 @@ li x3, 3
 sub x1, x2, x3
 ```
 
+![image](https://github.com/user-attachments/assets/49e6ccc7-630e-4cdc-867f-ffc46cde9f73)
+
 5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
 
 ```
