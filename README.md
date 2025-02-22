@@ -1,7 +1,7 @@
 # RVfpga: Recent Additions and Updates
 
 ## Teaching experiences in year 2024-25
-In this repository, we provide materials from various RVfpga-based teaching experiences conducted during the 2024-25 academic year.
+This repository provides materials from a range of RVfpga-based teaching experiences, primarily conducted during the 2024-25 academic year.
 
 We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of three courses instructed at the University Complutense of Madrid (UCM).
 
@@ -15,7 +15,11 @@ We also participated in the [Master de Formación Permanente en Sistemas Microel
 
 We developed an **[RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)** in edX. This MOOC course includes 10 chapters that cover labs 1-4, 6-9, and 11 of the RVfpga course. The chapters provide instructions, hands-on tutorials, videos with demonstrations, exercises, and multiple-choice questions.
 
-Finally, in the second semester, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: **[RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/)**.
+In recent years, we have also supervised several Bachelor's and Master's theses based on RVfpga. The following are among the most significant:
+    - Bachelor Thesis [Floating-point extensions for the SweRV EH1 core](https://docta.ucm.es/entities/publication/274f1b3a-c564-464d-8066-ef9aa4ae3c10)
+    - Master thesis [FPGA implementation of an AD-HOC RISC-V system-on-chip for industrial IoT](https://docta.ucm.es/entities/publication/9298fbe5-cabd-40a0-bec5-0501290c30d1)
+
+Finally, in the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: **[RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/)**.
 
 
 
