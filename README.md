@@ -16,8 +16,8 @@ We also participated in the [Master de Formación Permanente en Sistemas Microel
 We developed an **[RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)** in edX. This MOOC course includes 10 chapters that cover labs 1-4, 6-9, and 11 of the RVfpga course. The chapters provide instructions, hands-on tutorials, videos with demonstrations, exercises, and multiple-choice questions.
 
 In recent years, we have also supervised several Bachelor's and Master's theses based on RVfpga. The following are among the most significant:
-    - Bachelor Thesis [Floating-point extensions for the SweRV EH1 core](https://docta.ucm.es/entities/publication/274f1b3a-c564-464d-8066-ef9aa4ae3c10)
-    - Master thesis [FPGA implementation of an AD-HOC RISC-V system-on-chip for industrial IoT](https://docta.ucm.es/entities/publication/9298fbe5-cabd-40a0-bec5-0501290c30d1)
+    - Bachelor Thesis **[Floating-point extensions for the SweRV EH1 core](https://docta.ucm.es/entities/publication/274f1b3a-c564-464d-8066-ef9aa4ae3c10)**
+    - Master thesis **[FPGA implementation of an AD-HOC RISC-V system-on-chip for industrial IoT](https://docta.ucm.es/entities/publication/9298fbe5-cabd-40a0-bec5-0501290c30d1)**
 
 Finally, in the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). You can find all the details here: **[RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/)**.
 
