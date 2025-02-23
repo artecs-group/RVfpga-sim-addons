@@ -155,6 +155,10 @@ b. Then, modify the ```x1``` register initialization to 0x7, and analyze the fir
 c. Explain the differences observed between the two cases.
 
 ---
+## Building the *Pipelined processor*
+Look at the following presentation which shows step-by-step how to build the Ripes Pipelined processor and several examples of a subset of instructions executing on it: [BuildingPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing
+).
+
 
 ## Basic use of the *Pipelined processor*
 To use Ripes for the *Pipelined processor*, follow these steps:
