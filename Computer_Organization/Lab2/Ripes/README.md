@@ -183,9 +183,74 @@ To use Ripes for the *Pipelined processor*, follow these steps:
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-4. Perform the simulation of one iteration of loop L7 in the Pipelined processor, cycle-by-cycle, and analyze the control/data signals. These is the screenshot for a given cycle of the execution where the instructions of the loop are in the different stages of the pipeline:
+4. Perform the example shown in the above slides for the ```sub``` instruction. Use the following code in Ripes:
 
-![image](https://github.com/user-attachments/assets/dfce65a8-74a8-4d53-8cae-3a94c0c6ef69)
+```
+li x2, 5
+li x3, 3
+nop
+nop
+nop
+nop
+sub x1, x2, x3
+```
+
+5. Analyze the ```addi``` instruction in the following example. Highlight the differences with respect to the execution of a ```sub``` instruction.
+
+```
+li x2, 5
+li x3, 3
+nop
+nop
+nop
+nop
+addi x1, x2, x3
+```
+
+6. Analyze the ```lw``` instruction in the following example.
+
+```
+.data
+a: .word 5
+.text
+la x2, a
+nop
+nop
+nop
+nop
+lw x1, 0(x2)
+```
+
+7. Analyze the ```sw``` instruction in the following example.
+
+```
+.data
+a: .word 0
+.text
+li x1, 2
+la x2, a
+nop
+nop
+nop
+nop
+sw x1, 0(x2)
+```
+
+8. Analyze the ```beq``` instruction in the following example. Test both taken and non-taken branches by modifying the initial values of ```x2``` and ```x3```.
+
+```
+li x2, 5
+li x3, 5
+REPEAT:
+nop
+nop
+nop
+nop
+beq x3, x2, REPEAT
+addi x2, x2, 1
+addi x3, x3, 1
+```
+
 
 
 ## Exercise 4
