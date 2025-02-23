@@ -4,7 +4,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
 ## Building the *Single-Cycle processor*
 Look at the following presentation which shows step-by-step how to build the Ripes Single-Cycle processor and several examples of a subset of instructions executing on it: [BuildingRipesSingleCycle](https://drive.google.com/file/d/1ltiDqyqdh34iVbHx_IfEizBPG4y45GcI/view?usp=sharing).
 
-The following presentation shows step-by-step how to build the Single-Cycle processor from the Harris&Harris (H&H) textbook: [BuildingH&HSingleCycle](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf)
+The following presentation shows step-by-step how to build the Single-Cycle processor from the Harris&Harris (H&H) textbook: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf)
 
 
 ## Basic use of the *Single-Cycle processor*
@@ -160,7 +160,7 @@ c. Explain the differences observed between the two cases.
 ## Building the *Pipelined processor*
 Look at the following presentation which shows step-by-step how to build the Ripes Pipelined processor and several examples of a subset of instructions executing on it: [BuildingRipesPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing).
 
-Look at the following presentation which shows step-by-step how to build the Pipelined processor from the Harris&Harris textbook [BuildingH&HPipelined](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
+Look at the following presentation which shows step-by-step how to build the Pipelined processor from the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
 
 
 ## Basic use of the *Pipelined processor*
