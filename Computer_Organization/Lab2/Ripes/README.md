@@ -443,7 +443,7 @@ b. Analyse the program on the Ripes simulator for the 5-stages processor and ans
 
 
 ### Lab 5
-Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
+Given the following code, simulate it in the Ripes Single-Cycle processor and answer the following questions.
 
 ```
 CODE (to be shown next April)
