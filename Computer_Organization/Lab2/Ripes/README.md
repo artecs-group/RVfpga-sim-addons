@@ -437,3 +437,20 @@ b. Analyse the program on the Ripes simulator for the 5-stages processor and ans
  - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
  - Show screenshots of the pipeline to explain how the different data/control hazards are handled.
  - Indicate the values of the data and control signals in cycle 5 of the program execution.
+
+
+### Lab 5
+Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
+
+```
+CODE (to be shown next April)
+```
+
+
+
+### Lab 6
+Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
+
+```
+CODE (to be shown next April)
+```
