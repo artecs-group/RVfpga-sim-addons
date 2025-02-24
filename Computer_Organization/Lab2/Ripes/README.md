@@ -439,6 +439,9 @@ b. Analyse the program on the Ripes simulator for the 5-stages processor and ans
  - Indicate the values of the data and control signals in cycle 5 of the program execution.
 
 
+---
+
+
 ### Lab 5
 Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
 
