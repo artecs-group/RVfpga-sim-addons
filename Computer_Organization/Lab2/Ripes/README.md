@@ -260,34 +260,40 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions for the 5-stage Pipelined Processor:
+Answer the following questions for the Pipelined Processor:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
+a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. 
 
+b. Draw the pipeline diagram in paper.
+
+<!--
 b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
   <img src="../Images/ProcessorHH.png" width=90% height=90%>
 </p>
+-->
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
+ - Generate in Ripes the pipeline diagram and compare it with your previous answer.
  - Show screenshots of the pipeline to explain how the different data hazards are handled.
- - Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.
+ - Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals.
 
 
 **SOLUTION:**
 We next show partial solutions for items b and c as an example. Complete the solutions not provided.
 
+<!--
 *b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
 
 <p align="center">
   <img src="../Images/Solution_1-c.png" width=90% height=90%>
 </p>
+-->
 
 *c. Analyse the program on the Ripes simulator.*
 
-*- Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.*
+*- Generate in Ripes the pipeline diagram and compare it with your previous answer.*
 
 This is the timing diagram obtained with Ripes:
 
@@ -305,7 +311,7 @@ This is a screenshot of the simulator that highlights the forwarding that occurs
 
 You should explain how the hazard is handled by the pocessor: which multiplexers are used, the stages involved, etc.
 
-*- Stop the execution in the same cycle analyzed in item *b* and compare the values of the data/control signals on the simulator and on your answer to item *b*.*
+*- Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals.*
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
