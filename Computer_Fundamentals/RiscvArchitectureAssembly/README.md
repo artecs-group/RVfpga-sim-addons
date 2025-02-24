@@ -1308,6 +1308,8 @@ void main() {
 }
 ```
 
+**Extra Tasks for Lab 3**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab3](https://drive.google.com/file/d/1iecjLPAcyWZdjqb7X6wzWXAUqFgoxOgs/view?usp=drive_link). We next show the complete solution for all exercises in Lab 3:
+
 
 ### Lab 4
 
