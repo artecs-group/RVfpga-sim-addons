@@ -24,15 +24,15 @@ Finally, in the second semester of year 2024-25, we will deliver a microcredenti
 
 
 ## Papers, Presentations and Videos
-If you're interested in learning more about the details of the RVfpga course, check out our recently released paper: 
+If you're interested in learning more about the details of the RVfpga course, check out our paper released in Oct-2024: 
 
 * **[The RISC-V FPGA (RVfpga) Teaching Package](https://www.authorea.com/doi/full/10.36227/techrxiv.172978275.56140460)** 
 
-For insights into other teaching experiences based on RVfpga, you can explore another recently released paper: 
+For insights into other teaching experiences based on RVfpga, you can explore another paper released in Nov-2024: 
 
 * **[Teaching Experiences using the RVfpga Package](http://arxiv.org/abs/2411.14954)**
 
-We recently presented *Teaching Computer Architecture with RVfpga* at the 2nd Sino-European RISC-V Workshop. You can download the slides here:
+We recently presented *Teaching Computer Architecture with RVfpga* at the 2024 Sino-European RISC-V Workshop. You can download the slides here:
 
 * **[Teaching Computer Architecture with RVfpga](https://drive.google.com/file/d/1JlivSs5iZqpF1h7p_dbInBxkeEg9aDwf/view?usp=drive_link)**
 
