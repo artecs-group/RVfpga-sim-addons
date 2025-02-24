@@ -230,6 +230,7 @@ nop
 sw x1, 0(x2)
 ```
 
+<!--
 8. Analyze the ```beq``` instruction in the following example. Test both taken and non-taken branches by modifying the initial values of ```x2``` and ```x3```.
 
 ```
@@ -244,7 +245,7 @@ beq x3, x2, REPEAT
 addi x2, x2, 1
 addi x3, x3, 1
 ```
-
+-->
 
 
 ## Exercise 4
