@@ -36,7 +36,11 @@ We recently presented *Teaching Computer Architecture with RVfpga* at the 2nd Si
 
 * **[Teaching Computer Architecture with RVfpga](https://drive.google.com/file/d/1JlivSs5iZqpF1h7p_dbInBxkeEg9aDwf/view?usp=drive_link)**
 
-In the following links you can also find many videos that illustrate different topics of RVfpga.
+We also recently gave talk *Teaching Experiences with RVfpga* at the 2025 RISC-V Education Forum (RISC-V Ecosystem Conference) at China. You can view the video here:
+
+* **[Teaching Experiences with RVfpga](https://youtu.be/gUCAdCwOHEc)**
+
+Finally, in the following links you can also find many videos that illustrate different topics of RVfpga.
 
   - Videos at YouTube Channel: **[RVfpgaVideos](https://www.youtube.com/@RVfpgaVideos)**
   - Imperial College WS 2022: **[LondonWS](https://youtube.com/playlist?list=PLnOXj03cuJjkes1OIMa8SFyn1yKQQY8aD&si=mNLqXXbtPnbuobof)**
