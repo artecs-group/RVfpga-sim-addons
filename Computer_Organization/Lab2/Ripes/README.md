@@ -248,6 +248,10 @@ addi x3, x3, 1
 -->
 
 
+## Data and Control Hazards in the *Pipelined processor*
+Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
+
+
 ## Exercise 4
 The following code is executed in Ripes:
 
