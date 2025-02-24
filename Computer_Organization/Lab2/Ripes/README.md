@@ -80,17 +80,13 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions for the Single-Cycle Processor:
-
-a. Simulate the program cycle-by-cycle and stop when the ```add``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
+Simulate the program cycle-by-cycle and stop when the ```add``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
 
 ![image](https://github.com/user-attachments/assets/d57bdd0a-0e63-4cc2-974a-2cd80bc1f53d)
 
-b. Which data/control signals are different in the execution of the ```sub``` and ```or``` instructions? Explain each of them.
-
 
 **SOLUTION:**
-We next show partial solutions for item a as an example.
+We next show the solution for this exercise as an example.
 
 ![image](https://github.com/user-attachments/assets/c0795f78-57a6-4cee-be5f-38a2994043c7)
 
@@ -122,9 +118,7 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions for the Single-Cycle Processor:
-
-a. Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
+Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
 
 
 ## Exercise 3
