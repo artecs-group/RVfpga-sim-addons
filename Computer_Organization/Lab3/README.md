@@ -22,7 +22,7 @@ As an example, we next show the steps to simulate Exercise 1-a (provided [below]
 ```
 #define N 4
 
-int A[N][N];
+int A[N][N] __attribute__((aligned(128)));
 int B[N][N];
 int C[N][N];
 
@@ -32,8 +32,8 @@ main(){
 /* Initialize matrices */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++){
-           A[i][j]=i*N+j;
-           B[i][j]=i*N+j+3;
+           A[i][j]=i*N+j+259;
+           B[i][j]=i*N+j+1024;
            C[i][j]=0;
        }
           
@@ -129,7 +129,7 @@ Copy in Ripes the following program:
 ```
 #define N 4
 
-int A[N][N];
+int A[N][N] __attribute__((aligned(128)));
 int B[N][N];
 int C[N][N];
 
@@ -139,8 +139,8 @@ main(){
 /* Initialize matrices */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++){
-           A[i][j]=i*N+j;
-           B[i][j]=i*N+j+3;
+           A[i][j]=i*N+j+259;
+           B[i][j]=i*N+j+1024;
            C[i][j]=0;
        }
           
@@ -178,7 +178,7 @@ d. Modified program: A programmer suggests the following modification for the pr
 struct {
 		int A;
 		int B;
-} AB[N][N];
+} AB[N][N] __attribute__((aligned(128)));
 
 int C[N][N];
 
@@ -188,8 +188,8 @@ main(){
 /* Initialize matrices */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++){
-           AB[i][j].A=i*N+j;
-           AB[i][j].B=i*N+j+3;
+           AB[i][j].A=i*N+j+259;
+           AB[i][j].B=i*N+j+1024;
            C[i][j]=0;
        }
           
