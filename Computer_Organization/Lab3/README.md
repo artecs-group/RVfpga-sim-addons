@@ -106,11 +106,19 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * Misses = 124 - 76 = 48
  * Writebacks = 85 - 69 = 16
 
-10. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figure shows the cache state after the second iteration:
+10. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the first iteration:
 
-<p align="center">
-  <img src="Images/CacheState.png" width=60% height=60%>
-</p>
+ * Before the memory instructions:
+   ![image](https://github.com/user-attachments/assets/9fcb6662-bba3-4663-a0b9-79206f2c083f)
+   
+ * After the first load:
+   ![image](https://github.com/user-attachments/assets/e5b5fac2-dd7c-4d2b-9578-7f15e3f0b5dc)
+
+ * After the second load:
+   ![image](https://github.com/user-attachments/assets/887fca4d-2b6f-4d1d-8462-7e117de03001)
+
+ * After the store (note that the value written will not update immediately, but when we see the next store):
+   ![image](https://github.com/user-attachments/assets/402900b6-34bd-46da-b215-88124b458862)
 
 
 ## Exercise 1
