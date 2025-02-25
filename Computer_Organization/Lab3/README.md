@@ -144,7 +144,7 @@ main(){
 
 Analyze and explain the cache's behavior for the second nested loop, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
-We will use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real matrix and cache sizes). Specifically, analyze the following scenarios:
+Analyze the following scenarios:
 
 a. Direct mapping data cache (illustrated in the previous section).
 
@@ -196,21 +196,21 @@ main(){
 Simulate the following code in Ripes. 
 
 ```
-int nota[128];	
-int media[128];	
+int nota[8] __attribute__((aligned(128)));	
+int media[8] __attribute__((aligned(128)));	
 
 main(){
   int i;
 
   /* Initialize matrices */
-  for (i=0; i < 128; i++){
+  for (i=0; i < 8; i++){
     nota [i] = i;
     media [i] = i+5;
   }
   
   /* Analyze this loop */
-  for (i=0; i < 128; i++) {
-    if (i > 7 && i < 64)
+  for (i=0; i < 8; i++) {
+    if (i > 1 && i < 6)
     		nota[i] = media[i] / 2;
     else
     		nota[i] = nota[i] * media[i];
@@ -219,11 +219,11 @@ main(){
 }
 ```
 
-Configure the data cache with a total size of 128B, with 16B blocks. Simulate the program with a direct-mapped data cache and No-Write-Allocate. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
+Configure the data cache with a total size of 64B, with 16B blocks. Simulate the program with a direct-mapped data cache and No-Write-Allocate. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
 
 a. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
 
-b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0 to 7, iterations 8 to 63, and iterations 64 to 127.
+b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0 to 1, iterations 2 to 6, and iterations 7 to 8.
 
 c. Perform code optimizations (such as array enlargement, array fusion, etc.) and explain the results obtained compared with the results of the original code.
 
