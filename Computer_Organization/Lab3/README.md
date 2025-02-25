@@ -146,7 +146,7 @@ Analyze and explain the cache's behavior for the second nested loop, adding scre
 
 We will use a small matrix size (N=4) and a small data cache size (keep the instruction cache at the default size provided by the simulator) to easily analyze the behavior of the data cache (later, you can also test a more real matrix and cache sizes). Specifically, analyze the following scenarios:
 
-a. Direct mapping data cache.
+a. Direct mapping data cache (illustrated in the previous section).
 
 <p align="center">
   <img src="Images/CacheConfiguration.png" width=60% height=60%>
