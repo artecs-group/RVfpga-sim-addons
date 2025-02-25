@@ -235,7 +235,9 @@ a. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is
 
 b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0 to 1, iterations 2 to 6, and iterations 7 to 8.
 
-c. Perform code optimizations (such as array enlargement, array fusion, etc.) and explain the results obtained compared with the results of the original code.
+c. Test a 2-way set associative cache (keep the total size of the cache unchanged).
+
+d. Perform code optimizations (such as array enlargement, array fusion, etc.) and explain the results obtained compared with the results of the original code.
 
 
 ## Exercise 3
