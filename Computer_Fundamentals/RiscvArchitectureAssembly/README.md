@@ -1552,7 +1552,7 @@ Specifically, perform the following tasks:
 - Compile the program with a ```-O1``` optimization level.
 - Execute the program in Ripes and check if the final result is correct.
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
-    - This is the ```main``` function obtained. Analyze the invocation of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention.
+    - This is the ```main``` function obtained. Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention. Analyze both the input and output parameters.
 
         ```asm
         00010240 <main>:
@@ -1574,7 +1574,7 @@ Specifically, perform the following tasks:
         1027c:        0000006f        jal x0 0
         ```
 
-    - This is the ```i_sqrt``` function obtained. Explain each of the instructions of this function and why are they used.
+    - This is the ```i_sqrt``` function obtained. Explain each of the instructions of this function and why are they used. Indentify clearly the prologue/epilogue and explain them.
 
         ```asm
         00010190 <i_sqrt>:
