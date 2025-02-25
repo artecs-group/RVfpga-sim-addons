@@ -244,7 +244,7 @@ d. Perform code optimizations (such as array enlargement, array fusion, etc.) an
 Simulate the following code in Ripes. 
 
 ```
-int A[16][16];
+int A[16][16] __attribute__((aligned(128)));
 int B[32];
 int C[16][16];
 
@@ -285,7 +285,7 @@ c. Analyze and explain in detail the evolution of the instruction cache for the 
 Consider a computer with a main memory of 4MB, addressable by bytes, equipped with a 2KB cache, with lines of 512B. The cache is direct-mapped and uses write-allocation. The following code is to be executed:
 
 ```
-int A[1024];
+int A[1024] __attribute__((aligned(128)));
 int B[1024];
 int C[1024];
 
