@@ -1549,7 +1549,9 @@ void main () {
 ```
 
 Specifically, perform the following tasks:
-- Compile the program with a ```-O1``` optimization level.
+- Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button).
+- Select a ```-O1``` optimization level (```Edit - Settings - Compiler```).
+- Compile the program.
 - Execute the program in Ripes and check if the final result is correct.
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
     - This is the ```main``` function obtained. Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention. Analyze both the input and output parameters.
