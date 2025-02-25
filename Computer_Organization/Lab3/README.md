@@ -117,7 +117,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * After the store (note that the value written will not be shown immediately, but when the next store is executed):
    ![image](https://github.com/user-attachments/assets/fc7de4dc-ef5f-40a7-bdb3-9fb5e79cb053)
 
-11. You can also view the memory tab to understand how the values are updated after the stores. For example, the following figure shows C[0] to C[3] in memory after the fourth iteration.
+11. You can also view the memory tab to understand how the values are updated after the stores. For example, the following figure shows C[0] to C[3] in memory after the fourth iteration. Given that we are using a Write-Back policy, C[3] has not been updated in memory yet.
 
     ![image](https://github.com/user-attachments/assets/ad91d4f3-a59e-49b3-920e-057d8345b51e)
 
