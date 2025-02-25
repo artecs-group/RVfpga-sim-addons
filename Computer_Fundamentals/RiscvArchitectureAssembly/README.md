@@ -1310,6 +1310,184 @@ void main() {
 
 **Extra Tasks for Lab 3**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab3](https://drive.google.com/file/d/1iecjLPAcyWZdjqb7X6wzWXAUqFgoxOgs/view?usp=drive_link). We next show the complete solution for all exercises in Lab 3:
 
+```
+.data
+N:      .word 4
+A:      .word 3, 5, 1, 9
+B:      .word 1, 6, 2, 3
+res:    .word 0
+normA:  .word 0
+normB:  .word 0
+wavg:   .word 0
+
+
+.text
+.globl main
+
+
+main:
+   addi sp, sp, -16
+   sw ra, 0(sp)
+   sw s0, 4(sp)
+   sw s1, 8(sp)
+   sw s2, 12(sp)
+   la a0, A
+   la a1, A
+   la a3, N
+   lw a2, 0(a3)
+   jal dotprod
+   la t0, normA
+   sw a0, 0(t0)
+   la a0, B
+   la a1, B
+   la a3, N
+   lw a2, 0(a3)
+   jal dotprod
+   la t1, normB
+   sw a0, 0(t1)
+   la t2, normA
+   lw t3, 0(t2)
+   la t4, normB
+   lw t5, 0(t4)
+   blt t3, t5, normB_greater
+   la t6, res
+   li a4, 0xa
+   sw a4, 0(t6)
+   j end_main
+normB_greater:
+   la t6, res
+   li a4, 0xb
+   sw a4, 0(t6)
+end_main:
+
+
+   # wavg = idiv(dotprod(A, B, N), vsum(B, N))
+   la a0, A
+   la a1, B
+   la t0, N
+   lw a2, 0(t0)
+   jal dotprod
+   mv s0, a0  # Guardar resultado de dotprod en s0
+
+   la a0, B
+   la t0, N
+   lw a1, 0(t0)
+   jal vsum
+   mv s1, a0  # Guardar resultado de vsum en s1
+
+   mv a0, s0  # Numerador
+   mv a1, s1  # Denominador
+   jal idiv
+   la t0, wavg
+   sw a0, 0(t0)
+
+   lw ra, 0(sp)
+   lw s0, 4(sp)
+   lw s1, 8(sp)
+   lw s2, 12(sp)
+   addi sp, sp, 16
+
+
+fin:
+   j fin
+
+
+dotprod:
+    addi sp, sp, -24
+    sw ra, 0(sp)
+    sw s0, 4(sp)
+    sw s3, 8(sp)
+    sw s5, 12(sp)
+    sw s4, 16(sp)
+    sw s1, 20(sp)
+    mv s0, a0
+    mv s1, a1
+    mv s3, a2
+    li s4, 0
+    li s5, 0
+  loop_dot:
+    bge s5, s3, end_dot
+    slli t6, s5, 2
+    add a0, s0, t6
+    lw a0, 0(a0)
+    add a1, s1, t6
+    lw a1, 0(a1)
+    jal ra, mul
+    add s4, s4, a0
+    addi s5, s5, 1
+    j loop_dot
+  end_dot:
+
+
+  mv a0, s4
+  lw s4, 16(sp)
+  lw s1, 20(sp)
+  lw s5, 12(sp)
+  lw s3, 8(sp)
+  lw s0, 4(sp)
+  lw ra, 0(sp)
+  addi sp, sp, 24
+ret
+
+
+mul:
+    li t5, 0
+  loop:
+    blez a1, end
+    add t5, t5, a0
+    addi a1, a1, -1
+    j loop
+  end:
+  mv a0, t5
+ret
+
+
+# Funcion: vsum(V, n)
+vsum:
+    addi sp, sp, -16
+    sw ra, 0(sp)
+    sw s0, 4(sp)
+    sw s1, 8(sp)
+    sw s2, 12(sp)
+
+    mv s0, a0  # V
+    mv s1, a1  # n
+    li s2, 0   # s = 0
+    li t0, 0   # i = 0
+
+loop_vsum:
+    bge t0, s1, end_vsum
+    slli t1, t0, 2
+    add t2, s0, t1
+    lw t3, 0(t2)
+    add s2, s2, t3  # s += V[i]
+    addi t0, t0, 1
+    j loop_vsum
+
+end_vsum:
+    mv a0, s2
+    lw ra, 0(sp)
+    lw s0, 4(sp)
+    lw s1, 8(sp)
+    lw s2, 12(sp)
+    addi sp, sp, 16
+    ret
+
+
+# Funcion: idiv(a, b)
+idiv:
+    li t0, 0  # c = 0
+loop_idiv:
+    blt a0, a1, end_idiv
+    sub a0, a0, a1  # a -= b
+    addi t0, t0, 1  # c++
+    j loop_idiv
+end_idiv:
+    mv a0, t0
+    ret
+```
+
+
 
 ### Lab 4
 
