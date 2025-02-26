@@ -52,7 +52,9 @@ Finally, in the following links you can also find many videos that illustrate di
 ## RVfpga Tools
 We provide both simulation and hardware methods for using and analyzing the RVfpga core, SoC, and its peripherals. The next figure shows a diagram of these tools using the EL2 SoC and a Nexys A7 FPGA board. All the tools share a common back-end, the VeeRwolfX SoC code, but have different front-ends.
 
-![image](https://github.com/user-attachments/assets/c59fb53a-1566-4ec3-8f43-b45167d9a2f6)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c59fb53a-1566-4ec3-8f43-b45167d9a2f6" width="600" alt="Descripción de la imagen">
+</div>
 
   * **Execution on the physical board:**  To use the VeeRwolfX SoC in hardware on an FPGA board, we provide the default configurations with the packages; users could generate a new bitstream using Vivado. RVfpga supports three FPGA boards: the
 Nexys A7, Basys 3 and Boolean boards. All instructions for generating the bitstream and for running on the different boards can be found at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/).
