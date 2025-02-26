@@ -17,7 +17,7 @@ The cache view allows simulating different configurations and management policie
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor):
+As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). The program begins with an initial nested loop that simply initializes the elements in A, B, and C, which we will not analyze. Then, another nested loop follows, performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
 
 ```
 #define N 4
@@ -152,6 +152,8 @@ main(){
 }
 ```
 
+The program begins with an initial nested loop that simply initializes the elements in A, B, and C, which we will not analyze. Then, another nested loop follows, performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
+
 Analyze and explain the cache's behavior for the second nested loop, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
 
 Analyze the following scenarios:
@@ -212,7 +214,7 @@ int media[8] __attribute__((aligned(128)));
 main(){
   int i;
 
-  /* Initialize matrices */
+  /* Initialize arrays */
   for (i=0; i < 8; i++){
     nota [i] = i;
     media [i] = i+5;
@@ -228,6 +230,8 @@ main(){
 
 }
 ```
+
+The program begins with an initial loop that simply initializes the elements in nota and media, which we will not analyze. Then, another loop follows, performing a different computation that depends on the i value. This is the loop we will analyze in the cache.
 
 Configure the data cache with a total size of 64B, with 16B blocks. Simulate the program with a direct-mapped data cache and No-Write-Allocate. You should analyze and explain the cache's behavior in detail, adding screenshots from the simulator.
 
