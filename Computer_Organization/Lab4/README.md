@@ -3,7 +3,7 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 
 1. If you are new to Computer Organization, you should start by reading Chapter 9 of the H&H book.
 2. Then, view this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc), you can watch an AI-translated-to-Chinese version of the video here: [InputOutputChineseVideo](https://www.youtube.com/watch?v=gG0HSeJ9ew8), or you can enable the subtitles in the video in Spanish). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
-3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo*.
+3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo*. If you are using the FPGA board, skip this section.
 4. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1) in this repository.
 5. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
 
@@ -77,7 +77,7 @@ Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (
 
 Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
-Finally, run the codes in the RVfpga-ViDBo simulator following the same steps explained in the introduction and include screenshots showing their operation.
+Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
 
 
 ## Exercise 2
@@ -95,7 +95,7 @@ Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located a
 
 Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
-Finally, run the code in the RVfpga-ViDBo simulator following the same steps explained in the introduction and include a screenshot showing its operation.
+Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
 
 
 ## Exercise 4
