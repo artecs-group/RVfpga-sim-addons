@@ -201,7 +201,7 @@ csrrs t1, 0x7F9, t2
 - Finally, reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the configuration of the previous item (all VeeR EH1 features enabled). Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards.
 
 
-## Exercise 3
+## Exercise 2 (extension)
 Download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, first in C and then in RISC-V assembly language (in the latter we have removed the REPEAT loop).
 
 Place a breakpoint at line 29 of the C file and execute the program in the RVfpga-Whisper simulator. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the Salida array in the Variables window for the program in C, and in the Memory window (address 0xf0040000) for the program in assembly.
