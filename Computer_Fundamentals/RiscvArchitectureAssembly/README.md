@@ -1546,7 +1546,6 @@ void main () {
    int d_v = eucl_dist (V , N );
    char mayor = d_u > d_v ;
    guardar ( mayor , & mayor_u ) ;
-   while (1) ;
 }
 ```
 
@@ -1662,8 +1661,6 @@ void main () {
 
       "end:\n"
  );
-
- while (1) ;
 }
 ```
 
