@@ -106,7 +106,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * Misses = 124 - 76 = 48
  * Writebacks = 85 - 69 = 16
 
-10. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
+10. Justify these results according to the program executed and the cache configuration used.
+
+11. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
  * After the first load:
    ![image](https://github.com/user-attachments/assets/2f5f4c4c-c329-44d9-b68f-5fa8dc257f7a)
@@ -117,7 +119,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * After the store (note that the value written will not be shown immediately, but when the next store is executed):
    ![image](https://github.com/user-attachments/assets/fc7de4dc-ef5f-40a7-bdb3-9fb5e79cb053)
 
-11. You can also view the memory tab to understand how the values are updated after the stores. For example, the following figure shows C[0] to C[3] in memory after the fourth iteration. Given that we are using a Write-Back policy, C[3] has not been updated in memory yet.
+12. You can also view the memory tab to understand how the values are updated after the stores. For example, the following figure shows C[0] to C[3] in memory after the fourth iteration. Given that we are using a Write-Back policy, C[3] has not been updated in memory yet.
 
     ![image](https://github.com/user-attachments/assets/ad91d4f3-a59e-49b3-920e-057d8345b51e)
 
