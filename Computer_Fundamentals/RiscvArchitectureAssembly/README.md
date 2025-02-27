@@ -1029,7 +1029,8 @@ ret
 ---
 
 ## RISC-V Instruction Format
-Do the following basic tests to understand the instruction format used in RISC-V. These examples are based on the slides provided at: [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf).
+Each instruction format is first explained theoretically using the slides available at [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf). After studying each instruction format, students must perform the corresponding test from the list below.
+
 
 ### Instruction ```sub```
 
