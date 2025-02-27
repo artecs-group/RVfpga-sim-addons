@@ -42,8 +42,9 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
   * The 8-bit ```AN``` output from the controller connects with ```AN0 … AN7```.
   * The 7-bit ```Digits_Bits``` output from the controller connects with ```CA … CG``` (```DP``` is left unconnected on the board).
 
-Once you’ve made and checked all the changes in the ```SevSegDisplays_Controller``` module, you will test the modified version in the RVfpga-ViDBo simulator. Follow the next steps:
+Once you’ve made and checked all the changes in the ```SevSegDisplays_Controller``` module, you will test the modified version in the RVfpga-ViDBo simulator or on the FPGA board (if you have it). Follow the next steps:
 
+#### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
 
 + Open a terminal and go into directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo```.
@@ -57,6 +58,11 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 
 + When compilation ends, the simulator binary should have been created at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/Vrvfpgasim```
 
+
+#### RVfpga-Nexys (FPGA board)
++ Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
+
++ Generate a new bitstream following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that you need to have Vivado installed in your computer (in case you do not have it, you can find the instructions in the RVfpga Getting Started Guide included in the [RVfpga course](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/)).
 
 
 ## Exercise 2
