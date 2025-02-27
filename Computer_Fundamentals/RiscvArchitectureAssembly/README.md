@@ -169,7 +169,8 @@ int main(void)
 ---
 
 ## Initial Tests in Ripes - Basic RISC-V Assembly
-Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf).
+
+Each instruction type is first explained theoretically using the slides available at [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf). After studying each instruction type, students must perform the corresponding test from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
 
 ### Arithmetic instructions
 
