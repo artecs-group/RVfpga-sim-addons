@@ -596,7 +596,7 @@ j end
 ---
 
 ## Initial Tests in Ripes - Calling Functions
-Do the following basic tests to understand some of the instructions in the RISC-V ISA. These examples are based on the slides provided at: [SlidesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf).
+The RISC-V Calling Convention is first explained theoretically using the slides available at [SlidesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf). After studying each new concept, students must perform the corresponding example from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
 
 ### Call and Return
 
