@@ -4,7 +4,7 @@ This is a first-year course in the Computer Science degree program at UCM. The c
 
 The theoretical part provides an in-depth analysis of the RISC-V architecture and assembly programming, covering single-cycle, multi-cycle, and pipelined processors as described in the Harris & Harris book. Exercises and labs reinforce and deepen understanding of these topics. All course materials are available on an external webpage in both Spanish [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html) and English [FC2-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html).
 
-Practical activities are conducted through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students install and run Ripes natively on their own laptops or use a school-provided device. Our teaching methodology combines conceptual explanations with example programs and exercises to put these concepts into practice.
+Practical activities are conducted through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students install and run Ripes natively on their own laptops or use a school-provided device. Our teaching methodology in class combines short conceptual explanations (10 to 20 minutes) with example programs and exercises to put these concepts into practice.
 
 The course is mainly divided into two parts, for which more details are given in the following links:
 
