@@ -1,10 +1,12 @@
 # Computer Fundamentals
 
-This is a first-year course in the Computer Science degree program offered at UCM. You can see the contents of this course at [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8704.pdf).
+This is a first-year course in the Computer Science degree program at UCM. The course content can be found at [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8704.pdf).
 
-The theoretical part of the course provides an in-depth analysis of the RISC-V architecture and assembly programming, along with single-cycle, multi-cycle, and pipelined processors as described in the Harris&Harris book. Exercises and labs are included to reinforce and deepen understanding of these topics. All these materials are provided through an external webpage, both in Spanish [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html) and in English [FC2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html).
+The theoretical part provides an in-depth analysis of the RISC-V architecture and assembly programming, covering single-cycle, multi-cycle, and pipelined processors as described in the Harris & Harris book. Exercises and labs reinforce and deepen understanding of these topics. All course materials are available on an external webpage in both Spanish [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html) and English [FC2-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html).
 
-In this course, exercises and labs are developed and analyzed through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students use their own laptops or request one from the school, and they install and run Ripes natively on their devices. Exercises and labs are mainly divided into two parts, for which more details are given in the following links:
+Practical activities are conducted through simulations using [Ripes](https://github.com/mortbopet/Ripes). Students install and run Ripes natively on their own laptops or use a school-provided device. Our teaching methodology combines conceptual explanations with example programs and exercises to put these concepts into practice.
+
+The course is mainly divided into two parts, for which more details are given in the following links:
 
 - [RISC-V Architecture and Assembly Language](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvArchitectureAssembly): Modules 2-4 of the course.
 - [RISC-V Single/Multi-Cycle and Pipelined Processors](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvProcessors): Modules 5-7 of the course.
