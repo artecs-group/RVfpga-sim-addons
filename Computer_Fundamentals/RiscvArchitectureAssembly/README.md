@@ -1551,7 +1551,13 @@ void main () {
 
 Specifically, perform the following tasks:
 - Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button).
+
+  ![image](https://github.com/user-attachments/assets/211e7a70-c2bf-41f4-9dfd-d37127ad14a7)
+
 - Select a ```-O1``` optimization level (```Edit - Settings - Compiler```).
+
+  ![image](https://github.com/user-attachments/assets/05302054-3b8b-47fb-8af5-a8be4a61e9eb)
+
 - Compile the program.
 - Execute the program in Ripes and check if the final result is correct.
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
