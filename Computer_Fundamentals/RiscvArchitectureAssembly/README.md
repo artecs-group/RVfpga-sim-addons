@@ -1558,7 +1558,7 @@ Specifically, perform the following tasks:
 
   ![image](https://github.com/user-attachments/assets/05302054-3b8b-47fb-8af5-a8be4a61e9eb)
 
-- Compile the program.
+- Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
 - Execute the program in Ripes and check if the final result is correct.
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
     - This is the ```main``` function obtained. Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention. Analyze both the input and output parameters.
