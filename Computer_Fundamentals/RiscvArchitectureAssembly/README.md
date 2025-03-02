@@ -1550,7 +1550,7 @@ void main () {
 ```
 
 Specifically, perform the following tasks:
-- Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button).
+- Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button: ![image](https://github.com/user-attachments/assets/0c4ee25b-d4b2-4996-91e4-3bc2072c1e29)).
 
   ![image](https://github.com/user-attachments/assets/211e7a70-c2bf-41f4-9dfd-d37127ad14a7)
 
