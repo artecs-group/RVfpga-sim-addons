@@ -133,6 +133,30 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 4. ```BEQ``` instruction:
 ![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
 
+   - ```Instr```= 0x10000497. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```beq``` instruction included in the program.
+
+   - ```Addr``` = 0x14, which is the address where the ```beq``` instruction.
+
+   - ```PC``` = 0x8, which is destination address of the ```beq```.
+
+   - ```R1``` = 0x04, which is the index of the base register (```x4```) used in the ```beq``` instruction as its first operand.
+
+   - ```Op1``` = 0x14, which is the value held in the PC.
+
+   - ```Imm``` = ```Op2``` = 0xf4, which is the offset that must be added to the PC to compute the destination address.
+
+   - ```C2``` = ```PC```, as the first ALU operand comes from the PC.
+
+   - ```C3``` = ```IMM```, as the second ALU operand comes from the Immediate.
+
+   - ```C4``` = ```ADD```, as the ALU must perform an addition to compute the destination address of the ```beq``` instruction.
+
+   - ```Res``` = 0x8, which is the destination address of the ```beq``` instruction, and which is provided to the PC.
+
+   - ```C1``` = ```C5``` = 0x0, as neither the Register File nor the Data Memory must be written.
+
+   - ```C7``` = 0x1, as the condition is met given that the two registers are equal. Note that this signal makes the destination address of the ```beq``` instruction be written to the PC.
+
 
 ## Exercise 1
 The following code is executed in Ripes:
