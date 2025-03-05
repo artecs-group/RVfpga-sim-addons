@@ -37,7 +37,9 @@ sub x1, x2, x3
 
 ![image](https://github.com/user-attachments/assets/49e6ccc7-630e-4cdc-867f-ffc46cde9f73)
 
-5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
+5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf).
+
+- Copy the following program into the Editor tab.
 
 ```
 .data
@@ -54,11 +56,11 @@ L7:
     beq x4, x4, L7
 ```
 
-6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals shown in red in the following figure.
+- Perform the cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control/data signals shown in red in the following figure for each instruction within the loop.
 
 ![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
 
-7. These are the screenshots showing the execution of each instruction in the loop and the explanation of the control/data signals:
+SOLUTION:
 
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
