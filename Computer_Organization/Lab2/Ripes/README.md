@@ -79,7 +79,25 @@ SOLUTION:
 
    - ```Imm``` = ```Op2``` = 0x0, which is the offset used in the ```lw``` instruction to calculate the effective address.
 
-   - ```Res``` = 0x10000000, which is the result of the addition of the base register and the offset.
+   - ```C2``` = ```REG1```, as the first ALU operand comes from the Register File.
+
+   - ```C3``` = ```IMM```, as the second ALU operand comes from the Immediate.
+
+   - ```C4``` = ```ADD```, as the ALU must perform an addition to compute the load effective address.
+
+   - ```Res``` = 0x10000000, which is the result of the addition of the base register and the offset, and which is provided to the Data Memory through the Address input port.
+
+   - ```Dout``` = 0xa, which is the value read from address 0x10000000 of the Data Memory. See next the data in the Ripes memory tab:
+
+     <img src="https://github.com/user-attachments/assets/8dc6d1f5-f027-456d-a925-81dcde55d9f3" width="300"/>
+
+   - ```C6``` = ```MEMREAD```, as the value to write in the Register File must come from the Data output port of the Data Memory.
+
+   - ```C1``` = 0x1, as the Register File must be written.
+
+   - ```Wr``` = 0x06, which is the index of the destination register (```x6```) used in the ```lw``` instruction.
+
+   - ```DInRF``` = 0xa, which is the data read from memory that must be saved in the Register File.
 
 - ```SW``` instruction:
 ![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
