@@ -65,7 +65,7 @@ SOLUTION:
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
-   - ```Addr``` = 0x8, which is the address where the ```lw``` instruction (```0x0004a303```) is placed in memory. See next the instructions in the Ripes memory tab:
+   - ```Addr``` = 0x8, which is the address where the ```lw``` instruction (```0x0004a303```) is placed in memory (you can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program). See next the instructions in the Ripes memory tab (you can see that address 0x8 contains the hexadecimal value ```0x0004a303```):
 
      <img src="https://github.com/user-attachments/assets/e6d5f9c2-06cd-49a1-929f-baf7e5575f88" width="300"/>
 
