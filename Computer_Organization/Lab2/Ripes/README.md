@@ -101,6 +101,32 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 2. ```SW``` instruction:
 ![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
 
+   - ```Instr```= 0x064a423. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```sw``` instruction included in the program.
+
+   - ```Addr``` = 0xc, which is the address where the ```sw``` instruction.
+
+   - ```PC``` = 0x10, which is the address where the instruction following the ```sw``` is stored in memory and will be fetched in the next cycle.
+
+   - ```R1``` = 0x09, which is the index of the base register (```x9```) used in the ```sw``` instruction to calculate the effective address.
+
+   - ```Op1``` = 0x10000000, which is the value held in the base register used in the ```sw``` instruction.
+
+   - ```Imm``` = ```Op2``` = 0x10, which is the offset used in the ```sw``` instruction to calculate the effective address.
+
+   - ```C2``` = ```REG1```, as the first ALU operand comes from the Register File.
+
+   - ```C3``` = ```IMM```, as the second ALU operand comes from the Immediate.
+
+   - ```C4``` = ```ADD```, as the ALU must perform an addition to compute the load effective address.
+
+   - ```Res``` = 0x10000008, which is the result of the addition of the base register and the offset, and which is provided to the Data Memory through the Address input port.
+
+   - ```DInM``` = 0xa, which is the value to write in address 0x10000008 of the Data Memory. In the next cycle, we can confirm that the Data Memory has been correctly updated:
+
+     <img src="https://github.com/user-attachments/assets/34e63847-a820-4401-a2b4-22456e05c2d5" width="300"/>
+
+   - ```C1``` = 0x0, as the Register File must not be written in this case.
+
 3. ```OR``` instruction:
 ![image](https://github.com/user-attachments/assets/c5a48734-9266-4b27-b8db-dfaacc324b3c)
 
