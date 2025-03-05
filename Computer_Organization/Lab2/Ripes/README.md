@@ -37,9 +37,10 @@ sub x1, x2, x3
 
 ![image](https://github.com/user-attachments/assets/49e6ccc7-630e-4cdc-867f-ffc46cde9f73)
 
-5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf).
+## Complete example in the *Single-Cycle processor*
+Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf).
 
-- Copy the following program into the Editor tab.
+Copy the following program into the Editor tab.
 
 ```
 .data
@@ -56,13 +57,11 @@ L7:
     beq x4, x4, L7
 ```
 
-- Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control and data signals highlighted in red in the following figure for each instruction within the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on your own, and then compare your results with the provided solution below.
+Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control and data signals highlighted in red in the following figure for each instruction within the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on your own, and then compare your results with the provided solution below.
 
 ![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
 
-SOLUTION:
-
-- ```LW``` instruction:
+1. ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
    - ```Instr```= 0x0004a303. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
@@ -99,13 +98,13 @@ SOLUTION:
 
    - ```DInRF``` = 0xa, which is the data read from memory that must be saved in the Register File.
 
-- ```SW``` instruction:
+2. ```SW``` instruction:
 ![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
 
-- ```OR``` instruction:
+3. ```OR``` instruction:
 ![image](https://github.com/user-attachments/assets/c5a48734-9266-4b27-b8db-dfaacc324b3c)
 
-- ```BEQ``` instruction:
+4. ```BEQ``` instruction:
 ![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
 
 
