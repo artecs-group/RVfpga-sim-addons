@@ -56,7 +56,7 @@ L7:
     beq x4, x4, L7
 ```
 
-- Perform the cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control/data signals shown in red in the following figure for each instruction within the loop.
+- Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control and data signals highlighted in red in the following figure for each instruction within the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on your own, and then compare your results with the provided solution below.
 
 ![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
 
@@ -65,11 +65,21 @@ SOLUTION:
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
-   - ```Addr``` = 0x8, which is the address where the ```lw``` instruction (```0x0004a303```) is placed in memory (you can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program). See next the instructions in the Ripes memory tab (you can see that address 0x8 contains the hexadecimal value ```0x0004a303```):
+   - ```Instr```= 0x0004a303. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
+
+   - ```Addr``` = 0x8, which is the address where the ```lw``` instruction. See next the instructions in the Ripes memory tab:
 
      <img src="https://github.com/user-attachments/assets/e6d5f9c2-06cd-49a1-929f-baf7e5575f88" width="300"/>
 
    - ```PC``` = 0xc, which is the address where the instruction following the ```lw``` is stored in memory and will be fetched in the next cycle.
+
+   - ```R1``` = 0x09, which is the index of the base register (```x9```) used in the ```lw``` instruction to calculate the effective address.
+
+   - ```Op1``` = 0x10000000, which is the value held in the base register used in the ```lw``` instruction.
+
+   - ```Imm``` = ```Op2``` = 0x0, which is the offset used in the ```lw``` instruction to calculate the effective address.
+
+   - ```Res``` = 0x10000000, which is the result of the addition of the base register and the offset.
 
 - ```SW``` instruction:
 ![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
