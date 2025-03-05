@@ -54,10 +54,20 @@ L7:
     beq x4, x4, L7
 ```
 
-6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
+6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals shown in red in the following figure.
+
+![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+
+7. These are the screenshots showing the execution of each instruction in the loop and the explanation of the control/data signals:
 
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
+
+   - ```Addr``` = 0x8, which is the address where the ```lw``` instruction (```0x0004a303```) is placed in memory. See next the instructions in the Ripes memory tab:
+
+     <img src="https://github.com/user-attachments/assets/e6d5f9c2-06cd-49a1-929f-baf7e5575f88" width="300"/>
+
+   - ```PC``` = 0xc, which is the address where the instruction following the ```lw``` is stored in memory and will be fetched in the next cycle.
 
 - ```SW``` instruction:
 ![image](https://github.com/user-attachments/assets/8ba109e6-ec28-4a83-9799-0a7baebbdd1d)
