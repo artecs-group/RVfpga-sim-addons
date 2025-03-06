@@ -232,15 +232,13 @@ END:
 nop
 ```
 
-Answer the following questions for the Single-Cycle Processor:
+Answer the following questions for the Single-Cycle Processor, using the following figure:
 
-a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
+![image](https://github.com/user-attachments/assets/64d8d7a6-8157-4f0c-9136-1eb2b8403dda)
 
-![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruction is executing. What is the value of the signals highlighted in the figure? Justify each value obtained.
 
-b. Then, modify the ```x1``` register initialization to 0x7, and analyze the first ```beq``` instruction execution. What is the value of the signals highlighted in the following figure? Justify each value obtained.
-
-![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+b. Then, modify the ```x1``` register initialization to 0x7, and analyze the first ```beq``` instruction execution. What is the value of the signals highlighted in the figure? Justify each value obtained.
 
 c. Explain the differences observed between the two cases.
 
