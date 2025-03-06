@@ -64,7 +64,7 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 1. ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
-   - ```Instr```= 0x0004a303. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
+   - ```Instr```= 0x0004a303. You can confirm, using the slides from [Module 4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf), that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
 
    - ```Addr``` = 0x8, which is the address where the ```lw``` instruction. See next the instructions in the Ripes memory tab:
 
