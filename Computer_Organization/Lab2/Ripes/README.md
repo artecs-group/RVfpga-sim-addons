@@ -229,6 +229,7 @@ ELSE:
    add x5, x2, x3
     and x6, x2, x5
 END:
+jal main
 nop
 ```
 
@@ -241,6 +242,8 @@ a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruc
 b. Then, modify the ```x1``` register initialization to 0x7, and analyze the first ```beq``` instruction execution. What is the value of the signals highlighted in the figure? Justify each value obtained.
 
 c. Explain the differences observed between the two cases.
+
+d. Finally, stop when the ```jal``` instruction is executing. Explain the signals from the figure above. How is the destination address computed? What is written to the Register File?
 
 ---
 ## Building the *Pipelined processor*
