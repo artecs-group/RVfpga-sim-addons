@@ -57,7 +57,7 @@ L7:
     beq x4, x4, L7
 ```
 
-Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control and data signals highlighted in red in the following figure for each instruction within the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on your own, and then compare your results with the provided solution below.
+Analyze and explain the control and data signals highlighted in red in the following figure for each instruction of the first iteration of the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on paper on your own, and then compare your results with the provided solution below and with a cycle-by-cycle Ripes simulation.
 
 ![image](https://github.com/user-attachments/assets/bdce197e-dd60-4d72-be33-06fffa69bdf1)
 
