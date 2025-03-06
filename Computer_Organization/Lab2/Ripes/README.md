@@ -181,9 +181,11 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Simulate the program cycle-by-cycle and stop when the ```add``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
+What is the value of the signals highlighted in the following figure for the execution of the ```add``` instruction? Justify each value obtained.
 
 ![image](https://github.com/user-attachments/assets/d52f6624-8c29-48e7-88ff-6812ebedf964)
+
+Simulate the program cycle-by-cycle, stop when the ```add``` instruction is executing and confirm your answer. 
 
 
 ## Exercise 2
@@ -202,9 +204,11 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Simulate the program cycle-by-cycle and stop when the ```lw``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
+What is the value of the signals highlighted in the following figure for the execution of the ```lw``` instruction? Justify each value obtained.
 
 ![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+
+Simulate the program cycle-by-cycle, stop when the ```lw``` instruction is executing and confirm your answer. 
 
 
 ## Exercise 3
