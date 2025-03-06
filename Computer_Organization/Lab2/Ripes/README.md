@@ -59,7 +59,7 @@ L7:
 
 Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Single-Cycle processor. Analyze and explain the control and data signals highlighted in red in the following figure for each instruction within the loop: ```lw```, ```sw```, ```or``` and ```beq```. First, attempt the analysis on your own, and then compare your results with the provided solution below.
 
-![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+![image](https://github.com/user-attachments/assets/bdce197e-dd60-4d72-be33-06fffa69bdf1)
 
 1. ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
@@ -74,7 +74,7 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 
    - ```R1``` = 0x09, which is the index of the base register (```x9```) used in the ```lw``` instruction to calculate the effective address.
 
-   - ```Op1``` = 0x10000000, which is the value held in the base register used in the ```lw``` instruction.
+   - ```Reg1``` = ```Op1``` = 0x10000000, which is the value held in the base register used in the ```lw``` instruction.
 
    - ```Imm``` = ```Op2``` = 0x0, which is the offset used in the ```lw``` instruction to calculate the effective address.
 
@@ -109,7 +109,9 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 
    - ```R1``` = 0x09, which is the index of the base register (```x9```) used in the ```sw``` instruction to calculate the effective address.
 
-   - ```Op1``` = 0x10000000, which is the value held in the base register used in the ```sw``` instruction.
+   - ```R2``` = 0x06, which is the index of the register that holds the value to store in memory.
+
+   - ```Reg1``` = ```Op1``` = 0x10000000, which is the value held in the base register used in the ```sw``` instruction.
 
    - ```Imm``` = ```Op2``` = 0x10, which is the offset used in the ```sw``` instruction to calculate the effective address.
 
@@ -121,7 +123,7 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 
    - ```Res``` = 0x10000008, which is the result of the addition of the base register and the offset, and which is provided to the Data Memory through the Address input port.
 
-   - ```DInM``` = 0xa, which is the value to write in address 0x10000008 of the Data Memory. In the next cycle, we can confirm that the Data Memory has been correctly updated:
+   - ```Reg2``` = ```DInM``` = 0xa, which is the value to write in address 0x10000008 of the Data Memory. In the next cycle, we can confirm that the Data Memory has been correctly updated:
 
      <img src="https://github.com/user-attachments/assets/34e63847-a820-4401-a2b4-22456e05c2d5" width="300"/>
 
@@ -139,7 +141,9 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 
    - ```PC``` = 0x8, which is destination address of the ```beq```.
 
-   - ```R1``` = 0x04, which is the index of the base register (```x4```) used in the ```beq``` instruction as its first operand.
+   - ```R1``` = 0x04, which is the index of the first register (```x4```) used in the ```beq``` instruction as its first operand.
+
+   - ```R2``` = 0x04, which is the index of the second register (```x4```) used in the ```beq``` instruction as its second operand.
 
    - ```Op1``` = 0x14, which is the value held in the PC.
 
@@ -154,6 +158,8 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
    - ```Res``` = 0x8, which is the destination address of the ```beq``` instruction, and which is provided to the PC.
 
    - ```C1``` = ```C5``` = 0x0, as neither the Register File nor the Data Memory must be written.
+
+   - ```Reg1``` = ```Reg2``` = 0x0a, which are the values read from the Register File. Given that they are equal, the condition is met and the branch is taken.
 
    - ```C7``` = 0x1, as the condition is met given that the two registers are equal. Note that this signal makes the destination address of the ```beq``` instruction be written to the PC.
 
