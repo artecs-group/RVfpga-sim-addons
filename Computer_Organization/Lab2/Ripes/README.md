@@ -183,7 +183,7 @@ or  x6, x2, x5
 
 Simulate the program cycle-by-cycle and stop when the ```add``` instruction is executing. What is the value of the signals highlighted in the following figure? Justify each value obtained.
 
-![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+![image](https://github.com/user-attachments/assets/4f1ecd9a-228c-4b03-b91b-26ce7c0c6d44)
 
 
 ## Exercise 2
