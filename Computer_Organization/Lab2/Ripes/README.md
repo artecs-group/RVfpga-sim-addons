@@ -134,7 +134,7 @@ Perform a cycle-by-cycle simulation of the first iteration of loop L7 in the Sin
 3. ```OR``` instruction:
 ![image](https://github.com/user-attachments/assets/c5a48734-9266-4b27-b8db-dfaacc324b3c)
 
-Look at the example of the ```sub``` instruction shown above, which is identical as this one except for the ALU operation.
+   - Look at the example of the ```sub``` instruction shown above, which is identical as this one except for the ALU operation.
 
 4. ```BEQ``` instruction:
 ![image](https://github.com/user-attachments/assets/8c87f9b6-1305-4518-985d-c91064c303de)
