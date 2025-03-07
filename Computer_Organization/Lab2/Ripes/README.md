@@ -144,9 +144,9 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
    - ```Instr```= 0x10000497. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```beq``` instruction included in the program.
 
-   - ```Addr``` = 0x14, which is the address where the ```beq``` instruction.
+   - ```Addr``` = 0x14, which is the address where the ```beq``` instruction is stored in memory.
 
-   - ```PC``` = 0x8, which is destination address of the ```beq```.
+   - ```PC``` = 0x8, which is destination address of the ```beq```. As we explain below, it is a taken branch.
 
    - ```R1``` = 0x04, which is the index of the first register (```x4```) used in the ```beq``` instruction as its first operand.
 
@@ -154,7 +154,7 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
    - ```Op1``` = 0x14, which is the value held in the PC.
 
-   - ```Imm``` = ```Op2``` = 0xf4, which is the offset that must be added to the PC to compute the destination address.
+   - ```Imm``` = ```Op2``` = 0xfffffff4, which is the offset that must be added to the PC to compute the destination address. Note that it is a negative number (C2 format), so it is a backward branch.
 
    - ```C2``` = ```PC```, as the first ALU operand comes from the PC.
 
@@ -162,7 +162,7 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
    - ```C4``` = ```ADD```, as the ALU must perform an addition to compute the destination address of the ```beq``` instruction.
 
-   - ```Res``` = 0x8, which is the destination address of the ```beq``` instruction, and which is provided to the PC.
+   - ```Res``` = 0x8, which is the destination address of the ```beq``` instruction, and which will be stored in the PC at the end of this cycle.
 
    - ```C1``` = ```C5``` = 0x0, as neither the Register File nor the Data Memory must be written.
 
@@ -184,11 +184,11 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-What is the value of the signals highlighted in the following figure for the execution of the ```add``` instruction? Justify each value obtained.
+What is the value of the signals highlighted in the following figure for the execution of the ```add``` instruction? Try first to reason it out on your own without using the simulator.
 
 ![image](https://github.com/user-attachments/assets/d52f6624-8c29-48e7-88ff-6812ebedf964)
 
-Simulate the program cycle-by-cycle, stop when the ```add``` instruction is executing and confirm your answer. 
+Simulate the program cycle-by-cycle, stop when the ```add``` instruction is executing, and confirm your answer. 
 
 
 ## Exercise 2
@@ -207,7 +207,7 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-What is the value of the signals highlighted in the following figure for the execution of the ```lw``` instruction? Justify each value obtained.
+What is the value of the signals highlighted in the following figure for the execution of the ```lw``` instruction? Try first to reason it out on your own without using the simulator.
 
 ![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
 
