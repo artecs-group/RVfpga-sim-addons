@@ -18,7 +18,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 
 ## Installation of Ripes
 
-The video [InstallRipesAndToolchain](https://www.youtube.com/watch?v=pLN42eawvdY) demonstrates the steps outlined in this section for installing Ripes on a Windows computer.
+The video [InstallRipesAndToolchain](https://www.youtube.com/watch?v=abHzsWcHIYA) demonstrates the steps outlined in this section for installing Ripes on a Windows computer.
 
 1. Install Ripes: Follow the instructions provided at this link: [RipesInstallation](https://github.com/mortbopet/Ripes?tab=readme-ov-file#downloading--installation). Note that you could build the simulator yourself, but it is easier to use precompiled binaries. Specifically, use the latest version (v2.2.6) of the precompiled binaries available [here](https://github.com/mortbopet/Ripes/releases). Note that you must download the binaries that correspond to your Operating System.
 
