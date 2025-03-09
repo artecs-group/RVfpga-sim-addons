@@ -1,10 +1,6 @@
 # Ripes processors
 Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*.
 
-## Building the *Single-Cycle processor*
-Look at the following presentation which shows step-by-step how to build the Ripes Single-Cycle processor and several examples of a subset of instructions executing on it: [BuildingSingleCycle](https://drive.google.com/file/d/1ltiDqyqdh34iVbHx_IfEizBPG4y45GcI/view?usp=sharing).
-
-
 ## Basic use of the *Single-Cycle processor*
 To use Ripes for the *Single-Cycle processor*, follow these steps:
 
@@ -20,20 +16,10 @@ To use Ripes for the *Single-Cycle processor*, follow these steps:
 3. Add the signal values view in the ```View``` tab.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/View.png" width=40% height=40%>
+  <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-4. Perform the example shown in the above slides for the ```sub``` instruction. Use the following code in Ripes:
-
-```
-li x2, 5
-li x3, 3
-sub x1, x2, x3
-```
-
-![image](https://github.com/user-attachments/assets/49e6ccc7-630e-4cdc-867f-ffc46cde9f73)
-
-5. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
+4. Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf). Copy the following program into the Editor tab.
 
 ```
 .data
@@ -50,7 +36,7 @@ L7:
     beq x4, x4, L7
 ```
 
-6. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
+5. Perform the simulation of one iteration of loop L7 in the Single-Cycle processor, cycle-by-cycle, and analyze the control/data signals. These are the screenshots showing the execution of each instruction in the loop:
 
 - ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
@@ -148,11 +134,7 @@ nop
 
 Answer the following questions for the Single-Cycle Processor:
 
-a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
-
-b. Then, modify the ```x1``` register initialization to 0x7, and analyze the first ```beq``` instruction execution. Explain the values of each of the data/control signals obtained in the simulation.
-
-c. Explain the differences observed between the two cases.
+a. Simulate the program cycle-by-cycle and stop when the ```beq``` instruction is executing. Explain the values of each of the data/control signals obtained in the simulation.
 
 ---
 
@@ -167,13 +149,13 @@ To use Ripes for the *Pipelined processor*, follow these steps:
    - Extended layout.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/SelectProc.png" width=60% height=60%>
+  <img src="../Images/SelectProc.png" width=60% height=60%>
 </p>
 
 3. Add the signal values view in the ```View``` tab.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/View.png" width=40% height=40%>
+  <img src="../Images/View.png" width=40% height=40%>
 </p>
 
 4. Perform the simulation of one iteration of loop L7 in the Pipelined processor, cycle-by-cycle, and analyze the control/data signals. These is the screenshot for a given cycle of the execution where the instructions of the loop are in the different stages of the pipeline:
@@ -201,7 +183,7 @@ a. Identify the data dependencies that exist in the code and explain how they ar
 b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/ProcessorHH.png" width=90% height=90%>
+  <img src="../Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
@@ -216,7 +198,7 @@ We next show partial solutions for items b and c as an example. Complete the sol
 *b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Solution_1-c.png" width=90% height=90%>
+  <img src="../Images/Solution_1-c.png" width=90% height=90%>
 </p>
 
 *c. Analyse the program on the Ripes simulator.*
@@ -226,7 +208,7 @@ We next show partial solutions for items b and c as an example. Complete the sol
 This is the timing diagram obtained with Ripes:
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/TimingDiagramRipes.png" width=40% height=40%>
+  <img src="../Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
 *- Show screenshots of the pipeline to explain how the different data hazards are handled.*
@@ -234,7 +216,7 @@ This is the timing diagram obtained with Ripes:
 This is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/FwdOp1.png" width=60% height=60%>
+  <img src="../Images/FwdOp1.png" width=60% height=60%>
 </p>
 
 You should explain how the hazard is handled by the pocessor: which multiplexers are used, the stages involved, etc.
@@ -244,7 +226,7 @@ You should explain how the hazard is handled by the pocessor: which multiplexers
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Solution_1-d.png" width=90% height=90%>
+  <img src="../Images/Solution_1-d.png" width=90% height=90%>
 </p>
 
 You should explain the values of the different data/control signals and compare their values with those from the previous item. Most of them should be equal (although a few signals may differ, given that the two processors are not identical).
@@ -273,7 +255,7 @@ a. Identify the data dependencies that exist in the code and explain how they ar
 b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/ProcessorHH.png" width=90% height=90%>
+  <img src="../Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
@@ -307,10 +289,10 @@ Answer the following questions for the 5-stage Pipelined Processor:
 
 a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. Draw the pipeline diagram.
 
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the first ```beq``` instruction is in the EX stage.
+b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```beq``` instruction is in the EX stage.
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/ProcessorHH.png" width=90% height=90%>
+  <img src="../Images/ProcessorHH.png" width=90% height=90%>
 </p>
 
 c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
