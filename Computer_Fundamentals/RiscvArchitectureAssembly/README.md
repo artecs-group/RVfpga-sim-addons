@@ -1563,7 +1563,9 @@ Specifically, perform the following tasks:
 - Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
 - Execute the program in Ripes and check if the final result is correct.
 - Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
-    - This is the ```main``` function obtained. Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters). Indentify clearly the prologue/epilogue and explain them.
+    - This is the ```main``` function obtained.
+       - Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
+       - Indentify clearly the prologue/epilogue and explain them.
 
         ```asm
          00010240 <main>:
@@ -1589,7 +1591,9 @@ Specifically, perform the following tasks:
              1028c:        00008067        jalr x0 x1 0
         ```
 
-    - This is the ```i_sqrt``` function obtained. Indentify clearly the prologue/epilogue and explain them. Explain each of the instructions in the body of this function and why are they used.
+    - This is the ```i_sqrt``` function obtained.
+       - Indentify clearly the prologue/epilogue and explain them.
+       - Explain each of the instructions in the body of this function and why are they used.
 
         ```asm
         00010190 <i_sqrt>:
