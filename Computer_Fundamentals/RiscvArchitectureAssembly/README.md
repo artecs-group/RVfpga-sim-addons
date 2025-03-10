@@ -1676,3 +1676,141 @@ void main () {
 }
 ```
 
+**Extra Tasks for Lab 4**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab4](https://drive.google.com/file/d/1kep_lHrdLG7lV0tIu8fUJV8IGBrMs9is/view?usp=sharing). We next show the complete solution for Lab 4:
+
+*Analyze the two invocations of the eucl_dist function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).*
+
+First invocation of eucl_dist:
+- Before calling the function and according to the RISC-V Calling Convention, in x10 (a0) the address of the U vector is saved and in x11 (a1) the number of elements of U are saved.
+- After the function and according to the RISC-V Calling Convention, the result comes in x10 (a0). Note that the result is moved to x8 (s0) in order to preserve it after the second call. Note also that x9 (s1) has preserved its value but x11 (a1) may have lost it and has to be initialized again.
+
+Second invocation of eucl_dist:
+- Before calling the function and according to the RISC-V Calling Convention, in x10 (a0) the address of the V vector is saved and in x11 (a1) the number of elements of V are saved.
+- After the function and according to the RISC-V Calling Convention, the result comes in x10 (a0). x8 (which has the result of the first call) and x10 are then used to perform the comparison.
+
+*Indentify clearly the prologue/epilogue and explain them.*
+
+Prologue:
+```
+10240:        ff010113        addi x2 x2 -16
+10244:        00112623        sw x1 12 x2
+10248:        00812423        sw x8 8 x2
+1024c:        00912223        sw x9 4 x2
+```
+16 bytes are reserved in the stack. Besides, x8 (s0) and x9 (s1) are stored, as these registers will be used in the function and they are preserved registers, and x1 (a0) is also preserved, as another function is called inside main.
+
+Epilogue:
+```
+1027c:        00c12083        lw x1 12 x2
+10280:        00812403        lw x8 8 x2
+10284:        00412483        lw x9 4 x2
+10288:        01010113        addi x2 x2 16
+```
+The tasks completed in the prologue are undone in the epilogue.
+
+*This is the i_sqrt function obtained. Explain each of the instructions of this function and why they are used.*
+
+Prologue: The preserved registers and ```ra``` are stored.```
+```
+   10190:        ff010113        addi x2 x2 -16
+   10194:        00112623        sw x1 12 x2
+   10198:        00812423        sw x8 8 x2
+   1019c:        00912223        sw x9 4 x2
+```
+
+Body: A loop is performed, which calls the mul function once per iteration. Note that the input parameters are provided in ```x10``` and ```x11```, and the result is provided in ```x10```.
+```
+   101a0:        00050493        addi x9 x10 0
+   101a4:        00000413        addi x8 x0 0
+   101a8:        00040593        addi x11 x8 0
+   101ac:        00040513        addi x10 x8 0
+   101b0:        f9dff0ef        jal x1 -100 <mul>
+   101b4:        00955663        bge x10 x9 12
+   101b8:        00140413        addi x8 x8 1
+   101bc:        fedff06f        jal x0 -20
+   101c0:        00040513        addi x10 x8 0
+```
+
+Epilogue: Registers are restored.
+```
+   101c4:        00c12083        lw x1 12 x2
+   101c8:        00812403        lw x8 8 x2
+   101cc:        00412483        lw x9 4 x2
+   101d0:        01010113        addi x2 x2 16
+```
+
+*Just like in the case of the ```save``` function, which has been translated to RISC-V assembly, translate the ```eucl_dist``` function to RISC-V assembly. Then, debug and execute it in Ripes.*
+
+```
+# define N 5
+int U [N ] = {5 , 2, -3 , 7 , 6};
+int V [N ] = {6 , -1 , 1 , 0 , 3};
+char mayor_u ;
+
+int mul (int a , int b) {
+int res = 0 , sign = 0;
+if (a < 0) {
+  sign = 1;
+  a = -a ;
+}
+while (a --) res += b;
+if ( sign )
+  return - res ;
+else
+  return res ;
+}
+
+
+int i_sqrt (int a) {
+int root = 0;
+while ( mul ( root , root ) < a ) {
+  root ++;
+}
+return root ;
+}
+
+
+void main () {
+int d_u = eucl_dist (U , N );
+int d_v = eucl_dist (V , N );
+char mayor = d_u > d_v ;
+guardar ( mayor , & mayor_u ) ;
+asm volatile (
+     "j end\n"
+     "eucl_dist:\n"
+     "addi sp, sp, -16\n"
+     "sw ra, 12(sp)\n"
+     "sw s0, 8(sp)\n"
+     "sw s1, 4(sp)\n"
+     "mv s0, a0\n"
+     "mv s1, a1\n"
+     "li t0, 0\n"
+     "li t1, 0\n"
+     "loop:\n"
+     "bge t1, s1, end_loop\n"
+     "slli t2, t1, 2\n"
+     "add t3, s0, t2\n"
+     "lw t4, 0(t3)\n"
+     "mv a0, t4\n"
+     "mv a1, t4\n"
+     "call mul\n"
+     "mv t5, a0\n"
+     "add t0, t0, t5\n"
+     "addi t1, t1, 1\n"
+     "j loop\n"
+     "end_loop:\n"
+     "mv a0, t0\n"
+     "call i_sqrt\n"
+     "lw ra, 12(sp)\n"
+     "lw s0, 8(sp)\n"
+     "lw s1, 4(sp)\n"
+     "addi sp, sp, 16\n"
+     "ret\n"
+     "guardar:\n"
+     "sb a0, 0(a1)\n"
+     "ret\n"
+     "end:\n"
+);
+
+}
+```
