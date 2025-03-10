@@ -544,7 +544,7 @@ b. Analyse the program on the Ripes simulator for the 5-stages processor and ans
 Given the following code, simulate it in the Ripes Single-Cycle processor and answer the following questions.
 
 ```
-CODE (to be shown next April)
+CODE (to be shown shortly)
 ```
 
 
@@ -553,5 +553,5 @@ CODE (to be shown next April)
 Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
 
 ```
-CODE (to be shown next April)
+CODE (to be shown shortly)
 ```
