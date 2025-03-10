@@ -1678,17 +1678,17 @@ void main () {
 
 **Extra Tasks for Lab 4**: In the following link you can find the extra exercises you have to do for this lab: [TasksLab4](https://drive.google.com/file/d/1kep_lHrdLG7lV0tIu8fUJV8IGBrMs9is/view?usp=sharing). We next show the complete solution for Lab 4:
 
-*Analyze the two invocations of the eucl_dist function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).*
+***Analyze the two invocations of the eucl_dist function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).***
 
-First invocation of eucl_dist:
+First invocation of ```eucl_dist```:
 - Before calling the function and according to the RISC-V Calling Convention, in x10 (a0) the address of the U vector is saved and in x11 (a1) the number of elements of U are saved.
 - After the function and according to the RISC-V Calling Convention, the result comes in x10 (a0). Note that the result is moved to x8 (s0) in order to preserve it after the second call. Note also that x9 (s1) has preserved its value but x11 (a1) may have lost it and has to be initialized again.
 
-Second invocation of eucl_dist:
+Second invocation of ```eucl_dist```:
 - Before calling the function and according to the RISC-V Calling Convention, in x10 (a0) the address of the V vector is saved and in x11 (a1) the number of elements of V are saved.
 - After the function and according to the RISC-V Calling Convention, the result comes in x10 (a0). x8 (which has the result of the first call) and x10 are then used to perform the comparison.
 
-*Indentify clearly the prologue/epilogue and explain them.*
+***Indentify clearly the prologue/epilogue and explain them.***
 
 Prologue:
 ```
@@ -1697,7 +1697,7 @@ Prologue:
 10248:        00812423        sw x8 8 x2
 1024c:        00912223        sw x9 4 x2
 ```
-16 bytes are reserved in the stack. Besides, x8 (s0) and x9 (s1) are stored, as these registers will be used in the function and they are preserved registers, and x1 (a0) is also preserved, as another function is called inside main.
+16 bytes are reserved in the stack. Besides, x8 (s0) and x9 (s1) are stored, as these registers will be used in the function and they are preserved registers, and x1 (a0) is also preserved, as another function is called inside ```main```.
 
 Epilogue:
 ```
@@ -1708,7 +1708,7 @@ Epilogue:
 ```
 The tasks completed in the prologue are undone in the epilogue.
 
-*This is the i_sqrt function obtained. Explain each of the instructions of this function and why they are used.*
+***This is the i_sqrt function obtained. Explain each of the instructions of this function and why they are used.***
 
 Prologue: The preserved registers and ```ra``` are stored.```
 ```
@@ -1718,7 +1718,7 @@ Prologue: The preserved registers and ```ra``` are stored.```
    1019c:        00912223        sw x9 4 x2
 ```
 
-Body: A loop is performed, which calls the mul function once per iteration. Note that the input parameters are provided in ```x10``` and ```x11```, and the result is provided in ```x10```.
+Body: A loop is performed, which calls the ```mul``` function once per iteration. Note that the input parameters are provided in ```x10``` and ```x11```, and the result is provided in ```x10```.
 ```
    101a0:        00050493        addi x9 x10 0
    101a4:        00000413        addi x8 x0 0
@@ -1739,7 +1739,7 @@ Epilogue: Registers are restored.
    101d0:        01010113        addi x2 x2 16
 ```
 
-*Just like in the case of the ```save``` function, which has been translated to RISC-V assembly, translate the ```eucl_dist``` function to RISC-V assembly. Then, debug and execute it in Ripes.*
+***Just like in the case of the ```save``` function, which has been translated to RISC-V assembly, translate the ```eucl_dist``` function to RISC-V assembly. Then, debug and execute it in Ripes.***
 
 ```
 # define N 5
