@@ -1697,6 +1697,7 @@ Prologue:
 10248:        00812423        sw x8 8 x2
 1024c:        00912223        sw x9 4 x2
 ```
+
 16 bytes are reserved in the stack. Besides, x8 (s0) and x9 (s1) are stored, as these registers will be used in the function and they are preserved registers, and x1 (a0) is also preserved, as another function is called inside ```main```.
 
 Epilogue:
@@ -1706,11 +1707,13 @@ Epilogue:
 10284:        00412483        lw x9 4 x2
 10288:        01010113        addi x2 x2 16
 ```
+
 The tasks completed in the prologue are undone in the epilogue.
 
 ***This is the i_sqrt function obtained. Explain each of the instructions of this function and why they are used.***
 
-Prologue: The preserved registers and ```ra``` are stored.```
+Prologue: The preserved registers and ```ra``` are stored.
+
 ```
    10190:        ff010113        addi x2 x2 -16
    10194:        00112623        sw x1 12 x2
@@ -1719,6 +1722,7 @@ Prologue: The preserved registers and ```ra``` are stored.```
 ```
 
 Body: A loop is performed, which calls the ```mul``` function once per iteration. Note that the input parameters are provided in ```x10``` and ```x11```, and the result is provided in ```x10```.
+
 ```
    101a0:        00050493        addi x9 x10 0
    101a4:        00000413        addi x8 x0 0
@@ -1732,6 +1736,7 @@ Body: A loop is performed, which calls the ```mul``` function once per iteration
 ```
 
 Epilogue: Registers are restored.
+
 ```
    101c4:        00c12083        lw x1 12 x2
    101c8:        00812403        lw x8 8 x2
