@@ -8,7 +8,7 @@ The course includes ten labs (some of them are identical to the labs used in the
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation and Introduction.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
-+ [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): The Ripes core and the VeeR EH1 core. For the Ripes core, use this link, which contains the original version provided in the lab: [Lab2_RipesCore_24-25](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/OLD_Lab2)
++ [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2): The Ripes core and the VeeR EH1 core.
 + [Lab 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3): Performance counters on the VeeR EH1 core.
 + [Lab 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4): Execution of basic instructions and adding new instructions on the VeeR EH1 core.
 + [Lab 5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3): The Memory Hierarchy in Ripes.
