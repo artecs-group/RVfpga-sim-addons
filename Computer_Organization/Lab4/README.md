@@ -87,9 +87,7 @@ You can use the project from Exercise 1 as a base and simply write your code in 
 ## Exercise 3
 → View the above video at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
 
-Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
-
-Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```). Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
 Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
 
