@@ -47,7 +47,7 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 #### RVfpga-Nexys (FPGA board)
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
 
-+ Generate a new bitstream following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that you need to use Vivado (in case you want to install it, you can find the instructions in the RVfpga Getting Started Guide provided in the [RVfpga course](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/); reduced instructions are provided in the following document: [RVfpgaVivadoInstallation](https://drive.google.com/file/d/1pCJauxfwKgOTIbim9V8QE3TmjpkHlsK5/view?usp=sharing)).
++ Generate a new bitstream following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that you need to use Vivado (in case you want to install it, you can find the instructions in the following document, extracted from the RVfpga course: [RVfpgaVivadoInstallation](https://drive.google.com/file/d/1pCJauxfwKgOTIbim9V8QE3TmjpkHlsK5/view?usp=sharing)).
 
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
