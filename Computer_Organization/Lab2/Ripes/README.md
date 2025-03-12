@@ -254,7 +254,7 @@ Look at the following presentation which shows step-by-step how to build the Rip
 
 In addition, the following presentation shows step-by-step and in great detail how to build the Pipelined processor from the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
 
-At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 52 to slide 54 [SlidesModule6](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf).
+At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 108 to slide 110 [SlidesModule6](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf).
 
 
 
