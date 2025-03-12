@@ -47,7 +47,12 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 #### RVfpga-Nexys (FPGA board)
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
 
-+ Generate a new bitstream following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that you need to use Vivado (in case you want to install it, you can find the instructions in the following document, extracted from the RVfpga course: [RVfpgaVivadoInstallation](https://drive.google.com/file/d/1pCJauxfwKgOTIbim9V8QE3TmjpkHlsK5/view?usp=sharing)).
++ Generate a new bitstream following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing).
+  
++ In case you want to install Vivado, you can find the complete instructions in the [RVfpga course](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/)). We next provide a summary of the instructions:
+  * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html).
+  * Select the Vivado version you want to download. Versions 2019.2 and 2022.2 are verified to work for RVfpga.
+  * Use a free version (such as Vivado Webpack or Vivado ML Standard).
 
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
