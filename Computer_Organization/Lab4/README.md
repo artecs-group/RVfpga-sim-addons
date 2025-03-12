@@ -69,13 +69,9 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
 ## Exercise 1
 → View the above video at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
 
-Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly.
+Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly. Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
-Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
-
-Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly.
-
-Next, describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly. Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
 
 Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
 
