@@ -254,6 +254,9 @@ Look at the following presentation which shows step-by-step how to build the Rip
 
 In addition, the following presentation shows step-by-step and in great detail how to build the Pipelined processor from the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
 
+At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 52 to slide 54 [SlidesModule6](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf).
+
+
 
 ## Basic use of the *Pipelined processor*
 The construction of the Pipelined processor is first explained theoretically using the slides provided above. During this explanation, students must perform the corresponding tests from the list below, executing the instructions and carefully analyzing the processor signals in detail.
@@ -344,6 +347,40 @@ addi x2, x2, 1
 addi x3, x3, 1
 ```
 -->
+
+
+## Complete example in the *Pipelined processor*
+Let's perform a simple test in the *Pipelined Processor*. Copy the following program into the Editor tab.
+
+```
+.data
+   xa: .word 10
+   xb: .word 0
+   xc: .word 0
+
+.text
+   la x9, xa
+   la x8, xc
+  L1:
+   addi x5, x0, 2
+   addi x4, x0, 3
+   addi x3, x0, -1
+   lw x6, 0(x9)
+   beq x0, x5, L1
+   add x1, x5, x5
+   or x2, x4, x4
+   sw x6, 8(x9)
+```
+
+Analyze and explain the control and data signals highlighted in red in the following figure in each cycle. First, attempt the analysis on paper on your own, and then compare your results with the provided solution below and with a cycle-by-cycle Ripes simulation.
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+
+For example, this is the state of the processor at the end of the code.
+
+![image](https://github.com/user-attachments/assets/099b8bcd-615f-412f-81f3-4038a45d3024)
+
+As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the Instruction Memory, which helps us follow the program's execution step by step. Next to that window, there's another one displaying performance metrics such as cycles, instructions, and CPI/IPC.
 
 
 ## Data and Control Hazards in the *Pipelined processor*
