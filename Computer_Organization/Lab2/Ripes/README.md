@@ -372,7 +372,7 @@ Let's perform a simple test in the *Pipelined Processor*. Copy the following pro
    sw x6, 8(x9)
 ```
 
-Analyze and explain the control and data signals highlighted in red in the following figure in each cycle. First, attempt the analysis on paper on your own, and then compare your results with the provided solution below and with a cycle-by-cycle Ripes simulation.
+Analyze and explain the control and data signals highlighted in red in the following figure, in each cycle of the execution of the program. First, attempt the analysis on paper on your own, and then compare your results with the provided solution below and with a cycle-by-cycle Ripes simulation.
 
 ![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
