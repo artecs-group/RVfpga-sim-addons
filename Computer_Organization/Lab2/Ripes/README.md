@@ -384,7 +384,7 @@ As you can see, five instructions are being executed simultaneously in the proce
 
 
 ## Data and Control Hazards in the *Pipelined processor*
-Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
+Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Ripes processor but has some minor differences.
 
 
 ## Exercise 4
