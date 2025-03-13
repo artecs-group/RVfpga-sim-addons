@@ -53,7 +53,6 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
   * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
   * Select the Vivado version that you wish to download (we recommend version 2022.2, but version 2019.2 is also verified for RVfpga and more modern versions should also work). For example, in Windows, click on *Xilinx Unified Installer 2022.2: Windows Self Extracting Web Installer*.
   * The Vivado installer will walk you through the installation process. Important notes:
-    * Use a free version, such as *Vivado ML Standard*.
     * Select Download and Install Now.
     * Select Vivado (not Vitis) as the Product to install.
     * Select Vivado ML Standard (not Vivado ML Enterprise), as this is the no-cost version.
