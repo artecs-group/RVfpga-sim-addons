@@ -49,13 +49,17 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 
 + Generate a new bitstream in Vivado following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing).
   
-+ **NOTE:** In case you want to install Vivado, you can find the complete instructions in the RVfpga course. We next provide the instructions:
-  * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html).
-  * Select the Vivado version that you wish to download. Versions 2019.2 and 2022.2 are verified for RVfpga.
-  * Use a free version (such as Vivado Webpack or Vivado ML Standard).
-  * Find more detailed instructions, extracted from the RVfpga course GSG, in the following documents:
-    * [Instructions for Vivado 2019.2](https://drive.google.com/file/d/1NxXtjlRsoGdQGDImagrMqSVQZ3M9uNwC/view?usp=sharing)
-    * [Instructions for Vivado 2022.2](https://drive.google.com/file/d/1NG__pDjN6esdkjtM4QwPKXD4NU2mnj6V/view?usp=sharing)
++ **NOTE:** To install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
+  * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
+  * Select the Vivado version that you wish to download (we recommend version 2022.2, but version 2019.2 is also verified for RVfpga). For example, in Windows, click on *Xilinx Unified Installer 2022.2: Windows Self Extracting Web Installer*.
+  * Use a free version (such as *Vivado ML Standard*).
+  * The Vivado installer will walk you through the installation process. Important notes:
+    * Select Download and Install Now.
+    * Select Vivado (not Vitis) as the Product to install.
+    * Select Vivado ML Standard (not Vivado ML Enterprise), as this is the no-cost version.
+    * Set all the I Agree boxes.
+    * Otherwise, defaults should be selected.
+
 
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
