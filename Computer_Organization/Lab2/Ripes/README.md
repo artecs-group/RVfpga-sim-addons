@@ -382,7 +382,7 @@ For example, this is the state of the processor at the end of the code.
 
 ![image](https://github.com/user-attachments/assets/099b8bcd-615f-412f-81f3-4038a45d3024)
 
-As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the Instruction Memory, which helps us follow the program's execution step by step. Next to that window, there's another one displaying performance metrics such as cycles, instructions, and CPI/IPC.
+As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the *Instruction Memory* window, which helps us follow the program's execution step by step. Next to that window, there's another one (*Execution info*) displaying performance metrics such as cycles, instructions, and CPI/IPC.
 
 
 ## Data and Control Hazards in the *Pipelined processor*
