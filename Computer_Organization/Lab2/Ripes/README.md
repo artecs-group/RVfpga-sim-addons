@@ -470,6 +470,7 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 - ```x4``` is written by the second ```li``` instruction and used by the ```add``` instruction. It is obtained through forwarding.
 - ```x2``` is written by the ```add``` instruction and used by the ```sub``` instruction. It is obtained through forwarding.
 - ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
+- ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
 
 *c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.*
 
