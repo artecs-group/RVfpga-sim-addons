@@ -382,7 +382,9 @@ For example, this is the state of the processor at the end of the code.
 
 ![image](https://github.com/user-attachments/assets/099b8bcd-615f-412f-81f3-4038a45d3024)
 
-As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the *Instruction Memory* window, which helps us follow the program's execution step by step. Next to that window, there's another one (*Execution info*) displaying performance metrics such as cycles, instructions, and CPI/IPC. Let's analyze some of the signals in this cycle.
+As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the *Instruction Memory* window, which helps us follow the program's execution step by step. Next to that window, there's another one (*Execution info*) displaying performance metrics such as cycles, instructions, and CPI/IPC. 
+
+Let's analyze some of the signals in this cycle.
 
    - ```sw``` instruction:
       - ```Addr```= 0x2c, which is the address where the store instruction is placed in the Instruction Memory. Confirm this in the memory tab.
@@ -391,12 +393,24 @@ As you can see, five instructions are being executed simultaneously in the proce
    - ```or``` instruction:
       - ```Reg1```= 0x3. This will be used as the first operand for the OR operation that will be performed next cycle.
       - ```Reg2```= 0x3. This will be used as the second operand for the OR operation that will be performed next cycle.
-      - ```C1(d)```= 1. This will be the Register File write enable in the WB stage. The or instruction must write the result to the RF.
+      - ```C1(d)```= 1. This will be the Register File write enable in the WB stage. The ```or``` instruction must write the result to the RF.
       - ```C2(d)```= ALURES. This will be used to select the data in the 3-1 multiplexer of the WB stage.
-      - ```C6(d)```= 0, as it is not a jump instruction.
-      - ```C7(d)```= 0, as it is not a branch instruction.
+      - ```C6(d)```= 0, as it is not a ```jump``` instruction.
+      - ```C7(d)```= 0, as it is not a ```branch``` instruction.
       - ```C8(d)```= ```C9(d)```= REG1/2, as the operands are provided from the Register File in this instruction.
       - ```C10(d)```= OR, as the ALU must perform an OR operation.
+
+   - ```add``` instruction:
+      - ```Op1```= 0x2. This is the first operand for the ADD operation that is performed this cycle.
+      - ```Op2```= 0x2. This is the second operand for the ADD operation that is performed this cycle.
+      - ```C1(e)```= 1. This will be the Register File write enable in the WB stage. The ```add``` instruction must write the result to the RF.
+      - ```C2(e)```= ALURES. This will be used to select the data in the 3-1 multiplexer of the WB stage.
+      - ```C6(e)```= 0, as it is not a ```jump``` instruction.
+      - ```C7(e)```= 0, as it is not a ```branch``` instruction.
+      - ```C8(e)```= ```C9(e)```= REG1/2, as the operands are provided from the Register File in this instruction.
+      - ```C10(e)```= ADD, as the ALU must perform an ADD operation.
+      - ```Res```= 0x4, which is the result of the addition.
+      - ```C14```= 0, as the next PC after the ```add``` instruction is PC+4.
 
 
 
