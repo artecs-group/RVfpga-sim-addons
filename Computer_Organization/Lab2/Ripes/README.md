@@ -380,7 +380,8 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
 For example, this is the state of the processor at the end of the code.
 
-![image](https://github.com/user-attachments/assets/099b8bcd-615f-412f-81f3-4038a45d3024)
+![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
+
 
 As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the *Instruction Memory* window, which helps us follow the program's execution step by step. Next to that window, there's another one (*Execution info*) displaying performance metrics such as cycles, instructions, and CPI/IPC. 
 
@@ -411,6 +412,15 @@ Let's analyze some of the signals in this cycle.
       - ```C10(e)```= ADD, as the ALU must perform an ADD operation.
       - ```Res```= 0x4, which is the result of the addition.
       - ```C14```= 0, as the next PC after the ```add``` instruction is PC+4.
+
+   - ```beq``` instruction:
+      - ```C1(m)```= ```C3(m)```= 0, as neither the Data Memory nor the Register File must be written by this instruction.
+
+   - ```lw``` instruction:
+      - ```C1(w)```= 1, as the Register File must be written by this instruction.
+      - ```C2(w)```= 0, as the 3-1 multiplexer must select the data read from memory.
+      - ```Wr```= 0x6, which is the register idx where the value read from memory must be written.
+      - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
 
