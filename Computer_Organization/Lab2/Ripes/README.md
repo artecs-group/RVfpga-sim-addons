@@ -443,38 +443,18 @@ or  x6, x2, x5
 
 Answer the following questions for the Pipelined Processor:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. 
+a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
-b. Draw the pipeline diagram in paper.
+b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor. 
 
-<!--
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.
+c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-<p align="center">
-  <img src="../Images/ProcessorHH.png" width=90% height=90%>
-</p>
--->
-
-c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and compare it with your previous answer.
- - Show screenshots of the pipeline to explain how the different data hazards are handled.
- - Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals.
+d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage.
 
 
-**SOLUTION:**
-We next show partial solutions for item c as an example. Complete the solutions not provided.
+**EXAMPLE SOLUTION:**
 
-<!--
-*b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the EX, MEM, and WB stages during the cycle when the ```add``` instruction is in the WB stage.*
-
-<p align="center">
-  <img src="../Images/Solution_1-c.png" width=90% height=90%>
-</p>
--->
-
-*c. Analyse the program on the Ripes simulator.*
-
-*- Generate in Ripes the pipeline diagram and compare it with your previous answer.*
+*a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.*
 
 This is the timing diagram obtained with Ripes:
 
@@ -482,9 +462,18 @@ This is the timing diagram obtained with Ripes:
   <img src="../Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
-*- Show screenshots of the pipeline to explain how the different data hazards are handled.*
+We observe that there are no stalls in the pipeline, meaning that once it is filled, the CPI (Cycles Per Instruction) is 1.
 
-This is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
+*b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor.*
+
+- ```x3``` is written by the first ```li``` instruction and used by the ```add``` instruction. It is obtained through forwarding.
+- ```x4``` is written by the second ```li``` instruction and used by the ```add``` instruction. It is obtained through forwarding.
+- ```x2``` is written by the ```add``` instruction and used by the ```sub``` instruction. It is obtained through forwarding.
+- ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
+
+*c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.*
+
+For example, this is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
 
 <p align="center">
   <img src="../Images/FwdOp1.png" width=60% height=60%>
@@ -492,7 +481,7 @@ This is a screenshot of the simulator that highlights the forwarding that occurs
 
 You should explain how the hazard is handled by the pocessor: which multiplexers are used, the stages involved, etc.
 
-*- Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals.*
+*d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage.*
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
@@ -500,7 +489,7 @@ This is a screenshot of the simulator during the cycle when the ```add``` instru
   <img src="../Images/Solution_1-d.png" width=90% height=90%>
 </p>
 
-You should explain the values of the different data/control signals and compare their values with those from the previous item. Most of them should be equal (although a few signals may differ, given that the two processors are not identical).
+You should explain the values of the different data/control signals.
 
 
 ## Exercise 5
@@ -519,24 +508,15 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Answer the following questions for the 5-stage Pipelined Processor:
+Answer the following questions for the Pipelined Processor:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. 
+a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
-b. Draw the pipeline diagram.
+b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor. 
 
-<!--
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the ```lw``` instruction is in the WB stage.
+c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-<p align="center">
-  <img src="../Images/ProcessorHH.png" width=90% height=90%>
-</p>
--->
-
-c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and compare it with your previous answer.
- - Show screenshots of the pipeline to explain how the different data hazards are handled.
- - Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals.
+d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage.
 
 
 ## Exercise 6
@@ -560,24 +540,15 @@ END:
 nop
 ```
 
-Answer the following questions for the 5-stage Pipelined Processor:
+Answer the following questions for the Pipelined Processor:
 
-a. Identify the data dependencies that exist in the code and explain how they are resolved in the processor. 
+a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
-b. Draw the pipeline diagram.
+b. Identify each of the hazards that exist in the code and explain how they are resolved in the processor. 
 
-<!--
-b. On the figure below (obtained from H&H), indicate the values of the data and control signals in the 5 pipeline stages during the cycle when the first ```beq``` instruction is in the EX stage.
+c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-<p align="center">
-  <img src="../Images/ProcessorHH.png" width=90% height=90%>
-</p>
--->
-
-c. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and compare it with your previous answer.
- - Show screenshots of the pipeline to explain how the different data hazards are handled.
- - Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals.
+d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage.
 
 
 ## Exercise 7
@@ -603,16 +574,15 @@ addi t1, x0, 0
 addi t0, x0, 0
 ```
 
-<!--
-a. Complete the pipeline diagram of the program in the 5-stage pipelined RISC-V processor from H&H. Assume that the processor has extended the ALU to perform multiplication with a latency of 1 cycle; that is, the ```mul``` instruction executes just like any other arithmetic-logical instruction.
--->
+Answer the following questions for the Pipelined Processor:
 
-a. Draw the pipeline diagram in paper. Identify the structural, data, and control hazards on the diagram, clearly marking them and explaining how the processor handles each one.
+a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
-b. Analyse the program on the Ripes simulator for the 5-stages processor and answer the following questions:
- - Generate in Ripes the pipeline diagram and compare it with your answer to item *a*.
- - Show screenshots of the pipeline to explain how the different data/control hazards are handled.
- - Indicate the values of the data and control signals in cycle 5 of the program execution.
+b. Identify each of the hazards that exist in the code and explain how they are resolved in the processor. 
+
+c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
+
+d. Indicate the values of the data and control signals in cycle 5 of the program execution.
 
 
 ---
