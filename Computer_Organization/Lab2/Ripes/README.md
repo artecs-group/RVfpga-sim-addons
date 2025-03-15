@@ -248,6 +248,8 @@ c. Explain the differences observed between the two cases.
 
 d. Finally, stop when the ```jal``` instruction is executing. Explain the signals from the figure above. How is the destination address computed? What is written to the Register File?
 
+Use the following form to send your answers to the exercise: [Answer Exercise 3](https://docs.google.com/forms/d/e/1FAIpQLSdEqJdbMVdf9yKkLbSgwuTouAhn8Qu6owYOYvf3NHdzciVNCw/viewform?usp=header)
+
 ---
 ## Building the *Pipelined processor*
 Look at the following presentation which shows step-by-step how to build the Ripes Pipelined processor and several examples of a subset of instructions executing on it: [BuildingRipesPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing).
