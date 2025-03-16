@@ -186,7 +186,7 @@ or  x6, x2, x5
 
 What is the value of the signals highlighted in the following figure for the execution of the ```add``` instruction? Try first to reason it out on your own without using the simulator.
 
-![image](https://github.com/user-attachments/assets/d52f6624-8c29-48e7-88ff-6812ebedf964)
+![image](https://github.com/user-attachments/assets/64d8d7a6-8157-4f0c-9136-1eb2b8403dda)
 
 Simulate the program cycle-by-cycle, stop when the ```add``` instruction is executing, and confirm your answer. 
 
@@ -207,9 +207,7 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-What is the value of the signals highlighted in the following figure for the execution of the ```lw``` instruction? Try first to reason it out on your own without using the simulator.
-
-![image](https://github.com/user-attachments/assets/9ae3407b-0b31-4796-8aa8-c7d7ad02dc8f)
+What is the value of the signals highlighted in the figure from Exercise 1 for the execution of the ```lw``` instruction? Try first to reason it out on your own without using the simulator.
 
 Simulate the program cycle-by-cycle, stop when the ```lw``` instruction is executing and confirm your answer. 
 
@@ -236,9 +234,7 @@ jal main
 nop
 ```
 
-Answer the following questions for the Single-Cycle Processor, using the following figure:
-
-![image](https://github.com/user-attachments/assets/64d8d7a6-8157-4f0c-9136-1eb2b8403dda)
+Answer the following questions for the Single-Cycle Processor, using the figure from Exercise 1:
 
 a. Simulate the program cycle-by-cycle and stop when the first ```beq``` instruction is executing. What is the value of the signals highlighted in the figure? Justify each value obtained.
 
@@ -543,9 +539,7 @@ b. Identify each of the data dependencies that exist in the code and explain how
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
-
-![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the figure from Exercise 4.
 
 
 ## Exercise 6
@@ -577,9 +571,7 @@ b. Identify each of the hazards that exist in the code and explain how they are 
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
-
-![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage. Use the names provided in the figure from Exercise 4.
 
 
 ## Exercise 7
@@ -613,9 +605,49 @@ b. Identify each of the hazards that exist in the code and explain how they are 
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Indicate the values of the data and control signals in cycle 5 of the program execution. Use the names provided in the following figure for each pipeline signal:
+d. Indicate the values of the data and control signals in cycle 5 of the program execution. Use the names provided in the figure from Exercise 4.
 
-![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+
+## Exercise 8
+Given the following program:
+
+```
+.globl main
+
+.data
+D: .word 1, 3, 5, 7, 9
+
+.text
+main:
+
+la   t1 , D
+addi s1 ,x0 ,4
+addi s2 ,x0 ,0
+
+for:
+	lw   s3, 0(t1)
+	lw   s4, 4(t1)
+	add  s3, s3, s4
+	addi s2 ,s2 ,1
+	sub  s3, s3, s2
+	sw   s3, 4(t1)
+	addi t1, t1, 4
+	bne  s2, s1, for
+
+or s2, zero, zero
+or s1, zero, zero
+
+fin:
+j fin
+```
+
+a. Draw the execution diagram of the program on the H&H 5-stage pipelined processor until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Explain the data, and control dependencies that arise and explain for each one how the processor handles it.
+
+b. Simulate the program in Ripes. How many cycles does it take to execute one iteration of the loop? Calculate the CPI.
+
+c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code and recalculate the CPI.
+
+d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage. Also, indicate which instruction is in each stage. Use the figure from Exercise 4.
 
 
 ---
