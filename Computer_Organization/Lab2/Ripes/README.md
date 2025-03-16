@@ -449,7 +449,9 @@ b. Identify each of the data dependencies that exist in the code and explain how
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage.
+d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
 
 **EXAMPLE SOLUTION:**
@@ -466,31 +468,55 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 
 *b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor.*
 
-- ```x3``` is written by the first ```li``` instruction and used by the ```add``` instruction. It is obtained through forwarding.
-- ```x4``` is written by the second ```li``` instruction and used by the ```add``` instruction. It is obtained through forwarding.
+- ```x3``` is written by the first ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained through forwarding.
+- ```x4``` is written by the second ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained through forwarding.
 - ```x2``` is written by the ```add``` instruction and used by the ```sub``` instruction. It is obtained through forwarding.
 - ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
 - ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
 
 *c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.*
 
-For example, this is a screenshot of the simulator that highlights the forwarding that occurs between the first ```li``` and the ```add```:
+For example, this is a screenshot of the simulator that highlights the forwarding that occurs between the ```add``` and the ```sub```:
 
-<p align="center">
-  <img src="../Images/FwdOp1.png" width=60% height=60%>
-</p>
+![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
 
-You should explain how the hazard is handled by the pocessor: which multiplexers are used, the stages involved, etc.
+As shown, the highlighted multiplexer selects the value from the Memory stage (the result of the ```add``` instruction) as the ALU's first operand, instead of using the value from the Register File.
+
+Similarly, analyze the remaining data hazards discussed in the previous item using the same approach.
+
 
 *d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage.*
 
 This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
 
-<p align="center">
-  <img src="../Images/Solution_1-d.png" width=90% height=90%>
-</p>
+![image](https://github.com/user-attachments/assets/e3685548-b31d-4c1a-9c31-1d2969e9b732)
 
-You should explain the values of the different data/control signals.
+Let's analyze some of the signals in this cycle.
+
+   - ```or``` instruction:
+      - ```Op1```= 0xa. This is the first operand for the OR operation that is performed this cycle.
+      - ```Op2```= 0x6. This is the second operand for the OR operation that is performed this cycle.
+      - ```C1(e)```= 1. This will be the Register File write enable in the WB stage. The ```or``` instruction must write the result to the RF.
+      - ```C2(e)```= ALURES. This will be used to select the data in the 3-1 multiplexer of the WB stage.
+      - ```C6(e)```= 0, as it is not a ```jump``` instruction.
+      - ```C7(e)```= 0, as it is not a ```branch``` instruction.
+      - ```C8(e)```= ```C9(e)```= REG1/2, as the operands are provided from the Register File in this instruction.
+      - ```C10(e)```= OR, as the ALU must perform an OR operation.
+      - ```Res```= 0xe, which is the result of the OR.
+      - ```C14```= 0, as the next PC after the ```or``` instruction is PC+4.
+
+   - ```sub``` instruction:
+      - ```C1(m)```= 1, as the Register File must be written by this instruction in the next cycle.
+      - ```C2(m)```= 1, as the 3-1 multiplexer will select the result of the ALU.
+      - ```C3(m)```= 0, as the Data Memory must NOT be written by this instruction.
+
+   - ```add``` instruction:
+      - ```C1(w)```= 1, as the Register File must be written by this instruction.
+      - ```C2(w)```= 1, as the 3-1 multiplexer must select the data read from the ALU.
+      - ```Wr```= 0x2, which is the register idx where the value read from memory must be written.
+      - ```DInRF```= 0xa, which is the result of the addition and that must be written to the RF.
+
+
 
 
 ## Exercise 5
@@ -517,7 +543,9 @@ b. Identify each of the data dependencies that exist in the code and explain how
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage.
+d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
 
 ## Exercise 6
@@ -549,7 +577,9 @@ b. Identify each of the hazards that exist in the code and explain how they are 
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage.
+d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
 
 ## Exercise 7
@@ -583,7 +613,9 @@ b. Identify each of the hazards that exist in the code and explain how they are 
 
 c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
 
-d. Indicate the values of the data and control signals in cycle 5 of the program execution.
+d. Indicate the values of the data and control signals in cycle 5 of the program execution. Use the names provided in the following figure for each pipeline signal:
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
 
 ---
