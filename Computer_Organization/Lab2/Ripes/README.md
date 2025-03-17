@@ -374,7 +374,11 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
 ![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
-For example, this is the state of the processor at the end of the code.
+We next include a couple of interesting such examples: 
+
+#### Analysis in the final cycle: lw - beq - add - or - sw
+
+This is the state of the processor at the end of the code.
 
 ![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
 
@@ -417,6 +421,43 @@ Let's analyze some of the signals in this cycle.
       - ```C2(w)```= 0, as the 3-1 multiplexer must select the data read from memory.
       - ```Wr```= 0x6, which is the register idx where the value read from memory must be written.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
+
+
+#### Analysis of the beq instruction at the IF, ID and EXE stages.
+
+This is the beq instruction at the IF stage:
+
+![image](https://github.com/user-attachments/assets/b7041e37-cc5e-4c70-bb9c-52a331dab370)
+
+You can see that, by default, the PC+4 is ***speculatively*** used as the next PC.
+
+This is the beq instruction at the ID stage:
+
+![image](https://github.com/user-attachments/assets/af28051e-de2e-4456-be29-ea2ba7bece6e)
+
+You can see that the next sequential instruction is ***speculatively*** fetched and the PC+4 is used as the next PC.
+
+Finally, this is the beq instruction at the EXE stage:
+
+![image](https://github.com/user-attachments/assets/7090d20c-4bc4-40e2-98ff-e8b3a7f7955b)
+
+The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue.
+
+What if the branch must be taken? Perform the same analysis for a taken beq, when the beq is at the EXE stage and at the MEM stage.
+
+This is the new beq instruction at the EXE stage:
+
+![image](https://github.com/user-attachments/assets/25579ab4-1aff-4ea8-a4a8-ef50a7ea7fbc)
+
+Now the output of the Branch module is 1. Thus, we have incorrectly started execution of the two beq sequential instructions. Is this a problem? No it is not, since these two instructions have not yet modified the Register File or the Data Memory, thus they can be cancelled.
+
+The next PC is computed from the ALU output.
+
+This is the new beq instruction at the MEM stage:
+
+![image](https://github.com/user-attachments/assets/767d1202-da62-4215-87f3-6ef5fb9c35d2)
+
+The two incorrect instructions have been canceled and the branch target address has been fetched.
 
 
 
