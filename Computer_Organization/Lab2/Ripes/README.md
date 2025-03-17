@@ -376,7 +376,7 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
 We next include a couple of interesting such examples: 
 
-#### Analysis in the final cycle: lw - beq - add - or - sw
+#### Analysis in the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
 
 This is the state of the processor at the end of the code.
 
@@ -423,41 +423,39 @@ Let's analyze some of the signals in this cycle.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
-#### Analysis of the beq instruction at the IF, ID and EXE stages.
+#### Analysis of the ```beq``` instruction at the IF, ID and EXE stages.
 
-This is the beq instruction at the IF stage:
+This is the ```beq``` instruction at the IF stage:
 
 ![image](https://github.com/user-attachments/assets/b7041e37-cc5e-4c70-bb9c-52a331dab370)
 
-You can see that, by default, the PC+4 is ***speculatively*** used as the next PC.
+You can see that, by default, the PC+4 is ***speculatively*** used as the next PC. It is speculative as it is not sure that execution will continue through that path.
 
-This is the beq instruction at the ID stage:
+This is the ```beq``` instruction at the ID stage:
 
 ![image](https://github.com/user-attachments/assets/af28051e-de2e-4456-be29-ea2ba7bece6e)
 
-You can see that the next sequential instruction is ***speculatively*** fetched and the PC+4 is used as the next PC.
+You can see that the next sequential instruction is ***speculatively*** fetched and besides the PC+4 is used as the next PC.
 
-Finally, this is the beq instruction at the EXE stage:
+Finally, this is the ```beq``` instruction at the EXE stage, where the condition is evaluated and the target address of the branch is computed:
 
 ![image](https://github.com/user-attachments/assets/7090d20c-4bc4-40e2-98ff-e8b3a7f7955b)
 
-The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue.
+The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue with no change.
 
-What if the branch must be taken? Perform the same analysis for a taken beq, when the beq is at the EXE stage and at the MEM stage.
+What if the branch must be taken? Perform the same analysis for a taken ```beq``` (use the same register for Rs1 and Rs2 so that they are equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
 
-This is the new beq instruction at the EXE stage:
+This is the new ```beq``` instruction at the EXE stage:
 
 ![image](https://github.com/user-attachments/assets/25579ab4-1aff-4ea8-a4a8-ef50a7ea7fbc)
 
-Now the output of the Branch module is 1. Thus, we have incorrectly started execution of the two beq sequential instructions. Is this a problem? No it is not, since these two instructions have not yet modified the Register File or the Data Memory, thus they can be cancelled.
+Now the output of the Branch module is 1. Thus, we have incorrectly started execution of the two instructions which are sequentially placed after the ```beq``` (i.e. ```add``` and ```or```). Is this a problem? It is not, since these two instructions have not yet modified the Register File or the Data Memory, thus they can be cancelled and execution redirected through the correct path, using the branch target address computed in the ALU.
 
-The next PC is computed from the ALU output.
-
-This is the new beq instruction at the MEM stage:
+This is the new ```beq``` instruction at the MEM stage:
 
 ![image](https://github.com/user-attachments/assets/767d1202-da62-4215-87f3-6ef5fb9c35d2)
 
-The two incorrect instructions have been canceled and the branch target address has been fetched.
+The two incorrect instructions have been canceled and the instruction placed at the branch target address is being fetched.
 
 
 
