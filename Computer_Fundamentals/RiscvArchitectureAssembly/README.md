@@ -12,6 +12,7 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
    * Do the tests about RISC-V Instruction Format provided below at [InitialTests_InstructionFormat](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#risc-v-instruction-format).
    * Complete the exercises about RISC-V Instruction Format provided at [Exercises_Formats](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-instruction-format).
 6. LABS: Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#labs-about-risc-v-architecture-and-assembly-in-ripes).
+7. Final Exam: After all these exercises and labs, students do the exam provided below at [Exam]()
 
 
 ---
@@ -1819,3 +1820,12 @@ asm volatile (
 
 }
 ```
+
+
+---
+
+## FINAL EXAM
+
+[Exam 1](https://drive.google.com/file/d/13aIr9CJhgD84RKJ3jUkihhC9CGRDeduh/view?usp=sharing)
+[Exam 2](https://drive.google.com/file/d/1PNZMLhhLErsZ2qv1pKdzvOD6hddzrVy9/view?usp=sharing)
+[Solutions](https://drive.google.com/file/d/1qYMak24WK6rFjVNAZq_9NQzvrdD21Wid/view?usp=sharing)
