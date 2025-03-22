@@ -338,8 +338,8 @@ Answer the following questions. You should analyze and explain the behavior of t
 
 a. How many cache misses occur?
 
-b. How many cache misses occur with a direct-mapped cache no write allocation?
+b. How many cache misses occur with a direct-mapped cache but using a no write allocation policy?
 
-c. How many cache misses occur with a two-way associative cache (with the total cache size remaining the same; that is, there will be half as many block frames) with write allocation?
+c. How many cache misses occur with a two-way associative cache (with the total cache size remaining the same; that is, there will be half as many block frames) and with write allocation?
 
 d. Analyze the program for the same cache as in section *c* but changing the write policy to Write-Through.
