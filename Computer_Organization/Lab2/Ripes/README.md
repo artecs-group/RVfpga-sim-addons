@@ -449,7 +449,7 @@ The output of the Branch module is 0, thus the branch must not be taken and we h
 
 What if the branch must be taken? Let's next analyze that situation.
 
-#### Analysis of the *taken* ```beq``` instruction.
+#### Analysis of a *taken* ```beq``` instruction.
 
 Perform the same analysis but for a taken ```beq``` (in the code above, we can use the same register for Rs1 and Rs2 so that they will for sure be equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
 
