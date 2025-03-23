@@ -376,7 +376,7 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
 We next include a couple of interesting such examples: 
 
-#### Analysis in the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
+#### Analysis of the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
 
 This is the state of the processor at the end of the code.
 
