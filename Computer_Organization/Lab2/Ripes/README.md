@@ -498,7 +498,7 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Stop at the point when the ```sub``` instruction is at the IF stage and at the ID stage. Is there any problem with the data conflict? 
+Stop at the point when the ```sub``` instruction is at the IF stage and at the ID stage. Is there any problem with the ```x2``` register data conflict? 
 
 
 ## Example 2 - Insert ```nop``` instructions to avoid control conflicts
