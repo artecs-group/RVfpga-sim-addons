@@ -693,16 +693,72 @@ d. Indicate the values of all data and control signals in the cycle where the ``
 
 
 ### Lab 5
-Given the following code, simulate it in the Ripes Single-Cycle processor and answer the following questions.
+The following C code is intended to run on the Ripes Single-Cycle processor (this code is provided for reference only and should not be used in the exercise below):
 
 ```
-CODE (to be shown shortly)
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
 ```
 
+To achieve the highest performance in executing this program, the following RISC-V assembly implementation is used:
+
+```
+.globl main
+
+.data
+Entrada: .word 1, 2, 6, 3, 8, 2, 12, 3, 7, 6
+Filtro: .word 3, 7, 8
+Salida: .word 0, 0, 0, 0, 0, 0, 0, 0
+
+.text
+main:
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
+loop_n:
+ addi a2 , x0 , 0
+	loop_k:
+   	  lw t3 , 0( a3)
+   	  lw t4 , 0( a4)
+   	  mul t6 , t3 , t4
+   	  lw t5 , 0( a5)
+   	  add t5 , t6 , t5
+   	  sw t5 , 0( a5)
+   	  addi a3 , a3 , 4
+   	  addi a4 , a4 , 4
+   	  addi a2 , a2 , 1
+   	  blt a2 , t1 , loop_k
+ addi a5 , a5 , 4
+ addi a3 , a3 , -8
+ addi a4 , a4 , -12
+ addi a1 , a1 , 1
+blt a1 , t0 , loop_n
+fin:
+j fin
+```
+
+The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Answer the following questions:
+
+1. Explain briefly each instruction in the loop_k loop.
+
+2. Execute the program and demonstrate that it provides the expected result.
+
+3. Explain the value of the Data/Control signals shown in the next figure for the following instructions, when they are executed for the first time:
+
+	- ```lw t4 , 0 (a4)```:
+ 		* ```PC``` toma el valor 0x34, porque es la dirección de la siguiente instrucción (```mul```). Aunque dicha instrucción será ejecutada en el siguiente ciclo, la dirección en la que se encuentra guardada en la *Instruction Memory* se calcula durante este ciclo.
+		* ```Addr``` toma el valor ……… porque ………
+ 		* ……… (do the same for all other signals shown in the figure)
 
 
 ### Lab 6
-Given the following code, simulate it in the Ripes Pipelined processor and answer the following questions.
 
 ```
 CODE (to be shown shortly)
