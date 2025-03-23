@@ -481,7 +481,7 @@ The two incorrect instructions have been canceled and the instruction placed at 
 
 
 ## Data and Control Hazards in the *Pipelined processor*
-Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Ripes processor but has some minor differences.
+Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
 
 
 ## Exercise 4
