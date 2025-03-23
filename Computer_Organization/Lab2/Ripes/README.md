@@ -427,7 +427,7 @@ Let's analyze a few important signals of the pipeline in this cycle.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
-#### Analysis of the ```beq``` instruction at the IF, ID and EXE stages.
+#### Analysis of a *non-taken* ```beq``` instruction.
 
 This is the ```beq``` instruction at the IF stage:
 
@@ -447,7 +447,11 @@ Finally, this is the ```beq``` instruction at the EXE stage, where the condition
 
 The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue with no change.
 
-What if the branch must be taken? Perform the same analysis for a taken ```beq``` (use the same register for Rs1 and Rs2 so that they are equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
+What if the branch must be taken? Let's next analyze that situation.
+
+#### Analysis of the *taken* ```beq``` instruction.
+
+Perform the same analysis but for a taken ```beq``` (in the code above, we can use the same register for Rs1 and Rs2 so that they will for sure be equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
 
 This is the new ```beq``` instruction at the EXE stage:
 
