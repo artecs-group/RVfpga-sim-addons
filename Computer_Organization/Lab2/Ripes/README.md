@@ -483,6 +483,42 @@ The two incorrect instructions have been canceled and the instruction placed at 
 ## Data and Control Hazards in the *Pipelined processor*
 Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
 
+## Example 1 - Insert ```nop``` instructions to avoid data conflicts
+
+```
+.text
+main:
+li x3, 0x4
+li x4, 0x6
+add x2, x3, x4
+nop
+nop
+nop
+sub x5, x2, x3
+or  x6, x2, x5
+```
+
+Stop at the point when the ```sub``` instruction is at the IF stage and at the ID stage. Is there any problem with the data conflict? 
+
+
+## Example 2 - Insert ```nop``` instructions to avoid control conflicts
+
+```
+.text
+ L1:
+   addi x5, x0, 2
+   addi x4, x0, 3
+   addi x3, x0, -1
+   beq x0, x0, L1
+   nop
+   nop
+   addi x5, x0, 2
+   addi x4, x0, 3
+   addi x3, x0, -1
+```
+
+Stop at the point when the ```beq``` instruction is at the EX stage and at the MEM stage. Is there any problem with the control conflict? 
+
 
 ## Exercise 4
 The following code is executed in Ripes:
