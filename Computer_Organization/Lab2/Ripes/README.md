@@ -764,6 +764,9 @@ The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Ans
  		* ……… (do the same for all other signals shown in the figure)
 
 
+![image](https://github.com/user-attachments/assets/6c40c626-e612-4f0a-99f8-10ede0f48e6e)
+
+
 
 ### Lab 6
 
