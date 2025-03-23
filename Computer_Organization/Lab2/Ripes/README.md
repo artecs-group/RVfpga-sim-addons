@@ -383,9 +383,13 @@ This is the state of the processor at the end of the code.
 ![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
 
 
-As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. In the bottom right corner, you can see the *Instruction Memory* window, which helps us follow the program's execution step by step. Next to that window, there's another one (*Execution info*) displaying performance metrics such as cycles, instructions, and CPI/IPC. 
+As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
 
-Let's analyze some of the signals in this cycle.
+In the same window, look at the bottom right corner (shown next), where you can see the *Instruction Memory* window, which helps us follow the program's execution step by step, and the *Execution info* window, which displays performance metrics such as cycles, instructions, and CPI/IPC.
+
+![image](https://github.com/user-attachments/assets/d8c137b5-47f4-420d-b62c-4ae4d6bef39d)
+
+Let's analyze a few important signals of the pipeline in this cycle.
 
    - ```sw``` instruction:
       - ```Addr```= 0x2c, which is the address where the store instruction is placed in the Instruction Memory. Confirm this in the memory tab.
