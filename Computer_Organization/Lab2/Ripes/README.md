@@ -556,6 +556,12 @@ Confirm that the control conflict is now handled correctly.
 
 ### Example 3 - Forwarding unit
 
+Go back to the 5-stage pipelined processor that we are typically using.
+
+<p align="center">
+  <img src="../Images/SelectProc.png" width=60% height=60%>
+</p>
+
 Use the same program as in Example 1 and remove the ```nop``` instructions. 
 
 ```
