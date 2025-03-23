@@ -703,7 +703,7 @@ for ( n = 0; n < 8; n ++ ) {
 }
 ```
 
-To achieve the highest performance in executing this program, the following RISC-V assembly implementation is used:
+To achieve the highest performance in executing this program, the following RISC-V assembly implementation is used (this is the code you will use in the lab):
 
 ```
 .globl main
@@ -746,7 +746,7 @@ j fin
 
 The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Answer the following questions:
 
-1. Explain briefly each instruction in the loop_k loop.
+1. Explain briefly each instruction in the ```loop_k``` loop.
 
 2. Execute the program and demonstrate that it provides the expected result.
 
@@ -756,6 +756,13 @@ The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Ans
  		* ```PC``` toma el valor 0x34, porque es la dirección de la siguiente instrucción (```mul```). Aunque dicha instrucción será ejecutada en el siguiente ciclo, la dirección en la que se encuentra guardada en la *Instruction Memory* se calcula durante este ciclo.
 		* ```Addr``` toma el valor ……… porque ………
  		* ……… (do the same for all other signals shown in the figure)
+
+	- ```addi a3 , a3 , 4```:
+ 		* ……… (do the same for all other signals shown in the figure)
+
+	- ```blt a2 , t1 , loop_k```:
+ 		* ……… (do the same for all other signals shown in the figure)
+
 
 
 ### Lab 6
