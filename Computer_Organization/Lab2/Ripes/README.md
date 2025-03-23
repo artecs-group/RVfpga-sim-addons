@@ -770,6 +770,3 @@ The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Ans
 
 ### Lab 6
 
-```
-CODE (to be shown shortly)
-```
