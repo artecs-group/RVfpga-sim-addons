@@ -1,5 +1,18 @@
 # Ripes processors
-Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*.
+Ripes allows simulating many aspects of computer organization, structure, and architecture. In this lab, we will use it to visualize the execution of programs in two of the simulated processors: *Single-Cycle processor* and *Complete 5-stage Pipelined processor*. Specifically, follow these items:
+1. Single-Cycle Processor:
+ * [Building the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#building-the-single-cycle-processor)
+ * [Basic use of the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#basic-use-of-the-single-cycle-processor)
+ * [Complete example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#complete-example-in-the-single-cycle-processor)
+ * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercise-1)
+2. Pipelined Processor:
+ * [Building the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#building-the-pipelined-processor)
+ * [Basic use of the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#basic-use-of-the-pipelined-processor)
+ * [Complete example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#complete-example-in-the-pipelined-processor)
+ * [Data and Control Hazards in the Pipelined processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#data-and-control-hazards-in-the-pipelined-processor)
+ * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercise-4)
+3. LABS: Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#lab-5)
+4. Final Exam: After all these exercises and labs, students do the exam provided below at [Exam]()
 
 ## Building the *Single-Cycle processor*
 Look carefully at the following presentation which shows step-by-step how to build the Ripes Single-Cycle processor and several examples of a subset of instructions executing on it: [BuildingRipesSingleCycle](https://drive.google.com/file/d/1ltiDqyqdh34iVbHx_IfEizBPG4y45GcI/view?usp=sharing).
@@ -775,6 +788,8 @@ The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Ans
 ![image](https://github.com/user-attachments/assets/6c40c626-e612-4f0a-99f8-10ede0f48e6e)
 
 
-
 ### Lab 6
 
+
+
+## FINAL EXAM
