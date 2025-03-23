@@ -485,25 +485,58 @@ Look at the following presentation which shows, from slide 53 to slide 130, how 
 
 ### Example 1 - Insert ```nop``` instructions to avoid data conflicts
 
+For this example, we're using a processor that differs slightly from the ones used in the previous and following examples. Configure the processor as follows:
+
+![image](https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a)
+
+Test the next example:
+
 ```
 .text
 main:
-li x3, 0x4
-li x4, 0x6
-xor x2, x3, x4
-nop
-nop
-nop
-sub x5, x2, x3
-or  x6, x2, x5
+xori x2, x0, 5
+sub x5, x2, x0
 ```
 
-Is there any problem with the ```x2``` register data conflict? 
-- First stop at the cycle when the ```sub``` instruction is at the IF stage, where the ```xor``` instruction is writing the result in the RF.
-- Then stop at the cycle when the ```sub``` instruction is at the ID stage, where it reads the correct value from the RF. 
+Confirm that the ```x2``` register data conflict is handled incorrectly. You can see that the value read for x2 by the ```sub``` instruction is not the correct one.
+
+Now insert 3 ```nop``` instructions in between the conflicting instructions.
+
+```
+.text
+main:
+xori x2, x0, 5
+nop
+nop
+nop
+sub x5, x2, x0
+```
+
+Confirm that the ```x2``` register data conflict is now handled correctly.
 
 
 ### Example 2 - Insert ```nop``` instructions to avoid control conflicts
+
+For this example, we're using a processor that differs slightly from the ones used in the previous and following examples. Configure the processor as follows:
+
+![image](https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a)
+
+Test the next example:
+
+```
+.text
+ L1:
+   ori x5, x0, 2
+   andi x4, x0, 3
+   xori x3, x0, 4
+   beq x0, x0, L1
+   sub x6, x0, 2
+   or x4, x0, x0
+```
+
+Confirm that the control conflict is handled incorrectly. You can see that the two instructions after the branch are executed but should not be.
+
+Now insert 2 ```nop``` instructions after the branch.
 
 ```
 .text
@@ -514,31 +547,25 @@ Is there any problem with the ```x2``` register data conflict?
    beq x0, x0, L1
    nop
    nop
-   ori x5, x0, 2
-   andi x4, x0, 3
-   xori x3, x0, 4
+   sub x6, x0, 2
+   or x4, x0, x0
 ```
 
-Is there any problem with the control conflict? 
-- First stop at the cycle when the ```beq``` instruction is at the EX stage, where the branch condition is evaluated.
-- Then stop at the cycle when the ```beq``` instruction is at the MEM stage, where the instruction at the branch target address can be correctly fetched.
+Confirm that the control conflict is now handled correctly.
 
 
 ### Example 3 - Forwarding unit
 
-Use the same program as in Example 1 but remove the ```nop``` instructions. 
+Use the same program as in Example 1 and remove the ```nop``` instructions. 
 
 ```
 .text
 main:
-li x3, 0x4
-li x4, 0x6
-xor x2, x3, x4
-sub x5, x2, x3
-or  x6, x2, x5
+xori x2, x0, 5
+sub x5, x2, x0
 ```
 
-Analyze how the processor handles the ```x2``` register data conflicts.
+Confirm that the ```x2``` register data conflict is now handled correctly.
 
 ### Example 4 - Hazard unit
 
