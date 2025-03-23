@@ -487,7 +487,10 @@ Look at the following presentation which shows, from slide 53 to slide 130, how 
 
 For this example, we're using a processor that differs slightly from the ones used in the previous and following examples. Configure the processor as follows:
 
-![image](https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a" width="60%">
+</p>
+
 
 Test the next example:
 
@@ -519,7 +522,9 @@ Confirm that the ```x2``` register data conflict is now handled correctly.
 
 For this example, we're using a processor that differs slightly from the ones used in the previous and following examples. Configure the processor as follows:
 
-![image](https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a" width="60%">
+</p>
 
 Test the next example:
 
