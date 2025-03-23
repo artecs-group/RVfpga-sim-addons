@@ -501,7 +501,9 @@ xori x2, x0, 5
 sub x5, x2, x0
 ```
 
-Confirm that the ```x2``` register data conflict is handled incorrectly. You can see that the value read for x2 by the ```sub``` instruction is not the correct one.
+Confirm that the ```x2``` register data conflict is handled incorrectly. You can see that the value used for the first operand of the ```sub``` instruction is not the correct one (see the following figure).
+
+![image](https://github.com/user-attachments/assets/6912b5e6-72a2-47af-8e8d-132d29f43fe3)
 
 Now insert 3 ```nop``` instructions in between the conflicting instructions.
 
@@ -515,51 +517,12 @@ nop
 sub x5, x2, x0
 ```
 
-Confirm that the ```x2``` register data conflict is now handled correctly.
+Confirm that the ```x2``` register data conflict is now handled correctly (see the following figure).
+
+![image](https://github.com/user-attachments/assets/a95d2ce8-981b-43ec-9bcc-11ca9c0c8a3b)
 
 
-### Example 2 - Insert ```nop``` instructions to avoid control conflicts
-
-For this example, we're using a processor that differs slightly from the ones used in the previous and following examples. Configure the processor as follows:
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a" width="60%">
-</p>
-
-Test the next example:
-
-```
-.text
- L1:
-   ori x5, x0, 2
-   andi x4, x0, 3
-   xori x3, x0, 4
-   beq x0, x0, L1
-   sub x6, x0, 2
-   or x4, x0, x0
-```
-
-Confirm that the control conflict is handled incorrectly. You can see that the two instructions after the branch are executed but should not be.
-
-Now insert 2 ```nop``` instructions after the branch.
-
-```
-.text
- L1:
-   ori x5, x0, 2
-   andi x4, x0, 3
-   xori x3, x0, 4
-   beq x0, x0, L1
-   nop
-   nop
-   sub x6, x0, 2
-   or x4, x0, x0
-```
-
-Confirm that the control conflict is now handled correctly.
-
-
-### Example 3 - Forwarding unit
+### Example 2 - Forwarding unit
 
 Go back to the 5-stage pipelined processor that we are typically using.
 
@@ -576,9 +539,12 @@ xori x2, x0, 5
 sub x5, x2, x0
 ```
 
-Confirm that the ```x2``` register data conflict is now handled correctly.
+Confirm that the ```x2``` register data conflict is now handled correctly (see the following figure).
 
-### Example 4 - Hazard unit
+![image](https://github.com/user-attachments/assets/27dac029-d6c2-44d7-a8e1-d9beb7a1292f)
+
+
+### Example 3 - Hazard unit
 
 Use the following program. 
 
