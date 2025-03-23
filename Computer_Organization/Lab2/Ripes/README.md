@@ -483,14 +483,14 @@ The two incorrect instructions have been canceled and the instruction placed at 
 ## Data and Control Hazards in the *Pipelined processor*
 Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
 
-## Example 1 - Insert ```nop``` instructions to avoid data conflicts
+### Example 1 - Insert ```nop``` instructions to avoid data conflicts
 
 ```
 .text
 main:
 li x3, 0x4
 li x4, 0x6
-add x2, x3, x4
+xor x2, x3, x4
 nop
 nop
 nop
@@ -498,26 +498,73 @@ sub x5, x2, x3
 or  x6, x2, x5
 ```
 
-Stop at the point when the ```sub``` instruction is at the IF stage and at the ID stage. Is there any problem with the ```x2``` register data conflict? 
+Is there any problem with the ```x2``` register data conflict? 
+- First stop at the cycle when the ```sub``` instruction is at the IF stage, where the ```xor``` instruction is writing the result in the RF.
+- Then stop at the cycle when the ```sub``` instruction is at the ID stage, where it reads the correct value from the RF. 
 
 
-## Example 2 - Insert ```nop``` instructions to avoid control conflicts
+### Example 2 - Insert ```nop``` instructions to avoid control conflicts
 
 ```
 .text
  L1:
-   addi x5, x0, 2
-   addi x4, x0, 3
-   addi x3, x0, -1
+   ori x5, x0, 2
+   andi x4, x0, 3
+   xori x3, x0, 4
    beq x0, x0, L1
    nop
    nop
-   addi x5, x0, 2
-   addi x4, x0, 3
-   addi x3, x0, -1
+   ori x5, x0, 2
+   andi x4, x0, 3
+   xori x3, x0, 4
 ```
 
-Stop at the point when the ```beq``` instruction is at the EX stage and at the MEM stage. Is there any problem with the control conflict? 
+Is there any problem with the control conflict? 
+- First stop at the cycle when the ```beq``` instruction is at the EX stage, where the branch condition is evaluated.
+- Then stop at the cycle when the ```beq``` instruction is at the MEM stage, where the instruction at the branch target address can be correctly fetched.
+
+
+### Example 3 - Forwarding unit
+
+Use the same program as in Example 1 but remove the ```nop``` instructions. 
+
+```
+.text
+main:
+li x3, 0x4
+li x4, 0x6
+xor x2, x3, x4
+sub x5, x2, x3
+or  x6, x2, x5
+```
+
+Analyze how the processor handles the ```x2``` register data conflicts.
+
+### Example 4 - Hazard unit
+
+Use the following program. 
+
+```
+.data
+   xa: .word 10
+
+.text
+   la x9, xa
+  L1:
+   lw x6, 0(x9)
+   ori x5, x6, 2
+   andi x4, x6, 3
+   xori x3, x6, -1
+   beq x0, x0, L1
+   add x1, x5, x5
+   or x2, x4, x4
+```
+
+Is there any problem with the ```x6``` register data conflict and the control conflict?
+- First analyze the execution of the ```lw``` instruction. How is the ```x6``` register value forwarded to the following instructions?
+- Then analyze the taken ```beq``` instruction. How is the wrong prediction handled?
+- Finally, modify the ```beq``` instruction so that it's a non-taken branch. How is the right prediction handled?
+
 
 
 ## Exercise 4
