@@ -173,7 +173,7 @@ int main(void)
 
 ## Initial Tests in Ripes - Basic RISC-V Assembly
 
-Each instruction type is first explained theoretically using the slides available at [SlidesModule2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf). After studying each instruction type, students must perform the corresponding test from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
+Each instruction type is first explained theoretically using the slides available at [SlidesModule2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema2-imprimible.pdf) (also available in English [SlidesModule2-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf). After studying each instruction type, students must perform the corresponding test from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
 
 ### Arithmetic instructions
 
