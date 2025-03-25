@@ -440,45 +440,6 @@ Let's analyze a few important signals of the pipeline in this cycle.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
-#### Analysis of a *non-taken* ```beq``` instruction.
-
-This is the ```beq``` instruction at the IF stage:
-
-![image](https://github.com/user-attachments/assets/b7041e37-cc5e-4c70-bb9c-52a331dab370)
-
-You can see that, by default, the PC+4 is ***speculatively*** used as the next PC. It is speculative as it is not sure that execution will continue through that path.
-
-This is the ```beq``` instruction at the ID stage:
-
-![image](https://github.com/user-attachments/assets/af28051e-de2e-4456-be29-ea2ba7bece6e)
-
-You can see that the next sequential instruction is ***speculatively*** fetched and besides the PC+4 is used as the next PC.
-
-Finally, this is the ```beq``` instruction at the EXE stage, where the condition is evaluated and the target address of the branch is computed:
-
-![image](https://github.com/user-attachments/assets/7090d20c-4bc4-40e2-98ff-e8b3a7f7955b)
-
-The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue with no change.
-
-What if the branch must be taken? Let's next analyze that situation.
-
-#### Analysis of a *taken* ```beq``` instruction.
-
-Perform the same analysis but for a taken ```beq``` (in the code above, we can use the same register for Rs1 and Rs2 so that they will for sure be equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
-
-This is the new ```beq``` instruction at the EXE stage:
-
-![image](https://github.com/user-attachments/assets/25579ab4-1aff-4ea8-a4a8-ef50a7ea7fbc)
-
-Now the output of the Branch module is 1. Thus, we have incorrectly started execution of the two instructions which are sequentially placed after the ```beq``` (i.e. ```add``` and ```or```). Is this a problem? It is not, since these two instructions have not yet modified the Register File or the Data Memory, thus they can be cancelled and execution redirected through the correct path, using the branch target address computed in the ALU.
-
-This is the new ```beq``` instruction at the MEM stage:
-
-![image](https://github.com/user-attachments/assets/767d1202-da62-4215-87f3-6ef5fb9c35d2)
-
-The two incorrect instructions have been canceled and the instruction placed at the branch target address is being fetched.
-
-
 
 ## Data and Control Hazards in the *Pipelined processor*
 Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
@@ -544,7 +505,7 @@ Confirm that the ```x2``` register data conflict is now handled correctly (see t
 ![image](https://github.com/user-attachments/assets/27dac029-d6c2-44d7-a8e1-d9beb7a1292f)
 
 
-### Example 3 - Hazard unit
+### Example 3 - Hazard unit for the ```lw``` instruction
 
 Use the following program. 
 
@@ -564,12 +525,81 @@ Use the following program.
    or x2, x4, x4
 ```
 
-Is there any problem with the ```x6``` register data conflict and the control conflict?
-- First analyze the execution of the ```lw``` instruction. How is the ```x6``` register value forwarded to the following instructions?
-- Then analyze the taken ```beq``` instruction. How is the wrong prediction handled?
-- Finally, modify the ```beq``` instruction so that it's a non-taken branch. How is the right prediction handled?
+Analyze the execution of the ```lw``` instruction. How is the ```x6``` register value forwarded to the following instructions? Is it necessary to insert a bubble at some point? Why?
 
 
+### Example 4 - Hazard unit for the ```beq``` instruction
+
+Use the following program. 
+
+```
+.data
+   xa: .word 10
+   xb: .word 0
+   xc: .word 0
+
+.text
+   la x9, xa
+   la x8, xc
+  L1:
+   addi x5, x0, 2
+   addi x4, x0, 3
+   addi x3, x0, -1
+   lw x6, 0(x9)
+   beq x0, x5, L1
+   add x1, x5, x5
+   or x2, x4, x4
+   sw x6, 8(x9)
+```
+
+Analyze and explain the ```beq``` instruction. Analyze first the *non-taken* ```beq``` provided in the original program and then change it for a *taken* ```beq``` and repeat the same analysis.
+
+Use the signal names from the following figure:
+
+![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+
+
+**SOLUTION:**
+
+#### Analysis of a *non-taken* ```beq``` instruction.
+
+This is the ```beq``` instruction at the IF stage:
+
+![image](https://github.com/user-attachments/assets/b7041e37-cc5e-4c70-bb9c-52a331dab370)
+
+You can see that, by default, the PC+4 is ***speculatively*** used as the next PC. It is speculative as it is not sure that execution will continue through that path.
+
+This is the ```beq``` instruction at the ID stage:
+
+![image](https://github.com/user-attachments/assets/af28051e-de2e-4456-be29-ea2ba7bece6e)
+
+You can see that the next sequential instruction is ***speculatively*** fetched and besides the PC+4 is used as the next PC.
+
+Finally, this is the ```beq``` instruction at the EXE stage, where the condition is evaluated and the target address of the branch is computed:
+
+![image](https://github.com/user-attachments/assets/7090d20c-4bc4-40e2-98ff-e8b3a7f7955b)
+
+The output of the Branch module is 0, thus the branch must not be taken and we have proceeded correctly, so execution can continue with no change.
+
+What if the branch must be taken? Let's next analyze that situation.
+
+#### Analysis of a *taken* ```beq``` instruction.
+
+Perform the same analysis but for a taken ```beq``` (in the code above, we can use the same register for Rs1 and Rs2 so that they will for sure be equal). Analyze the cycle when the ```beq``` is at the EXE stage and when it is at the MEM stage.
+
+This is the new ```beq``` instruction at the EXE stage:
+
+![image](https://github.com/user-attachments/assets/25579ab4-1aff-4ea8-a4a8-ef50a7ea7fbc)
+
+Now the output of the Branch module is 1. Thus, we have incorrectly started execution of the two instructions which are sequentially placed after the ```beq``` (i.e. ```add``` and ```or```). Is this a problem? It is not, since these two instructions have not yet modified the Register File or the Data Memory, thus they can be cancelled and execution redirected through the correct path, using the branch target address computed in the ALU.
+
+This is the new ```beq``` instruction at the MEM stage:
+
+![image](https://github.com/user-attachments/assets/767d1202-da62-4215-87f3-6ef5fb9c35d2)
+
+The two incorrect instructions have been canceled and the instruction placed at the branch target address is being fetched.
+
+---
 
 ## Exercise 4
 The following code is executed in Ripes:
