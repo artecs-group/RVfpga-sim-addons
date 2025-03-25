@@ -17,7 +17,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
 ## Building the *Single-Cycle processor*
 Look carefully at the following presentation which shows step-by-step how to build the Ripes Single-Cycle processor and several examples of a subset of instructions executing on it: [BuildingRipesSingleCycle](https://drive.google.com/file/d/1ltiDqyqdh34iVbHx_IfEizBPG4y45GcI/view?usp=sharing).
 
-In addition to the previous slides, the following presentation shows step-by-step and in great detail how to build the Single-Cycle processor from the Harris&Harris (H&H) textbook: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf)
+In addition to the previous slides, the following presentation shows step-by-step and in great detail how to build the Single-Cycle processor from the Harris&Harris (H&H) textbook: [SlidesModule5-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema5-imprimible.pdf) (also available in English at: [SlidesModule5-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf))
 
 
 ## Basic use of the *Single-Cycle processor*
@@ -54,7 +54,7 @@ sub x1, x2, x3
 
 
 ## Complete example in the *Single-Cycle processor*
-Let's perform a simple test in the *Single-Cycle Processor*, extracted from the presentation provided at: [SlidesModule5](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module5.pdf).
+Let's perform a simple test in the *Single-Cycle Processor*, extracted from the slides of Module 5.
 
 Copy the following program into the Editor tab.
 
@@ -82,7 +82,7 @@ Analyze and explain the control and data signals highlighted in red in the follo
 1. ```LW``` instruction:
 ![image](https://github.com/user-attachments/assets/eac7cb38-1c60-4ab9-a0a2-d7cb44f56eb8)
 
-   - ```Instr```= 0x0004a303. You can confirm, using the slides from [Module 4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf), that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
+   - ```Instr```= 0x0004a303. You can confirm, using the slides from Module 4, that this hexadecimal value corresponds to the ```lw``` instruction included in the program.
 
    - ```Addr``` = 0x8, which is the address where the ```lw``` instruction. See next the instructions in the Ripes memory tab:
 
@@ -263,9 +263,9 @@ Use the following form to send your answers to the exercise: [Answer Exercise 3]
 ## Building the *Pipelined processor*
 Look at the following presentation which shows step-by-step how to build the Ripes Pipelined processor and several examples of a subset of instructions executing on it: [BuildingRipesPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing).
 
-In addition, the following presentation shows step-by-step and in great detail how to build the Pipelined processor from the Harris&Harris textbook: [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
+In addition, the following presentation shows step-by-step and in great detail how to build the Pipelined processor from the Harris&Harris textbook: [SlidesModule7-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) (also available in English at: [SlidesModule7-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf)).
 
-At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 108 to slide 110: [SlidesModule6](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf).
+At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 108 to slide 110: [SlidesModule6-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema6-imprimible.pdf) (also available in English at: [SlidesModule6-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf)).
 
 
 
@@ -441,7 +441,7 @@ Let's analyze a few important signals of the pipeline in this cycle.
 
 
 ## Data and Control Hazards in the *Pipelined processor*
-Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
+Look at the following presentation which shows, from slide 53 to slide 130, how hazards are handled in the Harris&Harris textbook Pipelined processor [SlidesModule7-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) (also available in English at: [SlidesModule7-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf)). You must take into account that the processor analyzed in the presentation is very similar to the Pipelined Ripes processor but has some minor differences.
 
 ### Example 1 - Insert ```nop``` instructions to avoid data conflicts
 
