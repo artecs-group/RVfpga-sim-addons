@@ -5,9 +5,9 @@ We provide instructions, exercises, and labs to help students learn the RISC-V a
 3. Basic RISC-V Architecture and Assembly:
     * Do the initial tests about basic assembly provided below at [InitialTests_BasicAssembly](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#initial-tests-in-ripes---basic-risc-v-assembly).
     * Complete all exercises about basic assembly included below at [Exercises_BasicAssembly](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-architecture-and-basic-assembly-in-ripes).
-4. RISC-V Calling Convention:
-    * Do the initial tests about RISC-V Calling Convention provided below at [InitialTests_Functions](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#initial-tests-in-ripes---calling-functions).
-    * Complete all exercises about RISC-V Calling Convention provided at [Exercises_Functions](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-calling-convention).
+4. RISC-V Advanced Assembly and Calling Convention:
+    * Do the initial tests about RISC-V Calling Convention provided below at [InitialTests_AdvancedAssemblyAndFunctions](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#initial-tests-in-ripes---calling-functions).
+    * Complete all exercises about RISC-V Calling Convention provided at [Exercises_AdvancedAssemblyAndFunctions](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-calling-convention).
 5. RISC-V Instruction Formats:
    * Do the tests about RISC-V Instruction Format provided below at [InitialTests_InstructionFormat](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#risc-v-instruction-format).
    * Complete the exercises about RISC-V Instruction Format provided at [Exercises_Formats](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Fundamentals/RiscvArchitectureAssembly/README.md#exercises-about-risc-v-instruction-format).
@@ -598,7 +598,7 @@ j end
 
 ---
 
-## Initial Tests in Ripes - Calling Functions
+## Initial Tests in Ripes - Advanced Assembly and Calling Functions
 The RISC-V Calling Convention is first explained theoretically using the slides available at [SlidesModule3-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema3-imprimible.pdf) (also available in English: [SlidesModule3-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf)). After studying each new concept, students must perform the corresponding example from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
 
 ### Call and Return
