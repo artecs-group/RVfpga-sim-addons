@@ -387,14 +387,13 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
 ![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
 
-We next include a couple of interesting such examples: 
+We next include an interesting example: 
 
 #### Analysis of the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
 
 This is the state of the processor at the end of the code.
 
 ![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
-
 
 As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
 
