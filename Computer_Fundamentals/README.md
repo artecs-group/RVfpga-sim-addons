@@ -1,6 +1,6 @@
 # Computer Fundamentals
 
-This is a first-year course in the Computer Science degree program at UCM. The course content can be found at [Computer Organization UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8704.pdf).
+This is a first-year course in the Computer Science degree program at UCM. The course content can be found at [Introduction to Computers UCM](http://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2024/8704.pdf).
 
 The theoretical part provides an in-depth analysis of the RISC-V architecture and assembly programming, covering single-cycle, multi-cycle, and pipelined processors as described in the Harris & Harris book. Exercises and labs reinforce and deepen understanding of these topics. All course materials are available on an external webpage in both Spanish [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html) and English [FC2-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2-en.html).
 
