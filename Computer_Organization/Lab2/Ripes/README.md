@@ -183,8 +183,13 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
    - ```C7``` = 0x1, as the condition is met given that the two registers are equal. Note that this signal makes the destination address of the ```beq``` instruction be written to the PC.
 
+---
 
-## Exercise 1
+## Exercises about the Single-Cycle processor
+We next provide a selection of exercises about the Single-Cycle processor.
+
+
+### Exercise 1
 The following code is executed in Ripes:
 
 ```
@@ -204,7 +209,7 @@ What is the value of the signals highlighted in the following figure for the exe
 Simulate the program cycle-by-cycle, stop when the ```add``` instruction is executing, and confirm your answer. 
 
 
-## Exercise 2
+### Exercise 2
 The following code is executed in Ripes:
 
 ```
@@ -225,7 +230,7 @@ What is the value of the signals highlighted in the figure from Exercise 1 for t
 Simulate the program cycle-by-cycle, stop when the ```lw``` instruction is executing and confirm your answer. 
 
 
-## Exercise 3
+### Exercise 3
 The following code is executed in Ripes:
 
 ```
@@ -599,8 +604,10 @@ This is the new ```beq``` instruction at the MEM stage:
 The two incorrect instructions have been canceled and the instruction placed at the branch target address is being fetched.
 
 ---
+## Exercises about the Pipelined processor
+We next provide a selection of the exercises about the Pipelined processor. You can find more exercises in the following sheet: [ExercisesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems7.pdf) (remember that you can find all the solutions at [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html)).
 
-## Exercise 4
+### Exercise 4
 The following code is executed in Ripes:
 
 ```
@@ -691,7 +698,7 @@ Let's analyze some of the signals in this cycle.
 
 
 
-## Exercise 5
+### Exercise 5
 The following code is executed in Ripes:
 
 ```
@@ -718,7 +725,7 @@ c. Show screenshots of the Ripes pipeline to explain how the different data haza
 d. Stop the execution during the cycle when the ```lw``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the figure from Exercise 4.
 
 
-## Exercise 6
+### Exercise 6
 The following code is executed in Ripes:
 
 ```
@@ -750,7 +757,7 @@ c. Show screenshots of the Ripes pipeline to explain how the different data haza
 d. Stop the execution during the cycle when the first ```beq``` instruction is in the EX stage and analyze the data/control signals of each stage. Use the names provided in the figure from Exercise 4.
 
 
-## Exercise 7
+### Exercise 7
 Given the following code, which calculates the factorial of the number stored in register t0 (it is assumed to always be an integer greater than 1) and stores the result in the same t0 register:
 
 ```
@@ -784,7 +791,7 @@ c. Show screenshots of the Ripes pipeline to explain how the different data haza
 d. Indicate the values of the data and control signals in cycle 5 of the program execution. Use the names provided in the figure from Exercise 4.
 
 
-## Exercise 8
+### Exercise 8
 Given the following program:
 
 ```
