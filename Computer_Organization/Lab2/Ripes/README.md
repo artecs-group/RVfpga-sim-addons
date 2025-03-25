@@ -502,7 +502,9 @@ sub x5, x2, x0
 
 Confirm that the ```x2``` register data conflict is now handled correctly (see the following figure).
 
-![image](https://github.com/user-attachments/assets/9404fe5d-6838-4c9f-84ec-ff9322eed166)
+<p>
+  <img src="https://github.com/user-attachments/assets/9404fe5d-6838-4c9f-84ec-ff9322eed166" width="60%">
+</p>
 
 You can see that the top 3-1 multiplexer (red square) selects the data forwarded from the MEM stage (0x5) instead of the data read in the previous cycle from the Register File, which holds a stale value (0x7ffffff0).
 
