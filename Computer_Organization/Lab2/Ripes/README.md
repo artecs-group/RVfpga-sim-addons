@@ -270,8 +270,6 @@ Look at the following presentation which shows step-by-step how to build the Rip
 
 In addition, the following presentation shows step-by-step and in great detail how to build the Pipelined processor from the Harris&Harris textbook: [SlidesModule7-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) (also available in English at: [SlidesModule7-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf)).
 
-At this point, it is also useful to analyze the performance metrics. For that purpose, look at the following presentation from slide 52 to slide 54: [SlidesModule6-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema6-imprimible.pdf) (also available in English at: [SlidesModule6-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf)).
-
 
 
 ## Basic use of the *Pipelined processor*
@@ -606,6 +604,11 @@ The two incorrect instructions have been canceled and the instruction placed at 
 ---
 ## Exercises about the Pipelined processor
 We next provide a selection of the exercises about the Pipelined processor. You can find more exercises in the following sheet: [ExercisesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems7.pdf) (remember that you can find all the solutions at [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html)).
+
+In order to be able to complete these exercises, you will need to analyze the performance metrics. For that purpose, look at the following presentation from slide 52 to slide 54: [SlidesModule6-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema6-imprimible.pdf) (also available in English at: [SlidesModule6-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf)).
+
+Moreover, you will be asked to draw the pipeline diagram. For that purpose, look at the following presentation from slide 41 to slide 42: [SlidesModule7-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) (also available in English at: [SlidesModule7-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf)).
+
 
 ### Exercise 4
 The following code is executed in Ripes:
