@@ -817,13 +817,13 @@ fin:
 j fin
 ```
 
-a. Draw the execution diagram of the program on the H&H 5-stage pipelined processor until the cycle in which the ```add``` instruction exits the pipeline in the third iteration. Explain the data, and control dependencies that arise and explain for each one how the processor handles it.
+a. Draw the execution diagram of the program on the H&H 5-stage pipelined processor until the cycle in which the ```add``` instruction exits the pipeline in the second iteration of the loop. Explain the data, and control dependencies that arise and explain for each one how the processor handles it.
 
 b. Simulate the program in Ripes. How many cycles does it take to execute one iteration of the loop? Calculate the CPI.
 
 c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code and recalculate the CPI.
 
-d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage. Also, indicate which instruction is in each stage. Use the figure from Exercise 4.
+d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage in the first iteration of the loop. Also, indicate which instruction is in each stage and explain the signals. Use the figure from Exercise 4.
 
 
 **SOLUTION:**
