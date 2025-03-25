@@ -289,7 +289,7 @@ The construction of the Pipelined processor is first explained theoretically usi
   <img src="../Images/View.png" width=40% height=40%>
 </p>
 
-4. Perform the example shown in the above slides for the ```sub``` instruction. Use the following code in Ripes:
+4. Perform the example shown in the above slides ([BuildingRipesPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing)) for the ```sub``` instruction. Use the following code in Ripes:
 
 ```
 li x2, 5
@@ -301,6 +301,7 @@ nop
 sub x1, x2, x3
 ```
 
+<!--
 5. Analyze the ```addi``` instruction in the following example. Highlight the differences with respect to the execution of a ```sub``` instruction.
 
 ```
@@ -342,7 +343,6 @@ nop
 sw x1, 0(x2)
 ```
 
-<!--
 8. Analyze the ```beq``` instruction in the following example. Test both taken and non-taken branches by modifying the initial values of ```x2``` and ```x3```.
 
 ```
