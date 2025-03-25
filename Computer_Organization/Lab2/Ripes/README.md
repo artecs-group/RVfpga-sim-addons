@@ -558,10 +558,6 @@ Use the following program.
 
 Analyze and explain the ```beq``` instruction. Analyze first the *non-taken* ```beq``` provided in the original program and then change it for a *taken* ```beq``` and repeat the same analysis.
 
-Use the signal names from the following figure:
-
-![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
-
 
 **SOLUTION:**
 
