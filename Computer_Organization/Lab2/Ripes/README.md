@@ -4,13 +4,13 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
    * [Building the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#building-the-single-cycle-processor)
    * [Basic use of the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#basic-use-of-the-single-cycle-processor)
    * [Complete example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#complete-example-in-the-single-cycle-processor)
-   * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercise-1)
+   * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercises-about-the-single-cycle-processor)
 2. Pipelined Processor:
    * [Building the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#building-the-pipelined-processor)
    * [Basic use of the processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#basic-use-of-the-pipelined-processor)
    * [Complete example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#complete-example-in-the-pipelined-processor)
    * [Data and Control Hazards in the Pipelined processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#data-and-control-hazards-in-the-pipelined-processor)
-   * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercise-4)
+   * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercises-about-the-pipelined-processor)
 3. LABS: Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#lab-5)
 4. Final Exam: After all these exercises and labs, students do the exam provided below at [Exam](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#final-exam)
 
