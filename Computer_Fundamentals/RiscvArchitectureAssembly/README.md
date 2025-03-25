@@ -318,7 +318,7 @@ This is the result after executing the program in Ripes.
 ---
 
 ## Exercises about RISC-V Architecture and Basic Assembly in Ripes
-We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
+We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)). In all cases, before completing the proposed tasks, you should try to implement the programs in RISC-V assembly and then compare your solution with the one provided. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes (remember that you can find all the solutions at [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html)).
 
 ### Exercise 1
 Write a RISC-V assembly program that implements the following code.
@@ -767,7 +767,7 @@ jalr x0, ra, 0
 ---
 
 ## Exercises about RISC-V Calling Convention
-We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes.
+We next provide a selection of the exercises proposed in Module 3 ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems3.pdf)) should also be resolved and tested by the students in Ripes (remember that you can find all the solutions at [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html)).
 
 
 ### Exercise 16
@@ -1090,7 +1090,7 @@ Each instruction format is first explained theoretically using the slides availa
 ---
 
 ## Exercises about RISC-V Instruction Format
-We next provide a selection of the exercises proposed in Module 4 ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) related with function calling. The remaining exercises provided in the sheet ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) should also be resolved by the students.
+We next provide a selection of the exercises proposed in Module 4 ([ExercisesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems4.pdf)) related with function calling.
 
 ![image](https://github.com/user-attachments/assets/a8c41060-c3bc-4d10-a816-a473e8f51659)
 
