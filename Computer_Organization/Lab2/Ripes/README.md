@@ -650,11 +650,11 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 
 *b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor.*
 
-- ```x3``` is written by the first ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained through forwarding.
-- ```x4``` is written by the second ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained through forwarding.
-- ```x2``` is written by the ```add``` instruction and used by the ```sub``` instruction. It is obtained through forwarding.
-- ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
-- ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained through forwarding.
+- ```x3``` is written by the first ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained with a forwarding from WB to EX.
+- ```x4``` is written by the second ```li``` instruction (which the assembler transforms into an ```addi``` instruction) and used by the ```add``` instruction. It is obtained with a forwarding from MEM to EX.
+- ```x2``` is written by the ```add``` instruction and used by the ```sub``` instruction. It is obtained with a forwarding from MEM to EX.
+- ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from WB to EX.
+- ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from MEM to EX.
 
 *c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.*
 
