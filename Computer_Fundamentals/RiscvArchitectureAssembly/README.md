@@ -1032,7 +1032,7 @@ ret
 ---
 
 ## RISC-V Instruction Format
-Each instruction format is first explained theoretically using the slides available at [SlidesModule4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf). After studying each instruction format, students must perform the corresponding test from the list below.
+Each instruction format is first explained theoretically using the slides available at [SlidesModule4-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema4-imprimible.pdf) (also available in English at: ([SlidesModule4-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf)). After studying each instruction format, students must perform the corresponding test from the list below.
 
 
 ### Instruction ```sub```
