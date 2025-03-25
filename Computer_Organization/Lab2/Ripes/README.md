@@ -826,6 +826,11 @@ c. Is it possible to improve the loop's performance by reordering the code? Just
 d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage. Also, indicate which instruction is in each stage. Use the figure from Exercise 4.
 
 
+**SOLUTION:**
+In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
+
+
+
 ---
 
 
