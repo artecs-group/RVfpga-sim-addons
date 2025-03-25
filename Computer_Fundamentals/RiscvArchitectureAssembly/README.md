@@ -599,7 +599,7 @@ j end
 ---
 
 ## Initial Tests in Ripes - Calling Functions
-The RISC-V Calling Convention is first explained theoretically using the slides available at [SlidesModule3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf). After studying each new concept, students must perform the corresponding example from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
+The RISC-V Calling Convention is first explained theoretically using the slides available at [SlidesModule3-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema3-imprimible.pdf) (also available in English: [SlidesModule3-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf)). After studying each new concept, students must perform the corresponding example from the list below. This involves executing the instructions step-by-step and carefully analyzing the Register File and Memory in detail.
 
 ### Call and Return
 
