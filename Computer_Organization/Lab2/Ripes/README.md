@@ -11,7 +11,7 @@ Ripes allows simulating many aspects of computer organization, structure, and ar
    * [Complete example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#complete-example-in-the-pipelined-processor)
    * [Data and Control Hazards in the Pipelined processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#data-and-control-hazards-in-the-pipelined-processor)
    * [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#exercises-about-the-pipelined-processor)
-3. LABS: Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#lab-5)
+3. LABS: Work on the labs as detailed below at [Labs](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#labs-about-the-single-cycle-and-pipelined-processor-in-ripes)
 4. Final Exam: After all these exercises and labs, students do the exam provided below at [Exam](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes#final-exam)
 
 ## Building the *Single-Cycle processor*
