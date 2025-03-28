@@ -1000,7 +1000,7 @@ Now go back to the 5-stage pipelined processor that we are typically using.
   <img src="../Images/SelectProc.png" width=60% height=60%>
 </p>
 
-Use the original program (without ```nop``` instructions). This is the pipeline diagram for the first five instructions:
+Use the original program (without ```nop``` instructions). This is the pipeline diagram for the initial instructions:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/60313dd7-d0f4-4bf4-ab16-f66ba6034c71" width="60%">
@@ -1012,14 +1012,14 @@ Forwardings:
 - From ```li``` at WB to ```beq``` at EX.
 - From ```li``` at MEM to ```beq``` at EX.
 
-It takes 5 cycles to execute them because there are no stalls.
+It takes 5 cycles to execute the first 5 instructions because there are no stalls.
 
 This is the pipeline diagram for the whole execution of the program:
 
 ![image](https://github.com/user-attachments/assets/19c027c0-a165-4e8b-8e7e-229ba2faa181)
 
 - It takes (35-0) cycles to execute the program until the ```j``` instruction.
-- 25 instructions have been executed (the ```j``` instructions is not accounted).
+- Before the loop 5 instructions are executed. The loop has 4 instructions and performs 4 iterations. Finally, the beq is executed, the loop is exited, and 3 more instructions are executed. So, a total of 5+(4*4)+1+3 = 25 instructions are executed before the final ```j``` instruction.
 
 
 ---
