@@ -987,7 +987,7 @@ Check again execution, which should now be correct. For example, the beq conditi
 This is the pipeline diagram for the first iteration of the loop:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/eb5de3ac-52b6-43a6-9101-710779e6fdc9" width="40%">
+  <img src="https://github.com/user-attachments/assets/974a25e0-52bc-4130-8064-616142e6df26" width="60%">
 </p>
 
 The CPI = (15-7)/4 = 8/4 = 2, which is far from ideal (1). Note that nop instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
