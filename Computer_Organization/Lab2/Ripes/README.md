@@ -895,7 +895,7 @@ This is the pipeline diagram obtained in Ripes, with the first iteration highlig
 - The number of cycles of the first instruction in the first iteration to the first instruction in the second interation is: 16-8 = 8. Given that 6 instructions are executed per iteration, CPI = 8/6 (and IPC = 6/8).
 
 
-### Exercises 1, 2, 4, 5, and 6 - [Exam May 2024](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo23-24.pdf)
+### Exercises 4 and 5 - [Exam May 2024](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo23-24.pdf)
 Given the following program:
 
 ```
@@ -1020,6 +1020,7 @@ This is the pipeline diagram for the whole execution of the program:
 
 - It takes (35-0) cycles to execute the program until the ```j``` instruction.
 - Before the loop 5 instructions are executed. The loop has 4 instructions and performs 4 iterations. Finally, the beq is executed, the loop is exited, and 3 more instructions are executed. So, a total of 5+(4*4)+1+3 = 25 instructions are executed before the final ```j``` instruction.
+- Thus, CPI = 35/25.
 
 
 ---
