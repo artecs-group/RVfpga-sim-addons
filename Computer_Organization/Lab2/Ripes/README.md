@@ -993,7 +993,36 @@ This is the pipeline diagram for the first iteration of the loop:
 The CPI = (15-7)/4 = 8/4 = 2, which is far from ideal (1). Note that nop instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
 
 
+Now go back to the 5-stage pipelined processor that we are typically using.
+
+<p align="center">
+  <img src="../Images/SelectProc.png" width=60% height=60%>
+</p>
+
+Use the original program (without ```nop``` instructions). This is the pipeline diagram for the first five instructions:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/60313dd7-d0f4-4bf4-ab16-f66ba6034c71" width="60%">
+</p>
+
+Forwardings:
+- From ```auipc``` at MEM to ```addi``` at EX.
+- From ```addi``` at MEM to ```lw``` at EX.
+- From ```li``` at WB to ```beq``` at EX.
+- From ```li``` at MEM to ```beq``` at EX.
+
+It takes 5 cycles to execute them because there are no stalls.
+
+This is the pipeline diagram for the whole execution of the program:
+
+![image](https://github.com/user-attachments/assets/19c027c0-a165-4e8b-8e7e-229ba2faa181)
+
+- It takes (35-0) cycles to execute the program until the ```j``` instruction.
+- 25 instructions have been executed (the ```j``` instructions is not accounted).
+
+
 ---
+
 
 
 ### Lab 5
