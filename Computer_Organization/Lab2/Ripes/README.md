@@ -1025,7 +1025,7 @@ This is the pipeline diagram for the whole execution of the program:
 
 ---
 
-
+## Labs about the Single-Cycle and Pipelined processor in Ripes
 
 ### Lab 5
 The following C code is intended to run on the Ripes Single-Cycle processor (this code is provided for reference only and should not be used in the exercise below):
