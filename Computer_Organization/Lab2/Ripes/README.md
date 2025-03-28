@@ -840,7 +840,7 @@ d. Indicate the values of all data and control signals in the cycle where the ``
 In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
 
 
-### Exam May 2023 - Exercise 7
+### Exercise 7 - [Exam May 2023](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo22-23.pdf)
 Given the following program:
 
 ```
