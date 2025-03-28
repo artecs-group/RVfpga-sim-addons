@@ -840,6 +840,7 @@ d. Indicate the values of all data and control signals in the cycle where the ``
 In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
 
 
+
 ### Exercise 7 - [Exam May 2023](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo22-23.pdf)
 Given the following program:
 
@@ -894,7 +895,104 @@ This is the pipeline diagram obtained in Ripes, with the first iteration highlig
 - The number of cycles of the first instruction in the first iteration to the first instruction in the second interation is: 16-8 = 8. Given that 6 instructions are executed per iteration, CPI = 8/6 (and IPC = 6/8).
 
 
+### Exercises 1, 2, 4, 5, and 6 - [Exam May 2024](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo23-24.pdf)
+Given the following program:
+
+```
+.global main
+
+.equ n, 6
+
+.data
+f: .word 2
+Res: .word 0
+
+.text
+
+main:
+la t1, f
+lw s1, 0(t1)
+li s2, n
+li s3, 2
+for:
+  beq s3, s2, fin_for
+  add s1, s1, s1
+  addi s3, s3, 1
+  j for
+  fin_for:
+  la t1, Res
+  sw s1, 0(t1)
+end:
+j end
+```
+
+![image](https://github.com/user-attachments/assets/677d6b4d-c020-4bc8-9539-20c59cff0ab5)
+
+Configure the processor as follows:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a" width="60%">
+</p>
+
+Test the execution with the original program. You will see that it's not correct. For example, the beq condition is not computed on correct data for s2 nor for s3 registers. See the following screenshot:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db6a4845-84f6-41cd-9255-35499af5b9e7" width="40%">
+</p>
+
+Now use the following program, where nop instructions have been inserted to avoid data/control hazard violations:
+
+```
+.global main
+
+.equ n, 6
+
+.data
+f: .word 2
+Res: .word 0
+
+.text
+
+main:
+la t1, f
+lw s1, 0(t1)
+li s2, n
+li s3, 2
+nop
+nop
+for:
+  beq s3, s2, fin_for
+  nop
+  nop
+  add s1, s1, s1
+  addi s3, s3, 1
+  j for
+  nop
+  nop
+  fin_for:
+  la t1, Res
+  nop
+  nop
+  sw s1, 0(t1)
+end:
+j end
+```
+
+Check again execution, which should now be correct. For example, the beq condition is now computed on correct data for s2 nor for s3 registers. See the following screenshot:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/521288ac-4332-415f-a1d6-4fd3c2df8f59" width="40%">
+</p>
+
+This is the pipeline diagram for the first iteration of the loop:
+
+![image](https://github.com/user-attachments/assets/eb5de3ac-52b6-43a6-9101-710779e6fdc9)
+
+The CPI = (15-7)/4 = 8/4 = 2, which is far from ideal (1). Note that nop instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
+
+
 ---
+
 
 ### Lab 5
 The following C code is intended to run on the Ripes Single-Cycle processor (this code is provided for reference only and should not be used in the exercise below):
