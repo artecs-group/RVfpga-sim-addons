@@ -891,6 +891,8 @@ This is the pipeline diagram obtained in Ripes, with the first iteration highlig
   <img src="https://github.com/user-attachments/assets/8b6548fc-cb9d-4169-beba-36c25c14ada8" width="600">
 </p>
 
+- The number of cycles of the first instruction in the first iteration to the first instruction in the second interation is: 16-8 = 8. Given that 6 instructions are executed per iteration, CPI = 8/6 (and IPC = 6/8).
+
 
 ---
 
