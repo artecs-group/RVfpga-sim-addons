@@ -840,9 +840,59 @@ d. Indicate the values of all data and control signals in the cycle where the ``
 In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
 
 
+### Exam May 2023 - Exercise 7
+Given the following program:
+
+```
+.globl main
+
+.data
+byte: .word 0
+
+.text
+main:
+ la a1, byte
+ li a0, 0x57
+ jal enviar_byte
+fin:
+j fin
+
+enviar_byte:
+ sw zero, 0(a1)
+ addi t1, zero, 8
+ for_bits:
+  beq t1, zero, fin_for
+  andi t2, a0, 1
+  sw t2, 0(a1)
+  srli a0, a0, 1
+  addi t1, t1, -1
+  j for_bits
+ fin_for:
+ addi t1, zero, 1
+ sw t1, 0(a1)
+ret
+```
+
+Supongamos que se ejecuta una iteración del bucle original (6 instrucciones) en el procesador Ripes segmentado. Realice el diagrama de ejecución señalando las paradas y anticipaciones si las hubiera. ¿Cuántos ciclos tarda en ejecutarse cada iteración del bucle?
+
+
+**SOLUTION:**
+This is the pipeline diagram obtained in Ripes, with the first iteration highlighted in red:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2d1eb5f9-a76c-4a0b-87dc-287615a1066d" width="600">
+</p>
+
+- There are 2 bubbles at the end of the loop due to the branch misprediction.
+
+- There is a forwarding from the ```andi``` instruction at the MEM stage to the ```sw``` instruction at the EX stage. See the following screenshot:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/8b6548fc-cb9d-4169-beba-36c25c14ada8" width="600">
+</p>
+
 
 ---
-
 
 ### Lab 5
 The following C code is intended to run on the Ripes Single-Cycle processor (this code is provided for reference only and should not be used in the exercise below):
