@@ -605,7 +605,7 @@ The two incorrect instructions have been canceled and the instruction placed at 
 ## Exercises about the Pipelined processor
 We next provide a selection of the exercises about the Pipelined processor. You can find more exercises in the following sheet: [ExercisesModule7](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2problems7.pdf) (remember that you can find all the solutions at [FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2.html)).
 
-In order to be able to complete these exercises, you will need to analyze the performance metrics. First of all, look at slides 52 to 54 of the following presentation, which explain the basic concepts of performance metrics: [SlidesModule6-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema6-imprimible.pdf) (also available in English at: [SlidesModule6-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf)).
+In order to be able to complete these exercises, you will need to analyze the performance metrics. First of all, look at slides 52 to 58 of the following presentation, which explain the basic concepts of performance metrics: [SlidesModule6-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema6-imprimible.pdf) (also available in English at: [SlidesModule6-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module6.pdf)).
 
 Moreover, you will be asked to draw the pipeline diagram. First of all, look at slides 41 to 42 of the following presentation, which explain how to draw this kind of diagram: [SlidesModule7-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) (also available in English at: [SlidesModule7-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf)).
 
