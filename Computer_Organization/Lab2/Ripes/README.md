@@ -992,6 +992,7 @@ This is the pipeline diagram for the first iteration of the loop:
 
 The CPI = (15-7)/4 = 8/4 = 2, which is far from ideal (1). Note that nop instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
 
+![image](https://github.com/user-attachments/assets/caaba4a0-3fa4-4fc7-aa15-4935fb83d67b)
 
 Now go back to the 5-stage pipelined processor that we are typically using.
 
