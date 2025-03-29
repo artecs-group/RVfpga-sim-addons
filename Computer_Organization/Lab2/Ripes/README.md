@@ -1023,6 +1023,12 @@ This is the pipeline diagram for the whole execution of the program:
 - Thus, CPI = 35/25.
 
 
+### Exercises 4, 5 and 6 - Exam June 2024
+
+At the following link, you can download the exercises on the Pipelined Processor from the June 2024 exam: [PipelinedProc_June24](https://drive.google.com/file/d/17cDkCNMC5-PWB_E_CRpa3YlKzHFDE9xl/view?usp=sharing)
+
+
+
 ---
 
 ## Labs about the Single-Cycle and Pipelined processor in Ripes
