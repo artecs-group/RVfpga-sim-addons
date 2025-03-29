@@ -934,7 +934,7 @@ Configure the processor as follows:
   <img src="https://github.com/user-attachments/assets/05aa37c9-9536-4d61-a229-2df7a877510a" width="60%">
 </p>
 
-Test the execution with the original program. You will see that it's not correct. For example, the beq condition is not computed on correct data for s2 nor for s3 registers. See the following screenshot:
+Test the execution with the original program. You will see that it's not correct. For example, the beq condition is not computed on correct data for s2 nor for s3 registers. See the following screenshot, where the input operands to the Branch Unit are both 0 (stale values):
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/db6a4845-84f6-41cd-9255-35499af5b9e7" width="40%">
@@ -978,7 +978,7 @@ end:
 j end
 ```
 
-Check again execution, which should now be correct. For example, the beq condition is now computed on correct data for s2 nor for s3 registers. See the following screenshot:
+Check again execution, which should now be correct. For example, the beq condition is now computed on correct data for s2 and for s3 registers. See the following screenshot, where the input operands to the Branch Unit are both 2 and 6 (up-to-date values)
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/521288ac-4332-415f-a1d6-4fd3c2df8f59" width="40%">
