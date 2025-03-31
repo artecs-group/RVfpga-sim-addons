@@ -468,13 +468,12 @@ Confirm that the ```x2``` register data conflict is handled incorrectly. You can
 
 ![image](https://github.com/user-attachments/assets/6912b5e6-72a2-47af-8e8d-132d29f43fe3)
 
-Now insert 3 ```nop``` instructions in between the conflicting instructions.
+Now insert 2 ```nop``` instructions in between the conflicting instructions.
 
 ```
 .text
 main:
 xori x2, x0, 5
-nop
 nop
 nop
 sub x5, x2, x0
