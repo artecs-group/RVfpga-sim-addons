@@ -1,4 +1,4 @@
-#Module 1 - RISC-V Architecture
+# Module 1 - RISC-V Architecture
 
 In this first module, the RISC-V architecture will be studied in detail, and various increasingly complex exercises will be carried out involving programming in assembly and C languages. In Topic 1, a very detailed analysis of the RISC-V architecture is included, covering its instruction set, registers and addressing modes, available data types, and more.
 
