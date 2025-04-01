@@ -1,3 +1,5 @@
+#Module 1 - RISC-V Architecture
+
 In this first module, the RISC-V architecture will be studied in detail, and various increasingly complex exercises will be carried out involving programming in assembly and C languages. In Topic 1, a very detailed analysis of the RISC-V architecture is included, covering its instruction set, registers and addressing modes, available data types, and more.
 
 Next, since most software programs are written in a high-level language, Topic 2 presents a tutorial on how to create a project in C language using PlatformIO on VSCode, which can be executed on the RVfpga system. A series of exercises will be proposed so that students can practice writing their own programs in this high-level language.
