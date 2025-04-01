@@ -19,7 +19,7 @@ In recent years, we have also supervised several Bachelor's and Master's theses 
 + **[Floating-point extensions for the SweRV EH1 core](https://docta.ucm.es/entities/publication/274f1b3a-c564-464d-8066-ef9aa4ae3c10)**
 + **[FPGA implementation of an AD-HOC RISC-V system-on-chip for industrial IoT](https://docta.ucm.es/entities/publication/9298fbe5-cabd-40a0-bec5-0501290c30d1)**
 
-Finally, in the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). This is the official webpage of the course: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/). Here, you can find all the materials used in the course: [RVfpga_Microcredential](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential).
+Finally, in the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). Here, you can find all the materials used in the course: **[RVfpga_Microcredential](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential)**. This is the official webpage of the course: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
 
 
 
