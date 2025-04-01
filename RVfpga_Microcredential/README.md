@@ -5,7 +5,7 @@ Subsequently, a detailed study of these cores and their Verilog code is conducte
 In the final module, a complete application will also be deployed, using Zephyr Project as the RTOS and TensorFlow Lite for microcontrollers. All developments will be carried out using Xilinx FPGAs.
 
 - [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module0)
-- [Module 1 - RISC-V Architecture]()
-- [Module 2 - Input/Output in the RVfpga SoC]()
-- [Module 3 - VeeR EH1 and EL2 microarchitecture]()
-- [Module 4 - SoC design based on the VeeR cores]()
+- [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module1)
+- [Module 2 - Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module2)
+- [Module 3 - VeeR EH1 and EL2 microarchitecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3)
+- [Module 4 - SoC design based on the VeeR cores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module4)
