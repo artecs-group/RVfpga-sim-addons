@@ -21,7 +21,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
    * [Exercise-3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-3).
    * [Exercise-5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-5).
 
-**June 6 session:**
+**JUNE 6 SESSION:**
 
 4. Complete the following exercises:
    * To be provided.
@@ -38,7 +38,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
-**June 13 session:**
+**JUNE 13 SESSION:**
 
 7. Complete the following exercises:
    * To be provided.
