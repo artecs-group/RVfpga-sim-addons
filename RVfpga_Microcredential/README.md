@@ -1,4 +1,4 @@
-# Microcredential - RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA prueba
+# Microcredential - RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA
 
 The course begins with an extensive introduction to RISC-V architecture and assembly programming, and continues with a series of input/output labs using a SoC based on the RISC-V VeeR EL2 and EH1 softcores.
 Subsequently, a detailed study of these cores and their Verilog code is conducted. The goal of this study is for students not only to understand the design of the mentioned cores but also to be able to modify and/or integrate them into Systems-on-Chip (SoCs).
