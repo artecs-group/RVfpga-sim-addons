@@ -10,7 +10,7 @@ Finally, in Topic 6, serial buses will be introduced, and we will work with the 
 ## Module Workflow
 Follow the next steps to analyze the RVfpga Input/Output System, first at a high-level and then at a low-level.
 
-**To complete before June 6:**
+**To complete between June 2 and June 5:**
 
 1. Look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the H&H book.
 
@@ -34,7 +34,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 5. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
 
-**To complete before June 13:**
+**To complete between June 9 and June 12:**
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
