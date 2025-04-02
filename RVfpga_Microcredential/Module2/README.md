@@ -43,7 +43,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 7. Complete the following exercises:
    * To be provided.
 <!--
-   * Then, resolve the I/O low-level exercises included at: [Exercises_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1).
+   * Resolve the I/O low-level exercises included at: [Exercises_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1).
 -->
 
 8. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
