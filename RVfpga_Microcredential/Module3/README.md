@@ -63,15 +63,13 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
 7. Review of the memory hierarchy:
 
    * Look at Chapter 8 (Memory Systems) of the H&H book.
-   * You can also practice on the exercises proposed in the following link, using the Ripes simulator: [ExamplesAndExercises_RipesCache](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3).
+   * You can also practice with the exercises proposed in the following link, using the Ripes simulator: [ExamplesAndExercises_RipesCache](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3).
 
-8. Then view the same video, from time 24:18 to the end, this video [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=1458) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=1458), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=1458) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to run the CoreMark benchmark on the RVfpga SoC.
+8. View, from time 24:18 to the end, this video: [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=1458) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=1458), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=1458) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to run the CoreMark benchmark on the RVfpga SoC.
 
-9. View, from time 6:29 to time 24:18, this video [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=388) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=388), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=388) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them.
+9. Then view the same video from the previous item, but now from time 6:29 to time 24:18: [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=388) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=388), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=388) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them.
 
-10. Update the C compiler using the following instructions: [CompilerUpdate](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
-
-11. Add simple test instruction: bitmanip.
+10. Update the C compiler in the Virtual Machine using the following instructions: [CompilerUpdate](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
 
 **JUNE 27 SESSION:**
 
@@ -81,8 +79,10 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
 <!--
    * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
 
-   * Final project (Lab 18 of RVfpga):
-       - Add FPU.
-       - Test with a real algorithm: Bisection.
-       - Compare using Performance Counters.
+   * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga (you should add the instruction to the EH1 core, but some of the instructions for the EL2 core are more up-to-date).
+
+   * Final project:
+       - Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
+       - Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
+       - Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
 -->
