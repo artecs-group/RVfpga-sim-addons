@@ -53,6 +53,7 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
 
 7. Complete the following exercises:
    * To be provided.
+
 <!--
    * Evaluate the performance of the VeeR EH1 core using RVfpga-Pipeline and the Nexys A7 board:
        - [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3).
@@ -77,9 +78,11 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
 
 12. Complete the following exercises:
    * To be provided.
+
 <!--
-   * [Benchmarking and Memory System(https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6)
-   * Final project:
+   * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
+
+   * Final project (Lab 18 of RVfpga):
        - Add FPU.
        - Test with a real algorithm: Bisection.
        - Compare using Performance Counters.
