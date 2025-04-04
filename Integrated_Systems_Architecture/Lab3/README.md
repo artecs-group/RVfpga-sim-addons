@@ -241,6 +241,6 @@ Replace file ```~/.platformio/platforms/chipsalliance/builder/frameworks/wd-risc
 Replace file ```~/.platformio/platforms/chipsalliance/boards/swervolf_nexys.json``` with file ```HwCounters_Example_EL2/PlatformIO_ChipsAlliance_Files/swervolf_nexys.json```
 
 Once you finish with this exercise, you can go back to the previous configuration by uninstalling PlatformIO and reinstalling it again. Follow the next steps:
-1. In VSCode, go into the Extensions tab and uninstall PlatformIO. Close VSCode
-2. Remove folder ./platformio in your home directory.
+1. In VSCode, go into the Extensions tab and uninstall PlatformIO. Close VSCode.
+2. Remove completely folder ./platformio in your home directory.
 3. In VSCode, go into the Extensions tab and reinstall PlatformIO.
