@@ -209,6 +209,8 @@ Test the previous exercise in the VeeR EL2 processor and compare the results wit
 
 Download the following compressed folder, uncompress it and move it to the home directory of the VM: [HwCounters_Example_EL2](https://drive.google.com/file/d/1tbDEOVPsiUwpxdHzcwTW6brkJ2acV__J/view?usp=sharing). The folder contains the PlatformIO project, the EL2 bitstream, the document for RVfpga Lab 11 (which contains information about the VeeR EL2 microarchitecture and the use of Hw counters), and the RVfpga-Pipeline EL2 binary simulator. 
 
+Perform the following tests:
+
 - Calculate the CPI for the nested loops when the program executes on a VeeR EH1 processor with pipelined execution and the Gshare branch predictor disabled.
 ```
 li t2, 0x9
@@ -228,3 +230,17 @@ csrrs t1, 0x7F9, t2
 ```
 
 - Reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the configuration of the previous item. Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards.
+
+
+**IMPORTANT NOTE:** In order to use PlatformIO with the VeeR EL2 core, as in RVfpgaEL2, you have to do some previous adaptation of the current platform, as described next. Specifically, a folder called ```.platformio``` has been created in your home directory, and you must perform the following changes:
+
+Replace folder ```~/.platformio/packages/framework-wd-riscv-sdk/psp``` with folder ```HwCounters_Example_EL2/PlatformIO_ChipsAlliance_Files/psp```
+
+Replace file ```~/.platformio/platforms/chipsalliance/builder/frameworks/wd-riscv-sdk.py``` with file ```HwCounters_Example_EL2/PlatformIO_ChipsAlliance_Files/wd-riscv-sdk.py```
+
+Replace file ```~/.platformio/platforms/chipsalliance/boards/swervolf_nexys.json``` with file ```HwCounters_Example_EL2/PlatformIO_ChipsAlliance_Files/swervolf_nexys.json```
+
+Once you finish with this exercise, you can go back to the previous configuration by uninstalling PlatformIO and reinstalling it again. Follow the next steps:
+1. In VSCode, go into the Extensions tab and uninstall PlatformIO. Close VSCode
+2. Remove folder ./platformio in your home directory.
+3. In VSCode, go into the Extensions tab and reinstall PlatformIO.
