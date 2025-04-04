@@ -71,7 +71,7 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
 
 **JUNE 27 SESSION:**
 
-12. Complete the following exercises:
+10. Complete the following exercises:
    * To be provided.
 
 <!--
