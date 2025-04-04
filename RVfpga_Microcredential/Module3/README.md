@@ -49,9 +49,10 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
    * To be provided.
 
 <!--
-   * Evaluate the performance of the VeeR EH1 core for the following program, first using RVfpga-Pipeline and then running on the Nexys A7 board. Compare the results and explain the differences:
-       - [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3).
-       - [Exercise-3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2).
+   * Evaluate the performance of the VeeR EH1 core and the VeeR EL2 core for the following program, first using RVfpga-Pipeline and then running on the Nexys A7 board. Compare the results and explain the differences:
+       - [Exercise-RVfpgaPipeline_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3).
+       - [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2).
+       - [Exercise-HwCounters-EL2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab3/README.md#exercise-2---extension-for-veer-el2).
 
    * Analyze the execution of basic instructions using RVfpga-Trace:
        - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1).
