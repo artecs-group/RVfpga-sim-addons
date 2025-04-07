@@ -1136,8 +1136,6 @@ The RISC-V assembly program is executed in the Ripes Single-Cycle processor. Ans
 
 ### Lab 6
 
-<!--
-
 The following C code is intended to run on the Ripes Single-Cycle processor (this code is provided for reference only and should not be used in the exercise below):
 
 ```
@@ -1252,8 +1250,6 @@ WB
 - Wr=
 - C1(w)=
 - C2(w)=
-
--->
 
 
 ---
