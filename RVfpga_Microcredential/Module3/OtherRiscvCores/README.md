@@ -7,7 +7,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * Arrange the paths conveniently
     * You must use specific versions of Verilator (5.032) and RISC-V toolchain (14.2.0).
     * In the Makefile used for Verilator (~/cvw/sim/verilator/Makefile), add the option to generate a trace (PARAMS?=--trace)
-    * This is an example of commands to compile and simulate an example program ((you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing))), and to visualize the trace:
+    * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing)), and to visualize the trace:
 
           cd ~/cvw/examples/example_extended
           riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
