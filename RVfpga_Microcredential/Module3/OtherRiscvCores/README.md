@@ -5,7 +5,8 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 1. Look at the following presentation: [OtherRiscvCores](https://drive.google.com/file/d/1N_pWZ8oRKA0aUdZg2EKY66rlhnqzTMtF/view?usp=sharing).
 2. Look at the following video showing the execution of CVW Wally in Verilator: ...
 3. Follow these steps to replicate the simulation in the VM:
-    * You must use specific versions of Verilator (5.032) and RISC-V toolchain (14.2.0). You can download them here: [Verilator](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EQpVNYBVJU1Loxn6iQGpHOABhR8v2-vyy88wdoDhW6lK6w?e=EnotZD) and [Toolchain](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EQpVNYBVJU1Loxn6iQGpHOABhR8v2-vyy88wdoDhW6lK6w?e=EnotZD). Once downloaded, unzip and move them to the home of the VM.
+    * Install version 5.032 of Verilator. You can download it here: [Verilator](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EQpVNYBVJU1Loxn6iQGpHOABhR8v2-vyy88wdoDhW6lK6w?e=EnotZD). Once downloaded, unzip and move it to the home of the VM.
+    * Install version 14.2.0 of the RISC-V toolchain. You can download it here: [Toolchain](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EQpVNYBVJU1Loxn6iQGpHOABhR8v2-vyy88wdoDhW6lK6w?e=EnotZD). Once downloaded, unzip and move it to the home of the VM.
     * Clone recursively the sources from the [CVW Wally repo](https://github.com/openhwgroup/cvw). You can also download it here: [Wally](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EYY6Vou-SONEj9FqHHnBZ44BT5nQaA02E27KNKz-nXCeKg?e=5lOg5A). Once downloaded, unzip and move it to the home of the VM.
     * Arrange the paths properly:
 
@@ -20,7 +21,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
        ```
 
     * In the Makefile used for Verilator (~/cvw/sim/verilator/Makefile), add the option to generate a trace (PARAMS?=--trace)
-    * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing)), and to visualize the trace:
+    * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing), and move it into the examples/asm directory), and to then visualize the trace:
 
           ```
           cd ~/Wally/cvw/examples/asm/example_extended
