@@ -10,8 +10,8 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * This is an example of commands:
 
           cd ~/cvw/examples/A_hello_asm (you can download the program here: [ExampleProgram]())
-          riscv64-unknown-elf-gcc -nostdlib -o hello_asm hello.c pause.S
-          riscv64-unknown-elf-objdump -d hello_asm > hello.objdump
+          riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o hello_asm hello_asm.c pause.S
+          riscv64-unknown-elf-objdump -d hello_asm > hello_asm.objdump
 
     * This is an example of the trace generated at ~/cvw/sim/verilator/testbench.vcd:
 
