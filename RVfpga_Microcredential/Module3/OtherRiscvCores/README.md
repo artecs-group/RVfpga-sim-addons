@@ -9,7 +9,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * Clone recursively the sources from the [CVW Wally repo](https://github.com/openhwgroup/cvw). You can also download it here: [Wally](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EYY6Vou-SONEj9FqHHnBZ44BT5nQaA02E27KNKz-nXCeKg?e=5lOg5A), and move it to the home of the VM.
     * Arrange the paths properly:
 
-```
+       ```
        export VERILATOR_ROOT=/home/rvfpga/verilator_5-032/
        export PATH=$VERILATOR_ROOT/bin:$PATH
        export INCLUDE_PATH=$VERILATOR_ROOT/include
@@ -17,18 +17,18 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
        export PATH=$RISCV/bin:$PATH
        export WALLY=/home/rvfpga/Wally/cvw/
        export PATH=$WALLY/bin:$PATH
-```
-      
+       ```
+
     * In the Makefile used for Verilator (~/cvw/sim/verilator/Makefile), add the option to generate a trace (PARAMS?=--trace)
     * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing)), and to visualize the trace:
 
-```
+          ```
           cd ~/Wally/cvw/examples/asm/example_extended
           riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
           riscv64-unknown-elf-objdump -d example_extended > example_extended.objdump
           wsim --vcd --sim verilator rv64gc --elf example_extended
           gtkwave ~/Wally/cvw/sim/verilator/testbench.vcd
-```
+          ```
 
     * This is an example of the trace generated:
 
