@@ -9,7 +9,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * In the Makefile used for Verilator (~/cvw/sim/verilator/Makefile), add the option to generate a trace (PARAMS?=--trace)
     * This is an example of commands to compile and simulate an example program, and to visualize the trace:
 
-          cd ~/cvw/examples/example_extended (you can download the program here: [ExampleExtended]())
+          cd ~/cvw/examples/example_extended (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing))
           riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
           riscv64-unknown-elf-objdump -d example_extended > example_extended.objdump
           wsim --vcd --sim verilator rv64gc --elf example_extended
@@ -17,6 +17,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * This is an example of the trace generated at ~/cvw/sim/verilator/testbench.vcd:
 
+![image](https://github.com/user-attachments/assets/51e0e026-6e9b-4f45-82dd-fb757ba7f505)
     
 
 3. Look at the following video showing the execution of CVW Wally in FPGA: ...
