@@ -1195,7 +1195,7 @@ The RISC-V assembly program is executed in the Ripes Pipelined processor. Answer
 
 3. Reorder the program, confirm if the result is the same, and recalculate the CPI.
 
-4. Explain the Data/Control signals when the following instructions are at the given stage during the first iteration of the loop_k loop in the original program (not in the reordered one).
+4. Explain, for the original program, the Data/Control signals when the following instructions are at the given stage during the first iteration of the loop_k loop in the original program (not in the reordered one).
 
  	* lw t4, 0(a4) at the EX stage
  	* lw t4, 0(a4) at the WB stage
