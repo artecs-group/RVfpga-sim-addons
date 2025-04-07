@@ -84,4 +84,7 @@ Follow the next steps to analyze the VeeR EH1 processor, first at a high-level a
        - Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
        - Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
        - Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
+
+   * Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores]()
+
 -->
