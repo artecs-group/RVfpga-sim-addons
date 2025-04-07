@@ -1252,6 +1252,10 @@ WB
 - C2(w)=
 
 
+**SOLUTION:** In the following document we provide partial solutions for the lab exercises: [PartialSolutionsLab6](https://drive.google.com/file/d/1h1wdw1wXaYydUdRKxUTEh_eijAVE_FsN/view?usp=sharing)
+
+
+
 ---
 
 
