@@ -6,10 +6,10 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 2. Look at the following video showing the execution of CVW Wally in Verilator: ...
 3. Follow these steps to replicate the simulation in the VM:
     * You must use specific versions of Verilator (5.032) and RISC-V toolchain (14.2.0).
+    * Clone recursively the sources from the [CVW Wally repo](https://github.com/openhwgroup/cvw).
     * Arrange the paths conveniently:
 
        - export VERILATOR_ROOT=...
-       - export CPLUS_INCLUDE_PATH=/home/dani/verilator_5-032/include/vltstd:$CPLUS_INCLUDE_PATH
        - export PATH=$VERILATOR_ROOT/bin:$PATH
        - export INCLUDE_PATH=$VERILATOR_ROOT/include
        - export RISCV=...
@@ -17,14 +17,10 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
        - export WALLY=...
        - export PATH=$WALLY/bin:$PATH
       
-    * Download the sources from the [CVW Wally repo](https://github.com/openhwgroup/cvw):
-
-       - git clone --recursive https://github.com/wally-riscv/cvw-main.git
-
     * In the Makefile used for Verilator (~/cvw/sim/verilator/Makefile), add the option to generate a trace (PARAMS?=--trace)
     * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing)), and to visualize the trace:
 
-          cd ~/cvw/examples/example_extended
+          cd ~/cvw/examples/asm/example_extended
           riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
           riscv64-unknown-elf-objdump -d example_extended > example_extended.objdump
           wsim --vcd --sim verilator rv64gc --elf example_extended
