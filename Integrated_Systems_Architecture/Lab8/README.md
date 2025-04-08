@@ -57,6 +57,10 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
     * Select version *Vivado ML Standard* (not *Vivado ML Enterprise*), as this is the no-cost version.
     * Set all the I Agree boxes.
     * Otherwise, defaults should be selected.
+    * You will also need to manually install the Digilent Board Files.
+      * Download the archive [vivado-boards](https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.158467251.828100773.1587959567-2022567073.1577108610) and extract it.
+      * Open the folder extracted from the archive and navigate to its new/board_files directory. Select all folders within this directory and copy them.
+      * Open the folder that Vivado was installed. Under this folder, navigate to its <version>/data/boards/board_files directory, then paste the board files into this directory.
 
 
 #### RVfpga-ViDBo
