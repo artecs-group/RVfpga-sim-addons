@@ -23,13 +23,13 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * In the Makefile used for Verilator (```~/cvw/sim/verilator/Makefile```), add the option to generate a trace (```PARAMS?=--trace```).
     * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing), and move it into the ```examples/asm``` directory), and to then visualize the trace:
 
-          ```
-          cd ~/Wally/cvw/examples/asm/example_extended
-          riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
-          riscv64-unknown-elf-objdump -d example_extended > example_extended.objdump
-          wsim --vcd --sim verilator rv64gc --elf example_extended
-          gtkwave ~/Wally/cvw/sim/verilator/testbench.vcd
-          ```
+       ```
+       cd ~/Wally/cvw/examples/asm/example_extended
+       riscv64-unknown-elf-gcc -march=rv64im -mabi=lp64 -nostdlib -o example_extended example_extended.S
+       riscv64-unknown-elf-objdump -d example_extended > example_extended.objdump
+       wsim --vcd --sim verilator rv64gc --elf example_extended
+       gtkwave ~/Wally/cvw/sim/verilator/testbench.vcd
+       ```
 
     * This is an example of the trace generated:
 
