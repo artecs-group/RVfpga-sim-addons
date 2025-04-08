@@ -21,7 +21,24 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
        ```
 
     * In the Makefile used for Verilator (```~/cvw/sim/verilator/Makefile```), add the option to generate a trace (```PARAMS?=--trace```).
-    * This is an example of commands to compile and simulate an example program (you can download the program here: [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing), and move it into the ```examples/asm``` directory), and to then visualize the trace:
+    * We next show an example execution of this [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing). This is the program obtained using the ```riscv64-unknown-elf-objdump``` aplication.
+
+      ```
+      00000000000100b0 <rvtest_entry_point>:
+         100b0:	02a00513          	li	a0,42
+         100b4:	00000393          	li	t2,0
+         100b8:	24000813          	li	a6,576
+      
+      00000000000100bc <REPEAT>:
+         100bc:	00138393          	addi	t2,t2,1
+         100c0:	ff039ee3          	bne	t2,a6,100bc <REPEAT>
+      
+      00000000000100c4 <self_loop>:
+         100c4:	0000006f          	j	100c4 <self_loop>
+      ```
+
+
+    * This is an example of commands to compile and simulate the example program, and to then visualize the trace:
 
        ```
        cd ~/Wally/cvw/examples/asm/example_extended
@@ -31,10 +48,12 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
        gtkwave ~/Wally/cvw/sim/verilator/testbench.vcd
        ```
 
-    * This is an example of the trace generated:
+    * You can use this [tcl file](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/ES3IKkkHj5JIsaDzGuW2dnoBrl2g4S7_kOiw1v7Rcy93dw?e=je4Sdb) to add signals to the gtkwave. For example, this is an example of the trace showing the clock, the 32-bit instruction, and the ALU result:
 
-![image](https://github.com/user-attachments/assets/51e0e026-6e9b-4f45-82dd-fb757ba7f505)
-    
+![image](https://github.com/user-attachments/assets/351390d6-9564-4a3f-b3bc-4b020080caac)
+
+    * In the figure, you can see the instructions within the first and second iteration of the loop and the value obtained in the ALU for the addition.
+
 
 4. Look at the following video showing the execution of CVW-Wally in FPGA: ...
 5. Look at the following video showing the execution of CVA6 in Verilator: ...
