@@ -840,7 +840,7 @@ In the following document you can find the complete solution for this exercise: 
 
 
 
-### Exercise 7 - [Exam May 2023](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo22-23.pdf)
+### [Exam May 2023 - Exercise 7](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo22-23.pdf)
 Given the following program:
 
 ```
@@ -894,7 +894,7 @@ This is the pipeline diagram obtained in Ripes, with the first iteration highlig
 - The number of cycles of the first instruction in the first iteration to the first instruction in the second interation is: 16-8 = 8. Given that 6 instructions are executed per iteration, CPI = 8/6 (and IPC = 6/8).
 
 
-### Exercises 4 and 5 - [Exam May 2024](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo23-24.pdf)
+### [Exam May 2024 - Exercises 4 and 5](https://www.fdi.ucm.es/profesor/mendias/FC2/examenMayo23-24.pdf)
 Given the following program:
 
 ```
@@ -1022,7 +1022,7 @@ This is the pipeline diagram for the whole execution of the program:
 - Thus, CPI = 35/25.
 
 
-### Exercises 4, 5 and 6 - Exam June 2024
+### Exam June 2024 - Exercises 4, 5 and 6
 
 At the following link, you can download the exercises on the Pipelined Processor from the June 2024 exam: [PipelinedProc_June24](https://drive.google.com/file/d/17cDkCNMC5-PWB_E_CRpa3YlKzHFDE9xl/view?usp=sharing)
 
