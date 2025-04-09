@@ -14,3 +14,5 @@ To understand RVfpga and start using it, you can follow the next steps:
   - Test `RVfpga-ViDBo`
   - Test `RVfpga-Nexys` (only if you have the board)
   - Test `RVfpga-Whisper`
+- Download the two RVfpga packages from the links provided above ([RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/)). Although we will provide most sources during the exercises, the packages are interesting for you as a reference and to use some of the documents/sources provided there.
+- Download the two RVfpga packages from the links above: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/). While most of the required source files will be provided during the exercises, these packages are useful as reference material and may contain additional documentation and resources you might find helpful.
