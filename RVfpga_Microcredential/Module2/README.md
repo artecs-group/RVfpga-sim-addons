@@ -57,5 +57,5 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 <!--
 9. Complete the following exercises:
    * Resolve the I/O low-level exercises included at: [Exercises_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1)
-10. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
+10. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can look at Lab 8, which works with the PTC and specifically uses the PWM tri-color LED included in the Nexys A7 board.
 -->
