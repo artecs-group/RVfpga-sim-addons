@@ -23,6 +23,8 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 **JUNE 6 SESSION:**
 
+TO BE PROVIDED
+
 <!--
 4. Complete the following exercises:
    * [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
@@ -55,6 +57,8 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
     * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
 **JUNE 13 SESSION:**
+
+TO BE PROVIDED
 
 <!--
 9. Complete the following exercises:
