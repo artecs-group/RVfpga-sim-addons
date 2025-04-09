@@ -17,33 +17,45 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 2. View this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc), you can watch an AI-translated-to-Chinese version of the video here: [InputOutputChineseVideo](https://www.youtube.com/watch?v=gG0HSeJ9ew8), or you can enable the subtitles in the video in Spanish). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
 
 3. Resolve the following I/O high-level exercises (note that these exercises just require you to understand and execute some provided programs):
-   * [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1).
-   * [Exercise-3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-3).
-   * [Exercise-5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-5).
+   * [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1)
+   * [Exercise-3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-3)
+   * [Exercise-5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-5)
 
 **JUNE 6 SESSION:**
 
-4. Complete the following exercises:
-   * To be provided.
 <!--
-   * [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2).
-   * [Exercise-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4).
-   * [Exercise-6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6).
-   * [Exercise-7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7).
--->
+4. Complete the following exercises:
+   * [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
+   * [Exercise-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4)
+   * [Exercise-6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6)
+   * [Exercise-7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7)
 
-5. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
+5. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can look at Lab 10, which works with serial buses and specifically uses the SPI accelerometer included in the Nexys A7 board.
+-->
 
 **To complete between June 9 and 12:**
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
+7. Install Vivado in your computer. For example, to install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
+    * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
+    * Select the Vivado version that you wish to download (we recommend version 2022.2, but version 2019.2 is also verified for RVfpga and more modern versions should also work). For example, in Windows, click on *Xilinx Unified Installer 2022.2: Windows Self Extracting Web Installer*.
+    * The Vivado installer will walk you through the installation process. Important notes:
+      * Select *Vivado* as the Product to install.
+      * Select version *Vivado ML Standard* (not *Vivado ML Enterprise*), as this is the no-cost version.
+      * Set all the I Agree boxes.
+      * Otherwise, defaults should be selected.
+
+8. Once you have installed Vivado, try to complete Lab 5 of the RVfpga package (you can find the document at ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab05```), where the bitstream for the RVfpga SoC is created. When you are creating the project in Vivado, at the point where you must select the board (in our case Nexys A7 or Nexys 4 DDR), you first need to click on the *Refresh* button to add these boards. If this does not work, you can also manually install the Board Files:
+    * Download the archive [vivado-boards](https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.158467251.828100773.1587959567-2022567073.1577108610) and extract it.
+    * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
+    * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
+
+
 **JUNE 13 SESSION:**
 
-7. Complete the following exercises:
-   * To be provided.
 <!--
-   * Resolve the I/O low-level exercises included at: [Exercises_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1).
+9. Complete the following exercises:
+   * Resolve the I/O low-level exercises included at: [Exercises_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1)
+10. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
 -->
-
-8. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10.
