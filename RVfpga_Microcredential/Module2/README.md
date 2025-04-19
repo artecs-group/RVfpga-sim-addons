@@ -32,7 +32,7 @@ TO BE PROVIDED
    * [Exercise-6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6)
    * [Exercise-7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7)
 
-5. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises:
+5. You can continue practicing after completing the previous exercises. You can find more exercises at [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises:
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab08/RVfpga_Lab08.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab09/RVfpga_Lab09.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab10/RVfpga_Lab10.pdf```.
@@ -64,10 +64,8 @@ TO BE PROVIDED
 9. Complete the following exercises:
    * [Exercise-1_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1).
    * [Exercise-2_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-2).
-10. If you want to continue practicing after completing the proposed exercises, you can find more exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises (the programs must be developed for VeeR EH1, but in this case we refer to the VeeR EL2 documentation, as it is more up-to-date and the instructions are identical for both cores):
-   * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab06/RVfpga_Lab06_VeeR-EL2_NexysA7-DDR.pdf```.
-   * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08/RVfpga_Lab08_VeeR-EL2_NexysA7-DDR.pdf```.
+10. You can continue practicing after completing the previous exercises. You can find more exercises at [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises (the programs must be developed for VeeR EH1, but in this case we refer to the VeeR EL2 documentation, as it is more up-to-date and the instructions are identical for both cores):
+   * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab06/RVfpga_Lab06_VeeR-EL2_NexysA7-DDR.pdf```, which extend the SoC with support to communicate with the buttons included in the Nexys A7 board.
+   * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08/RVfpga_Lab08_VeeR-EL2_NexysA7-DDR.pdf```, which work with the PTC and specifically use the PWM tri-color LED included in the Nexys A7 board.
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab09/RVfpga_Lab09_VeeR-EL2_NexysA7-DDR.pdf```.
-
-For example, you can look at Lab 6 (you can find the document at ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab06```), which extends the SoC with support to communicate with the buttons included in the Nexys A7 board, or at Lab 8 (you can find the document at ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08```), which works with the PTC and specifically uses the PWM tri-color LED included in the Nexys A7 board.
 -->
