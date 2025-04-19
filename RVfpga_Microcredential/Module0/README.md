@@ -6,12 +6,12 @@ The [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-download
 To understand RVfpga and start using it, you can follow the next steps:
 
 - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), you can watch an AI-translated-to-Chinese version of the video here [IntroductionRVfpgaChineseVideo](https://www.youtube.com/watch?v=F-1Q-59s84s)). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
-- Install the environment and test tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link). Each section includes a link to a video illustrating its content.
+- Install the environment and test the RVfpga tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link). Each section includes a link to a video illustrating its content.
   - Install Virtual Machine (VM)
   - Download RVfpga Sources in the VM
   - Test `RVfpga-Pipeline` and complete the task
-  - Test `RVfpga-Trace` and complete the task
   - Test `RVfpga-ViDBo`
   - Test `RVfpga-Nexys` (only if you have the board)
+  - Test `RVfpga-Trace` and complete the task
   - Test `RVfpga-Whisper`
 - Download the two RVfpga packages from the links above: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/). While most of the required source files will be provided during the exercises, these packages are useful as reference material and may contain additional documentation and resources you might find helpful.
