@@ -40,7 +40,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 4. Then view, from time 0:0 to time 6:25, this video, which shows a description of the VeeR Performance Counters and an example using RVfpga-ViDBo: [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=10) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=10), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=10) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)).
 
-5. Finally, test on the board the exercise shown in the video from the previous item: [Guided exercise HW Counters](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-1) (exercise 1).
+5. Finally, test on the board the exercise shown in the video from the previous item: [Guided exercise HW Counters](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-1) (first exercise).
 
 
 **JUNE 20 SESSION:**
@@ -50,13 +50,13 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 <!--
    * Evaluate the performance of the VeeR EH1 core and the VeeR EL2 core for the following program, first using RVfpga-Pipeline and then running on the Nexys A7 board. Compare the results and explain the differences:
-       - [Exercise-RVfpgaPipeline_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3).
-       - [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2).
-       - [Exercise-HwCounters-EL2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab3/README.md#exercise-2---extension-for-veer-el2).
+       - [Exercise-RVfpgaPipeline_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3) (third exercise).
+       - [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2) (second exercise).
+       - [Exercise-HwCounters-EL2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab3/README.md#exercise-2---extension-for-veer-el2) (extension of the second exercise).
 
    * Analyze the execution of basic instructions using RVfpga-Trace:
-       - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1).
-       - Analyze a lw instruction (Lab 13 of RVfpga) and a beq instruction (Lab 16 of RVfpga).
+       - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1) (first exercise) in the VeeR EH1 core.
+       - Analyze a lw instruction (Section 2 of Lab 13 of RVfpga) and a beq instruction (Section 2 of Lab 16 of RVfpga) in the VeeR EH1 core.
 -->
 
 **To complete between June 23 and 26:**
