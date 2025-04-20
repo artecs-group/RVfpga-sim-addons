@@ -22,10 +22,8 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
    * [Exercise-5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-5)
 
 **JUNE 6 SESSION:**
-
-TO BE PROVIDED
-
 <!--
+-->
 4. Complete the following exercises:
    * [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
    * [Exercise-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4)
@@ -36,7 +34,6 @@ TO BE PROVIDED
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab08/RVfpga_Lab08.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab09/RVfpga_Lab09.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab10/RVfpga_Lab10.pdf```.
--->
 
 **To complete between June 9 and 12:**
 
@@ -57,10 +54,8 @@ TO BE PROVIDED
     * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
 **JUNE 13 SESSION:**
-
-TO BE PROVIDED
-
 <!--
+-->
 9. Complete the following exercises:
    * [Exercise-1_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-1).
    * [Exercise-2_InputOutput_LowLevel](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab8#exercise-2).
@@ -68,4 +63,3 @@ TO BE PROVIDED
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab06/RVfpga_Lab06_VeeR-EL2_NexysA7-DDR.pdf```, which extend the SoC with support to communicate with the buttons included in the Nexys A7 board.
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08/RVfpga_Lab08_VeeR-EL2_NexysA7-DDR.pdf```, which work with the PTC and specifically use the PWM tri-color LED included in the Nexys A7 board.
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab09/RVfpga_Lab09_VeeR-EL2_NexysA7-DDR.pdf```.
--->
