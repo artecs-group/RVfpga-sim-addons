@@ -46,9 +46,8 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 **JUNE 20 SESSION:**
 
 6. Complete the following exercises:
-   * To be provided.
-
 <!--
+-->
    * Evaluate the performance of the VeeR EH1 core and the VeeR EL2 core for the following program, first using RVfpga-Pipeline and then running on the Nexys A7 board. Compare the results and explain the differences:
        - [Exercise-RVfpgaPipeline_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3) (third exercise).
        - [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2) (second exercise).
@@ -57,7 +56,6 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
    * Analyze the execution of basic instructions using RVfpga-Trace:
        - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1) (first exercise) in the VeeR EH1 core.
        - Analyze a lw instruction (Section 2 of Lab 13 of RVfpga) and a beq instruction (Section 2 of Lab 16 of RVfpga) in the VeeR EH1 core.
--->
 
 **To complete between June 23 and 26:**
 
@@ -73,9 +71,8 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 **JUNE 27 SESSION:**
 
 10. Complete the following exercises:
-   * To be provided.
-
 <!--
+-->
    * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
 
    * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga (you should add the instruction to the EH1 core, but some of the instructions for the EL2 core are more up-to-date).
@@ -86,5 +83,3 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
        - Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
 
    * Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores]()
-
--->
