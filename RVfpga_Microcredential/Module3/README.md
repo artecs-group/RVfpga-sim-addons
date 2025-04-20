@@ -22,7 +22,7 @@ In Topic 8, we will explore how to add new instructions to the VeeR processors. 
 Finally, in Topic 9, we will study the memory hierarchy, focusing on two key components: the instruction cache and the data scratchpad.
 
 ## Workflow
-Follow the next steps to analyze the VeeR EH1 processor, first at a high-level and then at a low-level.
+Follow the next steps to analyze the VeeR processors, first at a high-level and then at a low-level.
 
 **To complete between June 16 and 19:**
 
