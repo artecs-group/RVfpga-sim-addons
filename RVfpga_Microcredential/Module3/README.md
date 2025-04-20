@@ -75,11 +75,11 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 -->
    * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
 
-   * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga (you should add the instruction to the EH1 core, but some of the instructions for the EL2 core are more up-to-date).
+   * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga (use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document).
 
-   * Final project:
+   * Final project (see the instructions provided in Lab 18 of RVfpga):
        - Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
        - Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
        - Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
 
-   * Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores]()
+   * Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
