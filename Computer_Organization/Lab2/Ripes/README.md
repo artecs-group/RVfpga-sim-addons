@@ -954,6 +954,8 @@ Res: .word 0
 
 main:
 la t1, f
+nop
+nop
 lw s1, 0(t1)
 li s2, n
 li s3, 2
