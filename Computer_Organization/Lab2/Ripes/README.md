@@ -925,7 +925,7 @@ end:
 j end
 ```
 
-![image](https://github.com/user-attachments/assets/677d6b4d-c020-4bc8-9539-20c59cff0ab5)
+![image](https://github.com/user-attachments/assets/7b29f8f2-b6c4-43a7-a8c7-6d745d5923d7)
 
 Configure the processor as follows:
 
