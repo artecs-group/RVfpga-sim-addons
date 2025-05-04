@@ -985,8 +985,12 @@ Check again execution, which should now be correct. For example, the beq conditi
   <img src="https://github.com/user-attachments/assets/521288ac-4332-415f-a1d6-4fd3c2df8f59" width="40%">
 </p>
 
+This is the pipeline diagram of the whole program:
 
-The CPI = (15-7)/4 = 8/4 = 2, which is far from ideal (1). Note that nop instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
+![image](https://github.com/user-attachments/assets/e7ffff1f-dc35-4ac8-b7f7-c4d807673058)
+
+
+The CPI of the first iteration is (17-9)/4 = 8/4 = 2, which is far from ideal (1). Note that ```nop``` instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
 
 ![image](https://github.com/user-attachments/assets/caaba4a0-3fa4-4fc7-aa15-4935fb83d67b)
 
