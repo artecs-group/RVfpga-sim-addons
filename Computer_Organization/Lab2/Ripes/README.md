@@ -990,7 +990,7 @@ This is the pipeline diagram of the whole program:
 ![image](https://github.com/user-attachments/assets/e7ffff1f-dc35-4ac8-b7f7-c4d807673058)
 
 
-The CPI of the first iteration is (17-9)/4 = 8/4 = 2, which is far from ideal (1). Note that ```nop``` instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program.
+The cycles to execute the loop are accounted from the first instruction of the loop at IF until the first instruction after the loop at IF, thus (44-9) cycles. The loop executes 4 instructions per iteration (there are 4 iterations), and there is one more execution of the ```beq``` instruction, thus 17 instructions. Note that ```nop``` instructions are not counted, as they are only inserted to maintain correctness, but are not part of the original program. Finally, the CPI of the loop is (44-9)/17 = 2.05.
 
 ![image](https://github.com/user-attachments/assets/caaba4a0-3fa4-4fc7-aa15-4935fb83d67b)
 
