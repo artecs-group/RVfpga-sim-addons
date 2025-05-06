@@ -1261,3 +1261,7 @@ WB
 
 
 ## FINAL EXAM
+
+- [Exam 1](https://drive.google.com/file/d/1xvoHpO9tqcH9txz_Jb6pDgZnW0TprNAi/view?usp=drive_link)
+
+- [Solutions](https://drive.google.com/file/d/1y_JmnLe57qBNcId3_sxvjGl1kcQSCG60/view?usp=drive_link)
