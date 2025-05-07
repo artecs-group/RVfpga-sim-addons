@@ -147,6 +147,8 @@ Analyze and explain the control and data signals highlighted in red in the follo
 
    - ```C1``` = 0x0, as the Register File must not be written in this case.
 
+   - ```C5``` = 0x1, as the Data Memory must be written by the store instruction.
+
 3. ```OR``` instruction:
 ![image](https://github.com/user-attachments/assets/c5a48734-9266-4b27-b8db-dfaacc324b3c)
 
