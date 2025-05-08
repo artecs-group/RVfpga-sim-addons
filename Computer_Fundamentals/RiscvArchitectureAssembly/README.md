@@ -256,7 +256,7 @@ lw x4,0(x2)
 add x4,x3,x4
 sw x4,0(x2)
 ```
-This is the result after executing the program in Ripes. The code and registers are shown in the first figure and the ```.data``` memory section is shown next:
+This is the result after executing the program in Ripes. The code and registers are shown in the first figure and the ```.data``` memory section is shown next. Note that the the data is stored in memory in little-endian order, which is the memory layout used in RISC-V. This means that the least significant byte is stored at the lowest memory address, and the address of a word or half-word corresponds to the address of its least significant byte. The bit ordering within each byte remains the standard most-significant-bit-first:
 
  ![image](https://github.com/user-attachments/assets/e2bac434-8a0c-49ad-9a4c-f66176453a56)
 
