@@ -35,6 +35,17 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 5. You can continue practicing after completing the previous exercises. You can find more exercises at [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises:
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab08/RVfpga_Lab08.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab09/RVfpga_Lab09.pdf```.
+   * Program and execute each of the following modifications to the code based on two interrupts (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts-2Lines_C-Lang```):
+       * Slow down the counting speed to one fourth.
+       * Modify the count so that only even numbers are displayed.
+       * Implement a reverse count from 9 to 1. The count must be continuous: upon reaching 1, it should restart from 9.
+   * Modify the code based on two interrupts (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts-2Lines_C-Lang```) to implement the following functionality:
+       * The two least significant switches must be used, not just one.
+       * The first switch will toggle between two counting speeds.
+       * The second switch will toggle the counting direction:
+       * Count from 1 to 9, incrementing by one.
+       * Count from 9 to 1, decrementing by one.
+       * Unlike the original code, the LEDs do not need to toggle their state on each 0-to-1 transition; instead, they should remain off.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab10/RVfpga_Lab10.pdf```.
 
 **To complete between June 9 and 12:**
