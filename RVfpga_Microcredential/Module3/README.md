@@ -42,7 +42,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 5. Finally, test on the board the exercise shown in the video from the previous item: [Guided exercise HW Counters](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-1) (first exercise).
 
-6. You can find more details about the VeeR EH1/EL2 microarchitecture in Labs 11 to 17 of the full RVfpga package.
+6. In case you need it, you can find more details about the VeeR EH1/EL2 microarchitecture in Labs 11 to 17 of the full RVfpga package.
 
 
 **JUNE 20 SESSION:**
@@ -70,7 +70,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 9. Then view the same video from the previous item, but now from time 6:29 to time 24:18: [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=388) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=388), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=388) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them.
 
-10. You can find more details about the VeeR EH1/EL2 memory system and how to add new instructions in Labs 18 to 20 of the full RVfpga package.
+10. In case you need it, you can find more details about the VeeR EH1/EL2 memory system and how to add new instructions in Labs 18 to 20 of the full RVfpga package.
 
 
 **JUNE 27 SESSION:**
