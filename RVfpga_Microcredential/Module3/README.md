@@ -28,7 +28,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 1. Review of the simple 5-stages pipelined processor:
 
-   * Look at Chapter 7 (Microarchitecture) of the H&H book.
+   * Look at Chapter 7 (Microarchitecture) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
    * Look at the following slides, which describe the processor from the previous textbook: [Module7_FC2-Spanish](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema7-imprimible.pdf) or [Module7_FC2-English](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module7.pdf).
    * You can also practice on the exercises proposed in the following link, using the Ripes simulator: [ExamplesAndExercises_RipesProcessors](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvProcessors).
 
