@@ -7,13 +7,13 @@ To understand RVfpga and start using it, you can follow the next steps:
 
 - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [IntroductionRVfpgaEnglishVideo](https://www.youtube.com/watch?v=cO3UAbT09es), you can watch an AI-translated-to-Chinese version of the video here [IntroductionRVfpgaChineseVideo](https://www.youtube.com/watch?v=F-1Q-59s84s)). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
 
-- Install the environment and test the RVfpga tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link). Each section includes a link to a video illustrating its content.
+- Install the environment and test the RVfpga tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1IyeinlVZMmjAOQFoq8BYQIQapDQ6AWra/view?usp=drive_link). Each section includes a link to a video illustrating its content. It is not necessary to complete the proposed tasks.
   - Install Virtual Machine (VM)
   - Download RVfpga Sources in the VM
-  - Test `RVfpga-Pipeline` and complete the task
+  - Test `RVfpga-Pipeline`
   - Test `RVfpga-ViDBo`
-  - Test `RVfpga-Nexys` (only if you have the board)
-  - Test `RVfpga-Trace` and complete the task
+  - Test `RVfpga-Nexys` (do this section only if you have the board)
+  - Test `RVfpga-Trace`
   - Test `RVfpga-Whisper`
 
 - Download a second set of sources that we will also use in the course. Specifically, from inside the VM, download the following file and unzip it in the VM home directory: [RVfpgaSources_v2](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
