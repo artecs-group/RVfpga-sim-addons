@@ -35,7 +35,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 5. You can continue practicing after completing the previous exercises. You can find more exercises at [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises:
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab08/RVfpga_Lab08.pdf```.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab09/RVfpga_Lab09.pdf```.
-   * Program and execute each of the following modification to the code based on two interrupts provided at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts-2Lines_C-Lang```:
+   * Program and execute each of the following modifications to the previous code:
        * The two least significant switches must be used, not just one.
        * The first switch will toggle between two counting speeds.
        * The second switch will toggle the counting direction:
