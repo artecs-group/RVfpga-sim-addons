@@ -48,7 +48,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
-7. You can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
+7. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
 
 8. Install Vivado in your computer. For example, to install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
     * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
