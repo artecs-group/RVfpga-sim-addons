@@ -10,7 +10,7 @@ Finally, in Topic 6, serial buses will be introduced, and we will work with the 
 ## Workflow
 Follow the next steps to analyze the RVfpga Input/Output System, first at a high-level and then at a low-level.
 
-**To complete between June 2 and 5:**
+**To complete between June 9 and 12:**
 
 1. Look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
 
@@ -23,7 +23,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
    * [Exercise-3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-3)
    * [Exercise-5](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-5)
 
-**JUNE 6 SESSION:**
+**JUNE 13 SESSION:**
 <!--
 -->
 4. Complete the following exercises:
@@ -44,7 +44,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
        * Unlike the original code, the LEDs do not need to toggle their state on each 0-to-1 transition; instead, they should remain off.
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab10/RVfpga_Lab10.pdf```.
 
-**To complete between June 9 and 12:**
+**To complete between June 16 and 19:**
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
@@ -64,7 +64,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
     * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
     * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
-**JUNE 13 SESSION:**
+**JUNE 20 SESSION:**
 <!--
 -->
 9. Complete the following exercises:
