@@ -19,8 +19,8 @@ In order to study the RISC-V architecture and assembly language, look at [Lesson
 **To complete in Season of June 6:**
 Using the RVfpga package previously downloaded from this link in Module0: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/),make the following exercises:
 
-* Exercise 7 of Lab1 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab01)
-* Exercise 7 of Lab2 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab02)
-* Exercise 8 of Lab3 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab03)
-* Exercise 3 of Lab4 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04)
+* Exercise 7 of Lab1 (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab01`)
+* Exercise 7 of Lab2 (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab02`)
+* Exercise 8 of Lab3 (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab03`)
+* Exercise 3 of Lab4 (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04`)
    
