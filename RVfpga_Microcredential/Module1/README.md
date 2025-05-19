@@ -7,3 +7,18 @@ Next, since most software programs are written in a high-level language, Topic 2
 Once the architecture has been introduced and the first projects completed, we will delve into the RISC-V assembly language. For this, Topic 3 first provides a brief overview of the RISC-V assembly language and then explains how to create and run an assembly program on the RVfpga system. As with C, exercises will be provided for students to practice by writing their own programs in RISC-V assembly.
 
 To conclude the module, in Topic 4 we will work on a final project involving image processing routines. The project will include multiple source files, some written in C and others in assembly, and will demonstrate how C functions can call assembly routines and vice versa. Finally, exercises will be carried out to extend the project with new functionalities.
+
+## Workflow
+ Follow the next steps to achieve the aforementioned goals of this Module1:
+
+**To complete between June 2 and 5:**
+In order to study the RISC-V architecture and assembly language, look at [Lesson 2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema2.pdf), [Lesson3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema3.pdf) and [Lesson4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2tema4.pdf) of UCM Computer Fundamentals course. 
+
+
+**To complete in Season of June 6:**
+Using the RVfpga package previously downloaded from this link in Module0: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/),make the following exercises:
+1. Exercise 7 of Lab1 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab01)
+2. Exercise 7 of Lab2 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab02)
+3. Exercise 8 of Lab3 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab03)
+4. Exercise 3 of Lab4 (available in the following path of the RVfpga package: rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04)
+   
