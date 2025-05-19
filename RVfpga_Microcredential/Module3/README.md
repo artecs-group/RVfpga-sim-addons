@@ -53,11 +53,11 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
    * Evaluate the performance of the VeeR EH1 core and the VeeR EL2 core for the following program, first using RVfpga-Pipeline and then running on the Nexys A7 board. Compare the results and explain the differences:
        - [Exercise-RVfpgaPipeline_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3) (third exercise).
        - [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2) (second exercise).
-       - [Exercise-HwCounters-EL2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab3/README.md#exercise-2---extension-for-veer-el2) (extension of the second exercise).
+       - (OPTIONAL) [Exercise-HwCounters-EL2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Integrated_Systems_Architecture/Lab3/README.md#exercise-2---extension-for-veer-el2) (extension of the second exercise).
 
    * Analyze the execution of basic instructions using RVfpga-Trace:
        - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1) (first exercise) in the VeeR EH1 core.
-       - Analyze a lw instruction (Section 2 of Lab 13 of RVfpga) and a beq instruction (Section 2 of Lab 16 of RVfpga) in the VeeR EH1 core.
+       - (OPTIONAL) Analyze a lw instruction (Section 2 of Lab 13 of RVfpga) and a beq instruction (Section 2 of Lab 16 of RVfpga) in the VeeR EH1 core.
 
 **To complete between June 30 and July 3:**
 
@@ -82,9 +82,9 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
    * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga (use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document).
 
-   * Final project (see the instructions provided in Lab 18 of RVfpga):
+   * (OPTIONAL) Final project (see the instructions provided in Lab 18 of RVfpga):
        - Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
        - Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
        - Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
 
-   * Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
+   * (OPTIONAL) Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
