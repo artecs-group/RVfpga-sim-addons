@@ -86,5 +86,6 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
        1. Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
        2. Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
        3. Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
+       4. Finally, you can also upgrade the compiler to support the Zfinx extension following the instructions from this [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
 
    * (OPTIONAL) Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
