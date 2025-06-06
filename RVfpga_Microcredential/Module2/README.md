@@ -27,10 +27,10 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 <!--
 -->
 4. Complete the following exercises:
-   * [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
    * [Exercise-4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4)
    * [Exercise-6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6)
    * [Exercise-7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7)
+   * (OPTIONAL) [Exercise-2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
 
 5. (OPTIONAL) You can continue practicing after completing the previous exercises. You can find more exercises at [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 5 to 10. For example, you can try to complete the following exercises:
    * Exercise 1 of ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab08/RVfpga_Lab08.pdf```.
