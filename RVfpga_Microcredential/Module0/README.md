@@ -16,6 +16,8 @@ To understand RVfpga and start using it, you can follow the next steps:
   - Test `RVfpga-Trace`
   - Test `RVfpga-Whisper`
 
+**IMPORTANT NOTE**: The videos in the course reference a different directory for the RVfpga sources than the one used in this course; specifically, whenever directory `RVfpga_MasterUCLM/` is mentioned, you should instead refer to directory `Simuladores_EC_24-25/RVfpga/`.
+
 - Download a second set of sources that we will also use in the course. Specifically, from inside the VM, download the following file and unzip it in the VM home directory: [RVfpgaSources_v2](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
 
 - Download the two RVfpga packages from these links: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/). While most of the required source files will be provided during the exercises, these packages are useful as reference material and may contain additional documentation and resources that you might find helpful.
