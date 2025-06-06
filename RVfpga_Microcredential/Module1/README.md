@@ -17,7 +17,7 @@ In order to study the RISC-V architecture and assembly language, look at [Lesson
 
 
 **To complete in Season of June 6:**
-Using the RVfpga package previously downloaded from this link in Module0: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/),make the following exercises:
+Using the RVfpga package previously downloaded from this link in Module0: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/), make the following exercises. Note that you do not need to create new projects as explained in labs 1 and 2, but you can use instead as a baseline any of the C/Assembly projects provided in the `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/examples` directory:
 
 * Exercise 8 of RVfpga_Lab03.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab03`)
 * (OPTIONAL) Exercise 3 of RVfpga_Lab04.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04`)
