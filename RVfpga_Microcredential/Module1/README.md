@@ -20,7 +20,7 @@ In order to study the RISC-V architecture and assembly language, look at [Lesson
 Using the RVfpga package previously downloaded from this link in Module0: [RISC-V FPGA](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/),make the following exercises:
 
 * Exercise 8 of RVfpga_Lab03.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab03`)
-* Exercise 3 of RVfpga_Lab04.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04`)
+* (OPTIONAL) Exercise 3 of RVfpga_Lab04.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04`)
 * (OPTIONAL) Exercise 7 of RVfpga_Lab01.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab01`)
 * (OPTIONAL) Exercise 7 of RVfpga_Lab02.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab02`)
 * (OPTIONAL) Exercise 4 of RVfpga_Lab04.pdf document (available in the following path of the RVfpga package: `rvfpga-el2-v3.0/RVfpga/RVfpgaEH1/RVfpga/Labs/Lab04`)
