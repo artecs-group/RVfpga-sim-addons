@@ -16,7 +16,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 2. View this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc), you can watch an AI-translated-to-Chinese version of the video here: [InputOutputChineseVideo](https://www.youtube.com/watch?v=gG0HSeJ9ew8), or you can enable the subtitles in the video in Spanish). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
 
-3. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
+3. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package. You can also find the solutions to most of these exercises at ```RVfpgaEH1/RVfpga/Labs/RVfpgaLabsSolutions/ProgramsAndDocuments```.
 
 4. Look at the following I/O high-level exercises. Note that they just require you to understand and test some provided programs, that you will use as the base to develop other programs:
    * [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1)
@@ -48,7 +48,7 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation.
 
-7. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
+7. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package. You can also find the solutions to most of these exercises at ```RVfpgaEH1/RVfpga/Labs/RVfpgaLabsSolutions/Modified_RVfpgaSystem```.
 
 8. Install Vivado in your computer. For example, to install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
     * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
