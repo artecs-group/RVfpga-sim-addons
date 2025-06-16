@@ -46,11 +46,11 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 **To complete between June 16 and 19:**
 
-7. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
+7. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the scanning frequency of the displays controller in the baseline SoC is prepared for running on the board, so we must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
 
     * Download the following project, which writes the value 1-3-5-7-2-4-6-8 in the 8-digit 7-Segment displays, and move it to the home of the Virtual Machine: [Project_RVfpgaTrace_7SegDisplays](https://drive.google.com/file/d/1WIYOgUAcneO_M4VfKQ0ZhYQ7s_tyD-tS/view?usp=sharing).
-    * Note that the project includes a new version of the RVfpga-Trace simulator, in which the scanning frequency of the displays controller has been significantly reduced.
-    * This is the RVfpga-Trace simulation that you should obtain, using the signals included in the test.tcl provided file. 
+    * Note that the project includes a new version of the RVfpga-Trace simulator, provided inside the project itself (file ```Vrvfpgasim```), in which the scanning frequency of the displays controller has been significantly reduced.
+    * This is the RVfpga-Trace simulation that you should obtain, using the signals included in the ```test.tcl``` provided file. 
 
       ![image](https://github.com/user-attachments/assets/c7c58d6c-b1ea-4f50-9b1d-03850db7ba97)
 
