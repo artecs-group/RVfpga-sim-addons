@@ -54,7 +54,11 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
       ![image](https://github.com/user-attachments/assets/c7c58d6c-b1ea-4f50-9b1d-03850db7ba97)
 
-    * When you need to regenerate the binary of the simulator to debug your changes, you can follow the instructions provided in Chapter 7 of the Getting Started Guide of the RVfpga package (document ```RVfpgaEH1/RVfpga/Documents/RVfpga_GettingStartedGuide.pdf```).
+    * Later, when you need to regenerate the binary of the simulator to debug your changes in *Exercise-1_InputOutput_LowLevel*, you can follow the instructions provided in Chapter 7 of the Getting Started Guide of the RVfpga package (document ```RVfpgaEH1/RVfpga/Documents/RVfpga_GettingStartedGuide.pdf```). Specifically, in the Virtual Machine:
+
+        * Go into ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src``` and perform the changes you consider to the 7-Segment displays controller.
+        * In a terminal, go into ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace``` and regenerate the simulator binary by typing ```make```.
+        * Using the new binary (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace/Vrvfpgasim```), run the project provided above in this item to debug your implementation.
 
 8. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package. You can also find the solutions to most of these exercises at ```RVfpgaEH1/RVfpga/Labs/RVfpgaLabsSolutions/Modified_RVfpgaSystem```.
 
