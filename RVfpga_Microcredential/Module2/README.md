@@ -48,12 +48,13 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 6. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file *Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the counter is prepared for the board, and you must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
 
-    * Download the following project, which writes the value 1-3-5-7-2-4-6-8 in the 8-digit 7-Segment displays, and move it to the home of the Virtual Machine: [Project_RVfpgaTrace_7SegDisplays]().
+    * Download the following project, which writes the value 1-3-5-7-2-4-6-8 in the 8-digit 7-Segment displays, and move it to the home of the Virtual Machine: [Project_RVfpgaTrace_7SegDisplays](https://drive.google.com/file/d/1WIYOgUAcneO_M4VfKQ0ZhYQ7s_tyD-tS/view?usp=sharing).
     * Note that the project includes a new version of the RVfpga-Trace simulator, in which the scanning frequency of the displays controller has been significantly reduced.
-    * In case you want to regenerate the binary of the simulator, you can look at the instructions provided in Chapter 7 of the Getting Started Guide.
     * This is the RVfpga-Trace simulation that you should obtain, using the signals included in the test.tcl provided file. 
 
-![image](https://github.com/user-attachments/assets/c7c58d6c-b1ea-4f50-9b1d-03850db7ba97)
+      ![image](https://github.com/user-attachments/assets/c7c58d6c-b1ea-4f50-9b1d-03850db7ba97)
+
+    * When you need to regenerate the binary of the simulator to debug your changes, you can follow the instructions provided in Chapter 7 of the Getting Started Guide.
 
 7. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package. You can also find the solutions to most of these exercises at ```RVfpgaEH1/RVfpga/Labs/RVfpgaLabsSolutions/Modified_RVfpgaSystem```.
 
