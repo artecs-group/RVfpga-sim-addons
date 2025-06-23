@@ -24,7 +24,7 @@ Finally, in Topic 9, we will study the memory hierarchy, focusing on two key com
 ## Workflow
 Follow the next steps to analyze the VeeR processors, first at a high-level and then at a low-level.
 
-**To complete between June 23 and 26:**
+### To complete between June 23 and 26:
 
 1. Review of the simple 5-stages pipelined processor:
 
@@ -45,7 +45,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 6. In case you need it, you can find more details about the VeeR EH1/EL2 microarchitecture in Labs 11 to 17 of the full RVfpga package.
 
 
-**JUNE 27 SESSION:**
+### JUNE 27 SESSION:
 
 7. Complete the following exercises:
 <!--
@@ -59,7 +59,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
        - Analyze an add instruction: [Exercise-1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-1) (first exercise) in the VeeR EH1 core.
        - (OPTIONAL) Analyze a lw instruction (Section 2 of Lab 13 of RVfpga) and a beq instruction (Section 2 of Lab 16 of RVfpga) in the VeeR EH1 core.
 
-**To complete between June 30 and July 3:**
+### To complete between June 30 and July 3:
 
 8. Review of the memory hierarchy:
 
@@ -73,7 +73,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 11. You can find more details about the VeeR EH1/EL2 memory system and how to add new instructions in Labs 18 to 20 of the full RVfpga package. You can also find the solutions to most of these exercises at ```RVfpgaEH1/RVfpga/Labs/RVfpgaLabsSolutions/Modified_RVfpgaSystem```.
 
 
-**JULY 4 SESSION:**
+### JULY 4 SESSION:
 
 12. Complete the following exercises:
 <!--
