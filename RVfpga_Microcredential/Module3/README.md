@@ -80,11 +80,13 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 -->
    * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Exercise 4 is optional.
 
+<!--
    * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga.
+-->
 
-   * (OPTIONAL) Final project (use the instructions provided in Lab 18 of RVfpga; in this case, we recommend you to use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document):
-       1. Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division.
-       2. Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function.
+   * Final project (you can use the instructions provided in the video mentioned above and in Lab 18 of RVfpga; in this case, we recommend you to use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document):
+       1. Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division. You can use the sources provided in the following link: [SoC_Sources](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=drive_link)
+       2. Test the implementation using a real algorithm; for example, the Bisection method for finding the roots of a function. You can use the project provided in the following link: [Bisection](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link)
        3. Use Performance Counters to compare the emulation of floating-point operations versus their hardware implementation.
        4. Finally, you can also upgrade the compiler to support the Zfinx extension following the instructions from this [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
 
