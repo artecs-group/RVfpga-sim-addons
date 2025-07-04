@@ -75,7 +75,7 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 ### JULY 4 SESSION:
 
-12. Complete the exercises proposed in the following link (Exercise 4 is optional): [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
+12. Complete the exercises proposed in the following link (Exercise 4 is optional): [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Most of the exercises are already solved, so your task is to follow the steps, explain what you do, and justify the results you obtain.
 
 <!--
    * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga.
