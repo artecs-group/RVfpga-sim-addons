@@ -75,18 +75,15 @@ Follow the next steps to analyze the VeeR processors, first at a high-level and 
 
 ### JULY 4 SESSION:
 
-12. Complete the following exercises:
-<!--
--->
-   * [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Exercise 4 is optional.
+12. Complete the exercises proposed in the following link (Exercise 4 is optional): [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6).
 
 <!--
    * Add a new instruction from the bitmanip extension ([BitManip1](https://github.com/riscv/riscv-bitmanip), [BitManip2](https://five-embeddev.com/riscv-bitmanip/1.0.0/bitmanip.html)) to the VeeR EH1 core. You can follow the instructions explained in Lab 18 of RVfpga.
 -->
 
-   * Adding new instructions in the VeeR EH1 core: Use the instructions provided in the video mentioned above and also in Lab 18 of RVfpga (in this case, we recommend you to use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document). Do the tests both in RVfpga-ViDBo and on the board:
-       1. Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division. You can use the sources provided in the following link: [SoC_Sources](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=drive_link). Explain the differences versus the original SoC. Obtain the bitstream (in this case you can generate your own bitstream or use the one provided here: [SoC_FPU](https://drive.google.com/file/d/1DwSW22Nk8Ef6UOMWIHgC7AB96AzB-yJI/view?usp=drive_link)), and the simulator binary (in this case follow the instructions explained in the video to compile the simulator).
-       2. Test the implementation using a real algorithm. For example, you can use the Dot Product (use the project provided in the following link: [DotProduct](https://drive.google.com/file/d/1FxCZzNDfhHamieTfrMSGTSZLJr-9cMYl/view?usp=drive_link)). First, understand the program, both the C and the assembly file. Then, execute the program both in simulation and on the board, and explain the results, both in terms of performance comparison and in terms of the results obtained for the dot product.
-       3. (OPTIONAL) Upgrade the compiler to support the Zfinx extension following the instructions from this [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
+13. Adding new instructions in the VeeR EH1 core: Use the instructions provided in the video mentioned above and also in Lab 18 of RVfpga (in this case, we recommend you to use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document). Do the tests both in RVfpga-ViDBo and on the board:
+       * Integrate an FPU (Floating Point Unit) into the VeeR EH1 core, with support for addition, multiplication, and division. You can use the sources provided in the following link: [SoC_Sources](https://drive.google.com/file/d/1199soZSgC8ZiqvnQjMRLNSkZAyRviOb5/view?usp=drive_link). Explain the differences versus the original SoC. Obtain the bitstream (in this case you can generate your own bitstream or use the one provided here: [SoC_FPU](https://drive.google.com/file/d/1DwSW22Nk8Ef6UOMWIHgC7AB96AzB-yJI/view?usp=drive_link)), and the simulator binary (in this case follow the instructions explained in the video to compile the simulator).
+       * Test the implementation using a real algorithm. For example, you can use the Dot Product (use the project provided in the following link: [DotProduct](https://drive.google.com/file/d/1FxCZzNDfhHamieTfrMSGTSZLJr-9cMYl/view?usp=drive_link)). First, understand the program, both the C and the assembly file. Then, execute the program both in simulation and on the board, and explain the results, both in terms of performance comparison and in terms of the results obtained for the dot product.
+       * (OPTIONAL) Upgrade the compiler to support the Zfinx extension following the instructions from this [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab4#exercise-4).
 
-   * (OPTIONAL) Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
+14. (OPTIONAL) Other RISC-V cores: In the following directory you can find some examples of other open RISC-V cores: [OtherRiscvCores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3/OtherRiscvCores)
