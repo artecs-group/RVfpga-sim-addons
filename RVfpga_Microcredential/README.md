@@ -10,4 +10,4 @@ The course will take place over six consecutive weeks, from May 26 to July 4. In
 - [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module1). **Week from June 2 to 6.**
 - [Module 2 - Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module2). **Weeks from June 9 to 13 and from June 16 to 20.**
 - [Module 3 - VeeR EH1 and EL2 microarchitecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3). **Weeks from June 23 to 27 and June 30 to July 4.**
-- [Module 4 - SoC design based on the VeeR cores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab9). **Week from July 7 to 11.**
+- [Module 4 - SoC design based on the VeeR cores](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module4). **Week from July 7 to 11.**
