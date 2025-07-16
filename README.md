@@ -1,4 +1,4 @@
-# RVfpga: Additions and Updates
+# RVfpga: Teaching Experiences, Papers and Updates
 
 ## Teaching experiences
 This repository provides materials from a range of RVfpga-based teaching experiences, primarily conducted during the 2024-25 academic year.
