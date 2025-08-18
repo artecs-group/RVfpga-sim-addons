@@ -1,15 +1,15 @@
-# RVfpga: Main Links, Teaching Experiences, Papers and Updates
+# RVfpga: Links, Teaching Materials and Experiences, Papers and Tools
 
-## Main links to obtain the RVfpga materials
+## Links to obtain the RVfpga materials
 
-+ Download the complete [RVfpga package](https://university.imgtec.com/teaching-download/) from Imagination Technologies.
++ MAIN LINK: You can download the complete [RVfpga package](https://university.imgtec.com/teaching-download/) from Imagination Technologies.
 
-+ Access the [Computer Architecture with an Industrial RISC-V Core [RVfpga]](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core) edX MOOC.
++ You can take the [Computer Architecture with an Industrial RISC-V Core [RVfpga]](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core) edX MOOC. This course is included in the [RVFA Certification](https://riscv.org/community/training/).
 
-+ Look for "RVfpga" in the [RISC-V International Recommended Learning Materials](https://github.com/riscv/learn).
++ RISC-V International recommends RVfpga in their [Learning Materials GitHub](https://github.com/riscv/learn).
 
 
-## Teaching experiences
+## Teaching materials and experiences
 This repository provides materials from a range of RVfpga-based teaching experiences, primarily conducted during the 2024-25 academic year.
 
 We first show how we adapted and used the [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and the [RVfpga-SoC](https://university.imgtec.com/rvfpgasoc-download-page-en/) packages provided by Imagination Technologies, as well as the [Ripes](https://github.com/mortbopet/Ripes) simulator, in the labs of three courses instructed at the University Complutense of Madrid (UCM).
