@@ -1,6 +1,6 @@
 # RVfpga: Main Links, Teaching Experiences, Papers and Updates
 
-## Main links to the RVfpga materials
+## Main links to obtain the RVfpga materials
 
 + Download the complete [RVfpga package](https://university.imgtec.com/teaching-download/) from Imagination Technologies.
 
