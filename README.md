@@ -2,7 +2,7 @@
 
 ## Links to obtain the RVfpga materials
 
-+ MAIN LINK: You can download the complete [RVfpga package](https://university.imgtec.com/teaching-download/) from Imagination Technologies.
++ **MAIN LINK**: You can download the complete [RVfpga package](https://university.imgtec.com/teaching-download/) from Imagination Technologies IUP.
 
 + You can take the [Computer Architecture with an Industrial RISC-V Core [RVfpga]](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core) edX MOOC. This course is included in the [RVFA Certification](https://riscv.org/community/training/).
 
