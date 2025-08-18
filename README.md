@@ -2,11 +2,11 @@
 
 ## Main links to the RVfpga materials
 
-+ [Get RVfpga from Imagination Technologies](https://university.imgtec.com/teaching-download/)
++ [Download RVfpga from Imagination Technologies](https://university.imgtec.com/teaching-download/)
 
-+ [edX MOOC: *Computer Architecture with an Industrial RISC-V Core [RVfpga]*](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)
++ [Access the edX MOOC *Computer Architecture with an Industrial RISC-V Core [RVfpga]*](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)
 
-+ [RISC-V International Learning Materials](https://github.com/riscv/learn) (look for "RVfpga").
++ [RISC-V International Recommended Learning Materials](https://github.com/riscv/learn) (look for "RVfpga").
 
 
 ## Teaching experiences
