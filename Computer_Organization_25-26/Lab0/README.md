@@ -1,9 +1,9 @@
 # Lab 0 - Introduction and Installation
 This lab aims to prepare our computer to work in the labs of the course and to introduce the Tools that we will use in the labs. Follow the next steps:
 
-1. Install the Virtual Machine as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#virtual-machine).
+1. Install the Virtual Machine as explained below at section *Virtual Machine*.
 
-2. Download the sources as explained [below](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab0/README.md#simulators-and-example-projects).
+2. Download the sources as explained below at section *Simulators and Example Projects*.
 
 
 ## Virtual Machine
