@@ -37,14 +37,10 @@ Once the Virtual Machine (VM) is installed in your system, all labs will be deve
 
 To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
-<p align="center">
-  <img src="Images/ExtractHere.png" width=70% height=70%>
-</p>
+<img width="1120" height="714" alt="image" src="https://github.com/user-attachments/assets/965a2a25-f6ff-4620-a84e-754d43403a29" />
 
 In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order to avoid problems with the paths indicated in the labs.
 
-<p align="center">
-  <img src="Images/Path.png" width=70% height=70%>
-</p>
+<img width="949" height="338" alt="image" src="https://github.com/user-attachments/assets/3afdcf73-84e1-48d7-8b62-1cfd069c4b85" />
 
 At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
