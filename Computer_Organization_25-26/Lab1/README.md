@@ -1,8 +1,7 @@
 # Lab 1 - The RISC-V ISA
 In this lab we review the RISC-V architecture and complete several exercises. Follow the next steps:
 1. Replicate the instructions provided in section *Using RIPES in the virtual machine*.
-2. Then, perform the initial tests provided at [InitialTests](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Fundamentals/RiscvArchitectureAssembly#initial-tests-in-ripes). Note that this link points to a different site, so be sure to return here after completing the tests. 
-3. Finally, resolve the exercises 1-4 provided below.
+2. Then, resolve the exercises 1-4 provided below.
 
 
 ## Using RIPES in the virtual machine
