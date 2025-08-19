@@ -22,13 +22,11 @@ We first show how we adapted and used the [RVfpga: Understanding Computer Archit
 
 We also participated in the [Master de Formación Permanente en Sistemas Microelectrónicos Basados en Arquitecturas Abiertas](https://www.uclm.es/estudios/propios/master-formacion-permanente-sistemas-microelectricos-basados-arquitecturas-abiertas) (first semester of year 2024-25) at the University of Castilla-La Mancha (UCLM). Specifically, within the course Diseño de Microcontroladores en Hardware Abierto, we taught an entire two-week-long module based on RVfpga. You can find the details in the following folder: **[Design_Microcontrollers_Open_Hardware](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Design_Microcontrollers_Open_Hardware)**.
 
-We developed an **[RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)** in edX. This MOOC course includes 10 chapters that cover labs 1-4, 6-9, and 11 of the RVfpga course. The chapters provide instructions, hands-on tutorials, videos with demonstrations, exercises, and multiple-choice questions.
+In the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). Here, you can find all the materials used in the course: **[RVfpga_Microcredential](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential)**. This is the official webpage of the course: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
 
-In recent years, we have also supervised several Bachelor's and Master's theses based on RVfpga. The following are among the most significant:
+Finally, it should be highlighted that a number of Bachelor's and Master's theses at UCM were developed using RVfpga, among which the most notable are:
 + **[Floating-point extensions for the SweRV EH1 core](https://docta.ucm.es/entities/publication/274f1b3a-c564-464d-8066-ef9aa4ae3c10)**
 + **[FPGA implementation of an AD-HOC RISC-V system-on-chip for industrial IoT](https://docta.ucm.es/entities/publication/9298fbe5-cabd-40a0-bec5-0501290c30d1)**
-
-Finally, in the second semester of year 2024-25, we will deliver a microcredential as part of a joint effort between UCM and [OpenChip](https://openchip.com/). Here, you can find all the materials used in the course: **[RVfpga_Microcredential](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential)**. This is the official webpage of the course: [RISC-V: Arquitectura y diseño basado en cores comerciales VeeR sobre FPGA](https://riscv.fdi.ucm.es/).
 
 
 
