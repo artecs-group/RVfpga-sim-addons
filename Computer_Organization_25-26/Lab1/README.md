@@ -107,7 +107,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
 10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)):
 
   - Download the RISC-V toolchain:
-      - The Ripes simulator webpage recommends to download the pre-built toolchain [here](https://github.com/sifive/freedom-tools/releases/tag/v2020.04.0-Toolchain.Only).
+      - The Ripes simulator webpage recommends to download the pre-built toolchain from [here](https://github.com/sifive/freedom-tools/releases/tag/v2020.04.0-Toolchain.Only). Download file *riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz*.
       - Once downloaded, copy that file to ```/home/rvfpga/Simuladores_EC_24-25/Ripes/```
       - Unzip the file ```riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz``` by right-clicking on the file and selecting "Extract Here."
 
