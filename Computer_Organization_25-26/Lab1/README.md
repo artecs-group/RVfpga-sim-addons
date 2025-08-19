@@ -1,5 +1,5 @@
 # Lab 1 - The RISC-V ISA
-In this lab we review the RISC-V architecture and complete several exercises. We will use the [Ripes](https://github.com/mortbopet/Ripes) simulator. Ripes is a visual computer architecture simulator and assembly code editor created for the RISC-V instruction set architecture. It has the following features:
+In this lab we review the RISC-V architecture and complete several exercises. We will use the [Ripes](https://github.com/mortbopet/Ripes), a visual computer architecture simulator and assembly code editor created for the RISC-V instruction set architecture. It has the following features:
 
 - RISC-V 32-bit architecture.
 - Base repertoire and M and C extensions (in this practice we will use only the M extension).
