@@ -218,7 +218,7 @@ Given the following RISC-V assembly code:
     j fin
 ```
 
-This code should work both on the board (RVfpga-Nexys) and on the Whisper/Ripes simulators. At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex1``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+To execute on Ripes, just copy the code in the editor.
 
 Run the code and answer the following questions. Add screenshots of the execution to complement your answers.
 
@@ -259,57 +259,13 @@ while swapped
 
 **PROGRAMMING IN C:**
 
-The following code is a possible C implementation of the above pseudocode (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex2``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute the program on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+The following code is a possible C implementation of the above pseudocode.
 
 - Compile the code with two different optimization levels: -O0 and -O1.
   - For each optimization level, test the execution of the program step-by-step, both in C and in RISC-V assembly.
   - Compare the obtained ```swap``` and ```main``` functions for each optimization level.
-  - NOTE: this item can only be tested in Whisper or Ripes, not on the board.
 
-**RIPES:**
 ```
-#define N 4
-
-int V[N]={5,2,3,1};
-
-void main(void)
-{
-   int swapped=1, i;
-
-   while(swapped){
-       swapped=0;
-       for (i=0; i<(N-1); i++){
-           if (V[i] > V[i+1]){
-               swap(&V[i], &V[i+1]);
-               swapped=1;
-           }
-       }
-   }
-
-   while(1);
-
-}
-
-void swap(int *V, int *W){
-   int temp;
-   temp=*V;
-   *V=*W;
-   *W=temp;
-}
-```
-
-**WHISPER:**
-```
-#if defined(D_NEXYS_A7)
-   #include <bsp_printf.h>
-   #include <bsp_mem_map.h>
-   #include <bsp_version.h>
-#else
-   PRE_COMPILED_MSG("no platform was defined")
-#endif
-
-#include <psp_api.h>
-
 #define N 4
 
 int V[N]={5,2,3,1};
@@ -385,7 +341,7 @@ factorial:
 
 ```
 
-At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex3``` we provide a project that can be directly used on RVfpga-Whisper. To execute on Ripes, just copy the code in the editor. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+To execute on Ripes, just copy the code in the editor.
 
 Run the code and answer the following questions. Add screenshots to complement your answers.
 
@@ -396,9 +352,8 @@ Run the code and answer the following questions. Add screenshots to complement y
 
 
 ## Exercise 4
-Given the following C code that computes the factorial of an integer number (the first one for Ripes and the second one for RVfpga-Whisper). At ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/Lab1_Ex4``` we provide a project that can be directly used on the RVfpga-Whisper simulator. To execute on RVfpga-Nexys, make sure you comment line ```debug_tool = whisper``` in file ```platformio.ini```.
+Given the following C code that computes the factorial of an integer number.
 
-**RIPES:**
 ```
 int main(void)
 {
@@ -418,38 +373,6 @@ int main(void)
 }
 ```
 
-**WHISPER:**
-```
-#if defined(D_NEXYS_A7)
-   #include <bsp_printf.h>
-   #include <bsp_mem_map.h>
-   #include <bsp_version.h>
-#else
-   PRE_COMPILED_MSG("no platform was defined")
-#endif
-
-#include <psp_api.h>
-
-int main(void)
-{
-   int i,result,num=7;
-
-   /* Initialize Uart */
-   uartInit();
-
-    if (num > 1){
-      result = num;
-      for (i=num-1;i>1;i--)
-      result = result*i;
-   }
-   else
-      result=1;
-
-   printfNexys("Factorial = %d",result);
-
-   while(1);
-}
-```
 
 Run the code and answer the following questions. Add screenshots to complement your answers.
 
@@ -458,7 +381,7 @@ Run the code and answer the following questions. Add screenshots to complement y
     - Is the ```ra``` register preserved at any point? Why?
     - Of the other registers, which ones are preserved? Why?
 
-- Compile with -O1 (this item can only be tested in Whisper or Ripes, not on the board):
+- Compile with -O1:
     - The function is very simple. Explain what it does and why it is so simple.
 
 Replace the previous code for the following one, in which the input integer number is generated randomly. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them and with respect to the previous code. Analyze the simulation of each scenario in Ripes.
