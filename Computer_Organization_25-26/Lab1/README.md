@@ -227,8 +227,8 @@ Run the code in Ripes (you can simply copy the previous code in the editor) and 
 - To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
 - Take a screenshot of the memory viewer clearly identifying, one by one, the instructions that make up the for loop. Are they properly aligned?
 - Take a screenshot of the memory viewer at the end of each iteration, showing how the vector evolves.
-- In this code, a simple modification can be made to improve its performance. Write modified code, explain why it improves efficiency, and show a screenshot in which the final vector is visible in memory.
-- Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
+- OPTIONAL: In this code, a simple modification can be made to improve its performance. Write modified code, explain why it improves efficiency, and show a screenshot in which the final vector is visible in memory.
+- OPTIONAL: Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
 
 
 ## Exercise 2
@@ -344,7 +344,7 @@ Run the code in Ripes and answer the following questions.
 - The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
 - Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
 - What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
-- Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
+- OPTIONAL: Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
 
 
 ## Exercise 4
@@ -380,7 +380,7 @@ Run the code in Ripes and answer the following questions.
 - Compile with -O1:
     - The function is very simple. Explain what it does and why it is so simple.
 
-Replace the previous code for the following one, in which the input integer number is generated randomly. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them and with respect to the previous code. Analyze the simulation of each scenario in Ripes.
+OPTIONAL: Replace the previous code for the following one, in which the input integer number is generated randomly. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them and with respect to the previous code. Analyze the simulation of each scenario in Ripes.
 
 ```
 #include <stdio.h>
