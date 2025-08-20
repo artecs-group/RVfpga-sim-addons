@@ -32,7 +32,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 3. Before simulating the program, select the Single Cycle processor, enable the M extension and disable the C extension:
 
 <p align="center">
-  <img src="Images/SingleCycle.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab1/Images/SingleCycle.png" width=80% height=80%>
 </p>
 
 4. The following RISC-V assembly program subtracts 1 to each element of vector ```v```.
@@ -66,13 +66,13 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 To simulate the program, type or copy it into the window on the left. For example, in the following figure you can see the previous program (which we also use in Exercise 1 below). On the right you can see the disassembled version.
 
 <p align="center">
-  <img src="Images/Ex1.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab1/Images/Ex1.png" width=80% height=80%>
 </p>
 
 5. The top menu allows us to control the simulation. By hovering the mouse over each button we are informed about its functionality.
 
 <p align="center">
-  <img src="Images/Menu.png" width=40% height=40%>
+  <img src="../../Computer_Organization/Lab1/Images/Menu.png" width=40% height=40%>
 </p>
 
 6. We can execute the code step by step:
@@ -80,7 +80,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
     - The current instruction is shown highlighted in red.
 
 <p align="center">
-  <img src="Images/Execution.png" width=40% height=40%>
+  <img src="../../Computer_Organization/Lab1/Images/Execution.png" width=40% height=40%>
 </p>
 
 7. Disassembled/binary code window and registers window:
@@ -89,19 +89,19 @@ To simulate the program, type or copy it into the window on the left. For exampl
     - The middle window shows the disassembled code. Note that, unlike the source, it only includes instructions (not pseudo-instructions).
 
 <p align="center">
-  <img src="Images/Registers.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab1/Images/Registers.png" width=90% height=90%>
 </p>
 
 8. The Memory window allows us to visualize the different memory sections. The figure shows the .text section, which includes the text of the code. At the bottom you must select, from the “Go to section” menu, the .text section. You can check that the hexadecimal code corresponds to the program instructions in the Editor.
 
 <p align="center">
-  <img src="Images/Memory.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab1/Images/Memory.png" width=90% height=90%>
 </p>
 
 9. At the bottom, in the “Go to section” menu, we can switch to the .data section. You can check that the data correspond to the vector components in the Editor.
 
 <p align="center">
-  <img src="Images/DataSection.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab1/Images/DataSection.png" width=90% height=90%>
 </p>
 
 10. Set up the simulator to compile and run C programs. Follow these steps (the full instructions are available at this [link](https://github.com/mortbopet/Ripes/blob/master/docs/c_programming.md)):
@@ -112,7 +112,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
       - Unzip the file ```riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz``` by right-clicking on the file and selecting "Extract Here."
 
 <p align="center">
-  <img src="Images/ExtractHere.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab1/Images/ExtractHere.png" width=90% height=90%>
 </p>
 
 
@@ -120,14 +120,14 @@ To simulate the program, type or copy it into the window on the left. For exampl
       - In the top menu of Ripes, open "Edit-Settings":
 
       <p align="center">
-        <img src="Images/EditSettings.png" width=40% height=40%>
+        <img src="../../Computer_Organization/Lab1/Images/EditSettings.png" width=40% height=40%>
       </p>
 
 
       - In the window that opens, go to the "Compiler" tab.
 
       <p align="center">
-        <img src="Images/PathCompiler.png" width=90% height=90%>
+        <img src="../../Computer_Organization/Lab1/Images/PathCompiler.png" width=90% height=90%>
       </p>
 
 
@@ -138,11 +138,11 @@ To simulate the program, type or copy it into the window on the left. For exampl
       ```
 
       <p align="center">
-        <img src="Images/PathCompiler2.png" width=90% height=90%>
+        <img src="../../Computer_Organization/Lab1/Images/PathCompiler2.png" width=90% height=90%>
       </p>
 
       <p align="center">
-        <img src="Images/PathCompiler3.png" width=90% height=90%>
+        <img src="../../Computer_Organization/Lab1/Images/PathCompiler3.png" width=90% height=90%>
       </p>
 
 
@@ -151,7 +151,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
       - Linker arguments: ```-static-libgcc -lm```
 
       <p align="center">
-        <img src="Images/Linker.png" width=90% height=90%>
+        <img src="../../Computer_Organization/Lab1/Images/Linker.png" width=90% height=90%>
       </p>
 
 
@@ -179,13 +179,13 @@ int main(void)
 12. Next, compile the program by clicking on the hammer icon. If the program is correct, the disassembled version will appear in the central window:
 
 <p align="center">
-  <img src="Images/Martillo.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab1/Images/Martillo.png" width=90% height=90%>
 </p>
 
 13. Run the program by clicking the "Fast Execution" button. The result of the factorial calculation will appear in the console:
 
 <p align="center">
-  <img src="Images/Execution.png" width=70% height=70%>
+  <img src="../../Computer_Organization/Lab1/Images/Execution.png" width=70% height=70%>
 </p>
 
 
