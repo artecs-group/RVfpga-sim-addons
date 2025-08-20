@@ -1,7 +1,7 @@
 # Lab 0 - Introduction and Installation
 This lab aims to prepare our computer to work in the labs of the course and to introduce the Tools that we will use in the labs. Follow the next steps:
 
-1. Install the Virtual Machine as explained below at section *Virtual Machine*.
+1. Install the Virtual Machine as explained below at section *Virtual Machine*. If you are using one of the FdI laptops, you can skip this stage and simply launch the pre-installed VM.
 
 2. Download the sources as explained below at section *Simulators and Example Projects*.
 
