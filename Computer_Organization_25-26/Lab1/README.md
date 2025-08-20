@@ -218,9 +218,7 @@ Given the following RISC-V assembly code:
     j fin
 ```
 
-To execute on Ripes, just copy the code in the editor.
-
-Run the code and answer the following questions. Add screenshots of the execution to complement your answers.
+Run the code in Ripes (you can simply copy the previous code in the editor) and answer the following questions.
 
 - Briefly explain what the code does.
 - Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
@@ -341,9 +339,7 @@ factorial:
 
 ```
 
-To execute on Ripes, just copy the code in the editor.
-
-Run the code and answer the following questions. Add screenshots to complement your answers.
+Run the code in Ripes and answer the following questions.
 
 - The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
 - Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
@@ -374,7 +370,7 @@ int main(void)
 ```
 
 
-Run the code and answer the following questions. Add screenshots to complement your answers.
+Run the code in Ripes and answer the following questions.
 
 - Default compilation (-O0 optimization level):
     - Explain in detail the ```main``` function generated in RISC-V assembly.
