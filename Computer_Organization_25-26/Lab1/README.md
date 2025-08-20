@@ -26,7 +26,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
     - Depending on the selected window, the view will change. In the following figure we see the Editor window, in which you can enter code in Assembler or C in the left window, the compiled/assembled code will be displayed in the middle window, and it shows the registers of the simulated processor on the right.
 
 <p align="center">
-  <img src="Images/EditorFigure.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab1/Images/EditorFigure.png" width=80% height=80%>
 </p>
 
 3. Before simulating the program, select the Single Cycle processor, enable the M extension and disable the C extension:
