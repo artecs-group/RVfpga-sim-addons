@@ -408,3 +408,230 @@ int main(void)
 }
 ```
 
+
+## OPTIONAL - Exercise 5
+Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used. Build and debug the project in Ripes and confirm that the result is correct.
+
+```c
+int mul(int a, int b) {
+    int res = 0;
+    while (b > 0) {
+        res += a;
+        b‐‐;
+    }
+    return res;
+}
+```
+
+Develop a RISC‐V assembly program to calculate the dot product of two vectors. Call the ```mul``` function implemented above. Build and debug the project in Ripes and confirm that the result is correct.
+
+```c
+int dotprod(int V[], int W[], int n) {
+    int acc = 0;
+    for (int i = 0; i < n; i++) {
+        acc += mul(V[i], W[i]);
+    }
+    return acc;
+}
+```
+
+Develop a RISC‐V assembly program, which calls the two previous functions (```mul``` and ```dotprod```), to determine which of two vectors has a greater norm (length).
+
+```c
+#define N 4
+int A[] = {3,5,1,9}
+int B[] = {1,6,2,3}
+int res;
+void main() {
+    int normA = dotprod(A, A, N);
+    int normB = dotprod(B, B, N);
+    if (normA > normB)
+        res = 0xa;
+    else
+        res = 0xb;
+}
+```
+
+
+## OPTIONAL - Exercise 6
+Analyze in Ripes the following C program, that determines which of two vectors is farther from the origin. After the program we propose some specific tasks.
+
+```c
+# define N 5
+int U [N ] = {5 , 2, -3 , 7 , 6};
+int V [N ] = {6 , -1 , 1 , 0 , 3};
+char mayor_u ;
+
+
+void guardar ( char valor , char * ubicacion) {
+   * ubicacion = valor ;
+}
+
+
+int mul (int a , int b) {
+   int res = 0 , sign = 0;
+   if (a < 0) {
+     sign = 1;
+     a = -a ;
+   }
+   while (a --) res += b;
+   if ( sign )
+     return - res ;
+   else
+     return res ;
+}
+
+
+int i_sqrt (int a) {
+   int root = 0;
+   while ( mul ( root , root ) < a ) {
+     root ++;
+   }
+   return root ;
+}
+
+
+int eucl_dist (int w [] , int size ) {
+   int acc = 0;
+   for ( int i = 0; i < size ; i ++) {
+     acc += mul (w[ i] , w[ i ]) ;
+   }
+   return i_sqrt ( acc );
+}
+
+
+void main () {
+   int d_u = eucl_dist (U , N );
+   int d_v = eucl_dist (V , N );
+   char mayor = d_u > d_v ;
+   guardar ( mayor , & mayor_u ) ;
+}
+```
+
+Specifically, perform the following tasks:
+- Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button: ![image](https://github.com/user-attachments/assets/0c4ee25b-d4b2-4996-91e4-3bc2072c1e29)).
+
+  ![image](https://github.com/user-attachments/assets/211e7a70-c2bf-41f4-9dfd-d37127ad14a7)
+
+- Select a ```-O1``` optimization level (```Edit - Settings - Compiler```).
+
+  ![image](https://github.com/user-attachments/assets/05302054-3b8b-47fb-8af5-a8be4a61e9eb)
+
+- Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
+- Execute the program in Ripes and check if the final result is correct.
+- Analyze the following items for the assembly program obtained by the assembler. You can both view the program in the editor and you can test execution step-by-step:
+    - This is the ```main``` function obtained.
+       - Analyze the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
+       - Indentify clearly the prologue/epilogue and explain them.
+
+        ```asm
+         00010240 <main>:
+             10240:        ff010113        addi x2 x2 -16
+             10244:        00112623        sw x1 12 x2
+             10248:        00812423        sw x8 8 x2
+             1024c:        00912223        sw x9 4 x2
+             10250:        00011537        lui x10 0x11
+             10254:        6c050493        addi x9 x10 1728
+             10258:        00500593        addi x11 x0 5
+             1025c:        6c050513        addi x10 x10 1728
+             10260:        f79ff0ef        jal x1 -136 <eucl_dist>
+             10264:        00050413        addi x8 x10 0
+             10268:        00500593        addi x11 x0 5
+             1026c:        01448513        addi x10 x9 20
+             10270:        f69ff0ef        jal x1 -152 <eucl_dist>
+             10274:        00852533        slt x10 x10 x8
+             10278:        c6a18c23        sb x10 -904 x3
+             1027c:        00c12083        lw x1 12 x2
+             10280:        00812403        lw x8 8 x2
+             10284:        00412483        lw x9 4 x2
+             10288:        01010113        addi x2 x2 16
+             1028c:        00008067        jalr x0 x1 0
+        ```
+
+    - This is the ```i_sqrt``` function obtained.
+       - Indentify clearly the prologue/epilogue and explain them.
+       - Explain each of the instructions in the body of this function and why are they used.
+
+        ```asm
+        00010190 <i_sqrt>:
+           10190:        ff010113        addi x2 x2 -16
+           10194:        00112623        sw x1 12 x2
+           10198:        00812423        sw x8 8 x2
+           1019c:        00912223        sw x9 4 x2
+           101a0:        00050493        addi x9 x10 0
+           101a4:        00000413        addi x8 x0 0
+           101a8:        00040593        addi x11 x8 0
+           101ac:        00040513        addi x10 x8 0
+           101b0:        f9dff0ef        jal x1 -100 <mul>
+           101b4:        00955663        bge x10 x9 12
+           101b8:        00140413        addi x8 x8 1
+           101bc:        fedff06f        jal x0 -20
+           101c0:        00040513        addi x10 x8 0
+           101c4:        00c12083        lw x1 12 x2
+           101c8:        00812403        lw x8 8 x2
+           101cc:        00412483        lw x9 4 x2
+           101d0:        01010113        addi x2 x2 16
+           101d4:        00008067        jalr x0 x1 0
+        ```
+
+Then, test in Ripes the following program, which combines C and RISC-V assembly languages. Note that this program is identical to the above one, but in this case function ```guardar``` is implemented in assembly.
+
+```c
+# define N 5
+int U [N ] = {5 , 2, -3 , 7 , 6};
+int V [N ] = {6 , -1 , 1 , 0 , 3};
+char mayor_u ;
+
+
+int mul (int a , int b) {
+ int res = 0 , sign = 0;
+ if (a < 0) {
+   sign = 1;
+   a = -a ;
+ }
+ while (a --) res += b;
+ if ( sign )
+   return - res ;
+ else
+   return res ;
+}
+
+
+int i_sqrt (int a) {
+ int root = 0;
+ while ( mul ( root , root ) < a ) {
+   root ++;
+ }
+ return root ;
+}
+
+
+int eucl_dist (int w [] , int size ) {
+   int acc = 0;
+   for ( int i = 0; i < size ; i ++) {
+     acc += mul (w[ i] , w[ i ]) ;
+   }
+   return i_sqrt ( acc );
+}
+
+
+void main () {
+ int d_u = eucl_dist (U , N );
+ int d_v = eucl_dist (V , N );
+ char mayor = d_u > d_v ;
+ guardar ( mayor , & mayor_u ) ;
+
+ asm volatile (
+      "j end\n"
+
+      "guardar:\n"
+      "sb a0, 0(a1)\n"
+      "ret\n"
+
+      "end:\n"
+ );
+}
+```
+
+
+
