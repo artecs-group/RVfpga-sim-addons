@@ -9,7 +9,7 @@ In this lab we review the RISC-V architecture and complete several exercises. We
 Follow the next steps:
 1. Read the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
 2. Replicate the instructions provided below in section *Using RIPES in the virtual machine*.
-3. Then, complete exercises 1–6 provided below. The optional exercises are not mandatory, but they can help you improve your knowledge and your grade. Provide short and precise answers. The format is flexible: you may include code, explanations, simulator screenshots, videos, etc.
+3. Then, complete exercises 1–6 provided below. The optional exercises are not mandatory, but they can help you improve your knowledge and your grade. Provide short and precise answers without getting lost in unnecessary details. The format is flexible: you may include code, explanations, simulator screenshots, videos, etc.
 
 
 ## Using RIPES in the virtual machine
