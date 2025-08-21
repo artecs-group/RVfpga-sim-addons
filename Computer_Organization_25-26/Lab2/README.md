@@ -332,13 +332,13 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline. The simulator can be us
     To open the project, simply navigate to the directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click “Open,” as shown in the following screenshot.
 
 <p align="center">
-  <img src="../Images/OpenFolder.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab2/Images/OpenFolder.png" width=80% height=80%>
 </p>
 
 3. Open the editor in VSCode to view the assembly code of the project called ```Programa.S```
 
 <p align="center">
-  <img src="../Images/ProgramS.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab2/Images/ProgramS.png" width=80% height=80%>
 </p>
 
 4. Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator. To do this, replace the following line:
@@ -356,17 +356,17 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 5. Open the PlatformIO tab and click on the task ```RVfpga-ViDBo/Pipeline```. The simulator will start executing the code (you can see it in the Explorer, inside the ```src``` directory).
 
 <p align="center">
-  <img src="../Images/RVfpgaVidboPipeline.png" width=40% height=40%>
+  <img src="../../Computer_Organization/Lab2/Images/RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
 6. The simulator starts executing the program, and it only stops when instruction ```and zero, t4, t5``` reaches the Decode stage of the pipeline (note that this instruction has no effect at all in the architectural state of the processor and is simply used as a breakpoint). In the program provided in this project (```ProyectoP2```) this instruction is already included before the ```REPEAT``` loop (see the program above). (If the target program does not have the ```and zero, t4, t5``` instruction, you must add it at the point where you want execution to stop; typically, we place this instruction before entering the loop where the fragment we want to analyze is located.) For example, the following figure shows the simulator at the point where it has stopped execution (you can see that instruction ```and zero, t4, t5``` is at the Decode Stage). Note that the second figure shows a simplified version of the VeeR EH1 microarchitecture, which helps understanding the signals included in the simulator.
 
 <p align="center">
-  <img src="../Images/RVfpgaPipeline1.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline1.png" width=90% height=90%>
 </p>
 
 <p align="center">
-  <img src="../Images/VeeReh1.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width=90% height=90%>
 </p>
 
 7. Continue execution cycle by cycle, by clicking the ```+ 1 Cycle``` button on the right bottom corner of the simulator window, and observe how the program's instructions flow through the VeeR EH1 pipeline.
@@ -374,7 +374,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 8. Usually, the programs that we simulate will consist of a loop where the instructions we want to analyze are located (specifically, in the program used in this example, which you can see above, we want to analyze two consecutive ```mul``` instructions, which are placed within a ```REPEAT-OUT``` loop). It is important to analyze an iteration that is not the first or the second one, as some processor structures (branch predictor, instruction cache, etc.) have not yet been “trained” and might obscure the situations we want to analyze. For example, the following figure shows the simulator at the point where instructions from the third, fourth and fifth iterations are executing (at this point the cycles count is Cycles=26).
 
 <p align="center">
-  <img src="../Images/RVfpgaPipeline2.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline2.png" width=90% height=90%>
 </p>
 
 9. Let's analyze what the simulator shows in the previous figure:
@@ -465,7 +465,7 @@ We next show partial solutions for this exercise as an example. Complete the sol
 For example, this figure illustrates the data hazard between the ```slli``` and the ```add```.
 
 <p align="center">
-  <img src="../Images/Hazard1st2ndInstructions.png" width=50% height=50%> 
+  <img src="../../Computer_Organization/Lab2/Images/Hazard1st2ndInstructions.png" width=50% height=50%> 
 </p>
 
 The hazard is handled by:
@@ -475,7 +475,7 @@ The hazard is handled by:
 *b. Draw the pipeline diagram for the second iteration of the loop.*
 
 <p align="center">
-  <img src="../Images/Ex5-b.png" width=90% height=90%> 
+  <img src="../../Computer_Organization/Lab2/Images/Ex5-b.png" width=90% height=90%> 
 </p>
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
@@ -485,11 +485,11 @@ To calculate the CPI of the loop, simulate until a given instruction of the loop
 For example:
 
 <p align="center">
-  <img src="../Images/Cycle25.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab2/Images/Cycle25.png" width=90% height=90%>
 </p>
 
 <p align="center">
-  <img src="../Images/Cycle33.png" width=90% height=90%>
+  <img src="../../Computer_Organization/Lab2/Images/Cycle33.png" width=90% height=90%>
 </p>
 
 In this case, ```CPI = (33-25)/8 = 1```
@@ -626,7 +626,7 @@ Solve the following sections, both theoretically and practically on the RVfpga-P
 a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
-  <img src="../Images/Ex7.png" width=80% height=80%>
+  <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
 </p>
 
 * Draw the execution diagram.
