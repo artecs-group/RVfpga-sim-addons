@@ -1,0 +1,14 @@
+# Lab 2 - The Ripes core and the VeeR EH1 core
+This practice aims to help students gain a thorough understanding of the commercial VeeR EH1 core, an advanced 2-way superscalar processor with 9 pipeline stages. The processor is explained both theoretically, through a detailed presentation, and practically, using the RVfpga-Pipeline simulator. As a preparatory step, we first focus on the typical academic 5-stage pipelined processor, exploring it theoretically (using the pipelined processor from the Harris and Harris book, H&H) and practically (through the Ripes simulator). 
+
+Follow the next steps:
+
+1. **Ripes core:** Then, you can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook. Start by looking at the following presentation: ([PresentationRipes](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view?usp=drive_link)) (later you can come back to these examples and replicate them in your own computer). Then, follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the Ripes simulator: [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
++ ...
++ ...
+
+2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core. Start by, watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link). Then you can start using the RVfpga-Pipeline to simulate and analyze the VeeR EH1 processor. Follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the RVfpga-Pipeline simulator: [The VeeR EH1 Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+
++ ...
++ ...
