@@ -7,8 +7,9 @@ Follow the next steps:
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
     * Replicate the instructions provided below in section *Basic use of the Ripes Pipelined Processor*.
-    * Analyze the example exercise provided below in section *Example Exercise in Ripes*.
-    * Finally, complete the exercise provided below in section *Exercise in Ripes*.
+    * Analyze the example exercise provided below in section *Exercise 1 - Guided Exercise in Ripes*.
+    * Analyze the example exercise provided below in section *Exercise 2 - Guided Exercise in Ripes*.
+    * Finally, complete the exercise provided below in section *Exercise 3 in Ripes*.
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
@@ -110,7 +111,7 @@ Let's analyze a few important signals of the pipeline in this cycle.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
-### Example Exercise in Ripes
+### Exercise 1 - Guided Exercise in Ripes
 The following code is executed in Ripes:
 
 ```
@@ -200,7 +201,7 @@ Let's analyze some of the signals in this cycle.
 
 
 
-### Exercise in Ripes
+### Exercise 2 - Guided Exercise in Ripes
 Given the following program:
 
 ```
@@ -239,5 +240,128 @@ b. Simulate the program in Ripes. How many cycles does it take to execute one it
 
 c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code and recalculate the CPI.
 
-d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage in the first iteration of the loop. Also, indicate which instruction is in each stage and explain the signals. Use the figure from Exercise 4.
+d. Indicate the values of all data and control signals in the cycle where the ```add``` instruction is in the execution stage in the first iteration of the loop. Also, indicate which instruction is in each stage and explain the signals. Use the figure from Exercise 1.
+
+
+**SOLUTION:**
+In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
+
+
+
+### Exercise 3 in Ripes
+The following C code is intended to run on the Ripes Pipelined processor (this code is provided for reference only and should not be used in the exercise below):
+
+```
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
+```
+
+To achieve the highest performance in executing this program, the following RISC-V assembly implementation is used (this is the code you will use in the lab):
+
+```
+.globl main
+
+.data
+Entrada: .word 1, 2, 6, 3, 8, 2, 12, 3, 7, 6
+Filtro: .word 3, 7, 8
+Salida: .word 0, 0, 0, 0, 0, 0, 0, 0
+
+.text
+main:
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
+loop_n:
+ addi a2 , x0 , 0
+	loop_k:
+   	  lw t3 , 0( a3)
+   	  lw t4 , 0( a4)
+   	  mul t6 , t3 , t4
+   	  lw t5 , 0( a5)
+   	  add t5 , t6 , t5
+   	  sw t5 , 0( a5)
+   	  addi a3 , a3 , 4
+   	  addi a4 , a4 , 4
+   	  addi a2 , a2 , 1
+   	  blt a2 , t1 , loop_k
+ addi a5 , a5 , 4
+ addi a3 , a3 , -8
+ addi a4 , a4 , -12
+ addi a1 , a1 , 1
+blt a1 , t0 , loop_n
+fin:
+j fin
+```
+
+The RISC-V assembly program is executed in the Ripes Pipelined processor. Answer the following questions:
+
+1. Draw in Ripes the execution diagram at the end of the first iteration of the inner loop (loop_k) and explain the execution of the instructions within the loop, highlighting the data and control hazards that occur and how they are handled.
+
+2. Calculate the CPI of the loop_k loop.
+
+3. Reorder the program, confirm if the result is the same, and recalculate the CPI.
+
+4. Explain, for the original program, the Data/Control signals when the following instructions are at the given stage during the first iteration of the loop_k loop in the original program (not in the reordered one).
+
+ 	* lw t4, 0(a4) at the EX stage
+ 	* lw t4, 0(a4) at the WB stage
+ 	* blt a2, t1, loop_k at the EX stage
+
+Use the following names for the Data/Control signals.
+
+![image](https://github.com/user-attachments/assets/df218348-511c-453e-8bdb-ddf28802bf29)
+
+IF
+- PC=
+- Addr=
+- Instr=
+
+ID
+- R1=
+- Reg1=
+- Reg2=
+- C1(d)=
+- C2(d)=
+- C3(d)=
+- C6(d)=
+- C7(d)=
+- C8(d)=
+- C9(d)=
+- C10(d)=
+
+EX
+- Op1=
+- Op2=
+- Res=
+- C1(e)=
+- C2(e)=
+- C3(e)=
+- C6(e)=
+- C7(e)=
+- C8(e)=
+- C9(e)=
+- C10(e)=
+- C12=
+- C13=
+- C14=
+
+MEM
+- Dout=
+- C1(m)=
+- C2(m)=
+- C3(m)=
+
+WB
+- DInRF=
+- Wr=
+- C1(w)=
+- C2(w)=
+
 
