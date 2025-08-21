@@ -7,7 +7,8 @@ Follow the next steps:
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
     * Replicate the instructions provided below in section *Basic use of the Pipelined processor*.
-    * Finally, complete exercises ...
+    * Analyze the example exercise provided below in section *Example Exercise*.
+    * Finally, complete the exercise provided below in section *Exercise*.
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
