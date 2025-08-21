@@ -143,7 +143,7 @@ d. Stop the execution during the cycle when the ```add``` instruction is in the 
 This is the timing diagram obtained with Ripes:
 
 <p align="center">
-  <img src="../Images/TimingDiagramRipes.png" width=40% height=40%>
+  <img src="../../Computer_Organization/Lab2/Images/TimingDiagramRipes.png" width=40% height=40%>
 </p>
 
 We observe that there are no stalls in the pipeline, meaning that once it is filled, the CPI (Cycles Per Instruction) is 1.
