@@ -6,9 +6,9 @@ Follow the next steps:
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
-    * Replicate the instructions provided below in section *Basic use of the Pipelined processor*.
-    * Analyze the example exercise provided below in section *Example Exercise*.
-    * Finally, complete the exercise provided below in section *Exercise*.
+    * Replicate the instructions provided below in section *Basic use of the Ripes Pipelined Processor*.
+    * Analyze the example exercise provided below in section *Example Exercise in Ripes*.
+    * Finally, complete the exercise provided below in section *Exercise in Ripes*.
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
@@ -16,7 +16,7 @@ Follow the next steps:
     * ...
 
 
-## Basic use of the *Pipelined processor*
+## Basic use of the *Ripes Pipelined Processor*
 The construction of the Pipelined processor is first explained theoretically using the slides provided above. During this explanation, students must perform the corresponding tests from the list below, executing the instructions and carefully analyzing the processor signals in detail.
 
 1. Start the Ripes simulator.
@@ -110,7 +110,7 @@ Let's analyze a few important signals of the pipeline in this cycle.
       - ```DInRF```= 0xa, which is the data read from memory that must be written to the RF.
 
 
-### Example Exercise
+### Example Exercise in Ripes
 The following code is executed in Ripes:
 
 ```
@@ -200,7 +200,7 @@ Let's analyze some of the signals in this cycle.
 
 
 
-### Exercise
+### Exercise in Ripes
 Given the following program:
 
 ```
