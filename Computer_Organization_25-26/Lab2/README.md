@@ -5,9 +5,10 @@ Follow the next steps:
 
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
-    a. Start by looking at the following presentation: ([PresentationRipes](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view?usp=drive_link)) (later you can come back to these examples and replicate them in your own computer). Then, follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the Ripes simulator: [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+    i. Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
+   ii. Start by looking at the following presentation: ([PresentationRipes](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view?usp=drive_link)) (later you can come back to these examples and replicate them in your own computer). Then, follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the Ripes simulator: [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
-   b. 
+   iii. 
 
 
 3. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
