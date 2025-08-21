@@ -5,13 +5,46 @@ Follow the next steps:
 
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
-    i. Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
-   ii. Start by looking at the following presentation: ([PresentationRipes](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view?usp=drive_link)) (later you can come back to these examples and replicate them in your own computer). Then, follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the Ripes simulator: [Ripes](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/Ripes). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+    * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
+    * Replicate the instructions provided below in section *Basic use of the Pipelined processor*.
+    * Then, complete exercises 1–6 provided below. The optional exercises are not mandatory, but they can help you improve your knowledge and your grade. Provide short and precise answers without getting lost in unnecessary details. The format is flexible: you may include code, explanations, simulator screenshots, videos, etc.
 
-   iii. 
+    * 
 
+2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
-3. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
-  
-        a. Start by, watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link). Then you can start using the RVfpga-Pipeline to simulate and analyze the VeeR EH1 processor. Follow the steps outlined in the following link and resolve the exercises proposed, first theoretically and then on the RVfpga-Pipeline simulator: [The VeeR EH1 Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR). In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
+    * ...
+    * ...
+
+## Basic use of the *Pipelined processor*
+The construction of the Pipelined processor is first explained theoretically using the slides provided above. During this explanation, students must perform the corresponding tests from the list below, executing the instructions and carefully analyzing the processor signals in detail.
+
+1. Start the Ripes simulator.
+
+2. Open the Processor tab and in the ```Select Processor``` icon, choose the processor with the following characteristics:
+   - 5-stage processor.
+   - RISC-V base instruction set plus M extension.
+   - Extended layout.
+
+<p align="center">
+  <img src="../../Computer_Organization/Lab2/Images/SelectProc.png" width=60% height=60%>
+</p>
+
+3. Add the signal values view in the ```View``` tab.
+
+<p align="center">
+  <img src="../../Computer_Organization/Lab2/Images/View.png" width=40% height=40%>
+</p>
+
+4. Perform the example shown in the above slides ([BuildingRipesPipelined](https://drive.google.com/file/d/1YEU6boOllnm3OXSRJV4YFuy86CcGv4En/view?usp=sharing)) for the ```sub``` instruction. Use the following code in Ripes:
+
+```
+li x2, 5
+li x3, 3
+nop
+nop
+nop
+nop
+sub x1, x2, x3
+```
 
