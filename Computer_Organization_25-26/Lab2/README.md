@@ -314,9 +314,6 @@ The RISC-V assembly program is executed in the Ripes Pipelined processor. Answer
  	* lw t4, 0(a4) at the WB stage
  	* blt a2, t1, loop_k at the EX stage
 
-Use the following names for the Data/Control signals.
-
-![image](https://github.com/user-attachments/assets/df218348-511c-453e-8bdb-ddf28802bf29)
 
 IF
 - PC=
