@@ -64,7 +64,7 @@ Follow the next steps to test a program in the Ripes Pipelined Processor:
 
 #### Analysis of the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
 
-Advance step-by-step until the final cycle. This is the processor in that cycle. As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
+Advance step-by-step until the final cycle. This is the processor state in that cycle. As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
 
 ![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
 
