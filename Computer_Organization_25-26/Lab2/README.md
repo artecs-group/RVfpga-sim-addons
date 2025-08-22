@@ -166,7 +166,7 @@ For example, this is a screenshot of the simulator that highlights the forwardin
 
 ![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
 
-As shown, the highlighted multiplexer selects the value from the Memory stage (the result of the ```add``` instruction) as the ALU's first operand, instead of using the value from the Register File.
+As shown, the multiplexer within the red square selects the value that comes from the Memory stage (the result of the ```add``` instruction, provided through the yellow wire) as the ALU's first operand (*0x0000000a*), instead of using the value from the Register File.
 
 Similarly, analyze the remaining data hazards discussed in the previous item using the same approach.
 
