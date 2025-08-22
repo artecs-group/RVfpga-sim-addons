@@ -20,7 +20,7 @@ Follow the next steps:
 
 
 ## Basic use of the *Ripes Pipelined Processor*
-The construction of the Pipelined processor is first explained theoretically using the slides provided above. During this explanation, students must perform the corresponding tests from the list below, executing the instructions and carefully analyzing the processor signals in detail.
+Follow the next steps to test a program in the Ripes Pipelined Processor:
 
 1. Start the Ripes simulator.
 
