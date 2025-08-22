@@ -6,6 +6,7 @@ Follow the next steps:
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
+    * Look at the following presentation, which explains the main differences between the processor from the H&H textbook and the Ripes processor, and provides several examples: [Ripes Presentation](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view).
     * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2#basic-use-of-the-ripes-pipelined-processor).
     * Analyze the example exercise provided below in section [Exercise 1 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-1---guided-exercise-in-ripes).
     * Analyze the example exercise provided below in section [Exercise 2 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-2---guided-exercise-in-ripes).
