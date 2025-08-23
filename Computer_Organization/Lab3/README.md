@@ -115,7 +115,15 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 10. Let's try to justify these results:
 
-First, we need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
+Remember that this is the cache configuration that we are using, where the block is determined using bits 4 and 5.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/6653c325-00e6-4d52-b496-ef60a5e8b933" 
+       alt="image" 
+       style="width: 80%; height: auto;">
+</div>
+
+Also, we need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
@@ -125,11 +133,11 @@ First, we need to know the addresses where each array is mapped to. We can deduc
 
 According to this information, we can deduce the following:
 
-		* Starting address of A: 0x11b00
-		* Starting address of B: 0x11b40
-		* Starting address of C: 0x11b80
+- Starting address of A: 0x11b00 which in binary is 0001 0001 1011 00**00** 0000
+- Starting address of B: 0x11b40 which in binary is 0001 0001 1011 01**00** 0000
+- Starting address of C: 0x11b80 which in binary is 0001 0001 1011 10**00** 0000
 
-So, we can easily deduce that in each iteration the three arrays will map to the same cache block, and thus all accesses will miss in the cache.
+The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. Thus, in each iteration all three arrays will map to the same block and no hit will happen.
 
 12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
