@@ -118,7 +118,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 Remember that this is the cache configuration that we are using, where the block is determined using bits 4 and 5.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/6653c325-00e6-4d52-b496-ef60a5e8b933" 
+  <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
        alt="image" 
        style="width: 80%; height: auto;">
 </div>
