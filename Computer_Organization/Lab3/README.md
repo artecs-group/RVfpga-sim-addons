@@ -83,9 +83,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed. In the figure you can see that:
 
- * Hits = 81
- * Misses = 76
- * Writebacks 69
+	 * Hits = 81
+	 * Misses = 76
+	 * Writebacks 69
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/3b95daaf-ff89-4b52-bee7-49dc4b7b8e14" alt="image">
@@ -99,9 +99,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 8. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks. In the figure you can see that:
 
- * Hits = 81
- * Misses = 124
- * Writebacks 85
+	 * Hits = 81
+	 * Misses = 124
+	 * Writebacks 85
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b6ae1ed9-afbf-48c8-8faf-f4d161fbf861" alt="image">
@@ -109,9 +109,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 9. With this information, we can calculate the hits, misses, and writebacks:
 
- * Hits = 81 - 81 = 0
- * Misses = 124 - 76 = 48
- * Writebacks = 85 - 69 = 16
+	 * Hits = 81 - 81 = 0
+	 * Misses = 124 - 76 = 48
+	 * Writebacks = 85 - 69 = 16
 
 10. Let's try to justify these results:
 
@@ -129,7 +129,7 @@ According to this information, we can deduce the following:
 		* Starting address of B: 0x11b40
 		* Starting address of C: 0x11b80
 
-Then, we can see that in each iteration the three arrays will map to the same cache block, and thus all accesses will miss.
+So, we can easily deduce that in each iteration the three arrays will map to the same cache block, and thus all accesses will miss in the cache.
 
 12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
