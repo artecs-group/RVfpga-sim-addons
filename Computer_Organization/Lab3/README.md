@@ -64,7 +64,7 @@ We next analyze the cache's behavior for the second nested loop (*Analyze this l
 
 Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, in this case, we would have a total cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B).
 
-1. For this cache configuration, the block is determined using bits 4 and 5.
+For this cache configuration, the block is determined using bits 4 and 5.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
@@ -72,31 +72,31 @@ Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, 
        style="width: 80%; height: auto;">
 </div>
 
-2. Copy the initial program (provided above) into the editor, compile it (use -O1 optimization level), and check that everything works correctly.
+1. Copy the initial program (provided above) into the editor, compile it (use -O1 optimization level), and check that everything works correctly.
 
 <p align="center">
   <img src="Images/ProgramRipes.png" width=80% height=80%>
 </p>
 
-3. Locate the ```main``` function and the loops that make up the function. The ```lw``` and ```sw``` instructions are very helpful for locating these loops. In this case, the loop to analyze is the following:
+2. Locate the ```main``` function and the loops that make up the function. The ```lw``` and ```sw``` instructions are very helpful for locating these loops. In this case, the loop to analyze is the following:
 
 <p align="center">
   <img src="Images/Loop.png" width=50% height=50%>
 </p>
 
-4. Set a breakpoint at the beginning of the loop to be analyzed by clicking on the left button over the blue vertical column, next to the instruction where you want to place it.
+3. Set a breakpoint at the beginning of the loop to be analyzed by clicking on the left button over the blue vertical column, next to the instruction where you want to place it.
 
 <p align="center">
   <img src="Images/Breakpoint.png" width=50% height=50%>
 </p>
 
-5. Run quickly until the breakpoint at the beginning of the loop to be analyzed. Keep in mind that the execution will stop after the instruction where the breakpoint is located is executed.
+4. Run quickly until the breakpoint at the beginning of the loop to be analyzed. Keep in mind that the execution will stop after the instruction where the breakpoint is located is executed.
 
 <p align="center">
   <img src="Images/Buttons.png" width=40% height=40%>
 </p>
 
-6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed. In the figure you can see that:
+5. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed. In the figure you can see that:
 
 	 * Hits = 81
 	 * Misses = 76
@@ -106,13 +106,13 @@ Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, 
   <img src="https://github.com/user-attachments/assets/3b95daaf-ff89-4b52-bee7-49dc4b7b8e14" alt="image">
 </div>
 
-7. Delete the breakpoint and add another one right after the loop:
+6. Delete the breakpoint and add another one right after the loop:
 
 <p align="center">
   <img src="Images/Breakpoint2.png" width=50% height=50%>
 </p>
 
-8. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks. In the figure you can see that:
+7. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks. In the figure you can see that:
 
 	 * Hits = 81
 	 * Misses = 124
@@ -122,7 +122,7 @@ Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, 
   <img src="https://github.com/user-attachments/assets/b6ae1ed9-afbf-48c8-8faf-f4d161fbf861" alt="image">
 </div>
 
-9. With this information, we can calculate the hits, misses, and writebacks:
+8. With this information, we can calculate the hits, misses, and writebacks:
 
 	 * Hits = 81 - 81 = 0
 	 * Misses = 124 - 76 = 48
@@ -148,7 +148,7 @@ The bits in bold (bits 4 and 5) determine the cache block where the data is mapp
 
 Thus, in each iteration all three arrays will map to the same block and no hit will happen.
 
-12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
+9. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
  * After the first load:
 
@@ -183,7 +183,7 @@ Thus, in each iteration all three arrays will map to the same block and no hit w
 
 
 ## Exercise 1
-Copy in Ripes the following program:
+Use the program from the previous section:
 
 ```
 #define N 4
@@ -211,17 +211,18 @@ main(){
 }
 ```
 
-The program begins with an initial nested loop that simply initializes the elements in A, B, and C, which we will not analyze. Then, another nested loop follows, performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
+Analyze the cache behaviour for the following configurations:
 
-b. Two-way set associative data cache.
+a. Two-way set associative data cache with *Write Allocate*. To have this configuration, make the following changes to the latest configuration:
 
   - Increase the number of ways to 2: 2<sup>N</sup> Ways = 1
   - Reduce the number of lines to 2, to keep the total data cache size the same: 2<sup>N</sup> Lines = 1
-  - Test the two available write allocation policies: *Write No-Allocate* and *Write Allocate*.
 
-c. Four-way set associative data cache.
+b. Two-way set associative data cache with *Write No-Allocate*.
 
-d. Modified program: A programmer suggests the following modification for the program that runs in a two-way set associative data cache with write allocation. Analyze in detail the cache behaviour in this case.
+c. Four-way set associative data cache with *Write Allocate*.
+
+d. Modified program: A programmer suggests the following modification for the program that runs in a two-way set associative data cache with *Write Allocate* (cache used in item *a*). Analyze in detail the cache behaviour in this case.
 
 ```
 #define N 4
