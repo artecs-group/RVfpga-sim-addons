@@ -16,7 +16,7 @@ The cache view allows simulating different configurations and management policie
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze and that you should simply ignore. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
+As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). 
 
 ```
 #define N 4
@@ -43,6 +43,11 @@ main(){
 
 }
 ```
+
+The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze and that you should simply ignore. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B. This is the result (the values are shown in hexadecimal):
+
+<img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
+
 
 1. The Cache window allows configuring the data cache and the instruction cache separately. For example, in this case, we would be configuring a data cache with the following parameters:
 - 4 lines (2<sup>N</sup> Lines = 2)
