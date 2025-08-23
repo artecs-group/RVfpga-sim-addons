@@ -50,7 +50,7 @@ This is the result obtained after executing this program, with the values shown 
 
 <img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
 
-We next analyze the cache's behavior for the second nested loop (*Analyze this loop*) and for a direct mapping data cache with the following parameters:
+We next analyze the cache's behavior for the second nested loop and for a direct mapping data cache with the following parameters:
 
 - 4 lines (2<sup>N</sup> Lines = 2)
 - 4 words per line (2<sup>N</sup> Words/Line = 2)
@@ -62,9 +62,9 @@ We next analyze the cache's behavior for the second nested loop (*Analyze this l
   <img src="Images/CacheConfiguration.png" width=60% height=60%>
 </p>
 
-Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, in this case, we would have a total cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B).
+Given that each word is 4 bytes long (i.e. 32 bits) in the RISC-V architecture used, in this case, we would have a total cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B).
 
-For this cache configuration, the block is determined using bits 4 and 5.
+For this cache configuration, the block is determined using bits 4 and 5 (bits 0 and 1 address the byte, whereas bits 2 and 3 address the word).
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
