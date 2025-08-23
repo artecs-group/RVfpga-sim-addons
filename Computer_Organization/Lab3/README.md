@@ -110,7 +110,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * First,
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" alt="image">
+  <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
+       alt="image" 
+       style="transform: scale(0.8); transform-origin: center;">
 </div>
 
  * 
