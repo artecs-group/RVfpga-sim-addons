@@ -81,7 +81,11 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
   <img src="Images/Buttons.png" width=40% height=40%>
 </p>
 
-6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed. In the figure you can see that Hits=81, Misses=76 and Writebacks=69.
+6. In the cache tab, write down the number of misses, hits, and writebacks you have at the starting point of the loop to be analyzed, as this will be the initial value from which we will count the misses and accesses of the loop to be analyzed. In the figure you can see that:
+
+ * Hits = 81
+ * Misses = 76
+ * Writebacks 69
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/3b95daaf-ff89-4b52-bee7-49dc4b7b8e14" alt="image">
@@ -93,7 +97,11 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
   <img src="Images/Breakpoint2.png" width=50% height=50%>
 </p>
 
-8. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks. In the figure you can see that Hits=81, Misses=124 and Writebacks=85.
+8. Run quickly until the breakpoint, and write down again the number of misses, hits, and writebacks. In the figure you can see that:
+
+ * Hits = 81
+ * Misses = 124
+ * Writebacks 85
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/b6ae1ed9-afbf-48c8-8faf-f4d161fbf861" alt="image">
