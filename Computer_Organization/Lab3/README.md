@@ -55,7 +55,7 @@ main(){
   <img src="Images/CacheConfiguration.png" width=60% height=60%>
 </p>
 
-Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom, we can see the statistics for misses, hits, writebacks, etc.
+Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom right corner, we can see the statistics for misses, hits, writebacks, etc.
 
 2. Copy the initial program (provided above) into the editor, compile it (use -O1 optimization level), and check that everything works correctly.
 
