@@ -105,9 +105,16 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
  * Misses = 124 - 76 = 48
  * Writebacks = 85 - 69 = 16
 
-10. Justify these results according to the program executed and the cache configuration used.
+10. Let's try to justify these results:
 
-11. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
+ * First,
+
+<img width="1218" height="505" alt="image" src="https://github.com/user-attachments/assets/dcdff4dc-c8d4-41e6-950b-e40fd60b7533" />
+
+
+ * 
+
+12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
  * After the first load:
 
