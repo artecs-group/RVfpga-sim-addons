@@ -2,10 +2,10 @@
 This practice aims to help students understand the cache memory. You can follow the next steps:
 
 1. Start by looking at the detailed presentation of the Ripes cache simulator provided here: [Presentation_Cache_Ripes](https://drive.google.com/file/d/1ffplxLHiyvC6G4GWyLHEbvgANaIqjZK0/view?usp=sharing).
-2. Then, you can read the simulator guide provided [next](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes) in this repository.
-3. Finally, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository, using Ripes.
+2. Then, follow the guided example provided [next](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes) in this repository.
+3. Finally, resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository, using Ripes.
 
-## Cache simulation in Ripes
+## Cache simulation in Ripes - Guided example
 The cache view allows simulating different configurations and management policies for first-level data and instruction caches. In general, and unless stated otherwise, for this practice, we will configure the compiler to work with optimization level -O1 and set the processor to Single-Cycle 32-bit (see the following two figures). Moreover, in most of the exercises, we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
 
 <p align="center">
@@ -16,7 +16,7 @@ The cache view allows simulating different configurations and management policie
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). 
+As an example, we next show the steps to simulate and analyze the following program. 
 
 ```
 #define N 4
@@ -44,12 +44,14 @@ main(){
 }
 ```
 
-The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze and that you should simply ignore. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B. This is the result (the values are shown in hexadecimal):
+The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B; this is the loop we will analyze in the cache. 
+
+This is the result obtained after executing this program, with the values shown in hexadecimal:
 
 <img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
 
+We next analyze the cache's behavior for the second nested loop (*Analyze this loop*) and for a direct mapping data cache with the following parameters:
 
-1. The Cache window allows configuring the data cache and the instruction cache separately. For example, in this case, we would be configuring a data cache with the following parameters:
 - 4 lines (2<sup>N</sup> Lines = 2)
 - 4 words per line (2<sup>N</sup> Words/Line = 2)
 - 1 way (2<sup>N</sup> Ways = 0)
@@ -60,7 +62,15 @@ The program begins with an initial nested loop (*Initialize matrices*) that simp
   <img src="Images/CacheConfiguration.png" width=60% height=60%>
 </p>
 
-Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in this case, we would have a cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B). At the bottom right corner, we can see the statistics for misses, hits, writebacks, etc.
+Given that each word is 4 bytes long (32 bits) in the RISC-V architecture used, in this case, we would have a total cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B).
+
+1. For this cache configuration, the block is determined using bits 4 and 5.
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
+       alt="image" 
+       style="width: 80%; height: auto;">
+</div>
 
 2. Copy the initial program (provided above) into the editor, compile it (use -O1 optimization level), and check that everything works correctly.
 
@@ -120,15 +130,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 Do these numbers make sense?
 
-Remember that this is the cache configuration that we are using, where the block is determined using bits 4 and 5.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
-       alt="image" 
-       style="width: 80%; height: auto;">
-</div>
-
-Also, we need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
+We need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
@@ -210,16 +212,6 @@ main(){
 ```
 
 The program begins with an initial nested loop that simply initializes the elements in A, B, and C, which we will not analyze. Then, another nested loop follows, performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
-
-Analyze and explain the cache's behavior for the second nested loop, adding screenshots from the simulator. Analyze misses, hits, and writebacks, as well as the evolution of the cache throughout the loop execution, carefully observing the evolution of the blocks. You can progress gradually from the beginning of the loop, pausing after the execution of each lw (load word) or sw (store word) instruction, and analyzing the state of the cache.
-
-Analyze the following scenarios:
-
-a. Direct mapping data cache (illustrated in the previous section).
-
-<p align="center">
-  <img src="Images/CacheConfiguration.png" width=60% height=60%>
-</p>
 
 b. Two-way set associative data cache.
 
