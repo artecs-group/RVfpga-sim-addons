@@ -300,7 +300,7 @@ c. Perform code optimizations (such as array enlargement, array fusion, etc.) an
 d. Finally, test a 2-way set associative cache (keeping the total size of the cache unchanged) for the original code. Compare the results with the ones obtained in item c.
 
 
-## Exercise 3
+## OPTIONAL - Exercise 3
 Simulate the following code in Ripes. 
 
 ```
@@ -341,7 +341,7 @@ c. Analyze and explain in detail the evolution of the instruction cache for the 
 </p>
 
 
-## Exercise 4
+## OPTIONAL - Exercise 4
 Consider a computer with a main memory of 4MB, addressable by bytes, equipped with a 2KB cache, with lines of 512B. The cache is direct-mapped and uses write-allocation. The following code is to be executed:
 
 ```
