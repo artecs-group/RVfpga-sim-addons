@@ -16,7 +16,7 @@ The cache view allows simulating different configurations and management policie
   <img src="Images/Processor.png" width=80% height=80%>
 </p>
 
-As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). The program begins with an initial nested loop that simply initializes the elements in A, B, and C, which we will not analyze. Then, another nested loop follows, performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
+As an example, we next show the steps to simulate Exercise 1-a (provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) in this repository), which uses the following program (you just need to copy the code to the Ripes editor). The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze and that you should simply ignore. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B. This is the loop we will analyze in the cache.
 
 ```
 #define N 4
