@@ -107,15 +107,21 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
 10. Let's try to justify these results:
 
- * First,
+First, we need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
        alt="image" 
-       style="transform: scale(0.8); transform-origin: center;">
+       style="width: 80%; height: auto;">
 </div>
 
- * 
+According to this information, we can deduce the following:
+
+		* Starting address of A: 0x11b00
+		* Starting address of B: 0x11b40
+		* Starting address of C: 0x11b80
+
+Then, we can see that in each iteration the three arrays will map to the same cache block, and thus all accesses will miss.
 
 12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
