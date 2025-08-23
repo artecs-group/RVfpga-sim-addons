@@ -142,11 +142,9 @@ According to this information, we can deduce the following:
 - Starting address of B: 0x11b40 which in binary is 0001 0001 1011 01**00** 0000
 - Starting address of C: 0x11b80 which in binary is 0001 0001 1011 10**00** 0000
 
-The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. 
+The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. All three arrays map to the same block in each iteration. In the cache configuration used here, only one block fits in the cache, thus no hit will happen.
 
-Thus, in each iteration all three arrays will map to the same block and no hit will happen.
-
-9. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
+9. Finally, let's analyze step by step the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
  * After the first load:
 
