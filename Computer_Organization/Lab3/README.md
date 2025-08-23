@@ -109,8 +109,9 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 
  * First,
 
-<img width="1218" height="505" alt="image" src="https://github.com/user-attachments/assets/dcdff4dc-c8d4-41e6-950b-e40fd60b7533" />
-
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" alt="image">
+</div>
 
  * 
 
