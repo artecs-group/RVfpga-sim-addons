@@ -113,7 +113,7 @@ Given that each word is 4 bytes (32 bits) in the RISC-V architecture used, in th
 	 * Misses = 124 - 76 = 48
 	 * Writebacks = 85 - 69 = 16
 
-10. Let's try to justify these results:
+Do these numbers make sense?
 
 Remember that this is the cache configuration that we are using, where the block is determined using bits 4 and 5.
 
@@ -137,7 +137,9 @@ According to this information, we can deduce the following:
 - Starting address of B: 0x11b40 which in binary is 0001 0001 1011 01**00** 0000
 - Starting address of C: 0x11b80 which in binary is 0001 0001 1011 10**00** 0000
 
-The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. Thus, in each iteration all three arrays will map to the same block and no hit will happen.
+The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. 
+
+Thus, in each iteration all three arrays will map to the same block and no hit will happen.
 
 12. Finally, analyze step by step and explain the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
 
@@ -169,12 +171,6 @@ The bits in bold (bits 4 and 5) determine the cache block where the data is mapp
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/fc7de4dc-ef5f-40a7-bdb3-9fb5e79cb053" alt="image">
-</div>
-
-12. You can also view the memory tab to understand how the values are updated after the stores. For example, the following figure shows C[0] to C[3] in memory after the fourth iteration. Given that we are using a Write-Back policy, C[3] has not been updated in memory yet.
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/ad91d4f3-a59e-49b3-920e-057d8345b51e" alt="image">
 </div>
 
 
