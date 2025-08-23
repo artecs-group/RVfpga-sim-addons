@@ -44,7 +44,7 @@ main(){
 }
 ```
 
-The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B; this is the loop we will analyze in the cache. This is the result obtained after executing this program, with the values shown in hexadecimal:
+The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B; this is the loop we will analyze in the cache. This is the result obtained after executing this program, with the values shown in hexadecimal (note for example that the first element of A is 259 in decimal and 0x103 in hexadecimal):
 
 <img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
 
