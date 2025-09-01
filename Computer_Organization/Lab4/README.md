@@ -73,7 +73,7 @@ Analyze in-depth the program provided in the ```LedsSwitches``` project (located
 
 Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly.
 
-Finally, run the codes in the RVfpga-ViDBo simulator.
+Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
 
 
 ## Exercise 2
@@ -89,7 +89,7 @@ You can use the project from Exercise 1 as a base and simply write your code in 
 
 Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
 
-Finally, run the codes in the RVfpga-ViDBo simulator.
+Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
 
 
 ## Exercise 4
