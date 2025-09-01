@@ -9,7 +9,7 @@ In this lab we review the RISC-V architecture and complete several exercises. We
 Follow the next steps:
 1. Read the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
 2. Replicate the instructions provided below in section [Using RIPES in the virtual machine](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#using-ripes-in-the-virtual-machine).
-3. Then, complete [Exercises 1–6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#exercise-1) provided below. The optional exercises are not mandatory, but they can help you improve your knowledge and your grade. Provide short and precise answers without getting lost in unnecessary details. The format is flexible: you may include code, explanations, simulator screenshots, videos, etc.
+3. Then, complete the [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#exercise-1) provided below.
 
 
 ## Using RIPES in the virtual machine
@@ -225,77 +225,12 @@ Run the code in Ripes (you can simply copy the previous code in the editor) and 
 - What instruction does the pseudo-instruction ```li s1, n``` translate to?
 - What instruction does the pseudo-instruction ```mv s2, zero``` translate to?
 - To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
-- Take a screenshot of the memory viewer clearly identifying, one by one, the instructions that make up the for loop. Are they properly aligned?
-- Take a screenshot of the memory viewer at the end of each iteration, showing how the vector evolves.
-- OPTIONAL: In this code, a simple modification can be made to improve its performance. Write modified code, explain why it improves efficiency, and show a screenshot in which the final vector is visible in memory.
-- OPTIONAL: Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
+- Identify in the memory viewer, one by one, the instructions that make up the for loop. Are they properly aligned?
+- Analyze in the memory viewer how the vector changes after each iteration.
+- Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
 
 
 ## Exercise 2
-The Bubble Sort algorithm sorts the elements of a vector from smallest to largest using a very straightforward procedure: it repeatedly traverses the vector, swapping successive positions if V(i) > V(i+1), until no swaps are made.
-
-The following pseudocode is provided as a guide (Note: use a constant, N, to define the length of the vector):
-
-```
-do 
-  swapped=false 
-  for i from 0 to N-2 do: 
-    if V[i] > V[i+1] then 
-      swap(V[i], V[i+1]) 
-      swapped = true 
-    end if 
-  end for 
-while swapped 
-```
-
-**PROGRAMMING IN RISC-V ASSEMBLY:**
-
-- Implement the algorithm in RISC-V assembly. Include a ```main``` function that performs most functionality and that calls a function called ```swap```, that exchanges ```V[i]``` and ```V[i+1]```. Test the program in Ripes.
-- Explain the prologue you have created for the ```swap``` function. Is it a leaf or non-leaf subroutine? What is the difference, and how does it affect the prologue?
-- Copy the instructions that prepare the input parameters for the swap subroutine. Do you pass the parameters by value or by reference? Why?
-- Take several screenshots during the execution of the program at relevant points, showing the instructions, registers, and memory. For example, you can show the evolution of memory as the data gets sorted.
-
-**PROGRAMMING IN C:**
-
-The following code is a possible C implementation of the above pseudocode.
-
-- Compile the code with two different optimization levels: -O0 and -O1.
-  - For each optimization level, test the execution of the program step-by-step, both in C and in RISC-V assembly.
-  - Compare the obtained ```swap``` and ```main``` functions for each optimization level.
-
-```
-#define N 4
-
-int V[N]={5,2,3,1};
-
-void main(void)
-{
-   int swapped=1, i;
-
-   while(swapped){
-       swapped=0;
-       for (i=0; i<(N-1); i++){
-           if (V[i] > V[i+1]){
-               swap(&V[i], &V[i+1]);
-               swapped=1;
-           }
-       }
-   }
-
-   while(1);
-
-}
-
-void swap(int *V, int *W){
-   int temp;
-   temp=*V;
-   *V=*W;
-   *W=temp;
-}
-```
-
-
-## Exercise 3
 Given the following RISC-V assembly code:
 
 ```
@@ -341,120 +276,14 @@ factorial:
 
 Run the code in Ripes and answer the following questions.
 
-- The code contains three errors. Identify and correct them. Copy the modified code, explain the corrections, and include a screenshot illustrating its functionality.
+- The code contains three errors. Identify and correct them until the program works correctly.
 - Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
 - What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
-- OPTIONAL: Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier). Show and explain the modifications you made and illustrate their execution. Emphasize the management involved in introducing a new nested subroutine, particularly in terms of saving registers and the evolution of the stack.
+- Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier).
 
 
-## Exercise 4
-Given the following C code that computes the factorial of an integer number.
-
-```
-int main(void)
-{
-   int i,result,num=7;
-
-   if (num > 1){
-      result = num;
-      for (i=num-1;i>1;i--)
-      result = result*i;
-   }
-   else
-      result=1;
-
-   printf("Factorial = %d",result);
-
-   while(1);
-}
-```
-
-
-Run the code in Ripes and answer the following questions.
-
-- Default compilation (-O0 optimization level):
-    - Explain in detail the ```main``` function generated in RISC-V assembly.
-    - Is the ```ra``` register preserved at any point? Why?
-    - Of the other registers, which ones are preserved? Why?
-
-- Compile with -O1:
-    - The function is very simple. Explain what it does and why it is so simple.
-
-OPTIONAL: Replace the previous code for the following one, in which the input integer number is generated randomly. Analyze the assembly functions generated with different optimization levels (-O0, -O1, -O2, -O3, -Os), and explain the differences between them and with respect to the previous code. Analyze the simulation of each scenario in Ripes.
-
-```
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main(void)
-{
-   int i,result,num;
-
-   srand(time(NULL));
-   num = (rand() % 10) + 1;
-
-   if (num > 1){
-      result = num;
-      for (i=num-1;i>1;i--)
-      result = result*i;
-   }
-   else
-      result=1;
-
-   printf("Factorial = %d",result);
-
-   while(1);
-}
-```
-
-
-## OPTIONAL - Exercise 5
-Develop a RISC‐V assembly program to multiply two integer numbers. Obviously, in this case the RISC‐V ```mul``` instruction cannot be used. Build and debug the project in Ripes and confirm that the result is correct.
-
-```c
-int mul(int a, int b) {
-    int res = 0;
-    while (b > 0) {
-        res += a;
-        b‐‐;
-    }
-    return res;
-}
-```
-
-Develop a RISC‐V assembly program to calculate the dot product of two vectors. Call the ```mul``` function implemented above. Build and debug the project in Ripes and confirm that the result is correct.
-
-```c
-int dotprod(int V[], int W[], int n) {
-    int acc = 0;
-    for (int i = 0; i < n; i++) {
-        acc += mul(V[i], W[i]);
-    }
-    return acc;
-}
-```
-
-Develop a RISC‐V assembly program, which calls the two previous functions (```mul``` and ```dotprod```), to determine which of two vectors has a greater norm (length).
-
-```c
-#define N 4
-int A[] = {3,5,1,9}
-int B[] = {1,6,2,3}
-int res;
-void main() {
-    int normA = dotprod(A, A, N);
-    int normB = dotprod(B, B, N);
-    if (normA > normB)
-        res = 0xa;
-    else
-        res = 0xb;
-}
-```
-
-
-## OPTIONAL - Exercise 6
-Analyze in Ripes the following C program, that determines which of two vectors is farther from the origin. After the program we propose some specific tasks.
+## Exercise 3
+Understand the following C program, that determines which of two vectors is farther from the origin. After the program we propose some specific tasks.
 
 ```c
 # define N 5
@@ -573,65 +402,6 @@ Specifically, perform the following tasks:
            101d0:        01010113        addi x2 x2 16
            101d4:        00008067        jalr x0 x1 0
         ```
-
-Then, test in Ripes the following program, which combines C and RISC-V assembly languages. Note that this program is identical to the above one, but in this case function ```guardar``` is implemented in assembly.
-
-```c
-# define N 5
-int U [N ] = {5 , 2, -3 , 7 , 6};
-int V [N ] = {6 , -1 , 1 , 0 , 3};
-char mayor_u ;
-
-
-int mul (int a , int b) {
- int res = 0 , sign = 0;
- if (a < 0) {
-   sign = 1;
-   a = -a ;
- }
- while (a --) res += b;
- if ( sign )
-   return - res ;
- else
-   return res ;
-}
-
-
-int i_sqrt (int a) {
- int root = 0;
- while ( mul ( root , root ) < a ) {
-   root ++;
- }
- return root ;
-}
-
-
-int eucl_dist (int w [] , int size ) {
-   int acc = 0;
-   for ( int i = 0; i < size ; i ++) {
-     acc += mul (w[ i] , w[ i ]) ;
-   }
-   return i_sqrt ( acc );
-}
-
-
-void main () {
- int d_u = eucl_dist (U , N );
- int d_v = eucl_dist (V , N );
- char mayor = d_u > d_v ;
- guardar ( mayor , & mayor_u ) ;
-
- asm volatile (
-      "j end\n"
-
-      "guardar:\n"
-      "sb a0, 0(a1)\n"
-      "ret\n"
-
-      "end:\n"
- );
-}
-```
 
 
 
