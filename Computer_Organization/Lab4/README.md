@@ -69,14 +69,14 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
 ## Exercise 1
 → View the above video at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
 
-Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly. Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly.
 
-Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly. Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly.
 
-Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
+Finally, run the codes in the RVfpga-ViDBo simulator.
 
 
-## OPTIONAL - Exercise 2
+## Exercise 2
 Write a RISC-V assembly program that shows a block of four lit LEDs that repeatedly moves from one side of the 16 available LEDs on the board to the other. Also, include two switches to control the speed and direction of the movement. Switch[0] changes the speed, and Switch[1] changes the direction as follows:
 - If Switch[0] is ON (high), the lit LEDs should move quickly. Otherwise, the lit LEDs should move slowly. You may define what "quickly" and "slowly" mean, but the difference in speed must be visible and noticeable just by looking at it.
 - If Switch[1] is ON (high), the lit LEDs should move repeatedly from right to left (starting again at the right-most LED when reaching the left-most). Otherwise, the lit LEDs should move repeatedly from left to right.
@@ -87,9 +87,9 @@ You can use the project from Exercise 1 as a base and simply write your code in 
 ## Exercise 3
 → View the above video at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
 
-Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```). Describe in detail what the code does. You must clearly explain the purpose and function of each instruction.
+Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
 
-Finally, run the codes on the FPGA board (if you have it) or in the RVfpga-ViDBo simulator, and include videos/pictures/screenshots showing their operation.
+Finally, run the codes in the RVfpga-ViDBo simulator.
 
 
 ## Exercise 4
@@ -104,7 +104,6 @@ We next show the result that you should obtain when running this program on RVfp
   <img src="Images/ViDBo.png" width=70% height=70%>
 </p>
 
-In case you want to obtain the remaining solutions, please contact ```dani02@ucm.es```.
 
 ## Exercise 4.b
 Write a RISC-V assembly program and a C program that shows the string “0-1-2-3-4-5-6-7-8” moving from the right to the left of the 8-digit 7-segment displays. That is, 0 should show up on the right-most digit first. Then it should move to the left and 1 should show up on the right-most digit, and so on.
