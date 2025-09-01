@@ -6,7 +6,6 @@ Follow the next steps:
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
-    * Look at the following presentation, which explains the main differences between the processor from the H&H textbook and the Ripes processor, and provides several examples: [Ripes Presentation](https://drive.google.com/file/d/1Kp8tLvgPFU7XpWsejzSSrwixkmXE5mjL/view).
     * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2#basic-use-of-the-ripes-pipelined-processor).
     * Analyze the example exercise provided below in section [Exercise 1 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-1---guided-exercise-in-ripes).
     * Analyze the example exercise provided below in section [Exercise 2 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-2---guided-exercise-in-ripes).
@@ -14,7 +13,7 @@ Follow the next steps:
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
-    * Start by watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4), you can watch an AI-translated-to-Chinese version of the video here [VeeReh1ChineseVideo](https://www.youtube.com/watch?v=2c4Iaswnz8w), or you can enable the subtitles in the original video). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
+    * Start by watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
     * Replicate the instructions provided below in section [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#rvfpga-pipeline).
     * Analyze the example exercise provided below in section [Exercise 4 - Guided Exercise in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-4---guided-exercise-in-rvfpga-pipeline).
     * Finally, complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-5-in-rvfpga-pipeline).
@@ -62,13 +61,11 @@ Follow the next steps to test a program in the Ripes Pipelined Processor:
    sw x6, 8(x9)
 ```
 
-#### Analysis of the final cycle: ```lw``` - ```beq``` - ```add``` - ```or``` - ```sw```
-
-Advance step-by-step until the final cycle. This is the processor state in that cycle. As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
+5. Advance step-by-step until the final cycle. This is the processor state in that cycle. As you can see, five instructions are being executed simultaneously in the processor (in-flight), each at a different stage. 
 
 ![image](https://github.com/user-attachments/assets/e08335a0-2b4c-4e79-a031-07274116b849)
 
-In the same window, look at the bottom right corner (shown next), where you can see the *Instruction Memory* window, which helps us follow the program's execution step by step, and the *Execution info* window, which displays performance metrics such as cycles, instructions, and CPI/IPC.
+6. In the same window, look at the bottom right corner (shown next), where you can see the *Instruction Memory* window, which helps us follow the program's execution step by step, and the *Execution info* window, which displays performance metrics such as cycles, instructions, and CPI/IPC.
 
 ![image](https://github.com/user-attachments/assets/d8c137b5-47f4-420d-b62c-4ae4d6bef39d)
 
@@ -93,11 +90,7 @@ a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
 b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor. 
 
-c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.
-
-d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage. Use the names provided in the following figure for each pipeline signal:
-
-![image](https://github.com/user-attachments/assets/4e7c4b1d-6e77-404e-af28-32e5607c94c6)
+c. Analyze in Ripes how the data hazard between the ```add``` and the ```sub``` are handled.
 
 
 **SOLUTION:**
@@ -120,48 +113,11 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 - ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from WB to EX.
 - ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from MEM to EX.
 
-*c. Show screenshots of the Ripes pipeline to explain how the different data hazards are handled.*
-
-For example, this is a screenshot of the simulator that highlights the forwarding that occurs between the ```add``` and the ```sub```:
+*c. Analyze in Ripes how the data hazard between the ```add``` and the ```sub``` are handled.*
 
 ![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
 
 As shown, the multiplexer within the red square selects the value that comes from the Memory stage (the result of the ```add``` instruction, provided through the yellow wire) as the ALU's first operand (*0x0000000a*), instead of using the value from the Register File.
-
-Similarly, analyze the remaining data hazards discussed in the previous item using the same approach.
-
-
-*d. Stop the execution during the cycle when the ```add``` instruction is in the WB stage and analyze the data/control signals of each stage.*
-
-This is a screenshot of the simulator during the cycle when the ```add``` instruction is in the WB stage.
-
-![image](https://github.com/user-attachments/assets/e3685548-b31d-4c1a-9c31-1d2969e9b732)
-
-Let's analyze some of the signals in this cycle.
-
-   - ```or``` instruction:
-      - ```Op1```= 0xa. This is the first operand for the OR operation that is performed this cycle.
-      - ```Op2```= 0x6. This is the second operand for the OR operation that is performed this cycle.
-      - ```C1(e)```= 1. This will be the Register File write enable in the WB stage. The ```or``` instruction must write the result to the RF.
-      - ```C2(e)```= ALURES. This will be used to select the data in the 3-1 multiplexer of the WB stage.
-      - ```C6(e)```= 0, as it is not a ```jump``` instruction.
-      - ```C7(e)```= 0, as it is not a ```branch``` instruction.
-      - ```C8(e)```= ```C9(e)```= REG1/2, as the operands are provided from the Register File in this instruction.
-      - ```C10(e)```= OR, as the ALU must perform an OR operation.
-      - ```Res```= 0xe, which is the result of the OR.
-      - ```C14```= 0, as the next PC after the ```or``` instruction is PC+4.
-
-   - ```sub``` instruction:
-      - ```C1(m)```= 1, as the Register File must be written by this instruction in the next cycle.
-      - ```C2(m)```= 1, as the 3-1 multiplexer will select the result of the ALU.
-      - ```C3(m)```= 0, as the Data Memory must NOT be written by this instruction.
-
-   - ```add``` instruction:
-      - ```C1(w)```= 1, as the Register File must be written by this instruction.
-      - ```C2(w)```= 1, as the 3-1 multiplexer must select the data read from the ALU.
-      - ```Wr```= 0x2, which is the register idx where the value read from memory must be written.
-      - ```DInRF```= 0xa, which is the result of the addition and that must be written to the RF.
-
 
 
 ### Exercise 2 - Guided Exercise in Ripes
