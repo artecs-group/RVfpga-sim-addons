@@ -541,13 +541,7 @@ j fin
 
 Analyze the code in RISC-V assembly. Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, so this needs quite a few instructions.
 
-**NOTE**: Remember that we can configure the core in order to enable/disable different features, as explained in the corresponding video and reminded next.
-
-<img src="https://github.com/user-attachments/assets/a3fef95e-5b2c-4b7b-a2d7-0021136024b0" alt="image" width="800" />
-
-
-<img src="https://github.com/user-attachments/assets/9e5c1f7a-4516-44a1-89a5-96748a7a934c" alt="image" width="800" />
-
+**NOTE**: Remember that we can configure the core in order to enable/disable different features, as explained in the corresponding video.
 
 You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one:
 
