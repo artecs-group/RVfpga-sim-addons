@@ -121,7 +121,11 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 
 *c. Show a screenshot from Ripes that illustrates how the data hazard between the ```add``` and the ```sub``` are handled.*
 
-![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5" width="450" />
+
+</div>
 
 As shown, the multiplexer within the red square selects the value that comes from the Memory stage (the result of the ```add``` instruction, provided through the yellow wire) as the ALU's first operand (*0x0000000a*), instead of using the value from the Register File.
 
