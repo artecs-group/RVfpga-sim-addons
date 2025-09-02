@@ -373,7 +373,20 @@ We next show partial solutions for this exercise as an example. Complete the sol
 
 *a. Identify the hazards that occur and explain how this processor handles them.*
 
-For example, this figure illustrates the data hazard between the ```slli``` and the ```add```.
+<img width="259" height="271" alt="image" src="https://github.com/user-attachments/assets/77b0ad9d-11c3-4234-a2b2-71582294b623" />
+
+Existing dependencies:
+
+- Data hazards highlighted with colors.
+
+  - They are resolved through forwarding, mostly from a stage after E1 to Decode, and the second path cannot be used in all those cases.
+  - Forwarding of the add with the sw is done in E2.
+  - In the hazard between the second lw and the add, since the lw is a multicycle operation, it is resolved with 2 stalls and then with forwarding.
+
+- Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
+- Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
+
+For example, this figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator.
 
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/Hazard1st2ndInstructions.png" width=50% height=50%> 
