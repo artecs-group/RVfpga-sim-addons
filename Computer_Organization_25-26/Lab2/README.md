@@ -388,9 +388,7 @@ Existing dependencies:
 
 For example, this figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator.
 
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Hazard1st2ndInstructions.png" width=50% height=50%> 
-</p>
+<img width="311" height="168" alt="image" src="https://github.com/user-attachments/assets/22737ef1-c51e-49a9-bdf9-a4318f5ca6aa" />
 
 The hazard is handled by:
 - Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
