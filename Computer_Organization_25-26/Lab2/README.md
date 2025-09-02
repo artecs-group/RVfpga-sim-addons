@@ -557,8 +557,8 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
   <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
 </p>
 
-* Draw the execution diagram manually. Explain how data/control/structural hazards are handled by the VeeR EH1 core. 
-* Calculate the CPI for iteration n=0, k=1, of the loop_k loop. For that purpose, you must stop the simulation at the point shown above, and count the number of cycles until the same point (first load instruction at Decode stage) of the next iteration. Then, you must divide that number by the number of instructions executed in the loop.
+* Draw the execution diagram manually. Explain briefly how data/control/structural hazards are handled by the VeeR EH1 core. 
+* Calculate the CPI for iteration n=0, k=1, of the loop_k loop.
 
 b. Repeat the analysis from *item a* but now enable superscalar execution with respect to the configuration used at *item a*.
 
