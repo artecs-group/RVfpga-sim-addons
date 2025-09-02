@@ -9,14 +9,14 @@ Follow the next steps:
     * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2#basic-use-of-the-ripes-pipelined-processor).
     * Analyze the example exercise provided below in section [Exercise 1 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-1---guided-exercise-in-ripes).
     * Analyze the example exercise provided below in section [Exercise 2 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-2---guided-exercise-in-ripes).
-    * Finally, complete the exercise provided below in section [Exercise 3 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-3-in-ripes).
+    * Finally, complete the exercise provided below in section [Exercise 3 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-3-in-ripes). This is the first exercise you will include in the report, so make sure to write everything down as you work through it.
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
     * Start by watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
     * Replicate the instructions provided below in section [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#rvfpga-pipeline).
     * Analyze the example exercise provided below in section [Exercise 4 - Guided Exercise in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-4---guided-exercise-in-rvfpga-pipeline).
-    * Finally, complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-5-in-rvfpga-pipeline).
+    * Finally, complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-5-in-rvfpga-pipeline). This is the second exercise you will include in the report, so make sure to write everything down as you work through it.
 
 
 ## Basic use of the *Ripes Pipelined Processor*
