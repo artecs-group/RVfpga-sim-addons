@@ -113,6 +113,12 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 - ```x2``` is written by the ```add``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from WB to EX.
 - ```x5``` is written by the ```sub``` instruction and used by the ```or``` instruction. It is obtained with a forwarding from MEM to EX.
 
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/49d653df-5cd3-4443-ba48-ca53d7b0e208" width="450" />
+
+</div>
+
 *c. Analyze in Ripes how the data hazard between the ```add``` and the ```sub``` are handled.*
 
 ![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
