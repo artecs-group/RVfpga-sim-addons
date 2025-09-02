@@ -385,7 +385,7 @@ Existing dependencies:
 
 - Data hazards highlighted with colors.
 
-  - They are resolved through forwarding, mostly from a stage after E1 to Decode, and the second path cannot be used in all those cases.
+  - They are resolved through forwarding, mostly from a stage after E1 to Decode, and the second way cannot be used in all those cases.
   - Forwarding of the add with the sw is done in E2.
   - In the hazard between the second lw and the add, since the lw is a multicycle operation, it is resolved with 2 stalls and then with forwarding.
 
@@ -396,7 +396,7 @@ For example, this figure illustrates the data hazard between the ```slli``` and 
 
 <img width="311" height="168" alt="image" src="https://github.com/user-attachments/assets/22737ef1-c51e-49a9-bdf9-a4318f5ca6aa" />
 
-The hazard is handled by:
+The hazard is resolved by:
 - Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
 - Performing a forwarding from EX1 to Decode. We can see that: ```out=4 → b=4 (Byp)```.
 
