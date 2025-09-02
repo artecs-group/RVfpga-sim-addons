@@ -90,7 +90,7 @@ a. Simulate the code in Ripes, obtain the pipeline diagram and explain it.
 
 b. Identify each of the data dependencies that exist in the code and explain how they are resolved in the processor. 
 
-c. Analyze in Ripes how the data hazard between the ```add``` and the ```sub``` are handled.
+c. Show a screenshot from Ripes that illustrates how the data hazard between the ```add``` and the ```sub``` are handled.
 
 
 **SOLUTION:**
@@ -119,7 +119,7 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 
 </div>
 
-*c. Analyze in Ripes how the data hazard between the ```add``` and the ```sub``` are handled.*
+*c. Show a screenshot from Ripes that illustrates how the data hazard between the ```add``` and the ```sub``` are handled.*
 
 ![image](https://github.com/user-attachments/assets/7b2bc8b7-9295-46ef-99b7-f5373bcb05c5)
 
