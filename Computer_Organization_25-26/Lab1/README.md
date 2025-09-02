@@ -283,7 +283,7 @@ Run the code in Ripes and answer the following questions.
 
 
 ## Exercise 3
-Understand the following C program, that determines which of two vectors is farther from the origin. After the program we propose some specific tasks.
+This C program compares two integer vectors, U and V, to determine which one is farther from the origin. Instead of using built-in operators, it implements multiplication and integer square root manually. The program computes the Euclidean distance of each vector (rounded up to an integer) and stores the result of the comparison (1 if U is farther, 0 otherwise) in the global variable mayor_u.
 
 ```c
 # define N 5
