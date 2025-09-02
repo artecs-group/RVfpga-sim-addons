@@ -539,25 +539,24 @@ fin:
 j fin
 ```
 
-Analyze the code in RISC-V assembly. Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, so this needs quite a few instructions.
+Analyze the code in RISC-V assembly. Note that the arrays are initialized element by element before entering the loops, which requires a number of additional instructions.
 
-You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one:
+You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` with the new one:
 
-a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
+a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: ```and zero, t4, t5```). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the ```loop_k``` loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
 </p>
 
-* Manually draw the execution diagram of the loop_k iteration (n=0, k=1).
-* Explain briefly how data/control/structural hazards are handled by the VeeR EH1 core. You can show screenshots of the RVfpga-Pipeline simulator while executing the program.
-* Calculate the CPI for iteration n=0, k=1, of the loop_k loop. Explain how you use the simulator to compute the CPI.
+* Manually draw the pipeline execution diagram for this ```loop_k``` iteration (n=0, k=1).
+* Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
+* Compute the CPI for iteration n=0, k=1 of ```loop_k```. Explain how you used the simulator to obtain it.
 
-b. Repeat the analysis from *item a*, but enabling superscalar execution.
+b. Repeat the analysis from *item a*, now enabling superscalar execution.
 
-c. Repeat the analysis from *item a* but now enable the Gshare branch predictor with respect to the configuration used at *item b*.
+c. Repeat the analysis from *item a*, starting from the configuration in *item b* and also enabling the Gshare branch predictor.
 
-d. Repeat the analysis from *item a* but now enable the Secondary ALU with respect to the configuration used at *item c*.
+d. Repeat the analysis from *item a*, starting from the configuration in *item c* and also enabling the Secondary ALU.
 
-e. Finally, with the configuration of *item d*, reorder the code of the loop_k loop to improve performance as much as possible, and repeat the analysis from *item a*.
-
+e. Finally, with the configuration from *item d*, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
