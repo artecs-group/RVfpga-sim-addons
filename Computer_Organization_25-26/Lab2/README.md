@@ -369,7 +369,7 @@ Answer the following questions about the ```for``` loop both theoretically and u
 
 a. Identify the hazards that occur and explain how this processor handles them.
 
-b. Draw the pipeline diagram for the second iteration of the loop.
+b. Draw the pipeline diagram for the second iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
 
 c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
