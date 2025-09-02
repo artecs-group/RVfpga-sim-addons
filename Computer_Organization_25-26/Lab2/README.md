@@ -541,8 +541,6 @@ j fin
 
 Analyze the code in RISC-V assembly. Note that in the assembly program we are initializing the arrays before entering the loops, element-by-element, so this needs quite a few instructions.
 
-**NOTE**: Remember that we can configure the core in order to enable/disable different features, as explained in the corresponding video.
-
 You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one:
 
 a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above), and stop right at the beginning of iteration n=0, k=1. To get to that iteration, you must skip some cycles after the breakpoint (instruction: and zero, t4, t5). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the loop is at the Decode stage. See the following screenshot:
@@ -551,10 +549,11 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
   <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
 </p>
 
-* Draw the execution diagram manually. Explain briefly how data/control/structural hazards are handled by the VeeR EH1 core. 
-* Calculate the CPI for iteration n=0, k=1, of the loop_k loop.
+* Manually draw the execution diagram of the loop_k iteration (n=0, k=1).
+* Explain briefly how data/control/structural hazards are handled by the VeeR EH1 core. You can show screenshots of the RVfpga-Pipeline simulator while executing the program.
+* Calculate the CPI for iteration n=0, k=1, of the loop_k loop. Explain how you use the simulator to compute the CPI.
 
-b. Repeat the analysis from *item a* but now enable superscalar execution with respect to the configuration used at *item a*.
+b. Repeat the analysis from *item a*, but enabling superscalar execution.
 
 c. Repeat the analysis from *item a* but now enable the Gshare branch predictor with respect to the configuration used at *item b*.
 
