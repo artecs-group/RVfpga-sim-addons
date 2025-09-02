@@ -354,27 +354,27 @@ Specifically, perform the following tasks:
        - Indentify clearly the prologue/epilogue and explain them.
 
         ```asm
-         00010240 <main>:
-             10240:        ff010113        addi x2 x2 -16
-             10244:        00112623        sw x1 12 x2
-             10248:        00812423        sw x8 8 x2
-             1024c:        00912223        sw x9 4 x2
-             10250:        00011537        lui x10 0x11
-             10254:        6c050493        addi x9 x10 1728
-             10258:        00500593        addi x11 x0 5
-             1025c:        6c050513        addi x10 x10 1728
-             10260:        f79ff0ef        jal x1 -136 <eucl_dist>
-             10264:        00050413        addi x8 x10 0
-             10268:        00500593        addi x11 x0 5
-             1026c:        01448513        addi x10 x9 20
-             10270:        f69ff0ef        jal x1 -152 <eucl_dist>
-             10274:        00852533        slt x10 x10 x8
-             10278:        c6a18c23        sb x10 -904 x3
-             1027c:        00c12083        lw x1 12 x2
-             10280:        00812403        lw x8 8 x2
-             10284:        00412483        lw x9 4 x2
-             10288:        01010113        addi x2 x2 16
-             1028c:        00008067        jalr x0 x1 0
+        00010264 <main>:
+            10264:        ff010113        addi x2 x2 -16
+            10268:        00112623        sw x1 12 x2
+            1026c:        00812423        sw x8 8 x2
+            10270:        00912223        sw x9 4 x2
+            10274:        00011537        lui x10 0x11
+            10278:        70850493        addi x9 x10 1800
+            1027c:        00500593        addi x11 x0 5
+            10280:        70850513        addi x10 x10 1800
+            10284:        f79ff0ef        jal x1 -136 <eucl_dist>
+            10288:        00050413        addi x8 x10 0
+            1028c:        00500593        addi x11 x0 5
+            10290:        01448513        addi x10 x9 20
+            10294:        f69ff0ef        jal x1 -152 <eucl_dist>
+            10298:        00852533        slt x10 x10 x8
+            1029c:        c6a18c23        sb x10 -904 x3
+            102a0:        00c12083        lw x1 12 x2
+            102a4:        00812403        lw x8 8 x2
+            102a8:        00412483        lw x9 4 x2
+            102ac:        01010113        addi x2 x2 16
+            102b0:        00008067        jalr x0 x1 0
         ```
 
     - This is the ```i_sqrt``` function obtained.
@@ -382,25 +382,25 @@ Specifically, perform the following tasks:
        - Explain each of the instructions in the body of this function and why are they used.
 
         ```asm
-        00010190 <i_sqrt>:
-           10190:        ff010113        addi x2 x2 -16
-           10194:        00112623        sw x1 12 x2
-           10198:        00812423        sw x8 8 x2
-           1019c:        00912223        sw x9 4 x2
-           101a0:        00050493        addi x9 x10 0
-           101a4:        00000413        addi x8 x0 0
-           101a8:        00040593        addi x11 x8 0
-           101ac:        00040513        addi x10 x8 0
-           101b0:        f9dff0ef        jal x1 -100 <mul>
-           101b4:        00955663        bge x10 x9 12
-           101b8:        00140413        addi x8 x8 1
-           101bc:        fedff06f        jal x0 -20
-           101c0:        00040513        addi x10 x8 0
-           101c4:        00c12083        lw x1 12 x2
-           101c8:        00812403        lw x8 8 x2
-           101cc:        00412483        lw x9 4 x2
-           101d0:        01010113        addi x2 x2 16
-           101d4:        00008067        jalr x0 x1 0
+        000101b4 <i_sqrt>:
+            101b4:        ff010113        addi x2 x2 -16
+            101b8:        00112623        sw x1 12 x2
+            101bc:        00812423        sw x8 8 x2
+            101c0:        00912223        sw x9 4 x2
+            101c4:        00050493        addi x9 x10 0
+            101c8:        00000413        addi x8 x0 0
+            101cc:        00040593        addi x11 x8 0
+            101d0:        00040513        addi x10 x8 0
+            101d4:        f79ff0ef        jal x1 -136 <mul>
+            101d8:        00955663        bge x10 x9 12
+            101dc:        00140413        addi x8 x8 1
+            101e0:        fedff06f        jal x0 -20
+            101e4:        00040513        addi x10 x8 0
+            101e8:        00c12083        lw x1 12 x2
+            101ec:        00812403        lw x8 8 x2
+            101f0:        00412483        lw x9 4 x2
+            101f4:        01010113        addi x2 x2 16
+            101f8:        00008067        jalr x0 x1 0
         ```
 
 
