@@ -274,7 +274,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
   <img src="../../Computer_Organization/Lab2/Images/RVfpgaVidboPipeline.png" width=40% height=40%>
 </p>
 
-6. The simulator starts executing the program and stops only when the instruction \texttt{and zero, t4, t5} reaches the Decode stage of the pipeline. Note that this instruction has no effect on the architectural state of the processor; it is simply used as a breakpoint. In the program provided in this project (\texttt{ProyectoP2}), this instruction is already included before the \texttt{REPEAT} loop (see the program above). If the target program does not include the \texttt{and zero, t4, t5} instruction, you must add it at the point where you want execution to stop. Typically, this instruction is placed just before entering the loop that contains the fragment to be analyzed. For example, the following figure shows the simulator paused at the point where the instruction \texttt{and zero, t4, t5} is in the Decode stage. The second figure presents a simplified version of the VeeR EH1 microarchitecture, which helps in understanding the signals displayed by the simulator.
+6. The simulator starts executing the program and stops only when the instruction `and zero, t4, t5` reaches the Decode stage of the pipeline. Note that this instruction has no effect on the architectural state of the processor; it is simply used as a breakpoint. In the program provided in this project (`ProyectoP2`), this instruction is already included before the `REPEAT` loop (see the program above). If the target program does not include the `and zero, t4, t5` instruction, you must add it at the point where you want execution to stop. Typically, this instruction is placed just before entering the loop that contains the fragment to be analyzed. For example, the following figure shows the simulator paused at the point where the instruction `and zero, t4, t5` is in the Decode stage. The second figure presents a simplified version of the VeeR EH1 microarchitecture, which helps in understanding the signals displayed by the simulator.
 
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline1.png" width=90% height=90%>
@@ -284,51 +284,45 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
   <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width=90% height=90%>
 </p>
 
-7. Continue the execution cycle by cycle by clicking the \texttt{+ 1 Cycle} button located at the bottom-right corner of the simulator window, and observe how the program instructions flow through the VeeR EH1 pipeline.
+7. Continue the execution cycle by cycle by clicking the `+ 1 Cycle` button located at the bottom-right corner of the simulator window, and observe how the program instructions flow through the VeeR EH1 pipeline.
 
-8. In most cases, the programs we simulate consist of a loop containing the instructions to be analyzed. Specifically, in the example program shown above, the focus is on two consecutive \texttt{mul} instructions placed within a \texttt{REPEAT-OUT} loop. It is important to analyze an iteration other than the first or the second one, since some processor structures (e.g., the branch predictor or the instruction cache) have not yet been ``trained'' and might obscure the behavior we want to study. For example, the following figure shows the simulator at the point where instructions from the third, fourth, and fifth iterations are executing (at this moment the cycle count is \texttt{Cycles = 26}).
+8. In most cases, the programs we simulate consist of a loop containing the instructions to be analyzed. Specifically, in the example program shown above, the focus is on two consecutive `mul` instructions placed within a `REPEAT-OUT` loop. It is important to analyze an iteration other than the first or the second one, since some processor structures (e.g., the branch predictor or the instruction cache) have not yet been “trained” and might obscure the behavior we want to study. For example, the following figure shows the simulator at the point where instructions from the third, fourth, and fifth iterations are executing (at this moment the cycle count is `Cycles = 26`).
 
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline2.png" width=90% height=90%>
 </p>
 
-9. Let's analyze what the simulator shows in the previous figure: 
+9. Let's analyze what the simulator shows in the previous figure:
 
-\begin{itemize} 
-  \item \textbf{WRITE-BACK stage} 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{mul t0, t3, t4} (3rd iteration) is writing its result to the Register File (\texttt{waddr0=5} as register \texttt{t0} corresponds to x5, \texttt{wen0=1} as writing is enabled, and \texttt{wd0=6} which is the result of the first multiplication, 3*2). 
-      \item \emph{Way-1}: Due to the structural hazard between the two consecutive \texttt{mul} instructions, the second one was delayed by one cycle and a bubble was inserted. 
-    \end{itemize} 
-  \item \textbf{COMMIT stage} 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{mul t1, t5, t6} (3rd iteration) propagates the result in signal \texttt{i0\_result\_e4\_final=4}, which corresponds to the second multiplication (2*2). 
-      \item \emph{Way-1}: Instruction \texttt{addi t2, t2, -1} (3rd iteration) propagates the result in signal \texttt{i1\_result\_e4\_final=0xFFFC}, which is the value obtained in the third iteration of the loop (0xFFFF - 1 - 1 - 1). 
-    \end{itemize} 
-  \item \textbf{EX3/DC3/M3 stage} 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{bne t2, zero, REPEAT} (3rd iteration). 
-      \item \emph{Way-1}: Instruction \texttt{mul t0, t3, t4} (4th iteration) has just obtained the result of the multiplication (\texttt{exu\_mul\_result\_e3=6}). 
-    \end{itemize} 
-  \item \textbf{EX2/DC2/M2 stage} 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{mul t1, t5, t6} (4th iteration). 
-      \item \emph{Way-1}: Instruction \texttt{addi t2, t2, -1} (4th iteration). 
-    \end{itemize} 
-  \item \textbf{EX1/DC1/M1 stage} 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{bne t2, zero, REPEAT} (4th iteration). 
-      \item \emph{Way-1}: Instruction \texttt{mul t0, t3, t4} (5th iteration). 
-    \end{itemize} 
-  \item \textbf{DECODE stage} (in this stage, information about the source of the operands is provided: RF/Im means the operand comes from the Register File or from the Immediate, whereas Byp means the operand is obtained through a forwarding path) 
-    \begin{itemize} 
-      \item \emph{Way-0}: Instruction \texttt{mul t1, t5, t6} (5th iteration). Both operands come from the Register File. 
-      \item \emph{Way-1}: Instruction \texttt{addi t2, t2, -1} (5th iteration). The first operand comes through forwarding, while the second comes from the Immediate. 
-    \end{itemize} 
-\end{itemize} 
+- **WRITE-BACK stage**
+  - *Way-0*: Instruction `mul t0, t3, t4` (3rd iteration) is writing its result to the Register File (`waddr0=5` as register `t0` corresponds to x5, `wen0=1` as writing is enabled, and `wd0=6` which is the result of the first multiplication, 3*2).
+  - *Way-1*: Due to the structural hazard between the two consecutive `mul` instructions, the second one was delayed by one cycle and a bubble was inserted.
 
-10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press \texttt{Ctrl+C} three times.
+- **COMMIT stage**
+  - *Way-0*: Instruction `mul t1, t5, t6` (3rd iteration) propagates the result in signal `i0_result_e4_final=4`, which corresponds to the second multiplication (2*2).
+  - *Way-1*: Instruction `addi t2, t2, -1` (3rd iteration) propagates the result in signal `i1_result_e4_final=0xFFFC`, which is the value obtained in the third iteration of the loop (0xFFFF - 1 - 1 - 1).
 
+- **EX3/DC3/M3 stage**
+  - *Way-0*: Instruction `bne t2, zero, REPEAT` (3rd iteration).
+  - *Way-1*: Instruction `mul t0, t3, t4` (4th iteration) has just obtained the result of the multiplication (`exu_mul_result_e3=6`).
+
+- **EX2/DC2/M2 stage**
+  - *Way-0*: Instruction `mul t1, t5, t6` (4th iteration).
+  - *Way-1*: Instruction `addi t2, t2, -1` (4th iteration).
+
+- **EX1/DC1/M1 stage**
+  - *Way-0*: Instruction `bne t2, zero, REPEAT` (4th iteration).
+  - *Way-1*: Instruction `mul t0, t3, t4` (5th iteration).
+
+- **DECODE stage**  
+  In this stage, information about the source of the operands is provided:  
+  - **RF/Im** means the operand comes from the Register File or from the Immediate.  
+  - **Byp** means the operand is obtained through a forwarding path.  
+
+  - *Way-0*: Instruction `mul t1, t5, t6` (5th iteration). Both operands come from the Register File.  
+  - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding, while the second comes from the Immediate.
+
+10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press `Ctrl+C` three times.
 
 
 ## Exercise 4 - Guided Exercise in RVfpga-Pipeline
