@@ -561,6 +561,8 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
 
 b. Repeat the analysis from *item a*, now enabling superscalar execution.
 
+*Nota de configuración:* The presentation provided above ([here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)) explained that the VeeR EH1 allows enabling/disabling features such as dual-issue (superscalar execution), branch predictor, pipelining, and the Secondary ALU through the ```mfdc``` register (CSR 0x7F9). Configure the processor as indicated in the presentation** (see the ```VeeR EH1 SW configuration``` table). In this case, make sure to enable dual-issue (do not set the disable bit) while keeping the other options as required in the exercise.
+
 c. Repeat the analysis from *item a*, starting from the configuration in *item b* and also enabling the Gshare branch predictor.
 
 d. Repeat the analysis from *item a*, starting from the configuration in *item c* and also enabling the Secondary ALU.
