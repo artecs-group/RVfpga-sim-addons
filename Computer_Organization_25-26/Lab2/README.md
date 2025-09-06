@@ -408,6 +408,12 @@ The hazard is resolved by:
 
 *b. Draw the pipeline diagram for the second iteration of the loop.*
 
+First cycle of 2nd iteration:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/7cd0dfc2-1420-4e8d-a761-bedc6a065023" alt="image" width="500" />
+</p>
+
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/Ex5-b.png" width=90% height=90%> 
 </p>
