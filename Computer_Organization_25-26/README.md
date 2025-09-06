@@ -3,10 +3,13 @@ This is a second-year course in the Computer Science degree program offered at U
 
 As for the theoretical part, the course starts with a detailed revision of those concepts introduced in the Computer Fundamentals first-year course: RISC-V architecture and assembly programming, and the single/multi-cycle and pipelined processors from the Harris&Harris book. Then, the VeeR EH1 pipelined processor is used to introduce some advanced microarchitectural techniques, such as deep pipelining, superscalar execution and multi-cycle operations. Finally, a generic I/O system and memory system are analyzed in detail. 
 
-**Slides:**
+**Course Presentation:** [Slides](https://drive.google.com/file/d/1TlEprDNuJ3WdtL61Fby23sFV1Uki-q6p/view?usp=sharing)
 
 
-**Exercises:**
+**Lecture Slides:**
+
+
+**Problem Sets:**
 
 
 **Labs:**
