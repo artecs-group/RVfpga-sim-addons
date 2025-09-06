@@ -373,9 +373,9 @@ REPEAT:
 
 Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator. Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained. You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one.
 
-a. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
+a. Draw the pipeline diagram for the third iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
 
-b. Draw the pipeline diagram for the third iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
+b. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
 
 c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
@@ -383,30 +383,7 @@ c. Calculate the CPI (Cycles Per Instruction) of the loop.
 **SOLUTION:**
 We next show partial solutions for this exercise as an example. Complete the solutions not provided.
 
-*a. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.*
-
-<img width="259" height="271" alt="image" src="https://github.com/user-attachments/assets/77b0ad9d-11c3-4234-a2b2-71582294b623" />
-
-Existing dependencies:
-
-- Data hazards highlighted with colors.
-
-  - They are resolved through forwarding, mostly from a stage after E1 to Decode, and the second way cannot be used in all those cases.
-  - Forwarding of the add with the sw is done in E2.
-  - In the hazard between the second lw and the add, since the lw is a multicycle operation, it is resolved with 2 stalls and then with forwarding.
-
-- Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
-- Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
-
-For example, this figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator.
-
-<img width="311" height="168" alt="image" src="https://github.com/user-attachments/assets/22737ef1-c51e-49a9-bdf9-a4318f5ca6aa" />
-
-The hazard is resolved by:
-- Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
-- Performing a forwarding from EX1 to Decode. We can see that: ```out=4 → b=4 (Byp)```.
-
-*b. Draw the pipeline diagram for the second iteration of the loop.*
+*a. Draw the pipeline diagram for the second iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.*
 
 **First cycle of third iteration:**
 
@@ -432,6 +409,29 @@ The hazard is resolved by:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/a3d78f54-1ff8-4f61-9cbf-fd151d56065a" alt="image" width="600" />
 </p>
+
+*b. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.*
+
+<img width="259" height="271" alt="image" src="https://github.com/user-attachments/assets/77b0ad9d-11c3-4234-a2b2-71582294b623" />
+
+Existing dependencies:
+
+- Data hazards highlighted with colors.
+
+  - They are resolved through forwarding, mostly from a stage after E1 to Decode, and the second way cannot be used in all those cases.
+  - Forwarding of the add with the sw is done in E2.
+  - In the hazard between the second lw and the add, since the lw is a multicycle operation, it is resolved with 2 stalls and then with forwarding.
+
+- Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
+- Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
+
+For example, this figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator.
+
+<img width="311" height="168" alt="image" src="https://github.com/user-attachments/assets/22737ef1-c51e-49a9-bdf9-a4318f5ca6aa" />
+
+The hazard is resolved by:
+- Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
+- Performing a forwarding from EX1 to Decode. We can see that: ```out=4 → b=4 (Byp)```.
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
 
