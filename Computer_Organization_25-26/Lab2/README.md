@@ -463,7 +463,7 @@ This figure illustrates the data hazard between the ```add``` and the subsequent
 
 To calculate the CPI of the loop, simulate until the first instruction of the loop reaches the Decode stage in two consecutive iterations (e.g., the third and fourth iterations). Then, subtract the cycle numbers of these two iterations and divide this result by the number of instructions in the loop.
 
-Looking at the first and last RVfpga-Pipeline screenshots shown in the previous section, we can determine that in this case, ```CPI = (31-23)/8 = 1```
+Looking at the first and last RVfpga-Pipeline screenshots shown in item *a*, we can determine that in this case, ```CPI = (31-23)/8 = 1```
 
 
 
