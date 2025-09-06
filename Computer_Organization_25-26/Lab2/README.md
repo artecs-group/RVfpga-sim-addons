@@ -445,10 +445,18 @@ This figure illustrates the data hazard between the ```add``` and the second ```
   <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="400" />
 </p>
 
+
 This figure illustrates the data hazard between the two ```lw``` instructions and the ```add```. The hazard is resolved by performing a forwarding from Commit to Decode and from EX3 to Decode. Note also that the ```add``` must be delayed 2 cycles.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d09a6d55-d96d-4f9b-ae45-84ddee8b095c" alt="image" width="500" />
+</p>
+
+
+This figure illustrates the data hazard between the ```add``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```add``` and performing two forwardings from EX1 to Decode.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2b84055f-b897-44d2-85d9-66ad8e57506b" alt="image" width="300" />
 </p>
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
