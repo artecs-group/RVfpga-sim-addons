@@ -414,11 +414,18 @@ The hazard is resolved by:
   <img src="https://github.com/user-attachments/assets/7cd0dfc2-1420-4e8d-a761-bedc6a065023" alt="image" width="600" />
 </p>
 
-**Second cycle of 2nd iteration:**
+**Sixth cycle of 2nd iteration:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/de59dcc8-80ae-497d-8a4a-069024fbbe25" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/c0214546-8290-4a69-bff2-1d5bb5eee94b" alt="image" width="600" />
 </p>
+
+**Ninth cycle of 2nd iteration:**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/79abc255-e3c9-4444-a960-c3543bd82d43" alt="image" width="600" />
+</p>
+
 
 **Pipeline diagram:**
 
