@@ -432,21 +432,14 @@ This figure illustrates the data hazard between the ```slli``` and the ```add```
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode and inserting a bubble after the ```add```. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/73738de3-6416-4f03-846b-5fbcab5d4fb4" alt="image" width="300" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="300" />
-</p>
-
-
-This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="300" />
