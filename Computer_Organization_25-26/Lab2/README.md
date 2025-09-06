@@ -425,13 +425,34 @@ Existing dependencies:
 - Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
 - Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
 
-For example, this figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator.
+This figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode. We can see that: ```out=8 → b=8 (Byp)```.
 
-<img width="311" height="168" alt="image" src="https://github.com/user-attachments/assets/22737ef1-c51e-49a9-bdf9-a4318f5ca6aa" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/6f5a6c51-9200-4d82-b941-f12b4bb0acc2" alt="image" width="300" />
+</p>
 
-The hazard is resolved by:
-- Inserting a bubble by the ```slli``` instruction (way-1). We can see that Way 1 in the EX1 Stage is empty (```-----```).
-- Performing a forwarding from EX1 to Decode. We can see that: ```out=4 → b=4 (Byp)```.
+
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode and inserting a bubble after the ```add```. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/73738de3-6416-4f03-846b-5fbcab5d4fb4" alt="image" width="300" />
+</p>
+
+
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="300" />
+</p>
+
+
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="300" />
+</p>
+
+
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
 
