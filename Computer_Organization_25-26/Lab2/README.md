@@ -385,19 +385,19 @@ We next show partial solutions for this exercise as an example. Complete the sol
 
 *a. Draw the pipeline diagram for the second iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.*
 
-**First cycle of third iteration:**
+**First cycle of third iteration**. The first instruction of the loop (```slli```) is at the Decode Stage, on the second way (Way-1):
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4aeffe55-8730-4f11-93d7-33aba8fc373d" alt="image" width="600" />
 </p>
 
-**Sixth cycle of third iteration:**
+**Sixth cycle of third iteration**. The first instruction of the loop (```slli```) is at the WB Stage:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0aa35007-86c3-492c-b3e7-083f6f35cd22" alt="image" width="600" />
 </p>
 
-**Ninth cycle of third iteration:**
+**Ninth cycle of third iteration**. The first instruction of the loop (```slli```) is again at the Decode Stage:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e99be2ee-ee9c-45a2-9d13-0887deddee7c" alt="image" width="600" />
