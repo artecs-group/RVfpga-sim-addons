@@ -1,4 +1,4 @@
-# Lab 2 - The Ripes core and the VeeR EH1 core
+<img width="1293" height="697" alt="image" src="https://github.com/user-attachments/assets/0edffe89-129d-43bc-9bec-b3dff5ba208e" /># Lab 2 - The Ripes core and the VeeR EH1 core
 This practice aims to help students gain a thorough understanding of the commercial VeeR EH1 core, an advanced 2-way superscalar processor with 9 pipeline stages. The processor is explained both theoretically, through a detailed presentation, and practically, using the RVfpga-Pipeline simulator. As a preparatory step, we first focus on the typical academic 5-stage pipelined processor, exploring it theoretically (using the pipelined processor from the Harris and Harris book, H&H) and practically (through the Ripes simulator). 
 
 Follow the next steps:
@@ -375,7 +375,7 @@ Answer the following questions about the ```for``` loop both theoretically and u
 
 a. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
 
-b. Draw the pipeline diagram for the second iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
+b. Draw the pipeline diagram for the third iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
 
 c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
@@ -408,22 +408,22 @@ The hazard is resolved by:
 
 *b. Draw the pipeline diagram for the second iteration of the loop.*
 
-**First cycle of 2nd iteration:**
+**First cycle of third iteration:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/7cd0dfc2-1420-4e8d-a761-bedc6a065023" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/4aeffe55-8730-4f11-93d7-33aba8fc373d" alt="image" width="600" />
 </p>
 
-**Sixth cycle of 2nd iteration:**
+**Sixth cycle of third iteration:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c0214546-8290-4a69-bff2-1d5bb5eee94b" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/0aa35007-86c3-492c-b3e7-083f6f35cd22" alt="image" width="600" />
 </p>
 
-**Ninth cycle of 2nd iteration:**
+**Ninth cycle of third iteration:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/79abc255-e3c9-4444-a960-c3543bd82d43" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/e99be2ee-ee9c-45a2-9d13-0887deddee7c" alt="image" width="600" />
 </p>
 
 
@@ -435,19 +435,9 @@ The hazard is resolved by:
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
 
-To calculate the CPI of the loop, simulate until a given instruction of the loop reaches the Decode stage in two consecutive iterations (e.g., the third and fourth iterations). Then, subtract the cycle numbers of these two iterations and divide this result by the number of instructions in the loop.
+To calculate the CPI of the loop, simulate until the first instruction of the loop reaches the Decode stage in two consecutive iterations (e.g., the third and fourth iterations). Then, subtract the cycle numbers of these two iterations and divide this result by the number of instructions in the loop.
 
-For example:
-
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Cycle25.png" width=90% height=90%>
-</p>
-
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Cycle33.png" width=90% height=90%>
-</p>
-
-In this case, ```CPI = (33-25)/8 = 1```
+Looking at the first and last RVfpga-Pipeline screenshots shown in the previous section, we can determine that in this case, ```CPI = (31-23)/8 = 1```
 
 
 
