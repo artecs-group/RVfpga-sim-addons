@@ -430,7 +430,7 @@ The hazard is resolved by:
 **Pipeline diagram:**
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Ex5-b.png" width=90% height=90%> 
+  <img src="https://github.com/user-attachments/assets/a3d78f54-1ff8-4f61-9cbf-fd151d56065a" alt="image" width="600" />
 </p>
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
