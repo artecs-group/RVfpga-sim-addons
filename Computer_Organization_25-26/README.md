@@ -8,8 +8,12 @@ As for the theoretical part, the course starts with a detailed revision of those
 
 **Lecture Slides:**
 
++ [Módulo 0](https://drive.google.com/file/d/1EyCNYgjavq6Czz_wRyEB9UJYORIUza5C/view?usp=sharing): Repaso de FC2.
+
 
 **Problem Sets:**
+
++ [Ejercicios Módulo 0](https://drive.google.com/file/d/1QaD-0x19RwO2RAl-DOGyWt4zx8w07y79/view?usp=sharing): Ejercicios de repaso de FC2.
 
 
 **Labs:**
