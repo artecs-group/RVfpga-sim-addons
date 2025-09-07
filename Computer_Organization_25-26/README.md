@@ -1,23 +1,9 @@
 # Computer Organization 2025-26 at UCM
 This is a second-year course in the Computer Science degree program offered at UCM. You can see the contents of this course at [Computer Organization UCM](https://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2025/8942.pdf).
 
-Next you can find the materials we use in the course:
+As for the theoretical part, the course starts with a detailed revision of those concepts introduced in the Computer Fundamentals first-year course: RISC-V architecture and assembly programming, and the single/multi-cycle and pipelined processors from the Harris&Harris book. Then, the VeeR EH1 pipelined processor is used to introduce some advanced microarchitectural techniques, such as deep pipelining, superscalar execution and multi-cycle operations. Then, the memory system (cache hierarchy and virtual memory) is analyzed in detail. Finally, a generic I/O system is studied.
 
-**Course Presentation:** [Slides](https://drive.google.com/file/d/1TlEprDNuJ3WdtL61Fby23sFV1Uki-q6p/view?usp=sharing)
-
-
-**Lecture Slides:**
-
-+ [Módulo 0](https://drive.google.com/file/d/1EyCNYgjavq6Czz_wRyEB9UJYORIUza5C/view?usp=sharing): Revision of FC2.
-
-
-**Problem Sets:**
-
-+ [Ejercicios Módulo 0](https://drive.google.com/file/d/1QaD-0x19RwO2RAl-DOGyWt4zx8w07y79/view?usp=sharing): Selection of exercises from FC2.
-
-
-**Labs:**
-In this course, we do not have boards available for all students (ranging from 50 to 80 per year). Therefore, all labs are conducted through simulations using tools such as RVfpga-ViDBo, RVfpga-Pipeline, and Ripes, within a provided Virtual Machine.
+The course includes five labs:
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab0): Introduction and Installation.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1): The RISC-V ISA.
@@ -25,3 +11,6 @@ In this course, we do not have boards available for all students (ranging from 5
 + [Lab 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3): The Memory Hierarchy.
 + [Lab 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4): The RVfpga I/O System.
 
+In this course, we do not have boards available for all students (ranging from 50 to 80 per year). Therefore, all labs are conducted through simulations using tools such as RVfpga-ViDBo, RVfpga-Pipeline, and Ripes, within a provided Virtual Machine.
+
+*NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact dani02@ucm.es*
