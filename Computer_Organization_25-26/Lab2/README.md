@@ -17,7 +17,7 @@ Follow the next steps:
     * Replicate the instructions provided below in section [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#rvfpga-pipeline).
     * Analyze the example exercise provided below in section [Exercise 4 - Guided Exercise in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-4---guided-exercise-in-rvfpga-pipeline).
     * Complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-5-in-rvfpga-pipeline). This is the second exercise you will include in the report, so make sure to write everything down as you work through it.
-    * Finally, simulate the three extra exercises provided in the following document: [ExtraExercises](https://drive.google.com/file/d/1bz953GYCdeKZ29ZFqEpg-SoI1Hf1J2is/view?usp=sharing). These exercises are presented with theoretical solutions, and your task is to solve them using the RVfpga-Pipeline simulator.
+    * Finally, you can optionally simulate the three extra exercises provided in the following document: [ExtraExercises](https://drive.google.com/file/d/1bz953GYCdeKZ29ZFqEpg-SoI1Hf1J2is/view?usp=sharing). These exercises are presented with theoretical solutions, and your task is to solve them using the RVfpga-Pipeline simulator.
 
 
 ## Basic use of the *Ripes Pipelined Processor*
