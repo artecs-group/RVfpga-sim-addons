@@ -1,7 +1,7 @@
 # Lab 5 (Lab 3 of CO) - The Memory Hierarchy
 This practice aims to help students understand the cache memory. You can follow the next steps:
 
-1. Start by following the guided example provided below in section [Cache simulation in Ripes - Guided example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes).
+1. Start by following the guided example provided below in section [Cache simulation in Ripes - Guided example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes---guided-example).
 2. Then, resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) using Ripes. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
 
 ## Cache simulation in Ripes - Guided example
