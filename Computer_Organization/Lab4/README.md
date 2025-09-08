@@ -143,4 +143,22 @@ Note: In C, the following two operators work as explained:
 
 ## Exercise 7
 
-Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that the first switch retains the same functionality as in the original code, and each time a 0 to 1 transition is detected on the second switch, the 7-segment displays invert their on/off state (i.e., if they are off, they turn on and continue displaying the count, and if they are on, they turn off).
+Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
+
+- Both of the two least significant switches must be used, not just one. The register ```RGPIO_INTS``` indicates which pin generated the interrupt.  
+- The **first switch** retains the same functionality as in the original code.  
+- The **second switch** toggles the 7-segment displays on/off state (i.e., if they are off, they turn on and continue displaying the count, and if they are on, they turn off).
+
+
+## Exercise 8
+
+Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
+
+- Both of the two least significant switches must be used, not just one. The register ```RGPIO_INTS``` indicates which pin generated the interrupt.  
+- The **first switch** toggles between two counting speeds.  
+- The **second switch** toggles the counting direction:  
+  * Increment the counter.  
+  * Decrement the counter.  
+
+Unlike the original code, it is not necessary for the LEDs to invert their value on each 0-to-1 transition; instead, they must remain turned off.
+
