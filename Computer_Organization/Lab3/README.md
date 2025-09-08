@@ -5,7 +5,7 @@ This practice aims to help students understand the cache memory. You can follow 
 2. Then, resolve the exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) using Ripes. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
 
 ## Cache simulation in Ripes - Guided example
-The cache view allows simulating different configurations and management policies for first-level data and instruction caches. In general, and unless stated otherwise, for this practice, we will configure the compiler to work with optimization level -O1 and set the processor to Single-Cycle 32-bit (see the following two figures). Moreover, in most of the exercises, we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
+The cache view allows simulating different configurations and management policies for first-level data and instruction caches. In general, and unless stated otherwise, for this practice, we will configure the compiler to work with optimization level -O1 and set the processor to Single-Cycle 32-bit (see the following two figures). Moreover, in these exercises we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
 
 <p align="center">
   <img src="Images/CompilerSettings.png" width=80% height=80%>
