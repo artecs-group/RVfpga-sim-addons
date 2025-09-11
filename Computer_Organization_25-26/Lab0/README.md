@@ -24,7 +24,11 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
-**NOTE:** If you are using an Apple Silicon MacBook you will not be able to run the VM provided here. In that case, we recommend you to create your own Ubuntu 22.04 Virtual Machine (you can look for a tutorial in the Internet; for example: [InstallUbuntuVM](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan)). Then you must follow these instructions to install Ripes and VSCode+PlatformIO on the Virtual Machine: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
+**NOTE:** If you are using an Apple Silicon MacBook you will not be able to run the VM provided here. In that case, we recommend you to follow the next steps:
+
+1. Create your own Ubuntu 22.04 Virtual Machine. You can look for a tutorial in the Internet; for example: [InstallUbuntuVM](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
+2. Then you must follow these instructions to install Ripes and VSCode+PlatformIO on the Virtual Machine: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
+
 
 ## Simulators and Example Projects
 *You can visualize the following video from time 1:45 to time 3:10 to see the steps described in this section: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=-LpPqGG2L8ovLKRd&t=104).
