@@ -20,7 +20,8 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
 
 <img width="1421" height="510" alt="image" src="https://github.com/user-attachments/assets/3e2e5eea-0eb5-4c78-b577-e00844b8cc20" />
 
-The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those and import the VM (you can follow a tutorial on the Internet). The screenshots in this tutorial are for VirtualBox.
+
+The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those programs and import the VM (the screenshots in this tutorial are for VirtualBox).
 
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, or the memory amount used by the VM.
 
@@ -28,7 +29,7 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 
 **Installation in Apple Silicon MacBook:** Follow the next steps:
 
-1. Create your own Ubuntu Virtual Machine. If Ubuntu 22.04 is not available, you can use a more recent Ubuntu version. If you need, you can look for a tutorial in the Internet; for example: [InstallUbuntuVM](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
+1. Create your own Ubuntu Virtual Machine. If Ubuntu 22.04 is not available, you can use a more recent Ubuntu version. If you need, you can look for a tutorial in the Internet; for example: [InstallUbuntuVM_AppleSilicon](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
 2. Then you must follow these instructions to install Ripes and VSCode+PlatformIO on the Virtual Machine: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
 
 
