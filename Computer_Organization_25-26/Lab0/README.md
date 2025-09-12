@@ -9,7 +9,9 @@ This lab aims to prepare our computer to work in the labs of the course and to i
 ## Virtual Machine
 *You can visualize the following video from time 0:0 to time 1:45 to see the steps described in this section: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s).
 
-In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on any native OS (Windows, Linux, macOS). The VM we will use belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
+In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors); however, if you are using an Apple Silicon MacBook (M1, M2, M3, …), you will not be able to run this VM. In that case, follow the alternative instructions provided at the end of this section.
+
+The VM belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
 + [Virtual Machine 1st link](https://drive.google.com/file/d/1KFnJYq6krB7vYt_AqTB_zTYVmxfATwJF/view)
 + [Virtual Machine 2nd link](https://pvr-sdk-live.s3.amazonaws.com/iup/ubuntu-22-RVfpga.ova)
 
@@ -18,15 +20,15 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
 
 <img width="1421" height="510" alt="image" src="https://github.com/user-attachments/assets/3e2e5eea-0eb5-4c78-b577-e00844b8cc20" />
 
-The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those softwares and import the VM (you can follow a tutorial on the Internet). The screenshots in this tutorial are for VirtualBox.
+The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those and import the VM (you can follow a tutorial on the Internet). The screenshots in this tutorial are for VirtualBox.
 
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, or the memory amount used by the VM.
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
-**NOTE:** If you are using an Apple Silicon MacBook you will not be able to run the VM provided here. In that case, we recommend you to follow the next steps:
+**Installation in Apple Silicon MacBook:** Follow the next steps:
 
-1. Create your own Ubuntu 22.04 Virtual Machine. You can look for a tutorial in the Internet; for example: [InstallUbuntuVM](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
+1. Create your own Ubuntu Virtual Machine. If Ubuntu 22.04 is not available, you can use a more recent Ubuntu version. If you need, you can look for a tutorial in the Internet; for example: [InstallUbuntuVM](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
 2. Then you must follow these instructions to install Ripes and VSCode+PlatformIO on the Virtual Machine: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
 
 
