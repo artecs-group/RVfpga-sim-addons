@@ -27,11 +27,12 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
+<!-- 
 **Installation in Apple Silicon MacBook:** Follow the next steps:
 
 1. Create your own Ubuntu Virtual Machine. If Ubuntu 22.04 is not available, you can use a more recent Ubuntu version. If you need, you can look for a tutorial in the Internet; for example: [InstallUbuntuVM_AppleSilicon](https://youtu.be/LjL_N0OZxvY?si=9XgG6DPLE9i1Oxan).
 2. Then you must follow these instructions to install Ripes and VSCode+PlatformIO on the Virtual Machine: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
-
+-->
 
 ## Simulators and Example Projects
 *You can visualize the following video from time 1:45 to time 3:10 to see the steps described in this section: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=-LpPqGG2L8ovLKRd&t=104).
