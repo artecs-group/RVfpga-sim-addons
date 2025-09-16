@@ -349,15 +349,16 @@ void main () {
 
 Configure the simulator and compile the program as follows:
 
-- Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button: ![image](https://github.com/user-attachments/assets/0c4ee25b-d4b2-4996-91e4-3bc2072c1e29)).
+1. Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button: ![image](https://github.com/user-attachments/assets/0c4ee25b-d4b2-4996-91e4-3bc2072c1e29)).
 
   ![image](https://github.com/user-attachments/assets/211e7a70-c2bf-41f4-9dfd-d37127ad14a7)
 
-- Select a ```-O1``` optimization level (```Edit - Settings - Compiler```).
+2. Select a ```-O1``` optimization level (```Edit - Settings - Compiler```).
 
   ![image](https://github.com/user-attachments/assets/05302054-3b8b-47fb-8af5-a8be4a61e9eb)
 
-- Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
+3. Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
+
 
 Run the code in Ripes and answer the following questions.
 
@@ -397,7 +398,7 @@ c. This is the ```i_sqrt``` function obtained after compiling the program.
 
 i. Indentify clearly the prologue/epilogue and explain them.
        
-ii. Explain each of the instructions in the body of this function and what they are they used.
+ii. Explain each instruction in the body of this function and what it is used for.
 
         ```asm
         000101b4 <i_sqrt>:
