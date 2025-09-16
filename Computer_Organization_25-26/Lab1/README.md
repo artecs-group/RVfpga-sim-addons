@@ -365,9 +365,9 @@ a. Confirm that the final result is correct.
 
 b. This is the ```main``` function obtained after compiling the program.
 
-       i. Explain the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
+i. Explain the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
 
-       ii. Indentify clearly the prologue/epilogue and explain them.
+ii. Indentify clearly the prologue/epilogue and explain them.
 
         ```asm
         00010264 <main>:
@@ -395,9 +395,9 @@ b. This is the ```main``` function obtained after compiling the program.
 
 c. This is the ```i_sqrt``` function obtained after compiling the program.
 
-       i. Indentify clearly the prologue/epilogue and explain them.
+i. Indentify clearly the prologue/epilogue and explain them.
        
-       ii. Explain each of the instructions in the body of this function and what they are they used.
+ii. Explain each of the instructions in the body of this function and what they are they used.
 
         ```asm
         000101b4 <i_sqrt>:
