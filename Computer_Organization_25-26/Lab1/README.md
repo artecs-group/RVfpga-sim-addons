@@ -344,7 +344,9 @@ Configure the simulator and compile the program as follows:
 
   ![image](https://github.com/user-attachments/assets/05302054-3b8b-47fb-8af5-a8be4a61e9eb)
 
-* Compile the program (```Compile C program``` button: ![image](https://github.com/user-attachments/assets/5c90dbf5-fd59-439f-8258-5ba40bfe2c19)).
+* Compile the program by clicking on the hammer button.
+
+    <img src="https://github.com/user-attachments/assets/99be0c63-a7c0-4e1c-a462-2eb99af5a1b7" width="400" />
 
 
 Run the code in Ripes and answer the following questions.
