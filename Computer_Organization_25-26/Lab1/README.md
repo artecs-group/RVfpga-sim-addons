@@ -393,7 +393,7 @@ b. This is the ```main``` function obtained after compiling the program.
             102b0:        00008067        jalr x0 x1 0
         ```
 
-    c. This is the ```i_sqrt``` function obtained after compiling the program.
+c. This is the ```i_sqrt``` function obtained after compiling the program.
 
        i. Indentify clearly the prologue/epilogue and explain them.
        
