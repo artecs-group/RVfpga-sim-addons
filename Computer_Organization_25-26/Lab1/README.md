@@ -219,22 +219,14 @@ Given the following RISC-V assembly code:
 ```
 
 Run the code in Ripes (you can simply copy the previous code in the editor) and answer the following questions.
-
-a. Briefly explain what the code does.
-
-b. Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
-
-c. What instruction does the pseudo-instruction ```li s1, n``` translate to?
-
-d. What instruction does the pseudo-instruction ```mv s2, zero``` translate to?
-
-e. To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
-
-f. Identify in the memory viewer, one by one, the instructions that make up the for loop. Are they properly aligned?
-
-g. Analyze in the memory viewer how the vector changes after each iteration.
-
-h. Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
+1. Briefly explain what the code does.
+2. Provide examples of the different addressing modes we explained in theory based on the instructions in the program (use examples of instructions, not pseudo-instructions).
+3. What instruction does the pseudo-instruction ```li s1, n``` translate to?
+4. What instruction does the pseudo-instruction ```mv s2, zero``` translate to?
+5. To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
+6. Identify in the memory viewer, one by one, the instructions that make up the for loop. Are they properly aligned?
+7. Analyze in the memory viewer how the vector changes after each iteration.
+8. Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
 
 
 ## Exercise 2
@@ -282,14 +274,10 @@ factorial:
 ```
 
 Run the code in Ripes and answer the following questions.
-
-a. The code contains three errors. Identify and correct them until the program works correctly.
-
-b .Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
-
-c. What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
-
-d. Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier).
+1. The code contains three errors. Identify and correct them until the program works correctly.
+2. Find examples of each of the formats used in RISCV (R, I, S, B, U, J) and explain these formats in detail based on the examples shown.
+3. What values does the stack contain, and what is the value of sp during the execution of the subroutine? Justify your answer.
+4. Suppose the processor did not include the M extension (you can research this extension online). Perform the multiplication in the factorial function by calling a new subroutine that calculates the multiplication through successive additions (within a loop, add the multiplicand as many times as indicated by the multiplier).
 
 
 ## Exercise 3
@@ -348,7 +336,6 @@ void main () {
 ```
 
 Configure the simulator and compile the program as follows:
-
 1. Select the Single-Cycle processor and disable the M and C extensions (```Select processor``` button: ![image](https://github.com/user-attachments/assets/0c4ee25b-d4b2-4996-91e4-3bc2072c1e29)).
 
   ![image](https://github.com/user-attachments/assets/211e7a70-c2bf-41f4-9dfd-d37127ad14a7)
@@ -361,14 +348,10 @@ Configure the simulator and compile the program as follows:
 
 
 Run the code in Ripes and answer the following questions.
-
-a. Confirm that the final result is correct.
-
-b. This is the ```main``` function obtained after compiling the program.
-
-i. Explain the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
-
-ii. Indentify clearly the prologue/epilogue and explain them.
+1. Confirm that the final result is correct.
+2. This is the ```main``` function obtained after compiling the program.
+    * Explain the two invocations of the ```eucl_dist``` function from the point of view of the RISC-V Calling Convention (analyze both the input and output parameters).
+    * Indentify clearly the prologue/epilogue and explain them.
 
         ```asm
         00010264 <main>:
@@ -394,11 +377,9 @@ ii. Indentify clearly the prologue/epilogue and explain them.
             102b0:        00008067        jalr x0 x1 0
         ```
 
-c. This is the ```i_sqrt``` function obtained after compiling the program.
-
-i. Indentify clearly the prologue/epilogue and explain them.
-       
-ii. Explain each instruction in the body of this function and what it is used for.
+3. This is the ```i_sqrt``` function obtained after compiling the program.
+    * Indentify clearly the prologue/epilogue and explain them.
+    * Explain each instruction in the body of this function and what it is used for.
 
         ```asm
         000101b4 <i_sqrt>:
