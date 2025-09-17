@@ -30,9 +30,9 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
 **Installation on a fresh Ubuntu OS:**  
-If you want to install the simulators on a fresh Ubuntu system, either running natively or within a Virtual Machine, follow these steps:
+If you want to install the simulators on a Ubuntu system, either running natively or within a Virtual Machine, follow these steps:
 
-1. If necessary, create your own Ubuntu Virtual Machine. You can use Ubuntu 22.04, or any more recent version.  
+1. If necessary, install Ubuntu or create your own Ubuntu Virtual Machine. You can use Ubuntu 22.04, or any more recent version.  
 2. Follow these instructions to install Ripes and VSCode+PlatformIO on Ubuntu: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
 
 
