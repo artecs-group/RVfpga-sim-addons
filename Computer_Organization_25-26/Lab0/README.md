@@ -41,6 +41,8 @@ If you want to install the simulators on a Ubuntu system, either running nativel
 
 Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
 
+*OPTIONAL: An enhanced version of the RVfpga-Pipeline simulator is also available. If you prefer to try it, you can download these sources ([SimulatorsAndProjects_25-26]()) instead of the previous package. Keep in mind that, although this version provides a more polished interface, it is not fully aligned with the images and videos used in the demo materials.*
+
 To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
 <img width="1120" height="714" alt="image" src="https://github.com/user-attachments/assets/965a2a25-f6ff-4620-a84e-754d43403a29" />
