@@ -43,6 +43,13 @@ Once the Virtual Machine (VM) is installed in your system, all labs will be deve
 
 *OPTIONAL: An enhanced version of the RVfpga-Pipeline simulator is also available. If you prefer to try it, you can download these sources ([SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing)) instead of the previous package. Keep in mind that, although this version provides a more polished interface, it is not fully aligned with the images and videos used in the demo materials.*
 
+*Main improvements of this version:*  
+*– Improved aesthetics: cleaner layout, refined colors and fonts.*  
+*– “-1 Cycle” button: allows going back one cycle by replaying the simulation.*  
+*– Forwarding arrows: red dashed arrows show data forwarding paths from producers to consumers at the Decode stage.*  
+*– Highlighted datapaths: occupied pipeline stages are emphasized with colored rectangles.*  
+*– Instruction display: the current instruction is shown inside each highlighted rectangle.*  
+
 To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
 <img width="1120" height="714" alt="image" src="https://github.com/user-attachments/assets/965a2a25-f6ff-4620-a84e-754d43403a29" />
