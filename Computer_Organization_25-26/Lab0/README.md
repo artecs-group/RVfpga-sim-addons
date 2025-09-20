@@ -49,7 +49,7 @@ Once the Virtual Machine (VM) is installed in your system, all labs will be deve
 > - Highlighted datapaths: occupied pipeline stages are emphasized with colored rectangles.  
 > - Instruction display: the current instruction is shown inside each highlighted rectangle.  
 
-To do this you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
+Once you have downloaded the file, you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
 <img width="1120" height="714" alt="image" src="https://github.com/user-attachments/assets/965a2a25-f6ff-4620-a84e-754d43403a29" />
 
