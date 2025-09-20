@@ -460,6 +460,13 @@ This figure illustrates the data hazard between the ```add``` and the subsequent
   <img src="https://github.com/user-attachments/assets/2b84055f-b897-44d2-85d9-66ad8e57506b" alt="image" width="300" />
 </p>
 
+*NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), you can directly visualize these forwarding paths in the simulator. The following figure illustrates the data hazard between the two ```lw``` instructions and the ```add```:*
+
+<img width="1563" height="601" alt="image" src="https://github.com/user-attachments/assets/300d592d-2168-46e7-9503-99eb18f00345" />
+
+
+
+
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
 
 To calculate the CPI of the loop, simulate until the first instruction of the loop reaches the Decode stage in two consecutive iterations (e.g., the third and fourth iterations). Then, subtract the cycle numbers of these two iterations and divide this result by the number of instructions in the loop.
