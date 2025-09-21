@@ -325,6 +325,10 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press `Ctrl+C` three times.
 
+*NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), this is the simulator view for the same program and cycle described in item 8.*
+
+
+
 
 ## Exercise 4 - Guided Exercise in RVfpga-Pipeline
 Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
