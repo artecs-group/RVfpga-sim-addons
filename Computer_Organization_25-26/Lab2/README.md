@@ -327,6 +327,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 *NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), this is the simulator view for the same program and cycle described in item 8.*
 
+<img width="1568" height="627" alt="image" src="https://github.com/user-attachments/assets/19603f12-1e7d-4c55-b4e0-17ac3f9fe93f" />
 
 
 
