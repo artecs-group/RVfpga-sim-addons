@@ -45,7 +45,12 @@ Once the Virtual Machine (VM) is installed in your system, all labs will be deve
 >  
 > - Improved aesthetics: cleaner layout, refined colors and fonts.  
 > - “-1 Cycle” button: allows going back one cycle.  
-> - Forwarding arrows: red dashed arrows show data forwarding paths from producers to consumers at the Decode stage.  
+> - Forwarding arrows: red dashed arrows show data forwarding paths. Supported forwardings:  
+>   - From EX2/EX3/Commit/WB to Decode.  
+>   - From DC3 (LSU) to M1 (Multiplier).  
+>   - From EX2 (ALU) to DC2 (Store).  
+>   - From DC3 (Load) to DC2 (Store).  
+>   - (Secondary ALU forwardings not yet included).  
 > - Highlighted datapaths: occupied pipeline stages are emphasized with colored rectangles.  
 > - Instruction display: the current instruction is shown inside each highlighted rectangle.  
 
