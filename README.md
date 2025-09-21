@@ -57,22 +57,42 @@ Finally, in the following links you can also find many videos that illustrate di
 
 
 ## RVfpga Tools
-We provide both simulation and hardware methods for using and analyzing the RVfpga core, SoC, and its peripherals. The next figure shows a diagram of these tools using the EL2 SoC and a Nexys A7 FPGA board. All the tools share a common back-end, the VeeRwolfX SoC code, but have different front-ends.
+
+RVfpga provides both simulation and hardware-based methods for using and analyzing the RVfpga core, SoC, and its peripherals.  
+The following figure shows an overview of these tools using the EL2 SoC and a Nexys A7 FPGA board.  
+All tools share a common back-end —the VeeRwolfX SoC code— but use different front-ends.
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/c59fb53a-1566-4ec3-8f43-b45167d9a2f6" width="600" alt="Descripción de la imagen">
+  <img src="https://github.com/user-attachments/assets/c59fb53a-1566-4ec3-8f43-b45167d9a2f6" width="600" alt="RVfpga tools diagram">
 </div>
 
-  * **Execution on the physical board:**  To use the VeeRwolfX SoC in hardware on an FPGA board, we provide the default configurations with the packages; users could generate a new bitstream using Vivado. RVfpga supports three FPGA boards: the
-Nexys A7, Basys 3 and Boolean boards. All instructions for generating the bitstream and for running on the different boards can be found at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/).
-  * **Execution in simulation:** RVfpga includes three SoC simulation tools based on Verilator: RVfpga-ViDBo (it uses a Virtual Development Board to perform a simulation of the RVfpga System and communicate with the peripherals on the simulated board), RVfpgaPipeline (it shows the instructions of a RISC-V program flowing through the VeeR EH1 or EL2 pipeline), and RVfpga-Trace (it generates a trace of the internal signals of the SoC while executing a given program and then visualizes the waveform of this trace using GTKWave). These tools, in addition to RVfpga-Whisper (a RISC-V Instruction Set Simulator), can be used to complete the course without needing a physical board; thus, the RVfpga course can be completed at no cost. The back-end of each of these SoC simulators is Verilator, which transforms the Verilog SoC into C++ code; the user then compiles and executes that code to run a RISC-V program in simulation. Each SoC simulation tool then uses those simulation results. The simulation binaries for the default configurations are provided with the RVfpga package, but users can generate new binaries using Verilator. The sources for these simulators and instructions on how to compile and use them can be found in several places:
-    1. The sources provided for the courses mentioned above. Two versions are available:
-      * [SimulatorsAndProjects_24-25](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing):
-        - *RVfpga-ViDBo*: sources and precompiled binaries available at ```Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo```
-        - *RVfpga-Pipeline*: sources and precompiled binaries available at ```Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline```
-        - *RVfpga-Trace*: sources and precompiled binaries available at ```Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace```
-      * [SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing). The only difference with respect to the previous version is that it includes an enhanced version of the RVfpga-Pipeline simulator.
-    2. Version 3.0 of the RVfpga course ([RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/))
-    3. The MOOC edX course ([RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core))
-    4. The papers mentioned above
-    5. Old versions of RVfpga-ViDBo and RVfpga-Pipeline are also provided in this GitHub ([SimulationTools](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/SimulationTools))
+- **Execution on the physical board:**  
+  The VeeRwolfX SoC can run in hardware on supported FPGA boards. Default configurations are provided with the packages, but users can also generate new bitstreams using Vivado. RVfpga supports three FPGA boards: **Nexys A7, Basys 3, and Boolean**.  
+  Instructions for generating the bitstream and running on these boards are available at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/).
+
+- **Execution in simulation:**  
+  RVfpga includes several SoC simulation tools (the first three are based on Verilator):
+  - **RVfpga-ViDBo**: simulates the RVfpga System on a Virtual Development Board, including communication with peripherals.  
+  - **RVfpga-Pipeline**: visualizes the execution of instructions through the VeeR EH1 or EL2 pipeline.  
+  - **RVfpga-Trace**: records internal SoC signals while running a program and visualizes them with GTKWave.  
+  - **RVfpga-Whisper**: a RISC-V Instruction Set Simulator.  
+
+  With these tools, the complete RVfpga course can be followed without a physical board, at no cost.  
+  Internally, all SoC simulators use **Verilator**, which translates the Verilog SoC into C++ code that is then compiled and executed to simulate RISC-V programs.  
+  Default simulation binaries are included in the RVfpga package, but users can also generate new ones using Verilator.
+
+  Sources and compilation instructions can be found in several places:
+
+  1. **Course-provided packages** (two versions available):
+     - [SimulatorsAndProjects_24-25](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing)  
+       After extracting the archive, the three simulators can be found in:
+       - *RVfpga-ViDBo*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo`  
+       - *RVfpga-Pipeline*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline`  
+       - *RVfpga-Trace*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace`  
+     - [SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing)  
+       Same as the previous version, but including an **enhanced RVfpga-Pipeline** simulator.
+
+  2. **RVfpga course v3.0**: [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/)  
+  3. **edX MOOC**: [RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)  
+  4. **Academic papers** associated with RVfpga  
+  5. **Older versions** of RVfpga-ViDBo and RVfpga-Pipeline are also available on GitHub: [SimulationTools](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/SimulationTools)
