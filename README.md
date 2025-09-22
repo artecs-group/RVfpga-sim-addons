@@ -67,7 +67,7 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 </div>
 
 - **Execution on the physical board:**  
-  The VeeRwolfX SoC can run in hardware on supported FPGA boards. Default configurations are provided with the packages, but users can also generate new bitstreams using Vivado. Instructions for generating the bitstream and running on these boards are available at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/). RVfpga supports three FPGA boards: **Nexys A7, Basys 3, and Boolean**.
+  The VeeRwolfX SoC can run in hardware on supported FPGA boards. Default configurations are provided with the packages, but users can also generate new bitstreams using Vivado. Instructions for generating the bitstream and running on these boards are available at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and in some of the above courses (such as **[Integrated_Systems_Architecture_24-25](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture)** or **[Design_Microcontrollers_Open_Hardware_24-25](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Design_Microcontrollers_Open_Hardware)**). RVfpga supports three FPGA boards: **Nexys A7, Basys 3, and Boolean**.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/3b1f86a4-5939-4990-830a-163abd594d05" 
@@ -85,7 +85,7 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 
 
 - **Execution in simulation:**  
-  RVfpga includes several SoC simulation tools (the first three are based on Verilator):
+  RVfpga includes several SoC simulation tools (the first three are based on Verilator). Instructions for running these simulators are available in some of the above courses (such as **[Computer_Organization_25-26](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26)**):
   - **RVfpga-ViDBo**: simulates the RVfpga System on a Virtual Development Board, including communication with peripherals.
 
 <p align="left">
