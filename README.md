@@ -67,12 +67,40 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 </div>
 
 - **Execution on the physical board:**  
-  The VeeRwolfX SoC can run in hardware on supported FPGA boards. Default configurations are provided with the packages, but users can also generate new bitstreams using Vivado. RVfpga supports three FPGA boards: **Nexys A7, Basys 3, and Boolean**.  
+  The VeeRwolfX SoC can run in hardware on supported FPGA boards. Default configurations are provided with the packages, but users can also generate new bitstreams using Vivado. RVfpga supports three FPGA boards: **Nexys A7, Basys 3, and Boolean**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3b1f86a4-5939-4990-830a-163abd594d05" 
+       width="300" 
+       alt="Nexys A7"
+       style="margin-right:15px;"/>
+  <img src="https://github.com/user-attachments/assets/e2932dfe-af8c-43de-beb9-626396357487" 
+       width="300" 
+       alt="Basys 3"
+       style="margin-right:15px;"/>
+  <img src="https://github.com/user-attachments/assets/ddfeb777-6d50-4da8-94b1-8f13dbfb11b7" 
+       width="300" 
+       alt="Boolean"/>
+</p>
+
   Instructions for generating the bitstream and running on these boards are available at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/).
 
 - **Execution in simulation:**  
   RVfpga includes several SoC simulation tools (the first three are based on Verilator):
-  - **RVfpga-ViDBo**: simulates the RVfpga System on a Virtual Development Board, including communication with peripherals.  
+  - **RVfpga-ViDBo**: simulates the RVfpga System on a Virtual Development Board, including communication with peripherals.
+
+<p align="left">
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/b695a296-f108-4655-871d-d535b776da96" 
+     width="400" 
+     alt="Descripción de la imagen">
+</p>
+
   - **RVfpga-Pipeline**: visualizes the execution of instructions through the VeeR EH1 or EL2 pipeline.  
   - **RVfpga-Trace**: records internal SoC signals while running a program and visualizes them with GTKWave.  
   - **RVfpga-Whisper**: a RISC-V Instruction Set Simulator.  
