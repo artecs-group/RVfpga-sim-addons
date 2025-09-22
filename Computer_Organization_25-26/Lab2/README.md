@@ -325,9 +325,9 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press `Ctrl+C` three times.
 
-*NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), this is the simulator view for the same program and cycle described in item 8.*
-
-<img width="1568" height="627" alt="image" src="https://github.com/user-attachments/assets/19603f12-1e7d-4c55-b4e0-17ac3f9fe93f" />
+> *NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), this is the simulator view for the same program and cycle described in item 8.*
+> 
+> <img width="1568" height="627" alt="image" src="https://github.com/user-attachments/assets/19603f12-1e7d-4c55-b4e0-17ac3f9fe93f" />
 
 
 
@@ -465,9 +465,9 @@ This figure illustrates the data hazard between the ```add``` and the subsequent
   <img src="https://github.com/user-attachments/assets/2b84055f-b897-44d2-85d9-66ad8e57506b" alt="image" width="300" />
 </p>
 
-*NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), you can directly visualize these forwarding paths in the simulator. The following figure illustrates the data hazard between the two ```lw``` instructions and the ```add``` shown above:*
-
-<img width="1574" height="652" alt="image" src="https://github.com/user-attachments/assets/586bd007-1643-41f8-965c-25b7d3cc37f8" />
+> *NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), you can directly visualize these forwarding paths in the simulator. The following figure illustrates the data hazard between the two ```lw``` instructions and the ```add``` shown above:*
+> 
+> <img width="1574" height="652" alt="image" src="https://github.com/user-attachments/assets/586bd007-1643-41f8-965c-25b7d3cc37f8" />
 
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
