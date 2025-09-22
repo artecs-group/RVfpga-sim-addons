@@ -101,8 +101,32 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
      alt="Descripción de la imagen">
 </p>
 
-  - **RVfpga-Pipeline**: visualizes the execution of instructions through the VeeR EH1 or EL2 pipeline.  
-  - **RVfpga-Trace**: records internal SoC signals while running a program and visualizes them with GTKWave.  
+  - **RVfpga-Pipeline**: visualizes the execution of instructions through the VeeR EH1 or EL2 pipeline.
+
+<p align="left">
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/3db5abcd-d462-4e9f-acca-fe57d6fdd747" 
+     width="900" 
+     alt="Descripción de la imagen">
+</p>
+
+  - **RVfpga-Trace**: records internal SoC signals while running a program and visualizes them with GTKWave.
+
+<p align="left">
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/92800c3d-7624-48ac-8ce5-a2e74d4469fb" 
+     width="600" 
+     alt="Descripción de la imagen">
+</p>
+
+
   - **RVfpga-Whisper**: a RISC-V Instruction Set Simulator.  
 
   With these tools, the complete RVfpga course can be followed without a physical board, at no cost.  
