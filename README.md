@@ -85,7 +85,7 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 
 
 - **Execution in simulation:**  
-  RVfpga includes several SoC simulation tools (the first three are based on Verilator). Instructions for running these simulators are available in some of the above courses (such as [Computer_Organization_25-26](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26)):
+  RVfpga includes several SoC simulation tools (the first three are based on Verilator). Instructions for running these simulators are available at [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) and in some of the above courses (such as [Computer_Organization_25-26](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26)):
   - **RVfpga-ViDBo**: simulates the RVfpga System on a Virtual Development Board, including communication with peripherals.
 
 <p align="left">
