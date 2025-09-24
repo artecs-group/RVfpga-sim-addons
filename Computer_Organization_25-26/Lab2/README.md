@@ -467,7 +467,7 @@ This figure illustrates the data hazard between the ```add``` and the subsequent
 
 > *NOTE: If you are using the updated version of the RVfpga-Pipeline simulator (available for download in Lab 0), you can directly visualize these forwarding paths in the simulator. The following figure illustrates the data hazard between the two ```lw``` instructions and the ```add``` shown above:*
 > 
-> <img width="1574" height="652" alt="image" src="https://github.com/user-attachments/assets/586bd007-1643-41f8-965c-25b7d3cc37f8" />
+> <img width="1574" height="652" alt="image" src="https://github.com/user-attachments/assets/e37671b7-98ee-445d-b7bf-61bcb588e987" />
 
 
 *c. Calculate the CPI (Cycles Per Instruction) of the loop.*
