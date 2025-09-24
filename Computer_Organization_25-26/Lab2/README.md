@@ -243,9 +243,7 @@ The RISC-V assembly program is executed in the Ripes Pipelined processor. Answer
 ## RVfpga-Pipeline
 RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSCode using PlatformIO. Follow the steps below to simulate an example program with the RVfpga-Pipeline simulator.
 
-0. In the Virtual Machine, open a terminal and replace file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu``` with the one that you can download here: [RVfpga-Pipeline_Ubuntu](https://drive.google.com/file/d/1BL0q855YaTkhN_DlRYuHOySHIImBWaNW/view?usp=sharing). This file is the binary for the new RVfpga-Pipeline binary that we are using in this lab. Once replaced, assign execution permissions: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
-
-1. Start by watching the following video from 3:12 to 11:13, which shows the RVfpga-Pipeline simulating the same program used in the subsequent steps: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192). ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.* ***NOTE:** The video uses the old RVfpga-Pipeline simulator.*
+1. Start by watching the following video from 3:12 to 11:13, which shows the RVfpga-Pipeline simulating the same program used in the subsequent steps: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192). ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.* 
 
 2. Open VSCode and load the project folder located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2```. To do this, go to ```File - Open Folder```, navigate to ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click ```Open``` (as shown in the screenshot).
 
@@ -279,33 +277,21 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 6. The simulator starts executing the program and stops only when the instruction `and zero, t4, t5` reaches the Decode stage of the pipeline. Note that this instruction has no effect on the architectural state of the processor; it is simply used as a breakpoint. In the program provided in this project (`ProyectoP2`), this instruction is already included before the `REPEAT` loop (see the program above). If the target program does not include the `and zero, t4, t5` instruction, you must add it at the point where you want execution to stop. Typically, this instruction is placed just before entering the loop that contains the fragment to be analyzed. For example, the following figure shows the simulator paused at the point where the instruction `and zero, t4, t5` is in the Decode stage. The second figure presents a simplified version of the VeeR EH1 microarchitecture, which helps in understanding the signals displayed by the simulator.
 
-<table border="3">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/bbb5d509-ec76-4cb0-a777-78c8cb27a0b5" width="1000" alt="figura" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline1.png" width=90% height=90%>
+</p>
 
-<table border="3" align="center">
-  <tr>
-    <td align="center">
-      <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width="90%" alt="VeeReh1" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width=90% height=90%>
+</p>
 
 7. Continue the execution cycle by cycle by clicking the `+ 1 Cycle` button located at the bottom-right corner of the simulator window, and observe how the program instructions flow through the VeeR EH1 pipeline.
 
 8. In most cases, the programs we simulate consist of a loop containing the instructions to be analyzed. Specifically, in the example program shown above, the focus is on two consecutive `mul` instructions placed within a `REPEAT-OUT` loop. It is important to analyze an iteration other than the first or the second one, since some processor structures (e.g., the branch predictor or the instruction cache) have not yet been “trained” and might obscure the behavior we want to study. For example, the following figure shows the simulator at the point where instructions from the third, fourth, and fifth iterations are executing (at this moment the cycle count is `Cycles = 26`).
 
-<table border="3">
-  <tr>
-    <td align="center">
-      <img src="https://github.com/user-attachments/assets/216785a3-6655-4086-b182-7b060798baf1" width="1000" alt="figura" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline2.png" width=90% height=90%>
+</p>
 
 9. Let's analyze what the simulator shows in the previous figure:
 
@@ -331,10 +317,13 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 - **DECODE stage**  
   In this stage, information about the source of the operands is provided:  
-  - *Way-0*: Instruction `mul t1, t5, t6` (5th iteration). Both operands come from the Register File.  
-  - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding (see the line with the arrow), while the second comes from the Immediate.
+  - **RF/Im** means the operand comes from the Register File or from the Immediate.  
+  - **Byp** means the operand is obtained through a forwarding path.  
 
-10. To stop the simulator, close the simulation window.
+  - *Way-0*: Instruction `mul t1, t5, t6` (5th iteration). Both operands come from the Register File.  
+  - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding, while the second comes from the Immediate.
+
+10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press `Ctrl+C` three times.
 
 
 
@@ -401,19 +390,19 @@ We next show partial solutions for this exercise as an example. Complete the sol
 **First cycle of third iteration**. The first instruction of the loop (```slli```) is at the Decode Stage, on the second way (Way-1):
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b2a0ea7c-952b-4d82-a486-45ee9c7da63e" alt="image" width="1000" />
+  <img src="https://github.com/user-attachments/assets/4aeffe55-8730-4f11-93d7-33aba8fc373d" alt="image" width="600" />
 </p>
 
 **Sixth cycle of third iteration**. The first instruction of the loop (```slli```) is at the WB Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8c16616c-efac-4397-a3be-e6304e5e2b8c" alt="image" width="1000" />
+  <img src="https://github.com/user-attachments/assets/0aa35007-86c3-492c-b3e7-083f6f35cd22" alt="image" width="600" />
 </p>
 
 **Ninth cycle of third iteration**. The first instruction of the loop (```slli```) is again at the Decode Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2120c9d9-23df-4893-a6f3-aa00e8d43ad9" alt="image" width="1000" />
+  <img src="https://github.com/user-attachments/assets/e99be2ee-ee9c-45a2-9d13-0887deddee7c" alt="image" width="600" />
 </p>
 
 
@@ -438,38 +427,38 @@ Existing dependencies:
 - Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
 - Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
 
-This figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode. We can see that: ```out=8 → b=8```.
+This figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode. We can see that: ```out=8 → b=8 (Byp)```.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/be8d9641-db0e-4c1f-a1af-71e84ca86b1a" alt="image" width="500" />
+  <img src="https://github.com/user-attachments/assets/6f5a6c51-9200-4d82-b941-f12b4bb0acc2" alt="image" width="300" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008```.
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4f95d2ea-cf39-400b-9bcc-747db3fcb842" alt="image" width="500" />
+  <img src="https://github.com/user-attachments/assets/73738de3-6416-4f03-846b-5fbcab5d4fb4" alt="image" width="300" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
+This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a74c2ec0-9609-4fc0-b1f1-274741edb75f" alt="image" width="700" />
+  <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="400" />
 </p>
 
 
 This figure illustrates the data hazard between the two ```lw``` instructions and the ```add```. The hazard is resolved by performing a forwarding from Commit to Decode and from EX3 to Decode. Note also that the ```add``` must be delayed 2 cycles.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="1000" />
+  <img src="https://github.com/user-attachments/assets/d09a6d55-d96d-4f9b-ae45-84ddee8b095c" alt="image" width="500" />
 </p>
 
 
-This figure illustrates the data hazard between the ```addi``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```addi``` and performing two forwardings from EX1 to Decode. In this same cycle, at EX2, there is a forwarding form the ```add``` and the ```sw```. 
+This figure illustrates the data hazard between the ```add``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```add``` and performing two forwardings from EX1 to Decode.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" alt="image" width="700" />
+  <img src="https://github.com/user-attachments/assets/2b84055f-b897-44d2-85d9-66ad8e57506b" alt="image" width="300" />
 </p>
 
 
@@ -605,7 +594,7 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
 * Draw the pipeline execution diagram for this ```loop_k``` iteration (n=0, k=1). To get to that point, you must skip some cycles after the breakpoint (instruction: ```and zero, t4, t5```). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the ```loop_k``` loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/41418f03-3a9d-48e5-be79-bc892d48af88" alt="image" width="1000" />
+  <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
 </p>
 
 * Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
@@ -620,3 +609,4 @@ c. Repeat the analysis from *item a*, starting from the configuration in *item b
 d. Repeat the analysis from *item a*, starting from the configuration in *item c* and also enabling the Secondary ALU.
 
 e. Finally, with the configuration from *item d*, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
+
