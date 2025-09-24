@@ -455,21 +455,21 @@ This figure illustrates the data hazard between the ```add``` and the first ```l
 This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a74c2ec0-9609-4fc0-b1f1-274741edb75f" alt="image" width="500" />
+  <img src="https://github.com/user-attachments/assets/a74c2ec0-9609-4fc0-b1f1-274741edb75f" alt="image" width="700" />
 </p>
 
 
 This figure illustrates the data hazard between the two ```lw``` instructions and the ```add```. The hazard is resolved by performing a forwarding from Commit to Decode and from EX3 to Decode. Note also that the ```add``` must be delayed 2 cycles.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="700" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```add``` and performing two forwardings from EX1 to Decode. In this same cycle, at EX2, there is a forwarding form the ```add``` and the ```sw```. 
+This figure illustrates the data hazard between the ```addi``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```addi``` and performing two forwardings from EX1 to Decode. In this same cycle, at EX2, there is a forwarding form the ```add``` and the ```sw```. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" alt="image" width="500" />
+  <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" alt="image" width="700" />
 </p>
 
 
