@@ -106,15 +106,6 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;
-<img src="https://github.com/user-attachments/assets/3db5abcd-d462-4e9f-acca-fe57d6fdd747" 
-     width="900" 
-     alt="Descripción de la imagen">
-</p>
-
-<p align="left">
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/user-attachments/assets/629738ab-a889-4755-8b8c-2c90cb53676a" 
      width="900" 
      alt="Descripción de la imagen">
