@@ -249,7 +249,9 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 
-1. Start by watching the following video from 3:12 to 11:13, which shows the RVfpga-Pipeline simulating the same program used in the subsequent steps: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192). ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.* ***NOTE:** The video uses the old RVfpga-Pipeline simulator.*
+1. Start by watching the following video from 3:12 to 11:13, which shows the RVfpga-Pipeline simulating the same program used in the subsequent steps: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192).
+	- ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.*
+	- ***NOTE:** The video uses the old RVfpga-Pipeline simulator.*
 
 2. Open VSCode and load the project folder located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2```. To do this, go to ```File - Open Folder```, navigate to ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click ```Open``` (as shown in the screenshot).
 
