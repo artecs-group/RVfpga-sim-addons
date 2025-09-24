@@ -605,7 +605,7 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
 * Draw the pipeline execution diagram for this ```loop_k``` iteration (n=0, k=1). To get to that point, you must skip some cycles after the breakpoint (instruction: ```and zero, t4, t5```). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the ```loop_k``` loop is at the Decode stage. See the following screenshot:
 
 <p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/Ex7.png" width=80% height=80%>
+  <img src="https://github.com/user-attachments/assets/41418f03-3a9d-48e5-be79-bc892d48af88" alt="image" width="1000" />
 </p>
 
 * Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
