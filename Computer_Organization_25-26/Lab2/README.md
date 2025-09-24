@@ -462,7 +462,7 @@ This figure illustrates the data hazard between the ```add``` and the second ```
 This figure illustrates the data hazard between the two ```lw``` instructions and the ```add```. The hazard is resolved by performing a forwarding from Commit to Decode and from EX3 to Decode. Note also that the ```add``` must be delayed 2 cycles.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="700" />
+  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="1000" />
 </p>
 
 
