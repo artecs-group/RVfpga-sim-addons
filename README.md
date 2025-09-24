@@ -111,6 +111,15 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
      alt="Descripción de la imagen">
 </p>
 
+<p align="left">
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/user-attachments/assets/629738ab-a889-4755-8b8c-2c90cb53676a" 
+     width="900" 
+     alt="Descripción de la imagen">
+</p>
+
   - **RVfpga-Trace**: records internal SoC signals while running a program and visualizes them with GTKWave.
 
 <p align="left">
