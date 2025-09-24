@@ -279,13 +279,21 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 6. The simulator starts executing the program and stops only when the instruction `and zero, t4, t5` reaches the Decode stage of the pipeline. Note that this instruction has no effect on the architectural state of the processor; it is simply used as a breakpoint. In the program provided in this project (`ProyectoP2`), this instruction is already included before the `REPEAT` loop (see the program above). If the target program does not include the `and zero, t4, t5` instruction, you must add it at the point where you want execution to stop. Typically, this instruction is placed just before entering the loop that contains the fragment to be analyzed. For example, the following figure shows the simulator paused at the point where the instruction `and zero, t4, t5` is in the Decode stage. The second figure presents a simplified version of the VeeR EH1 microarchitecture, which helps in understanding the signals displayed by the simulator.
 
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline1.png" width=90% height=90%>
-</p>
+<table border="3">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/77918a69-a0ad-4b31-bd02-0b12a8d09a64" width="1000" alt="figura" />
+    </td>
+  </tr>
+</table>
 
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width=90% height=90%>
-</p>
+<table border="3" align="center">
+  <tr>
+    <td align="center">
+      <img src="../../Computer_Organization/Lab2/Images/VeeReh1.png" width="90%" alt="VeeReh1" />
+    </td>
+  </tr>
+</table>
 
 7. Continue the execution cycle by cycle by clicking the `+ 1 Cycle` button located at the bottom-right corner of the simulator window, and observe how the program instructions flow through the VeeR EH1 pipeline.
 
