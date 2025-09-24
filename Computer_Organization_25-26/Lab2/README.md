@@ -445,7 +445,7 @@ This figure illustrates the data hazard between the ```slli``` and the ```add```
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
+This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008```.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/4f95d2ea-cf39-400b-9bcc-747db3fcb842" alt="image" width="500" />
