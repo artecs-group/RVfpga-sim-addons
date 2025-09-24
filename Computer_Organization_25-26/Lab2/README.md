@@ -401,19 +401,19 @@ We next show partial solutions for this exercise as an example. Complete the sol
 **First cycle of third iteration**. The first instruction of the loop (```slli```) is at the Decode Stage, on the second way (Way-1):
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/4aeffe55-8730-4f11-93d7-33aba8fc373d" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/b2a0ea7c-952b-4d82-a486-45ee9c7da63e" alt="image" width="900" />
 </p>
 
 **Sixth cycle of third iteration**. The first instruction of the loop (```slli```) is at the WB Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/0aa35007-86c3-492c-b3e7-083f6f35cd22" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/8c16616c-efac-4397-a3be-e6304e5e2b8c" alt="image" width="900" />
 </p>
 
 **Ninth cycle of third iteration**. The first instruction of the loop (```slli```) is again at the Decode Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/e99be2ee-ee9c-45a2-9d13-0887deddee7c" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/2120c9d9-23df-4893-a6f3-aa00e8d43ad9" alt="image" width="900" />
 </p>
 
 
