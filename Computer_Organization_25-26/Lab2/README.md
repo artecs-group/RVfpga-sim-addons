@@ -331,11 +331,8 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 - **DECODE stage**  
   In this stage, information about the source of the operands is provided:  
-  - **RF/Im** means the operand comes from the Register File or from the Immediate.  
-  - **Byp** means the operand is obtained through a forwarding path.  
-
   - *Way-0*: Instruction `mul t1, t5, t6` (5th iteration). Both operands come from the Register File.  
-  - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding, while the second comes from the Immediate.
+  - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding (see the line with the arrow), while the second comes from the Immediate.
 
 10. To stop the simulator, first close the simulation window. Then, in VSCode, open the Terminal window located at the bottom of the application and press `Ctrl+C` three times.
 
