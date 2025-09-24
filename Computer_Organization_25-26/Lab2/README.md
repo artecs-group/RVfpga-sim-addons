@@ -299,9 +299,13 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 8. In most cases, the programs we simulate consist of a loop containing the instructions to be analyzed. Specifically, in the example program shown above, the focus is on two consecutive `mul` instructions placed within a `REPEAT-OUT` loop. It is important to analyze an iteration other than the first or the second one, since some processor structures (e.g., the branch predictor or the instruction cache) have not yet been “trained” and might obscure the behavior we want to study. For example, the following figure shows the simulator at the point where instructions from the third, fourth, and fifth iterations are executing (at this moment the cycle count is `Cycles = 26`).
 
-<p align="center">
-  <img src="../../Computer_Organization/Lab2/Images/RVfpgaPipeline2.png" width=90% height=90%>
-</p>
+<table border="3">
+  <tr>
+    <td align="center">
+      <img src="https://github.com/user-attachments/assets/216785a3-6655-4086-b182-7b060798baf1" width="1000" alt="figura" />
+    </td>
+  </tr>
+</table>
 
 9. Let's analyze what the simulator shows in the previous figure:
 
