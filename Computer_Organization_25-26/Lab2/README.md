@@ -282,7 +282,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 <table border="3">
   <tr>
     <td align="center">
-      <img src="https://github.com/user-attachments/assets/77918a69-a0ad-4b31-bd02-0b12a8d09a64" width="1000" alt="figura" />
+      <img src="https://github.com/user-attachments/assets/bbb5d509-ec76-4cb0-a777-78c8cb27a0b5" width="1000" alt="figura" />
     </td>
   </tr>
 </table>
