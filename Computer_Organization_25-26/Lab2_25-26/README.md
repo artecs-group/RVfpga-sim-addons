@@ -246,8 +246,8 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 0. In the Virtual Machine, replace the old RVfpga-Pipeline simulator with the new one. Follow the next steps:
 	- Download the following file: [RVfpga-Pipeline_Ubuntu](https://drive.google.com/file/d/1BL0q855YaTkhN_DlRYuHOySHIImBWaNW/view?usp=sharing).
 	- Open a terminal.
-	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```.
-	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```.
+	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
+	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 
 1. Start by watching the following video from 3:12 to 11:13, which shows the RVfpga-Pipeline simulating the same program used in the subsequent steps: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192). ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.* ***NOTE:** The video uses the old RVfpga-Pipeline simulator.*
 
