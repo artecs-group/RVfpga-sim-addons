@@ -401,19 +401,19 @@ We next show partial solutions for this exercise as an example. Complete the sol
 **First cycle of third iteration**. The first instruction of the loop (```slli```) is at the Decode Stage, on the second way (Way-1):
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b2a0ea7c-952b-4d82-a486-45ee9c7da63e" alt="image" width="900" />
+  <img src="https://github.com/user-attachments/assets/b2a0ea7c-952b-4d82-a486-45ee9c7da63e" alt="image" width="1000" />
 </p>
 
 **Sixth cycle of third iteration**. The first instruction of the loop (```slli```) is at the WB Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/8c16616c-efac-4397-a3be-e6304e5e2b8c" alt="image" width="900" />
+  <img src="https://github.com/user-attachments/assets/8c16616c-efac-4397-a3be-e6304e5e2b8c" alt="image" width="1000" />
 </p>
 
 **Ninth cycle of third iteration**. The first instruction of the loop (```slli```) is again at the Decode Stage:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2120c9d9-23df-4893-a6f3-aa00e8d43ad9" alt="image" width="900" />
+  <img src="https://github.com/user-attachments/assets/2120c9d9-23df-4893-a6f3-aa00e8d43ad9" alt="image" width="1000" />
 </p>
 
 
@@ -438,38 +438,38 @@ Existing dependencies:
 - Structural hazard between the two lw. The second one stalls in Decode and executes in the next cycle.
 - Control hazard in the bne. When the gshare predictor is enabled, there is no stall on predictor hits, which occurs in almost all iterations (miss in the first and the last).
 
-This figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode. We can see that: ```out=8 → b=8 (Byp)```.
+This figure illustrates the data hazard between the ```slli``` and the ```add``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX1 to Decode. We can see that: ```out=8 → b=8```.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/6f5a6c51-9200-4d82-b941-f12b4bb0acc2" alt="image" width="300" />
+  <img src="https://github.com/user-attachments/assets/be8d9641-db0e-4c1f-a1af-71e84ca86b1a" alt="image" width="500" />
 </p>
 
 
 This figure illustrates the data hazard between the ```add``` and the first ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by inserting a bubble after the ```add``` and performing a forwarding from EX1 to Decode. We can see that: ```out=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/73738de3-6416-4f03-846b-5fbcab5d4fb4" alt="image" width="300" />
+  <img src="https://github.com/user-attachments/assets/4f95d2ea-cf39-400b-9bcc-747db3fcb842" alt="image" width="500" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008 (Byp)```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
+This figure illustrates the data hazard between the ```add``` and the second ```lw``` in the RVfpga-Pipeline simulator. The hazard is resolved by performing a forwarding from EX2 to Decode. We can see that: ```i0_result_e2=0xF0040008 → exu_lsu_rs1_d=0xF0040008```. Note also that the second ```lw``` must be delayed 1 cycle due to the structural hazard.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/fc98c91b-b3e9-4eb9-b534-530006a16377" alt="image" width="400" />
+  <img src="https://github.com/user-attachments/assets/a74c2ec0-9609-4fc0-b1f1-274741edb75f" alt="image" width="500" />
 </p>
 
 
 This figure illustrates the data hazard between the two ```lw``` instructions and the ```add```. The hazard is resolved by performing a forwarding from Commit to Decode and from EX3 to Decode. Note also that the ```add``` must be delayed 2 cycles.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d09a6d55-d96d-4f9b-ae45-84ddee8b095c" alt="image" width="500" />
+  <img src="https://github.com/user-attachments/assets/f17767f8-1a4f-479e-a98d-b9f06d5cc283" alt="image" width="600" />
 </p>
 
 
-This figure illustrates the data hazard between the ```add``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```add``` and performing two forwardings from EX1 to Decode.
+This figure illustrates the data hazard between the ```add``` and the subsequent two instructions. The hazard is resolved by inserting a bubble after the ```add``` and performing two forwardings from EX1 to Decode. In this same cycle, at EX2, there is a forwarding form the ```add``` and the ```sw```. 
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/2b84055f-b897-44d2-85d9-66ad8e57506b" alt="image" width="300" />
+  <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" alt="image" width="500" />
 </p>
 
 
