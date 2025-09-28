@@ -420,7 +420,7 @@ We next show partial solutions for this exercise as an example. Complete the sol
 **Pipeline diagram:**
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/a3d78f54-1ff8-4f61-9cbf-fd151d56065a" alt="image" width="600" />
+  <img src="https://github.com/user-attachments/assets/fb48bdbf-5e2b-4c80-b4e2-cb5c5c9e3398" alt="image" width="600" />
 </p>
 
 *b. Identify the hazards that occur and explain how this processor handles them. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.*
