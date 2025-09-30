@@ -336,6 +336,8 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 10. To stop the simulator, close the simulation window.
 
+11. The following table shows all forwarding paths and penalties in the VeeR EH1 core: [FwdPen_EH1](https://drive.google.com/file/d/1owNZUEw-2AZw2-El_mBu4-WpZ1HhYVNo/view?usp=sharing). It is very useful to resolve the exercises.
+
 
 
 ## Exercise 4 - Guided Exercise in RVfpga-Pipeline
