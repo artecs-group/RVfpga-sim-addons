@@ -14,6 +14,7 @@ Follow the next steps:
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
     * Start by watching this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG). The video describes the VeeR EH1 microarchitecture in detail. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link). Please note that some of the concepts presented in the video are either beyond the scope of this course or will be introduced later, such as the memory hierarchy (in our exercises, instruction and data memory latency will always be assumed to be 1 cycle) or the Verilog implementation of the core, so you may simply skip those parts.
+    * The following table shows all forwarding paths and penalties in the VeeR EH1 core: [FwdPen_EH1](https://drive.google.com/file/d/1owNZUEw-2AZw2-El_mBu4-WpZ1HhYVNo/view?usp=sharing). It is very useful to resolve the exercises.
     * Replicate the instructions provided below in section [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#rvfpga-pipeline).
     * Analyze the example exercise provided below in section [Exercise 4 - Guided Exercise in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-4---guided-exercise-in-rvfpga-pipeline).
     * Complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-5-in-rvfpga-pipeline). This is the second exercise you will include in the report, so make sure to write everything down as you work through it.
@@ -335,8 +336,6 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
   - *Way-1*: Instruction `addi t2, t2, -1` (5th iteration). The first operand comes through forwarding (see the line with the arrow), while the second comes from the Immediate.
 
 10. To stop the simulator, close the simulation window.
-
-11. The following table shows all forwarding paths and penalties in the VeeR EH1 core: [FwdPen_EH1](https://drive.google.com/file/d/1owNZUEw-2AZw2-El_mBu4-WpZ1HhYVNo/view?usp=sharing). It is very useful to resolve the exercises.
 
 
 
