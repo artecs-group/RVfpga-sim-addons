@@ -224,7 +224,7 @@ Run the code in Ripes (you can simply copy the previous code in the editor) and 
 3. What instruction does the pseudo-instruction ```li s1, n``` translate to?
 4. What instruction does the pseudo-instruction ```mv s2, zero``` translate to?
 5. To which machine instruction in hexadecimal does the pseudo-instruction ```mv s2, zero``` translate? Considering the format of RISC-V instructions, explain which fields the machine instruction contains.
-6. Identify in the memory viewer, one by one, the instructions that make up the for loop. Are they properly aligned?
+6. Identify in the memory viewer, one by one, the instructions that make up the for loop. Check whether they are properly aligned and determine the endianness.
 7. Analyze in the memory viewer how the vector changes after each iteration.
 8. Modify the code so that it subtracts 1 from the components whose stored value is odd and adds 1 to the components whose stored value is even.
 
