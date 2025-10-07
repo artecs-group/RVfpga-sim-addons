@@ -6,7 +6,7 @@ Follow the next steps:
 1. **Ripes core:** You can start using Ripes to simulate and analyze a 5-stage processor that is almost identical to the one described in the H&H textbook.
 
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
-    * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2_25-26#basic-use-of-the-ripes-pipelined-processor). The following video shows the demo presented in class on how to use the Ripes processor: [RipesProcessorDemo](https://youtu.be/ZvwZP8gnR1Y).
+    * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2_25-26#basic-use-of-the-ripes-pipelined-processor).
     * Analyze the example exercise provided below in section [Exercise 1 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-1---guided-exercise-in-ripes).
     * Analyze the example exercise provided below in section [Exercise 2 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-2---guided-exercise-in-ripes).
     * Finally, complete the exercise provided below in section [Exercise 3 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-3-in-ripes). **This is the first exercise you will include in the report, so make sure to write everything down as you work through it.**
@@ -22,6 +22,8 @@ Follow the next steps:
 
 
 ## Basic use of the *Ripes Pipelined Processor*
+The following video shows the demo presented in class on how to use the Ripes processor: [RipesProcessorDemo](https://youtu.be/ZvwZP8gnR1Y).
+
 Follow the next steps to test a program in the Ripes Pipelined Processor:
 
 1. Start the Ripes simulator.
@@ -346,6 +348,8 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 
 ## Exercise 4 - Guided Exercise in RVfpga-Pipeline
+The following video shows the demo presented in class on how to use the Ripes processor: [Exercise4Demo]().
+
 Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
 
 ```
