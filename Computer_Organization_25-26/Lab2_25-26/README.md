@@ -348,7 +348,7 @@ board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilato
 
 
 ## Exercise 4 - Guided Exercise in RVfpga-Pipeline
-The following video shows the demo presented in class on how to use the Ripes processor: [Exercise4Demo]().
+The following video shows the demo presented in class on how to use the Ripes processor: [Exercise4Demo](https://youtu.be/hqxG4cUnDfs).
 
 Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU. The following program is executed on this processor:
 
