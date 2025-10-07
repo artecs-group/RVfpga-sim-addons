@@ -254,6 +254,16 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 	- ***NOTE:** The video uses a different directory name than the one we are using in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.*
 	- ***NOTE:** The video was recorded with the old RVfpga-Pipeline simulator. The procedure is exactly the same; only the simulator’s appearance is different.*
 
+1. Start by watching one of the following videos, which show the **RVfpga-Pipeline** simulating the same program used in the subsequent steps:
+
+   - **(a) Using the previous version of the simulator:**  
+     Watch from **3:12 to 11:13** in the following video: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192).  
+       - ***NOTE:** The video uses a different directory name than the one used in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.*  
+       - ***NOTE:** The video was recorded with the **old RVfpga-Pipeline simulator**. The procedure is exactly the same; only the simulator’s appearance differs.*
+
+   - **(b) Using the new version of the simulator:**  
+     Watch the following video, which shows the demo presented in class on how to use the VeeR EH1 processor: [VeerEH1ProcessorDemo](https://youtu.be/1_O1ikjSIyM).
+
 2. Open VSCode and load the project folder located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2```. To do this, go to ```File - Open Folder```, navigate to ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click ```Open``` (as shown in the screenshot).
 
 <p align="center">
