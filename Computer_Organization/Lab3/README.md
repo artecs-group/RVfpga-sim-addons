@@ -61,7 +61,7 @@ We next analyze the cache's behavior for the second nested loop and for a direct
 
 Given that each word is 4 bytes long (i.e. 32 bits) in the RISC-V architecture used, in this case, we would have a total cache size of 4 lines * 4 words * 4 bytes = 64B (2<sup>6</sup>B).
 
-For this cache configuration, the block is determined using bits 4 and 5 (bits 2 and 3 address the word within the block whereas bits 0 and 1 address the byte within the word).
+For this cache configuration, the block is determined using address bits 4 and 5 (bits 2 and 3 address the word within the block whereas bits 0 and 1 address the byte within the word).
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/0e3d48a3-3b64-4799-b944-eac3b0b51206" 
