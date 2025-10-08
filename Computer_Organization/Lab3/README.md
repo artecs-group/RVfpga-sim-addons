@@ -87,7 +87,7 @@ For this cache configuration, the block is determined using address bits 4 and 5
   <img src="Images/Breakpoint.png" width=50% height=50%>
 </p>
 
-4. Run quickly until the breakpoint at the beginning of the loop to be analyzed. Keep in mind that the execution will stop after the instruction where the breakpoint is located is executed.
+4. Run quickly until the breakpoint at the beginning of the loop to be analyzed.
 
 <p align="center">
   <img src="Images/Buttons.png" width=40% height=40%>
