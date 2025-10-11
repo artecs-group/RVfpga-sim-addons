@@ -5,15 +5,13 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 2. Then, view this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
 3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo*. If you are using the FPGA board, skip this section.
 4. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1) in this repository. These are the exercises you will include in the report, so make sure to write everything down as you work through them. Specifically, include the following exercises:  
+    - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
     - [Exercises 4 and 4-b](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4)  
     - [Exercise 6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6)  
     - [Exercise 7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7)  
     - [Exercise 8](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-8)  
-    - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2) *(optional)*  
 
-    **Note:**  
-    - Exercises **1, 3, and 5** are **guided**. You should **complete them to practice**, but **do not include them in your report**.  
-    - Exercise **2** is **optional**; you can leave it for the end and do it **only if you have time and wish to**.  
+    **Note:** Exercises 1, 3, and 5 are guided. You should complete them to practice, but do not include them in your report.  
 
 
 ## Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo
@@ -84,10 +82,12 @@ Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` pro
 Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
 
 
-## Exercise 2 (optional)
-Write a RISC-V assembly program that shows a block of four lit LEDs that repeatedly moves from one side of the 16 available LEDs on the board to the other. Also, include two switches to control the speed and direction of the movement. Switch[0] changes the speed, and Switch[1] changes the direction as follows:
-- If Switch[0] is ON (high), the lit LEDs should move quickly. Otherwise, the lit LEDs should move slowly. You may define what "quickly" and "slowly" mean, but the difference in speed must be visible and noticeable just by looking at it.
-- If Switch[1] is ON (high), the lit LEDs should move repeatedly from right to left (starting again at the right-most LED when reaching the left-most). Otherwise, the lit LEDs should move repeatedly from left to right.
+## Exercise 2
+Write a C program that displays the inverse of the switches on the LEDs. Name the program DisplayInverse_Functions.c. 
+
+For example, if the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010; if the switches are: 1111000011110000, then the LEDs should
+display: 0000111100001111; and so on. Include a getSwitchesInvert() function that returns the inverted value of the switches. The function declaration is:
+unsigned int getSwitchesInvert();
 
 You can use the project from Exercise 1 as a base and simply write your code in the ```LedsSwitches.S``` file instead of the provided one.
 
