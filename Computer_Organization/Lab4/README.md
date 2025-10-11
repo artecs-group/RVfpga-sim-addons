@@ -79,11 +79,13 @@ Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (
 
 
 ## Exercise 2
-Write a C program that displays the inverse of the switches on the LEDs. For example: 
+Write a C program that displays the inverse of the switches on the LEDs. 
+
+For example: 
     - If the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010 
     - If the switches are: 1111000011110000, then the LEDs should display: 0000111100001111 
 
-You can use the project from Exercise 1 as a base and simply write your code in the ```LedsSwitches_C-Lang``` file instead of the provided one.
+You can use the project from Exercise 1 as a base and simply modify your code in the ```LedsSwitches_C-Lang``` file.
 
 
 ## Exercise 3
