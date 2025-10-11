@@ -75,11 +75,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
 ## Exercise 1
 → View the above video at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
 
-Analyze in-depth the program provided in the ```LedsSwitches``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches```), which performs the same functionality as the introductory code but which is written in assembly.
-
-Then, analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```), which performs the same functionality as the introductory code but which is written in assembly.
-
-Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
+Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```).
 
 
 ## Exercise 2
