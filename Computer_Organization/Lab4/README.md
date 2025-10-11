@@ -114,7 +114,7 @@ We next show the result that you should obtain when running this program on RVfp
 
 
 ## Exercise 4.b
-Write a RISC-V assembly program and a C program that shows the string “0-1-2-3-4-5-6-7-8” moving from the right to the left of the 8-digit 7-segment displays. That is, 0 should show up on the right-most digit first. Then it should move to the left and 1 should show up on the right-most digit, and so on.
+Write a C program that shows the string “0-1-2-3-4-5-6-7-8” moving from the right to the left of the 8-digit 7-segment displays. That is, 0 should show up on the right-most digit first. Then it should move to the left and 1 should show up on the right-most digit, and so on.
 
 
 ## Exercise 5
