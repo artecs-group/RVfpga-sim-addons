@@ -83,13 +83,11 @@ Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
 
 
 ## Exercise 2
-Write a C program that displays the inverse of the switches on the LEDs. Name the program DisplayInverse_Functions.c. 
+Write a C program that displays the inverse of the switches on the LEDs. For example: 
+    - If the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010 
+    - If the switches are: 1111000011110000, then the LEDs should display: 0000111100001111 
 
-For example, if the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010; if the switches are: 1111000011110000, then the LEDs should
-display: 0000111100001111; and so on. Include a getSwitchesInvert() function that returns the inverted value of the switches. The function declaration is:
-unsigned int getSwitchesInvert();
-
-You can use the project from Exercise 1 as a base and simply write your code in the ```LedsSwitches.S``` file instead of the provided one.
+You can use the project from Exercise 1 as a base and simply write your code in the ```LedsSwitches_C-Lang``` file instead of the provided one.
 
 
 ## Exercise 3
