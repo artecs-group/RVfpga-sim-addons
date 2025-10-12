@@ -178,8 +178,7 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 
 **Required behavior**
 - **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
-- **SW1**: toggle the **7-segment display on/off**.  
-  When turned back on, the display should **resume counting** from the previous value.
+- **SW1**: toggle the **7-segment display on/off**. When turned back on, the display should **resume counting** from the previous value.
 
 **Hint**: Use `RGPIO_INTS` to determine which switch triggered the interrupt. In the ISR, check **both** switch bits (handle each independently) and clear the served source(s).
 
