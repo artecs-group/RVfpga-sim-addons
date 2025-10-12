@@ -124,15 +124,12 @@ You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying 
 
 ## Interrupts – Guided Test
 
-In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga.  
-Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**:
+In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga. Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**:
 
 - `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang`  
 - `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang`
 
-Open both projects, analyze their structure, and run them in **RVfpga-ViDBo**.  
-Focus especially on the following functions in the interrupt-based version:  
-`main`, `GPIO_Initialization`, and `GPIO_ISR`.
+Open both projects, analyze their structure, and run them in **RVfpga-ViDBo**. Focus especially on the following functions in the interrupt-based version: `main`, `GPIO_Initialization`, and `GPIO_ISR`.
 
 ---
 
