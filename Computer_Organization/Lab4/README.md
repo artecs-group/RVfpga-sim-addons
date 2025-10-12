@@ -1,18 +1,32 @@
 # Lab 7 (Lab 4 of CO) - The RVfpga I/O System - High Level
-This practice aims to help students gain a thorough understanding of an Input/Output System. You can follow the next steps:
+This lab aims to help students gain a solid understanding of an **Input/Output (I/O) System** and how it operates within the RVfpga platform. Follow the steps below:
 
-1. If you are new to Computer Organization, you should start by reading Chapter 9 of the H&H book.
-2. Then, view this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
-3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Simulation of the RVfpga SoC in RVfpga-ViDBo*. You do not need to include this example in the report.
-4. Then, you can resolve the polling-based exercises included below:
-    - [Exercise 1]()
-    - [Exercise 2]()
-    - [Exercise 3]()
-5. Then, you can perform the Interrupt-bsaed guided test, provided next in section *Interrupts - Guided test*. You do not need to include this example in the report.
-6. Finally, you can resolve the interrupt-based exercises included below:
-    - [Exercise 4]()
-    - [Exercise 5]()
-    - [Exercise 6]()
+1. **Background reading**  
+   If you are new to *Computer Organization*, start by reading **Chapter 9** of the *Hennessy & Harris* textbook.
+
+2. **Watch the introductory video**  
+   Watch the video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y), which provides a detailed explanation of the **RVfpga I/O System**.  
+   You can also download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
+
+3. **Run the guided simulation example**  
+   Perform the guided example for RVfpga-ViDBo, provided in the section *Simulation of the RVfpga SoC in RVfpga-ViDBo*.  
+   *(You do **not** need to include this example in your report.)*
+
+4. **Solve the polling-based exercises**  
+   Then, complete the following exercises:  
+   - [Exercise 1]()  
+   - [Exercise 2]()  
+   - [Exercise 3]()
+
+5. **Run the interrupt-based guided test**  
+   Perform the guided test provided in the section *Interrupts – Guided Test* to learn how interrupts are managed in RVfpga.  
+   *(You do **not** need to include this example in your report.)*
+
+6. **Solve the interrupt-based exercises**  
+   Finally, complete the following exercises:  
+   - [Exercise 4]()  
+   - [Exercise 5]()  
+   - [Exercise 6]()
 
 
 ## Simulation of the RVfpga SoC in RVfpga-ViDBo
