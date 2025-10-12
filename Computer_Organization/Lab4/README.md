@@ -5,12 +5,10 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    If you are new to *Computer Organization*, start by reading **Chapter 9** of the *Hennessy & Harris* textbook.
 
 2. **Watch the introductory video**  
-   Watch the video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y), which provides a detailed explanation of the **RVfpga I/O System**.  
-   You can also download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
+   Watch the video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y), which provides a detailed explanation of the **RVfpga I/O System**. You can also download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
 
 3. **Run the guided simulation example**  
-   Perform the guided example for RVfpga-ViDBo, provided in the section *Simulation of the RVfpga SoC in RVfpga-ViDBo*.  
-   *(You do **not** need to include this example in your report.)*
+   Perform the guided example for RVfpga-ViDBo, provided in the section *Simulation of the RVfpga SoC in RVfpga-ViDBo*. *(You do **not** need to include this example in your report.)*
 
 4. **Solve the polling-based exercises**  
    Then, complete the following exercises:  
@@ -19,8 +17,7 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    - [Exercise 3]()
 
 5. **Run the interrupt-based guided test**  
-   Perform the guided test provided in the section *Interrupts – Guided Test* to learn how interrupts are managed in RVfpga.  
-   *(You do **not** need to include this example in your report.)*
+   Perform the guided test provided in the section *Interrupts – Guided Test* to learn how interrupts are managed in RVfpga. *(You do **not** need to include this example in your report.)*
 
 6. **Solve the interrupt-based exercises**  
    Finally, complete the following exercises:  
@@ -30,12 +27,9 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
 
 
 ## Simulation of the RVfpga SoC in RVfpga-ViDBo
-From **minute 16:36 to 19:16** of the following video, you can watch an example of the **RVfpga-ViDBo simulator** running a program:  
-[RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
+From **minute 16:36 to 19:16** of the following video, you can watch an example of the **RVfpga-ViDBo simulator** running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
 
-This tool simulates the **VeeRwolfX SoC**, which is based on the **VeeR EH1** core running on the **Nexys A7 FPGA** board.  
-It allows you to execute RISC-V programs and interact with several board peripherals directly from your computer.  
-Programs executed in the simulator behave **exactly the same** as on the actual FPGA board.
+This tool simulates the **VeeRwolfX SoC**, which is based on the **VeeR EH1** core running on the **Nexys A7 FPGA** board. It allows you to execute RISC-V programs and interact with several board peripherals directly from your computer. Programs executed in the simulator behave **exactly the same** as on the actual FPGA board.
 
 <p align="center">
   <img src="Images/Nexys.png" width=60% height=60%>
@@ -64,8 +58,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
 
 4. **Run the simulator**
 
-a. In the **PROJECT TASKS** panel of PlatformIO, click on  
-   ```RVfpgaEL2-ViDBo / Pipeline```
+a. In the **PROJECT TASKS** panel of PlatformIO, click on ```RVfpgaEL2-ViDBo / Pipeline```
 
 <p align="center">
    <img src="Images/RVfpgaVidbo.png" width=30% height=30%>
@@ -90,9 +83,7 @@ c. **Open the web interface**
   </p>
 
 5. **Test the simulation**  
-Move the switches and observe how the LEDs change accordingly.  
-This behavior is identical to how the program would run on the actual FPGA board.  
-For example:
+Move the switches and observe how the LEDs change accordingly. This behavior is identical to how the program would run on the actual FPGA board. For example:
 
 <p align="center">
    <img src="Images/NexysExample.png" width=60% height=60%>
