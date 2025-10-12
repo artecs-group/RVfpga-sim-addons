@@ -8,22 +8,22 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    Watch the video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y), which provides a detailed explanation of the **RVfpga I/O System**. You can also download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
 
 3. **Run the guided simulation example**  
-   Perform the guided example for RVfpga-ViDBo, provided in the section *Simulation of the RVfpga SoC in RVfpga-ViDBo*. *(You do **not** need to include this example in your report.)*
+   Perform the guided example for RVfpga-ViDBo, provided in the section [Simulation of the RVfpga SoC in RVfpga-ViDBo](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#simulation-of-the-rvfpga-soc-in-rvfpga-vidbo). *(You do **not** need to include this example in your report.)*
 
 4. **Solve the polling-based exercises**  
    Then, complete the following exercises:  
-   - [Exercise 1]()  
-   - [Exercise 2]()  
-   - [Exercise 3]()
+   - [Exercise 1](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-1)  
+   - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-2)  
+   - [Exercise 3](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-3)
 
 5. **Run the interrupt-based guided test**  
-   Perform the guided test provided in the section *Interrupts – Guided Test* to learn how interrupts are managed in RVfpga. *(You do **not** need to include this example in your report.)*
+   Perform the guided test provided in the section [Interrupts – Guided Test](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#interrupts--guided-test) to learn how interrupts are managed in RVfpga. *(You do **not** need to include this example in your report.)*
 
 6. **Solve the interrupt-based exercises**  
    Finally, complete the following exercises:  
-   - [Exercise 4]()  
-   - [Exercise 5]()  
-   - [Exercise 6]()
+   - [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-4)  
+   - [Exercise 5](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-5)  
+   - [Exercise 6](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-6)
 
 
 ## Simulation of the RVfpga SoC in RVfpga-ViDBo
