@@ -129,8 +129,6 @@ In this guided test, you will learn how to manage **interrupt-driven I/O** in RV
 - `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang`  
 - `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang`
 
-Open both projects, analyze their structure, and run them in **RVfpga-ViDBo**. Focus especially on the following functions in the interrupt-based version: `main`, `GPIO_Initialization`, and `GPIO_ISR`.
-
 #### Programmed I/O version
 
 The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two tasks:
@@ -146,8 +144,7 @@ After initialization, the program enters an **infinite loop** that:
 
 However, this approach has a **limitation**: if a switch transition happens during the delay loop (for instance, when the switch is toggled quickly), the program might **miss** the event.
 
-> **Observation:** Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected.  
-> This limitation motivates the use of **interrupt-driven I/O**.
+> **Test:** Open the project, analyze its structure, and run it in **RVfpga-ViDBo**. Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected. This limitation motivates the use of **interrupt-driven I/O**.
 
 #### Interrupt-driven I/O version
 
@@ -163,8 +160,7 @@ In this version:
 - The switch is **not** read explicitly in the main loop; all event handling occurs inside the **interrupt service routine (ISR)**.  
 - As a result, **no switch transitions are missed**, even if they occur during the delay.
 
-> **Key takeaway:**  
-> Using interrupt-driven I/O ensures that the processor can react to external events immediately, without wasting time polling the device.
+> **Test:** Open the project and analyze its structure (focus especially on the following functions: `main`, `GPIO_Initialization`, and `GPIO_ISR`). Then, run it in **RVfpga-ViDBo**. Try toggling the switch quickly in the simulator. Using interrupt-driven I/O ensures that the processor can react to external events immediately, without wasting time polling the device.
 
 
 ## Exercise 4
