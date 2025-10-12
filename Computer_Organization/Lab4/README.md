@@ -122,26 +122,56 @@ Write a C program that shows the string **“0-1-2-3-4-5-6-7-8”** moving from 
 You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
 
 
+## Interrupts – Guided Test
 
-## Interrupts - Guided test
-In this test, we will work with interrupts. Two codes are provided with the same functionality, but the first uses polling while the second uses interrupts.
+In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga.  
+Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**:
 
-- ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang```
-- ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```
+- `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang`  
+- `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang`
 
-Analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. We next provide some guidance about these two examples:
+Open both projects, analyze their structure, and run them in **RVfpga-ViDBo**.  
+Focus especially on the following functions in the interrupt-based version:  
+`main`, `GPIO_Initialization`, and `GPIO_ISR`.
 
-In the first example (LED-Switch_7SegDispl_C-Lang), we show how to use Programmed I/O to perform the following two tasks:
-Invert the rightmost LED every time a 0 to 1 transition on the rightmost switch occurs.
-Show an ascending count in the 8-digit 7-segment displays, that increments around once per second.
+---
 
-Open the program in the editor. You can see that, after some initializations, the program enters an infinite loop that compares the current switch state with the previous one and, in case a 0 to 1 transition is detected, it inverts the LED state. Then, the value shown on the 8-digit 7-segment displays is incremented and a software delay is generated.
+### 1. Programmed I/O version
 
-Note that this program does not work correctly in some situations. For example, a 0 to 1 to 0 switch transition that occurs within the delay loop will never be detected (you can test it by changing the switch quickly). How could we improve the program? The answer is interrupt-driven I/O.
+The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two tasks:
 
-In the second example (LED-Switch_7SegDispl_Interrupts_C-Lang), we show a new version of the program where interrupt-driven I/O is used to read the state of the rightmost switch. This strategy fixes the problem of the program missing switch transitions that occur during the delay loop.
+1. Inverts the **right-most LED** every time a **0→1 transition** occurs on the **right-most switch**.  
+2. Displays an **incrementing counter** on the **8-digit 7-segment display**, increasing roughly once per second.
 
-In this program, the main function performs some initializations and then enters an infinite loop where the 7-segment displays are written and a software delay is established. Note that the switch is not explicitly read in this case. Instead, whenever a 0 to 1 transition occurs in the switch, an interrupt is triggered that makes the processor execute the GPIO_ISR function, where the switch state is read and the LED state is inverted.
+After initialization, the program enters an **infinite loop** that:
+- Reads the current switch state.  
+- Compares it with the previous state to detect transitions.  
+- Inverts the LED if a 0→1 transition is detected.  
+- Updates the displayed count and generates a delay through a software loop.
+
+However, this approach has a **limitation**: if a switch transition happens during the delay loop (for instance, when the switch is toggled quickly), the program might **miss** the event.
+
+> **Observation:** Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected.  
+> This limitation motivates the use of **interrupt-driven I/O**.
+
+---
+
+### 2. Interrupt-driven I/O version
+
+The second example (**`LED-Switch_7SegDispl_Interrupts_C-Lang`**) solves this problem using **hardware interrupts**.
+
+Here, the switch input is configured to **trigger an interrupt** whenever a **0→1 transition** occurs. When that happens:
+- The processor suspends the main program and jumps to the **`GPIO_ISR`** function.  
+- Inside the ISR, the switch state is read and the LED state is inverted.  
+- Once finished, control returns to the main loop.
+
+In this version:
+- The `main` function performs the necessary initializations, then enters a loop that periodically updates the 7-segment display and creates a software delay.  
+- The switch is **not** read explicitly in the main loop; all event handling occurs inside the **interrupt service routine (ISR)**.  
+- As a result, **no switch transitions are missed**, even if they occur during the delay.
+
+> **Key takeaway:**  
+> Using interrupt-driven I/O ensures that the processor can react to external events immediately, without wasting time polling the device.
 
 
 ## Exercise 4
