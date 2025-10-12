@@ -3,18 +3,19 @@ This practice aims to help students gain a thorough understanding of an Input/Ou
 
 1. If you are new to Computer Organization, you should start by reading Chapter 9 of the H&H book.
 2. Then, view this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
-3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo*. If you are using the FPGA board, skip this section.
-4. Then, you can resolve the exercises included [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-1) in this repository. These are the exercises you will include in the report, so make sure to write everything down as you work through them. Specifically, include the following exercises:  
-    - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-2)
-    - [Exercises 4 and 4-b](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-4)  
-    - [Exercise 6](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-6)  
-    - [Exercise 7](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-7)  
-    - [Exercise 8](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab4#exercise-8)  
+3. Then, you can perform the guided example for RVfpga-ViDBo, provided next in section *Simulation of the RVfpga SoC in RVfpga-ViDBo*. You do not need to include this example in the report.
+4. Then, you can resolve the polling-based exercises included below:
+    - [Exercise 1]()
+    - [Exercise 2]()
+    - [Exercise 3]()
+5. Then, you can perform the Interrupt-bsaed guided test, provided next in section *Interrupts - Guided test*. You do not need to include this example in the report.
+6. Finally, you can resolve the interrupt-based exercises included below:
+    - [Exercise 4]()
+    - [Exercise 5]()
+    - [Exercise 6]()
 
-    **Note:** Exercises 1, 3, and 5 are guided. You should complete them to practice, but do not include them in your report.  
 
-
-## Introduction - Simulation of the RVfpga SoC in RVfpga-ViDBo
+## Simulation of the RVfpga SoC in RVfpga-ViDBo
 From time 16:36 to time 19:16 of the following video, you can visualize an example of the RVfpga-ViDBo simulator running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
 
 This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
@@ -72,34 +73,20 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
         <img src="Images/NexysExample.png" width=60% height=60%>
      </p>
 
+
 ## Exercise 1
-→ View the above video at time 5:00 for the description of the connection of the GPIO in RVfpga and at time 11:00 for the execution of the LedsSwitches program in RVfpga.
-
-Analyze in-depth the program provided in the ```LedsSwitches_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```).
-
-
-## Exercise 2
 Write a C program that displays the inverse of the switches on the LEDs. For example: 
 - If the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010
 - If the switches are: 1111000011110000, then the LEDs should display: 0000111100001111 
 
-You can use the project from Exercise 1 as a base and simply modify your code in the ```LedsSwitches_C-Lang``` file.
+You can use the ```LedsSwitches_C-Lang``` project as a base. Make sure you understand 
 
 
-## Exercise 3
-→ View the above video at time 13:15 for the description of the connection of the 7-segment displays in RVfpga and at time 15:19 for the execution of the 71_7SegDispl_C-Lang program in RVfpga.
-
-Analyze the program provided in the ```71_7SegDispl_C-Lang``` project (located at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```).
-
-Finally, run the codes in the RVfpga-ViDBo simulator or on the FPGA board.
-
-
-## Exercise 4
+## Exercise 2
 Write a C program that displays the value of the switches on the four right-most digits of the 7-segment displays.
 
-You can use the project from Exercise 3 as a base and simply write your code in the ```71_7SegDispl_C-Lang.c``` file instead of the provided one.
+You can use the ```71_7SegDispl_C-Lang.c``` project as a base.
 
-**SOLUTION:**
 We next show the result that you should obtain when running this program on RVfpga-ViDBo. You can see how the switches value is shown in the 7-segment displays. Note that this device is shown in the simulator outside the board.
 
 <p align="center">
@@ -107,19 +94,17 @@ We next show the result that you should obtain when running this program on RVfp
 </p>
 
 
-## Exercise 4.b
+## Exercise 3
 Write a C program that shows the string “0-1-2-3-4-5-6-7-8” moving from the right to the left of the 8-digit 7-segment displays. That is, 0 should show up on the right-most digit first. Then it should move to the left and 1 should show up on the right-most digit, and so on.
 
 
-## Exercise 5
-In this exercise, we will work with interrupts. Two codes are provided with the same functionality, but the first uses polling while the second uses interrupts.
+## Interrupts - Guided test
+In this test, we will work with interrupts. Two codes are provided with the same functionality, but the first uses polling while the second uses interrupts.
 
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang```
 - ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```
 
-View the above video at time 33:32 for a description of the RVfpga Interrupt-driven IO and at time 35:05 for a description of the implementation of the LED-Switch_7SegDispl_Interrupts_C-Lang program and its execution.
-
-Then, analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. We next provide some guidance about these two examples:
+Analyze both provided codes and simulate them. In the interrupt-based code, you must focus on the ```main```, ```GPIO_Initialization```, and ```GPIO_ISR``` functions. We next provide some guidance about these two examples:
 
 In the first example (LED-Switch_7SegDispl_C-Lang), we show how to use Programmed I/O to perform the following two tasks:
 Invert the rightmost LED every time a 0 to 1 transition on the rightmost switch occurs.
@@ -134,7 +119,7 @@ In the second example (LED-Switch_7SegDispl_Interrupts_C-Lang), we show a new ve
 In this program, the main function performs some initializations and then enters an infinite loop where the 7-segment displays are written and a software delay is established. Note that the switch is not explicitly read in this case. Instead, whenever a 0 to 1 transition occurs in the switch, an interrupt is triggered that makes the processor execute the GPIO_ISR function, where the switch state is read and the LED state is inverted.
 
 
-## Exercise 6
+## Exercise 4
 
 Modify the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that each time a 0 to 1 transition is detected on the first switch, the state of all 16 LEDs is inverted, not just the least significant one as in the provided code.
 
@@ -143,7 +128,7 @@ Note: In C, the following two operators work as explained:
   - ~ → Performs logical inversion; i.e., ~0 is 0xffffffff.
 
 
-## Exercise 7
+## Exercise 5
 
 Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
 
@@ -152,7 +137,7 @@ Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of
 - The **second switch** toggles the 7-segment displays on/off state (i.e., if they are off, they turn on and continue displaying the count, and if they are on, they turn off).
 
 
-## Exercise 8
+## Exercise 6
 
 Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
 
