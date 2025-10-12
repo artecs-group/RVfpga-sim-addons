@@ -64,6 +64,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
    <img src="Images/RVfpgaVidbo.png" width=30% height=30%>
 </p>
 
+
    b. **Launch the ViDBo server**  
    Open a terminal and run the following commands:
    ```
@@ -74,6 +75,7 @@ Follow the steps below to launch an example simulation on RVfpga-ViDBo, where th
   <p align="center">
      <img src="Images/Python.png" width=100% height=100%>
   </p>
+
 
    c. **Open the web interface**  
    In your browser, go to **http://localhost:8000/nexys-a7.html**, and click the **“Connect to board”** button.
