@@ -90,21 +90,22 @@ Move the switches and observe how the LEDs change accordingly. This behavior is 
 </p>
 
 
-
 ## Exercise 1
-Write a C program that displays the inverse of the switches on the LEDs. For example: 
-- If the switches are (in binary): 0101010101010101, then the LEDs should display: 1010101010101010
-- If the switches are: 1111000011110000, then the LEDs should display: 0000111100001111 
 
-You can use the ```LedsSwitches_C-Lang``` project as a base. Make sure you understand 
+Write a C program that displays the **inverse** of the switches on the LEDs.
+
+For example:  
+- If the switches are (in binary): `0101010101010101`, then the LEDs should display: `1010101010101010`  
+- If the switches are: `1111000011110000`, then the LEDs should display: `0000111100001111`
+
+You can use the project **`LedsSwitches_C-Lang`** as a base. Make sure you understand how the program reads the switch states, writes to the LEDs, and how the GPIO registers are accessed.
 
 
 ## Exercise 2
-Write a C program that displays the value of the switches on the four right-most digits of the 7-segment displays.
 
-You can use the ```71_7SegDispl_C-Lang.c``` project as a base.
+Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. You can use the project **`71_7SegDispl_C-Lang.c`** as a base.
 
-We next show the result that you should obtain when running this program on RVfpga-ViDBo. You can see how the switches value is shown in the 7-segment displays. Note that this device is shown in the simulator outside the board.
+When running the program in **RVfpga-ViDBo**, you should see the switch value appear on the 7-segment display. Note that this peripheral is shown **outside** the FPGA board in the simulator.
 
 <p align="center">
   <img src="Images/ViDBo.png" width=70% height=70%>
@@ -112,7 +113,14 @@ We next show the result that you should obtain when running this program on RVfp
 
 
 ## Exercise 3
-Write a C program that shows the string “0-1-2-3-4-5-6-7-8” moving from the right to the left of the 8-digit 7-segment displays. That is, 0 should show up on the right-most digit first. Then it should move to the left and 1 should show up on the right-most digit, and so on.
+
+Write a C program that shows the string **“0-1-2-3-4-5-6-7-8”** moving from right to left across the 8-digit 7-segment display.
+
+- The character `0` should first appear on the **right-most digit**.  
+- Then it should move one position to the left, while the next character (`1`) appears on the right-most digit, and so on.  
+
+You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
+
 
 
 ## Interrupts - Guided test
