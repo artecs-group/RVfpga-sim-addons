@@ -169,31 +169,47 @@ In this version:
 
 ## Exercise 4
 
-Modify the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that each time a 0 to 1 transition is detected on the first switch, the state of all 16 LEDs is inverted, not just the least significant one as in the provided code.
+Modify the interrupt-based code  
+`/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang`  
+so that each time a 0→1 transition is detected on the first switch, the state of all 16 LEDs is inverted — not just the least significant one as in the original program.
 
-Note: In C, the following two operators work as explained:
-  - ! → Performs boolean inversion; i.e., !0 is 1 and !1 is 0.
-  - ~ → Performs logical inversion; i.e., ~0 is 0xffffffff.
+Hint: In the interrupt service routine (ISR), replace the line that toggles only one LED with a bitwise inversion of the entire 16-bit LED output register. Remember that in C:
+- ! is logical NOT (returns 0 or 1)
+- is bitwise NOT (inverts all bits).
 
 
 ## Exercise 5
 
-Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses **two switches** (the two least significant ones) instead of just one.
 
-- Both of the two least significant switches must be used, not just one. The register ```RGPIO_INTS``` indicates which pin generated the interrupt.  
-- The **first switch** retains the same functionality as in the original code.  
-- The **second switch** toggles the 7-segment displays on/off state (i.e., if they are off, they turn on and continue displaying the count, and if they are on, they turn off).
+The new functionality must be:
+
+- **SW0**: retains the same behavior as in the original code — toggles the LED state on each 0→1 transition.  
+- **SW1**: toggles the **7-segment display on/off** state.  
+  - If the display is off, turning it on resumes counting where it left off.  
+  - If the display is on, turning it off stops updating it.
+
+Hint: Use the register `RGPIO_INTS` to identify which switch triggered the interrupt. Inside the ISR, check both switch bits and handle each event accordingly.
 
 
 ## Exercise 6
 
-Modify the ```main```, ```GPIO_Initialization``` and ```GPIO_ISR``` functions of the interrupt-based code (```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang```) so that it implements the following functionality:
+Modify the `main`, `GPIO_Initialization`, and `GPIO_ISR` functions in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior:
 
-- Both of the two least significant switches must be used, not just one. The register ```RGPIO_INTS``` indicates which pin generated the interrupt.  
-- The **first switch** toggles between two counting speeds.  
-- The **second switch** toggles the counting direction:  
-  * Increment the counter.  
-  * Decrement the counter.  
+- Use the two least significant switches (SW0 and SW1).
+- SW0 toggles between two counting speeds (fast / slow).
+- SW1 toggles the counting direction (increment / decrement).
+- The LEDs must remain off at all times (do not update the LED output).
 
-Unlike the original code, it is not necessary for the LEDs to invert their value on each 0-to-1 transition; instead, they must remain turned off.
-
+Guidance:
+- Enable interrupts for both SW0 and SW1 and use `RGPIO_INTS` to determine which switch triggered the interrupt.
+- Maintain global state variables for:
+  - current speed (fast/slow),
+  - current direction (up/down),
+  - the 32-bit counter value,
+  - display on/off state if your template requires it.
+- In the main loop, update the 7-segment display using:
+  - a delay that depends on the selected speed,
+  - a counter update that depends on the selected direction.
+- In the ISR, only update the speed/direction state and clear the served interrupt source(s).
+- Do not write to the LED register anywhere in the program.
