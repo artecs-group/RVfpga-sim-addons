@@ -131,8 +131,6 @@ In this guided test, you will learn how to manage **interrupt-driven I/O** in RV
 
 Open both projects, analyze their structure, and run them in **RVfpga-ViDBo**. Focus especially on the following functions in the interrupt-based version: `main`, `GPIO_Initialization`, and `GPIO_ISR`.
 
----
-
 ### 1. Programmed I/O version
 
 The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two tasks:
@@ -150,8 +148,6 @@ However, this approach has a **limitation**: if a switch transition happens duri
 
 > **Observation:** Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected.  
 > This limitation motivates the use of **interrupt-driven I/O**.
-
----
 
 ### 2. Interrupt-driven I/O version
 
