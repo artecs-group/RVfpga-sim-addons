@@ -30,62 +30,74 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
 
 
 ## Simulation of the RVfpga SoC in RVfpga-ViDBo
-From time 16:36 to time 19:16 of the following video, you can visualize an example of the RVfpga-ViDBo simulator running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
+From **minute 16:36 to 19:16** of the following video, you can watch an example of the **RVfpga-ViDBo simulator** running a program:  
+[RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
 
-This tool simulates the VeeRwolfX SoC based on the VeeR EH1 core running on the Nexys A7 FPGA board. The simulator allows us to simulate the execution of RISC-V codes on this processor and interact with some of the board’s peripherals. The programs work exactly the same in the simulator as on the actual board.
+This tool simulates the **VeeRwolfX SoC**, which is based on the **VeeR EH1** core running on the **Nexys A7 FPGA** board.  
+It allows you to execute RISC-V programs and interact with several board peripherals directly from your computer.  
+Programs executed in the simulator behave **exactly the same** as on the actual FPGA board.
 
 <p align="center">
   <img src="Images/Nexys.png" width=60% height=60%>
 </p>
 
-In this lab, we will only use the following peripherals among all the available ones:
-- 16 LEDs
-- 16 Switches
-- 8 digits with 7-segment displays
+In this lab, we will use only the following peripherals:
+- **16 LEDs**
+- **16 Switches**
+- **8 digits with 7-segment displays**
 
 Follow the steps below to launch an example simulation on RVfpga-ViDBo, where the state of the switches is continuously read and displayed on the LEDs.
-1. Open Visual Studio Code (VSCode).
-2. Click on ```File - Open Folder``` and open the folder containing the project for the example we will work on in this introduction: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
+
+1. **Open Visual Studio Code (VS Code).**
+
+2. **Open the project folder**  
+   Go to `File → Open Folder` and open the folder containing the example project for this introduction:  
+   ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LedsSwitches_C-Lang```
 
 <p align="center">
   <img src="Images/OpenFolder.png" width=80% height=80%>
 </p>
 
-3. Set the path for the simulator in the ```platformio.ini``` file. In this lab, we will use the RVfpga-ViDBo simulator. In this project, the path is already correctly set in the following line, so you do not need to change anything:
-
+3. **Check the simulator path**  
+   Open the `platformio.ini` file. In this lab, we will use the **RVfpga-ViDBo** simulator, so set the path as follows: 
 ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
 
-4. Run the simulator:
+4. **Run the simulator**
 
-    a. In the ```PROJECT TASKS``` window of PlatformIO, click on ```RVfpgaEL2-ViDBo/Pipeline```
+a. In the **PROJECT TASKS** panel of PlatformIO, click on  
+   ```RVfpgaEL2-ViDBo / Pipeline```
 
-   <p align="center">
-      <img src="Images/RVfpgaVidbo.png" width=30% height=30%>
-   </p>
-   
-    b. Open a terminal and launch the ViDBo server by running the following commands:
+<p align="center">
+   <img src="Images/RVfpgaVidbo.png" width=30% height=30%>
+</p>
 
-      ```
-      cd /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo
-      python3 -m http.server --directory NexysA7board/
-      ```
+b. **Launch the ViDBo server**  
+   Open a terminal and run the following commands:
+   ```
+   cd /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo
+   python3 -m http.server --directory NexysA7board/
+   ```
 
-     <p align="center">
-        <img src="Images/Python.png" width=100% height=100%>
-     </p>
+  <p align="center">
+     <img src="Images/Python.png" width=100% height=100%>
+  </p>
 
-    c. Finally, open a browser and go to http://localhost:8000/nexys-a7.html, and click on the "Connect to board" button.
+c. **Open the web interface**  
+   In your browser, go to **http://localhost:8000/nexys-a7.html**, and click the **“Connect to board”** button.
 
-     <p align="center">
-        <img src="Images/ViDBo1.png" width=80% height=80%>
-     </p>
+  <p align="center">
+     <img src="Images/ViDBo1.png" width=80% height=80%>
+  </p>
 
+5. **Test the simulation**  
+Move the switches and observe how the LEDs change accordingly.  
+This behavior is identical to how the program would run on the actual FPGA board.  
+For example:
 
-5. Finally, check the simulation by modifying the switches and viewing the LEDs. This code would behave exactly the same if run on the actual board. For example:
+<p align="center">
+   <img src="Images/NexysExample.png" width=60% height=60%>
+</p>
 
-     <p align="center">
-        <img src="Images/NexysExample.png" width=60% height=60%>
-     </p>
 
 
 ## Exercise 1
