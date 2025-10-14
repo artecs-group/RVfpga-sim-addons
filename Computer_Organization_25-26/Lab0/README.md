@@ -50,7 +50,6 @@ Once the Virtual Machine (VM) is installed in your system, all labs will be deve
 >   - From DC3 (LSU) to M1 (Multiplier).  
 >   - From EX2 (ALU) to DC2 (Store).  
 >   - From DC3 (Load) to DC2 (Store).  
->   - (Secondary ALU forwardings not yet included).
 >   - Secondary-ALU forwardings: partially supported. Forwarding paths involving the Secondary ALU (e.g., Commit/WB to EX2/EX3 for ALU and branch instructions) are now displayed.
 Some cases (such as Secondary ALU to sw (rs2) in DC3) are still work in progress.
 > - Highlighted datapaths: occupied pipeline stages are emphasized with colored rectangles.  
