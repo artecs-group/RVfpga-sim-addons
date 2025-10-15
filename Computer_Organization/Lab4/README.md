@@ -1,4 +1,4 @@
-# Lab 7 (Lab 4 of CO) - The RVfpga I/O System - High Level
+# Lab 4 (Lab 7 of ISA) - The RVfpga I/O System - High Level
 This lab aims to help students gain a solid understanding of an **Input/Output (I/O) System** and how it operates within the RVfpga platform. Follow the steps below:
 
 1. **Background reading**  
