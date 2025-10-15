@@ -135,8 +135,7 @@ If we look at the Memory tab at this point, we can see the initial A and B array
 
 9. Do these numbers make sense?
 
-	To check the values (Hits = 0, Misses = 48, Writebacks = 16), first confirm where each array lives in memory and which cache index each access maps to.
-
+	The goal of this section is to verify and understand the cache statistics obtained — **Hits = 0**, **Misses = 48**, and **Writebacks = 16** — by analyzing how arrays **A**, **B**, and **C** are mapped in memory and how the cache behaves during the execution of the loop `Compute C = A + B`.
 
 	#### 1) Where do A, B, and C map?
 
