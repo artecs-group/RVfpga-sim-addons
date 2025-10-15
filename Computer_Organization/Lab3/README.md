@@ -133,55 +133,59 @@ If we look at the Memory tab at this point, we can see the initial A and B array
 	 * Misses = 124 - 76 = 48
 	 * Writebacks = 85 - 69 = 16
 
-Do these numbers make sense?
+9. Do these numbers make sense?
 
-We need to know the addresses where each array is mapped to. We can deduce it by looking at the pointer values.
+	To check the values (Hits = 0, Misses = 48, Writebacks = 16), first confirm where each array lives in memory and which cache index each access maps to.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
-       alt="image" 
-       style="width: 80%; height: auto;">
-</div>
 
-According to this information, we can deduce the following:
+	#### 1) Where do A, B, and C map?
 
-- Starting address of A: 0x11b00 which in binary is 0001 0001 1011 00**00** 0000
-- Starting address of B: 0x11b40 which in binary is 0001 0001 1011 01**00** 0000
-- Starting address of C: 0x11b80 which in binary is 0001 0001 1011 10**00** 0000
+	From the pointers shown in Ripes:
 
-The bits in bold (bits 4 and 5) determine the cache block where the data is mapped to. All three arrays map to the same block in each iteration. In the cache configuration used here, only one block fits in the cache, thus no hit will happen.
+	<div align="center">
+	  <img src="https://github.com/user-attachments/assets/5a17f801-860f-4a68-bdce-ee33e8574e5e" 
+	       alt="image" 
+	       style="width: 80%; height: auto;">
+	</div>
 
-9. Finally, let's analyze step by step the evolution of the cache throughout the execution of the loop, carefully observing the evolution of the blocks. You can progress gradually from the start of the loop, stopping after executing each ```lw``` or ```sw``` instruction and analyzing the cache state. For example, the following figures show the cache state during the fourth iteration:
+	From the figure:
+	- A starts at 0x11b00 → 0001 0001 1011 0000 0000₂
+	- B starts at 0x11b40 → 0001 0001 1011 0100 0000₂
+	- C starts at 0x11b80 → 0001 0001 1011 1000 0000₂
 
- * After the first load, the first block of array A has been copied to the cache:
+	With a 4-word line (16 B), the address breakdown is:
+	- byte-in-word = bits [1:0]
+	- word-in-line = bits [3:2]
+	- index = bits [5:4] ← selects one of the 4 direct-mapped lines (sets)
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/591849bf-d9ca-49fe-a946-c67a556f0bb3" alt="image">
-</div>
+	Notice that A, B, and C bases differ by 0x40 (64 B) steps, which do not change bits [5:4]. Therefore, all three arrays map to the same index on every access of the inner loop. In a direct-mapped, 1-way cache this means A, B, and C conflict in that single index; the other three indices are unused during this loop.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/2f5f4c4c-c329-44d9-b68f-5fa8dc257f7a" alt="image">
-</div>
 
- * After the second load, the first block of array B has been copied to the cache, overwriting the first block of array A:
+	#### 2) One inner-loop iteration (j) step-by-step
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/9d5fe6f1-c540-43bb-9aef-3628cd308632" alt="image">
-</div>
+	For each element `j`, the code performs:
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/5f07b22f-3933-4aed-ba17-0a7da55c9633" alt="image">
-</div>
+	1. `lw A[i][j]`  
+   		- **Miss** → brings A’s line into the cache (the conflicting index).  
+	2. `lw B[i][j]`  
+   		- **Miss** → brings B’s line, **evicting A** (same index, different tag).  
+	3. `sw C[i][j]` (write-back + write-allocate)  
+   		- **Miss** on write-allocate → fetches C’s line, **evicts B**, marks it **dirty**, then performs the write.
 
- * After the store, the first block of array C has been copied to the cache, overwriting the first block of array B. Note however that the value written is not shown immediately in the cache, but when the next store is executed:
+	Right after that, the next `lw A[i][j+1]` again maps to the same index and evicts the dirty C line, causing a **writeback**. This pattern repeats for every iteration.
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/15e7fa1e-6b88-4a07-823c-29df78a7216a" alt="image">
-</div>
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/fc7de4dc-ef5f-40a7-bdb3-9fb5e79cb053" alt="image">
-</div>
+	#### 3) Totals for the whole loop
+
+	There are `N×N = 16` iterations of the inner loop, each doing three data accesses:
+
+	- **Misses:** 3 per iteration → `16 × 3 = 48`  
+	- **Hits:** none → `0`  
+	- **Writebacks:** 1 per iteration (dirty C line evicted by next A load) → `16`
+
+	These exactly match the measured values:
+
+		Hits = 0  Misses = 48  Writebacks = 16
 
 
 
