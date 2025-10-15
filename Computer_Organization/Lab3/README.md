@@ -43,7 +43,7 @@ main(){
 }
 ```
 
-The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Compute C=A+B*), performing a computation that stores in C the sum of the elements in A and B; **the *Compute C=A+B* loop is the one we will analyze in the cache**. 
+The program begins with an initial nested loop (*"Initialize matrices"*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*"Compute C=A+B"*), performing a computation that stores in C the sum of the elements in A and B; **the *"Compute C=A+B"* loop is the one we will analyze in the cache**. 
 
 This is the result obtained after executing this program, with the values shown in hexadecimal (note for example that the first element of A is 259 in decimal and 0x103 in hexadecimal):
 
