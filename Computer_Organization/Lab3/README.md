@@ -49,7 +49,7 @@ This is the result obtained after executing this program, with the values shown 
 
 <img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
 
-We next analyze the cache's behavior for the second nested loop and for a direct mapping data cache with the following parameters:
+We next analyze the cache's behavior for the second nested loop (*"Compute C=A+B" loop*) and for a direct mapping data cache with the following parameters:
 
 - 4 lines (2<sup>N</sup> Lines = 2)
 - 4 words per line (2<sup>N</sup> Words/Line = 2)
