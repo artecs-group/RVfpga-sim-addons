@@ -89,6 +89,12 @@ For this cache configuration, the block is determined using address bits 4 and 5
   <img src="Images/Breakpoint.png" width=50% height=50%>
 </p>
 
+If we look at the Memory tab at this point, we can see the initial A and B arrays:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/cf13f540-b6ff-4aff-9be7-a2eff12394a0" alt="image">
+</div>
+
 4. Run quickly until the breakpoint at the beginning of the loop to be analyzed.
 
 <p align="center">
