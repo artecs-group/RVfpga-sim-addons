@@ -35,7 +35,7 @@ main(){
            C[i][j]=0;
        }
           
-/* Analyze this loop */
+/* Compute C=A+B */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++)
        	C[i][j] = A[i][j] + B[i][j];
@@ -43,7 +43,9 @@ main(){
 }
 ```
 
-The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Analyze this loop*), performing a computation that stores in C the sum of the elements in A and B; this is the loop we will analyze in the cache. This is the result obtained after executing this program, with the values shown in hexadecimal (note for example that the first element of A is 259 in decimal and 0x103 in hexadecimal):
+The program begins with an initial nested loop (*Initialize matrices*) that simply initializes the elements in A, B, and C, which we will not analyze in the simulation. Then, another nested loop follows (*Compute C=A+B*), performing a computation that stores in C the sum of the elements in A and B; **the *Compute C=A+B* loop is the one we will analyze in the cache**. 
+
+This is the result obtained after executing this program, with the values shown in hexadecimal (note for example that the first element of A is 259 in decimal and 0x103 in hexadecimal):
 
 <img width="1367" height="266" alt="image" src="https://github.com/user-attachments/assets/5918ba34-3038-4b53-9f2e-e3838d9d7503" />
 
@@ -198,7 +200,7 @@ main(){
            C[i][j]=0;
        }
           
-/* Analyze this loop */
+/* Compute C=A+B */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++)
        	C[i][j] = A[i][j] + B[i][j];
@@ -240,7 +242,7 @@ main(){
            C[i][j]=0;
        }
           
-/* Analyze this loop */
+/* Compute C=A+B */
    for (i=0; i < N; i++)
        for (j=0; j < N; j++)
        	C[i][j] = AB[i][j].A + AB[i][j].B;
@@ -265,7 +267,7 @@ main(){
     media [i] = i+5;
   }
   
-  /* Analyze this loop */
+  /* Nota computation */
   for (i=0; i < 8; i++) {
     if (i > 1 && i < 6)
     		nota[i] = media[i] / 2;
