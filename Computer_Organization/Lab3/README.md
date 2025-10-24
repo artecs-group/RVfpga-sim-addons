@@ -1,9 +1,9 @@
 # Lab 3 (Lab 5 of ISA) - The Memory Hierarchy
 This practice aims to help students understand the cache memory. Follow the next steps:
 
-1. Start by following the guided example provided below in section [Cache simulation in Ripes - Guided example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes---guided-example).
-2. Then, analyze in Ripes the following exercise from the Problems Sheet: [Exercise 8](https://drive.google.com/file/d/18DnAratd9Dpf9KtUKLTstMExy6-U-qw0/view?usp=drive_link) (solution provided here: [Solution - Exercise 8](https://drive.google.com/file/d/14J4m2l5hyQ7DTtd0_QOfXuyEemF6Akb9/view?usp=drive_link)). 
-3. Finally, resolve the two exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) using Ripes. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
+1. Start by following the guided example provided below in section [Cache simulation in Ripes - Guided example](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#cache-simulation-in-ripes---guided-example). **This exercise is for practice only and does not need to be included in the report.**
+2. Then, analyze in Ripes the following exercise from the Problems Sheet: [Exercise 8](https://drive.google.com/file/d/18DnAratd9Dpf9KtUKLTstMExy6-U-qw0/view?usp=drive_link) (solution provided here: [Solution - Exercise 8](https://drive.google.com/file/d/14J4m2l5hyQ7DTtd0_QOfXuyEemF6Akb9/view?usp=drive_link)). **This exercise is for practice only and does not need to be included in the report.**
+3. Finally, resolve the two exercises provided [below](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab3#exercise-1) using Ripes. **These two exercises must be included in the report.**
 
 ## Cache simulation in Ripes - Guided example
 The cache view allows simulating different configurations and management policies for first-level data and instruction caches. In general, and unless stated otherwise, for this practice, we will configure the **compiler to work with optimization level -O1** and set the **processor to Single-Cycle 32-bit** (see the following two figures). Moreover, in these exercises we will not analyze the instruction cache, so its configuration will not affect us, and we can leave it as the default in the simulator.
