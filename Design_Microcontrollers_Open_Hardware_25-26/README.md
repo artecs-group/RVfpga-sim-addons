@@ -2,6 +2,8 @@
 
 We next describe the work to do in weeks 5 and 6 of course *DISEÑO DE MICROCONTROLADORES EN HARDWARE ABIERTO*.
 
+---
+
 ## Week 5 (December 8th to 12th, 2025)
 
 ### ONLINE THEORY AND TASKS (December 8th to 11th)
@@ -33,6 +35,7 @@ We next describe the work to do in weeks 5 and 6 of course *DISEÑO DE MICROCONT
 - **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1](https://drive.google.com/file/d/1pe7l4ddl4cMUhzx5Cn4oQ1fqV5IL0yM4/view?usp=drive_link)
 - **Performance Evaluation in RVfpga**: [Practice_Performance](https://drive.google.com/file/d/11ftnn8QoSrMI0wn0X8Ez_ko8bibeW82-/view?usp=drive_link)
 
+---
 
 ## Week 6 (December 15th to 19th, 2025)
 
