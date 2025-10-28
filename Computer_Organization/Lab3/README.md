@@ -166,11 +166,19 @@ If we look at the Memory tab at this point, we can see the initial A and B array
 	For each element `j`, the code performs:
 
 	1. `lw A[i][j]`  
-   		- **Miss** → brings A’s line into the cache (the conflicting index).  
+   		- **Miss** → brings A’s line into the cache (the conflicting index). You can next view the state of the Ripes Data Cache at this moment, where the first 4 elements of A (1 block) have been copied to cache frame 0:
+
+			<img width="900" height="226" alt="image" src="https://github.com/user-attachments/assets/2b07591a-c5df-474b-8c05-c648c00566d1" />
+
 	2. `lw B[i][j]`  
-   		- **Miss** → brings B’s line, **evicting A** (same index, different tag).  
+   		- **Miss** → brings B’s line, **evicting A** (same index, different tag). You can next view the state of the Ripes Data Cache at this moment, where the first 4 elements of B (1 block) have been copied to cache frame 0, replacing A:
+
+			<img width="900" height="226" alt="image" src="https://github.com/user-attachments/assets/d5ad4697-cabf-42aa-819e-eb02a434bb62" />
+
 	3. `sw C[i][j]` (write-back + write-allocate)  
-   		- **Miss** on write-allocate → fetches C’s line, **evicts B**, marks it **dirty**, then performs the write.
+   		- **Miss** on write-allocate → fetches C’s line, **evicts B**, marks it **dirty**, then performs the write. You can next view the state of the Ripes Data Cache at this moment, where the first 4 elements of C (1 block) have been copied to cache frame 0, replacing B:
+
+			<img width="900" height="226" alt="image" src="https://github.com/user-attachments/assets/1b1267e2-9322-4a99-8e1f-2809ef1952b4" />
 
 	Right after that, the next `lw A[i][j+1]` again maps to the same index and evicts the dirty C line, causing a **writeback**. This pattern repeats for every iteration.
 
