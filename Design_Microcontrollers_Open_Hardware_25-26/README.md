@@ -1,6 +1,6 @@
 # Design of Microcontrollers in Open Hardware
 
-We next describe the work to do in weeks 5 and 6 of course *DISEÑO DE MICROCONTROLADORES EN HARDWARE ABIERTO*.
+In Weeks 5 and 6 of DISEÑO DE MICROCONTROLADORES EN HARDWARE ABIERTO, students dive into the world of open hardware microcontrollers using the RVfpga platform. Through videos, guided exercises, and hands-on labs, they learn how to analyze the VeeR EH1/EL2 cores, explore input/output systems, evaluate processor performance, and use the Zephyr Operating System.
 
 ---
 
