@@ -1,4 +1,4 @@
-# Week 5 (December 8th to 12th, 2025)
+# Week 5
 
 ## ONLINE THEORY AND TASKS (To complete between December 8th and December 11th)
 1. **Introduction to RVfpga**
