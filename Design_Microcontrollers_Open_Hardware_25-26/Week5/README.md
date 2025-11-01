@@ -1,5 +1,7 @@
 # Week 5
 
+
+
 ## ONLINE THEORY AND TASKS (December 8th to December 11th)
 
 During this week, you will work on the online component of the course, focused on the RVfpga platform and the VeeR EH1 and EL2 processor cores. The material includes a set of videos and guided exercises designed to help you understand the structure of the RVfpga SoC, its input/output system, and performance evaluation techniques. Completing these activities before the in-person lab on Friday is essential, as they provide the background knowledge required for the laboratory session.
