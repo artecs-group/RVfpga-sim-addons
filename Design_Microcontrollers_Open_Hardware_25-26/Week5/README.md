@@ -1,6 +1,15 @@
 # Week 5
 
 ## ONLINE THEORY AND TASKS (To complete between December 8th and December 11th)
+
+During this week, you will work on the online component of the course, focused on the RVfpga platform and the VeeR EH1 and EL2 processor cores. The material includes a set of videos and guided exercises designed to help you understand the structure of the RVfpga SoC, its input/output system, and performance evaluation techniques. Completing these activities before the in-person lab on Friday is essential, as they provide the background knowledge required for the laboratory session.
+
+The documents include two types of tasks: Mandatory and Optional. The mandatory tasks cover the essential aspects needed to complete the compulsory exercises during the lab session. The optional tasks explore more advanced topics and can help you deepen your understanding and improve your final grade. If your time is limited, focus on the mandatory tasks first.
+
+Take your time to watch the videos carefully, analyze the contents, and complete the proposed exercises. There are no submissions required during the week; however, you are expected to attend the in-person session familiar with the materials and ready to apply what you have learned.
+
+We encourage you to work steadily throughout the week. The effort you invest in understanding the materials and completing the online tasks will help you make the most of the in-person session and reinforce your understanding of the course as a whole.
+
 1. **Introduction to RVfpga**
   - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
   - Install the environment and test tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1vdLf39U89q38gmLuodo7nZkctRqeAiyO/view?usp=drive_link). Each section includes a link to a video illustrating its content.
@@ -29,7 +38,14 @@
 ---
 
 ## IN-PERSON PRACTICE (December 12th)
-- **Input/Output in RVfpga**: [Practice_IO]()
-- **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1]()
-- **Performance Evaluation in RVfpga**: [Practice_Performance]()
+
+The in-person lab session will take place on Friday, December 12th. During the session, you will apply the concepts learned during the week to complete several hands-on exercises related to I/O systems, the VeeR EH1 and EL2 cores, and performance evaluation in the RVfpga SoC.
+
+At the end of the session, you will be asked to submit a short report summarizing your results. This report may include screenshots from the simulator or board executions, the programs you have developed, and explanations of the obtained results. A few days later, you will submit an extended version of this report, which may include additional exercises you were unable to complete during the practice.
+
+1. **Input/Output in RVfpga**: [Practice_IO]()
+
+2. **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1]()
+
+3. **Performance Evaluation in RVfpga**: [Practice_Performance]()
 
