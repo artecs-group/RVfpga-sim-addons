@@ -6,7 +6,7 @@ During this week, students will first complete a set of online learning activiti
 
 - [Online theory and tasks](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Design_Microcontrollers_Open_Hardware_25-26/Week5/README.md#online-theory-and-tasks-december-8th-to-december-11th) (December 8 – 11, 2025): Work through the online materials, watch the instructional videos, and complete the guided exercises to become familiar with the RVfpga environment and the VeeR EH1/EL2 processor cores.
 
-- In-person practice (December 12, 2025): Apply the knowledge acquired during the week to complete a set of practical exercises in the lab, using the RVfpga simulator and, when available, the FPGA board.
+- [In-person practice](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Design_Microcontrollers_Open_Hardware_25-26/Week5/README.md#in-person-practice-december-12th) (December 12, 2025): Apply the knowledge acquired during the week to complete a set of practical exercises in the lab, using the RVfpga simulator and, when available, the FPGA board.
 
 ## ONLINE THEORY AND TASKS (December 8th to December 11th)
 
