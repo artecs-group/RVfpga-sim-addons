@@ -29,7 +29,7 @@ Take the time to follow the videos and exercises carefully. There are no submiss
 
 ### 2. **Input/Output in RVfpga**
   - Watch this video: [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y). The video describes the RVfpga I/O System in detail. You can obtain the slides used in the video here: [IOSlides](https://drive.google.com/file/d/1-Kav6TLV5xBURQYfZfRP3yzWUq_Qp7eV/view?usp=drive_link)
-  - Complete: [Tasks_InputOutput](https://drive.google.com/file/d/1FX5Fr63ecMRLswCPk606GWZr7z65b1Fp/view?usp=drive_link)
+  - Complete: [Tasks_InputOutput](https://drive.google.com/file/d/1-rVKByx-tePY05oWAjKyeDu75Ch20iKc/view?usp=sharing)
 
 ### 3. **VeeR EH1 and EL2 Cores**
   - Watch this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG). The video describes the VeeR EH1 microarchitecture in detail. You can obtain the slides used in the video here: [EH1Slides](https://drive.google.com/file/d/1kIMQY3u5jZB7cAktFPqIHSpHAuruENAM/view?usp=drive_link)
