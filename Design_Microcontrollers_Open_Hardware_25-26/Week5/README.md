@@ -1,19 +1,20 @@
 # Week 5
 
-This part of the course introduces students to the design and analysis of open hardware microcontrollers through the RVfpga educational platform. The main objective is to understand how a modern RISC-V processor is organized internally, how it interacts with peripheral devices, and how its performance can be evaluated. Throughout this week, students will alternate between online learning activities and an in-person laboratory session, combining theory, guided exercises, and practical experimentation.
+This part of the course introduces students to the design and analysis of open-hardware microcontrollers through the RVfpga educational platform. The main objective is to understand how a modern RISC-V processor is organized internally, how it interacts with peripheral devices, and how its performance can be evaluated.
 
-- Online theory and tasks (December 8th–11th, 2025): Work through the online materials, watch the instructional videos, and complete the guided exercises to become familiar with the RVfpga environment and the VeeR processor cores.
-- In-person practice (December 12th, 2025): Apply the knowledge acquired during the week to complete hands-on exercises in the lab, using both the simulator and, when available, the FPGA board.
+During this week, students will first complete a set of online learning activities and then attend an in-person laboratory session, combining theoretical study with guided exercises and hands-on experimentation.
+
+- Online theory and tasks (December 8 – 11, 2025): Work through the online materials, watch the instructional videos, and complete the guided exercises to become familiar with the RVfpga environment and the VeeR EH1/EL2 processor cores.
+
+- In-person practice (December 12, 2025): Apply the knowledge acquired during the week to complete a set of practical exercises in the lab, using the RVfpga simulator and, when available, the FPGA board.
 
 ## ONLINE THEORY AND TASKS (December 8th to December 11th)
 
-During this week, you will work on the online component of the course, focused on the RVfpga platform and the VeeR EH1 and EL2 processor cores. The material includes a set of videos and guided exercises designed to help you understand the structure of the RVfpga SoC, its input/output system, and performance evaluation techniques. Completing these activities before the in-person lab on Friday is essential, as they provide the background knowledge required for the laboratory session.
+This stage focuses on the online component of the course, where you will explore the RVfpga platform and the VeeR EH1 and EL2 cores. The provided materials include short videos and guided exercises that explain the internal organization of the RVfpga SoC, its input/output subsystems, and performance-evaluation methods. Completing these activities before Friday’s lab is essential, as they provide the theoretical and practical foundation required for the in-person work.
 
-The documents include two types of tasks: Mandatory and Optional. The mandatory tasks cover the essential aspects needed to complete the compulsory exercises during the lab session. The optional tasks explore more advanced topics and can help you deepen your understanding and improve your final grade. If your time is limited, focus on the mandatory tasks first.
+Two types of tasks are included: Mandatory and Optional. Mandatory tasks cover the core concepts needed for the compulsory exercises in the lab, while optional ones address more advanced topics for those wishing to go deeper or improve their final grade. If your time is limited, focus on the mandatory tasks first.
 
-Take your time to watch the videos carefully, analyze the contents, and complete the proposed exercises. There are no submissions required during the week; however, you are expected to attend the in-person session familiar with the materials and ready to apply what you have learned.
-
-We encourage you to work steadily throughout the week. The effort you invest in understanding the materials and completing the online tasks will help you make the most of the in-person session and reinforce your understanding of the course as a whole.
+Take the time to follow the videos and exercises carefully. There are no submissions during the week, but you are expected to attend the lab session well prepared and ready to apply what you have learned. Working steadily throughout the week will help you make the most of the lab and strengthen your understanding of the course as a whole.
 
 ### 1. **Introduction to RVfpga**
   - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
@@ -44,9 +45,11 @@ We encourage you to work steadily throughout the week. The effort you invest in 
 
 ## IN-PERSON PRACTICE (December 12th)
 
-The in-person lab session will take place on Friday, December 12th. During the session, you will apply the concepts learned during the week to complete several hands-on exercises related to I/O systems, the VeeR EH1 and EL2 cores, and performance evaluation in the RVfpga SoC.
+The in-person session will be held on Friday, December 12th. You will put into practice the concepts studied during the week through several hands-on exercises on I/O systems, the VeeR EH1/EL2 cores, and performance evaluation within the RVfpga SoC.
 
-At the end of the session, you will be asked to submit a short report summarizing your results. This report may include screenshots from the simulator or board executions, the programs you have developed, and explanations of the obtained results. A few days later, you will submit an extended version of this report, which may include additional exercises you were unable to complete during the practice.
+At the end of the session, you will submit a brief report summarizing your results. This report may include screenshots from the simulator or FPGA executions, your developed code, and explanations of the obtained results. A few days later, you will deliver an extended version including any exercises not completed during the lab.
+
+This session consolidates the knowledge gained during the online phase and provides direct experience in analyzing and experimenting with open-hardware microcontroller designs.
 
 ### 1. **Input/Output in RVfpga**: [Practice_IO]()
 
