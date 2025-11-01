@@ -51,9 +51,12 @@ At the end of the session, you will submit a brief report summarizing your resul
 
 This session consolidates the knowledge gained during the online phase and provides direct experience in analyzing and experimenting with open-hardware microcontroller designs.
 
-### 1. **Input/Output in RVfpga**: [Practice_IO]()
+### 1. **Input/Output in RVfpga**: 
+Complete the exercises from the following document: [Practice_IO]()
 
-### 2. **VeeR EH1 and EL2 Cores**: [Practice_VeerEH1]()
+### 2. **VeeR EH1 and EL2 Cores**: 
+Complete the exercises from the following document: [Practice_VeerEH1]()
 
-### 3. **Performance Evaluation in RVfpga**: [Practice_Performance]()
+### 3. **Performance Evaluation in RVfpga**: 
+Complete the exercises from the following document: [Practice_Performance]()
 
