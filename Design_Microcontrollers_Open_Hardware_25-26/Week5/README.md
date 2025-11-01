@@ -1,6 +1,9 @@
 # Week 5
 
+This part of the course introduces students to the design and analysis of open hardware microcontrollers through the RVfpga educational platform. The main objective is to understand how a modern RISC-V processor is organized internally, how it interacts with peripheral devices, and how its performance can be evaluated. Throughout this week, students will alternate between online learning activities and an in-person laboratory session, combining theory, guided exercises, and practical experimentation.
 
+- Online theory and tasks (December 8th–11th, 2025): Work through the online materials, watch the instructional videos, and complete the guided exercises to become familiar with the RVfpga environment and the VeeR processor cores.
+- In-person practice (December 12th, 2025): Apply the knowledge acquired during the week to complete hands-on exercises in the lab, using both the simulator and, when available, the FPGA board.
 
 ## ONLINE THEORY AND TASKS (December 8th to December 11th)
 
