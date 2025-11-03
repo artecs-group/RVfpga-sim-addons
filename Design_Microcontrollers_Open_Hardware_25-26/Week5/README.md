@@ -12,7 +12,7 @@ During this week, students will first complete a set of online learning activiti
 
 This stage focuses on the online component of the course, where you will explore the RVfpga platform and the VeeR EH1 and EL2 cores. The provided materials include short videos and guided exercises that explain the internal organization of the RVfpga SoC, its input/output subsystems, and performance-evaluation methods. Completing these activities before Friday’s lab is essential, as they provide the theoretical and practical foundation required for the in-person work.
 
-Two types of tasks are included: Mandatory and Optional. Mandatory tasks cover the core concepts needed for the compulsory exercises in the lab, while optional ones address more advanced topics for those wishing to go deeper or improve their final grade. If your time is limited, focus on the mandatory tasks first.
+Two types of tasks are included: Mandatory and Optional. The mandatory tasks cover the core concepts needed for the compulsory exercises in the lab, while the optional ones address more advanced topics for those wishing to go deeper or improve their final grade. The mandatory tasks account for 60% of the grade of this part, while the optional tasks represent the remaining 40%. If your time is limited, focus on the mandatory tasks first.
 
 Take the time to follow the videos and exercises carefully. There are no submissions during the week, but you are expected to attend the lab session well prepared and ready to apply what you have learned. Working steadily throughout the week will help you make the most of the lab and strengthen your understanding of the course as a whole.
 
