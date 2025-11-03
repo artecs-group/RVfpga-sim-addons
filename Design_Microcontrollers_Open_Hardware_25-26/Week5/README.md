@@ -33,7 +33,7 @@ Take the time to follow the videos and exercises carefully. There are no submiss
 
 ### 3. **VeeR EH1 and EL2 Cores**
   - Watch this video: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG). The video describes the VeeR EH1 microarchitecture in detail. You can obtain the slides used in the video here: [EH1Slides](https://drive.google.com/file/d/1kIMQY3u5jZB7cAktFPqIHSpHAuruENAM/view?usp=drive_link)
-  - Complete: [Tasks_VeeR](https://drive.google.com/file/d/1NSOsgaQnFWfeKJbu6r6319T3zq0wzgf-/view?usp=sharing). (**NOTE:** the following table illustrates the forwarding paths available in the VeeR EH1 processor: [FwdPen_EH1](https://drive.google.com/file/d/1owNZUEw-2AZw2-El_mBu4-WpZ1HhYVNo/view?usp=sharing).)
+  - Complete: [Tasks_VeeR](https://drive.google.com/file/d/1NSOsgaQnFWfeKJbu6r6319T3zq0wzgf-/view?usp=sharing) (**NOTE:** the following table illustrates the forwarding paths available in the VeeR EH1 processor: [FwdPen_EH1](https://drive.google.com/file/d/1owNZUEw-2AZw2-El_mBu4-WpZ1HhYVNo/view?usp=sharing).)
 
 ### 4. **Performance Evaluation in RVfpga**
   - Watch this video: [PerformanceBenchmarkingVideo](https://www.youtube.com/watch?v=GqaDEW3W4X0). You can obtain the slides used in the video here: [PerformanceSlides](https://drive.google.com/file/d/1xCmc4vFd_khLk6En14Ae_ZDF-OiP1QNm/view?usp=drive_link)
