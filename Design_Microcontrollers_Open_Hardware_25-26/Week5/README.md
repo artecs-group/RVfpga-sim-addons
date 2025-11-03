@@ -17,7 +17,7 @@ Two types of tasks are included: Mandatory and Optional. The mandatory tasks cov
 Take the time to follow the videos and exercises carefully. There are no submissions during the week, but you are expected to attend the lab session well prepared and ready to apply what you have learned. Working steadily throughout the week will help you make the most of the lab and strengthen your understanding of the course as a whole.
 
 ### 1. **Introduction to RVfpga**
-  - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link.
+  - Watch this video: [IntroductionRVfpgaVideo](https://www.youtube.com/watch?v=sc_Jn0XSkNw). You can obtain the slides used in the video here: [IntroSlides](https://drive.google.com/file/d/17Kid-KSDqPOPoEudiWhcuOdUChYpkcbp/view?usp=drive_link).
   - Install the environment and test tools. Follow the instructions in the document [Practice_Familiarization_fpga](https://drive.google.com/file/d/1vdLf39U89q38gmLuodo7nZkctRqeAiyO/view?usp=drive_link). Each section includes a link to a video illustrating its content.
     - Install Virtual Machine (VM)
     - Download RVfpga Sources in the VM
