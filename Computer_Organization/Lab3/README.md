@@ -302,7 +302,7 @@ Configure the data cache with a total size of 64B, with 16B blocks. Simulate the
 
 a. Locate the loop to be analyzed in the disassembled code in Ripes. The loop is programmed in a somewhat original way. Explain it in detail. You can use a step-by-step simulation and screenshots to assist in your explanation.
 
-b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0–1, 2–6, and 7–8. The best approach is to stop at the beginning of the loop and then execute cycle-by-cycle until the end of the loop. Analyze the number of hits and misses at the following points: at the beginning, after iteration 1, after iteration 6, and at the end.
+b. Analyze the behavior of the data cache in detail. Perform the analysis section by section: iterations 0–1, 2–5, and 6-7. The best approach is to stop at the beginning of the loop and then execute cycle-by-cycle until the end of the loop. Analyze the number of hits and misses at the following points: at the beginning, after iteration 1, after iteration 5, and at the end.
 
 c. Finally, test a 2-way set associative cache (keeping the total size of the cache unchanged) for the original code. Compare the results with the ones obtained in item b.
 
