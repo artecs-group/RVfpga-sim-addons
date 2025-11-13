@@ -204,8 +204,19 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
 
 **Required behavior**
-- **SW0**: toggle between **two counting speeds** (fast / slow).  
-- **SW1**: toggle the **counting direction** (increment / decrement).  
-- **LEDs**: must remain **off** at all times (do not write to the LED output register).
+- SW0: toggle between two counting speeds in the 7-segment display (fast / slow) each time the switch generates an interrupt.
+- SW1: toggle the counting direction in the 7-segment display (increment / decrement) each time the switch generates an interrupt.
+- LEDs: must remain off at all times (the program must not write to the LED output register).
 
-**Guidance**: Enable interrupts for SW0 and SW1 and use `RGPIO_INTS` to identify the source(s). Maintain global state for **speed**, **direction**, and the **32-bit counter** (and display enable if your template requires it). In the main loop, update the 7-segment display using a delay that depends on the selected speed and a counter update that depends on the selected direction. In the ISR, only update state and **clear the served interrupt source(s)**.
+**Guidance**:
+- Enable interrupts only for SW0 and SW1 (bits 16 and 17).
+- In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
+- Update only the program state inside the ISR (speed and direction), and then clear the served interrupt source(s).
+- Maintain global variables for:
+   - current speed (delay value)
+   - counting direction
+   - the 32-bit counter value
+- In the main loop:
+   - update the 7-segment display
+   - increment or decrement the counter depending on the direction selected with SW1
+   - wait using a delay whose length depends on the speed selected with SW0
