@@ -145,9 +145,9 @@ In this guided test, you will learn how to manage **interrupt-driven I/O** in RV
 
 #### Programmed I/O version
 
-The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two tasks:
+The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two independent tasks:
 
-1. Inverts the **right-most LED** every time a **0→1 transition** occurs on the **right-most switch**.  
+1. Inverts the **right-most LED** every time a **0→1 transition** occurs on the **right-most switch**. Note that when a **1→0 transition** occurs on the **right-most switch** nothing changes.
 2. Displays an **incrementing counter** on the **8-digit 7-segment display**, increasing roughly once per second.
 
 After initialization, the program enters an **infinite loop** that:
