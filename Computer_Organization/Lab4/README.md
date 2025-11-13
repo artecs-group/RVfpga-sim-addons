@@ -156,9 +156,9 @@ After initialization, the program enters an **infinite loop** that:
 - Inverts the LED if a 0→1 transition is detected.  
 - Updates the displayed count and generates a delay through a software loop.
 
-However, this approach has a **limitation**: if a switch transition happens during the delay loop (for instance, when the switch is toggled quickly), the program might **miss** the event.
+However, this approach has a **limitation**: if a switch transition happens during the delay loop (for instance, when the switch is toggled quickly), the program might **miss** the event. This limitation motivates the use of **interrupt-driven I/O**.
 
-> **Test:** Open the project, analyze its structure, and run it in **RVfpga-ViDBo**. Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected. This limitation motivates the use of **interrupt-driven I/O**.
+> **Test:** Open the project, analyze its structure, and run it in **RVfpga-ViDBo**. Try toggling the switch quickly in the simulator — you will notice that some transitions are not detected. 
 
 #### Interrupt-driven I/O version
 
