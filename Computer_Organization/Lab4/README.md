@@ -22,6 +22,7 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    - [Exercise 5](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-5)  
    - [Exercise 6](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-6)
 
+---
 
 ## Simulation of the RVfpga SoC in RVfpga-ViDBo
 From **minute 16:36 to 19:16** of the following video, you can watch an example of the **RVfpga-ViDBo simulator** running a program: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=99ybjtqrBAa5-r8K&t=996).
@@ -86,6 +87,7 @@ Move the switches and observe how the LEDs change accordingly. This behavior is 
    <img src="Images/NexysExample.png" width=60% height=60%>
 </p>
 
+---
 
 ## Exercise 1
 
@@ -118,6 +120,7 @@ Write a C program that shows the string **“0-1-2-3-4-5-6-7-8”** moving from 
 
 You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
 
+---
 
 ## Interrupts – Guided Test
 
@@ -159,6 +162,7 @@ In this version:
 
 > **Test:** Open the project and analyze its structure (focus especially on the following functions: `main`, `GPIO_Initialization`, and `GPIO_ISR`). Then, run it in **RVfpga-ViDBo**. Try toggling the switch quickly in the simulator. Using interrupt-driven I/O ensures that the processor can react to external events immediately, without wasting time polling the device.
 
+---
 
 ## Exercise 4
 
