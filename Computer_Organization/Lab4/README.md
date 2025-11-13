@@ -115,8 +115,22 @@ When running the program in **RVfpga-ViDBo**, you should see the switch value ap
 
 Write a C program that shows the string **“0-1-2-3-4-5-6-7-8”** moving from right to left across the 8-digit 7-segment display.
 
-- The character `0` should first appear on the **right-most digit**.  
-- Then it should move one position to the left, while the next character (`1`) appears on the right-most digit, and so on.  
+- The character 0 should first appear on the right-most digit.
+- Every approximately one second, all digits should shift one position to the left. At the same time, the next character in the sequence (1, then 2, 3, …) should enter on the right-most digit, replacing the empty position created by the shift.
+- Whenever a character moves out of the display on the left, the next character in the sequence enters on the right, producing a continuous scrolling effect from right to left.
+
+For example (each step separated by ~1 s):
+```
+.......0
+......01
+.....012
+....0123
+...01234
+..012345
+.0123456
+01234567
+12345670   ← the ‘0’ has exited on the left and it has entered on the right.
+```
 
 You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
 
