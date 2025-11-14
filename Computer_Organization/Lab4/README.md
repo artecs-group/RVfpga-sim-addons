@@ -189,7 +189,7 @@ Hint: In the interrupt service routine (ISR), replace the line that toggles only
 
 ## Exercise 5
 
-Modify the functions `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
 
 **Required behavior**
 - **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
