@@ -195,8 +195,6 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 - **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
 - **SW1**: toggle the visibility of the 7-segment display. When the display is turned off, the counter continues running internally, but its value is not shown. When the display is turned back on, it resumes showing the updated counter value, continuing from where it would have been if it had remained visible.
 
-**Hint**: Use `RGPIO_INTS` to determine which switch triggered the interrupt. In the ISR, check **both** switch bits (handle each independently) and clear the served source(s).
-
 **Guidance**:
 - Enable interrupts only for SW0 and SW1 (bits 16 and 17).
 - In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
