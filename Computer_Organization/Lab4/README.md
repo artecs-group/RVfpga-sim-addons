@@ -197,6 +197,19 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 
 **Hint**: Use `RGPIO_INTS` to determine which switch triggered the interrupt. In the ISR, check **both** switch bits (handle each independently) and clear the served source(s).
 
+**Guidance**:
+- Enable interrupts only for SW0 and SW1 (bits 16 and 17).
+- In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
+- Handle each switch independently (LED toggle for SW0, display visibility toggle for SW1)
+- Clear the served interrupt source(s)
+- Maintain global variables for:
+   - LED state
+   - Display visibility (on/off)
+   - The 32-bit counter value (if your template requires it)
+- In the main loop:
+   - update the counter continuously
+   - if the display is enabled, write the counter value to the 7-segment display
+   - if the display is disabled, disable display output using the enable register
 
 
 ## Exercise 6
