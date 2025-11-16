@@ -200,7 +200,7 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 - In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
 - Handle each switch independently (LED toggle for SW0, display visibility toggle for SW1)
 - Clear the served interrupt source(s)
-- Maintain global variables for:
+- Maintain global/local variables for:
    - LED state
    - Display visibility (on/off)
    - The 32-bit counter value (if your template requires it)
@@ -223,7 +223,7 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 - Enable interrupts only for SW0 and SW1 (bits 16 and 17).
 - In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
 - Update only the program state inside the ISR (speed and direction), and then clear the served interrupt source(s).
-- Maintain global variables for:
+- Maintain global/local variables for:
    - current speed (delay value)
    - counting direction
    - the 32-bit counter value
