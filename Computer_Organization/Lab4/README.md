@@ -184,7 +184,7 @@ Modify the function `GPIO_ISR` in the interrupt-based code `/home/rvfpga/Simulad
 
 Hint: In the interrupt service routine (ISR), replace the line that toggles only one LED with a bitwise inversion of the entire 16-bit LED output register. Remember that in C:
 - ! is logical NOT (returns 0 or 1)
-- is bitwise NOT (inverts all bits).
+- ~ is bitwise NOT (inverts all bits).
 
 
 ## Exercise 5
