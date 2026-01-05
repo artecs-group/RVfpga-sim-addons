@@ -4,7 +4,7 @@ This is a fourth-year course in the Electronics and Communication Engineering de
 
 The course starts with an introduction to the most recent trends in computer architecture, and then it explores exhaustively advanced processor design (deep pipelining, multi-cycle operations, speculative execution and branch prediction), the memory system (memory hierarchy, scratchpad memories), the I/O system, benchmarking and SoC design.
 
-The course includes ten labs (some of them are identical to the labs used in the [Computer Organization](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization) course):
+The course includes ten labs (some of them are identical to the labs used in the Computer Organization course):
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab0): Installation and Introduction.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab1): The RISC-V ISA.
