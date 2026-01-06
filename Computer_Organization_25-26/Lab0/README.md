@@ -52,7 +52,7 @@ Some cases (such as Secondary ALU to sw (rs2) in DC3) are still work in progress
 
 Once you have downloaded the file, you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
-<img width="1120" height="714" alt="image" src="https://github.com/user-attachments/assets/965a2a25-f6ff-4620-a84e-754d43403a29" />
+<img width="903" height="663" alt="image" src="https://github.com/user-attachments/assets/07b0d954-c9eb-48be-bc3e-c8ad2b4de117" />
 
 In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order to avoid problems with the paths indicated in the labs.
 
