@@ -61,5 +61,5 @@ At this point your system is ready to run, inside the Virtual Machine, all the e
 
 <img 
   src="https://github.com/user-attachments/assets/757c306e-841d-4715-9b63-d8ad67d0880d"
-  style="width: 70%;"
+  style="width: 40%;"
 />
