@@ -57,11 +57,4 @@ Once you have downloaded the file, you can open a file explorer, move the downlo
   style="width: 70%;"
 />
 
-<div style="margin-left: 40px;">
-  <img 
-    src="https://github.com/user-attachments/assets/8af3f3d2-7d9f-404a-9a09-14bb0178b9ac"
-    style="width: 300px;"
-  />
-</div>
-
 At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
