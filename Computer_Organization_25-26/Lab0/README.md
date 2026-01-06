@@ -11,7 +11,7 @@ You can visualize the following video from time 0:0 to time 1:45 to see the step
 
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors); however, if you are using an Apple Silicon MacBook (M1, M2, M3, …), you will not be able to run this VM. 
 
-<!--In that case, follow the alternative instructions provided at the end of this section.-->
+If you prefer to work natively on Ubuntu without a virtual machine, follow the installation procedure described in the next document: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view). After following the instructions in the document, continue directly with section RVfpga Sources.
 
 The VM belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
 + [Virtual Machine 1st link](https://drive.google.com/file/d/1KFnJYq6krB7vYt_AqTB_zTYVmxfATwJF/view)
@@ -29,11 +29,6 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
-**Installation on a fresh Ubuntu OS:**  
-If you want to install the simulators on a Ubuntu system, either running natively or within a Virtual Machine, follow these steps:
-
-1. If necessary, install Ubuntu or create your own Ubuntu Virtual Machine. You can use Ubuntu 22.04, or any more recent version.  
-2. Follow these instructions to install Ripes and VSCode+PlatformIO on Ubuntu: [InstallSimulators](https://drive.google.com/file/d/1id4hHDzWmkNvIn-cREG98Ug8tBQSrgLR/view?usp=sharing).
 
 
 ## Simulators and Example Projects
