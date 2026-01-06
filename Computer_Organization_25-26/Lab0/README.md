@@ -53,8 +53,13 @@ Some cases (such as Secondary ALU to sw (rs2) in DC3) are still work in progress
 Once you have downloaded the file, you can open a file explorer, move the downloaded file to the OS home, and click on the file with the right mouse button and then “Extract Here”.
 
 <img 
-  src="https://github.com/user-attachments/assets/8af3f3d2-7d9f-404a-9a09-14bb0178b9ac"
+  src="https://github.com/user-attachments/assets/69387930-92de-4f9b-8902-0ed68f427bcb"
   style="width: 70%;"
 />
 
 At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
+
+<img 
+  src="https://github.com/user-attachments/assets/757c306e-841d-4715-9b63-d8ad67d0880d"
+  style="width: 70%;"
+/>
