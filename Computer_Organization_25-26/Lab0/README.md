@@ -56,6 +56,6 @@ Once you have downloaded the file, you can open a file explorer, move the downlo
 
 In the following screenshot you can see how RVfpga should be located in the VM. It is important that you respect this location in order to avoid problems with the paths indicated in the labs.
 
-<img width="949" height="338" alt="image" src="https://github.com/user-attachments/assets/3afdcf73-84e1-48d7-8b62-1cfd069c4b85" />
+<img width="997" height="493" alt="image" src="https://github.com/user-attachments/assets/88946090-fef8-4902-ac4e-ed85d911aca8" />
 
 At this point your system is ready to run, inside the Virtual Machine, all the exercises from the RVfpga package as well as the Ripes simulator.
