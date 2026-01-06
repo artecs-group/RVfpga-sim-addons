@@ -34,9 +34,9 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 ## RVfpga Sources
 You can visualize the following video from time 1:45 to time 3:10 to see the steps described in this section: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=-LpPqGG2L8ovLKRd&t=104).
 
-Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
+Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing).
 
-> OPTIONAL: An enhanced version of the RVfpga-Pipeline simulator is also available. If you prefer to try it, you can download these sources ([SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing)) instead of the previous package. Keep in mind that, although this version provides a more polished interface, it is not fully aligned with the images and videos used in the demo materials. Main improvements of this version:  
+> OPTIONAL: This is an enhanced version of the 24-25 sources ([SimulatorsAndProjects_24-25](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing)). Keep in mind that, although the 25-26 version provides a more complete and polished interface, it is not fully aligned with the images and videos used in the demo materials. Main improvements of the 25-26 version:  
 >  
 > - Improved aesthetics: cleaner layout, refined colors and fonts.  
 > - “-1 Cycle” button: allows going back one cycle.  
