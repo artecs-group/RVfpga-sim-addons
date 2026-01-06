@@ -3,7 +3,7 @@ This lab aims to prepare our computer to work in the labs of the course and to i
 
 1. Install the Virtual Machine as explained below at section *Virtual Machine*.
 
-2. Download the sources as explained below at section *Simulators and Example Projects*.
+2. Download the sources as explained below at section *RVfpga Sources*.
 
 
 ## Virtual Machine
@@ -11,7 +11,7 @@ You can visualize the following video from time 0:0 to time 1:45 to see the step
 
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors); however, if you are using an Apple Silicon MacBook (M1, M2, M3, …), you will not be able to run this VM. 
 
->If you prefer to work natively on Ubuntu without a virtual machine, follow the installation procedure described in the next document: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view). After following the instructions in the document, continue directly with section RVfpga Sources.
+>If you prefer to work natively on Ubuntu without a virtual machine, follow the installation procedure described in the next document: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view). After following the instructions in the document, continue directly with section *RVfpga Sources*.
 
 The VM belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
 + [Virtual Machine 1st link](https://drive.google.com/file/d/1KFnJYq6krB7vYt_AqTB_zTYVmxfATwJF/view)
@@ -31,7 +31,7 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 
 
 
-## Simulators and Example Projects
+## RVfpga Sources
 You can visualize the following video from time 1:45 to time 3:10 to see the steps described in this section: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=-LpPqGG2L8ovLKRd&t=104).
 
 Once the Virtual Machine (VM) is installed in your system, all labs will be developed in it. So, from inside the VM, download the following file and unzip it in the VM home directory: [SimulatorsAndProjects](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing).
