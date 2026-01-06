@@ -11,7 +11,7 @@ You can visualize the following video from time 0:0 to time 1:45 to see the step
 
 In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors); however, if you are using an Apple Silicon MacBook (M1, M2, M3, …), you will not be able to run this VM. 
 
-If you prefer to work natively on Ubuntu without a virtual machine, follow the installation procedure described in the next document: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view). After following the instructions in the document, continue directly with section RVfpga Sources.
+>If you prefer to work natively on Ubuntu without a virtual machine, follow the installation procedure described in the next document: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view). After following the instructions in the document, continue directly with section RVfpga Sources.
 
 The VM belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
 + [Virtual Machine 1st link](https://drive.google.com/file/d/1KFnJYq6krB7vYt_AqTB_zTYVmxfATwJF/view)
