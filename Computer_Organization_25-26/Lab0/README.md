@@ -25,7 +25,7 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
 
 The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those programs and import the VM (the screenshots in this tutorial are for VirtualBox).
 
-Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, or the memory amount used by the VM.
+Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, the memory amount used by the VM, or reinstalling the Guest Additions.
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
