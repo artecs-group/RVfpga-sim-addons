@@ -180,19 +180,19 @@ li t2, 0x488
 csrrs t1, 0x7F9, t2
 ```
 
-- Calculate the CPI with the Secondary ALU, and the Gshare branch predictor disabled. Replace the two instructions for these ones:
+- Repeat the analysis from the previous item, now enabling superscalar execution. Replace the two instructions for these ones:
 ```
 li t2, 0x088
 csrrs t1, 0x7F9, t2
 ```
 
-- Calculate the CPI with the Secondary ALU disabled. Replace the two instructions for these ones:
+- Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two instructions for these ones:
 ```
 li t2, 0x080
 csrrs t1, 0x7F9, t2
 ```
 
-- Calculate the CPI with all features enabled. Replace the two instructions for these ones:
+- Repeat the analysis with all features enabled. Replace the two instructions for these ones:
 ```
 li t2, 0x0
 csrrs t1, 0x7F9, t2
