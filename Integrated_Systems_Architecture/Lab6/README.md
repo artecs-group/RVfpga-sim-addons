@@ -95,6 +95,7 @@ In this exercise, we'll examine another way to improve performance: compiler opt
 
 - Once the program starts executing, as usual, invert a switch on the board. Then, explain the results and compare them with the previous exercises.
 
-
+<!--
 ## Exercise 4
-Repeat the previous exercises but using other configurations of the VeeR EH1 core: enable/disable superscalar execution, pipelined execution, Secondary ALU, Gshare branch preditro, etc.
+Repeat the previous exercises but using other configurations of the VeeR EH1 core: enable/disable superscalar execution, pipelined execution, Secondary ALU, Gshare branch predictor, etc.
+-->
