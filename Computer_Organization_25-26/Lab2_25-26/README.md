@@ -622,13 +622,27 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
 * Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
 * Compute the CPI for iteration n=0, k=1 of ```loop_k```. Explain how you used the simulator to obtain it.
 
-b. Repeat the analysis from item a, now enabling superscalar execution.
+b. Repeat the analysis from the previous item, now enabling superscalar execution.
 
-*Configuration note:* The presentation provided above (available [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)) explains that the VeeR EH1 allows enabling/disabling features such as dual-issue (superscalar execution), branch predictor, pipelining, and the Secondary ALU through the ```mfdc``` register (CSR 0x7F9). Configure the processor as indicated in the presentation (see the *VeeR EH1 SW configuration* table). In this case, make sure to enable dual-issue (do not set the disable bit) while keeping the other options as required in the exercise.
+*Configuration note:* The presentation provided above (available [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)) explains that the VeeR EH1 allows enabling/disabling features such as dual-issue (superscalar execution), branch predictor, pipelining, and the Secondary ALU through the ```mfdc``` register (CSR 0x7F9). Configure the processor as indicated in the presentation (see the *VeeR EH1 SW configuration* table). In this case, make sure to enable dual-issue (do not set the disable bit) while keeping the other options as required in the exercise. 
 
-c. Repeat the analysis from *item a*, starting from the configuration in *item b* and also enabling the Gshare branch predictor.
+Replace the two initial instructions for these ones:
+```
+li t2, 0x088
+csrrs t1, 0x7F9, t2
+```
 
-d. Repeat the analysis from *item a*, starting from the configuration in *item c* and also enabling the Secondary ALU.
+c. Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two initial instructions for these ones:
+```
+li t2, 0x080
+csrrs t1, 0x7F9, t2
+```
 
-e. Finally, with the configuration from *item d*, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
+d. Repeat the analysis with all features enabled. Replace the two initial instructions for these ones:
+```
+li t2, 0x0
+csrrs t1, 0x7F9, t2
+```
+
+e. Finally, with the configuration from the previous item, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
 
