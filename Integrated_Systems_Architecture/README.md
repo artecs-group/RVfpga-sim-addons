@@ -19,6 +19,6 @@ The course includes ten labs (some of them are identical to the labs used in the
 
 Students in this course are provided with a Nexys A7 board per person that they can keep until the end of the semester. The VeeR EH1 core fits in this board and it is a more advanced processor than EL2, that allows us to explore concepts such as deep pipelining or multi-cycle operations, thus it is the core that we use in the course. Anyway, most exercises can also be completed in the two other boards supported (Boolean and Basys 3), in this case using the samaller EL2 VeeR core. All instructions not provided in this repository can be found in the complete [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) course.
 
-In case you did not have an FPGA board, all exercises could also be completed using the different simulation tools available in RVfpga: Whisper, RVfpga-ViDBo, RVfpga-Pipeline and RVfpga-Trace.
+In case you do not have an FPGA board, most exercises can also be completed using the different simulation tools available in RVfpga: Whisper, RVfpga-ViDBo, RVfpga-Pipeline and RVfpga-Trace.
 
 *NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact ```dani02@ucm.es```*
