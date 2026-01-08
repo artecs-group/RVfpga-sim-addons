@@ -50,7 +50,7 @@ Propose additional RISC-V Assembly codes (modify the contents of file ```Test_As
 
 
 ## Exercise 2
-In the VeeR EH1 processor, the following code is to be executed. Note that this is the same code used in [Exercise 3 of Lab 2 in RVfpgaPipeline](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization/Lab2/VeeR#exercise-3):
+In the VeeR EH1 processor, the following code is to be executed. Note that this is the same code used in [Exercise 5 of Lab 2 in RVfpgaPipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2/README.md#exercise-5-in-rvfpga-pipeline):
 
 ```
 for ( n = 0; n < 8; n ++ ) {
