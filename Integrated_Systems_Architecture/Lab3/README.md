@@ -204,7 +204,7 @@ csrrs t1, 0x7F9, t2
 Finally, confirm that the results obtained in the original program and the reordered program are the same. For that purpose, download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, first in C and then in RISC-V assembly language (in the latter we have removed the ```REPEAT``` loop). Place a breakpoint at line 29 of the C file and execute the program. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the ```Salida``` array in the ```Variables``` window for the program in C, and in the ```Memory``` window (address 0xf0040000) for the program in assembly. Then, reorder the program in assembly language as in the last item above and confirm if the results for the ```Salida``` array are still correct.
 
 
-## Exercise 2 - Extension for VeeR EL2
+## Exercise 2 (Optional) - Extension for VeeR EL2
 Test the previous exercise in the VeeR EL2 processor and compare the results with those obtained in the EH1 core. You can test the program both on the board and in the RVfpga-Pipeline EL2 simulator.
 
 Download the following compressed folder, uncompress it and move it to the home directory of the VM: [HwCounters_Example_EL2](https://drive.google.com/file/d/1tbDEOVPsiUwpxdHzcwTW6brkJ2acV__J/view?usp=sharing). The folder contains the PlatformIO project, the EL2 bitstream, the document for RVfpga Lab 11 (which contains information about the VeeR EL2 microarchitecture and the use of Hw counters), and the RVfpga-Pipeline EL2 binary simulator. 
