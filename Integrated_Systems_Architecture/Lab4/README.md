@@ -125,7 +125,7 @@ In this exercise you will test a program with floating point operations, using t
       * Compare performance of the dot product in FP emulation vs FP implementation.
 
 
-## Exercise 4
+## (Optional) Exercise 4
 In this exercise you will upgrade the gcc compiler in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
 
 - Download this simple project, that computes a FP addition and move it to the home directory: [Project_RVfpgaViDBo_FPU_Example_NewCompiler.zip](https://drive.google.com/file/d/1CGB2MIz0s7XzF475xfu6WPXIkpyvQ8lF/view?usp=sharing). File ```platformio.ini``` selects a new version of the RISC-V toolchain (line ```platform_packages = platformio/toolchain-riscv@^1.130200.2```), thus the old toolchain will be replaced with the new one as soon as we open the project.
