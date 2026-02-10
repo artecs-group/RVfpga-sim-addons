@@ -245,13 +245,13 @@ The RISC-V assembly program is executed in the Ripes Pipelined processor. Answer
 
 ## RVfpga-Pipeline
 RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSCode using PlatformIO. Follow the steps below to simulate an example program with the RVfpga-Pipeline simulator.
-
+<!
 0. In the Virtual Machine, replace the old RVfpga-Pipeline simulator with the new one. Follow the next steps:
 	- Download the following file: [RVfpga-Pipeline_Ubuntu](https://drive.google.com/file/d/1BL0q855YaTkhN_DlRYuHOySHIImBWaNW/view?usp=sharing).
 	- Open a terminal.
 	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
-
+>
 1. Start by watching one of the following videos, which show the **RVfpga-Pipeline** simulating the same program used in the subsequent steps:
 
    - **(a) Using the new version of the simulator:**  
