@@ -11,8 +11,6 @@ Follow the next steps:
 
 3. Perform the following exercises.
 
-4. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 11 to 18.
-
 
 ## Exercise 1
 Do the following steps:
