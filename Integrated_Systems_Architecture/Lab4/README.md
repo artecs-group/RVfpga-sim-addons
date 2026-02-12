@@ -91,7 +91,7 @@ Analyze and explain how each of the operations performed by the previous arithme
 
 
 ## Exercise 2
-Follow the instructions explained at time 18:20 of the video provided in step 3 above ([PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=1100)) in order to test, on the FPGA board of in RVfpga-ViDBo if you do not have the board, the extended core with the simple example that does a floating point addition (note that in the video the example is tested in RVfpga-ViDBo). 
+Follow the instructions explained at time 18:20 of the video provided in step 3 above ([PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=1100)) in order to test, on the FPGA board and in RVfpga-ViDBo, the extended core with the simple example that does a floating point addition (note that in the video the example is tested in RVfpga-ViDBo). 
    - You can download the project with the program from this link: [Project_RVfpgaViDBo_FPU_Example.zip](https://drive.google.com/file/d/1uo8-gNwMsI5FdqHA_IdATUjjIipB3zYw/view?usp=drive_link). Once downloaded and uncompressed, move it to your home directory inside the Virtual Machine.
    - Download the file that corresponds to the tool that you are using:
        - If you are working with RVfpga-Nexys (FPGA board): Download the bitstream of the extended SoC from this link: [ExtendedSoC](https://drive.google.com/file/d/1DwSW22Nk8Ef6UOMWIHgC7AB96AzB-yJI/view?usp=sharing). Once downloaded, move it to your home directory inside the Virtual Machine.
