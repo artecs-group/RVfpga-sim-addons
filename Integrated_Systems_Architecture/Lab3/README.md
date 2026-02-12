@@ -28,7 +28,7 @@ To view the serial console on the board, right after the program starts to run a
 
 
 **TASK:**
-Measure other events in the Hardware Counters for the provided program. For this purpose, you must change in file ```Test.c``` the configuration of the events to be measured with function ```pspPerformanceCounterSet```. Note that the different events (shown in the table in the video) can be configured using the macros defined in WD’s PSP file:
+Measure 2 other events in the Hardware Counters for the provided program. For this purpose, you must change in file ```Test.c``` the configuration of the events to be measured with function ```pspPerformanceCounterSet```. Note that the different events (shown in the table in the video) can be configured using the macros defined in WD’s PSP file:
 
 ```/home/rvfpga/.platformio/packages/framework-wd-riscv-sdk/psp/api_inc/psp_performance_monitor_eh1.h```
 
@@ -44,7 +44,7 @@ Are the results for I$ misses reasonable?
 
 
 **TASK:**
-Propose additional RISC-V Assembly codes (modify the contents of file ```Test_Assembly.S```) that evaluate different scenarios and measure the results using appropriate performance counters (such as instruction cache misses, branch misprediction rate, etc.).
+Propose 1 additional RISC-V Assembly code (modify the contents of file ```Test_Assembly.S```) that evaluates different scenarios and measure the results using appropriate performance counters (such as instruction cache misses, branch misprediction rate, etc.).
 
 
 ## Exercise 2
