@@ -196,10 +196,12 @@ csrrs t1, 0x7F9, t2
 
 - Reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the configuration of the previous item (all VeeR EH1 features enabled). Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards.
 
-
-Finally, confirm that the results obtained in the original program and the reordered program are the same. For that purpose, download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, first in C and then in RISC-V assembly language (in the latter we have removed the ```REPEAT``` loop). Place a breakpoint at line 29 of the C file and execute the program. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the ```Salida``` array in the ```Variables``` window for the program in C, and in the ```Memory``` window (address 0xf0040000) for the program in assembly. Then, reorder the program in assembly language as in the last item above and confirm if the results for the ```Salida``` array are still correct.
+- Compare the results obtained with the performance counters with the results obtained in the previous lab using the RVfpga-Pipeline simulator.
 
 <!--
+Finally, confirm that the results obtained in the original program and the reordered program are the same. For that purpose, download the following project: [C-Assembly_Filter](https://drive.google.com/file/d/1tjkmxy05dDP707fF0TR4bMYCx_8zYlSa/view?usp=sharing). It includes the program from Exercise 2, first in C and then in RISC-V assembly language (in the latter we have removed the ```REPEAT``` loop). Place a breakpoint at line 29 of the C file and execute the program. Compare the results obtained by the C program and its translation to RISC-V assembly. Note that you can visualize the values of the ```Salida``` array in the ```Variables``` window for the program in C, and in the ```Memory``` window (address 0xf0040000) for the program in assembly. Then, reorder the program in assembly language as in the last item above and confirm if the results for the ```Salida``` array are still correct.
+
+
 ## (Optional) Exercise 2 - Extension for VeeR EL2
 Test the previous exercise in the VeeR EL2 processor and compare the results with those obtained in the EH1 core. You can test the program both on the board and in the RVfpga-Pipeline EL2 simulator.
 
