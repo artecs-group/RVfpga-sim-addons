@@ -9,7 +9,7 @@ Follow the next steps:
 
 3. View, from time 6:29 to time 24:18, this video [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=388) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=388), you can watch an AI-translated-to-Chinese version of the video here: [PerformanceBenchmarkingChineseVideo](https://youtu.be/d5-0sNLW7wg?si=6P5wM8ruumOQuSnD&t=388) or you can enable the subtitles in the video in Spanish) (you can download the [slides](https://drive.google.com/file/d/146nEyUkGkXn85cS15EiUM7R0Bv1nKyoT/view?usp=sharing)). The video describes how to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them.
 
-4. Perform exercises 2 to 4.
+4. Perform exercises 2 and 3.
 
 5. Finally, if you want to continue practicing after completing the proposed exercises, you can find more complex exercises in [RVfpga](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/) labs 11 to 18.
 
@@ -121,7 +121,7 @@ In this exercise you will test a program with floating point operations, using t
       * Compare the results obtained for the dot product in FP emulation vs FP implementation.
       * Compare performance of the dot product in FP emulation vs FP implementation.
 
-
+<!--
 ## (Optional) Exercise 4
 In this exercise you will upgrade the gcc compiler in PlatformIO to a version that supports the Zfinx extension. Follow the next steps:
 
@@ -153,3 +153,4 @@ To go back to the previous compiler, follow the next steps:
 2. Go into the Extensions tab in VSCode and uninstall the PlatformIO IDE. Close VSCode.
 3. Open a terminal, go into the home directory, and delete directory ```.platformio``` using the following command: ```rm -rf .platformio```
 4. Open VSCode, reinstall the PlatformIO IDE extension and test a program from a previous task.
+-->
