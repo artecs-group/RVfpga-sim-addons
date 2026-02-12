@@ -166,9 +166,7 @@ bne t2, a6, REPEAT # Repeat the loop
 ret
 ```
 
-Analyze the code in RISC-V assembly.
-- Note that in the assembly program we are initializing the arrays in the Data Scratchpad before entering the loops, element-by-element, so this needs quite a few instructions.
-- Besides, note that we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters.
+Analyze the code in RISC-V assembly. Note that, with respect to the code from the previous lab, we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters. Take this into account in your calculations.
 
 Then, test performance of the nested loops for different configurations of the VeeR EH1 core as specified next, and compare and explain the results that you obtain. Use the project you downloaded in Exercise 1 ([HwCounters](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing)) and simply replace the text in file ```Test_Assembly.S``` for the one provided in this exercise in RISC-V assembly. Test execution on the Nexys A7 board (the same should work on the RVfpga-ViDBo simulator).
 
