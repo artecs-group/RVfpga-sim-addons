@@ -1,5 +1,5 @@
 # Lab 4 (Lab 7 of ISA) - The RVfpga I/O System - High Level
-This lab aims to help students gain a solid understanding of an **Input/Output (I/O) System** and how it operates within the RVfpga platform. Follow the steps below:
+This lab aims to help students gain a solid understanding of an **Input/Output (I/O) System** and how it operates within the RVfpga platform. **You must complete the exercises both in the Nexys A7 board and on the RVfpga-ViDBo simulator.** Follow the steps below:
 
 1. **Watch the introductory video**  
    Watch the video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y), which provides a detailed explanation of the **RVfpga I/O System**. You can also download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing).
