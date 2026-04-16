@@ -113,7 +113,7 @@ When running the program in **RVfpga-ViDBo**, you should see the switch value ap
 
 ## Exercise 3
 
-Write a C program that shows the string **“0-1-2-3-4-5-6-7-8”** moving from right to left across the 8-digit 7-segment display.
+Write a C program that shows the string **“0-1-2-3-4-5-6-7”** moving from right to left across the 8-digit 7-segment display.
 
 - The character 0 should first appear on the right-most digit.
 - Every approximately one second, all digits should shift one position to the left. At the same time, the next character in the sequence (1, then 2, 3, …) should enter on the right-most digit, replacing the empty position created by the shift.
