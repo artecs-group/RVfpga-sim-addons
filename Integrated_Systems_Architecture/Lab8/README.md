@@ -66,7 +66,7 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
 
-+ Download these two files [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
++ Download file [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) and file [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
 
 ```
     cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
