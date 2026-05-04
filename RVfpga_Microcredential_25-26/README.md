@@ -5,16 +5,16 @@ Subsequently, a detailed study of these cores and their Verilog code is conducte
 In the final module, a complete application will also be deployed, using Zephyr Project as the RTOS and TensorFlow Lite for microcontrollers. All developments will be carried out using Xilinx FPGAs.
 
 The course will take place over six consecutive weeks, from May 11 to June 26. From Monday to Thursday, students will be required to complete various assignments. In-person sessions will be held at the end of each week.
-- [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module0) and [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module1).
+- [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0) and [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1).
     - To complete between May 11-14.
     - In-person session on May 14.
-- [Module 2 - Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module2).
+- [Module 2 - Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2).
     - To complete between May 18-29.
     - In-person sessions on May 22 and May 29.
-- [Module 3 - VeeR EH1 and EL2 microarchitecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module3).
+- [Module 3 - VeeR EH1 and EL2 microarchitecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3).
     - To complete between June 1-19.
     - In-person sessions on June 12 and June 19.
-- [Module 4 - Zephyr Project on VeeRwolf](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential/Module4).
+- [Module 4 - Zephyr Project on VeeRwolf](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4).
     - To complete between June 22-26.
     - In-person session on June 26.
 
