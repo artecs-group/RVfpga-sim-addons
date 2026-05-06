@@ -6,7 +6,7 @@ This first module introduces the RISC-V architecture through a series of practic
 
 ### To complete between May 11 to 13:
 
-In order to study the RISC-V architecture and assembly language, look at [Lesson 2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf), [Lesson3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf) and [Lesson4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf) of UCM Computer Fundamentals course. 
+In order to study the RISC-V architecture and assembly language, look at [Lesson 2](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf), [Lesson 3](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf) and [Lesson 4](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf) of UCM Computer Fundamentals course. 
 
 
 ### To complete during the in-person session of May 14:
