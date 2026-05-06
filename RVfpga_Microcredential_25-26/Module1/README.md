@@ -3,7 +3,6 @@
 This first module introduces the RISC-V architecture through a series of practical activities combining C and assembly programming. Throughout the lab, you will learn how to create and run programs on the RVfpga system, progressively moving from basic concepts to a final project that integrates both languages in an image processing application.
 
 ## Workflow
-Do the following tasks:
 
 ### To complete between May 11 to 13:
 
