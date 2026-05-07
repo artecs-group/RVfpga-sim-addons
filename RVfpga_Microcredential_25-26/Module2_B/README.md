@@ -87,19 +87,6 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 
 + Generate a new bitstream in Vivado following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that, in Step 4 (*Select Nexys A7 as target board*), you may need to ```Refresh``` the catalogue for the Nexys A7 board to appear, and then ```Install``` it.
   
-+ **NOTE:** To install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
-  * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
-  * Select the Vivado version that you wish to download (we recommend version 2022.2, but version 2019.2 is also verified for RVfpga and more modern versions should also work). For example, in Windows, click on *Xilinx Unified Installer 2022.2: Windows Self Extracting Web Installer*.
-  * The Vivado installer will walk you through the installation process. Important notes:
-    * Select *Vivado* as the Product to install.
-    * Select version *Vivado ML Standard* (not *Vivado ML Enterprise*), as this is the no-cost version.
-    * Set all the I Agree boxes.
-    * Otherwise, defaults should be selected.
-    * When you are creating a Vivado project, at the point where you must select the board (in our case Nexys A7 or Nexys 4 DDR), you first need to click on the *Refresh* button to add these boards. If this does not work, you can also manually install the Board Files:
-      * Download the archive [vivado-boards](https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.158467251.828100773.1587959567-2022567073.1577108610) and extract it.
-      * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
-      * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
-
 
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
