@@ -38,8 +38,6 @@ The module includes both high-level programming exercises using the existing RVf
       * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
       * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
-4. Once you have installed Vivado, try to complete Lab 5 of the RVfpga package (you can find the document at ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab05``` or download it here: [RVfpga - Lab 5](https://drive.google.com/file/d/1Gog7lo21UIhuyloG2djle5vAtvvlRq84/view?usp=sharing)), where the bitstream for the RVfpga SoC is created.
-
 
 ---
 
