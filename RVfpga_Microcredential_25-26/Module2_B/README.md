@@ -17,7 +17,7 @@ The module includes both high-level programming exercises using the existing RVf
 
       ![image](https://github.com/user-attachments/assets/c7c58d6c-b1ea-4f50-9b1d-03850db7ba97)
 
-    * Later, when you need to regenerate the binary of the simulator to debug your changes in *Exercise-1_InputOutput_LowLevel*, you can follow the instructions provided in Chapter 7 of the Getting Started Guide of the RVfpga package (document ```RVfpgaEH1/RVfpga/Documents/RVfpga_GettingStartedGuide.pdf```). Specifically, in the Virtual Machine:
+    * Later, when you need to regenerate the binary of the simulator to debug your changes in *Exercise-1_InputOutput_LowLevel*, you can follow the instructions provided in Chapter 7 of the Getting Started Guide of the complete RVfpga package (document ```RVfpgaEH1/RVfpga/Documents/RVfpga_GettingStartedGuide.pdf```). Specifically, in the Virtual Machine:
 
         * Go into ```/home/rvfpga/RVfpga_MasterUCLM/src``` and perform the changes you consider to the 7-Segment displays controller.
         * In a terminal, go into ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace``` and regenerate the simulator binary by typing ```make```.
