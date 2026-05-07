@@ -58,7 +58,7 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
 + In each of these registers, each bit indicates if the corresponding segment is ON (0) or OFF (1). Specifically, for register ```Segments_Digit0``` (the same applies to the other seven registers), connections are as follows:
 
 <p align="center">
-  <img src="Images/7seg.png" width=60% height=60%>
+  <img src="../../Integrated_Systems_Architecture/Lab8/Images/7seg.png" width=60% height=60%>
 </p>
 
 + So, for example:
