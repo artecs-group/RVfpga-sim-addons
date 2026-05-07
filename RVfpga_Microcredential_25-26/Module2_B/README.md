@@ -38,10 +38,8 @@ The module includes both high-level programming exercises using the existing RVf
       * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
       * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
-4. Once you have installed Vivado, try to complete Lab 5 of the RVfpga package (you can find the document at ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab05```), where the bitstream for the RVfpga SoC is created. When you are creating the project in Vivado, at the point where you must select the board (in our case Nexys A7 or Nexys 4 DDR), you first need to click on the *Refresh* button to add these boards. If this does not work, you can also manually install the Board Files:
-    * Download the archive [vivado-boards](https://github.com/Digilent/vivado-boards/archive/master.zip?_ga=2.158467251.828100773.1587959567-2022567073.1577108610) and extract it.
-    * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
-    * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
+4. Once you have installed Vivado, try to complete Lab 5 of the RVfpga package (you can find the document at ```RVfpga/RVfpgaEH1/RVfpga/Labs/Lab05``` or download it here: [RVfpga - Lab 5](https://drive.google.com/file/d/1Gog7lo21UIhuyloG2djle5vAtvvlRq84/view?usp=sharing)), where the bitstream for the RVfpga SoC is created.
+
 
 ---
 
