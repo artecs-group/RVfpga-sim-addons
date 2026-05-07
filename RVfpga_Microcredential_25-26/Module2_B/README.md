@@ -1,12 +1,5 @@
 # Module 2 - Low-Level Input/Output in the RVfpga SoC
 
-## General Contents
-In this second module, students will work with the input/output (I/O) system of the RVfpga SoC and learn how the RISC-V processor interacts with external peripherals implemented in hardware. Throughout the module, students will use and modify existing peripherals such as GPIOs, LEDs, switches, counters, and 7-segment displays, combining software development in C and assembly with hardware design in SystemVerilog.
-
-The module includes both high-level programming exercises using the existing RVfpga platform and lower-level activities focused on understanding and extending the internal hardware implementation of the SoC. Students will also explore interrupt-based I/O, as well as simulation and debugging workflows using RVfpga-Trace and Vivado tools.
-
----
-
 ## Previous work to complete between May 25 and 28:
 
 1. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file */home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the scanning frequency of the displays controller in the baseline SoC is prepared for running on the board, so we must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
