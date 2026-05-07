@@ -62,7 +62,7 @@ The module includes both high-level programming exercises using the existing RVf
 
 ## To complete on May 22:
 
-## Exercise 1
+## Exercise 1 (mandatory)
 
 Write a C program that displays the **inverse** of the switches on the LEDs.
 
@@ -73,12 +73,12 @@ For example:
 You can use the project **`LedsSwitches_C-Lang`** as a base. Make sure you understand how the program reads the switch states, writes to the LEDs, and how the GPIO registers are accessed.
 
 
-## Exercise 2
+## Exercise 2 (mandatory)
 
 Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. You can use the project **`71_7SegDispl_C-Lang.c`** as a base (make sure you understand this program first).
 
 
-## Exercise 3
+## Exercise 3 (optional)
 
 Write a C program that shows the string **“0-1-2-3-4-5-6-7”** moving from right to left across the 8-digit 7-segment display.
 
@@ -102,7 +102,7 @@ For example (each step separated by ~1 s):
 You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
 
 
-## Exercise 4
+## Exercise 4 (mandatory)
 
 Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
 
@@ -125,7 +125,7 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
    - if the display is disabled, disable display output using the enable register
 
 
-## Exercise 5
+## Exercise 5 (optional)
 
 Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
 
