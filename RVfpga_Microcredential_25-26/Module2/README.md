@@ -1,13 +1,11 @@
-# Module 2 - Input/Output in the RVfpga SoC
+# Module 2 - High-Level Input/Output in the RVfpga SoC
 
 ## General Contents
 In this second module, students will work with the input/output (I/O) system of the RVfpga SoC and learn how the RISC-V processor interacts with external peripherals implemented in hardware. Throughout the module, students will use and modify existing peripherals such as GPIOs, LEDs, switches, counters, and 7-segment displays, combining software development in C and assembly with hardware design in SystemVerilog.
 
 The module includes both high-level programming exercises using the existing RVfpga platform and lower-level activities focused on understanding and extending the internal hardware implementation of the SoC. Students will also explore interrupt-based I/O, as well as simulation and debugging workflows using RVfpga-Trace and Vivado tools.
 
-
 ---
-
 
 ## Previous work to complete between May 18 and 21:
 1. If you need to review Verilog programming or Input/Output general concepts, you can look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
