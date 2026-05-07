@@ -5,6 +5,10 @@ In this second module, students will work with the input/output (I/O) system of 
 
 The module includes both high-level programming exercises using the existing RVfpga platform and lower-level activities focused on understanding and extending the internal hardware implementation of the SoC. Students will also explore interrupt-based I/O, as well as simulation and debugging workflows using RVfpga-Trace and Vivado tools.
 
+
+---
+
+
 ## To complete between May 18 and 21:
 1. If you need to review Verilog programming or Input/Output general concepts, you can look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
 
@@ -51,6 +55,9 @@ The module includes both high-level programming exercises using the existing RVf
     - The `main` function performs the necessary initializations, then enters a loop that periodically updates the 7-segment display and creates a software delay.
     - The switch is **not** read explicitly in the main loop; all event handling occurs inside the **interrupt service routine (ISR)**.
     - As a result, **no switch transitions are missed**, even if they occur during the delay.
+
+
+---
 
 
 ## To complete on May 22:
@@ -140,5 +147,3 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
    - increment or decrement the counter depending on the direction selected with SW1
    - wait using a delay whose length depends on the speed selected with SW0
 
-
----
