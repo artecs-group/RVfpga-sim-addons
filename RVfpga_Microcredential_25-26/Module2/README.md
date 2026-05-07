@@ -70,12 +70,6 @@ You can use the project **`LedsSwitches_C-Lang`** as a base. Make sure you under
 
 Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. You can use the project **`71_7SegDispl_C-Lang.c`** as a base (make sure you understand this program first).
 
-When running the program in **RVfpga-ViDBo**, you should see the switch value appear on the 7-segment display. Note that this peripheral is shown **outside** the FPGA board in the simulator.
-
-<p align="center">
-  <img src="Images/ViDBo.png" width=70% height=70%>
-</p>
-
 
 ## Exercise 3
 
@@ -100,18 +94,10 @@ For example (each step separated by ~1 s):
 
 You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
 
+
 ## Exercise 4
 
-Modify the function `GPIO_ISR` in the interrupt-based code `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that each time a 0→1 transition is detected on the first switch, the state of all 16 LEDs is inverted — not just the least significant one as in the original program.
-
-Hint: In the interrupt service routine (ISR), replace the line that toggles only one LED with a bitwise inversion of the entire 16-bit LED output register. Remember that in C:
-- ! is logical NOT (returns 0 or 1)
-- ~ is bitwise NOT (inverts all bits).
-
-
-## Exercise 5
-
-Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
 
 **Required behavior**
 - **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
@@ -132,9 +118,9 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
    - if the display is disabled, disable display output using the enable register
 
 
-## Exercise 6
+## Exercise 5
 
-Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
 
 **Required behavior**
 - SW0: toggle between two counting speeds in the 7-segment display (fast / slow) each time the switch generates an interrupt.
