@@ -21,7 +21,6 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
 
 5. Finally, perform the following guided test, which is also explained in the previous video:
 In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga. Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**. As before, analyze the two codes and then run and test the programs either on the FPGA board or using the RVfpga-ViDBo simulator.
-
 **Programmed I/O version**
 The first example (**`LED-Switch_7SegDispl_C-Lang`**) demonstrates **polling-based I/O**. It performs two independent tasks:
     1. Inverts the **right-most LED** every time a **0→1 transition** occurs on the **right-most switch**. Note that when a **1→0 transition** occurs on the **right-most switch** nothing changes.
@@ -32,7 +31,6 @@ After initialization, the program enters an **infinite loop** that:
     - Inverts the LED if a 0→1 transition is detected.
     - Updates the displayed count and generates a delay through a software loop.
 This approach has a **limitation**: if a switch transition happens during the delay loop (for instance, when the switch is toggled quickly), the program might **miss** the event. This limitation motivates the use of **interrupt-driven I/O**.
-
 **Interrupt-driven I/O version**
 The second example (**`LED-Switch_7SegDispl_Interrupts_C-Lang`**) solves this problem using **hardware interrupts**.
 Here, the switch input is configured to **trigger an interrupt** whenever a **0→1 transition** occurs. When that happens:
