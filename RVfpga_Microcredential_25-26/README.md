@@ -21,6 +21,6 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - To complete between June 15-18.
     - In-person session on June 19.
 - [Module 4 - Zephyr Project on VeeRwolf](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
-    - To complete between June 22-26.
+    - To complete between June 22-25.
     - In-person session on June 26.
 
