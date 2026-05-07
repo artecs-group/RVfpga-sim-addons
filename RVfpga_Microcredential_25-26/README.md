@@ -5,7 +5,8 @@ Subsequently, a detailed study of these cores and their Verilog code is conducte
 In the final module, a complete application will also be deployed, using Zephyr Project as the RTOS and TensorFlow Lite for microcontrollers. All developments will be carried out using Xilinx FPGAs.
 
 The course will take place over six consecutive weeks, from May 11 to June 26. During each week, students will be required to complete various assignments. Then, in-person sessions will be held at the end of each week.
-- [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0) and [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
+- [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0)
+- [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
     - To complete between May 11-13.
     - In-person session on May 14.
 - [Module 2 - High-Level Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
