@@ -47,7 +47,7 @@ The module includes both high-level programming exercises using the existing RVf
 ## Exercise 1 (Mandatory)
 The current 8-digit 7-segment displays controller (implemented in module ```SevSegDisplays_Controller```), can only show the 16 hexadecimal digits. Modify the 8-digit 7-segment displays controller so that it can show any combination of ON/OFF LEDs. 
 
-Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv```. Specifically, within that file, you must modify the module that handles the 7-segment displays device (```SevSegDisplays_Controller```).
+Note that you only need to make changes in file ```/home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv```. Specifically, within that file, you must modify the module that handles the 7-segment displays device (```SevSegDisplays_Controller```).
 
 + You can use as a baseline this [file](https://drive.google.com/file/d/19QDLbpinb2exxjfZP2S4pQ8HS-l7iQGT/view?usp=drive_link), which is already partially completed. In that file, look for comment ```/* COMPLETE THE CODE WITH THE NEW FUNCTIONALITY */``` and implement the new controller at that point of the code.
 
@@ -83,22 +83,22 @@ Note that you only need to make changes in file ```/home/rvfpga/Simuladores_EC_2
 Once you’ve made and checked all the changes in the ```SevSegDisplays_Controller``` module, you will test the modified version in the RVfpga-ViDBo simulator or on the FPGA board (if you have it). Follow the next steps:
 
 #### RVfpga-Nexys (FPGA board)
-+ Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
++ Replace the following file: ```/home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one.
 
 + Generate a new bitstream in Vivado following the instructions of the next document: [RVfpga-Lab5](https://drive.google.com/file/d/13-Ddob_eq9GVMZcJfMHKvY5x9aaYKvlJ/view?usp=sharing). Note that, in Step 4 (*Select Nexys A7 as target board*), you may need to ```Refresh``` the catalogue for the Nexys A7 board to appear, and then ```Install``` it.
   
 
 #### RVfpga-ViDBo
-+ Replace the following file: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
++ Replace the following file: ```/home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
 
 + Download file [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) and file [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
 
 ```
-    cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
-    cp /home/rvfpga/Downloads/lsu_lsc_ctl.sv /home/rvfpga/Simuladores_EC_24-25/RVfpga/src/SweRVolfSoC/SweRVEh1CoreComplex/lsu
+    cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
+    cp /home/rvfpga/Downloads/lsu_lsc_ctl.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/lsu
 ```
 
-+ Open a terminal and go into directory ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo```.
++ Open a terminal and go into directory ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_ViDBo```.
 
 + Type the following commands to compile the simulator (note that the recompilation will use the modified swervolf_syscon.sv file):
 
@@ -107,7 +107,7 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
     make -j
 ```
 
-+ When compilation ends, the simulator binary should have been created at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/Vrvfpgasim```
++ When compilation ends, the simulator binary should have been created at: ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_ViDBo/Vrvfpgasim```
 
 
 ## Exercise 2 (Mandatory)
@@ -117,7 +117,7 @@ Use the extended SoC for printing the following message on the 8-digit 7-segment
   <img src="../../Integrated_Systems_Architecture/Lab8/Images/Hello.png" width=60% height=60%>
 </p>
 
-You can use as a baseline, for example, the PlatformIO project provided at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/71_7SegDispl_C-Lang```. Then, depending on the tool you are using, follow the next steps:
+You can use as a baseline, for example, the PlatformIO project provided at: ```/home/rvfpga/RVfpga_MasterUCLM/Projects/71_7SegDispl_C-Lang```. Then, depending on the tool you are using, follow the next steps:
 
 #### RVfpga-Nexys (FPGA board)
 + In order to use the new bitstream created in the previous exercise, you must update the path set for ```board_build.bitstream_file``` in file ```platformio.ini``` to the new bitstream generated by Vivado in the previous exercise.
@@ -126,7 +126,7 @@ You can use as a baseline, for example, the PlatformIO project provided at: ```/
 
 #### RVfpga-ViDBo
 + In order to use the new simulator created in the previous exercise, you must update the path set for ```board_debug.verilator.binary``` in file ```platformio.ini``` to: 
-```/home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo/Vrvfpgasim```.
+```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_ViDBo/Vrvfpgasim```.
 
 + Then, follow the usual steps to run a program in RVfpga-ViDBo.
 
