@@ -5,10 +5,7 @@ In this second module, students will work with the input/output (I/O) system of 
 
 The module includes both high-level programming exercises using the existing RVfpga platform and lower-level activities focused on understanding and extending the internal hardware implementation of the SoC. Students will also explore interrupt-based I/O, as well as simulation and debugging workflows using RVfpga-Trace and Vivado tools.
 
-## Workflow
-Follow the next steps to analyze the RVfpga Input/Output System, first at a high-level and then at a low-level.
-
-### To complete between May 18 and 21:
+## To complete between May 18 and 21:
 1. If you need to review Verilog programming or Input/Output general concepts, you can look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
 
 2. View this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc)). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing). In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
@@ -54,6 +51,108 @@ Follow the next steps to analyze the RVfpga Input/Output System, first at a high
     - The `main` function performs the necessary initializations, then enters a loop that periodically updates the 7-segment display and creates a software delay.
     - The switch is **not** read explicitly in the main loop; all event handling occurs inside the **interrupt service routine (ISR)**.
     - As a result, **no switch transitions are missed**, even if they occur during the delay.
+
+
+## To complete on May 22:
+
+## Exercise 1
+
+Write a C program that displays the **inverse** of the switches on the LEDs.
+
+For example:  
+- If the switches are (in binary): `0101010101010101`, then the LEDs should display: `1010101010101010`  
+- If the switches are: `1111000011110000`, then the LEDs should display: `0000111100001111`
+
+You can use the project **`LedsSwitches_C-Lang`** as a base. Make sure you understand how the program reads the switch states, writes to the LEDs, and how the GPIO registers are accessed.
+
+
+## Exercise 2
+
+Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. You can use the project **`71_7SegDispl_C-Lang.c`** as a base (make sure you understand this program first).
+
+When running the program in **RVfpga-ViDBo**, you should see the switch value appear on the 7-segment display. Note that this peripheral is shown **outside** the FPGA board in the simulator.
+
+<p align="center">
+  <img src="Images/ViDBo.png" width=70% height=70%>
+</p>
+
+
+## Exercise 3
+
+Write a C program that shows the string **“0-1-2-3-4-5-6-7”** moving from right to left across the 8-digit 7-segment display.
+
+- The character 0 should first appear on the right-most digit.
+- Every approximately one second, all digits should shift one position to the left. At the same time, the next character in the sequence (1, then 2, 3, …) should enter on the right-most digit, replacing the empty position created by the shift.
+- Whenever a character moves out of the display on the left, the next character in the sequence enters on the right, producing a continuous scrolling effect from right to left.
+
+For example (each step separated by ~1 s):
+```
+.......0
+......01
+.....012
+....0123
+...01234
+..012345
+.0123456
+01234567
+12345670   ← the ‘0’ has exited on the left and it has entered on the right.
+```
+
+You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying it to implement the scrolling behavior.
+
+## Exercise 4
+
+Modify the function `GPIO_ISR` in the interrupt-based code `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that each time a 0→1 transition is detected on the first switch, the state of all 16 LEDs is inverted — not just the least significant one as in the original program.
+
+Hint: In the interrupt service routine (ISR), replace the line that toggles only one LED with a bitwise inversion of the entire 16-bit LED output register. Remember that in C:
+- ! is logical NOT (returns 0 or 1)
+- ~ is bitwise NOT (inverts all bits).
+
+
+## Exercise 5
+
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
+
+**Required behavior**
+- **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
+- **SW1**: toggle the visibility of the 7-segment display. When the display is turned off, the counter continues running internally, but its value is not shown. When the display is turned back on, it resumes showing the updated counter value, continuing from where it would have been if it had remained visible.
+
+**Guidance**:
+- Enable interrupts only for SW0 and SW1 (bits 16 and 17).
+- In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
+- Handle each switch independently (LED toggle for SW0, display visibility toggle for SW1)
+- Clear the served interrupt source(s)
+- Maintain global/local variables for:
+   - LED state
+   - Display visibility (on/off)
+   - The 32-bit counter value (if your template requires it)
+- In the main loop:
+   - update the counter continuously
+   - if the display is enabled, write the counter value to the 7-segment display
+   - if the display is disabled, disable display output using the enable register
+
+
+## Exercise 6
+
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
+
+**Required behavior**
+- SW0: toggle between two counting speeds in the 7-segment display (fast / slow) each time the switch generates an interrupt.
+- SW1: toggle the counting direction in the 7-segment display (increment / decrement) each time the switch generates an interrupt.
+- LEDs: must remain off at all times (the program must not write to the LED output register).
+
+**Guidance**:
+- Enable interrupts only for SW0 and SW1 (bits 16 and 17).
+- In the ISR, read RGPIO_INTS to determine which switch triggered the interrupt.
+- Update only the program state inside the ISR (speed and direction), and then clear the served interrupt source(s).
+- Maintain global/local variables for:
+   - current speed (delay value)
+   - counting direction
+   - the 32-bit counter value
+- In the main loop:
+   - update the 7-segment display
+   - increment or decrement the counter depending on the direction selected with SW1
+   - wait using a delay whose length depends on the speed selected with SW0
 
 
 ---
