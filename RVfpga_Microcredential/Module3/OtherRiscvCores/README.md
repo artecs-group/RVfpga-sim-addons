@@ -2,7 +2,10 @@
 
 In recent years, the open-source hardware ecosystem has witnessed a remarkable surge in the development and adoption of RISC-V cores. Thanks to its open and modular instruction set architecture, RISC-V has empowered academia, industry, and hobbyists to design and share a wide variety of cores tailored to different needs—from ultra-minimal implementations for microcontrollers to complex out-of-order processors for high-performance computing. In this page we explore a selection of these open RISC-V cores, highlighting their features, use cases, and the vibrant community driving this innovation.
 
+
 1. Look at the following presentation: [OtherRiscvCores](https://drive.google.com/file/d/1N_pWZ8oRKA0aUdZg2EKY66rlhnqzTMtF/view?usp=sharing).
+
+
 2. Follow these steps to replicate the Verilator CVW-Wally simulation in the VM:
     * Install version 5.032 of Verilator. (You can also download a pre-compiled version here: [Verilator](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EQpVNYBVJU1Loxn6iQGpHOABhR8v2-vyy88wdoDhW6lK6w?e=EnotZD). Once downloaded, unzip and move it to the home of the VM.)
     * Install version 14.2.0 of the RISC-V toolchain. (You can also download a pre-compiled version here: [Toolchain](https://ucomplutense-my.sharepoint.com/:u:/g/personal/dani02_ucm_es/EWcHZ40cZQtNtRncy7UWnIgBIi7chrEkSuS_IhD6Z4KkVw?e=Sgd3jE). Once downloaded, unzip and move it to the home of the VM.)
@@ -53,3 +56,153 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
 
     * In the figure, you can see the instructions within the first and second iteration of the loop and the value obtained in the ALU for the addition.
+
+
+3. Follow these steps to execute CVW-Wally on the Nexys A7 board:
+
+    * Clone the repository:
+
+      ```bash
+      cd ~
+      git clone https://github.com/mmiral04/cvw.git
+      cd cvw
+      git checkout apb_periph
+      ```
+
+    * Configure the Wally environment:
+
+      ```bash
+      mkdir -p ~/riscv
+      ln -s /home/rvfpga/.platformio/packages/toolchain-riscv/* ~/riscv/
+      touch ~/riscv/site-setup.sh
+      source setup.sh
+      ```
+
+    * Download the prebuilt FPGA bitstream from the following link:
+
+      ```text
+      [WallyBitstreamNexysA7](https://ucomplutense-my.sharepoint.com/:u:/r/personal/dani02_ucm_es/Documents/MicroCredencial_RVfpga/OtherRiscvCores/fpgaTop.bit?csf=1&web=1&e=PN97AB)
+      ```
+
+      Save the file as:
+
+      ```text
+      fpgaTop.bit
+      ```
+
+    * Connect the hardware:
+
+        * Nexys A7 board
+        * microUSB cable
+        * preconfigured microSD card
+
+      Insert the microSD card into the on-board SD slot.
+
+    * Program the FPGA using the programming tool provided by the instructor.
+
+      Load:
+
+      ```text
+      fpgaTop.bit
+      ```
+
+      Wait until programming finishes successfully.
+
+    * Open the UART terminal:
+
+      ```bash
+      screen /dev/ttyUSB1 115200
+      ```
+
+      Check available serial devices with:
+
+      ```bash
+      ls /dev/ttyUSB*
+      ```
+
+    * Press the **RESET** button on the Nexys A7 board.
+
+      If everything works correctly you should see:
+
+        * BootROM messages
+        * OpenSBI messages
+        * Linux boot logs
+
+      Finally:
+
+      ```text
+      #
+      ```
+
+    * Create a mount point:
+
+      ```bash
+      mkdir -p /mnt/sd
+      ```
+
+    * Mount the Linux partition:
+
+      ```bash
+      mount /dev/mmcblk0p4 /mnt/sd
+      ```
+
+      Check contents:
+
+      ```bash
+      ls /mnt/sd
+      ```
+
+    * Test the GPIO peripheral.
+
+      The LEDs LD0-LD4 are connected to the GPIO peripheral.
+
+      Configure GPIO direction:
+
+      ```bash
+      devmem 0x10060008 32 0x1F
+      ```
+
+      Enable GPIO outputs:
+
+      ```bash
+      devmem 0x1006000C 32 0x1F
+      ```
+
+      Expected result:
+
+        * LEDs LD0-LD4 should turn on.
+
+    * Test the seven-segment display peripheral.
+
+      The seven-segment display peripheral is connected through APB.
+
+      Peripheral base address:
+
+      ```text
+      0x00100000
+      ```
+
+      Write segment pattern:
+
+      ```bash
+      devmem 0x00100000 32 0x77
+      ```
+
+      Enable the first display:
+
+      ```bash
+      devmem 0x00100004 32 0x1
+      ```
+
+      Expected result:
+
+        * The display should show the character `A`.
+
+    * Exit the UART terminal.
+
+      To exit `screen`:
+
+      ```text
+      Ctrl+A
+      K
+      ```
