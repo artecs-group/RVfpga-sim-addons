@@ -103,7 +103,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       Load:
 
       ```text
-      fpgaTop.bit
+      .platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE fpgaTop.bit" -f ../RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
       ```
 
       Wait until programming finishes successfully.
@@ -111,6 +111,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * Open the UART terminal:
 
       ```bash
+      sudo apt install screen
       screen /dev/ttyUSB1 115200
       ```
 
