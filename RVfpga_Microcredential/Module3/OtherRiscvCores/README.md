@@ -81,7 +81,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * Download the prebuilt FPGA bitstream from the following link:
 
       ```text
-      [WallyBitstreamNexysA7](https://ucomplutense-my.sharepoint.com/:u:/r/personal/dani02_ucm_es/Documents/MicroCredencial_RVfpga/OtherRiscvCores/fpgaTop.bit?csf=1&web=1&e=PN97AB)
+      [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
       ```
 
       Save the file as:
