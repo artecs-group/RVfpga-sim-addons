@@ -152,24 +152,10 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Test the seven-segment display peripheral.
 
-      The seven-segment display peripheral is connected through APB.
-
-      Peripheral base address:
-
-      ```text
-      0x00100000
-      ```
-
       Write segment pattern:
 
       ```bash
       devmem 0x00100000 32 0x77
-      ```
-
-      Enable the first display:
-
-      ```bash
-      devmem 0x00100004 32 0x1
       ```
 
       Expected result:
