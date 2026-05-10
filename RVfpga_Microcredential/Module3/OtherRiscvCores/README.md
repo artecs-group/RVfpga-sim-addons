@@ -134,15 +134,10 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
       The LEDs LD0-LD4 are connected to the GPIO peripheral.
 
-      Configure GPIO direction:
-
-      ```bash
-      devmem 0x10060008 32 0x1F
-      ```
-
       Enable GPIO outputs:
 
       ```bash
+      devmem 0x10060008 32 0x1F
       devmem 0x1006000C 32 0x1F
       ```
 
