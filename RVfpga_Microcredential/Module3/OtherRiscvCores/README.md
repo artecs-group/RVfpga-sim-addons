@@ -146,9 +146,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       devmem 0x1006000C 32 0x1F
       ```
 
-      Expected result:
-
-        * LEDs LD0-LD4 should turn on.
+      Expected result: LEDs LD0-LD4 should turn on.
 
     * Test the seven-segment display peripheral.
 
@@ -158,9 +156,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       devmem 0x00100000 32 0x77
       ```
 
-      Expected result:
-
-        * The display should show the character `A`.
+      Expected result: The display should show the character `A`.
 
     * Exit the UART terminal.
 
