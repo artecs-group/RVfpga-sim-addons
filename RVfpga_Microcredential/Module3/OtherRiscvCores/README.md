@@ -96,17 +96,11 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
       Wait until programming finishes successfully.
 
-    * Open the UART terminal:
+    * Open the UART terminal (you may need to change the ttyUSB1 to other number):
 
       ```bash
       sudo apt install screen
       screen /dev/ttyUSB1 115200
-      ```
-
-      Check available serial devices with:
-
-      ```bash
-      ls /dev/ttyUSB*
       ```
 
     * Press the **RESET** button on the Nexys A7 board.
@@ -116,12 +110,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
         * BootROM messages
         * OpenSBI messages
         * Linux boot logs
-
-      Finally:
-
-      ```text
-      #
-      ```
+        * #
 
     * Create a mount point:
 
