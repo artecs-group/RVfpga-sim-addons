@@ -78,11 +78,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       source setup.sh
       ```
 
-    * Download the prebuilt FPGA bitstream from the following link:
-
-      ```text
-      [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
-      ```
+    * Download the prebuilt FPGA bitstream from the following link: [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
 
       Save the file as:
 
