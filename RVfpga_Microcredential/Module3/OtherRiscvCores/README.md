@@ -80,12 +80,6 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Download the prebuilt FPGA bitstream from the following link: [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
 
-      Save the file as:
-
-      ```text
-      fpgaTop.bit
-      ```
-
     * Connect the hardware:
 
         * Nexys A7 board
