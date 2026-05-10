@@ -86,8 +86,6 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
         * microUSB cable
         * preconfigured microSD card
 
-      Insert the microSD card into the on-board SD slot.
-
     * Program the FPGA using the programming tool provided by the instructor.
 
       Load:
