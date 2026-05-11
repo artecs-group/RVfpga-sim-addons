@@ -12,7 +12,9 @@ In order to study the RISC-V architecture and assembly language, look at [Lesson
 
 ## To complete during the in-person session of May 14:
 
+<!--
 Complete the following project [ImageProcessingProject](https://drive.google.com/file/d/1ir4-RzMh6QSdod0ZupE5-SuVFGVYZ8oB/view?usp=sharing). Specifically:
 - Read carefully sections 1, 2.A, 2.B and 2.C.
 - Follow the steps explained in Section 2.D to execute the program on the Nexys A7 board and on the Whisper simulator.
 - Complete exercises 1 to 4. Exercises 1 to 3 are mandatory whereas Exercise 4 is optional. These exercises are what you must include in the Module 1 report.
+-->
