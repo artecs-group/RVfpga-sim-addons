@@ -13,9 +13,10 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - [RISC-V Assembly](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf)
     - [RISC-V Instruction Format](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf)
 
+<!--
+
 **In-person session on May 14:** [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
 
-<!--
 - [Module 2 - High-Level Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
     - To complete between May 18-21.
     - In-person session on May 22.
