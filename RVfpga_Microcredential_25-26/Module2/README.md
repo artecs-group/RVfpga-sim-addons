@@ -8,6 +8,8 @@ The module includes both high-level programming exercises using the existing RVf
 ---
 
 ## Previous work to complete between May 18 and 21:
+
+<!--
 1. If you need to review Verilog programming or Input/Output general concepts, you can look at Chapter 4 (System Verilog) and Chapter 9 (Input/Output) of the [H&H book](https://www.amazon.es/Digital-Design-Computer-Architecture-RISC-V/dp/0128200642).
 
 2. View this video [InputOutputVideo](https://www.youtube.com/watch?v=8fK-CoEbo0Y) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [InputOutputEnglishVideo](https://www.youtube.com/watch?v=oIRFxQEBNAc)). The video describes the RVfpga I/O System in detail. You can download the slides [here](https://drive.google.com/file/d/1Fv4-I8DwISdqqDpol4i_BMZNzK4QmpOe/view?usp=sharing). In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
@@ -53,13 +55,14 @@ The module includes both high-level programming exercises using the existing RVf
     - The `main` function performs the necessary initializations, then enters a loop that periodically updates the 7-segment display and creates a software delay.
     - The switch is **not** read explicitly in the main loop; all event handling occurs inside the **interrupt service routine (ISR)**.
     - As a result, **no switch transitions are missed**, even if they occur during the delay.
-
+-->
 
 ---
 
 
 ## To complete on May 22:
 
+<!--
 ## Exercise 1 (mandatory)
 
 Write a C program that displays the **inverse** of the switches on the LEDs.
@@ -145,3 +148,4 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
    - increment or decrement the counter depending on the direction selected with SW1
    - wait using a delay whose length depends on the speed selected with SW0
 
+-->
