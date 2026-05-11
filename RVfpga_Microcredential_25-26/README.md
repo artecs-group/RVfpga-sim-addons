@@ -5,9 +5,19 @@ Subsequently, a detailed study of these cores and their Verilog code is conducte
 In the final module, a complete application will also be deployed, using Zephyr Project as the RTOS and TensorFlow Lite for microcontrollers. All developments will be carried out using Xilinx FPGAs.
 
 The course will take place over six consecutive weeks, from May 11 to June 26. During each week, students will be required to complete various assignments. Then, in-person sessions will be held at the end of each week.
-- [Module 0 - Installation and Introduction to RVfpga](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0) and [Module 1 - RISC-V Architecture](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
-    - To complete between May 11-13.
-    - In-person session on May 14.
+
+To complete between May 11-13
+
+- To complete between May 11-13.
+    - Install and test the tools on the Virtual Machine: [Module 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0)
+    - Review the RISC-V architecture and assembly language (Module 1):
+        - [RISC-V Architecture](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module2.pdf)
+        - [RISC-V Assembly](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module3.pdf)
+        - [RISC-V Instruction Format](https://www.fdi.ucm.es/profesor/mendias/FC2/FC2module4.pdf)
+
+- In-person session on May 14: [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
+
+<!--
 - [Module 2 - High-Level Input/Output in the RVfpga SoC](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
     - To complete between May 18-21.
     - In-person session on May 22.
@@ -24,3 +34,4 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - To complete between June 22-25.
     - In-person session on June 26.
 
+-->
