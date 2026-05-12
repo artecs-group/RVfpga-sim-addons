@@ -32,5 +32,6 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - *LEDs* and *Switches*
     - *7-Segment displays*
     - *Program-based I/O* vs *Interrup-based I/O*
+More details can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 -->
 
