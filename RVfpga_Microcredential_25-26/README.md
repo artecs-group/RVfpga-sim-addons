@@ -32,6 +32,54 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - *LEDs* and *Switches*
     - *7-Segment displays*
     - *Program-based I/O* vs *Interrup-based I/O*
-More details can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
+More details about these tasks can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 -->
 
+**May 22 - 2nd Session:**
+<!--
+- Look at the instructions described in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
+-->
+
+**May 25-28 - Tasks to complete:**
+<!--
+- ...
+More details about these tasks can be found in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
+-->
+
+**May 29 - 3rd Session:**
+<!--
+- Look at the instructions described in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
+-->
+
+**June 1-11 - Tasks to complete:**
+<!--
+- ...
+More details about these tasks can be found in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
+-->
+
+**June 12 - 4th Session:**
+<!--
+- Look at the instructions described in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
+-->
+
+**June 15-18 - Tasks to complete:**
+<!--
+- ...
+More details about these tasks can be found in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
+-->
+
+**June 19 - 5th Session:**
+<!--
+- Look at the instructions described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
+-->
+
+**June 22-25 - Tasks to complete:**
+<!--
+- ...
+More details about these tasks can be found in [Module 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
+-->
+
+**June 26 - 6th Session:**
+<!--
+- Look at the instructions described in [Module 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
+-->
