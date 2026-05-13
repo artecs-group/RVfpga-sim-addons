@@ -17,7 +17,7 @@ The module includes both high-level programming exercises using the existing RVf
 3. Download the following zip file which contains several projects to use in this module: [Alternative Projects](https://drive.google.com/file/d/1tU7KFdhiPp8QpxczqRtw_R8V1guI3D56/view)
 
 4. Complete the following tasks:
-    - Open in VS Code the project called `LedsSwitches`. This program, which is explained in the previous video, reads the values of the switches on the board and displays them on the corresponding LEDs. First, analyze the code to understand how the GPIO peripherals are accessed and used. Then, run and test the program either on the FPGA board or using the RVfpga-ViDBo simulator.
+    - Open in VS Code the project called `LedsSwitches`. This program, which is explained in the previous video, reads the values of the switches on the board and displays them on the corresponding LEDs. First, analyze the code to understand how the GPIO peripherals are accessed and used. Then, run and test the program either on the FPGA board or using the RVfpga-ViDBo simulator. Finally you can do the same with project `LedsSwitches_C-Lang`, which performs the same functionality but in C language.
     - Open in VS Code the project called `71_7SegDispl_C-Lang`. This program, which is explained in the previous video, shows number *71* on the 7-Segment-Displays. First, analyze the code to understand how the 7-Seg-Displays are used. Then, run and test the program either on the FPGA board or using the RVfpga-ViDBo simulator.
 
 5. Finally, perform the following guided test, which is also explained in the previous video:
