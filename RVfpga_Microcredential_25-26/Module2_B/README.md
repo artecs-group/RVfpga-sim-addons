@@ -3,7 +3,7 @@
 ## Previous work to complete between May 25 and 28:
 
 <!--
-1. Understand in detail the 8-Digit 7-Segment-Displays controller Verilog controller implemented in file */home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the scanning frequency of the displays controller in the baseline SoC is prepared for running on the board, so we must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
+1. Understand in detail the 8-Digit 7-Segment-Displays Verilog controller implemented in file */home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the scanning frequency of the displays controller in the baseline SoC is prepared for running on the board, so we must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
 
     * Download the following project, which writes the value 1-3-5-7-2-4-6-8 in the 8-digit 7-Segment displays, and move it to the home of the Virtual Machine: [Project_RVfpgaTrace_7SegDisplays](https://drive.google.com/file/d/1WIYOgUAcneO_M4VfKQ0ZhYQ7s_tyD-tS/view?usp=sharing).
     * Note that the project includes a new version of the RVfpga-Trace simulator, provided inside the project itself (file ```Vrvfpgasim```), in which the scanning frequency of the displays controller has been significantly reduced.
@@ -14,7 +14,7 @@
     * Later, when you need to regenerate the binary of the simulator to debug your changes in *Exercise-1_InputOutput_LowLevel*, you can follow the instructions provided in Chapter 7 of the Getting Started Guide of the complete RVfpga package (document ```RVfpgaEH1/RVfpga/Documents/RVfpga_GettingStartedGuide.pdf```). Specifically, in the Virtual Machine:
 
         * Go into ```/home/rvfpga/RVfpga_MasterUCLM/src``` and perform the changes you consider to the 7-Segment displays controller.
-        * In a terminal, go into ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace``` and regenerate the simulator binary by typing ```make```.
+        * In a terminal, go into ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace``` and regenerate the simulator binary by typing ```make```. Remember to decrease the scanning frequency of the displays controller.
         * Using the new binary (```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace/Vrvfpgasim```), run the project provided above in this item to debug your implementation.
 
 2. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
@@ -87,12 +87,14 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
 
+<!--
 + Download file [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) and file [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
 
 ```
     cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
     cp /home/rvfpga/Downloads/lsu_lsc_ctl.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/lsu
 ```
+-->
 
 + Open a terminal and go into directory ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_ViDBo```.
 
