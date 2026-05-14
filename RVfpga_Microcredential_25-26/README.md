@@ -9,8 +9,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 ### SUMMARIZED SCHEDULE (more details going into each module):
 
 **May 11 - Welcome Session:** 
-- [Slides](https://drive.google.com/file/d/187rf7Bz2vArmV7E5L5xzS7HF_8hG6gNU/view?usp=sharing)
-- [Video](https://www.youtube.com/watch?v=cKB7Ky25nQM)
+- [Slides: Welcome Session](https://drive.google.com/file/d/187rf7Bz2vArmV7E5L5xzS7HF_8hG6gNU/view?usp=sharing)
+- [Video: Welcome Session](https://www.youtube.com/watch?v=cKB7Ky25nQM)
 
 **May 11-13 - Tasks to complete before 1st session:**
 - Install and test the tools on the Virtual Machine: [Module 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0)
