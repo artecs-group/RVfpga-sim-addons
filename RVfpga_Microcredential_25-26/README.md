@@ -23,7 +23,6 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
 
 **May 18-21 - Tasks to complete:**
-<!--
 - Review Input/Output and Verilog concepts.
 - View the RVfpga Input/Output video.
 - Analyze provided programs:
@@ -31,7 +30,6 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
     - *7-Segment displays*
     - *Program-based I/O* vs *Interrup-based I/O*
 More details about these tasks can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
--->
 
 **May 22 - 2nd Session:**
 <!--
