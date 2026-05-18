@@ -32,7 +32,6 @@
       * Open the folder extracted from the archive and navigate to its ```new/board_files``` directory. Select this directory and copy it.
       * Open the folder that Vivado was installed in your system. Under this folder, navigate to its ```<version>/data/boards``` directory, then paste the ```board_files``` into this directory.
 
--->
 
 ---
 
