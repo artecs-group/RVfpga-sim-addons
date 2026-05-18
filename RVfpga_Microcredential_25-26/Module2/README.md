@@ -74,7 +74,12 @@ You can use the project **`LedsSwitches_C-Lang`** as a base. Make sure you under
 
 ## Exercise 2 (mandatory)
 
-Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. You can use the project **`71_7SegDispl_C-Lang.c`** as a base (make sure you understand this program first).
+Write a C program that displays the **value of the switches** on the **four right-most digits** of the 7-segment displays. 
+
+For example:  
+- If the switches are (in binary): `11111111111111110101010101010101`, then the 7-segment displays should display: `0xffff5555`
+
+You can use the project **`71_7SegDispl_C-Lang.c`** as a base (make sure you understand this program first).
 
 
 ## Exercise 3 (optional)
