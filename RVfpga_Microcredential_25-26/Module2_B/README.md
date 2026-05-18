@@ -1,5 +1,5 @@
 # Module 2 - Low-Level Input/Output in the RVfpga SoC
-
+<!--
 ## Previous work to complete between May 25 and 28:
 
 1. Understand in detail the 8-Digit 7-Segment-Displays Verilog controller implemented in file */home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv*. Use a simulation in RVfpga-Trace to help you understand the module. Note that the scanning frequency of the displays controller in the baseline SoC is prepared for running on the board, so we must significantly decrease its period to work in simulation. Follow these steps to run a simulation in RVfpga-Trace:
@@ -141,3 +141,4 @@ You can continue practicing after completing the previous exercises. You can fin
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08/RVfpga_Lab08_VeeR-EL2_NexysA7-DDR.pdf```, which work with the PTC and specifically use the PWM tri-color LED included in the Nexys A7 board.
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab09/RVfpga_Lab09_VeeR-EL2_NexysA7-DDR.pdf```.
 
+-->
