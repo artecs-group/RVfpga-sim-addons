@@ -1,4 +1,5 @@
 # Module 2 - Low-Level Input/Output in the RVfpga SoC
+
 <!--
 ## Previous work to complete between May 25 and 28:
 
@@ -83,14 +84,6 @@ Once you’ve made and checked all the changes in the ```SevSegDisplays_Controll
 
 #### RVfpga-ViDBo
 + Replace the following file: ```/home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/Peripherals/SystemController/swervolf_syscon.sv``` for the modified one with the new functionality explained above.
-<!--
-+ Download file [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) and file [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
-
-```
-    cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
-    cp /home/rvfpga/Downloads/lsu_lsc_ctl.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/lsu
-```
--->
 
 + Open a terminal and go into directory ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_ViDBo```.
 
@@ -141,4 +134,15 @@ You can continue practicing after completing the previous exercises. You can fin
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab08/RVfpga_Lab08_VeeR-EL2_NexysA7-DDR.pdf```, which work with the PTC and specifically use the PWM tri-color LED included in the Nexys A7 board.
    * Exercises 2 and 3 of ```RVfpga/RVfpgaEL2/RVfpga_NexysA7-DDR/Labs/Lab09/RVfpga_Lab09_VeeR-EL2_NexysA7-DDR.pdf```.
 
+-->
+
+
+
+<!--
++ Download file [exu.sv](https://drive.google.com/file/d/1z-vSw92ARXCYgOxQ3lMxxfRTMfvy3MeD/view?usp=drive_link) and file [lsu_lsc_ctl.sv](https://drive.google.com/file/d/1dfDoiMu9vO7qPI3UR9hErW_D5zCqnIZX/view?usp=drive_link) and replace them in your SoC:
+
+```
+    cp /home/rvfpga/Downloads/exu.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/exu
+    cp /home/rvfpga/Downloads/lsu_lsc_ctl.sv /home/rvfpga/RVfpga_MasterUCLM/src/SweRVolfSoC/SweRVEh1CoreComplex/lsu
+```
 -->
