@@ -1,4 +1,4 @@
-# Module 3 - VeeR EH1 microarchitecture
+# Module 3 - VeeR EH1 and EL2 microarchitecture
 
 ## General Contents
 
