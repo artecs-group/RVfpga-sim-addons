@@ -58,7 +58,7 @@ The module includes both high-level programming exercises using the existing RVf
 ---
 
 
-## To complete in the 2nd Session (Friday May 22):
+## To complete in the 2nd Session (Friday, May 22):
 
 ## Exercise 1 (mandatory)
 
