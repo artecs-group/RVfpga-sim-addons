@@ -58,9 +58,8 @@ The module includes both high-level programming exercises using the existing RVf
 ---
 
 
-## To complete on May 22:
+## To complete in the 2nd Session (Friday May 22):
 
-<!--
 ## Exercise 1 (mandatory)
 
 Write a C program that displays the **inverse** of the switches on the LEDs.
@@ -150,5 +149,3 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
    - update the 7-segment display
    - increment or decrement the counter depending on the direction selected with SW1
    - wait using a delay whose length depends on the speed selected with SW0
-
--->
