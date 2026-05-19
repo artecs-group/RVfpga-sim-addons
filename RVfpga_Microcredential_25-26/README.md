@@ -6,7 +6,9 @@ In the final module, a complete application will also be deployed, using Zephyr 
 
 The course will take place over six consecutive weeks, from May 11 to June 26. During each week, students will be required to complete various assignments. Then, in-person sessions will be held at the end of each week.
 
-### SUMMARIZED SCHEDULE (more details going into each module):
+---
+
+## SUMMARIZED SCHEDULE (more details going into each module):
 
 **May 11 - Welcome Session:** 
 - [Slides: Welcome Session](https://drive.google.com/file/d/187rf7Bz2vArmV7E5L5xzS7HF_8hG6gNU/view?usp=sharing)
