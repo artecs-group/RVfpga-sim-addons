@@ -151,17 +151,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
       beq zero, zero, REPEAT
    ```
 
-   Answer the following questions about the `for` loop both theoretically and using the RVfpga-Pipeline simulator:
-
-   a. Draw the pipeline diagram for the third iteration of the loop.
-
-   b. Identify the hazards that occur and explain how this processor handles them.
-
-   c. Calculate the CPI (Cycles Per Instruction) of the loop.
-
-   ##### Partial Solution
-
-   ###### Pipeline diagram
+   ##### a. Draw the pipeline diagram for the third iteration of the loop.
 
    The following figures show different moments during the execution of the third iteration of the loop.
 
@@ -189,7 +179,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
      <img src="https://github.com/user-attachments/assets/fb48bdbf-5e2b-4c80-b4e2-cb5c5c9e3398" width="600" />
    </p>
 
-   ###### Hazard analysis
+   ##### b. Identify the hazards that occur and explain how this processor handles them.
 
    The following figure highlights the dependencies appearing in the loop:
 
@@ -232,7 +222,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
      <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" width="700" />
    </p>
 
-   ###### CPI calculation
+   ##### c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
    To calculate the CPI of the loop, simulate until the first instruction of the loop reaches the Decode stage in two consecutive iterations. Then, subtract the cycle numbers and divide the result by the number of instructions in the loop.
 
