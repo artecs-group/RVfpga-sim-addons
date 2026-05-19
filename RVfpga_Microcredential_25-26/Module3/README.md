@@ -16,7 +16,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
 2. Watch this video, which describes the VeeR EH1 microarchitecture in detail: [VeeReh1Video](https://youtu.be/xVnB6OM00cE?si=0HW333O-oPOXUDZG) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here [VeeReh1EnglishVideo](https://www.youtube.com/watch?v=Ow_0l47xqV4)). Take into account that the RVfpga-Pipeline simulator used in the video is an older version than the one you will use in this course. You can download the slides used in the video [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link).
 
 
-3. Perform the following guided example and solved exercise, which analyze the VeeR EH1 microarchitecture analyzed in the previous item.
+3. Perform the following guided example and solved exercise, which analyze the VeeR EH1 microarchitecture described in the previous item.
 
    #### 3.1 Guided Example - Use of RVfpga-Pipeline
 
