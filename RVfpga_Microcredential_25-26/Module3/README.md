@@ -99,7 +99,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
 
    #### 3.2 Exercise 4 - Guided Exercise in RVfpga-Pipeline
 
-   The following video shows the demo presented in class on how to solve this exercise: [Exercise4Demo](https://youtu.be/hqxG4cUnDfs).
+   The following video shows the demo presented in the Computer Organization class on how to solve this exercise: [Exercise4Demo](https://youtu.be/hqxG4cUnDfs).
 
    Consider the RISC-V VeeR EH1 processor. The processor has all configurable features enabled (pipelined execution, superscalar execution, Gshare branch predictor, etc.), except for the Secondary ALU.
 
