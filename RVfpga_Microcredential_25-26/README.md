@@ -12,6 +12,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - [Slides: Welcome Session](https://drive.google.com/file/d/187rf7Bz2vArmV7E5L5xzS7HF_8hG6gNU/view?usp=sharing)
 - [Video: Welcome Session](https://www.youtube.com/watch?v=cKB7Ky25nQM)
 
+---
+
 **May 11-13 - Tasks to complete before 1st session:**
 - Install and test the tools on the Virtual Machine: [Module 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module0)
 - Review the RISC-V architecture and assembly language (Module 1):
@@ -22,6 +24,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 **May 14 - 1st Session:**
 - [Video: Introduction to Module 1](https://www.youtube.com/watch?v=-YGfecV1NsQ)
 - Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
+
+---
 
 **May 18-21 - Tasks to complete:**
 - [Video: Work to complete before 2nd Session](https://www.youtube.com/watch?v=bsVilMYW5Mc)
@@ -38,6 +42,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - Look at the instructions described in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 -->
 
+---
+
 **May 25-28 - Tasks to complete:**
 <!--
 - ...
@@ -48,6 +54,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 <!--
 - Look at the instructions described in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
 -->
+
+---
 
 **June 1-11 - Tasks to complete:**
 <!--
@@ -60,6 +68,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - Look at the instructions described in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
 -->
 
+---
+
 **June 15-18 - Tasks to complete:**
 <!--
 - ...
@@ -70,6 +80,8 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 <!--
 - Look at the instructions described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
 -->
+
+---
 
 **June 22-25 - Tasks to complete:**
 <!--
