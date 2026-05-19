@@ -29,10 +29,161 @@ Test on the board the exercise shown in the video. Do the following steps:
 ## To complete in the 4th Session (Friday, June 12):
 
 ## Exercise 1 (mandatory)
-Complete the following exercise: [Exercise-HwCounters_EH1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab3#exercise-2) (second exercise).
+In the VeeR EH1 processor, the following code is to be executed. Note that this is the same code used in Exercise 1 of the previous session.
+
+```
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
+```
+
+To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
+
+```
+.globl Test_Assembly
+
+.section .midccm
+Entrada: .space 40
+Filtro: .space 12
+Salida: .space 32
+
+.text
+Test_Assembly:
+
+li t2, 0x488 # Disable Superscalar Exec, Sec. ALUs and Branch Pred.
+csrrs t1, 0x7F9, t2
+
+la t0, Entrada
+li t1, 0x1   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x5   				 
+sw t1, 8(t0)   			 
+li t1, 0x7   				 
+sw t1, 12(t0)   			 
+li t1, 0x9   				 
+sw t1, 16(t0)   			 
+li t1, 0x1   				 
+sw t1, 20(t0)   			 
+li t1, 0x3   				 
+sw t1, 24(t0)   			 
+li t1, 0x5   				 
+sw t1, 28(t0)   			 
+li t1, 0x7   				 
+sw t1, 32(t0)   			 
+li t1, 0x9   				 
+sw t1, 36(t0)   			 
+
+la t0, Filtro
+li t1, 0x2   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x4   				 
+sw t1, 8(t0)   			 
+
+la t0, Salida
+li t1, 0   				 
+sw t1, (t0)   			 
+li t1, 0   				 
+sw t1, 4(t0)   			 
+li t1, 0   				 
+sw t1, 8(t0)   			 
+li t1, 0   				 
+sw t1, 12(t0)   			 
+li t1, 0   				 
+sw t1, 16(t0)   			 
+li t1, 0   				 
+sw t1, 20(t0)   			 
+li t1, 0   				 
+sw t1, 24(t0)   			 
+li t1, 0   				 
+sw t1, 28(t0)   			 
+
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
+
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
+
+nop
+nop
+nop
+nop
+
+and zero, t4, t5
+
+li t2, 0x0
+add a6, a6, 0x240
+
+REPEAT:
+	loop_n :
+	addi a2 , x0 , 0
+		loop_k :
+	    	lw t3 , 0( a3)
+	    	lw t4 , 0( a4)
+	    	mul t6 , t3 , t4
+	    	lw t5 , 0( a5)
+	    	add t5 , t6 , t5
+	    	sw t5 , 0( a5)
+	    	addi a3 , a3 , 4
+	    	addi a4 , a4 , 4
+	    	addi a2 , a2 , 1
+	    	blt a2 , t1 , loop_k
+	addi a5 , a5 , 4
+	addi a3 , a3 , -8
+	addi a4 , a4 , -12
+	addi a1 , a1 , 1
+	blt a1 , t0 , loop_n
+addi t2, t2, 1
+bne t2, a6, REPEAT # Repeat the loop
+
+ret
+```
+
+Analyze the code in RISC-V assembly. Note that, with respect to the code from the previous lab, we have added an extra loop (```REPEAT```) that repeats the nested loops (```loop_n``` and ```loop_k```) a high number of times, in order to be able to obtain an accurate value for the cycles and instructions measured by the performance counters. Take this into account in your calculations.
+
+Then, test performance of the nested loops for different configurations of the VeeR EH1 core as specified next, and compare and explain the results that you obtain. Use the project you downloaded before (*HwCounters*) and simply replace the text in file ```Test_Assembly.S``` for the one provided in this exercise in RISC-V assembly. Test execution on the Nexys A7 board and on the RVfpga-ViDBo simulator.
+
+- Calculate the CPI for the nested loops when the program executes on a VeeR EH1 processor with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration used in the program provided above).
+```
+li t2, 0x488
+csrrs t1, 0x7F9, t2
+```
+
+- Repeat the analysis from the previous item, now enabling superscalar execution. Replace the two instructions for these ones:
+```
+li t2, 0x088
+csrrs t1, 0x7F9, t2
+```
+
+- Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two instructions for these ones:
+```
+li t2, 0x080
+csrrs t1, 0x7F9, t2
+```
+
+- Repeat the analysis with all features enabled. Replace the two instructions for these ones:
+```
+li t2, 0x0
+csrrs t1, 0x7F9, t2
+```
+
+- Reorder the code of the ```loop_k``` loop to improve performance, and calculate the CPI for the configuration of the previous item (all VeeR EH1 features enabled). Explain the reason for the improvement achieved by the reordering, focusing on the reduction of the impact of the data/structural/control hazards.
+
+- Compare the results obtained with the performance counters with the results obtained in the previous lab using the RVfpga-Pipeline simulator.
+
+
 
 ## Exercise 2 (mandatory)
 Complete the exercises proposed in the following link (Exercise 4 is optional): [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Most of the exercises are already solved, so your task is to follow the steps, explain what you do, and justify the results you obtain.
+
 
 ## Exercise 3 (optional) - Adding new instructions in the VeeR EH1 core:
 Use primarily the instructions provided in the video mentioned above and also, if you need more information, the document for Lab 18 of RVfpga (we recommend you to use the document provided both for the EH1 core and for the EL2 core, as some instructions are more up-to-date in the latter document). Do the tests both in RVfpga-ViDBo and on the board:
