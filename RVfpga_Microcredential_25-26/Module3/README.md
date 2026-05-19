@@ -463,7 +463,7 @@ Analyze the code in RISC-V assembly. Note that the arrays are initialized elemen
 
 You can use the project located at ```/home/rvfpga/RVfpga_MasterUCLM/Projects/Project_RVfpgaPipeline``` and simply replace the program in file ```src/Programa.S``` with the new one:
 
-a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above).
+*a.* Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above).
 
 * Draw the pipeline execution diagram for this ```loop_k``` iteration (n=0, k=1). To get to that point, you must skip some cycles after the breakpoint (instruction: ```and zero, t4, t5```). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the ```loop_k``` loop is at the Decode stage. See the following screenshot:
 
@@ -474,7 +474,7 @@ a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the S
 * Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
 * Compute the CPI for iteration n=0, k=1 of ```loop_k```. Explain how you used the simulator to obtain it.
 
-b. Repeat the analysis from the previous item, now enabling superscalar execution.
+*b.* Repeat the analysis from the previous item, now enabling superscalar execution.
 
 *Configuration note:* The presentation provided above (available [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)) explains that the VeeR EH1 allows enabling/disabling features such as dual-issue (superscalar execution), branch predictor, pipelining, and the Secondary ALU through the ```mfdc``` register (CSR 0x7F9). Configure the processor as indicated in the presentation (see the *VeeR EH1 SW configuration* table). In this case, make sure to enable dual-issue (do not set the disable bit) while keeping the other options as required in the exercise. 
 
@@ -484,30 +484,27 @@ li t2, 0x088
 csrrs t1, 0x7F9, t2
 ```
 
-c. Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two initial instructions for these ones:
+*c.* Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two initial instructions for these ones:
 ```
 li t2, 0x080
 csrrs t1, 0x7F9, t2
 ```
 
-d. Repeat the analysis with all features enabled. Replace the two initial instructions for these ones:
+*d.* Repeat the analysis with all features enabled. Replace the two initial instructions for these ones:
 ```
 li t2, 0x0
 csrrs t1, 0x7F9, t2
 ```
 
-e. Finally, with the configuration from the previous item, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
+*e.* Finally, with the configuration from the previous item, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
 
 
 ## Exercise 2 (mandatory)
 
 Analyze the following instructions in the VeeR EH1 core, using the RVfpga-Trace simulator as in item 4 above for an ```add``` instruction, and explain their behaviour in detail.
 
-**a**
-Chose ONLY ONE of the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
+*a.* Chose ONLY ONE of the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
 
-**b**
-Chose ONLY ONE of the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```, ```slt```, ```sltu```.
+*b.* Chose ONLY ONE of the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```, ```slt```, ```sltu```.
 
-**c**
-Chose ONLY ONE of the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
+*c.* Chose ONLY ONE of the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
