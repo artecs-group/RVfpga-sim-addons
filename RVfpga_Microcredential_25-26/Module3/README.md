@@ -1,4 +1,4 @@
-# Module 3 - VeeR EH1 microarchitecture
+# Module 3 - The VeeR EH1 core: Microarchitecture Analysis
 
 ## General Contents
 
