@@ -94,6 +94,9 @@ Students will analyze instruction execution using RVfpga visualization and traci
 
    9. To stop the simulator, simply close the simulation window.
 
+<br>
+<br>
+
    #### 3.2 Exercise 4 - Guided Exercise in RVfpga-Pipeline
 
    The following video shows the demo presented in class on how to solve this exercise: [Exercise4Demo](https://youtu.be/hqxG4cUnDfs).
