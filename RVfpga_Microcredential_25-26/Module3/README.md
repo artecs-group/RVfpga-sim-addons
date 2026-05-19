@@ -90,6 +90,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
      - *Way-0*: Instruction `mul t1, t5, t6`.
      - *Way-1*: Instruction `addi t2, t2, -1`.
 
+<br>
 
    9. To stop the simulator, simply close the simulation window.
 
