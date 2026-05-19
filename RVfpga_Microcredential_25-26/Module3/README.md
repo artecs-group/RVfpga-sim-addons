@@ -1,3 +1,5 @@
+# Module 3 - VeeR EH1 microarchitecture
+
 ## General Contents
 
 In this module, students will explore the internal microarchitecture of the VeeR EH1 (and EL2 in less detail) RISC-V processor. The activities focus on understanding pipelined execution, superscalar architectures, performance evaluation, and memory hierarchy concepts.
