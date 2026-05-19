@@ -20,7 +20,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
 
    #### 3.1 Guided Example - Use of RVfpga-Pipeline
 
-   1. Open VSCode and load the project folder located at `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2`. To do this, go to `File → Open Folder`, navigate to `/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects`, select the `ProyectoP2` directory, and click `Open`.
+   1. Open VSCode and load the project folder located at `/home/rvfpga/RVfpga_MasterUCLM/Projects/ProyectoP2`. To do this, go to `File → Open Folder`, navigate to `/home/rvfpga/RVfpga_MasterUCLM/Projects`, select the `ProyectoP2` directory, and click `Open`.
 
    <p align="center">
      <img src="../../Computer_Organization/Lab2/Images/OpenFolder.png" width=80% height=80%>
@@ -35,7 +35,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
    3. Open the `platformio.ini` file and update the path to the RVfpga-Pipeline simulator as follows:
 
    ```ini
-   board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu
+   board_debug.verilator.binary = /home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu
    ```
 
    4. Open the PlatformIO tab in VSCode and click on the task `RVfpga-ViDBo/Pipeline`. The simulator will then start executing the program.
