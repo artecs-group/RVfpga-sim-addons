@@ -151,35 +151,35 @@ Students will analyze instruction execution using RVfpga visualization and traci
       beq zero, zero, REPEAT
    ```
 
-   ##### a. Draw the pipeline diagram for the third iteration of the loop.
+   #### a. Draw the pipeline diagram for the third iteration of the loop.
 
    The following figures show different moments during the execution of the third iteration of the loop.
 
-   **First cycle of the third iteration**
+   First cycle of the third iteration
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/b2a0ea7c-952b-4d82-a486-45ee9c7da63e" width="1000" />
    </p>
 
-   **Sixth cycle of the third iteration**
+   Sixth cycle of the third iteration
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/8c16616c-efac-4397-a3be-e6304e5e2b8c" width="1000" />
    </p>
 
-   **Ninth cycle of the third iteration**
+   Ninth cycle of the third iteration
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/2120c9d9-23df-4893-a6f3-aa00e8d43ad9" width="1000" />
    </p>
 
-   **Pipeline diagram**
+   Pipeline diagram:
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/fb48bdbf-5e2b-4c80-b4e2-cb5c5c9e3398" width="600" />
    </p>
 
-   ##### b. Identify the hazards that occur and explain how this processor handles them.
+   #### b. Identify the hazards that occur and explain how this processor handles them.
 
    The following figure highlights the dependencies appearing in the loop:
 
@@ -192,37 +192,37 @@ Students will analyze instruction execution using RVfpga visualization and traci
    - The dependency between the second `lw` and the `add` instruction requires two stalls.
    - The control hazard in the `bne` instruction is resolved using the Gshare branch predictor.
 
-   ###### Example: forwarding between `slli` and `add`
+   Example: forwarding between `slli` and `add`
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/be8d9641-db0e-4c1f-a1af-71e84ca86b1a" width="500" />
    </p>
 
-   ###### Example: forwarding between `add` and first `lw`
+   Example: forwarding between `add` and first `lw`
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/4f95d2ea-cf39-400b-9bcc-747db3fcb842" width="500" />
    </p>
 
-   ###### Example: structural hazard between the two `lw`
+   Example: structural hazard between the two `lw`
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/a74c2ec0-9609-4fc0-b1f1-274741edb75f" width="700" />
    </p>
 
-   ###### Example: hazard between the `lw` instructions and the `add`
+   Example: hazard between the `lw` instructions and the `add`
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/1220b417-52b2-4bc9-845a-5baf7d1de3f9" width="1000" />
    </p>
 
-   ###### Example: forwarding after the `addi`
+   Example: forwarding after the `addi`
 
    <p align="center">
      <img src="https://github.com/user-attachments/assets/82056af0-94a3-46ac-b1ea-d07dc18dfa2f" width="700" />
    </p>
 
-   ##### c. Calculate the CPI (Cycles Per Instruction) of the loop.
+   #### c. Calculate the CPI (Cycles Per Instruction) of the loop.
 
    To calculate the CPI of the loop, simulate until the first instruction of the loop reaches the Decode stage in two consecutive iterations. Then, subtract the cycle numbers and divide the result by the number of instructions in the loop.
 
