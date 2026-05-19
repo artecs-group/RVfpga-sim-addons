@@ -1,4 +1,4 @@
-# Module 3 - VeeR EH1 microarchitecture
+# Module 3 - The VeeR EH1 core: Benchmarking, Performance Counters and ISA Extensions
 
 ## Previous work to complete between June 15 and 18:
 
