@@ -238,7 +238,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
 
 ### 4. Perform the following guided example, which analyzes an ```add``` instruction executing in the VeeR EH1 core using the RVfpga-Trace simulator:
 
-  Throughout this section we will work with the example shown next, which executes an ```add``` instruction contained within a loop that repeats forever. Folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction``` provides the PlatformIO project so that you can analyse, simulate and change the program as desired. For the sake of simplicity, in this project we disable the use of compressed instructions. Moreover, for convenience, we insert the ```add``` instruction in an infinite loop, which allows us to inspect it with no Instruction Cache (I$) misses if we avoid the first iteration for our analysis. This also makes it easy to find the region of interest in the simulation. Finally, the add instruction is surrounded by several ```nop``` (no-operation) instructions in order to isolate it from preceding/subsequent add instructions that belong to other iterations of the loop. 
+Throughout this section we will work with the example shown next, which executes an ```add``` instruction contained within a loop that repeats forever. Folder ```/home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction``` provides the PlatformIO project so that you can analyse, simulate and change the program as desired. For the sake of simplicity, in this project we disable the use of compressed instructions. Moreover, for convenience, we insert the ```add``` instruction in an infinite loop, which allows us to inspect it with no Instruction Cache (I$) misses if we avoid the first iteration for our analysis. This also makes it easy to find the region of interest in the simulation. Finally, the add instruction is surrounded by several ```nop``` (no-operation) instructions in order to isolate it from preceding/subsequent add instructions that belong to other iterations of the loop. 
   
   ```
   .globl main 
@@ -256,7 +256,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
   .end
   ```
   
-  If you open the project in PlatformIO, build it, and open the disassembly file (available at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/firmware.dis```) you will see that the ```add``` instruction (```0x01de0e33```) is placed at address ```0x00000108``` in this program. 
+  If you open the project in PlatformIO, build it, and open the disassembly file (available at ```/home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction/.pio/build/swervolf_nexys/firmware.dis```) you will see that the ```add``` instruction (```0x01de0e33```) is placed at address ```0x00000108``` in this program. 
   
         0x00000108:        01de0e33         	add	t3,t3,t4
   
@@ -281,20 +281,59 @@ Students will analyze instruction execution using RVfpga visualization and traci
   - Cycle i+5:	**Writeback**: Finally, 4 cycles later, the result of the addition is written-back to the Register File through signal ```wd0 = 0x8```, which contains the data to write. Given that ```wen0 = 1``` (write enable) in this cycle, the result of the addition is written at the end of the cycle into register ```x28``` (shown in decimal, ```waddr0 = 28```). You can observe that, in the following cycle (last cycle shown in the figure), register ```x28``` has been updated with the new value (```dout = 8```). 
   
   
-  **TASK:**
-  Replicate the previous simulation in your own computer. You can follow the same procedure as the one illustrated in the video from step 1. Here are the summarized steps to run an RVfpga-Trace simulation:
-     * Open VSCode.
-     * Click on ```File - Open Folder``` and open the folder containing the project: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction```.
-     * Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator, if necessary: ```board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace/OriginalBinaries/RVfpga-Trace_Ubuntu```.
-     * In the ```PROJECT TASKS``` window of PlatformIO, click on ```Generate Trace```. This first compiles the program and then launches the Verilator simulation of the RVfpga SoC running this program.
-  
-          <img src="https://github.com/user-attachments/assets/14117e88-a045-4b9f-b8da-fb478a6d8f5a" alt="image" width="600">
-  
-     * After a few seconds, the program is compiled and file ```trace.vcd``` is generated inside folder ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys```. For analyzing the trace in the next step it may be useful to visualize the disassembly program that has been generated at: ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/firmware.dis```.
-     * Visualize the trace for the AL_Operations program:
-        * Open the trace with GTKWave by executing the following command in a terminal: ```gtkwave /home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/.pio/build/swervolf_nexys/trace.vcd```.
-        * Add the signals to the trace. For that purpose, click on ```File > Read Tcl Script File``` and select the ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ADD_Instruction/test_1.tcl``` file.
-  
-          <img src="https://github.com/user-attachments/assets/5bd1c434-fc5d-421e-b3e2-171b080150fe" alt="image" width="600">
-  
-        * Once the signals are added in GTKWave, Zoom Fit by clicking on the magnifying glass with a checkmark button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then Zoom In by clicking on the magnifying glass with a plus sign button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942) at any point of the simulation (skip the initial instructions in order to analyze the loop containing the three arithmetic-logic instructions; for example, select a point around 20ns), in order to analyze the execution of the ```add``` instruction.
+**TASK:**  
+Replicate the previous simulation on your own computer. You can follow the same procedure illustrated in the video from step 1. The summarized steps to run an RVfpga-Trace simulation are the following:
+
+1. Open VSCode.
+
+2. Click on `File → Open Folder` and open the folder containing the project:
+
+   ```text
+   /home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction
+   ```
+
+3. Open the `platformio.ini` file and update the path to the RVfpga-Trace simulator, if necessary:
+
+   ```ini
+   board_debug.verilator.binary = /home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace/OriginalBinaries/RVfpga-Trace_Ubuntu
+   ```
+
+4. In the `PROJECT TASKS` window of PlatformIO, click on `Generate Trace`. This first compiles the program and then launches the Verilator simulation of the RVfpga SoC running this application.
+
+   <p align="center">
+     <img src="https://github.com/user-attachments/assets/14117e88-a045-4b9f-b8da-fb478a6d8f5a" width="600">
+   </p>
+
+5. After a few seconds, the program is compiled and the file `trace.vcd` is generated inside the following folder:
+
+   ```text
+   /home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction/.pio/build/swervolf_nexys
+   ```
+
+   For the analysis performed in the next steps, it may also be useful to inspect the generated disassembly program located at:
+
+   ```text
+   /home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction/.pio/build/swervolf_nexys/firmware.dis
+   ```
+
+6. Visualize the trace for the `AL_Operations` program:
+
+   1. Open the trace with GTKWave by executing the following command in a terminal:
+
+      ```bash
+      gtkwave /home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction/.pio/build/swervolf_nexys/trace.vcd
+      ```
+
+   2. Add the signals to the trace. For that purpose, click on `File → Read Tcl Script File` and select the following file:
+
+      ```text
+      /home/rvfpga/RVfpga_MasterUCLM/Projects/ADD_Instruction/test_1.tcl
+      ```
+
+      <p align="center">
+        <img src="https://github.com/user-attachments/assets/5bd1c434-fc5d-421e-b3e2-171b080150fe" width="600">
+      </p>
+
+   3. Once the signals are added in GTKWave, click on the *Zoom Fit* button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then on the *Zoom In* button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942).
+
+      Move to any point of the simulation after the initialization code (for example, around 20 ns) in order to analyze the loop containing the arithmetic-logic instructions and study the execution of the `add` instruction.
