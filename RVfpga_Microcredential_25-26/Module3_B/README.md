@@ -182,7 +182,7 @@ csrrs t1, 0x7F9, t2
 
 
 ## Exercise 2 (mandatory)
-Complete the exercises proposed in the following link: [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Most of the exercises are already solved, so your task is to follow the steps, explain what you do, and justify the results you obtain.
+Complete the exercises proposed in the following link: [Benchmarking and Memory System](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Integrated_Systems_Architecture/Lab6). Most of the exercises are already solved, so your task is to follow the steps, ananlyze and explain them, and justify the results you obtain.
 
 
 ## Exercise 3 (optional) - Adding new instructions in the VeeR EH1 core:
