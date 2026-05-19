@@ -11,8 +11,9 @@ Look at Chapter 8 (Memory Systems) of the H&H book.
 [PerformanceBenchmarkingVideo](https://youtu.be/GqaDEW3W4X0?si=yf1rObPveS-RB-We&t=10) (the video is in Spanish, but you can watch an AI-translated-to-English version of the video here: [PerformanceBenchmarkingEnglishVideo](https://youtu.be/DXB7jl1iGq8?si=GODI7vlY9WCXIMny&t=10)).
 
   - From time 0:0 to time 6:25, the video shows a description of the VeeR Performance Counters and an example using RVfpga-ViDBo.
-  - ...
-  - ...
+  - Then, from time 6:29 to time 24:18, the video describes how to extend the VeeR EH1 processor with new instructions and how we can improve its peformance using them.
+  - Finally, from time 24:18 to the end, the video describes how to run the CoreMark benchmark on the RVfpga SoC.
+
 
 ### 3. Hw Counters example:
 
