@@ -282,7 +282,7 @@ Throughout this section we will work with the example shown next, which executes
   
   
 **TASK:**  
-Replicate the previous simulation on your own computer. You can follow the same procedure illustrated in the video from step 1. The summarized steps to run an RVfpga-Trace simulation are the following:
+Replicate the previous simulation on your own computer. The summarized steps to run an RVfpga-Trace simulation are the following:
 
 1. Open VSCode.
 
