@@ -24,7 +24,7 @@ Test on the board the exercise shown in the video. Do the following steps:
       * RVfpga-ViDBo (simulator): Set the path for the simulator in the ```platformio.ini``` file as follows: ```board_debug.verilator.binary = /home/rvfpga/RVfpga_MasterUCLM/Projects/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
    * Analyze the results displayed in the serial console. Are they what you’d expect from the analyzed code?
 
-
+---
 
 ## To complete in the 4th Session (Friday, June 12):
 
