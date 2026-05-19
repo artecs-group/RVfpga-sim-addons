@@ -339,3 +339,175 @@ Replicate the previous simulation on your own computer. The summarized steps to 
    3. Once the signals are added in GTKWave, click on the *Zoom Fit* button ![image](https://github.com/user-attachments/assets/5fa775a4-2ed5-4935-904d-9e144599916a) and then on the *Zoom In* button ![image](https://github.com/user-attachments/assets/fd9fa98b-4226-413f-a8ed-9614414fa942).
 
       Move to any point of the simulation after the initialization code (for example, around 20 ns) in order to analyze the loop containing the arithmetic-logic instructions and study the execution of the `add` instruction.
+
+---
+
+## To complete in the 4th Session (Friday, June 12):
+
+## Exercise 1 (mandatory)
+
+In the VeeR EH1 processor, the following code is to be executed:
+
+```
+for ( n = 0; n < 8; n ++ ) {
+    for ( k = 0; k < 3; k ++ ) {
+    Salida[n] += Filtro[k] * Entrada[n + k];
+    }
+}
+```
+
+To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
+
+```
+.globl main
+
+.section .midccm
+Entrada: .space 40
+Filtro: .space 12
+Salida: .space 32
+
+.text
+main:
+
+li t2, 0x488 # Disable Superscalar Exec, Sec. ALUs and Branch Pred.
+csrrs t1, 0x7F9, t2
+
+la t0, Entrada
+li t1, 0x1   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x5   				 
+sw t1, 8(t0)   			 
+li t1, 0x7   				 
+sw t1, 12(t0)   			 
+li t1, 0x9   				 
+sw t1, 16(t0)   			 
+li t1, 0x1   				 
+sw t1, 20(t0)   			 
+li t1, 0x3   				 
+sw t1, 24(t0)   			 
+li t1, 0x5   				 
+sw t1, 28(t0)   			 
+li t1, 0x7   				 
+sw t1, 32(t0)   			 
+li t1, 0x9   				 
+sw t1, 36(t0)   			 
+
+la t0, Filtro
+li t1, 0x2   				 
+sw t1, (t0)   			 
+li t1, 0x3   				 
+sw t1, 4(t0)   			 
+li t1, 0x4   				 
+sw t1, 8(t0)   			 
+
+la t0, Salida
+li t1, 0   				 
+sw t1, (t0)   			 
+li t1, 0   				 
+sw t1, 4(t0)   			 
+li t1, 0   				 
+sw t1, 8(t0)   			 
+li t1, 0   				 
+sw t1, 12(t0)   			 
+li t1, 0   				 
+sw t1, 16(t0)   			 
+li t1, 0   				 
+sw t1, 20(t0)   			 
+li t1, 0   				 
+sw t1, 24(t0)   			 
+li t1, 0   				 
+sw t1, 28(t0)   			 
+
+la   a3 , Entrada
+la   a4 , Filtro
+la   a5 , Salida
+
+li   a2, 0
+li   t1, 3
+li   a1, 0
+li   t0, 8
+
+nop
+nop
+nop
+nop
+
+and zero, t4, t5
+
+loop_n :
+addi a2 , x0 , 0
+	loop_k :
+    	lw t3 , 0( a3)
+    	lw t4 , 0( a4)
+    	mul t6 , t3 , t4
+    	lw t5 , 0( a5)
+    	add t5 , t6 , t5
+    	sw t5 , 0( a5)
+    	addi a3 , a3 , 4
+    	addi a4 , a4 , 4
+    	addi a2 , a2 , 1
+    	blt a2 , t1 , loop_k
+addi a5 , a5 , 4
+addi a3 , a3 , -8
+addi a4 , a4 , -12
+addi a1 , a1 , 1
+blt a1 , t0 , loop_n
+
+fin:
+j fin
+```
+
+Analyze the code in RISC-V assembly. Note that the arrays are initialized element by element before entering the loops, which requires a number of additional instructions.
+
+You can use the project located at ```/home/rvfpga/RVfpga_MasterUCLM/Projects/Project_RVfpgaPipeline``` and simply replace the program in file ```src/Programa.S``` with the new one:
+
+a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above).
+
+* Draw the pipeline execution diagram for this ```loop_k``` iteration (n=0, k=1). To get to that point, you must skip some cycles after the breakpoint (instruction: ```and zero, t4, t5```). Specifically, you must advance until the point when Cycles=21. At this point, the first instruction of the ```loop_k``` loop is at the Decode stage. See the following screenshot:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/41418f03-3a9d-48e5-be79-bc892d48af88" alt="image" width="1000" />
+</p>
+
+* Briefly explain how data, control, and structural hazards are handled by the VeeR EH1 core. You may include screenshots from the RVfpga-Pipeline simulator while executing the program.
+* Compute the CPI for iteration n=0, k=1 of ```loop_k```. Explain how you used the simulator to obtain it.
+
+b. Repeat the analysis from the previous item, now enabling superscalar execution.
+
+*Configuration note:* The presentation provided above (available [here](https://drive.google.com/file/d/1rSlwCzcHD4F_S4YFLCFn3L0VNXH_sv7L/view?usp=drive_link)) explains that the VeeR EH1 allows enabling/disabling features such as dual-issue (superscalar execution), branch predictor, pipelining, and the Secondary ALU through the ```mfdc``` register (CSR 0x7F9). Configure the processor as indicated in the presentation (see the *VeeR EH1 SW configuration* table). In this case, make sure to enable dual-issue (do not set the disable bit) while keeping the other options as required in the exercise. 
+
+Replace the two initial instructions for these ones:
+```
+li t2, 0x088
+csrrs t1, 0x7F9, t2
+```
+
+c. Repeat the analysis from the previous item, now enabling the Gshare predictor. Replace the two initial instructions for these ones:
+```
+li t2, 0x080
+csrrs t1, 0x7F9, t2
+```
+
+d. Repeat the analysis with all features enabled. Replace the two initial instructions for these ones:
+```
+li t2, 0x0
+csrrs t1, 0x7F9, t2
+```
+
+e. Finally, with the configuration from the previous item, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
+
+
+## Exercise 2 (mandatory)
+
+Analyze the following instructions in the VeeR EH1 core, using the RVfpga-Trace simulator as in item 4 above for an ```add``` instruction, and explain their behaviour in detail.
+
+**a**
+Chose ONLY ONE of the following logical instructions supported by the VeeR core: ```and```, ```or```, ```xor```.
+
+**b**
+Chose ONLY ONE of the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```, ```slt```, ```sltu```.
+
+**c**
+Chose ONLY ONE of the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
