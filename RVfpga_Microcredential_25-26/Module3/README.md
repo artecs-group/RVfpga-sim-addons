@@ -24,11 +24,7 @@ Students will analyze instruction execution using RVfpga visualization and traci
 
    #### 3.1 Guided Example - Use of RVfpga-Pipeline
 
-   1. Open VSCode and load the project folder located at `/home/rvfpga/RVfpga_MasterUCLM/Projects/ProyectoP2`. To do this, go to `File → Open Folder`, navigate to `/home/rvfpga/RVfpga_MasterUCLM/Projects`, select the `Project_RVfpgaPipeline` directory, and click `Open`.
-
-   <p align="center">
-     <img src="../../Computer_Organization/Lab2/Images/OpenFolder.png" width=80% height=80%>
-   </p>
+   1. Open VSCode and load the project located at `/home/rvfpga/RVfpga_MasterUCLM/Projects/Project_RVfpgaPipeline`. To do this, go to `File → Open Folder`, navigate to `/home/rvfpga/RVfpga_MasterUCLM/Projects`, select the `Project_RVfpgaPipeline` directory, and click `Open`.
 
    2. In VSCode, open the editor to view the assembly source code of the project. The file is named `Programa.S` and is located inside the `src` directory of the project.
 
