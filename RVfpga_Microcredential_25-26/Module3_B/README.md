@@ -19,7 +19,7 @@ Look at Chapter 8 (Memory Systems) of the H&H book.
 
 Test on the board the exercise shown in the video from time 0:0 to time 6:25. Do the following steps:
    * Download the following project [HwCounters](https://drive.google.com/file/d/1OEnGku9_uccNFXdFMkXveIQuQzTUIfsJ/view?usp=sharing), unzip it and and move it into folder ```/home/rvfpga/RVfpga_MasterUCLM/Projects```. Open the project in VSCode. Note that this is the same program demonstrated in the video above, where the RVfpga-ViDBo simulator was used.
-   * Run the program in RVfpga-ViDBo or on the board (if you have it).
+   * Run the program in RVfpga-ViDBo and on the Nexys A7 board (if you have it).
       * RVfpga-Nexys (FPGA board): Set the path for the bitstream in the ```platformio.ini``` file as follows: ```board_build.bitstream_file = /home/rvfpga/RVfpga_MasterUCLM/Projects/src/rvfpganexys.bit```
       * RVfpga-ViDBo (simulator): Set the path for the simulator in the ```platformio.ini``` file as follows: ```board_debug.verilator.binary = /home/rvfpga/RVfpga_MasterUCLM/Projects/verilatorSIM_ViDBo/OriginalBinaries/RVfpga-ViDBo_Ubuntu22```
    * Analyze the results displayed in the serial console. Are they what you’d expect from the analyzed code?
