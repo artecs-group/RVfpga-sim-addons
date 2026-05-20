@@ -27,11 +27,11 @@ Test on the board the exercise shown in the video from time 0:0 to time 6:25. Do
 
    * Analyze the results displayed in the serial console. Are they what you’d expect from the analyzed code? Take into account the following instructions for using the serial console:
 
-**NOTE**
-To view the serial console on the board, right after the program starts to run and stops at the ```main``` function, open the serial monitor, by clicking on the plug button available on the bottom of VS Code:
-
-![image](https://github.com/user-attachments/assets/0afb7bda-409d-434a-aab6-41915c44f37a)
-
+		**NOTE**
+		To view the serial console on the board, right after the program starts to run and stops at the ```main``` function, open the serial monitor, by clicking on the plug button available on the bottom of VS Code:
+		
+		![image](https://github.com/user-attachments/assets/0afb7bda-409d-434a-aab6-41915c44f37a)
+	
 
 ---
 
