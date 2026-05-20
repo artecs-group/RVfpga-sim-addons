@@ -504,3 +504,5 @@ Analyze the following instructions in the VeeR EH1 core, using the RVfpga-Trace 
 *b.* Chose ONLY ONE of the following shift instructions supported by the VeeR core: ```srl```, ```sra```, ```sll```, ```slt```, ```sltu```.
 
 *c.* Chose ONLY ONE of the following immediate instructions supported by the VeeR core: ```addi```, ```andi```, ```ori```, ```xori```, ```srli```, ```srai```, ```slli```, ```slti```, ```sltui```.
+
+Finally, analyze and explain how each of the operations performed by the previous arithmetic-logic instructions are performed within the ALU, which is implemented in Verilog module ```exu_alu_ctl```.
