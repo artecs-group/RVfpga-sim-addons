@@ -55,7 +55,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **June 1-11 - Tasks to complete:**
-- Watch the RVfpga I/O video.
+- Watch the video that describes the VeeR EH1 microarchitecture in detail.
 - Perform the guided exercises with RVfpga-Pipeline and RVfpga-Trace. These exercises are just provided for learning purposes, they must not be included in the report.
 - More details about these tasks can be found in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
 
