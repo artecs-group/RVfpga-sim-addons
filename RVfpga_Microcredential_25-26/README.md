@@ -25,7 +25,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 
 **May 14 - 1st Session:**
 - [Video: Introduction to Module 1](https://www.youtube.com/watch?v=-YGfecV1NsQ)
-- You must complete complete the exercises proposed in project *ImageProcessingProject*. Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1).
+- You must complete complete the exercises proposed in project *ImageProcessingProject*. Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
@@ -40,7 +40,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - More details about these tasks can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 
 **May 22 - 2nd Session:**
-- You must complete the 5 exercises (the final one is optional) proposed in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2).
+- You must complete the 5 exercises (the final one is optional) proposed in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
@@ -55,38 +55,28 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **June 1-11 - Tasks to complete:**
-<!--
-- ...
+- Watch the RVfpga I/O video.
+- Perform the guided exercises with RVfpga-Pipeline and RVfpga-Trace. These exercises are just provided for learning purposes, they must not be included in the report.
 - More details about these tasks can be found in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
--->
 
 **June 12 - 4th Session:**
-<!--
-- Look at the instructions described in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
--->
+- You must complete the 2 exercises proposed in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **June 15-18 - Tasks to complete:**
-<!--
-- ...
+- Review Memory Hierarchy concepts.
+- Watch the *PerformanceBenchmarkingVideo* video.
+- Perform the Hw Counters example.
 - More details about these tasks can be found in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
--->
 
 **June 19 - 5th Session:**
-<!--
-- Look at the instructions described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
--->
+- Complete the exercises described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **June 22-25 - Tasks to complete:**
-<!--
-- ...
 - More details about these tasks can be found in [Module 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
--->
 
 **June 26 - 6th Session:**
-<!--
 - Look at the instructions described in [Module 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
--->
