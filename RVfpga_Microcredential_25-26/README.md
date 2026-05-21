@@ -47,10 +47,10 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 **May 25-28 - Tasks to complete:**
 - Understand in detail the 8-Digit 7-Segment-Displays Verilog controller.
 - Install Vivado in your computer.
-- More details about these tasks can be found in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
+- More details about these tasks can be found in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2_B)
 
 **May 29 - 3rd Session:**
-- You must complete the 2 exercises proposed in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
+- You must complete the 2 exercises proposed in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2_B)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
@@ -68,10 +68,10 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - Review Memory Hierarchy concepts.
 - Watch the *PerformanceBenchmarkingVideo* video.
 - Perform the Hw Counters example.
-- More details about these tasks can be found in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
+- More details about these tasks can be found in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3_B)
 
 **June 19 - 5th Session:**
-- Complete the exercises described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3-B)
+- Complete the exercises described in [Module 3-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3_B)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
