@@ -16,9 +16,7 @@
         * In a terminal, go into ```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace``` and regenerate the simulator binary by typing ```make```. Remember to decrease the scanning frequency of the displays controller.
         * Using the new binary (```/home/rvfpga/RVfpga_MasterUCLM/verilatorSIM_Trace/Vrvfpgasim```), run the project provided above in this item to debug your implementation.
 
-2. In case you need it, you can find more theoretical details about the RVfpga I/O System in Labs 6 to 10 of the full package.
-
-3. Install Vivado in your computer. To install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
+2. Install Vivado in your computer. To install Vivado in Windows, follow these instructions (in the GSG of the RVfpga course you can find more detailed instructions):
   * Go into the [Vivado Download Website](https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools/archive.html). You will be asked to log in to your Xilinx account before you can download the installer; if you don’t already have an account, you will need to create one.
   * Select the Vivado version that you wish to download (we recommend version 2022.2, but version 2019.2 is also verified for RVfpga and more modern versions should also work). For example, in Windows, click on *Xilinx Unified Installer 2022.2: Windows Self Extracting Web Installer*.
   * The Vivado installer will walk you through the installation process. Important notes:
