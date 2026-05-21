@@ -25,7 +25,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 
 **May 14 - 1st Session:**
 - [Video: Introduction to Module 1](https://www.youtube.com/watch?v=-YGfecV1NsQ)
-- Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1)
+- You must complete complete the exercises proposed in project *ImageProcessingProject*. Look at the instructions described in [Module 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module1).
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
@@ -40,22 +40,17 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - More details about these tasks can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 
 **May 22 - 2nd Session:**
-<!--
-- Look at the instructions described in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
--->
+- You must complete the 5 exercises (the final one is optional) proposed in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2).
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **May 25-28 - Tasks to complete:**
-<!--
-- ...
+- Understand in detail the 8-Digit 7-Segment-Displays Verilog controller.
+- Install Vivado in your computer.
 - More details about these tasks can be found in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
--->
 
 **May 29 - 3rd Session:**
-<!--
-- Look at the instructions described in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
--->
+- You must complete the 2 exercises proposed in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2-B)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
