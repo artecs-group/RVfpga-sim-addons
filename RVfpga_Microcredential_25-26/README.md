@@ -40,7 +40,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - More details about these tasks can be found in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2)
 
 **May 22 - 2nd Session:**
-- You must complete the 5 exercises (the final one is optional) proposed in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2#to-complete-in-the-2nd-session-friday-may-22)
+- You must complete the 5 exercises (exercises 3 and 5 are optional) proposed in [Module 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2#to-complete-in-the-2nd-session-friday-may-22)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
