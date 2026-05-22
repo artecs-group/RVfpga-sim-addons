@@ -46,7 +46,7 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **May 25-28 - Tasks to complete:**
-- [Video: Work to complete before 3rd Session](...)
+- [Video: Work to complete before 3rd Session](https://www.youtube.com/watch?v=bEHj28e58vI)
 - Understand in detail the 8-Digit 7-Segment-Displays Verilog controller.
 - Install Vivado in your computer.
 - More details about these tasks can be found in [Module 2-B](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module2_B)
