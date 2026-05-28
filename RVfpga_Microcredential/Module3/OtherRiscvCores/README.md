@@ -76,7 +76,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       | microSD card | Capacity | Status |
       |---|---:|---|
       | SanDisk Ultra microSDHC / microSDXC | 32 GB | Tested successfully |
-      | Kingston microSD | 32 GB | Pending validation |
+      | Kingston microSD | 32 GB | Tested successfully |
 
       > [!IMPORTANT]
       > The microSD card will be erased during the preparation process. Do not use a card containing important data.
