@@ -58,7 +58,6 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * In the figure, you can see the instructions within the first and second iteration of the loop and the value obtained in the ALU for the addition.
 
 
-````markdown
 3. Follow these steps to execute CVW-Wally on the Nexys A7 board:
 
     * Clone the repository:
@@ -225,4 +224,3 @@ Additional reference:
 Mario Miralles provides a detailed guide about the implementation of the seven-segment display peripheral for CVW-Wally, including APB integration, Linux support, devicetree modifications, and driver development:
 
 https://github.com/mmiral04/cvw_apb_peripheral
-````
