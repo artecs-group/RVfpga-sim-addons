@@ -234,6 +234,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       > [!NOTE]
       > The Nexys A7 switches are not connected to the GPIO input in this bitstream. The available GPIO inputs are the four push buttons listed above.
 
+
     * Test the seven-segment display peripheral.
 
       Write segment pattern:
@@ -245,6 +246,128 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       Expected result:
 
         * The display should show the character `A`.
+
+    * Example: using buttons, LEDs, and the seven-segment display together.
+
+      In this example, the push buttons are used as GPIO inputs. Depending on the button being pressed, the program turns on one LED and shows one hexadecimal digit on the seven-segment display.
+
+      Create the following script inside the Wally Linux shell:
+
+      ```bash
+      cat > button_demo.sh <<'EOF'
+      #!/bin/sh
+
+      # Enable GPIO inputs BTNC-BTNR
+      devmem 0x10060004 32 0x0F
+
+      # Enable GPIO outputs LD0-LD4
+      devmem 0x10060008 32 0x1F
+
+      while true
+      do
+          value=$(devmem 0x10060000 32)
+
+          case "$value" in
+              0x00000001|0x1)
+                  # BTNC pressed: LED0 on, display shows 1
+                  devmem 0x1006000C 32 0x01
+                  devmem 0x00100000 32 0x06
+                  ;;
+              0x00000002|0x2)
+                  # BTNU pressed: LED1 on, display shows 2
+                  devmem 0x1006000C 32 0x02
+                  devmem 0x00100000 32 0x5B
+                  ;;
+              0x00000004|0x4)
+                  # BTNL pressed: LED2 on, display shows 3
+                  devmem 0x1006000C 32 0x04
+                  devmem 0x00100000 32 0x4F
+                  ;;
+              0x00000008|0x8)
+                  # BTNR pressed: LED3 on, display shows 4
+                  devmem 0x1006000C 32 0x08
+                  devmem 0x00100000 32 0x66
+                  ;;
+              *)
+                  # No button pressed, or more than one button pressed
+                  devmem 0x1006000C 32 0x00
+                  devmem 0x00100000 32 0x00
+                  ;;
+          esac
+
+          sleep 1
+      done
+      EOF
+      ```
+
+      Make the script executable:
+
+      ```bash
+      chmod +x button_demo.sh
+      ```
+
+      Run it:
+
+      ```bash
+      ./button_demo.sh
+      ```
+
+      Expected behavior:
+
+      | Action | LEDs | Seven-segment display |
+      |---|---|---|
+      | No button pressed | off | off |
+      | Press BTNC | LD0 on | `1` |
+      | Press BTNU | LD1 on | `2` |
+      | Press BTNL | LD2 on | `3` |
+      | Press BTNR | LD3 on | `4` |
+
+      Stop the program with:
+
+      ```text
+      Ctrl+C
+      ```
+
+    * Exercise (mandatory)
+
+      Modify the previous script so that it implements the following behavior:
+
+      | Button | Required LED output | Required display output |
+      |---|---|---|
+      | BTNC | LD0 and LD4 on | `A` |
+      | BTNU | LD1 and LD3 on | `b` |
+      | BTNL | LD2 on | `C` |
+      | BTNR | all LEDs on | `F` |
+
+      Useful seven-segment codes:
+
+      | Character | Code |
+      |---|---:|
+      | `A` | `0x77` |
+      | `b` | `0x7C` |
+      | `C` | `0x39` |
+      | `F` | `0x71` |
+
+      Useful LED values:
+
+      | LEDs | Value |
+      |---|---:|
+      | LD0 | `0x01` |
+      | LD1 | `0x02` |
+      | LD2 | `0x04` |
+      | LD3 | `0x08` |
+      | LD4 | `0x10` |
+      | LD0 + LD4 | `0x11` |
+      | LD1 + LD3 | `0x0A` |
+      | LD0 + LD1 + LD2 + LD3 + LD4 | `0x1F` |
+
+      Submit:
+
+        * the modified script
+        * a short explanation of:
+          * which GPIO register is used to read the buttons
+          * which GPIO register is used to control the LEDs
+          * which address is used to control the seven-segment display
 
     * Exit the UART terminal.
 
@@ -262,3 +385,4 @@ Additional reference:
 Mario Miralles provides a detailed guide about the implementation of the seven-segment display peripheral for CVW-Wally, including APB integration, Linux support, devicetree modifications, and driver development:
 
 https://github.com/mmiral04/cvw_apb_peripheral
+
