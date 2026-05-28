@@ -176,7 +176,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Test the GPIO peripheral.
 
-      The LEDs LD0-LD4 are connected to the GPIO peripheral.
+      The LEDs LD0-LD4 are connected to the GPIO output bits 0 to 4.
 
       Configure GPIO outputs:
 
@@ -195,6 +195,44 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       ```bash
       devmem 0x1006000C 32 0x00
       ```
+
+    * Test the GPIO input buttons.
+
+      The on-board buttons are connected to the GPIO input pins:
+
+      | Button | GPIO input bit |
+      |---|---:|
+      | BTNC | 0 |
+      | BTNU | 1 |
+      | BTNL | 2 |
+      | BTNR | 3 |
+
+      First, enable GPIO inputs for bits 0 to 3:
+
+      ```bash
+      devmem 0x10060004 32 0x0F
+      ```
+
+      Then read the GPIO input register:
+
+      ```bash
+      devmem 0x10060000 32
+      ```
+
+      Press one of the buttons and repeat the read command. The value should change according to the button being pressed.
+
+      Expected values:
+
+      | Pressed button | Expected value |
+      |---|---:|
+      | none | `0x00000000` |
+      | BTNC | `0x00000001` |
+      | BTNU | `0x00000002` |
+      | BTNL | `0x00000004` |
+      | BTNR | `0x00000008` |
+
+      > [!NOTE]
+      > The Nexys A7 switches are not connected to the GPIO input in this bitstream. The available GPIO inputs are the four push buttons listed above.
 
     * Test the seven-segment display peripheral.
 
