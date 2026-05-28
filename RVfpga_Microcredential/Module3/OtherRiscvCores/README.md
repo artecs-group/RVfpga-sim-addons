@@ -328,7 +328,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       Ctrl+C
       ```
 
-    * Exercise (mandatory)
+    * Exercise
 
       Modify the previous script so that it implements the following behavior:
 
