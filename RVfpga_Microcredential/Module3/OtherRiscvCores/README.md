@@ -174,7 +174,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       #
       ```
 
-    * Test the GPIO peripheral.
+    * Test the GPIO output buttons.
 
       The LEDs LD0-LD4 are connected to the GPIO output bits 0 to 4.
 
