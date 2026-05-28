@@ -78,11 +78,19 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       | SanDisk Ultra microSDHC / microSDXC | 32 GB | Tested successfully |
       | Kingston microSD | 32 GB | Pending validation |
 
-      > [!NOTE]
-      > At the moment, the SanDisk Ultra 32 GB card has been tested successfully. Other Class 10 / UHS-I cards of 32 GB or larger may also work, but they have not been tested in this activity.
-
       > [!IMPORTANT]
       > The microSD card will be erased during the preparation process. Do not use a card containing important data.
+
+    * Download the required prebuilt files from the following GitHub release:
+
+      [CVW-Wally Nexys A7 Files](https://github.com/artecs-group/RVfpga-sim-addons/releases/tag/v1.0-wally-nexysa7)
+
+      Download the following files:
+
+        * `WallyNexysA7_SD.img.xz`
+        * `fpgaTop.bit`
+
+      Move both files to the `Downloads` folder of the VM.
 
     * Clone the repository:
 
@@ -102,21 +110,9 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       source setup.sh
       ```
 
-    * Download the prebuilt FPGA bitstream from the following link:
+    * Flash the microSD card.
 
-      [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
-
-      Move the downloaded bitstream to the `Downloads` folder of the VM and make sure it is named:
-
-      ```text
-      fpgaTop.bit
-      ```
-
-    * Download the prebuilt microSD image from the following link:
-
-      [WallySDImageNexysA7](ADD_LINK_HERE)
-
-    * Insert the microSD card into the computer and identify its device name:
+      Insert the microSD card into the computer and identify its device name:
 
       ```bash
       lsblk
@@ -127,7 +123,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       > [!WARNING]
       > Be very careful when selecting the device. The next command will completely erase the selected device. Make sure that you select the microSD card, not your main hard drive.
 
-    * If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
+      If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
 
       ```bash
       sudo umount /dev/sdX1 2>/dev/null
@@ -138,7 +134,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
       Replace `sdX` with the actual device name of your microSD card.
 
-    * Flash the SD card image:
+      Flash the SD card image:
 
       ```bash
       xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
@@ -245,3 +241,9 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       Ctrl+A
       K
       ```
+
+    * Optional: read the implementation details.
+
+      The implementation of the seven-segment display as an APB peripheral for CVW-Wally is documented in Mario Miralles' repository:
+
+      [Nexys A7: Seven Segment Display peripheral](https://github.com/mmiral04/cvw_apb_peripheral)
