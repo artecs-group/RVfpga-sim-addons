@@ -58,6 +58,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * In the figure, you can see the instructions within the first and second iteration of the loop and the value obtained in the ALU for the addition.
 
 
+````markdown
 3. Follow these steps to execute CVW-Wally on the Nexys A7 board:
 
     * Prepare or buy a compatible microSD card.
@@ -79,7 +80,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       | Kingston microSD | 32 GB | Pending validation |
 
       > [!NOTE]
-      > At the moment, the SanDisk Ultra 32 GB card has been tested successfully. The Kingston 32 GB card is pending validation. Other Class 10 / UHS-I cards of 32 GB or larger may also work, but they have not been tested in this activity.
+      > At the moment, the SanDisk Ultra 32 GB card has been tested successfully. Other Class 10 / UHS-I cards of 32 GB or larger may also work, but they have not been tested in this activity.
 
       > [!IMPORTANT]
       > The microSD card will be erased during the preparation process. Do not use a card containing important data.
@@ -102,7 +103,9 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       source setup.sh
       ```
 
-    * Download the prebuilt FPGA bitstream from the following link: [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
+    * Download the prebuilt FPGA bitstream from the following link:
+
+      [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
 
       Move the downloaded bitstream to the `Downloads` folder of the VM and make sure it is named:
 
@@ -110,15 +113,11 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       fpgaTop.bit
       ```
 
-    * Prepare the microSD card.
-
-      The recommended option for this activity is to use a prebuilt SD card image provided by the instructor.
-
-      Download the SD card image from the following link:
+    * Download the prebuilt microSD image from the following link:
 
       [WallySDImageNexysA7](ADD_LINK_HERE)
 
-      Insert the microSD card into the computer and identify its device name:
+    * Insert the microSD card into the computer and identify its device name:
 
       ```bash
       lsblk
@@ -129,7 +128,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       > [!WARNING]
       > Be very careful when selecting the device. The next command will completely erase the selected device. Make sure that you select the microSD card, not your main hard drive.
 
-      If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
+    * If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
 
       ```bash
       sudo umount /dev/sdX1 2>/dev/null
@@ -140,7 +139,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
       Replace `sdX` with the actual device name of your microSD card.
 
-      Flash the SD card image:
+    * Flash the SD card image:
 
       ```bash
       xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
@@ -153,38 +152,6 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       > Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
 
       When the command finishes, safely remove the microSD card and insert it into the Nexys A7 board.
-
-      If the provided SD image is not compressed as `.xz`, use the following command instead:
-
-      ```bash
-      sudo dd if=~/Downloads/WallyNexysA7_SD.img of=/dev/sdX bs=4M status=progress conv=fsync
-      sync
-      ```
-
-    * Optional: prepare the microSD card manually from the Wally Buildroot files.
-
-      This option is only needed if you do not use the prebuilt SD card image.
-
-      Wally provides a script to create a bootable SD card from the Buildroot output and the device tree binary. For the Nexys A7 board, the device tree binary must correspond to the Nexys A7 configuration.
-
-      First, check that the required Buildroot output and device tree binary exist:
-
-      ```bash
-      ls $RISCV/buildroot/output/images/
-      ls $RISCV/buildroot/output/images/wally-nexysa7.dtb
-      ```
-
-      Then flash the microSD card:
-
-      ```bash
-      cd $WALLY/linux/sdcard
-      sudo ./flash-sd.sh -b $RISCV/buildroot -d $RISCV/buildroot/output/images/wally-nexysa7.dtb /dev/sdX
-      ```
-
-      Replace `/dev/sdX` with the actual microSD device.
-
-      > [!WARNING]
-      > This command erases the selected device completely. Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
 
     * Connect the hardware:
 
@@ -279,3 +246,4 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       Ctrl+A
       K
       ```
+````
