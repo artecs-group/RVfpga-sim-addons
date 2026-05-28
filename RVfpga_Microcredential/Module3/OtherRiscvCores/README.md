@@ -60,6 +60,30 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
 3. Follow these steps to execute CVW-Wally on the Nexys A7 board:
 
+    * Prepare or buy a compatible microSD card.
+
+      Wally boots Linux from a microSD card. Therefore, each student needs a microSD card that will be flashed with the Linux image used in this activity.
+
+      Recommended characteristics:
+
+        * Capacity: 32 GB or larger.
+        * Type: microSDHC or microSDXC.
+        * Speed class: Class 10 / UHS-I recommended.
+        * Adapter: an SD adapter or USB microSD reader is needed to write the image from the computer.
+
+      Tested cards:
+
+      | microSD card | Capacity | Status |
+      |---|---:|---|
+      | SanDisk Ultra microSDHC / microSDXC | 32 GB | Tested successfully |
+      | Kingston microSD | 32 GB | Pending validation |
+
+      > [!NOTE]
+      > At the moment, the SanDisk Ultra 32 GB card has been tested successfully. The Kingston 32 GB card is pending validation. Other Class 10 / UHS-I cards of 32 GB or larger may also work, but they have not been tested in this activity.
+
+      > [!IMPORTANT]
+      > The microSD card will be erased during the preparation process. Do not use a card containing important data.
+
     * Clone the repository:
 
       ```bash
@@ -80,23 +104,108 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Download the prebuilt FPGA bitstream from the following link: [WallyBitstreamNexysA7](https://drive.google.com/file/d/1ffxz49z0T0R1YgDlZwsEVhFK-yr3Ll2f/view?usp=drive_link)
 
+      Move the downloaded bitstream to the `Downloads` folder of the VM and make sure it is named:
+
+      ```text
+      fpgaTop.bit
+      ```
+
+    * Prepare the microSD card.
+
+      The recommended option for this activity is to use a prebuilt SD card image provided by the instructor.
+
+      Download the SD card image from the following link:
+
+      [WallySDImageNexysA7](ADD_LINK_HERE)
+
+      Insert the microSD card into the computer and identify its device name:
+
+      ```bash
+      lsblk
+      ```
+
+      Look for the device corresponding to the microSD card. It will typically appear as something like `/dev/sda`, `/dev/sdb`, or `/dev/mmcblk0`.
+
+      > [!WARNING]
+      > Be very careful when selecting the device. The next command will completely erase the selected device. Make sure that you select the microSD card, not your main hard drive.
+
+      If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
+
+      ```bash
+      sudo umount /dev/sdX1 2>/dev/null
+      sudo umount /dev/sdX2 2>/dev/null
+      sudo umount /dev/sdX3 2>/dev/null
+      sudo umount /dev/sdX4 2>/dev/null
+      ```
+
+      Replace `sdX` with the actual device name of your microSD card.
+
+      Flash the SD card image:
+
+      ```bash
+      xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
+      sync
+      ```
+
+      Replace `/dev/sdX` with the actual microSD device.
+
+      > [!IMPORTANT]
+      > Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
+
+      When the command finishes, safely remove the microSD card and insert it into the Nexys A7 board.
+
+      If the provided SD image is not compressed as `.xz`, use the following command instead:
+
+      ```bash
+      sudo dd if=~/Downloads/WallyNexysA7_SD.img of=/dev/sdX bs=4M status=progress conv=fsync
+      sync
+      ```
+
+    * Optional: prepare the microSD card manually from the Wally Buildroot files.
+
+      This option is only needed if you do not use the prebuilt SD card image.
+
+      Wally provides a script to create a bootable SD card from the Buildroot output and the device tree binary. For the Nexys A7 board, the device tree binary must correspond to the Nexys A7 configuration.
+
+      First, check that the required Buildroot output and device tree binary exist:
+
+      ```bash
+      ls $RISCV/buildroot/output/images/
+      ls $RISCV/buildroot/output/images/wally-nexysa7.dtb
+      ```
+
+      Then flash the microSD card:
+
+      ```bash
+      cd $WALLY/linux/sdcard
+      sudo ./flash-sd.sh -b $RISCV/buildroot -d $RISCV/buildroot/output/images/wally-nexysa7.dtb /dev/sdX
+      ```
+
+      Replace `/dev/sdX` with the actual microSD device.
+
+      > [!WARNING]
+      > This command erases the selected device completely. Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
+
     * Connect the hardware:
 
         * Nexys A7 board
         * microUSB cable
-        * preconfigured microSD card
+        * microSD card prepared in the previous step
 
     * Program the FPGA using the programming tool provided by the instructor.
 
-      Load:
+      Load the bitstream:
 
-      ```text
-      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
+      ```bash
+      cd ~
+      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE /home/rvfpga/Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
       ```
 
       Wait until programming finishes successfully.
 
-    * Open the UART terminal (you may need to change the ttyUSB1 to other number):
+    * Open the UART terminal.
+
+      You may need to change `ttyUSB1` to another number, such as `ttyUSB0`.
 
       ```bash
       sudo apt install screen
@@ -105,26 +214,35 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Press the **RESET** button on the Nexys A7 board.
 
-      If everything works correctly you should see:
+      If everything works correctly, you should see:
 
         * BootROM messages
         * OpenSBI messages
         * Linux boot logs
-        * #
+        * A Linux login prompt
 
-    * Create a mount point:
+      Log in as:
+
+      ```text
+      root
+      ```
+
+      After logging in, you should see a Linux shell prompt similar to:
+
+      ```text
+      #
+      ```
+
+    * Mount the fourth partition of the microSD card.
+
+      The following commands must be executed inside the UART terminal, after Linux has booted on Wally:
 
       ```bash
       mkdir -p /mnt/sd
-      ```
-
-    * Mount the Linux partition:
-
-      ```bash
       mount /dev/mmcblk0p4 /mnt/sd
       ```
 
-      Check contents:
+      Check the contents:
 
       ```bash
       ls /mnt/sd
@@ -145,13 +263,13 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Test the seven-segment display peripheral.
 
-      Write segment pattern:
+      Write the segment pattern:
 
       ```bash
       devmem 0x00100000 32 0x77
       ```
 
-      Expected result: The display should show the character `A`.
+      Expected result: the seven-segment display should show the character `A`.
 
     * Exit the UART terminal.
 
