@@ -58,39 +58,8 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
     * In the figure, you can see the instructions within the first and second iteration of the loop and the value obtained in the ALU for the addition.
 
 
+````markdown
 3. Follow these steps to execute CVW-Wally on the Nexys A7 board:
-
-    * Prepare or buy a compatible microSD card.
-
-      Wally boots Linux from a microSD card. Therefore, each student needs a microSD card that will be flashed with the Linux image used in this activity.
-
-      Recommended characteristics:
-
-        * Capacity: 32 GB or larger.
-        * Type: microSDHC or microSDXC.
-        * Speed class: Class 10 / UHS-I recommended.
-        * Adapter: an SD adapter or USB microSD reader is needed to write the image from the computer.
-
-      Tested cards:
-
-      | microSD card | Capacity | Status |
-      |---|---:|---|
-      | SanDisk Ultra microSDHC / microSDXC | 32 GB | Tested successfully |
-      | Kingston microSD | 32 GB | Tested successfully |
-
-      > [!IMPORTANT]
-      > The microSD card will be erased during the preparation process. Do not use a card containing important data.
-
-    * Download the required prebuilt files from the following GitHub release:
-
-      [CVW-Wally Nexys A7 Files](https://github.com/artecs-group/RVfpga-sim-addons/releases/tag/v1.0-wally-nexysa7)
-
-      Download the following files:
-
-        * `WallyNexysA7_SD.img.xz`
-        * `fpgaTop.bit`
-
-      Move both files to the `Downloads` folder of the VM.
 
     * Clone the repository:
 
@@ -110,20 +79,38 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       source setup.sh
       ```
 
-    * Flash the microSD card.
+    * Download the prebuilt files from the following GitHub release:
 
-      Insert the microSD card into the computer and identify its device name:
+      https://github.com/artecs-group/RVfpga-sim-addons/releases/tag/v1.0-wally-nexysa7
+
+      The release contains:
+
+        * A prebuilt Linux microSD image for the Nexys A7 board
+        * A prebuilt FPGA bitstream for the CVW-Wally system
+
+    * Prepare the microSD card.
+
+      Recommended cards tested successfully:
+
+      | microSD model | Capacity | Status |
+      |---|---|---|
+      | SanDisk Ultra | 32 GB | Tested successfully |
+      | Kingston Canvas Select Plus | 32 GB | Tested successfully |
+
+      Insert the microSD card into your Linux computer and identify the corresponding device:
 
       ```bash
       lsblk
       ```
 
-      Look for the device corresponding to the microSD card. It will typically appear as something like `/dev/sda`, `/dev/sdb`, or `/dev/mmcblk0`.
+      Example output:
 
-      > [!WARNING]
-      > Be very careful when selecting the device. The next command will completely erase the selected device. Make sure that you select the microSD card, not your main hard drive.
+      ```text
+      sda      8:0    1  29.7G  0 disk
+      └─sda1   8:1    1  29.7G  0 part
+      ```
 
-      If any partition of the microSD card has been automatically mounted, unmount it before flashing. For example, if the card appears as `/dev/sdX`, run:
+      Unmount any automatically mounted partitions:
 
       ```bash
       sudo umount /dev/sdX1 2>/dev/null
@@ -132,42 +119,35 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       sudo umount /dev/sdX4 2>/dev/null
       ```
 
-      Replace `sdX` with the actual device name of your microSD card.
-
-      Flash the SD card image:
+      Flash the SD image:
 
       ```bash
       xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
       sync
       ```
 
-      Replace `/dev/sdX` with the actual microSD device.
+      Replace `/dev/sdX` with the correct device corresponding to your microSD card.
 
-      > [!IMPORTANT]
-      > Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
-
-      When the command finishes, safely remove the microSD card and insert it into the Nexys A7 board.
+      > [!WARNING]
+      > Double-check the target device before executing the `dd` command. Selecting the wrong device may overwrite your computer disk.
 
     * Connect the hardware:
 
         * Nexys A7 board
         * microUSB cable
-        * microSD card prepared in the previous step
+        * prepared microSD card
 
-    * Program the FPGA using the programming tool provided by the instructor.
+    * Program the FPGA.
 
-      Load the bitstream:
+      Use the following command:
 
       ```bash
-      cd ~
-      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE /home/rvfpga/Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
+      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
       ```
 
       Wait until programming finishes successfully.
 
-    * Open the UART terminal.
-
-      You may need to change `ttyUSB1` to another number, such as `ttyUSB0`.
+    * Open the UART terminal (you may need to change `ttyUSB1`):
 
       ```bash
       sudo apt install screen
@@ -176,62 +156,58 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
     * Press the **RESET** button on the Nexys A7 board.
 
-      If everything works correctly, you should see:
+      If everything works correctly you should see:
 
         * BootROM messages
         * OpenSBI messages
         * Linux boot logs
-        * A Linux login prompt
+        * A login prompt
 
-      Log in as:
+      Login as:
 
       ```text
       root
       ```
 
-      After logging in, you should see a Linux shell prompt similar to:
+      After login you should obtain a BusyBox shell prompt:
 
       ```text
       #
-      ```
-
-    * Mount the fourth partition of the microSD card.
-
-      The following commands must be executed inside the UART terminal, after Linux has booted on Wally:
-
-      ```bash
-      mkdir -p /mnt/sd
-      mount /dev/mmcblk0p4 /mnt/sd
-      ```
-
-      Check the contents:
-
-      ```bash
-      ls /mnt/sd
       ```
 
     * Test the GPIO peripheral.
 
       The LEDs LD0-LD4 are connected to the GPIO peripheral.
 
-      Enable GPIO outputs:
+      Configure GPIO outputs:
 
       ```bash
       devmem 0x10060008 32 0x1F
+      ```
+
+      Turn LEDs on:
+
+      ```bash
       devmem 0x1006000C 32 0x1F
       ```
 
-      Expected result: LEDs LD0-LD4 should turn on.
+      Turn LEDs off:
+
+      ```bash
+      devmem 0x1006000C 32 0x00
+      ```
 
     * Test the seven-segment display peripheral.
 
-      Write the segment pattern:
+      Write segment pattern:
 
       ```bash
       devmem 0x00100000 32 0x77
       ```
 
-      Expected result: the seven-segment display should show the character `A`.
+      Expected result:
+
+        * The display should show the character `A`.
 
     * Exit the UART terminal.
 
@@ -242,8 +218,11 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
       K
       ```
 
-    * Optional: read the implementation details.
+---
 
-      The implementation of the seven-segment display as an APB peripheral for CVW-Wally is documented in Mario Miralles' repository:
+Additional reference:
 
-      [Nexys A7: Seven Segment Display peripheral](https://github.com/mmiral04/cvw_apb_peripheral)
+Mario Miralles provides a detailed guide about the implementation of the seven-segment display peripheral for CVW-Wally, including APB integration, Linux support, devicetree modifications, and driver development:
+
+https://github.com/mmiral04/cvw_apb_peripheral
+````
