@@ -160,7 +160,7 @@ In recent years, the open-source hardware ecosystem has witnessed a remarkable s
 
       ```bash
       cd ~
-      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE ~/Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
+      ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE /home/rvfpga/Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
       ```
 
       Wait until programming finishes successfully.
