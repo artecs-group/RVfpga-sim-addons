@@ -74,8 +74,6 @@ Required items:
 | Nexys A7 board | Provided by the instructor | Used to run CVW-Wally on FPGA |
 | microSD card | Yes | 32 GB or larger recommended |
 | microSD card reader | Yes | Needed to flash the SD image from the Linux computer |
-| microUSB cable | Yes | Needed to power the board and access the UART interface |
-| FPGA programmer / JTAG adapter | Yes | Use the exact model specified by the instructor |
 
 Recommended microSD cards tested successfully:
 
