@@ -85,9 +85,6 @@ Recommended microSD cards tested successfully:
 > [!IMPORTANT]
 > The microSD card will be completely erased when flashing the Wally SD image. Do not use a card containing important data.
 
-> [!WARNING]
-> Do not buy a random FPGA programmer or JTAG adapter. Use only the model specified by the instructor, since different programmers may require different OpenOCD configuration files.
-
 ### Repository and environment setup
 
 Clone the repository:
