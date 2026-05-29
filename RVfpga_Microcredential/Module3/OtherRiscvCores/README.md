@@ -60,331 +60,370 @@ Follow these steps to replicate the Verilator CVW-Wally simulation in the VM:
 
 
 ## CVW-Wally on the Nexys A7 board
-Follow these steps to execute CVW-Wally on the Nexys A7 board:
 
- * Clone the repository:
+Follow these steps to execute CVW-Wally on the Nexys A7 board.
 
-   ```bash
-   cd ~
-   git clone https://github.com/mmiral04/cvw.git
-   cd cvw
-   git checkout apb_periph
-   ```
+### Required hardware
 
- * Configure the Wally environment:
+For this activity, the instructor will provide the Nexys A7 board. Each student must provide the remaining accessories needed to prepare and run the experiment.
 
-   ```bash
-   mkdir -p ~/riscv
-   ln -s /home/rvfpga/.platformio/packages/toolchain-riscv/* ~/riscv/
-   touch ~/riscv/site-setup.sh
-   source setup.sh
-   ```
+Required items:
 
- * Download the prebuilt files from the following GitHub release:
+| Item | Required? | Notes |
+|---|---:|---|
+| Nexys A7 board | Provided by the instructor | Used to run CVW-Wally on FPGA |
+| microSD card | Yes | 32 GB or larger recommended |
+| microSD card reader | Yes | Needed to flash the SD image from the Linux computer |
+| microUSB cable | Yes | Needed to power the board and access the UART interface |
+| FPGA programmer / JTAG adapter | Yes | Use the exact model specified by the instructor |
 
-   https://github.com/artecs-group/RVfpga-sim-addons/releases/tag/v1.0-wally-nexysa7
+Recommended microSD cards tested successfully:
 
-   The release contains:
+| microSD model | Capacity | Status |
+|---|---:|---|
+| SanDisk Ultra | 32 GB | Tested successfully |
+| Kingston Canvas Select Plus | 32 GB | Tested successfully |
 
-     * A prebuilt Linux microSD image for the Nexys A7 board
-     * A prebuilt FPGA bitstream for the CVW-Wally system
+> [!IMPORTANT]
+> The microSD card will be completely erased when flashing the Wally SD image. Do not use a card containing important data.
 
- * Prepare the microSD card.
+> [!WARNING]
+> Do not buy a random FPGA programmer or JTAG adapter. Use only the model specified by the instructor, since different programmers may require different OpenOCD configuration files.
 
-   Recommended cards tested successfully:
+### Repository and environment setup
 
-   | microSD model | Capacity | Status |
-   |---|---|---|
-   | SanDisk Ultra | 32 GB | Tested successfully |
-   | Kingston Canvas Select Plus | 32 GB | Tested successfully |
+Clone the repository:
 
-   Insert the microSD card into your Linux computer and identify the corresponding device:
+```bash
+cd ~
+git clone https://github.com/mmiral04/cvw.git
+cd cvw
+git checkout apb_periph
+```
 
-   ```bash
-   lsblk
-   ```
+Configure the Wally environment:
 
-   Example output:
+```bash
+mkdir -p ~/riscv
+ln -s /home/rvfpga/.platformio/packages/toolchain-riscv/* ~/riscv/
+touch ~/riscv/site-setup.sh
+source setup.sh
+```
 
-   ```text
-   sda      8:0    1  29.7G  0 disk
-   └─sda1   8:1    1  29.7G  0 part
-   ```
+### Download the prebuilt files
 
-   Unmount any automatically mounted partitions:
+Download the prebuilt files from the following GitHub release:
 
-   ```bash
-   sudo umount /dev/sdX1 2>/dev/null
-   sudo umount /dev/sdX2 2>/dev/null
-   sudo umount /dev/sdX3 2>/dev/null
-   sudo umount /dev/sdX4 2>/dev/null
-   ```
+https://github.com/artecs-group/RVfpga-sim-addons/releases/tag/v1.0-wally-nexysa7
 
-   Flash the SD image:
+The release contains:
 
-   ```bash
-   xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
-   sync
-   ```
+* A prebuilt Linux microSD image for the Nexys A7 board: `WallyNexysA7_SD.img.xz`
+* A prebuilt FPGA bitstream for the CVW-Wally system: `fpgaTop.bit`
 
-   Replace `/dev/sdX` with the correct device corresponding to your microSD card.
+Move both files to the `Downloads` folder of the VM.
 
-   > [!WARNING]
-   > Double-check the target device before executing the `dd` command. Selecting the wrong device may overwrite your computer disk.
+### Prepare the microSD card
 
- * Connect the hardware:
+Insert the microSD card into your Linux computer and identify the corresponding device:
 
-     * Nexys A7 board
-     * microUSB cable
-     * prepared microSD card
+```bash
+lsblk
+```
 
- * Program the FPGA.
+Example output:
 
-   Use the following command:
+```text
+sda      8:0    1  29.7G  0 disk
+└─sda1   8:1    1  29.7G  0 part
+```
 
-   ```bash
-   ~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
-   ```
+In this example, the microSD card is `/dev/sda`.
 
-   Wait until programming finishes successfully.
+Unmount any automatically mounted partitions:
 
- * Open the UART terminal (you may need to change `ttyUSB1`):
+```bash
+sudo umount /dev/sdX1 2>/dev/null
+sudo umount /dev/sdX2 2>/dev/null
+sudo umount /dev/sdX3 2>/dev/null
+sudo umount /dev/sdX4 2>/dev/null
+```
 
-   ```bash
-   sudo apt install screen
-   screen /dev/ttyUSB1 115200
-   ```
+Replace `sdX` with the actual device name of your microSD card.
 
- * Press the **RESET** button on the Nexys A7 board.
+Flash the SD image:
 
-   If everything works correctly you should see:
+```bash
+xzcat ~/Downloads/WallyNexysA7_SD.img.xz | sudo dd of=/dev/sdX bs=4M status=progress conv=fsync
+sync
+```
 
-     * BootROM messages
-     * OpenSBI messages
-     * Linux boot logs
-     * A login prompt
+Replace `/dev/sdX` with the correct device corresponding to your microSD card.
 
-   Login as:
+> [!WARNING]
+> Double-check the target device before executing the `dd` command. Selecting the wrong device may overwrite your computer disk.
 
-   ```text
-   root
-   ```
+> [!IMPORTANT]
+> Use the device name, for example `/dev/sdX`, not a partition such as `/dev/sdX1`.
 
-   After login you should obtain a BusyBox shell prompt:
+When the command finishes, safely remove the microSD card and insert it into the Nexys A7 board.
 
-   ```text
-   #
-   ```
+### Connect the hardware
 
- * Test the GPIO output buttons.
+Connect the following elements:
 
-   The LEDs LD0-LD4 are connected to the GPIO output bits 0 to 4.
+* Nexys A7 board
+* microUSB cable
+* prepared microSD card
+* FPGA programmer / JTAG adapter specified by the instructor
 
-   Configure GPIO outputs:
+### Program the FPGA
 
-   ```bash
-   devmem 0x10060008 32 0x1F
-   ```
+Use the following command:
 
-   Turn LEDs on:
+```bash
+~/.platformio/packages/tool-openocd-riscv-chipsalliance/bin/openocd -c "set BITFILE Downloads/fpgaTop.bit" -f ~/RVfpga_MasterUCLM/src/OtherSources/ConfigFiles/swervolf_nexys_program.cfg
+```
 
-   ```bash
-   devmem 0x1006000C 32 0x1F
-   ```
+Wait until programming finishes successfully.
 
-   Turn LEDs off:
+### Open the UART terminal
 
-   ```bash
-   devmem 0x1006000C 32 0x00
-   ```
+Open the UART terminal. You may need to change `ttyUSB1` to another value, such as `ttyUSB0`.
 
- * Test the GPIO input buttons.
+```bash
+sudo apt install screen
+screen /dev/ttyUSB1 115200
+```
 
-   The on-board buttons are connected to the GPIO input pins:
+Press the **RESET** button on the Nexys A7 board.
 
-   | Button | GPIO input bit |
-   |---|---:|
-   | BTNC | 0 |
-   | BTNU | 1 |
-   | BTNL | 2 |
-   | BTNR | 3 |
+If everything works correctly you should see:
 
-   First, enable GPIO inputs for bits 0 to 3:
+* BootROM messages
+* OpenSBI messages
+* Linux boot logs
+* A login prompt
 
-   ```bash
-   devmem 0x10060004 32 0x0F
-   ```
+Login as:
 
-   Then read the GPIO input register:
+```text
+root
+```
 
-   ```bash
-   devmem 0x10060000 32
-   ```
+After login you should obtain a BusyBox shell prompt:
 
-   Press one of the buttons and repeat the read command. The value should change according to the button being pressed.
+```text
+#
+```
 
-   Expected values:
+### Test the GPIO output LEDs
 
-   | Pressed button | Expected value |
-   |---|---:|
-   | none | `0x00000000` |
-   | BTNC | `0x00000001` |
-   | BTNU | `0x00000002` |
-   | BTNL | `0x00000004` |
-   | BTNR | `0x00000008` |
+The LEDs LD0-LD4 are connected to GPIO output bits 0 to 4.
 
-   > [!NOTE]
-   > The Nexys A7 switches are not connected to the GPIO input in this bitstream. The available GPIO inputs are the four push buttons listed above.
+Configure GPIO outputs:
 
+```bash
+devmem 0x10060008 32 0x1F
+```
 
- * Test the seven-segment display peripheral.
+Turn LEDs on:
 
-   Write segment pattern:
+```bash
+devmem 0x1006000C 32 0x1F
+```
 
-   ```bash
-   devmem 0x00100000 32 0x77
-   ```
+Turn LEDs off:
 
-   Expected result:
+```bash
+devmem 0x1006000C 32 0x00
+```
 
-     * The display should show the character `A`.
+### Test the GPIO input buttons
 
- * Example: using buttons, LEDs, and the seven-segment display together.
+The on-board buttons are connected to the GPIO input pins:
 
-   In this example, the push buttons are used as GPIO inputs. Depending on the button being pressed, the program turns on one LED and shows one hexadecimal digit on the seven-segment display.
+| Button | GPIO input bit |
+|---|---:|
+| BTNC | 0 |
+| BTNU | 1 |
+| BTNL | 2 |
+| BTNR | 3 |
 
-   Create the following script inside the Wally Linux shell:
+First, enable GPIO inputs for bits 0 to 3:
 
-   ```bash
-   cat > button_demo.sh <<'EOF'
-   #!/bin/sh
+```bash
+devmem 0x10060004 32 0x0F
+```
 
-   # Enable GPIO inputs BTNC-BTNR
-   devmem 0x10060004 32 0x0F
+Then read the GPIO input register:
 
-   # Enable GPIO outputs LD0-LD4
-   devmem 0x10060008 32 0x1F
+```bash
+devmem 0x10060000 32
+```
 
-   while true
-   do
-       value=$(devmem 0x10060000 32)
+Press one of the buttons and repeat the read command. The value should change according to the button being pressed.
 
-       case "$value" in
-           0x00000001|0x1)
-               # BTNC pressed: LED0 on, display shows 1
-               devmem 0x1006000C 32 0x01
-               devmem 0x00100000 32 0x06
-               ;;
-           0x00000002|0x2)
-               # BTNU pressed: LED1 on, display shows 2
-               devmem 0x1006000C 32 0x02
-               devmem 0x00100000 32 0x5B
-               ;;
-           0x00000004|0x4)
-               # BTNL pressed: LED2 on, display shows 3
-               devmem 0x1006000C 32 0x04
-               devmem 0x00100000 32 0x4F
-               ;;
-           0x00000008|0x8)
-               # BTNR pressed: LED3 on, display shows 4
-               devmem 0x1006000C 32 0x08
-               devmem 0x00100000 32 0x66
-               ;;
-           *)
-               # No button pressed, or more than one button pressed
-               devmem 0x1006000C 32 0x00
-               devmem 0x00100000 32 0x00
-               ;;
-       esac
+Expected values:
 
-       sleep 1
-   done
-   EOF
-   ```
+| Pressed button | Expected value |
+|---|---:|
+| none | `0x00000000` |
+| BTNC | `0x00000001` |
+| BTNU | `0x00000002` |
+| BTNL | `0x00000004` |
+| BTNR | `0x00000008` |
 
-   Make the script executable:
+> [!NOTE]
+> The Nexys A7 switches are not connected to the GPIO input in this bitstream. The available GPIO inputs are the four push buttons listed above.
 
-   ```bash
-   chmod +x button_demo.sh
-   ```
+### Test the seven-segment display peripheral
 
-   Run it:
+Write a segment pattern:
 
-   ```bash
-   ./button_demo.sh
-   ```
+```bash
+devmem 0x00100000 32 0x77
+```
 
-   Expected behavior:
+Expected result:
 
-   | Action | LEDs | Seven-segment display |
-   |---|---|---|
-   | No button pressed | off | off |
-   | Press BTNC | LD0 on | `1` |
-   | Press BTNU | LD1 on | `2` |
-   | Press BTNL | LD2 on | `3` |
-   | Press BTNR | LD3 on | `4` |
+* The display should show the character `A`.
 
-   Stop the program with:
+### Example: using buttons, LEDs, and the seven-segment display together
 
-   ```text
-   Ctrl+C
-   ```
+In this example, the push buttons are used as GPIO inputs. Depending on the button being pressed, the program turns on one LED and shows one hexadecimal digit on the seven-segment display.
 
- * Exercise
+Create the following script inside the Wally Linux shell:
 
-   Modify the previous script so that it implements the following behavior:
+```bash
+cat > button_demo.sh <<'EOF'
+#!/bin/sh
 
-   | Button | Required LED output | Required display output |
-   |---|---|---|
-   | BTNC | LD0 and LD4 on | `A` |
-   | BTNU | LD1 and LD3 on | `b` |
-   | BTNL | LD2 on | `C` |
-   | BTNR | all LEDs on | `F` |
+# Enable GPIO inputs BTNC-BTNR
+devmem 0x10060004 32 0x0F
 
-   Useful seven-segment codes:
+# Enable GPIO outputs LD0-LD4
+devmem 0x10060008 32 0x1F
 
-   | Character | Code |
-   |---|---:|
-   | `A` | `0x77` |
-   | `b` | `0x7C` |
-   | `C` | `0x39` |
-   | `F` | `0x71` |
+while true
+do
+    value=$(devmem 0x10060000 32)
 
-   Useful LED values:
+    case "$value" in
+        0x00000001|0x1)
+            # BTNC pressed: LED0 on, display shows 1
+            devmem 0x1006000C 32 0x01
+            devmem 0x00100000 32 0x06
+            ;;
+        0x00000002|0x2)
+            # BTNU pressed: LED1 on, display shows 2
+            devmem 0x1006000C 32 0x02
+            devmem 0x00100000 32 0x5B
+            ;;
+        0x00000004|0x4)
+            # BTNL pressed: LED2 on, display shows 3
+            devmem 0x1006000C 32 0x04
+            devmem 0x00100000 32 0x4F
+            ;;
+        0x00000008|0x8)
+            # BTNR pressed: LED3 on, display shows 4
+            devmem 0x1006000C 32 0x08
+            devmem 0x00100000 32 0x66
+            ;;
+        *)
+            # No button pressed, or more than one button pressed
+            devmem 0x1006000C 32 0x00
+            devmem 0x00100000 32 0x00
+            ;;
+    esac
 
-   | LEDs | Value |
-   |---|---:|
-   | LD0 | `0x01` |
-   | LD1 | `0x02` |
-   | LD2 | `0x04` |
-   | LD3 | `0x08` |
-   | LD4 | `0x10` |
-   | LD0 + LD4 | `0x11` |
-   | LD1 + LD3 | `0x0A` |
-   | LD0 + LD1 + LD2 + LD3 + LD4 | `0x1F` |
+    sleep 1
+done
+EOF
+```
 
-   Submit:
+Make the script executable:
 
-     * the modified script
-     * a short explanation of:
-       * which GPIO register is used to read the buttons
-       * which GPIO register is used to control the LEDs
-       * which address is used to control the seven-segment display
+```bash
+chmod +x button_demo.sh
+```
 
- * Exit the UART terminal.
+Run it:
 
-   To exit `screen`:
+```bash
+./button_demo.sh
+```
 
-   ```text
-   Ctrl+A
-   K
-   ```
+Expected behavior:
+
+| Action | LEDs | Seven-segment display |
+|---|---|---|
+| No button pressed | off | off |
+| Press BTNC | LD0 on | `1` |
+| Press BTNU | LD1 on | `2` |
+| Press BTNL | LD2 on | `3` |
+| Press BTNR | LD3 on | `4` |
+
+Stop the program with:
+
+```text
+Ctrl+C
+```
+
+### Exercise
+
+Modify the previous script so that it implements the following behavior:
+
+| Button | Required LED output | Required display output |
+|---|---|---|
+| BTNC | LD0 and LD4 on | `A` |
+| BTNU | LD1 and LD3 on | `b` |
+| BTNL | LD2 on | `C` |
+| BTNR | all LEDs on | `F` |
+
+Useful seven-segment codes:
+
+| Character | Code |
+|---|---:|
+| `A` | `0x77` |
+| `b` | `0x7C` |
+| `C` | `0x39` |
+| `F` | `0x71` |
+
+Useful LED values:
+
+| LEDs | Value |
+|---|---:|
+| LD0 | `0x01` |
+| LD1 | `0x02` |
+| LD2 | `0x04` |
+| LD3 | `0x08` |
+| LD4 | `0x10` |
+| LD0 + LD4 | `0x11` |
+| LD1 + LD3 | `0x0A` |
+| LD0 + LD1 + LD2 + LD3 + LD4 | `0x1F` |
+
+Submit:
+
+* the modified script
+* a short explanation of:
+  * which GPIO register is used to read the buttons
+  * which GPIO register is used to control the LEDs
+  * which address is used to control the seven-segment display
+
+### Exit the UART terminal
+
+To exit `screen`:
+
+```text
+Ctrl+A
+K
+```
 
 ---
 
-Additional reference:
+### Additional reference
 
 Mario Miralles provides a detailed guide about the implementation of the seven-segment display peripheral for CVW-Wally, including APB integration, Linux support, devicetree modifications, and driver development:
 
 https://github.com/mmiral04/cvw_apb_peripheral
-
