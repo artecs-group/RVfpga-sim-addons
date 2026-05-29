@@ -75,15 +75,21 @@ Required items:
 | microSD card | Yes | 32 GB or larger recommended |
 | microSD card reader | Yes | Needed to flash the SD image from the Linux computer |
 
-Recommended microSD cards tested successfully:
+These microSD cards have been tested successfully:
 
-| microSD model | Capacity | Status |
-|---|---:|---|
+| microSD model | Capacity | Status | Buy
+|---|---:|---|---|
 | SanDisk Ultra | 32 GB | Tested successfully |
-| Kingston Canvas Select Plus | 32 GB | Tested successfully |
+| Kingston Canvas Select Plus | 32 GB | Tested successfully | [You can buy it here](https://www.amazon.es/-/en/Kingston-microSD-SDCS2-32GB-Adapter/dp/B07YGZ7FY7/ref=sr_1_1?crid=3GVWQH3EGL81X&dib=eyJ2IjoiMSJ9.rac_thW29ItAwR0JtBP-8C2Q4VUOjQPrGk0E-A6GSr-ofvJJiCGX3y_tC_H2jeUx4V2AC1ATHo2l82by2lE74wNdzyqLz6x4OzgEEccHz7oJS65m_C37T_F0ykNOSAHE05VSDKhQ7imvbhmIb-_jqklO4OUzZhSKoCeabStVmxk1P5Icuy6QhtU3sRCHu9BxeFPwjEfc-qp2scFWTX9h_VX-d6ycLojesETQ_wyz0RDefZ0Ln6I5cbju82g3aagfY48-45EjtmO638ojtEgKycVDjHSH2DcqS-WTEhx8tMU.6vlRPDuYFejNlr0IygBXOAdxh-hZ0EVLhfpDL0xM4Xk&dib_tag=se&keywords=kingston%2B32gb&qid=1780038839&sprefix=kingston%2B32gb%2Caps%2C69&sr=8-1&th=1)
 
 > [!IMPORTANT]
 > The microSD card will be completely erased when flashing the Wally SD image. Do not use a card containing important data.
+
+This microSD card reader has been tested successfully:
+
+| microSD reader model  | Status | Buy
+|---|---|---|
+| SanDisk Ultra | Tested successfully | [You can buy it here](www.amazon.es/-/en/Memory-Reader-Laptop-Notebook-MacBook/dp/B075NR6MCJ/ref=sr_1_1?crid=3J0IG8W0J084M&dib=eyJ2IjoiMSJ9.6Sfr2fqDgqfYh_ml_CjDdCqImM3DMcvYImjHDPdVHU5JtfJ9-hO6kVdE95RS1q9ESUHYJsFA3tsXveB-R5m0rLIJEhSCmVJnhdIODrbop67E1vtGnp7_q7C-R-NZ856kgz9jFHdMr1bvm5G_BQxVzw.KjtFpwQk-qmChlEuJ28RkVrY0mAgfbkyEz_4v9NaHH8&dib_tag=se&keywords=ew1075&qid=1780038995&sprefix=ew1075%2Caps%2C76&sr=8-1&th=1)
 
 ### Repository and environment setup
 
