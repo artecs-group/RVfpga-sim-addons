@@ -89,7 +89,7 @@ This microSD card reader has been tested successfully:
 
 | microSD reader model  | Status | Buy
 |---|---|---|
-| SanDisk Ultra | Tested successfully | [You can buy it here](www.amazon.es/-/en/Memory-Reader-Laptop-Notebook-MacBook/dp/B075NR6MCJ/ref=sr_1_1?crid=3J0IG8W0J084M&dib=eyJ2IjoiMSJ9.6Sfr2fqDgqfYh_ml_CjDdCqImM3DMcvYImjHDPdVHU5JtfJ9-hO6kVdE95RS1q9ESUHYJsFA3tsXveB-R5m0rLIJEhSCmVJnhdIODrbop67E1vtGnp7_q7C-R-NZ856kgz9jFHdMr1bvm5G_BQxVzw.KjtFpwQk-qmChlEuJ28RkVrY0mAgfbkyEz_4v9NaHH8&dib_tag=se&keywords=ew1075&qid=1780038995&sprefix=ew1075%2Caps%2C76&sr=8-1&th=1)
+| Ewent Card Reader | Tested successfully | [You can buy it here](https://www.amazon.es/-/en/Memory-Reader-Laptop-Notebook-MacBook/dp/B075NR6MCJ/ref=sr_1_1?crid=3GBY8DJ1315D2&dib=eyJ2IjoiMSJ9.6Sfr2fqDgqfYh_ml_CjDdCqImM3DMcvYImjHDPdVHU5JtfJ9-hO6kVdE95RS1q9ESUHYJsFA3tsXveB-R5m0rLIJEhSCmVJnhdIODrbop67E1vtGnp7_q7C-R-NZ856kgz9jFHdMr1bvm5G_BQxVzw.KjtFpwQk-qmChlEuJ28RkVrY0mAgfbkyEz_4v9NaHH8&dib_tag=se&keywords=ew1075&qid=1780039145&sprefix=ew1075%2Caps%2C60&sr=8-1&th=1)
 
 ### Repository and environment setup
 
