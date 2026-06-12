@@ -64,11 +64,13 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 - More details about these tasks can be found in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3)
 
 **June 12 - 4th Session:**
+- [Video: Introduction to Module 3](https://www.youtube.com/watch?v=aSMYbTeSdrY)
 - You must complete the 2 exercises proposed in [Module 3](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module3#to-complete-in-the-4th-session-friday-june-12)
 
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 **June 15-18 - Tasks to complete:**
+- [Video: Work to complete before 5th Session](https://www.youtube.com/watch?v=J0wuAjrJypw)
 - Review Memory Hierarchy concepts.
 - Watch the *PerformanceBenchmarkingVideo* video.
 - Perform the Hw Counters example.
