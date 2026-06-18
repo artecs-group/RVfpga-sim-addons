@@ -6,9 +6,9 @@ In this final module, you will learn how to compile and load applications based 
 
 ## Workflow
 
-Prepare the experimental setup by following sections 1–3 of the [*Running Zephyr on VeeRwolf*](Zephyr-VeeRwolf.md) document. Then, complete the following exercises:
+Prepare the experimental setup by following sections 1–3 of the [*Running Zephyr on VeeRwolf*](../../RVfpga_Microcredential/Module4/Zephyr-VeeRwolf.md) document. Then, complete the following exercises:
 
-- Understand the process of compiling a Zephyr application and running it on both the simulator and the FPGA board (see section 4 of [*Running Zephyr on VeeRwolf*](Zephyr-VeeRwolf.md)).
-- Follow and analyze the TensorFlow Lite for Microcontrollers demo in Zephyr (section 5 of [*Running Zephyr on VeeRwolf*](Zephyr-VeeRwolf.md)).
-- Follow and analyze the [*Zephyr Blinky Sample*](Zephyr-Blinky.md) and then complete the LED control exercise.
-- Study the [*VeeRWolf Zephyr Module*](Zephyr-VeeRwolf-Module.md) document to understand the structure of Zephyr's support for the VeeRWolf SoC, and then complete the related exercises.
+- Understand the process of compiling a Zephyr application and running it on both the simulator and the FPGA board (see section 4 of [*Running Zephyr on VeeRwolf*](../../RVfpga_Microcredential/Module4/Zephyr-VeeRwolf.md)).
+- Follow and analyze the TensorFlow Lite for Microcontrollers demo in Zephyr (section 5 of [*Running Zephyr on VeeRwolf*](../../RVfpga_Microcredential/Module4/Zephyr-VeeRwolf.md)).
+- Follow and analyze the [*Zephyr Blinky Sample*](../../RVfpga_Microcredential/Module4/Zephyr-Blinky.md) and then complete the LED control exercise.
+- Study the [*VeeRWolf Zephyr Module*](../../RVfpga_Microcredential/Module4/Zephyr-VeeRwolf-Module.md) document to understand the structure of Zephyr's support for the VeeRWolf SoC, and then complete the related exercises.
