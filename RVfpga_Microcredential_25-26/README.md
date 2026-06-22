@@ -84,3 +84,12 @@ The course will take place over six consecutive weeks, from May 11 to June 26. D
 
 **June 26 - 6th Session:**
 - Look at the instructions described in [Module 4](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/RVfpga_Microcredential_25-26/Module4)
+
+· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
+
+**July 12 - Reports:**
+You must submit one or more documents to dani02@ucm.es containing, at a minimum, the solutions to all mandatory exercises completed throughout the course.
+
+Your submission should include the source code developed, explanations of the work performed, screenshots, photographs, videos (or links to videos), and any other relevant material. Make sure to clearly justify your solutions, describe the methodology followed, and explain the results obtained.
+
+Optional exercises may also be included and will be considered positively during the evaluation.
