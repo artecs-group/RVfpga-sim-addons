@@ -203,103 +203,103 @@ static int ws_cb(struct lws *wsi, enum lws_callback_reasons reason,
     }
 
     /* Print time */
-    chars_written += sprintf(json_buf, "{\"time\" : %ld", cur_time);
+    chars_written += snprintf(json_buf, sizeof(json_buf), "{\"time\" : %ld", cur_time);
 
     if (gpio_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"gpio\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"gpio\" : {");
       while (gpio_head) {
-	chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", gpio_head->item, gpio_head->value);
+	chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", gpio_head->item, gpio_head->value);
 	deleteHead(&gpio_head);
       }
 
       /* Hack. Overwrite final comma */
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
     
     if (serial_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"serial\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"serial\" : {");
       while (serial_head) {
-	chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", serial_head->item, serial_head->value);
+	chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", serial_head->item, serial_head->value);
 	deleteHead(&serial_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     char SevSegDispl_Char;
     if (SevSegDispl0_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl0\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl0\" : {");
       while (SevSegDispl0_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl0_head->item, SevSegDispl0_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl0_head->item, SevSegDispl0_head->value);
   deleteHead(&SevSegDispl0_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl1_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl1\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl1\" : {");
       while (SevSegDispl1_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl1_head->item, SevSegDispl1_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl1_head->item, SevSegDispl1_head->value);
   deleteHead(&SevSegDispl1_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl2_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl2\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl2\" : {");
       while (SevSegDispl2_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl2_head->item, SevSegDispl2_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl2_head->item, SevSegDispl2_head->value);
   deleteHead(&SevSegDispl2_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl3_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl3\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl3\" : {");
       while (SevSegDispl3_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl3_head->item, SevSegDispl3_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl3_head->item, SevSegDispl3_head->value);
   deleteHead(&SevSegDispl3_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl4_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl4\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl4\" : {");
       while (SevSegDispl4_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl4_head->item, SevSegDispl4_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl4_head->item, SevSegDispl4_head->value);
   deleteHead(&SevSegDispl4_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl5_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl5\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl5\" : {");
       while (SevSegDispl5_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl5_head->item, SevSegDispl5_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl5_head->item, SevSegDispl5_head->value);
   deleteHead(&SevSegDispl5_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl6_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl6\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl6\" : {");
       while (SevSegDispl6_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl6_head->item, SevSegDispl6_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl6_head->item, SevSegDispl6_head->value);
   deleteHead(&SevSegDispl6_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     if (SevSegDispl7_head) {
-      chars_written += sprintf(json_buf+chars_written, ", \"SevSegDispl7\" : {");
+      chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, ", \"SevSegDispl7\" : {");
       while (SevSegDispl7_head) {
-          chars_written += sprintf(json_buf+chars_written, "\"%s\" : %d, ", SevSegDispl7_head->item, SevSegDispl7_head->value);
+          chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "\"%s\" : %d, ", SevSegDispl7_head->item, SevSegDispl7_head->value);
   deleteHead(&SevSegDispl7_head);
       }
-      chars_written += sprintf(json_buf+chars_written-2, "} ") - 2;
+      chars_written += snprintf(json_buf+chars_written-2, sizeof(json_buf)-(chars_written-2), "} ") - 2;
     }
 
     /* Close JSON */
-    chars_written += sprintf(json_buf+chars_written, "}");
+    chars_written += snprintf(json_buf+chars_written, sizeof(json_buf)-chars_written, "}");
     //printf("%s\n", json_buf);
     if (vhd->amsg.payload)
       __minimal_destroy_message(&vhd->amsg);
