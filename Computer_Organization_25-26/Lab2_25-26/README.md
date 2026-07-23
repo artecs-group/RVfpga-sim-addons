@@ -640,11 +640,12 @@ li t2, 0x080
 csrrs t1, 0x7F9, t2
 ```
 
-d. Repeat the analysis with all features enabled (Note: Due to a minor bug in the simulator, ```AL (Secondary ALU)``` → ```Store (Data)``` forwarding paths are currently not displayed.). Replace the two initial instructions for these ones:
+d. Repeat the analysis with all features enabled. Replace the two initial instructions for these ones:
 ```
 li t2, 0x0
 csrrs t1, 0x7F9, t2
 ```
+>Note: Due to a minor bug in the simulator, ```AL (Secondary ALU)``` → ```Store (Data)``` forwarding paths are currently not displayed.
 
 e. Finally, with the configuration from the previous item, reorder the code of the ```loop_k``` loop to improve performance as much as possible, and repeat the analysis from *item a*.
 
