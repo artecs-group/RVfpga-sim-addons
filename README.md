@@ -31,10 +31,11 @@ Finally, it should be highlighted that a number of Bachelor's and Master's these
 
 
 ## Papers, Presentations and Videos
-If you're interested in learning more about the details of the RVfpga course, check out our paper released in Oct-2024: 
+If you're interested in learning more about the details of the RVfpga course, check out our paper published at IEEE Access in January-2026: 
 
-* **[The RISC-V FPGA (RVfpga) Teaching Package](https://www.authorea.com/doi/full/10.36227/techrxiv.172978275.56140460)** 
+* **[The RISC-V FPGA (RVfpga) Teaching Package](https://ieeexplore.ieee.org/document/11366652)** 
 
+<!--
 For insights into other teaching experiences based on RVfpga, you can explore another paper released in Nov-2024: 
 
 * **[Teaching Experiences using the RVfpga Package](http://arxiv.org/abs/2411.14954)**
@@ -46,8 +47,9 @@ We recently presented *Teaching Computer Architecture with RVfpga* at the 2024 S
 We also recently gave talk *Teaching Experiences with RVfpga* at the 2025 RISC-V Education Forum (RISC-V Ecosystem Conference) at China. You can view the video here:
 
 * **[Teaching Experiences with RVfpga](https://youtu.be/gUCAdCwOHEc)**
+-->
 
-Finally, in the following links you can also find many videos that illustrate different topics of RVfpga.
+In the following links you can also find many videos that illustrate different topics of RVfpga.
 
   - Videos at YouTube Channel: **[RVfpgaVideos](https://www.youtube.com/@RVfpgaVideos)**
   - Imperial College WS 2022: **[LondonWS](https://youtube.com/playlist?list=PLnOXj03cuJjkes1OIMa8SFyn1yKQQY8aD&si=mNLqXXbtPnbuobof)**
