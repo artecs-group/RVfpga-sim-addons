@@ -23,7 +23,7 @@ Follow these steps to replicate the Verilator CVW-Wally simulation in the VM:
     export PATH=$WALLY/bin:$PATH
     ```
 
- * In the Makefile used for Verilator (```~/cvw/sim/verilator/Makefile```), add the option to generate a trace (```PARAMS?=--trace```).
+ * In the Makefile used for Verilator (```~/cvw/sim/verilator/Makefile```), add the option to generate a trace (```--trace```) if it is not already present.
  * We next show an example execution of this [ExampleExtended](https://drive.google.com/file/d/1Uw06q4ee5MpxFQbyur60pgeGmBbOzFaC/view?usp=sharing). This is the program obtained using the ```riscv64-unknown-elf-objdump``` aplication.
 
    ```
