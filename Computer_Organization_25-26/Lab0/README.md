@@ -39,9 +39,9 @@ To do so:
 
 3. Install Ubuntu by following a dual-boot tutorial. For example: [How to Dual Boot Ubuntu 22.04 LTS and Windows 10](https://www.youtube.com/watch?v=GXxTxBPKecQ)
 
-After Ubuntu is installed and running, follow the installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
+After Ubuntu is installed, launch it in your laptop and follow the RVfpga installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
 
-Once you have completed that guide, **skip directly to the _RVfpga Sources_ section** of this manual.
+Once you have completed that guide, continue with the **RVfpga Sources** section below.
 
 > **Note:** Throughout the rest of the labs, any reference to the **virtual machine (VM)** should be interpreted as referring to your **native Ubuntu installation**.
 
