@@ -33,17 +33,13 @@ If you prefer to work natively on Ubuntu instead of using a virtual machine, you
 
 To do so:
 
-1. Download the Ubuntu 22.04 Desktop image:
-   - [Ubuntu 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
+1. Download the Ubuntu 22.04 Desktop image: [Ubuntu 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
 
 2. Create a bootable USB drive using a tool such as Rufus or Balena Etcher.
 
-3. Install Ubuntu by following a dual-boot tutorial. For example:
-   - [How to Dual Boot Ubuntu 22.04 LTS and Windows 10](https://www.youtube.com/watch?v=GXxTxBPKecQ)
+3. Install Ubuntu by following a dual-boot tutorial. For example: [How to Dual Boot Ubuntu 22.04 LTS and Windows 10](https://www.youtube.com/watch?v=GXxTxBPKecQ)
 
-After Ubuntu is installed and running, follow the installation procedure described in:
-
-- [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
+After Ubuntu is installed and running, follow the installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
 
 Once you have completed that guide, **skip directly to the _RVfpga Sources_ section** of this manual.
 
