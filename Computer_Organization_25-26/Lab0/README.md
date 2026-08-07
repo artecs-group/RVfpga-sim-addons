@@ -31,6 +31,8 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 
 If you prefer to work natively on Ubuntu instead of using a virtual machine, you can install **Ubuntu 22.04** alongside Windows using a **dual-boot** configuration. This allows you to keep your existing Windows installation while booting into Ubuntu whenever you want to work with RVfpga.
 
+> **⚠️ Important:** Before installing a dual-boot system, **back up all important files** stored on your Windows installation. Although the installation process is generally safe when performed correctly, mistakes during disk partitioning or bootloader installation may result in data loss or make Windows temporarily unbootable. Having a recent backup ensures that your data can be recovered if something goes wrong.
+
 To do so:
 
 1. Download the Ubuntu 22.04 Desktop image: [Ubuntu 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
