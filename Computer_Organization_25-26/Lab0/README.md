@@ -1,7 +1,7 @@
 # Lab 0 - Introduction and Installation
 This lab aims to prepare our computer to work in the labs of the course and to introduce the tools that we will use in the labs. Follow the next steps:
 
-1. Install the Virtual Machine as explained below at section *Virtual Machine*.
+1. Install the Virtual Machine as explained below at section *Virtual Machine*, or alternatively install a fresh Ubuntu machine as explained below at section *Alternative Installation: Native Ubuntu 22.04*.
 
 2. Download the sources as explained below at section *RVfpga Sources*.
 
@@ -27,7 +27,10 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
-### Alternative Installation: Native Ubuntu 22.04
+Once you have completed these steps, skip the following section and continue with the **RVfpga Sources** section below.
+
+
+## Alternative Installation: Native Ubuntu 22.04
 
 If you prefer to work natively on Ubuntu instead of using a virtual machine, you can install **Ubuntu 22.04** alongside Windows using a **dual-boot** configuration. This allows you to keep your existing Windows installation while booting into Ubuntu whenever you want to work with RVfpga.
 
