@@ -21,7 +21,7 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
 <img width="1421" height="510" alt="image" src="https://github.com/user-attachments/assets/3e2e5eea-0eb5-4c78-b577-e00844b8cc20" />
 
 
-The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those programs and import the VM (the screenshots in this tutorial are for VirtualBox).
+The VM can be installed in the usual virtualization software, such as VirtualBox or VMWare. Install one of those programs and import the VM.
 
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, the memory amount used by the VM, or reinstalling the Guest Additions.
 
@@ -39,9 +39,11 @@ To do so:
 
 3. Install Ubuntu by following a dual-boot tutorial. For example: [How to Dual Boot Ubuntu 22.04 LTS and Windows 10](https://www.youtube.com/watch?v=GXxTxBPKecQ)
 
-After Ubuntu is installed, launch it in your laptop and follow the RVfpga installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
+4. Launch Ubuntu in your laptop and install the Guest Additions. For this, you can follow a tutorial (for example [Guest Additions](https://www.youtube.com/watch?v=DH1TDDX7NmE)).
 
-Once you have completed that guide, continue with the **RVfpga Sources** section below.
+5. Once Ubuntu is running, follow the RVfpga installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
+
+Once you have completed these steps, continue with the **RVfpga Sources** section below.
 
 > **Note:** Throughout the rest of the labs, any reference to the **virtual machine (VM)** should be interpreted as referring to your **native Ubuntu installation**.
 
