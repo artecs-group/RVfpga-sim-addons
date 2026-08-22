@@ -1,5 +1,5 @@
 # Computer Organization 2026-27 at UCM
-This is a second-year course in the Computer Science degree program offered at UCM. You can see the contents of this course at [Computer Organization UCM](https://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2025/8942.pdf).
+This is a second-year course in the Computer Science degree program offered at UCM. You can see the contents of this course at [Computer Organization UCM](https://web.fdi.ucm.es/UCMFiles/pdf/FICHAS_DOCENTES/2026/9512.pdf).
 
 As for the theoretical part, the course starts with a detailed revision of those concepts introduced in the Computer Fundamentals first-year course: RISC-V architecture and assembly programming, and the single/multi-cycle and pipelined processors from the Harris&Harris book. Then, the VeeR EH1 pipelined processor is used to introduce some advanced microarchitectural techniques, such as deep pipelining, superscalar execution and multi-cycle operations. Then, the memory system (cache hierarchy and virtual memory) is analyzed in detail. Finally, a generic I/O system is studied.
 
