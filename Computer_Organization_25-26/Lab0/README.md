@@ -32,6 +32,8 @@ Once you have completed these steps, skip the following section and continue wit
 
 ## Alternative Installation: Native Ubuntu 22.04
 
+> **⚠️ Warning:** These installation instructions are new for the 2026–27 course and have not yet been fully tested, so they may contain mistakes or omissions. Students trying them out are encouraged to contact the instructor for assistance and to report any issues or errata they encounter.
+
 If you prefer to work natively on Ubuntu instead of using a virtual machine, you can install **Ubuntu 22.04** alongside Windows using a **dual-boot** configuration. This allows you to keep your existing Windows installation while booting into Ubuntu whenever you want to work with RVfpga.
 
 > **⚠️ Important:** Before installing a dual-boot system, **back up all important files** stored on your Windows installation. Although the installation process is generally safe when performed correctly, mistakes during disk partitioning or bootloader installation may result in data loss or make Windows temporarily unbootable. Having a recent backup ensures that your data can be recovered if something goes wrong.
@@ -50,7 +52,7 @@ Follow the next steps:
 
 Once you have completed these steps, continue with the **RVfpga Sources** section below.
 
-> **Note:** Throughout the rest of the labs, any reference to the **virtual machine (VM)** should be interpreted as referring to your **native Ubuntu installation**.
+> **⚠️ Note:** Throughout the rest of the labs, any reference to the **virtual machine (VM)** should be interpreted as referring to your **native Ubuntu installation**.
 
 
 
