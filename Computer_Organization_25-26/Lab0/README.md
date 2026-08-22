@@ -9,7 +9,7 @@ This lab aims to prepare our computer to work in the labs of the course and to i
 ## Virtual Machine
 > You can visualize the following video from time 0:0 to time 1:45 to see the steps described in this section: [RVfpgaToolsVideo](https://www.youtube.com/watch?v=Z8QcQRW7F4s).
 
-In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors); however, if you are using an Apple Silicon MacBook (M1, M2, M3, …), you will not be able to run this VM. 
+In these labs we are going to work with a Virtual Machine (VM) with Ubuntu 22.04 Linux Operating System (OS). This VM can run on most native OS (Windows, Linux, macOS with Intel processors). 
 
 The VM belongs to the RVfpga training package, on which these practices are based. Download the VM from one of the following links. Both refer to the same VM, so use the one that works best for you: 
 + [Virtual Machine 1st link](https://drive.google.com/file/d/1KFnJYq6krB7vYt_AqTB_zTYVmxfATwJF/view)
@@ -30,11 +30,11 @@ Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. th
 Once you have completed these steps, skip the following section and continue with the [RVfpga Sources](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#rvfpga-sources) section below.
 
 
-## Alternative Installation: Native Ubuntu 22.04
+## Alternative Installation for Windows Users: Native Ubuntu 22.04 (Dual Boot)
 
 > **⚠️ Warning:** These installation instructions are new for the 2026–27 course and have not yet been fully tested, so they may contain mistakes or omissions. Students trying them out are encouraged to contact the instructor for assistance and to report any issues or errata they encounter.
 
-If you prefer to work natively on Ubuntu instead of using a virtual machine, you can install **Ubuntu 22.04** alongside Windows using a **dual-boot** configuration. This allows you to keep your existing Windows installation while booting into Ubuntu whenever you want to work with RVfpga.
+If you are using Windows and prefer to work natively on Ubuntu instead of using a virtual machine, you can install **Ubuntu 22.04** alongside Windows using a **dual‑boot** configuration. This allows you to keep your existing Windows installation while booting into Ubuntu whenever you want to work with RVfpga.
 
 > **⚠️ Important:** Before installing a dual-boot system, **back up all important files** stored on your Windows installation. Although the installation process is generally safe when performed correctly, mistakes during disk partitioning or bootloader installation may result in data loss or make Windows temporarily unbootable. Having a recent backup ensures that your data can be recovered if something goes wrong.
 
@@ -46,11 +46,9 @@ Follow the next steps:
 
 3. Install Ubuntu by following a dual-boot tutorial. For example: [How to Dual Boot Ubuntu 22.04 LTS and Windows 10](https://www.youtube.com/watch?v=GXxTxBPKecQ)
 
-4. Launch Ubuntu in your laptop and install the Guest Additions. For this, you can follow a tutorial (for example [Guest Additions](https://www.youtube.com/watch?v=DH1TDDX7NmE)).
+4. Launch Ubuntu and follow the RVfpga installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
 
-5. Once Ubuntu is running, follow the RVfpga installation procedure described in: [Installing the RVfpga Tools in a Clean Ubuntu Environment](https://drive.google.com/file/d/1WKjvM18EdGsICj_fqLM_Gq4MjyDzGp1T/view)
-
-Once you have completed these steps, continue with the **RVfpga Sources** section below.
+Once you have completed these steps, continue with the [RVfpga Sources](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#rvfpga-sources) section below.
 
 > **⚠️ Note:** Throughout the rest of the labs, any reference to the **virtual machine (VM)** should be interpreted as referring to your **native Ubuntu installation**.
 
