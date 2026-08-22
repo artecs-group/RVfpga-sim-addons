@@ -1,7 +1,7 @@
 # Lab 0 - Introduction and Installation
 This lab aims to prepare our computer to work in the labs of the course and to introduce the tools that we will use in the labs. Follow the next steps:
 
-1. Install the Virtual Machine as explained below at section *Virtual Machine*, or alternatively install a fresh Ubuntu machine as explained below at section *Alternative Installation: Native Ubuntu 22.04*.
+1. Install the Virtual Machine as explained below at section [Virtual Machine](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#virtual-machine), or alternatively install a fresh Ubuntu machine as explained below at section *Alternative Installation: Native Ubuntu 22.04*.
 
 2. Download the sources as explained below at section *RVfpga Sources*.
 
