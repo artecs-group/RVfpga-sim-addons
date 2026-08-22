@@ -3,7 +3,7 @@ This lab aims to prepare our computer to work in the labs of the course and to i
 
 1. Install the Virtual Machine as explained below at section [Virtual Machine](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#virtual-machine), or alternatively install a fresh Ubuntu machine as explained below at section [Alternative Installation for Windows Users: Native Ubuntu 22.04 (Dual Boot)](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#alternative-installation-for-windows-users-native-ubuntu-2204-dual-boot).
 
-2. Download the sources as explained below at section *RVfpga Sources*.
+2. Download the sources as explained below at section [RVfpga Sources](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#rvfpga-sources).
 
 
 ## Virtual Machine
