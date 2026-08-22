@@ -27,7 +27,7 @@ Finally, run the VM, check that the boot is successful, and log into Linux using
 
 Ignore all Ubuntu upgrade proposal windows, Guest Additions, PlatformIO, etc. that open automatically on the VM.
 
-Once you have completed these steps, skip the following section and continue with the **RVfpga Sources** section below.
+Once you have completed these steps, skip the following section and continue with the [RVfpga Sources](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab0/README.md#rvfpga-sources) section below.
 
 
 ## Alternative Installation: Native Ubuntu 22.04
