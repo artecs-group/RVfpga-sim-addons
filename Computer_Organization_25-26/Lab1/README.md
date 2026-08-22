@@ -17,7 +17,7 @@ Follow the steps below to use and finish configuring the Ripes simulator in the 
 
 1. Start the simulator inside the VM:
     - Open a terminal in the VM.
-    - Enter the “Ripes” directory: ```cd ~/Simuladores_EC_24-25/Ripes```
+    - Enter the “Ripes” directory: ```cd ~/Simuladores_EC_26-27/Ripes```
     - Before you can launch the simulator for the first time, you must install FUSE by means of the following command (it will ask for the root password, which is rvfpga): ```sudo apt-get install fuse libfuse2```
     - Run the simulator: ```./Ripes-v2.2.6-linux-x86_64.AppImage```
 
@@ -108,7 +108,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
 
   - Download the RISC-V toolchain:
       - The Ripes simulator webpage recommends to download the pre-built toolchain from [here](https://github.com/sifive/freedom-tools/releases/tag/v2020.04.0-Toolchain.Only). Download file *riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz*.
-      - Once downloaded, copy that file to ```/home/rvfpga/Simuladores_EC_24-25/Ripes/```
+      - Once downloaded, copy that file to ```/home/rvfpga/Simuladores_EC_26-27/Ripes/```
       - Unzip the file ```riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14.tar.gz``` by right-clicking on the file and selecting "Extract Here."
 
 <p align="center">
@@ -134,7 +134,7 @@ To simulate the program, type or copy it into the window on the left. For exampl
       - In the "Browse" section, select the C compiler (the file named ```riscv64-unknown-elf-gcc```), which is located in the following path (you can copy and paste the path in the "Compiler path"):
 
       ```
-      /home/rvfpga/Simuladores_EC_24-25/Ripes/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
+      /home/rvfpga/Simuladores_EC_26-27/Ripes/riscv64-unknown-elf-gcc-8.3.0-2020.04.1-x86_64-linux-ubuntu14/bin/riscv64-unknown-elf-gcc
       ```
 
       <p align="center">
