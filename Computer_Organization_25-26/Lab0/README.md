@@ -22,9 +22,6 @@ For example, the following figure shows the downloaded VM on a laptop with Windo
   <img src="https://github.com/user-attachments/assets/3e2e5eea-0eb5-4c78-b577-e00844b8cc20" width="70%">
 </p>
 
-<img width="1421" height="510" alt="image" src="https://github.com/user-attachments/assets/3e2e5eea-0eb5-4c78-b577-e00844b8cc20" />
-
-
 The VM can be installed in the usual virtualization software, such as VMWare or VirtualBox. Install one of those programs and import the VM.
 
 Finally, run the VM, check that the boot is successful, and log into Linux using the user and password **rvfpga**. If the boot gives problems, try changing the USB version of the VM from 2.0 to 1.1, the memory amount used by the VM, or reinstalling the Guest Additions.
