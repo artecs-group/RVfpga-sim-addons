@@ -253,8 +253,8 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 0. In the Virtual Machine, replace the old RVfpga-Pipeline simulator with the new one. Follow the next steps:
 	- Download the following file: [RVfpga-Pipeline_Ubuntu](https://drive.google.com/file/d/1BL0q855YaTkhN_DlRYuHOySHIImBWaNW/view?usp=sharing).
 	- Open a terminal.
-	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
-	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
+	- Replace the old simulator with the new one: ```cp /home/rvfpga/Downloads/RVfpga-Pipeline_Ubuntu /home/rvfpga/Simuladores_EC_26-27/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
+	- Assign execution permissions to the new binary: ```chmod +x /home/rvfpga/Simuladores_EC_26-27/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu```
 -->
 
 1. Start by watching one of the following videos, which show the **RVfpga-Pipeline** simulating the same program used in the subsequent steps:
@@ -264,10 +264,10 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 
    - **(b) Using the previous version of the simulator:**  
      Watch from **3:12 to 11:13** in the following video: [RVfpgaToolsVideo](https://youtu.be/Z8QcQRW7F4s?si=8g_GSFpHmIsMQrzI&t=192).  
-       - ***NOTE:** The video uses a different directory name than the one used in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_24-25/RVfpga/``` used in this guide.*  
+       - ***NOTE:** The video uses a different directory name than the one used in the examples and exercises below. However, the directory contents are identical. In particular, the directory named ```RVfpga_MasterUCLM/``` in the video corresponds exactly to the directory ```Simuladores_EC_26-27/RVfpga/``` used in this guide.*  
        - ***NOTE:** The video was recorded with the **old RVfpga-Pipeline simulator**. The procedure is exactly the same; only the simulator’s appearance differs.*
 
-2. Open VSCode and load the project folder located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2```. To do this, go to ```File - Open Folder```, navigate to ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click ```Open``` (as shown in the screenshot).
+2. Open VSCode and load the project folder located at ```/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/ProyectoP2```. To do this, go to ```File - Open Folder```, navigate to ```/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects```, select the ```ProyectoP2``` directory, and click ```Open``` (as shown in the screenshot).
 
 <p align="center">
   <img src="../../Computer_Organization/Lab2/Images/OpenFolder.png" width=80% height=80%>
@@ -282,7 +282,7 @@ RVfpga-Pipeline is a simulator of the VeeR EH1 pipeline that can be run from VSC
 4. Open the ```platformio.ini``` file and update the path to the RVfpga-Pipeline simulator as shown next:
 
 ```
-board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu
+board_debug.verilator.binary = /home/rvfpga/Simuladores_EC_26-27/RVfpga/verilatorSIM_Pipeline/OriginalBinaries/RVfpga-Pipeline_Ubuntu
 ```
 
 5. Open the PlatformIO tab in VSCode and click on the task ```RVfpga-ViDBo/Pipeline```. The simulator will then start executing the program. You can follow the execution in the Explorer, inside the ```src``` directory of the project.
@@ -400,7 +400,7 @@ REPEAT:
    beq  zero, zero, REPEAT  # Repeat the loop
 ```
 
-Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator. Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained. You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one.
+Answer the following questions about the ```for``` loop both theoretically and using the RVfpga-Pipeline simulator. Remember to analyze an iteration from the third one onward, avoiding the first/second iterations where there are instruction cache misses and the branch predictor is not yet properly trained. You can use the project located at ```/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` for the new one.
 
 a. Draw the pipeline diagram for the third iteration of the loop. Unlike Ripes, the RVfpga-Pipeline simulator does not generate this diagram automatically. Therefore, you must create it manually, either on paper or with a tool such as Excel or PowerPoint. Nevertheless, you can still rely on the RVfpga-Pipeline simulation to analyze the program’s behavior cycle by cycle within the loop.
 
@@ -614,7 +614,7 @@ j fin
 
 Analyze the code in RISC-V assembly. Note that the arrays are initialized element by element before entering the loops, which requires a number of additional instructions.
 
-You can use the project located at ```/home/rvfpga/Simuladores_EC_24-25/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` with the new one:
+You can use the project located at ```/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/ProyectoP2``` and simply replace the program in file ```src/Programa.S``` with the new one:
 
 a. Run the assembly program in RVfpga-Pipeline with superscalar execution, the Secondary ALU, and the Gshare branch predictor disabled (this is the default configuration provided in the program above).
 
