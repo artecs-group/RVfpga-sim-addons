@@ -8,20 +8,42 @@ In this lab we review the RISC-V architecture and complete several exercises. We
 
 Follow the next steps:
 1. Read the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
-2. Replicate the instructions provided below in section [Using RIPES in the virtual machine](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#using-ripes-in-the-virtual-machine).
-3. Then, complete the [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#exercise-1) provided below. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
+2. Choose one of the two available ways to run Ripes and explained below: [Native Installation]() or [Virtual Machine]().
+3. Replicate the instructions provided below in section [Example using Ripes]().
+4. Then, complete the [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#exercise-1) provided below. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
 
 
-## Using RIPES in the virtual machine
-Follow the steps below to use and finish configuring the Ripes simulator in the VM.
+## Ripes used natively
+Ripes can be executed natively on Windows, Linux, and macOS without using the virtual machine. This option is valid for Lab 1, the first part of Lab 2, and Lab 3, since all of them rely on Ripes as the main simulator.
 
-1. Start the simulator inside the VM:
-    - Open a terminal in the VM.
-    - Enter the “Ripes” directory: ```cd ~/Simuladores_EC_26-27/Ripes```
-    - Before you can launch the simulator for the first time, you must install FUSE by means of the following command (it will ask for the root password, which is rvfpga): ```sudo apt-get install fuse libfuse2```
-    - Run the simulator: ```./Ripes-v2.2.6-linux-x86_64.AppImage```
+Download the official executables from the [Ripes release page](https://github.com/mortbopet/Ripes/releases)
 
-2. Environment:
+From the Release build (v2.2.6) section, download the file corresponding to your operating system:
+
+    - Windows: Ripes-v2.2.6-win-x86_64.zip
+    - Linux: Ripes-v2.2.6-linux-x86_64.AppImage
+    - macOS: Ripes-v2.2.6-mac-x86_64.zip
+
+After downloading:
+
+    - Windows: unzip the file and run Ripes.exe.
+    - macOS: unzip the file and run the application (you may need to allow execution in System Settings → Privacy & Security).
+    - Linux: make the AppImage executable (chmod +x Ripes-v2.2.6-linux-x86_64.AppImage) and run it.
+
+If Ripes works correctly on your system, you may complete the lab exercises using your native installation. Otherwise, use the virtual machine setup described next.
+
+
+## Ripes in the virtual machine
+Follow the next steps to finish configuring the Ripes simulator in the VM.
+
+1. Open a terminal in the VM.
+2. Enter the “Ripes” directory: ```cd ~/Simuladores_EC_26-27/Ripes```
+3. Before you can launch the simulator for the first time, you must install FUSE by means of the following command (it will ask for the root password, which is rvfpga): ```sudo apt-get install fuse libfuse2```
+4. Run the simulator: ```./Ripes-v2.2.6-linux-x86_64.AppImage```
+
+
+## Example using Ripes
+1. Environment:
     - On the left side you can see the different windows that can be displayed: Editor, Processor, Cache, Memory, I/O.
     - Depending on the selected window, the view will change. In the following figure we see the Editor window, in which you can enter code in Assembler or C in the left window, the compiled/assembled code will be displayed in the middle window, and it shows the registers of the simulated processor on the right.
 
