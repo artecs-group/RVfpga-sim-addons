@@ -20,15 +20,15 @@ Download the official executables from the [Ripes release page](https://github.c
 
 From the Release build (v2.2.6) section, download the file corresponding to your operating system:
 
-    - Windows: Ripes-v2.2.6-win-x86_64.zip
-    - Linux: Ripes-v2.2.6-linux-x86_64.AppImage
-    - macOS: Ripes-v2.2.6-mac-x86_64.zip
+- Windows: Ripes-v2.2.6-win-x86_64.zip
+- Linux: Ripes-v2.2.6-linux-x86_64.AppImage
+- macOS: Ripes-v2.2.6-mac-x86_64.zip
 
 After downloading:
 
-    - Windows: unzip the file and run Ripes.exe.
-    - macOS: unzip the file and run the application (you may need to allow execution in System Settings → Privacy & Security).
-    - Linux: make the AppImage executable (chmod +x Ripes-v2.2.6-linux-x86_64.AppImage) and run it.
+- Windows: unzip the file and run Ripes.exe.
+- macOS: unzip the file and run the application (you may need to allow execution in System Settings → Privacy & Security).
+- Linux: make the AppImage executable (chmod +x Ripes-v2.2.6-linux-x86_64.AppImage) and run it.
 
 If Ripes works correctly on your system, you may complete the lab exercises using your native installation. Otherwise, use the virtual machine setup described next.
 
