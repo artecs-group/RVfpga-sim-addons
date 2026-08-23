@@ -9,7 +9,7 @@ In this lab we review the RISC-V architecture and complete several exercises. We
 Follow the next steps:
 1. Read the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
 2. Choose one of the two available ways to run Ripes and explained below: [Native Installation](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab1/README.md#ripes-used-natively) or [Virtual Machine](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab1/README.md#ripes-in-the-virtual-machine).
-3. Replicate the instructions provided below in section [Example using Ripes]().
+3. Replicate the instructions provided below in section [Example using Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab1/README.md#example-using-ripes).
 4. Then, complete the [Exercises](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1#exercise-1) provided below. These are the exercises you will include in the report, so make sure to write everything down as you work through them.
 
 
