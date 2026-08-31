@@ -5,7 +5,7 @@ The theoretical part of the course begins with a review of the foundational conc
 
 The course includes five labs:
 
-> NOTE: These lab materials are based on resources from previous academic years and are therefore stored in folders corresponding to those years.
+> NOTE: These lab materials are based on resources from previous academic years and are therefore stored in folders corresponding to those years. 
 
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab0): Introduction and Installation.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1): The RISC-V ISA.
