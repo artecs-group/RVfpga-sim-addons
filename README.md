@@ -136,14 +136,14 @@ All tools share a common back-end —the VeeRwolfX SoC code— but use different
 
   Sources and compilation instructions can be found in several places:
 
-  1. **Course-provided packages** (two versions available):
+  1. **Course-provided packages** (several versions available):
      - [SimulatorsAndProjects_24-25](https://drive.google.com/file/d/1hbCSFmjIoGmXq4r5G12_AMUKezHXA6A-/view?usp=sharing)  
        After extracting the archive, the three simulators can be found in:
        - *RVfpga-ViDBo*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_ViDBo`  
        - *RVfpga-Pipeline*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_Pipeline`  
        - *RVfpga-Trace*: `Simuladores_EC_24-25/RVfpga/verilatorSIM_Trace`  
-     - [SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing)  
-       Same as the previous version, but including an **enhanced RVfpga-Pipeline** simulator.
+     - [SimulatorsAndProjects_25-26](https://drive.google.com/file/d/1CctkpRvmTS4PsdsKVPTHpT6g6qnUm3WH/view?usp=sharing) and [SimulatorsAndProjects_26-27](https://drive.google.com/file/d/1PztrAxSVNpHJT0SWqHd8M0k2ITHElTLd/view?usp=sharing) 
+       Same as the previous version, but including **enhanced RVfpga-Pipeline** simulators.
 
   2. **RVfpga course v3.0**: [RVfpga: Understanding Computer Architecture](https://university.imgtec.com/rvfpga-el2-v3-0-english-downloads-page/)  
   3. **edX MOOC**: [RVfpga-based MOOC](https://www.edx.org/learn/computer-programming/the-linux-foundation-computer-architecture-with-an-industrial-risc-v-core)  
