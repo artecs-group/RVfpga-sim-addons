@@ -39,7 +39,7 @@ If you are using Windows and prefer to work natively on Ubuntu instead of using 
 
 Follow the next steps:
 
-1. Download the Ubuntu 22.04 Desktop image: [Ubuntu 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso)
+1. Download the Ubuntu 22.04 Desktop image: [Ubuntu 22.04.5 LTS (64-bit)](https://releases.ubuntu.com/22.04/ubuntu-22.04.5-desktop-amd64.iso)
 
 2. Create a bootable USB drive using a tool such as Rufus or Balena Etcher.
 
