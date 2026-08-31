@@ -5,6 +5,8 @@ The theoretical part of the course begins with a review of the foundational conc
 
 The course includes five labs:
 
+> NOTE: These lab materials are based on resources from previous academic years and are therefore stored in folders corresponding to those years. The labs listed below correspond to the 2026–27 course and may include updated or modified content.
+
 + [Lab 0](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab0): Introduction and Installation.
 + [Lab 1](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab1): The RISC-V ISA.
 + [Lab 2](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2_25-26): The Ripes core and the VeeR EH1 core.
@@ -13,4 +15,4 @@ The course includes five labs:
 
 In this course, we do not have boards available for all students (ranging from 50 to 80 per year). Therefore, all labs are conducted through simulations using tools such as RVfpga-ViDBo, RVfpga-Pipeline, and Ripes, within a provided Virtual Machine.
 
-*NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact dani02@ucm.es*
+> NOTE: In case you want to obtain more information about this course (such as the slides, the exercises sheets, the solutions for the labs, etc.), you can contact dani02@ucm.es
