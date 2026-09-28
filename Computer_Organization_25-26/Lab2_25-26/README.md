@@ -8,8 +8,8 @@ Follow the next steps:
     * Read again the instructions provided at [Ripes_Introduction](https://github.com/mortbopet/Ripes/blob/master/docs/introduction.md).
     * Replicate the instructions provided below in section [Basic use of the Ripes Pipelined Processor](https://github.com/artecs-group/RVfpga-sim-addons/tree/main/Computer_Organization_25-26/Lab2_25-26#basic-use-of-the-ripes-pipelined-processor).
     * Analyze the example exercise provided below in section [Exercise 1 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-1---guided-exercise-in-ripes).
-    * Analyze the example exercise provided below in section [Exercise 2 - Guided Exercise in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-2---guided-exercise-in-ripes).
-    * Finally, complete the exercise provided below in section [Exercise 3 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-3-in-ripes). **This is the first exercise you will include in the report, so make sure to write everything down as you work through it.**
+    * Complete the exercise provided below in section [Exercise 2 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-2---guided-exercise-in-ripes). **This is the first exercise you will include in the report, so make sure to write everything down as you work through it.**
+    * Finally, complete the exercise provided below in section [Exercise 3 in Ripes](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-3-in-ripes). **This is the second exercise you will include in the report, so make sure to write everything down as you work through it.**
 
 2. **VeeR EH1 core:** Once you have a clear understanding of the 5-stage processor used in the textbook and the one used in Ripes, you will start your analysis of a more complex processor, the VeeR EH1 core.
 
@@ -17,7 +17,7 @@ Follow the next steps:
     * The following table shows all forwarding paths and penalties in the VeeR EH1 core: [FwdPen_EH1](https://drive.google.com/file/d/1PxhraD6o6g9C9FOl98XKUnYKxaptepXZ/view?usp=sharing). It is very useful to resolve the exercises.
     * Replicate the instructions provided below in section [RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#rvfpga-pipeline).
     * Analyze the example exercise provided below in section [Exercise 4 - Guided Exercise in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-4---guided-exercise-in-rvfpga-pipeline).
-    * Complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-5-in-rvfpga-pipeline). **This is the second exercise you will include in the report, so make sure to write everything down as you work through it.**
+    * Complete the exercise provided below in section [Exercise 5 in RVfpga-Pipeline](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization_25-26/Lab2_25-26/README.md#exercise-5-in-rvfpga-pipeline). **This is the third exercise you will include in the report, so make sure to write everything down as you work through it.**
 
 <!--
 	* **Finally, you can optionally simulate the three extra exercises provided in the following document: [ExtraExercises](https://drive.google.com/file/d/1bz953GYCdeKZ29ZFqEpg-SoI1Hf1J2is/view?usp=sharing).** These exercises are presented with theoretical solutions, and your task is to solve them using the RVfpga-Pipeline simulator. For example, you may verify the pipeline timing diagram, calculate the CPI, or analyze how hazards are handled. You are encouraged to include simulator screenshots together with your explanations.
@@ -175,10 +175,6 @@ a. Simulate the code in Ripes, obtain the pipeline diagram and explain the hazar
 b. How many cycles does it take to execute one iteration of the loop? Calculate the CPI.
 
 c. Is it possible to improve the loop's performance by reordering the code? Justify your answer and, if it can be improved, explain how you would modify the code and recalculate the CPI.
-
-
-**SOLUTION:**
-In the following document you can find the complete solution for this exercise: [SolutionExercise8](https://drive.google.com/file/d/15VYkzeFB2zKBXFk5xNL5ffFj5DtK2j1V/view?usp=sharing)
 
 
 
