@@ -137,7 +137,7 @@ We observe that there are no stalls in the pipeline, meaning that once it is fil
 As shown, the multiplexer within the red square selects the value that comes from the Memory stage (the result of the ```add``` instruction, provided through the yellow wire) as the ALU's first operand (*0x0000000a*), instead of using the value from the Register File.
 
 
-### Exercise 2 - Guided Exercise in Ripes
+### Exercise 2 in Ripes
 Given the following program:
 
 ```
