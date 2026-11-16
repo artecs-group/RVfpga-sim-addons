@@ -122,26 +122,28 @@ sw t1, 24(t0)
 li t1, 0   				 
 sw t1, 28(t0)   			 
 
-la   a3 , Entrada
-la   a4 , Filtro
-la   a5 , Salida
+li t1, 3
+li t0, 8
 
-li   a2, 0
-li   t1, 3
-li   a1, 0
-li   t0, 8
 
 nop
 nop
 nop
 nop
+
 
 and zero, t4, t5
+
 
 li t2, 0x0
 li a6, 0x240
 
+
 REPEAT:
+  la a3, Entrada
+  la a4, Filtro
+  la a5, Salida
+  li a1, 0
 	loop_n :
 	addi a2 , x0 , 0
 		loop_k :
@@ -157,11 +159,11 @@ REPEAT:
 	    	blt a2 , t1 , loop_k
 	addi a5 , a5 , 4
 	addi a3 , a3 , -8
-	addi a4 , a4 , -12
-	addi a1 , a1 , 1
-	blt a1 , t0 , loop_n
-addi t2, t2, 1
-bne t2, a6, REPEAT # Repeat the loop
+  	addi a4 , a4 , -12
+  	addi a1 , a1 , 1
+    blt a1 , t0 , loop_n
+  addi t2, t2, 1
+  bne t2, a6, REPEAT # Repeat the loop
 
 ret
 ```
