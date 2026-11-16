@@ -58,7 +58,7 @@ for ( n = 0; n < 8; n ++ ) {
 }
 ```
 
-To achieve the highest performance in executing this program on the VeeR EH1 processor, the following assembly implementation is decided:
+To analyze the performance of this program on the VeeR EH1 processor, we will use the following assembly implementation as a starting point:
 
 ```
 .globl Test_Assembly
