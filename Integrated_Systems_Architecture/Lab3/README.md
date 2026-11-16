@@ -139,7 +139,7 @@ nop
 and zero, t4, t5
 
 li t2, 0x0
-add a6, a6, 0x240
+li a6, 0x240
 
 REPEAT:
 	loop_n :
