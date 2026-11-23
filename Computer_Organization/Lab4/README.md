@@ -8,7 +8,7 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    Perform the guided example for RVfpga-ViDBo, provided in the section [Simulation of the RVfpga SoC in RVfpga-ViDBo](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#simulation-of-the-rvfpga-soc-in-rvfpga-vidbo). *(You do **not** need to include this example in your report.)*
 
 3. **Solve the polling-based exercises**  
-   Then, complete the following exercises. Include them in your report by providing the editable source code (so the professor can easily test it) along with RVfpga-ViDBo screenshots demonstrating correct execution, accompanied by a brief caption:  
+   Then, complete the following exercises:  
    - [Exercise 1](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-1)  
    - [Exercise 2](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-2)  
    - [Exercise 3](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-3)
@@ -17,10 +17,16 @@ This lab aims to help students gain a solid understanding of an **Input/Output (
    Perform the guided test provided in the section [Interrupts – Guided Test](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#interrupts--guided-test) to learn how interrupts are managed in RVfpga. *(You do **not** need to include this example in your report.)*
 
 5. **Solve the interrupt-based exercises**  
-   Finally, complete the following exercises. Include them in your report by providing the editable source code (so the professor can easily test it) along with RVfpga-ViDBo screenshots demonstrating correct execution, accompanied by a brief caption:  
+   Finally, complete the following exercises:  
    - [Exercise 4](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-4)  
    - [Exercise 5](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-5)  
    - [Exercise 6](https://github.com/artecs-group/RVfpga-sim-addons/blob/main/Computer_Organization/Lab4/README.md#exercise-6)
+
+6. **Submit your report**  
+   Submit a **PDF report** covering all **6 mandatory exercises**. For each exercise, the report must include:
+
+   - **Developed code**, in text format (not as an image) so that it can be copied and pasted, along with a brief explanation of its functionality (a general explanation is sufficient; instruction-by-instruction explanations are not required).
+   - **Demonstration of correct operation**, either through a video or through screenshots of the simulator at key points during execution, accompanied by textual explanations.
 
 ---
 
