@@ -146,8 +146,8 @@ You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying 
 
 In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga. Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**:
 
-- `/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/LED-Switch_7SegDispl_C-Lang`  
-- `/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang`
+- [LED-Switch_7SegDispl_C-Lang](https://drive.google.com/file/d/1TryR3gMw2YBt8QD3IjMzVFB1eHeHpe56/view?usp=sharing)  
+- [LED-Switch_7SegDispl_Interrupts_C-Lang](https://drive.google.com/file/d/1FNeJ1mbobIxaG6BtD81WNH08Kc9k2wCs/view?usp=sharing)`
 
 #### Programmed I/O version
 
@@ -186,7 +186,7 @@ In this version:
 
 ## Exercise 4
 
-Modify the function `GPIO_ISR` in the interrupt-based code `/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that each time a 0→1 transition is detected on the first switch, the state of all 16 LEDs is inverted — not just the least significant one as in the original program.
+Modify the function `GPIO_ISR` in the interrupt-based code `LED-Switch_7SegDispl_Interrupts_C-Lang` so that each time a 0→1 transition is detected on the first switch, the state of all 16 LEDs is inverted — not just the least significant one as in the original program.
 
 Hint: In the interrupt service routine (ISR), replace the line that toggles only one LED with a bitwise inversion of the entire 16-bit LED output register. Remember that in C:
 - ! is logical NOT (returns 0 or 1)
@@ -195,7 +195,7 @@ Hint: In the interrupt service routine (ISR), replace the line that toggles only
 
 ## Exercise 5
 
-Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` so that the program uses the **two least significant switches** (SW0 and SW1).
 
 **Required behavior**
 - **SW0**: keep the original functionality — toggle the LED state on each **0→1** transition.  
@@ -218,7 +218,7 @@ Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interr
 
 ## Exercise 6
 
-Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `/home/rvfpga/Simuladores_EC_26-27/RVfpga/Projects/LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
+Modify the functions `main`, `GPIO_Initialization`, and `GPIO_ISR` in the interrupt-based project `LED-Switch_7SegDispl_Interrupts_C-Lang` to implement the following behavior using **SW0 and SW1**.
 
 **Required behavior**
 - SW0: toggle between two counting speeds in the 7-segment display (fast / slow) each time the switch generates an interrupt.
