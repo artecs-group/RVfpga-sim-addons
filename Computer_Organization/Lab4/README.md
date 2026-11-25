@@ -144,7 +144,7 @@ You can base your code on the same **`71_7SegDispl_C-Lang`** project, modifying 
 
 ## Interrupts – Guided Test
 
-In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga. Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**:
+In this guided test, you will learn how to manage **interrupt-driven I/O** in RVfpga. Two example projects are provided — both implement the same functionality, but one uses **polling**, while the other uses **interrupts**. Download them from the following two links:
 
 - [LED-Switch_7SegDispl_C-Lang](https://drive.google.com/file/d/1TryR3gMw2YBt8QD3IjMzVFB1eHeHpe56/view?usp=sharing)  
 - [LED-Switch_7SegDispl_Interrupts_C-Lang](https://drive.google.com/file/d/1FNeJ1mbobIxaG6BtD81WNH08Kc9k2wCs/view?usp=sharing)`
